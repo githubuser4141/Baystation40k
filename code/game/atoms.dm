@@ -1008,8 +1008,8 @@
  *
  * Returns instance of `/obj/item/cell` or `null`.
  */
-/atom/proc/get_cell()
-	return
+/atom/proc/get_cell() as /obj/item/cell
+	RETURN_TYPE(/obj/item/cell)
 
 /**
  * Called when a mob walks into the atom while confused.

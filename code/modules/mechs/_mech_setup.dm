@@ -15,6 +15,9 @@ GLOBAL_LIST_INIT(mech_weapon_overlays, icon_states('icons/mecha/mech_weapon_over
 #define HARDPOINT_RIGHT_SHOULDER "right shoulder"
 #define HARDPOINT_HEAD "head"
 
+#define HARDPOINT_POWER "power"
+#define HARDPOINT_BACKUP_POWER "power backup"
+
 // No software required: taser. light, radio.
 #define MECH_SOFTWARE_UTILITY "utility equipment"                // Plasma torch, clamp, drill.
 #define MECH_SOFTWARE_MEDICAL "medical support systems"          // Sleeper.

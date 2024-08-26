@@ -918,3 +918,260 @@
 
 /obj/item/mech_equipment/camera/get_hardpoint_maptext()
 	return "[english_list(camera.network)]: [active ? "ONLINE" : "OFFLINE"]"
+
+/obj/item/mech_equipment/engine
+	name = "exosuit engine"
+	desc = "A exosuit-mountable welding-fuel powered engine system. Holds 200 units of fuel at most, recharges slowly."
+	icon_state = "engine"
+	restricted_hardpoints = list(HARDPOINT_POWER)
+	equipment_delay = 10
+
+	origin_tech = list(TECH_MATERIAL = 1, TECH_ENGINEERING = 2, TECH_MAGNET = 2)
+
+	atom_flags = ATOM_FLAG_OPEN_CONTAINER
+
+	/// Power usage is handled in a special way in activate()
+	equipment_flags = ME_ANY_POWER | ME_POWERLESS_ACTIVATION | ME_ARM_INDEPENDENT | ME_BYPASS_INTERFACE | ME_NOT_SELECTABLE
+
+	var/obj/item/cell/internal_cell = null
+	/// units of welding fuel converted to cell charge
+	var/production_ratio = 50
+	/// maximum amount of power produced in one Process() cycle.
+	var/power_cap = 10
+
+	var/datum/reagents/internal_chamber = null
+
+/obj/item/mech_equipment/engine/Initialize()
+	. = ..()
+	internal_cell = new /obj/item/cell/standard(src)
+	reagents = new /datum/reagents(200, src)
+	internal_chamber = new /datum/reagents(round(production_ratio / CELLRATE), src)
+
+/obj/item/mech_equipment/engine/uninstalled()
+	owner.mech_flags &= ~MF_ENGINE_POWERED
+	. = ..()
+
+
+/obj/item/mech_equipment/engine/examine(mob/user)
+	. = ..()
+	to_chat(user, "Internal charge : [internal_cell.charge] Fuel : [reagents.total_volume]")
+
+/obj/item/mech_equipment/engine/get_hardpoint_maptext()
+	return "FUEL : [reagents.total_volume]"
+
+/obj/item/mech_equipment/engine/proc/activate(mob/living/user)
+	var/power_gap = clamp((internal_cell.maxcharge - internal_cell.charge)/10, 10, 100)
+	if(!get_cell(TRUE, ME_AUXILIARY_POWERED )?.drain_power(TRUE,FALSE, power_gap KILOWATTS))
+		active = FALSE
+		owner.mech_flags &= ~MF_ENGINE_POWERED
+		return
+	// No spamming the engine
+	user.setClickCooldown(13)
+	playsound(owner, 'sound/mecha/engineattempt.ogg', 100, FALSE)
+	if(do_after(user, 1 SECONDS, src, DO_DEFAULT/* | DO_SHOW_TARGET*/))
+		if(reagents.total_volume < 2)
+			active = FALSE
+			owner.mech_flags &= ~MF_ENGINE_POWERED
+			return
+		if(prob(100 - power_gap))
+			playsound(owner, 'sound/mecha/enginestarted.ogg', 100, FALSE)
+			if(owner.power == MECH_POWER_OFF)
+				owner.mech_flags |= MF_ENGINE_POWERED
+				owner.toggle_power(user,0)
+				if(owner.power == MECH_POWER_ON)
+					owner.mech_flags |= MF_ENGINE_POWERED
+					active = TRUE
+					START_PROCESSING(SSprocessing, src)
+					icon_state = "[initial(icon_state)]_on"
+				else
+					owner.mech_flags &= ~MF_ENGINE_POWERED
+					active = FALSE
+			else
+				owner.mech_flags |= MF_ENGINE_POWERED
+				active = TRUE
+				START_PROCESSING(SSprocessing, src)
+				icon_state = "[initial(icon_state)]_on"
+
+		else
+			active = FALSE
+			owner.mech_flags &= ~MF_ENGINE_POWERED
+
+/obj/item/mech_equipment/engine/Process()
+	if(reagents.total_volume < 2 || !active)
+		deactivate()
+		return
+	playsound(owner, 'sound/mecha/enginestarted.ogg', 100, FALSE)
+	var/power_gap = internal_cell.maxcharge - internal_cell.charge
+	if(power_gap < 5)
+		return
+	var/units_to_use = clamp(round(power_gap / production_ratio), 1, power_cap / production_ratio)
+	units_to_use = min(units_to_use, reagents.total_volume)
+	if(units_to_use * production_ratio > power_cap)
+		units_to_use = power_cap/production_ratio
+	reagents.trans_to_holder(internal_chamber, units_to_use, 1, FALSE, TRUE)
+	/// No hydro-powered engines allowed in this universe!!
+	units_to_use = internal_chamber.get_reagent_amount(/datum/reagent/fuel)
+	internal_cell.give(units_to_use * production_ratio KILOWATTS * CELLRATE)
+	internal_chamber.remove_any(internal_chamber.total_volume)
+
+/obj/item/mech_equipment/engine/deactivate(mob/living/user)
+	STOP_PROCESSING(SSprocessing,src)
+	owner.mech_flags &= ~MF_ENGINE_POWERED
+	icon_state = initial(icon_state)
+	active = FALSE
+	if(owner.power == MECH_POWER_ON && !(owner.mech_flags & MF_ANY_POWER))
+		owner.toggle_power(user)
+	. = ..()
+
+/obj/item/mech_equipment/engine/resolve_attackby(obj/item/reagent_containers/W, mob/user)
+	. = ..()
+	if(!istype(W) || !.)
+		return
+	W.standard_pour_into(user, src)
+
+/obj/item/mech_equipment/engine/attack_self(mob/user)
+	. = ..()
+	if(.)
+		if(active)
+			deactivate(user)
+		else
+			activate(user)
+		to_chat(user, SPAN_NOTICE("You toggle \the [src] [active ? "on" : "off"]"))
+
+/obj/item/mech_equipment/engine/prefilled/Initialize()
+	. = ..()
+	reagents.add_reagent(/datum/reagent/fuel, 120)
+
+/obj/item/mech_equipment/engine/get_hardpoint_maptext()
+	return "Fuel:[reagents.total_volume]"
+
+/obj/item/cell/device/internal
+	name = "internal powercell"
+	var/intentional = FALSE
+
+/obj/item/cell/device/internal/Del()
+	if(!intentional)
+		CRASH("[src] Being destroyed , Usr : [usr] , Src : [src] ,Loc : [loc] , Turf : [get_turf(src)]")
+	. = ..()
+
+/obj/item/mech_equipment/power_auxiliary
+	name = "auxiliary power unit"
+	desc = "a auxiliary power unit for the exosuit, its low voltage means it can only power up equipment and basic mech functions."
+	icon_state = "auxi"
+	var/obj/item/cell/device/internal/internal_cell = null
+	equipment_flags = ME_BYPASS_INTERFACE | ME_POWERLESS_ACTIVATION | ME_ARM_INDEPENDENT | ME_NOT_SELECTABLE
+	restricted_hardpoints = list(HARDPOINT_BACKUP_POWER)
+
+/obj/item/mech_equipment/power_auxiliary/Initialize()
+	. = ..()
+	internal_cell = new /obj/item/cell/device/internal(src)
+
+/obj/item/mech_equipment/power_auxiliary/uninstalled()
+	deactivate()
+	. = ..()
+
+/obj/item/mech_equipment/power_auxiliary/Destroy()
+	internal_cell.intentional = TRUE
+	QDEL_NULL(internal_cell)
+	. = ..()
+
+/obj/item/mech_equipment/power_auxiliary/get_hardpoint_maptext()
+	return "CHARGE : [internal_cell.charge]"
+
+/obj/item/mech_equipment/power_auxiliary/proc/activate(mob/living/user)
+	if(owner.power == MECH_POWER_OFF)
+		owner.mech_flags |= MF_AUXILIARY_POWERED
+		owner.toggle_power(user)
+		if(owner.power == MECH_POWER_ON)
+			owner.mech_flags |= MF_AUXILIARY_POWERED
+			active = TRUE
+		else
+			owner.mech_flags &= MF_AUXILIARY_POWERED
+			active = FALSE
+	else
+		owner.mech_flags |= MF_AUXILIARY_POWERED
+		active = TRUE
+
+/obj/item/mech_equipment/power_auxiliary/deactivate()
+	owner.mech_flags &= ~MF_AUXILIARY_POWERED
+	if(owner.power == MECH_POWER_ON && !(owner.mech_flags & MF_ANY_POWER))
+		owner.toggle_power()
+	. = ..()
+
+/obj/item/mech_equipment/power_auxiliary/attack_self(mob/user)
+	. = ..()
+	if(.)
+		if(active)
+			deactivate(user)
+		else
+			activate(user)
+		to_chat(user, SPAN_NOTICE("You toggle \the [src] [active ? "on" : "off"]"))
+
+/obj/item/mech_equipment/power_cell
+
+	name = "internal game container for power cell"
+	desc = "A special object dedicated to keeping bad snowflakey code away, contact your local coders if seen out in the wild."
+	restricted_hardpoints = list(HARDPOINT_POWER)
+	equipment_delay = 10
+
+	origin_tech = list(TECH_MATERIAL = 1, TECH_ENGINEERING = 2, TECH_MAGNET = 2)
+
+	equipment_flags = ME_ANY_POWER | ME_POWERLESS_ACTIVATION | ME_ARM_INDEPENDENT | ME_BYPASS_INTERFACE | ME_NOT_SELECTABLE
+	var/obj/item/cell/internal_cell = null
+
+/obj/item/mech_equipment/power_cell/proc/set_power_cell(obj/item/cell/power_provider)
+	power_provider.forceMove(src)
+	internal_cell = power_provider
+	icon = internal_cell.icon
+	icon_state = internal_cell.icon_state
+	name = power_provider.name
+	desc = power_provider.desc
+	if(owner)
+		deactivate()
+
+/obj/item/mech_equipment/power_cell/uninstalled()
+	deactivate()
+	. = ..()
+
+/obj/item/mech_equipment/power_cell/proc/activate(mob/living/user)
+	if(owner.power == MECH_POWER_OFF)
+		owner.mech_flags |= MF_CELL_POWERED
+		owner.toggle_power(user)
+		if(owner.power == MECH_POWER_ON)
+			owner.mech_flags |= MF_CELL_POWERED
+			active = TRUE
+			START_PROCESSING(SSprocessing, src)
+		else
+			owner.mech_flags &= ~MF_CELL_POWERED
+			active = FALSE
+	else
+		owner.mech_flags |= MF_CELL_POWERED
+		active = TRUE
+		START_PROCESSING(SSprocessing, src)
+
+
+/obj/item/mech_equipment/power_cell/deactivate(mob/living/user)
+	active = FALSE
+	owner.mech_flags &= ~MF_CELL_POWERED
+	if(owner.power == MECH_POWER_ON && !(owner.mech_flags & MF_ANY_POWER))
+		owner.toggle_power(user)
+	STOP_PROCESSING(SSprocessing,src)
+	. = ..()
+
+/obj/item/mech_equipment/power_cell/Process()
+	if(QDELETED(owner))
+		deactivate()
+		return
+	if(!active || internal_cell.charge < 1)
+		deactivate()
+		return
+	playsound(owner, 'sound/mecha/electricloop.ogg', 100, FALSE)
+
+/obj/item/mech_equipment/power_cell/attack_self(mob/user)
+	. = ..()
+	if(.)
+		if(active)
+			deactivate(user)
+		else
+			activate(user)
+		to_chat(user, SPAN_NOTICE("You toggle \the [src] [active ? "on" : "off"]"))

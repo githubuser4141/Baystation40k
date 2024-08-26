@@ -76,9 +76,13 @@
 	var/obj/screen/exosuit/heat/hud_heat
 	var/obj/screen/exosuit/toggle/power_control/hud_power_control
 	var/obj/screen/exosuit/toggle/camera/hud_camera
+	var/obj/screen/exosuit/toggle/strafe/strafing
 
 	//POWER
 	var/power = MECH_POWER_OFF
+
+	// Mech flags
+	var/mech_flags = 0
 
 	// Sounds for mech_movement.dm and mech_interaction.dm are stored on legs.dm and arms.dm, respectively
 
@@ -154,7 +158,6 @@
 	hud_health = null
 	hud_open = null
 	hud_power = null
-	hud_power_control = null
 	hud_camera = null
 
 	QDEL_NULL_LIST(hud_elements)
@@ -217,22 +220,26 @@
 	if(.)
 		update_pilots()
 
-/mob/living/exosuit/proc/toggle_power(mob/user)
+/mob/living/exosuit/proc/toggle_power(mob/user, time_override = 1.5 SECONDS)
 	if(power == MECH_POWER_TRANSITION)
-		to_chat(user, SPAN_NOTICE("Power transition in progress. Please wait."))
+		if(user)
+			to_chat(user, SPAN_NOTICE("Power transition in progress. Please wait."))
 	else if(power == MECH_POWER_ON) //Turning it off is instant
 		playsound(src, 'sound/mecha/mech-shutdown.ogg', 100, 0)
 		power = MECH_POWER_OFF
-	else if(get_cell(TRUE))
+	else if(get_cell(TRUE, ME_ANY_POWER))
 		//Start power up sequence
 		power = MECH_POWER_TRANSITION
 		playsound(src, 'sound/mecha/powerup.ogg', 50, 0)
-		if(user.do_skilled(1.5 SECONDS, SKILL_MECH, src, 0.5, DO_DEFAULT | DO_USER_UNIQUE_ACT) && power == MECH_POWER_TRANSITION)
-			playsound(src, 'sound/mecha/nominal.ogg', 50, 0)
-			power = MECH_POWER_ON
-		else
-			to_chat(user, SPAN_WARNING("You abort the powerup sequence."))
-			power = MECH_POWER_OFF
-		hud_power_control?.queue_icon_update()
-	else
-		to_chat(user, SPAN_WARNING("Error: No power cell was detected."))
+		if(user)
+			if(time_override == 0)
+				playsound(src, 'sound/mecha/nominal.ogg', 50, 0)
+				power = MECH_POWER_ON
+			else if(user.do_skilled(time_override, SKILL_ELECTRICAL, src, 0.5) && power == MECH_POWER_TRANSITION)
+				playsound(src, 'sound/mecha/nominal.ogg', 50, 0)
+				power = MECH_POWER_ON
+			else
+				to_chat(user, SPAN_WARNING("You abort the powerup sequence."))
+				power = MECH_POWER_OFF
+	else if(user)
+		to_chat(user, SPAN_WARNING("Error: No power provider was detected."))
