@@ -88,8 +88,8 @@
 	external_type = /obj/item/robot_parts/robot_component/armour/light
 	max_damage = 75
 
-/datum/robot_component/armour/accepts_component(obj/item/thing)
-	. = (!istype(thing, /obj/item/robot_parts/robot_component/armour/exosuit) && ..())
+///datum/robot_component/armour/accepts_component(obj/item/thing)
+//	. = (!istype(thing, /obj/item/robot_parts/robot_component/armour/exosuit) && ..())
 
 // ACTUATOR
 // Enables movement.

@@ -54,20 +54,38 @@
 /obj/item/mech_component/manipulators/powerloader
 	name = "exosuit arms"
 	exosuit_desc_string = "heavy-duty industrial lifters"
-	max_damage = 70
+	max_damage = 100
 	power_use = 30
 	desc = "The Xion Industrial Digital Interaction Manifolds allow you poke untold dangers from the relative safety of your cockpit."
 	punch_sound = 'sound/mecha/mech_punch_slow.ogg'
+
+	armor = list(
+		melee = ARMOR_MELEE_POWER_ARM,
+		bullet = ARMOR_BALLISTIC_FLAK+1,
+		laser = ARMOR_LASER_FLAK+1,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 /obj/item/mech_component/manipulators/light
 	name = "light arms"
 	exosuit_desc_string = "lightweight, segmented manipulators"
 	icon_state = "light_arms"
-	action_delay = 10
-	max_damage = 40
+	action_delay = 5
+	max_damage = 50
 	power_use = 10
 	desc = "As flexible as they are fragile, these Vey-Med manipulators can follow a pilot's movements in close to real time."
 	punch_sound = 'sound/mecha/mech_punch_fast.ogg'
+
+	armor = list(
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 /obj/item/mech_component/manipulators/heavy
 	name = "heavy arms"
@@ -76,13 +94,32 @@
 	desc = "Designed to function where any other piece of equipment would have long fallen apart, the Hephaestus Superheavy Lifter series can take a beating and excel at delivering it."
 	punch_sound = 'sound/mecha/mech_punch_slow.ogg'
 	action_delay = 20
-	melee_damage = 30
-	max_damage = 90
+	melee_damage = 75
+	max_damage = 300
 	power_use = 60
+
+	armor = list(
+		melee = ARMOR_MELEE_ASTARTES,
+		bullet = ARMOR_BALLISTIC_ASTARTES,
+		laser = ARMOR_LASER_ASTARTES,
+		energy = ARMOR_ENERGY_RESISTANT,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 /obj/item/mech_component/manipulators/combat
 	name = "combat arms"
 	exosuit_desc_string = "flexible, advanced manipulators"
 	icon_state = "combat_arms"
 	action_delay = 10
+	max_damage = 150
 	power_use = 50
+
+	armor = list(
+		melee = ARMOR_MELEE_POWER_ARM,
+		bullet = ARMOR_BALLISTIC_POWER_ARMOUR,
+		laser = ARMOR_LASER_POWER_ARMOUR,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)

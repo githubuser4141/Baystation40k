@@ -24,7 +24,6 @@
 
 	var/mech_health = 300
 	var/obj/item/robot_parts/robot_component/diagnosis_unit/diagnostics
-	var/obj/item/robot_parts/robot_component/armour/exosuit/m_armour
 	var/obj/machinery/portable_atmospherics/canister/air_supply
 	var/obj/item/storage/mech/storage_compartment
 	var/datum/gas_mixture/cockpit
@@ -53,22 +52,18 @@
 
 /obj/item/mech_component/chassis/Destroy()
 	QDEL_NULL(diagnostics)
-	QDEL_NULL(m_armour)
 	QDEL_NULL(air_supply)
 	QDEL_NULL(storage_compartment)
 	. = ..()
 
 /obj/item/mech_component/chassis/update_components()
 	diagnostics = locate() in src
-	m_armour =    locate() in src
 	air_supply =  locate() in src
 	storage_compartment = locate() in src
 
 /obj/item/mech_component/chassis/show_missing_parts(mob/user)
 	if(!diagnostics)
 		to_chat(user, SPAN_WARNING("It is missing a diagnostics unit."))
-	if(!m_armour)
-		to_chat(user, SPAN_WARNING("It is missing exosuit armour plating."))
 
 /obj/item/mech_component/chassis/Initialize()
 	. = ..()
@@ -132,7 +127,7 @@
 		cockpit.react()
 
 /obj/item/mech_component/chassis/ready_to_install()
-	return (diagnostics && m_armour)
+	return (diagnostics)
 
 /obj/item/mech_component/chassis/prebuild()
 	diagnostics = new(src)
@@ -146,12 +141,7 @@
 			diagnostics = thing
 			return TRUE
 
-	else if(istype(thing, /obj/item/robot_parts/robot_component/armour/exosuit))
-		if(m_armour)
-			to_chat(user, SPAN_WARNING("\The [src] already has armour installed."))
-			return TRUE
 		if(install_component(thing, user))
-			m_armour = thing
 			return TRUE
 
 	return ..()
@@ -186,10 +176,6 @@
 		to_chat(user, SPAN_NOTICE(" Diagnostics Unit Integrity: <b>[round((((diagnostics.max_dam - diagnostics.total_dam) / diagnostics.max_dam)) * 100)]%</b>"))
 	else
 		to_chat(user, SPAN_WARNING(" Diagnostics Unit Missing or Non-functional."))
-	if(m_armour)
-		to_chat(user, SPAN_NOTICE(" Armor Integrity: <b>[round((((m_armour.max_dam - m_armour.total_dam) / m_armour.max_dam)) * 100)]%</b>"))
-	else
-		to_chat(user, SPAN_WARNING(" Armor Missing or Non-functional."))
 
 
 /obj/item/mech_component/chassis/powerloader
@@ -198,13 +184,21 @@
 	pilot_coverage = 40
 	exosuit_desc_string = "an industrial rollcage"
 	desc = "A Xion industrial brand roll cage. Technically OSHA compliant. Technically."
-	max_damage = 100
+	max_damage = 150
 	power_use = 0
 	climb_time = 6
 
+	armor = list(
+		melee = ARMOR_MELEE_POWER_ARM,
+		bullet = ARMOR_BALLISTIC_FLAK+1,
+		laser = ARMOR_LASER_FLAK+1,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
+
 /obj/item/mech_component/chassis/powerloader/prebuild()
 	. = ..()
-	m_armour = new /obj/item/robot_parts/robot_component/armour/exosuit(src)
 
 /obj/item/mech_component/chassis/powerloader/Initialize()
 	pilot_positions = list(
@@ -230,16 +224,24 @@
 	transparent_cabin =  TRUE
 	exosuit_desc_string = "an open and light chassis"
 	icon_state = "light_body"
-	max_damage = 50
+	max_damage = 100
 	power_use = 5
 	has_hardpoints = list(HARDPOINT_BACK, HARDPOINT_POWER, HARDPOINT_BACKUP_POWER)
 	damage_sound = 'sound/effects/glass_crack1.ogg'
 	desc = "The Veymed Odysseus series cockpits combine ultralight materials and clear aluminum laminates to provide an optimized cockpit experience."
 	climb_time = 15
 
+	armor = list(
+		melee = ARMOR_MELEE_CARAPACE,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
+
 /obj/item/mech_component/chassis/light/prebuild()
 	. = ..()
-	m_armour = new /obj/item/robot_parts/robot_component/armour/exosuit/radproof(src)
 
 /obj/item/mech_component/chassis/light/Initialize()
 	pilot_positions = list(
@@ -259,10 +261,19 @@
 	transparent_cabin = TRUE
 	exosuit_desc_string = "a spherical chassis"
 	icon_state = "pod_body"
-	max_damage = 70
+	max_damage = 150
 	power_use = 5
 	has_hardpoints = list(HARDPOINT_BACK)
 	desc = "The Necromundan Katamari series cockpits have won a massive tender by Imperium few years back. No one is sure why, but these terrible things keep popping up on every government facility."
+
+	armor = list(
+		melee = ARMOR_MELEE_POWER_ARM,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 /obj/item/mech_component/chassis/pod/Initialize()
 	pilot_positions = list(
@@ -283,7 +294,6 @@
 
 /obj/item/mech_component/chassis/pod/prebuild()
 	. = ..()
-	m_armour = new /obj/item/robot_parts/robot_component/armour/exosuit/radproof(src)
 
 /obj/item/mech_component/chassis/pod/Initialize()
 	pilot_positions = list(
@@ -303,10 +313,19 @@
 	pilot_coverage = 100
 	exosuit_desc_string = "a heavily armoured chassis"
 	icon_state = "heavy_body"
-	max_damage = 150
-	mech_health = 500
+	max_damage = 500
+	mech_health = 750
 	power_use = 50
 	has_hardpoints = list(HARDPOINT_BACK, HARDPOINT_POWER, HARDPOINT_BACKUP_POWER)
+
+	armor = list(
+		melee = ARMOR_MELEE_ASTARTES,
+		bullet = ARMOR_BALLISTIC_ASTARTES,
+		laser = ARMOR_LASER_ASTARTES,
+		energy = ARMOR_ENERGY_RESISTANT,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 /obj/item/mech_component/chassis/heavy/prebuild()
 	pilot_positions = list(
@@ -322,7 +341,6 @@
 
 /obj/item/mech_component/chassis/heavy/prebuild()
 	. = ..()
-	m_armour = new /obj/item/robot_parts/robot_component/armour/exosuit/combat(src)
 
 /obj/item/mech_component/chassis/combat
 	name = "sealed exosuit chassis"
@@ -330,11 +348,21 @@
 	pilot_coverage = 100
 	exosuit_desc_string = "an armoured chassis"
 	icon_state = "combat_body"
+	max_damage = 300
+	mech_health = 500
 	power_use = 40
+
+	armor = list(
+		melee = ARMOR_MELEE_POWER_ARM,
+		bullet = ARMOR_BALLISTIC_POWER_ARMOUR,
+		laser = ARMOR_LASER_POWER_ARMOUR,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 /obj/item/mech_component/chassis/combat/prebuild()
 	. = ..()
-	m_armour = new /obj/item/robot_parts/robot_component/armour/exosuit/combat(src)
 
 /obj/item/mech_component/chassis/combat/Initialize()
 	pilot_positions = list(

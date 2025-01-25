@@ -15,8 +15,20 @@
 	var/list/has_hardpoints = list()
 	var/decal
 	var/power_use = 0
-	matter = list(MATERIAL_STEEL = 15000, MATERIAL_PLASTIC = 1000, MATERIAL_CERAMITE = 500)
+	var/emp_shielded = FALSE
 	dir = SOUTH
+
+	matter = list(MATERIAL_STEEL = 15000, MATERIAL_PLASTIC = 1000, MATERIAL_CERAMITE = 500)
+
+	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 25, bio = 100, rad = 50)
+
+/datum/extension/armor/mech
+	under_armor_mult = 0.3
+
+/obj/item/mech_component/Initialize()
+	. = ..()
+	if(islist(armor))
+		set_extension(src, /datum/extension/armor/mech, armor)
 
 /obj/item/mech_component/set_color(new_colour)
 	var/last_colour = color

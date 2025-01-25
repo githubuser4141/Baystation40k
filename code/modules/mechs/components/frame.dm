@@ -181,7 +181,7 @@
 	// Screwdriver - Finish construction
 	if (isScrewdriver(tool))
 		// Check for basic components.
-		if (!(arms && legs && head && body))
+		if (!(body))
 			USE_FEEDBACK_FAILURE("\The [src] is still missing parts and cannot be completed.")
 			return TRUE
 		// Check for wiring.
@@ -208,7 +208,7 @@
 		if (!user.do_skilled((tool.toolspeed * 5) SECONDS, SKILL_DEVICES, src) || !user.use_sanity_check(src, tool))
 			return TRUE
 		// Check for basic components.
-		if (!(arms && legs && head && body))
+		if (!(body))
 			USE_FEEDBACK_FAILURE("\The [src] is still missing parts and cannot be completed.")
 			return TRUE
 		// Check for wiring.

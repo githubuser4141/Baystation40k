@@ -73,11 +73,20 @@
 	name = "exosuit legs"
 	exosuit_desc_string = "reinforced hydraulic legs"
 	desc = "Wide and stable but not particularly fast."
-	max_damage = 70
+	max_damage = 150
 	move_delay = 4
 	turn_delay = 4
 	power_use = 10
 	movement_flags = PF_SIDE_STRAFE
+
+	armor = list(
+		melee = ARMOR_MELEE_POWER_ARM,
+		bullet = ARMOR_BALLISTIC_FLAK+1,
+		laser = ARMOR_LASER_FLAK+1,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 	mech_step_sound = 'sound/mecha/mechstep03.ogg'
 
@@ -87,11 +96,20 @@
 	icon_state = "light_legs"
 	move_delay = 2
 	turn_delay = 3
-	max_damage = 40
+	max_damage = 100
 	power_use = 5
 	desc = "These Odysseus series legs are built from lightweight flexible polymers, making them capable of handling falls from up to 120 meters in 1g environments. Provided that the exosuit lands on its feet."
 	max_fall_damage = 0
 	movement_flags = PF_OMNI_STRAFE
+
+	armor = list(
+		melee = ARMOR_MELEE_CARAPACE,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 	mech_turn_sound = 'sound/mecha/mechmove02.ogg'
 	mech_step_sound = 'sound/mecha/mechstep01.ogg'
@@ -105,11 +123,20 @@
 	exosuit_desc_string = "hydraulic quadlegs"
 	desc = "Xion Industrial's arachnid series boasts more leg per leg than the leading competitor."
 	icon_state = "spiderlegs"
-	max_damage = 80
+	max_damage = 150
 	move_delay = 4
 	turn_delay = 1
 	power_use = 25
 	movement_flags = PF_OMNI_STRAFE
+
+	armor = list(
+		melee = ARMOR_MELEE_POWER_ARM,
+		bullet = ARMOR_BALLISTIC_FLAK+1,
+		laser = ARMOR_LASER_FLAK+1,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 	mech_turn_sound = 'sound/mecha/mechmove03.ogg'
 	mech_step_sound = 'sound/mecha/mechstep02.ogg'
@@ -119,11 +146,43 @@
 	exosuit_desc_string = "armored tracks"
 	desc = "A classic brought back. The Hephaestus' Landmaster class tracks are impervious to most damage and can maintain top speed regardless of load. Watch out for corners."
 	icon_state = "tracks"
-	max_damage = 150
+	max_damage = 300
 	move_delay = 2 //It´s fast
 	turn_delay = 7
 	power_use = 150
 	movement_flags = PF_STRAIGHT_STRAFE
+
+	armor = list(
+		melee = ARMOR_MELEE_ASTARTES,
+		bullet = ARMOR_BALLISTIC_ASTARTES,
+		laser = ARMOR_LASER_ASTARTES,
+		energy = ARMOR_ENERGY_RESISTANT,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
+
+	mech_turn_sound = 'sound/mecha/mechstep03.ogg' //Now, i know what you're thinking, but it works.
+	mech_step_sound = 'sound/machines/engine.ogg'
+
+/obj/item/mech_component/propulsion/wheels
+	name = "wheels"
+	exosuit_desc_string = "wheels"
+	desc = "A pair of wheels for any mobile vehicle."
+	icon_state = "wheels"
+	max_damage = 150
+	move_delay = 2 //It´s fast
+	turn_delay = 4
+	power_use = 150
+	movement_flags = PF_STRAIGHT_STRAFE
+
+	armor = list(
+		melee = ARMOR_MELEE_POWER_ARM,
+		bullet = ARMOR_BALLISTIC_FLAK+1,
+		laser = ARMOR_LASER_FLAK+1,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 	mech_turn_sound = 'sound/mecha/mechstep03.ogg' //Now, i know what you're thinking, but it works.
 	mech_step_sound = 'sound/machines/engine.ogg'
@@ -135,9 +194,18 @@
 	icon_state = "heavy_legs"
 	move_delay = 5
 	turn_delay = 5
-	max_damage = 160
+	max_damage = 300
 	power_use = 100
 	movement_flags = PF_SIDE_STRAFE
+
+	armor = list(
+		melee = ARMOR_MELEE_ASTARTES,
+		bullet = ARMOR_BALLISTIC_ASTARTES,
+		laser = ARMOR_LASER_ASTARTES,
+		energy = ARMOR_ENERGY_RESISTANT,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 	mech_turn_sound = 'sound/mecha/mechmove01.ogg'
 	mech_step_sound = 'sound/mecha/mechstep03.ogg'
@@ -147,9 +215,19 @@
 	exosuit_desc_string = "sleek hydraulic legs"
 	icon_state = "combat_legs"
 	move_delay = 3
-	turn_delay = 3
+	turn_delay = 2
+	max_damage = 150
 	power_use = 20
 	movement_flags = PF_OMNI_STRAFE
+
+	armor = list(
+		melee = ARMOR_MELEE_POWER_ARM,
+		bullet = ARMOR_BALLISTIC_POWER_ARMOUR,
+		laser = ARMOR_LASER_POWER_ARMOUR,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED
+		)
 
 	mech_turn_sound = 'sound/mecha/mechmove03.ogg'
 	mech_step_sound = 'sound/mecha/mechstep03.ogg'
