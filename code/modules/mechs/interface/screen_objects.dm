@@ -358,6 +358,7 @@
 // Controls strafing mode on the mech
 /obj/screen/screen/exosuit/toggle/strafe
 	name = "toggle strafe"
+	icon_state = "small"
 	maptext = MECH_UI_STYLE("STRAFE")
 	maptext_x = 2
 	maptext_y = 12
