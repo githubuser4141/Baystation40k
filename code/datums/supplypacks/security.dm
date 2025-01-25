@@ -12,26 +12,26 @@
 
 /singleton/hierarchy/supply_pack/security/lightarmor
 	name = "Armor - Light"
-	contains = list(/obj/item/clothing/suit/armor/pcarrier/light = 4,
+	contains = list(/obj/item/clothing/suit/armor/grim/light = 4,
 					/obj/item/clothing/head/helmet =4)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure
 	containername = "light armor crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/armor
 	name = "Armor - Unmarked"
-	contains = list(/obj/item/clothing/suit/armor/pcarrier/medium = 2,
+	contains = list(/obj/item/clothing/suit/armor/grim/medium = 2,
 					/obj/item/clothing/head/helmet =2)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "armor crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/tacticalarmor
 	name = "Armor - Tactical"
 	contains = list(/obj/item/clothing/under/tactical,
-					/obj/item/clothing/suit/armor/pcarrier/tan/tactical,
+					/obj/item/clothing/suit/armor/grim/tan/tactical,
 					/obj/item/clothing/head/helmet/tactical,
 					/obj/item/clothing/mask/balaclava/tactical,
 					/obj/item/clothing/glasses/tacgoggles,
@@ -41,7 +41,7 @@
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
 	containername = "tactical armor crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/blackguards
 	name = "Armor - Arm and leg guards, black"
@@ -50,7 +50,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "arm and leg guards crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/blueguards
 	name = "Armor - Arm and leg guards, blue"
@@ -59,7 +59,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "arm and leg guards crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/greenguards
 	name = "Armor - Arm and leg guards, green"
@@ -68,7 +68,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "arm and leg guards crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/navyguards
 	name = "Armor - Arm and leg guards, navy blue"
@@ -77,7 +77,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "arm and leg guards crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/tanguards
 	name = "Armor - Arm and leg guards, tan"
@@ -86,7 +86,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "arm and leg guards crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/riotarmor
 	name = "Armor - Riot gear"
@@ -98,7 +98,7 @@
 	cost = 80
 	containertype = /obj/structure/closet/crate/secure
 	containername = "riot armor crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/ballisticarmor
 	name = "Armor - Ballistic"
@@ -107,7 +107,7 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure
 	containername = "ballistic suit crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/ablativearmor
 	name = "Armor - Ablative"
@@ -116,76 +116,76 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure
 	containername = "ablative suit crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/weapons
-	name = "Weapons - Security basic"
+	name = "War Gear - Security basic"
 	contains = list(/obj/item/device/flash = 4,
 					/obj/item/reagent_containers/spray/pepper = 4,
 					/obj/item/melee/baton/loaded = 4)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "weapons crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/weapons
-	name = "Weapons - Disposable tasers"
+	name = "War Gear - Disposable tasers"
 	contains = list(/obj/item/gun/energy/taser/disposable = 4)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "weapons crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/egun
-	name = "Weapons - Energy sidearms"
-	contains = list(/obj/item/gun/energy/gun/secure = 4)
+	name = "War Gear - Laspistols"
+	contains = list(/obj/item/gun/energy/lasgun/laspistol/militarum = 4)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/weapon
-	containername = "energy sidearms crate"
-	access = access_armory
+	containername = "laspistol crate"
+	access = access_restricted_command
 	security_level = SUPPLY_SECURITY_ELEVATED
 
 /singleton/hierarchy/supply_pack/security/egun/shady
-	name = "Weapons - Energy sidearms (For disposal)"
+	name = "War Gear - Energy sidearms (For disposal)"
 	contains = list(/obj/item/gun/energy/gun = 4)
 	cost = 60
 	contraband = 1
 	security_level = null
 
 /singleton/hierarchy/supply_pack/security/ion
-	name = "Weapons - Electromagnetic"
+	name = "War Gear - Electromagnetic"
 	contains = list(/obj/item/gun/energy/ionrifle = 2,
 					/obj/item/storage/box/emps)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "electromagnetic weapons crate"
-	access = access_armory
+	access = access_restricted_command
 	security_level = SUPPLY_SECURITY_ELEVATED
 
 /singleton/hierarchy/supply_pack/security/shotgun
-	name = "Weapons - Shotgun"
+	name = "War Gear - Shotgun"
 	contains = list(/obj/item/gun/projectile/shotgun/pump/combat = 2)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "shotgun crate"
-	access = access_armory
+	access = access_restricted_command
 	security_level = SUPPLY_SECURITY_ELEVATED
 
 /singleton/hierarchy/supply_pack/security/flashbang
-	name = "Weapons - Flashbangs"
+	name = "War Gear - Flashbangs"
 	contains = list(/obj/item/storage/box/flashbangs = 2)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "flashbang crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/teargas
-	name = "Weapons - Tear gas grenades"
+	name = "War Gear - Tear gas grenades"
 	contains = list(/obj/item/storage/box/teargas = 2)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "tear gas grenades crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/shotgunammo
 	name = "Ammunition - Lethal shells"
@@ -203,7 +203,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "beanbag shotgun shells crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/pdwammo
 	name = "Ammunition - SMG top mounted"
@@ -220,7 +220,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "SMG rubber ammunition crate"
-	access = access_armory
+	access = access_restricted_command
 
 /singleton/hierarchy/supply_pack/security/pdwammopractice
 	name = "Ammunition - SMG top mounted practice"
@@ -228,41 +228,41 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "SMG practice ammunition crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/bullpupammo
-	name = "Ammunition - heavy bullpup rifle"
+	name = "Ammunition - heavy autogun"
 	contains = list(/obj/item/storage/box/ammo/heavy_bullpup = 2)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/weapon
-	containername = "heavy bullpup rifle ammunition crate"
+	containername = "heavy autogun ammunition crate"
 	access = access_hos
 	security_level = SUPPLY_SECURITY_HIGH
 
 /singleton/hierarchy/supply_pack/security/bullpupammopractice
-	name = "Ammunition - heavy bullpup rifle practice"
+	name = "Ammunition - heavy autogun practice"
 	contains = list(/obj/item/ammo_magazine/mil_rifle/heavy/practice = 8)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "heavy bullpup practice ammunition crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/lightbullpupammo
-	name = "Ammunition - light bullpup rifle"
+	name = "Ammunition - light autogun"
 	contains = list(/obj/item/storage/box/ammo/light_bullpup = 2)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "light bullpup ammunition crate"
-	access = access_armory
+	access = access_restricted_command
 	security_level = SUPPLY_SECURITY_HIGH
 
 /singleton/hierarchy/supply_pack/security/lightbullpupammopractice
-	name = "Ammunition - light bullpup rifle practice"
+	name = "Ammunition - light autogun practice"
 	contains = list(/obj/item/ammo_magazine/mil_rifle/light/practice = 4)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "light bullpup practice ammunition crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/forensics //Not access-restricted so PIs can use it.
 	name = "Forensics - Auxiliary tools"
@@ -277,7 +277,7 @@
 	name = "Forensics - investigation equipment"
 	contains = list(/obj/item/storage/box/evidence = 2,
 					/obj/item/device/radio/headset/headset_sec,
-					/obj/item/taperoll/police,
+					/obj/item/taperoll/enforcer,
 					/obj/item/clothing/glasses/sunglasses,
 					/obj/item/device/camera,
 					/obj/item/folder/red,
@@ -299,8 +299,8 @@
 	contains = list(/obj/machinery/barrier = 4)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/large
-	containername = "security barrier crate"
-	access = access_security
+	containername = "militarum barrier crate"
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/securitybarriers
 	name = "Equipment - Wall shield Generators"
@@ -313,14 +313,14 @@
 /singleton/hierarchy/supply_pack/security/securitybiosuit
 	name = "Gear - Security biohazard gear"
 	contains = list(/obj/item/clothing/head/bio_hood/security,
-					/obj/item/clothing/suit/bio_suit/security,
+					/obj/item/clothing/suit/armor/grim/bio_suit/security,
 					/obj/item/clothing/mask/gas,
 					/obj/item/tank/oxygen,
 					/obj/item/clothing/gloves/latex)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure
-	containername = "security biohazard gear crate"
-	access = access_security
+	containername = "militarum biohazard gear crate"
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/voidsuit_security
 	name = "EVA - Security (armored) voidsuit"
@@ -328,12 +328,12 @@
 					/obj/item/clothing/head/helmet/space/void/security/alt,
 					/obj/item/clothing/shoes/magboots)
 	cost = 120
-	containername = "security voidsuit crate"
+	containername = "militarum voidsuit crate"
 	containertype = /obj/structure/closet/crate/secure/large
 	access = access_brig
 
 /singleton/hierarchy/supply_pack/security/xenofauna
-	name = "Weapons - Xenofauna Carbines"
+	name = "War Gear - Xenofauna Carbines"
 	contains = list(/obj/item/gun/energy/laser/xenofauna = 3)
 	cost = 40
 	containername = "xenofauna carbine crate"

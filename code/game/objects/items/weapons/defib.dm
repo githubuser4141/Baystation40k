@@ -9,10 +9,10 @@
 	icon_state = "defibunit"
 	item_state = "defibunit"
 	slot_flags = SLOT_BACK
-	force = 5
+	force = 15
 	throwforce = 6
 	w_class = ITEM_SIZE_LARGE
-	origin_tech = list(TECH_BIO = 4, TECH_POWER = 2)
+	origin_tech = list(TECH_BIO = 2, TECH_POWER = 2)
 	matter = list(MATERIAL_STEEL = 5000, MATERIAL_PLASTIC = 2000, MATERIAL_GLASS = 1500, MATERIAL_ALUMINIUM = 1000)
 	action_button_name = "Remove/Replace Paddles"
 	var/obj/item/shockpaddles/linked/paddles
@@ -180,7 +180,7 @@
 	item_state = "defibcompact"
 	w_class = ITEM_SIZE_NORMAL
 	slot_flags = SLOT_BELT
-	origin_tech = list(TECH_BIO = 5, TECH_POWER = 3)
+	origin_tech = list(TECH_BIO = 2, TECH_POWER = 2)
 
 /obj/item/defibrillator/compact/loaded
 	bcell = /obj/item/cell/high
@@ -209,7 +209,7 @@
 	icon_state = "defibpaddles"
 	item_state = "defibpaddles"
 	gender = PLURAL
-	force = 2
+	force = 5
 	throwforce = 6
 	w_class = ITEM_SIZE_LARGE
 

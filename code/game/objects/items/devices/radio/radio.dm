@@ -18,7 +18,7 @@
 	var/listening = TRUE
 	var/list/channels = list() //see communications.dm for full list. First channel is a "default" for :h
 	var/subspace_transmission = FALSE
-	var/syndie = 0//Holder to see if it's a syndicate encrypted radio
+	var/syndie = 0//Holder to see if it's a heretic encrypted radio
 	var/intercept = 0 //can intercept other channels
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
@@ -422,7 +422,7 @@
 
 	// --- AI ---
 	else if (isAI(M))
-		jobname = "AI"
+		jobname = "Machine Spirit"
 
 	// --- Cyborg ---
 	else if (isrobot(M))
@@ -886,7 +886,7 @@
 		"Hailing" = 1
 	)
 	if (use_common)
-		channels += list("Common" = 1)
+		channels += list("Vox" = 1)
 
 	. = ..()
 
@@ -907,7 +907,7 @@
 	anchored = TRUE
 	simulated = FALSE
 	power_usage = 0
-	channels=list("Engineering" = 1, "Security" = 1, "Medical" = 1, "Command" = 1, "Common" = 1, "Science" = 1, "Supply" = 1, "Service" = 1, "Exploration" = 1)
+	channels=list("Mechanicus" = 1, "Militarum" = 1, "Medicae" = 1, "Command" = 1, "Vox" = 1, "Biologis" = 1, "Machinarum" = 1, "Service" = 1, "Explorator" = 1)
 	cell = null
 	on = TRUE
 

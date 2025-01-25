@@ -3,7 +3,7 @@
 /obj/structure/closet/secure_closet/miner
 	name = "miner's equipment"
 	closet_appearance = /singleton/closet_appearance/secure_closet/mining
-	req_access = list(access_mining)
+	req_access = list(access_dauntless)
 
 /obj/structure/closet/secure_closet/miner/WillContain()
 	return list(
@@ -31,7 +31,8 @@
 	icon = 'icons/obj/tools/mining_drills.dmi'
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	force = 15.0
+	force = 21.0
+	armor_penetration = 6
 	throwforce = 4.0
 	icon_state = "drill"
 	item_state = "jackhammer"
@@ -76,7 +77,7 @@
 	icon_state = "diamonddrill"
 	item_state = "jackhammer"
 	digspeed = 5 //Digs through walls, girders, and can dig up sand
-	origin_tech = list(TECH_MATERIAL = 6, TECH_POWER = 4, TECH_ENGINEERING = 5)
+	origin_tech = list(TECH_MATERIAL = 3, TECH_POWER = 3, TECH_ENGINEERING = 3)
 	desc = "Yours is the drill that will pierce the heavens!"
 	drill_verb = "drilling"
 
@@ -112,22 +113,22 @@
 /obj/item/pickaxe/hand/silver
 	name = "silver pickaxe"
 	desc = "This makes no metallurgic sense."
-	digspeed = 30
+	digspeed = 50
 	origin_tech = list(TECH_MATERIAL = 3)
 	hardware_color = COLOR_SILVER
 
 /obj/item/pickaxe/hand/gold
 	name = "golden pickaxe"
 	desc = "This makes no metallurgic sense."
-	digspeed = 20
-	origin_tech = list(TECH_MATERIAL = 4)
+	digspeed = 60
+	origin_tech = list(TECH_MATERIAL = 3)
 	hardware_color = COLOR_GOLD
 
 /obj/item/pickaxe/hand/diamond
 	name = "diamond pickaxe"
 	desc = "A pickaxe with a diamond pick head."
-	digspeed = 10
-	origin_tech = list(TECH_MATERIAL = 6, TECH_ENGINEERING = 4)
+	digspeed = 20
+	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 2)
 	hardware_color = COLOR_DIAMOND
 
 /*****************************Shovel********************************/
@@ -139,7 +140,7 @@
 	icon_state = "shovel"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	force = 8.0
+	force = 18.0
 	throwforce = 4.0
 	item_state = "shovel"
 	w_class = ITEM_SIZE_HUGE
@@ -154,9 +155,21 @@
 	desc = "A small tool for digging and moving dirt."
 	icon_state = "spade"
 	item_state = "spade"
-	force = 5.0
+	force = 16.0
 	throwforce = 7.0
 	w_class = ITEM_SIZE_SMALL
+
+/obj/item/shovel/krieg
+	name = "krieg shovel"
+	desc = "A small tool for digging and moving dirt."
+	icon = 'icons/obj/tools.dmi'
+	icon_state = "entrenching_tool"
+	item_state = "trench"
+	force = 24
+	sharp = 1
+	armor_penetration = 6
+	throwforce = 20
+	w_class = ITEM_SIZE_NORMAL
 
 // Flags.
 /obj/item/stack/flag

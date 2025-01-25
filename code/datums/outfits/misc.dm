@@ -26,7 +26,7 @@
 
 	id_slot = slot_wear_id
 	id_types = list(/obj/item/card/id/centcom/station)
-	id_pda_assignment = "Admiral"
+	id_pda_assignment = "Lord Captain"
 
 /singleton/hierarchy/outfit/merchant
 	name = "Merchant"
@@ -59,7 +59,7 @@
 	backpack_overrides[/singleton/backpack_outfit/backpack] = /obj/item/storage/backpack/clown
 
 /singleton/hierarchy/outfit/vox_raider
-	name = "Vox Raider"
+	name = "Xenos Raider"
 	uniform = /obj/item/clothing/under/vox/vox_casual
 	shoes = /obj/item/clothing/shoes/magboots/vox
 	l_ear = /obj/item/device/radio/headset/vox_raider
@@ -76,5 +76,5 @@
 	name = "Anomalist"
 	uniform = /obj/item/clothing/under/color/white
 	shoes = /obj/item/clothing/shoes/white
-	suit = /obj/item/clothing/suit/bio_suit/anomaly
+	suit = /obj/item/clothing/suit/armor/grim/bio_suit/anomaly
 	head = /obj/item/clothing/head/bio_hood/anomaly

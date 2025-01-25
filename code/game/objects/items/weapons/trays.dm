@@ -4,10 +4,10 @@
 
 /obj/item/tray
 	name = "tray"
-	icon = 'icons/obj/food/food.dmi'
+	icon = 'icons/obj/food.dmi'
 	icon_state = "tray"
 	desc = "A metal tray to lay food on."
-	force = 5
+	force = 15
 	throw_speed = 1
 	throw_range = 5
 	w_class = ITEM_SIZE_NORMAL

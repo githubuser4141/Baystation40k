@@ -9,19 +9,19 @@
 	name = "confederation navy challenge coin"
 	icon_state = "navy"
 	desc = {"\
-		A challenge coin issued by the Confederation Navy. \
+		A challenge coin issued by the Tau Navy. \
 		On the front is the insignia of the Navy, and on the back \
-		is a rendering of the late Admiral Yevgeny Novikov.\
+		is a rendering of the late Lord Captain Yevgeny Novikov.\
 	"}
 
 
 /obj/item/material/coin/challenge/gcc/navy_old
 	default_material = MATERIAL_IRON
-	name = "old confederation navy challenge coin"
+	name = "old tau navy challenge coin"
 	icon_state = "navy-old"
 	desc = {"\
 		A tarnished challenge coin once issued by the \
-		Confederation Navy. On the front is the insignia of the \
+		Tau Navy. On the front is the insignia of the \
 		Navy, and on the back is an older model of cruiser with \
 		Pan-Slavic text written around it.\
 	"}
@@ -32,7 +32,7 @@
 	name = "colonial guard challenge coin"
 	icon_state = "guard"
 	desc = {"\
-		A challenge coin issued by the Confederation Navy. \
+		A challenge coin issued by the Tau Navy. \
 		On the front is the insignia of the Colonial Guard, and on \
 		the back is a smiling crewman in dress uniform holding an \
 		ancient ceremonial rifle.\
@@ -44,7 +44,7 @@
 	name = "surface warfare challenge coin"
 	icon_state = "surface"
 	desc = {"\
-		A challenge coin issued by the Confederation Surface \
+		A challenge coin issued by the Tau Surface \
 		Warfare Corps. On the front is a mace against the Corps's \
 		parade colors, and on the back is an emboss of a bearded \
 		soldier giving a thumbs-up.\
@@ -54,7 +54,7 @@
 /datum/gear/trinket/gcc_challenge_coin
 	display_name = "confederation challenge coin selection"
 	description = {"\
-		A selection of challenge coins used by confederation military \
+		A selection of challenge coins used by tau military \
 		forces for identification, collection, or bragging rights.\
 	"}
 	path = /obj/item/material/coin/challenge/gcc

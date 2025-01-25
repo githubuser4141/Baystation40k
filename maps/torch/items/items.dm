@@ -3,8 +3,8 @@ Random item spawning
 *******************/
 
 /obj/random/solgov
-	name = "random solgov equipment"
-	desc = "This is a random piece of solgov equipment or clothing."
+	name = "random imperialequipment"
+	desc = "This is a random piece of imperialequipment or clothing."
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	icon_state = "solsoft"
 
@@ -13,7 +13,7 @@ Random item spawning
 				/obj/item/clothing/head/soft/solgov/expedition = 2,
 				/obj/item/clothing/head/soft/solgov/fleet = 4,
 				/obj/item/clothing/head/helmet/solgov = 1,
-				/obj/item/clothing/suit/storage/vest/solgov = 2,
+				/obj/item/clothing/suit/armor/grim/storage/vest/solgov = 2,
 				/obj/item/clothing/under/solgov/utility/expeditionary = 5,
 				/obj/item/clothing/under/solgov/utility/fleet = 3,
 				/obj/item/clothing/under/solgov/pt/expeditionary = 4,
@@ -65,7 +65,7 @@ Torch specific items
 		)
 
 /obj/item/storage/backpack/satchel/explorer
-	name = "explorer satchel"
+	name = "grim satchel"
 	desc = "A rugged satchel for field work."
 	icon_state = "satchel-exp"
 	item_state_slots = list(
@@ -101,23 +101,21 @@ Unique items
 	to_chat(user, SPAN_NOTICE("Changed color to '[colour].'"))
 
 /******
-Weapons
+War Gear
 ******/
 
-/obj/item/gun/projectile/revolver/medium/captain
+/obj/item/gun/projectile/revolver/imperial/captain
 	name = "\improper Final Argument"
 	icon = 'maps/torch/icons/obj/uniques.dmi'
 	icon_state = "mosley"
-	desc = "A shiny al-Maliki & Mosley Autococker automatic revolver, with black accents. Marketed as the 'Revolver for the Modern Era'. This one has 'To the Captain of SEV Torch' engraved."
-	fire_delay = 5.7 //Autorevolver. Also synced with the animation
+	desc = "A shiny al-Maliki & Mosley Autococker automatic revolver, with black accents. Marketed as the 'Revolver for the Modern Era'. This one has 'To the Captain of Dauntless' engraved."
+	fire_delay = 4
 	fire_anim = "mosley_fire"
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
-	starts_loaded = 0 //Nobody keeps ballistic weapons loaded
 
 /obj/item/gun/energy/stunrevolver/secure/nanotrasen
 	name = "corporate stun revolver"
-	desc = "This A&M X6 is fitted with an NT1019 chip which allows remote authorization of weapon functionality. It has a NanoTrasen logo on the grip."
-	req_access = list(list(access_brig, access_heads, access_rd, access_sec_guard))
+	desc = "This A&M X6 is fitted with an NT1019 chip which allows remote authorization of weapon functionality. It has a Necromundan logo on the grip."
 
 /obj/item/gun/projectile/pistol/holdout/liaison
 	magazine_type = /obj/item/ammo_magazine/pistol/small/oneway

@@ -43,7 +43,7 @@
 /singleton/hierarchy/supply_pack/engineering/mechanical
 	name = "Gear - Mechanical maintenance"
 	contains = list(/obj/item/storage/belt/utility/full = 3,
-					/obj/item/clothing/suit/storage/hazardvest = 3,
+					/obj/item/clothing/suit/armor/grim/storage/hazardvest = 3,
 					/obj/item/clothing/head/welding = 2,
 					/obj/item/clothing/head/hardhat)
 	cost = 10
@@ -71,7 +71,7 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "emitter crate"
-	access = access_engine_equip
+	access = access_mechanicus_command
 
 /singleton/hierarchy/supply_pack/engineering/field_gen
 	name = "Equipment - Field generator"
@@ -95,7 +95,7 @@
 	cost = 8
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "collector crate"
-	access = access_engine_equip
+	access = access_mechanicus_command
 
 /singleton/hierarchy/supply_pack/engineering/PA
 	name = "Equipment - Particle accelerator"
@@ -134,12 +134,12 @@
 	access = access_tech_storage
 
 /singleton/hierarchy/supply_pack/engineering/teg
-	name = "Power - Mark I Thermoelectric Generator"
+	name = "Power - Mark I Promethium Generator"
 	contains = list(/obj/machinery/power/generator)
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "\improper Mk1 TEG crate"
-	access = access_engine_equip
+	access = access_mechanicus_command
 
 /singleton/hierarchy/supply_pack/engineering/circulator
 	name = "Equipment - Binary atmospheric circulator"
@@ -171,22 +171,22 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure
 	containername = "shield generator construction kit crate"
-	access = access_engine
+	access = access_mechanicus
 
 /singleton/hierarchy/supply_pack/engineering/smbig
-	name = "Power - Supermatter core"
+	name = "Power - Volkite core"
 	contains = list(/obj/machinery/power/supermatter)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/large/phoron
-	containername = "\improper Supermatter crate (CAUTION)"
+	containername = "\improper Volkite crate (CAUTION)"
 	access = access_ce
 
 /singleton/hierarchy/supply_pack/engineering/smsmall
-	name = "Power - Supermatter shard"
+	name = "Power - Volkite shard"
 	contains = list(/obj/machinery/power/supermatter/shard)
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/large/phoron
-	containername = "\improper Supermatter crate (CAUTION)"
+	containername = "\improper Volkite crate (CAUTION)"
 	access = access_ce
 
 /singleton/hierarchy/supply_pack/engineering/fueltank
@@ -216,7 +216,7 @@
 	containername = "radiation suit locker"
 
 /singleton/hierarchy/supply_pack/engineering/bluespacerelay
-	name = "Parts - Emergency Bluespace Relay parts"
+	name = "Parts - Emergency Warp Relay parts"
 	contains = list(/obj/item/stock_parts/circuitboard/bluespacerelay,
 					/obj/item/stock_parts/manipulator,
 					/obj/item/stock_parts/manipulator,
@@ -247,7 +247,7 @@
 	cost = 120
 	containername = "engineering voidsuit crate"
 	containertype = /obj/structure/closet/crate/secure/large
-	access = access_engine
+	access = access_mechanicus
 
 /singleton/hierarchy/supply_pack/engineering/robotics
 	name = "Parts - Robotics"

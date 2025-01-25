@@ -1,13 +1,9 @@
 /singleton/hierarchy/outfit/job/science
 	hierarchy_type = /singleton/hierarchy/outfit/job/science
 	l_ear = /obj/item/device/radio/headset/headset_sci
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	suit = /obj/item/clothing/suit/armor/grim/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/white
 	pda_type = /obj/item/modular_computer/pda/science
-
-/singleton/hierarchy/outfit/job/science/New()
-	..()
-	BACKPACK_OVERRIDE_RESEARCH_CORP
 
 /singleton/hierarchy/outfit/job/science/rd
 	name = OUTFIT_JOB_NAME("Chief Science Officer")
@@ -22,13 +18,13 @@
 	name = OUTFIT_JOB_NAME("Scientist")
 	uniform = /obj/item/clothing/under/rank/scientist
 	id_types = list(/obj/item/card/id/science)
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
+	suit = /obj/item/clothing/suit/armor/grim/toggle/labcoat/science
 
 /singleton/hierarchy/outfit/job/science/xenobiologist
 	name = OUTFIT_JOB_NAME("Xenobiologist")
 	uniform = /obj/item/clothing/under/rank/scientist
 	id_types = list(/obj/item/card/id/science/xenobiologist)
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
+	suit = /obj/item/clothing/suit/armor/grim/toggle/labcoat/science
 
 /singleton/hierarchy/outfit/job/science/roboticist
 	name = OUTFIT_JOB_NAME("Roboticist")
@@ -38,7 +34,3 @@
 	id_types = list(/obj/item/card/id/science/roboticist)
 	pda_slot = slot_r_store
 	pda_type = /obj/item/modular_computer/pda/roboticist
-
-/singleton/hierarchy/outfit/job/science/roboticist/New()
-	..()
-	backpack_overrides.Cut()

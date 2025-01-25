@@ -1,13 +1,13 @@
 /mob/living/bot/secbot/ed209
 	name = "ED-209 Security Robot"
-	desc = "A security robot.  He looks less than thrilled."
+	desc = "A militarum robot.  He looks less than thrilled."
 	icon = 'icons/mob/bot/ED209.dmi'
 	icon_state = "ed2090"
 	attack_state = "ed209-c"
 	layer = MOB_LAYER
 	density = TRUE
 	health = 100
-	maxHealth = 100
+	maxhealth = 100
 
 	is_ranged = 1
 	preparing_arrest_sounds = new()

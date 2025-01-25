@@ -56,6 +56,7 @@
 	var/obj/screen/hydration_icon = null
 	var/obj/screen/pressure = null
 	var/obj/screen/pain = null
+	var/obj/screen/noise2 = null
 	var/obj/screen/gun/item/item_use_icon = null
 	var/obj/screen/gun/radio/radio_use_icon = null
 	var/obj/screen/gun/move/gun_move_icon = null
@@ -195,3 +196,6 @@
 	var/pronouns = null
 
 	var/list/additional_vision_handlers = list() //Basically a list of atoms from which additional vision data is retrieved
+
+	var/offset_overhead_text_x = 0
+	var/offset_overhead_text_y = 0

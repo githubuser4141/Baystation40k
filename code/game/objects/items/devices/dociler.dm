@@ -2,7 +2,7 @@
 	name = "dociler"
 	desc = "A complex single use recharging injector that spreads a complex neurological serum that makes animals docile and friendly. Somewhat."
 	w_class = ITEM_SIZE_NORMAL
-	origin_tech = list(TECH_BIO = 5, TECH_MATERIAL = 2)
+	origin_tech = list(TECH_BIO = 2, TECH_MATERIAL = 2)
 	icon = 'icons/obj/tools/dociler.dmi'
 	icon_state = "animal_tagger1"
 	item_icons = list(
@@ -10,7 +10,7 @@
 		slot_r_hand_str = 'icons/mob/onmob/items/righthand_guns.dmi',
 		)
 	item_state = "gun"
-	force = 1
+	force = 5
 	var/loaded = 1
 	var/charge_tick = 0
 	var/recharge_time = 140

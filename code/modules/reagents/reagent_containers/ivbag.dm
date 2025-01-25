@@ -339,15 +339,15 @@
 	return ..(mapload, "O-")
 
 
-/obj/item/reagent_containers/ivbag/blood/skrell
-	abstract_type = /obj/item/reagent_containers/ivbag/blood/skrell
+/obj/item/reagent_containers/ivbag/blood/tau
+	abstract_type = /obj/item/reagent_containers/ivbag/blood/tau
 
 
-/obj/item/reagent_containers/ivbag/blood/skrell/Initialize(mapload, blood_type)
-	return ..(mapload, blood_type, SPECIES_SKRELL)
+/obj/item/reagent_containers/ivbag/blood/tau/Initialize(mapload, blood_type)
+	return ..(mapload, blood_type, SPECIES_TAU)
 
 
-/obj/item/reagent_containers/ivbag/blood/skrell/oneg/Initialize(mapload)
+/obj/item/reagent_containers/ivbag/blood/tau/oneg/Initialize(mapload)
 	return ..(mapload, "O-")
 
 
@@ -356,7 +356,7 @@
 
 
 /obj/item/reagent_containers/ivbag/blood/unathi/Initialize(mapload, blood_type)
-	return ..(mapload, blood_type, SPECIES_UNATHI)
+	return ..(mapload, blood_type, SPECIES_KROOT)
 
 
 /obj/item/reagent_containers/ivbag/blood/unathi/oneg/Initialize(mapload)
@@ -419,9 +419,9 @@
 
 
 /obj/item/storage/box/freezer/blood/skrell
-	name = "portable freezer (skrellian blood)"
+	name = "portable freezer (Tau blood)"
 	startswith = list(
-		/obj/item/reagent_containers/ivbag/blood/skrell/oneg = 4
+		/obj/item/reagent_containers/ivbag/blood/tau/oneg = 4
 	)
 
 

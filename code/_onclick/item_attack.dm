@@ -252,25 +252,55 @@ avoid code duplication. This includes items that may sometimes act as a standard
 /atom/proc/use_weapon(obj/item/weapon, mob/living/user, list/click_params)
 	SHOULD_CALL_PARENT(TRUE)
 	if (weapon.force > 0 && get_max_health() && !HAS_FLAGS(weapon.item_flags, ITEM_FLAG_NO_BLUDGEON))
+		// Set attack cooldown and play attack animation
 		user.setClickCooldown(user.get_attack_speed(weapon))
 		user.do_attack_animation(src)
+
+		// Determine the multiplier (X) based on skill levels
+		var/X = 1.2 // Default multiplier for no skill
+		if (user.skill_check(SKILL_COMBAT, SKILL_DEMIGOD))
+			X = 4.5 // +130%
+		else if (user.skill_check(SKILL_COMBAT, SKILL_PRIMARIS))
+			X = 3.5 // +110%
+		else if (user.skill_check(SKILL_COMBAT, SKILL_LEGEND))
+			X = 2.5 // +90%
+		else if (user.skill_check(SKILL_COMBAT, SKILL_MASTER))
+			X = 1.7 // +74%
+		else if (user.skill_check(SKILL_COMBAT, SKILL_EXPERIENCED))
+			X = 1.2 // +64%
+		else if (user.skill_check(SKILL_COMBAT, SKILL_TRAINED)) // At baseline levels damage increase is smaller.
+			X = 0.9 // +58%
+		else if (user.skill_check(SKILL_COMBAT, SKILL_BASIC))
+			X = 0.7 // +54%
+		else if (user.skill_check(SKILL_COMBAT, SKILL_UNSKILLED))
+			X = 0.6 // +52%
+		else
+			X = 1.2  // +64% Default multiplier if no skill is found
+
+		// Calculate the adjusted force based on the skill level
+		var/adjusted_force = weapon.force + 2 * ((0.2 * weapon.force) + (0.1 * X * weapon.force))
+
 		var/damage_flags = weapon.damage_flags()
-		if (!can_damage_health(weapon.force, weapon.damtype, damage_flags))
+		if (!can_damage_health(adjusted_force, weapon.damtype, damage_flags))
 			playsound(src, use_weapon_hitsound ? weapon.hitsound : damage_hitsound, 50, TRUE)
 			user.visible_message(
 				SPAN_WARNING("\The [user] hits \the [src] with \a [weapon], but it bounces off!"),
 				SPAN_WARNING("You hit \the [src] with \the [weapon], but it bounces off!")
 			)
 			return TRUE
+
+		// Play the hit sound and deal damage with the adjusted force
 		playsound(src, use_weapon_hitsound ? weapon.hitsound : damage_hitsound, 75, TRUE)
 		user.visible_message(
 			SPAN_DANGER("\The [user] hits \the [src] with \a [weapon]!"),
 			SPAN_DANGER("You hit \the [src] with \the [weapon]!")
 		)
-		damage_health(weapon.force, weapon.damtype, damage_flags, skip_can_damage_check = TRUE)
+		damage_health(adjusted_force, weapon.damtype, damage_flags, skip_can_damage_check = TRUE)
 		return TRUE
 
 	return FALSE
+
+
 
 
 /mob/living/use_weapon(obj/item/weapon, mob/living/user, list/click_params)

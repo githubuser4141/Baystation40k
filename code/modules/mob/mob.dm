@@ -220,7 +220,7 @@
 	if (ispath(using_intent))
 		using_intent = GET_SINGLETON(using_intent)
 	. += using_intent.move_delay
-	. += encumbrance() * (0.5 + 1.5 * (SKILL_MAX - get_skill_value(SKILL_HAULING))/(SKILL_MAX - SKILL_MIN)) //Varies between 0.5 and 2, depending on skill
+	. += encumbrance() * (0.5 + 1.5 * (SKILL_MAX - get_skill_value(SKILL_VIGOR))/(SKILL_MAX - SKILL_MIN)) //Varies between 0.5 and 2, depending on skill
 
 //How much the stuff the mob is pulling contributes to its movement delay.
 /mob/proc/encumbrance()
@@ -426,9 +426,7 @@
 		'html/spell-check.png',
 		'html/wrench-screwdriver.png',
 		'html/changelog.css',
-		'html/changelog.html'
 		)
-	show_browser(src, 'html/changelog.html', "window=changes;size=675x650")
 	if (GLOB.changelog_hash && prefs.lastchangelog != GLOB.changelog_hash)
 		prefs.lastchangelog = GLOB.changelog_hash
 		SScharacter_setup.queue_preferences_save(prefs)
@@ -630,7 +628,7 @@
 	return stat == DEAD
 
 /mob/proc/is_mechanical()
-	if(mind && (mind.assigned_role == "Robot" || mind.assigned_role == "AI"))
+	if(mind && (mind.assigned_role == "Robot" || mind.assigned_role == "Machine Spirit"))
 		return 1
 	return istype(src, /mob/living/silicon) || get_species() == SPECIES_IPC
 
@@ -1278,3 +1276,9 @@
 
 /mob/get_mass()
 	return mob_size
+
+/mob/get_overhead_text_x_offset()
+	return offset_overhead_text_x
+
+/mob/get_overhead_text_y_offset()
+	return offset_overhead_text_y

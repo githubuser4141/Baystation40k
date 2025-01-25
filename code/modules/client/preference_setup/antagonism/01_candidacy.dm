@@ -38,7 +38,7 @@
 	for(var/antag_type in all_antag_types)
 		var/datum/antagonist/antag = all_antag_types[antag_type]
 		. += "<tr><td>[antag.role_text]: </td><td>"
-		if(jobban_isbanned(preference_mob(), antag.id) || (antag.id == MODE_MALFUNCTION && jobban_isbanned(preference_mob(), "AI")))
+		if(jobban_isbanned(preference_mob(), antag.id) || (antag.id == MODE_MALFUNCTION && jobban_isbanned(preference_mob(), "Machine Spirit")))
 			. += "[SPAN_DANGER("\[BANNED\]")]<br>"
 		else if(antag.id in pref.be_special_role)
 			. += "[SPAN_CLASS("linkOn", "High")] <a href='?src=\ref[src];add_maybe=[antag.id]'>Low</a> <a href='?src=\ref[src];del_special=[antag.id]'>Never</a></br>"
@@ -52,7 +52,7 @@
 	// Special handling for pAI role
 	. += "<tr></tr><tr><td>pAI:</td>"
 	if (BE_PAI in pref.be_special_role)
-		. += "<td>[SPAN_CLASS("linkOn", "Yes")] <a href='?src=\ref[src];del_special=[BE_PAI]'>No</a></br></td></tr>"
+		. += "<td>[SPAN_CLASS("linkOn", "Compliance")] <a href='?src=\ref[src];del_special=[BE_PAI]'>No</a></br></td></tr>"
 	else
 		. += "<td><a href='?src=\ref[src];add_special=[BE_PAI]'>Yes</a> [SPAN_CLASS("linkOn", "No")]</br></td></tr>"
 	. += "</table>"
@@ -104,7 +104,7 @@
 		if(!include_bans)
 			if(jobban_isbanned(preference_mob(), antag_type))
 				continue
-			if(((antag_type  == MODE_MALFUNCTION) && jobban_isbanned(preference_mob(), "AI")))
+			if(((antag_type  == MODE_MALFUNCTION) && jobban_isbanned(preference_mob(), "Machine Spirit")))
 				continue
 		private_valid_special_roles += antag_type
 

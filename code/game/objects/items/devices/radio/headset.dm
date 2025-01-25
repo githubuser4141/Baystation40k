@@ -20,10 +20,6 @@
 	var/ks1type = /obj/item/device/encryptionkey
 	var/ks2type = null
 
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_ears_unathi.dmi'
-		)
-
 /obj/item/device/radio/headset/Initialize()
 	. = ..()
 	internal_channels.Cut()
@@ -120,28 +116,41 @@
 	ks1type = /obj/item/device/encryptionkey/binary
 
 /obj/item/device/radio/headset/headset_sec
-	name = "security vox headset"
-	desc = "This is used by your elite security force."
+	name = "militarum vox headset"
+	desc = "This is used by your elite militarum force."
 	icon_state = "sec_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/headset_sec
 
 /obj/item/device/radio/headset/headset_sec/alt
-	name = "security bowman headset"
+	name = "militarum bowman headset"
 	icon_state = "sec_headset_alt"
 	item_state = "sec_headset_alt"
 
-/obj/item/device/radio/headset/headset_eng
+/obj/item/device/radio/headset/headset_mechanicus
 	name = "engineering vox headset"
 	desc = "When the engineers wish to chat like girls."
 	icon_state = "eng_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/headset_eng
 
-/obj/item/device/radio/headset/headset_eng/alt
+/obj/item/device/radio/headset/headset_mechanicus/alt
 	name = "engineering bowman headset"
 	icon_state = "eng_headset_alt"
 	item_state = "eng_headset_alt"
+
+/obj/item/device/radio/headset/headset_mechanicus/bondsman
+	name = "engineering bowman headset"
+	icon_state = "eng_headset_alt"
+	item_state = "eng_headset_alt"
+	ks1type = /obj/item/device/encryptionkey/headset_eng_bond
+
+/obj/item/device/radio/headset/headset_mechanicus/smith
+	name = "engineering bowman headset"
+	icon_state = "eng_headset_alt"
+	item_state = "eng_headset_alt"
+	ks1type = /obj/item/device/encryptionkey/headset_eng_smith
+
 
 /obj/item/device/radio/headset/headset_rob
 	name = "robotics vox headset"
@@ -244,19 +253,19 @@
 	ks1type = /obj/item/device/encryptionkey/heads/hos
 
 /obj/item/device/radio/headset/heads/ce
-	name = "chief engineer's headset"
+	name = "magos explorator's headset"
 	desc = "The headset of the guy who is in charge of morons."
 	icon_state = "com_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/heads/ce
 
 /obj/item/device/radio/headset/heads/ce/alt
-	name = "chief engineer's bowman headset"
+	name = "magos explorator's bowman headset"
 	icon_state = "com_headset_alt"
 	item_state = "com_headset_alt"
 
 /obj/item/device/radio/headset/heads/cmo
-	name = "chief medical officer's headset"
+	name = "biologis headset"
 	desc = "The headset of the highly trained medical chief."
 	icon_state = "com_headset"
 	item_state = "headset"

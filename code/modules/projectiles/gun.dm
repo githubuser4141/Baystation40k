@@ -51,7 +51,7 @@
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 	matter = list(MATERIAL_STEEL = 2000)
-	w_class = ITEM_SIZE_NORMAL
+	w_class = ITEM_SIZE_LARGE
 	throwforce = 5
 	throw_speed = 4
 	throw_range = 5
@@ -65,7 +65,7 @@
 	/// Checks if the gun will continue firing if the mouse button is held down.
 	var/can_autofire = FALSE
 	/// Delay after shooting before the gun can be used again. Cannot be less than [burst_delay+1].
-	var/fire_delay = 6
+	var/fire_delay = 5
 	/// Delay between shots, if firing in bursts.
 	var/burst_delay = 2
 	var/move_delay = 1
@@ -82,7 +82,7 @@
 	/// Accuracy is measured in tiles. +1 accuracy means that everything is effectively one tile closer for the purpose of miss chance, -1 means the opposite. launchers are not supported, at the moment.
 	var/accuracy = 0
 	/// Increase of to-hit chance per 1 point of accuracy.
-	var/accuracy_power = 5
+	var/accuracy_power = 6
 	/// How unwieldy this weapon for its size, affects accuracy when fired without aiming.
 	var/bulk = 0
 	/// Time when hand gun's in became active, for purposes of aiming bonuses.
@@ -118,15 +118,17 @@
 	var/told_cant_shoot = 0
 	var/lock_time = -100
 	var/last_safety_check = -INFINITY
-	var/safety_state = 1
+	var/safety_state = 0
+	var/calibrated = 0
+	var/calibration_penalty = 1
 	var/has_safety = TRUE
 	/// Overlay to apply to gun based on safety state, if any.
 	var/safety_icon
 
 	/// What skill governs safe handling of this gun. Basic skill level and higher will also show the safety overlay to the player.
-	var/gun_skill = SKILL_WEAPONS
+	var/gun_skill = SKILL_GUNS
 	/// What skill level is needed in the gun's skill to completely negate the chance of an accident.
-	var/safety_skill = SKILL_EXPERIENCED
+	var/safety_skill = SKILL_TRAINED
 
 /obj/item/gun/Initialize()
 	. = ..()
@@ -171,7 +173,7 @@
 		return 0
 
 	var/mob/living/M = user
-	if(!safety() && world.time > last_safety_check + 5 MINUTES && !user.skill_check(SKILL_WEAPONS, SKILL_BASIC))
+	if(!safety() && world.time > last_safety_check + 5 MINUTES && !user.skill_check(SKILL_GUNS, SKILL_BASIC))
 		if(prob(30))
 			toggle_safety()
 			return 1
@@ -260,7 +262,7 @@
 		return
 
 	if(safety())
-		if(user.a_intent == I_HURT && user.skill_check(SKILL_WEAPONS, SKILL_EXPERIENCED) && user.client?.get_preference_value(/datum/client_preference/safety_toggle_on_intent) == GLOB.PREF_YES)
+		if(user.a_intent == I_HURT && user.skill_check(SKILL_GUNS, SKILL_EXPERIENCED) && user.client?.get_preference_value(/datum/client_preference/safety_toggle_on_intent) == GLOB.PREF_YES)
 			toggle_safety(user)
 		else
 			handle_click_safety(user)
@@ -430,7 +432,7 @@
 	var/disp_mod = dispersion[min(burst, length(dispersion))]
 	var/stood_still = last_handled
 	//Not keeping gun active will throw off aim (for non-Masters)
-	if(user.skill_check(SKILL_WEAPONS, SKILL_TRAINED))
+	if(user.skill_check(SKILL_GUNS, SKILL_TRAINED))
 		stood_still = min(user.l_move_time, last_handled)
 	else
 		stood_still = max(user.l_move_time, last_handled)
@@ -446,7 +448,7 @@
 		acc_mod -= one_hand_penalty/2
 		disp_mod += one_hand_penalty*0.5 //dispersion per point of two-handedness
 
-	if(burst > 1 && !user.skill_check(SKILL_WEAPONS, SKILL_TRAINED))
+	if(burst > 1 && !user.skill_check(SKILL_GUNS, SKILL_TRAINED))
 		acc_mod -= 1
 		disp_mod += 0.5
 
@@ -588,7 +590,7 @@
 	zoom(user, zoom_offset, view_size)
 	if(zoom)
 		accuracy = scoped_accuracy
-		if(user.skill_check(SKILL_WEAPONS, SKILL_TRAINED))
+		if(user.skill_check(SKILL_GUNS, SKILL_TRAINED))
 			accuracy += 1
 		if(screen_shake)
 			screen_shake = round(screen_shake*zoom_amount+1) //screen shake is worse when looking through a scope
@@ -601,7 +603,7 @@
 
 /obj/item/gun/examine(mob/user)
 	. = ..()
-	if(user.skill_check(SKILL_WEAPONS, SKILL_BASIC))
+	if(user.skill_check(SKILL_GUNS, SKILL_BASIC))
 		if(length(firemodes) > 1)
 			var/datum/firemode/current_mode = firemodes[sel_mode]
 			to_chat(user, "The fire selector is set to [current_mode.name].")
@@ -633,7 +635,7 @@
 
 /obj/item/gun/attack_self(mob/user)
 	var/datum/firemode/new_mode = switch_firemodes(user)
-	if(prob(20) && !user.skill_check(SKILL_WEAPONS, SKILL_BASIC))
+	if(prob(20) && !user.skill_check(SKILL_GUNS, SKILL_BASIC))
 		new_mode = switch_firemodes(user)
 	if(new_mode)
 		to_chat(user, SPAN_NOTICE("\The [src] is now set to [new_mode.name]."))
@@ -665,6 +667,36 @@
 			to_chat(usr, SPAN_WARNING("You need a gun in your hands to do that."))
 			return
 	gun.toggle_safety(usr)
+
+
+/obj/item/gun/proc/toggle_calib(mob/user)
+	if (user?.is_physically_disabled())
+		to_chat(user, SPAN_WARNING("You can't do this right now!"))
+		return
+
+	if(user)
+		if(!do_after(user, 10 SECONDS, DO_PUBLIC_UNIQUE))
+			return
+		user.visible_message(SPAN_WARNING("[user] finishes calibrating the \the [src]."), SPAN_NOTICE("You calibrate \the [src] it should be more reliable now."), range = 4)
+		calibrated = 1
+		playsound(src, 'sound/weapons/guns/interaction/rifle_boltforward.ogg', 25, 1)
+
+
+/obj/item/gun/verb/toggle_calib_verb()
+	set name = "Calibrate Weapon"
+	set category = "Object"
+	set src in usr
+	if (usr.incapacitated())
+		to_chat(usr, SPAN_WARNING("You're in no condition to do that."))
+		return
+	var/obj/item/gun/gun = usr.get_active_hand()
+	if (!istype(gun))
+		gun = usr.get_inactive_hand()
+		if (!istype(gun))
+			to_chat(usr, SPAN_WARNING("You need a gun in your hands to do that."))
+			return
+	playsound(src, 'sound/weapons/guns/interaction/rifle_load.ogg', 25, 1)
+	gun.toggle_calib(usr)
 
 
 /obj/item/gun/CtrlClick(mob/user)

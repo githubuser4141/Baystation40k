@@ -7,7 +7,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
-	access = list(access_morgue, access_chapel_office, access_crematorium, access_maint_tunnels)
+	access = list(access_medical_command, access_chapel_office, access_crematorium, access_maint_tunnels)
 	outfit_type = /singleton/hierarchy/outfit/job/chaplain
 
 /datum/job/chaplain/equip(mob/living/carbon/human/H, alt_title, ask_questions = TRUE)
@@ -47,7 +47,7 @@
 			if("homosexuality")
 				B.SetName("Guys Gone Wild")
 			if("science")
-				B.SetName(pick("Principle of Relativity", "Quantum Enigma: Physics Encounters Consciousness", "Programming the Universe", "Quantum Physics and Theology", "String Theory for Dummies", "How To: Build Your Own Warp Drive", "The Mysteries of Bluespace", "Playing God: Collector's Edition"))
+				B.SetName(pick("Principle of Relativity", "Quantum Enigma: Physics Encounters Consciousness", "Programming the Universe", "Quantum Physics and Theology", "String Theory for Dummies", "How To: Build Your Own Warp Drive", "The Mysteries of Warp", "Playing God: Collector's Edition"))
 			else
 				B.SetName("The Holy Book of [new_religion]")
 
@@ -111,8 +111,8 @@
 
 			H.update_inv_l_hand() // so that it updates the bible's item_state in his hand
 
-			switch(input(H,"Look at your bible - is this what you want?") in list("Yes","No"))
-				if("Yes")
+			switch(input(H,"Look at your bible - is this what you want?") in list("Compliance","No"))
+				if("Compliance")
 					accepted = 1
 				if("No")
 					if(outoftime)

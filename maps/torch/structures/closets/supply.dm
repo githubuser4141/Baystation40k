@@ -24,7 +24,7 @@
 
 /obj/structure/closet/secure_closet/decktech
 	name = "deck technician's locker"
-	req_access = list(access_cargo)
+	req_access = list(access_dauntless)
 	closet_appearance = /singleton/closet_appearance/secure_closet/torch/cargo/worker
 
 /obj/structure/closet/secure_closet/decktech/WillContain()
@@ -32,7 +32,7 @@
 		/obj/item/device/radio/headset/headset_cargo,
 		/obj/item/device/radio/headset/headset_cargo/alt,
 		/obj/item/clothing/gloves/thick,
-		/obj/item/clothing/suit/storage/hazardvest,
+		/obj/item/clothing/suit/armor/grim/storage/hazardvest,
 		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/storage/belt/utility/atmostech,
 		/obj/item/hand_labeler,
@@ -49,8 +49,8 @@
 	)
 
 /obj/structure/closet/secure_closet/deckofficer
-	name = "deck chief's locker"
-	req_access = list(access_qm)
+	name = "deck boss's locker"
+	req_access = list(access_dauntless)
 	closet_appearance = /singleton/closet_appearance/secure_closet/torch/cargo/deck_officer
 
 /obj/structure/closet/secure_closet/deckofficer/WillContain()
@@ -60,7 +60,7 @@
 		/obj/item/clothing/gloves/thick,
 		/obj/item/clothing/glasses/meson,
 		/obj/item/clothing/glasses/sunglasses,
-		/obj/item/clothing/suit/storage/hazardvest,
+		/obj/item/clothing/suit/armor/grim/storage/hazardvest,
 		/obj/item/clothing/accessory/storage/brown_vest,
 		/obj/item/storage/belt/utility/full,
 		/obj/item/hand_labeler,
@@ -70,7 +70,7 @@
 		/obj/item/device/flash,
 		/obj/item/device/megaphone,
 		/obj/item/device/holowarrant,
-		/obj/item/clothing/suit/armor/pcarrier/light/sol,
+		/obj/item/clothing/suit/armor/grim/light/sol,
 		/obj/item/device/binoculars,
 		/obj/item/storage/belt/general,
 		/obj/item/storage/backpack/dufflebag,
@@ -79,7 +79,7 @@
 
 /obj/structure/closet/secure_closet/prospector
 	name = "prospector's locker"
-	req_access = list(access_mining)
+	req_access = list(access_dauntless)
 	closet_appearance = /singleton/closet_appearance/secure_closet/torch/cargo
 
 /obj/structure/closet/secure_closet/prospector/WillContain()

@@ -25,7 +25,7 @@
 #define WARNING_DELAY 20			//seconds between warnings.
 
 /obj/machinery/power/supermatter
-	name = "supermatter core"
+	name = "volkite core"
 	desc = "A strangely translucent and iridescent crystal. <span class='danger'>You get headaches just from looking at it.</span>"
 	icon = 'icons/obj/machines/power/supermatter.dmi'
 	icon_state = "supermatter"
@@ -44,7 +44,7 @@
 
 	//Controls how much power is produced by each collector in range - this is the main parameter for tweaking SM balance, as it basically controls how the power variable relates to the rest of the game.
 	var/power_factor = 1.0
-	var/decay_factor = 700			//Affects how fast the supermatter power decays
+	var/decay_factor = 700			//Affects how fast the volkite power decays
 	var/critical_temperature = 5000	//K
 	var/charging_factor = 0.05
 	var/damage_rate_limit = 4.5		//damage rate cap at power = 300, scales linearly with power
@@ -80,7 +80,7 @@
 	// Time in 1/10th of seconds since the last sent warning
 	var/lastwarning = 0
 
-	// This stops spawning redundant explosions. Also incidentally makes supermatter unexplodable if set to 1.
+	// This stops spawning redundant explosions. Also incidentally makes volkite unexplodable if set to 1.
 	var/exploded = 0
 
 	var/power = 0
@@ -124,19 +124,19 @@
 	if(disable_adminwarn)
 		return
 
-	// Generic checks, similar to checks done by supermatter monitor program.
-	aw_normal = status_adminwarn_check(SUPERMATTER_NORMAL, aw_normal, "INFO: Supermatter crystal has been energised", FALSE)
-	aw_warning = status_adminwarn_check(SUPERMATTER_WARNING, aw_warning, "WARN: Supermatter crystal is taking integrity damage", FALSE)
-	aw_danger = status_adminwarn_check(SUPERMATTER_DANGER, aw_danger, "WARN: Supermatter integrity is below 50%", TRUE)
-	aw_emerg = status_adminwarn_check(SUPERMATTER_EMERGENCY, aw_emerg, "CRIT: Supermatter integrity is below 25%", FALSE)
-	aw_delam = status_adminwarn_check(SUPERMATTER_DELAMINATING, aw_delam, "CRIT: Supermatter is delaminating", TRUE)
+	// Generic checks, similar to checks done by volkite monitor program.
+	aw_normal = status_adminwarn_check(SUPERMATTER_NORMAL, aw_normal, "INFO: Volkite crystal has been energised", FALSE)
+	aw_warning = status_adminwarn_check(SUPERMATTER_WARNING, aw_warning, "WARN: Volkite crystal is taking integrity damage", FALSE)
+	aw_danger = status_adminwarn_check(SUPERMATTER_DANGER, aw_danger, "WARN: Volkite integrity is below 50%", TRUE)
+	aw_emerg = status_adminwarn_check(SUPERMATTER_EMERGENCY, aw_emerg, "CRIT: Volkite integrity is below 25%", FALSE)
+	aw_delam = status_adminwarn_check(SUPERMATTER_DELAMINATING, aw_delam, "CRIT: Volkite is delaminating", TRUE)
 
-	// EPR check. Only runs when supermatter is energised. Triggers when there is very low amount of coolant in the core (less than one standard canister).
+	// EPR check. Only runs when volkite is energised. Triggers when there is very low amount of coolant in the core (less than one standard canister).
 	// This usually means a core breach or deliberate venting.
 	if(get_status() && (get_epr() < 0.5))
 		if(!aw_EPR)
 			var/area/A = get_area(src)
-			log_and_message_admins("WARN: Supermatter EPR value low. Possible core breach detected in [A.name]", null, src)
+			log_and_message_admins("WARN: Volkite EPR value low. Possible core breach detected in [A.name]", null, src)
 		aw_EPR = TRUE
 	else
 		aw_EPR = FALSE
@@ -193,12 +193,12 @@
 	if(exploded)
 		return
 
-	log_and_message_admins("Supermatter delaminating at [x] [y] [z]", null, src)
+	log_and_message_admins("Volkite delaminating at [x] [y] [z]", null, src)
 	anchored = TRUE
 	grav_pulling = 1
 	exploded = 1
 	sleep(pull_time)
-	var/turf/TS = get_turf(src)		// The turf supermatter is on. SM being in a locker, exosuit, or other container shouldn't block it's effects that way.
+	var/turf/TS = get_turf(src)		// The turf volkite is on. SM being in a locker, exosuit, or other container shouldn't block it's effects that way.
 	if(!istype(TS))
 		return
 
@@ -303,10 +303,10 @@
 	else
 		alert_msg = null
 	if(alert_msg)
-		GLOB.global_announcer.autosay(alert_msg, "Supermatter Monitor", "Engineering")
+		GLOB.global_announcer.autosay(alert_msg, "Volkite Monitor", "Mechanicus")
 		//Public alerts
 		if((damage > emergency_point) && !public_alert)
-			GLOB.global_announcer.autosay("WARNING: SUPERMATTER CRYSTAL DELAMINATION IMMINENT! SAFEROOMS UNBOLTED.", "Supermatter Monitor")
+			GLOB.global_announcer.autosay("WARNING: SUPERMATTER CRYSTAL DELAMINATION IMMINENT! SAFEROOMS UNBOLTED.", "Volkite Monitor")
 			public_alert = 1
 			GLOB.using_map.unbolt_saferooms() // torch
 			for(var/mob/M in GLOB.player_list)
@@ -314,7 +314,7 @@
 				if(T && (T.z in GLOB.using_map.station_levels) && !istype(M,/mob/new_player) && !isdeaf(M))
 					sound_to(M, 'sound/ambience/matteralarm.ogg')
 		else if(safe_warned && public_alert)
-			GLOB.global_announcer.autosay(alert_msg, "Supermatter Monitor")
+			GLOB.global_announcer.autosay(alert_msg, "Volkite Monitor")
 			public_alert = 0
 
 /obj/machinery/power/supermatter/Process()
@@ -365,7 +365,7 @@
 	if(!env || !removed || !removed.total_moles)
 		damage_archived = damage
 		damage += max((power - 15*power_factor)/10, 0)
-	else if (grav_pulling) //If supermatter is detonating, remove all air from the zone
+	else if (grav_pulling) //If volkite is detonating, remove all air from the zone
 		env.remove(env.total_moles)
 	else
 		damage_archived = damage
@@ -506,7 +506,7 @@
 
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, "supermatter_crystal.tmpl", "Supermatter Crystal", 500, 300)
+		ui = new(user, src, ui_key, "supermatter_crystal.tmpl", "Volkite Crystal", 500, 300)
 		ui.set_initial_data(data)
 		ui.open()
 		ui.set_auto_update(1)
@@ -542,7 +542,7 @@
 			SPAN_DANGER(FONT_LARGE("You slam into \the [src], and your mind fills with unearthly shrieking. Your vision floods with light as your body instantly dissolves into dust.")),
 			SPAN_WARNING("You hear an unearthly ringing, then what sounds like a shrilling kettle as you are washed with a wave of heat.")
 		)
-	else if(!grav_pulling) //To prevent spam, detonating supermatter does not indicate non-mobs being destroyed
+	else if(!grav_pulling) //To prevent spam, detonating volkite does not indicate non-mobs being destroyed
 		AM.visible_message(
 			SPAN_WARNING("\The [AM] smacks into \the [src] and rapidly flashes to ash."),
 			SPAN_WARNING("You hear a loud crack as you are washed with a wave of heat.")
@@ -574,7 +574,7 @@
 	for(var/atom/A in range(pull_range, target))
 		A.singularity_pull(target, pull_power)
 
-/obj/machinery/power/supermatter/GotoAirflowDest(n) //Supermatter not pushed around by airflow
+/obj/machinery/power/supermatter/GotoAirflowDest(n) //Volkite not pushed around by airflow
 	return
 
 /obj/machinery/power/supermatter/RepelAirflowDest(n)
@@ -589,10 +589,10 @@
 			power *= 3
 		if(EX_ACT_LIGHT)
 			power *= 2
-	log_and_message_admins("WARN: Explosion near the Supermatter! New EER: [power].", null, src)
+	log_and_message_admins("WARN: Explosion near the Volkite! New EER: [power].", null, src)
 
 /obj/machinery/power/supermatter/shard //Small subtype, less efficient and more sensitive, but less boom.
-	name = "supermatter shard"
+	name = "volkite shard"
 	desc = "A strangely translucent and iridescent crystal that looks like it used to be part of a larger structure. <span class='danger'>You get headaches just from looking at it.</span>"
 	icon_state = "darkmatter_shard"
 	base_icon_state = "darkmatter_shard"
@@ -611,7 +611,7 @@
 
 
 /obj/machinery/power/supermatter/randomsample
-	name = "experimental supermatter sample"
+	name = "experimental volkite sample"
 	icon_state = "darkmatter_shard"
 	base_icon_state = "darkmatter_shard"
 
@@ -625,7 +625,7 @@
 	reaction_power_modifier =  rand(0, 100)			//Higher == more overall power
 
 	power_factor = rand(0, 20)
-	decay_factor = rand(50, 70000)			//Affects how fast the supermatter power decays
+	decay_factor = rand(50, 70000)			//Affects how fast the volkite power decays
 	critical_temperature = rand(3000, 5000)	//K
 	charging_factor = rand(0, 1)
 	damage_rate_limit = rand( 1, 10)		//damage rate cap at power = 300, scales linearly with power
@@ -650,7 +650,7 @@
 	emergency_color = RGB
 
 /obj/machinery/power/supermatter/inert
-	name = "experimental supermatter sample"
+	name = "experimental volkite sample"
 	icon_state = "darkmatter_shard"
 	base_icon_state = "darkmatter_shard"
 	thermal_release_modifier = 0 //Basically inert
@@ -659,7 +659,7 @@
 	radiation_release_modifier = 1
 
 /obj/structure/closet/crate/secure/large/phoron/experimentalsm
-	name = "experimental supermatter crate"
+	name = "experimental volkite crate"
 	desc = "Are you sure you want to open this?"
 
 /obj/structure/closet/crate/secure/large/phoron/experimentalsm/WillContain()
@@ -677,8 +677,8 @@
 
 //Warning lights
 /obj/machinery/rotating_alarm/supermatter
-	name = "supermatter alarm"
-	desc = "An industrial rotating alarm light. This one is used to monitor supermatter engines."
+	name = "volkite alarm"
+	desc = "An industrial rotating alarm light. This one is used to monitor volkite engines."
 
 	frame_type = /obj/item/frame/supermatter_alarm
 	construct_state = /singleton/machine_construction/default/item_chassis

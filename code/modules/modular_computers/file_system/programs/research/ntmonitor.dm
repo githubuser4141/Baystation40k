@@ -7,7 +7,7 @@
 	extended_desc = "This program monitors the local NTNet network, provides access to logging systems, and allows for configuration changes"
 	size = 12
 	requires_ntnet = TRUE
-	required_access = access_network_admin
+	required_access = access_mechanicus_command
 	network_destination = "NTNet Statistics & Configuration" // This triggers logging when the program is opened and closed
 	available_on_ntnet = TRUE
 	nanomodule_path = /datum/nano_module/program/computer_ntnetmonitor
@@ -77,11 +77,11 @@
 			ntnet_global.setting_disabled = FALSE
 			return TOPIC_HANDLED
 
-		// NTNet is enabled and user is about to shut it down. Let's ask them if they really want to do it, as wirelessly connected computers won't connect without NTNet being enabled (which may prevent people from turning it back on)
+		// NTNet is enabled and user is about to shut it down. Let's ask them if they really want to do it, as wirelessly connected cogitators won't connect without NTNet being enabled (which may prevent people from turning it back on)
 		if(!user)
 			return TOPIC_HANDLED
-		var/response = alert(user, "Really disable NTNet wireless? If your computer is connected wirelessly you won't be able to turn it back on! This will affect all connected wireless devices.", "NTNet shutdown", "Yes", "No")
-		if(response == "Yes")
+		var/response = alert(user, "Really disable NTNet wireless? If your cogitator is connected wirelessly you won't be able to turn it back on! This will affect all connected wireless devices.", "NTNet shutdown", "Compliance", "No")
+		if(response == "Compliance")
 			ntnet_global.setting_disabled = TRUE
 		return TOPIC_HANDLED
 	if(href_list["purgelogs"])

@@ -11,7 +11,7 @@
 	access = syndicate_access.Copy()
 
 /obj/item/card/id/syndicate/station_access/New()
-	..() // Same as the normal Syndicate id, only already has all station access
+	..() // Same as the normal Heretic id, only already has all station access
 	access |= get_all_station_access()
 
 /obj/item/card/id/syndicate/Destroy()
@@ -188,7 +188,7 @@
 					to_chat(user, SPAN_NOTICE("Sex changed to '[new_sex]'."))
 					. = 1
 			if("Factory Reset")
-				if(alert("This will factory reset the card, including access and owner. Continue?", "Factory Reset", "No", "Yes") == "Yes" && CanUseTopic(user, state))
+				if(alert("This will factory reset the card, including access and owner. Continue?", "Factory Reset", "No", "Compliance") == "Compliance" && CanUseTopic(user, state))
 					age = initial(age)
 					formal_name_prefix = initial(formal_name_prefix)
 					formal_name_suffix = initial(formal_name_suffix)

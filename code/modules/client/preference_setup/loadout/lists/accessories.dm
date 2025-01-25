@@ -62,7 +62,7 @@
 
 /datum/gear/accessory/ntaward
 	display_name = "corporate award selection"
-	description = "A medal or ribbon awarded to corporate personnel for significant accomplishments."
+	description = "A medal or ribbon awarded to imperial personnel for significant accomplishments."
 	path = /obj/item/storage/medalbox
 	cost = 6
 	flags = GEAR_HAS_NO_CUSTOMIZATION
@@ -96,10 +96,10 @@
 
 
 /datum/gear/accessory/armband_emt
-	display_name = "EMT armband"
+	display_name = "Medicae armband"
 	path = /obj/item/clothing/accessory/armband/medgreen
 	allowed_roles = list(
-		/datum/job/doctor
+		/datum/job/medicae
 	)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 
@@ -127,7 +127,7 @@
 
 
 /datum/gear/accessory/ftu_pin
-	display_name = "Free Trade Union pin"
+	display_name = "Navigator Houses pin"
 	path = /obj/item/clothing/accessory/ftu_pin
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 
@@ -136,7 +136,7 @@
 	display_name = "chaplain insignia"
 	path = /obj/item/clothing/accessory/chaplain
 	allowed_roles = list(
-		/datum/job/chaplain
+		/datum/job/chaplain_militant
 	)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 

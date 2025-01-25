@@ -64,6 +64,10 @@
 	..()
 	hierarchy_type = type
 
+
+var/global/const/access_slavercult = "ACCESS_SLAVERCULT"
+
+
 /singleton/hierarchy/outfit/corpse/slavers_base
 	name = "Basic slaver output"
 
@@ -144,7 +148,7 @@
 	response_disarm = "shoves"
 	response_harm = "hits"
 	speed = 4
-	maxHealth = 100
+	maxhealth = 100
 	health = 100
 	natural_weapon = /obj/item/natural_weapon/punch
 	can_escape = TRUE
@@ -184,8 +188,8 @@
 	item_icons = list(slot_w_uniform_str = 'maps/away/slavers/slavers_base_sprites.dmi')
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_MINOR,
-		energy = ARMOR_ENERGY_MINOR
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_BASIC,
+		energy = ARMOR_ENERGY_TEN
 		)

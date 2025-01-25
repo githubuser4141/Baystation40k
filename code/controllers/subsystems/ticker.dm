@@ -52,7 +52,7 @@ SUBSYSTEM_DEF(ticker)
 	pregame_timeleft = config.pre_game_time SECONDS
 	build_mode_cache()
 	to_world(SPAN_INFO("<B>Welcome to the pre-game lobby!</B>"))
-	to_world("Please, setup your character and select ready. Game will start in [round(pregame_timeleft/10)] seconds")
+	to_world("Please, setup your character, be sure to choose the Imperial Background and select ready. Game will start in [round(pregame_timeleft/10)] seconds")
 
 
 /datum/controller/subsystem/ticker/fire(resumed, no_mc_tick)
@@ -367,7 +367,7 @@ Helpers
 /datum/controller/subsystem/ticker/proc/create_characters()
 	for(var/mob/new_player/player in GLOB.player_list)
 		if(player && player.ready && player.mind)
-			if(player.mind.assigned_role=="AI")
+			if(player.mind.assigned_role=="Machine Spirit")
 				player.close_spawn_windows()
 				player.AIize()
 			else if(!player.mind.assigned_role)

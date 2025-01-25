@@ -10,11 +10,11 @@
 	throw_range = 3
 	force = 15
 	var/list/potentials = list(
-		SPECIES_HUMAN = /obj/item/storage/bag/cash/infinite,
+		SPECIES_HUMAN = /obj/item/storage/bag/cash/massivebundle,
 		SPECIES_VOX = /spell/targeted/shapeshift/true_form,
-		SPECIES_UNATHI = /spell/moghes_blessing,
+		SPECIES_KROOT = /spell/moghes_blessing,
 		SPECIES_DIONA = /spell/aoe_turf/conjure/grove/gestalt,
-		SPECIES_SKRELL = /obj/item/contract/apprentice/skrell,
+		SPECIES_TAU = /obj/item/contract/apprentice/skrell,
 		SPECIES_IPC = /spell/camera_connection)
 
 /obj/item/magic_rock/attack_self(mob/user)
@@ -38,16 +38,8 @@
 	to_chat(user, "\The [src] crumbles in your hands.")
 	qdel(src)
 
-/obj/item/storage/bag/cash/infinite
-	startswith = list(/obj/item/spacecash/bundle/c1000 = 1)
-
-//HUMAN
-/obj/item/storage/bag/cash/infinite/remove_from_storage(obj/item/W as obj, atom/new_location)
-	. = ..()
-	if(.)
-		if(istype(W,/obj/item/spacecash)) //only matters if its spacecash.
-			var/obj/item/I = new /obj/item/spacecash/bundle/c1000()
-			src.handle_item_insertion(I,1)
+/obj/item/storage/bag/cash/massivebundle
+	startswith = list(/obj/item/spacecash/bundle/c100 = 20)
 
 /spell/messa_shroud/choose_targets()
 	return list(get_turf(holder))
@@ -157,7 +149,7 @@
 
 //SKRELL
 /obj/item/contract/apprentice/skrell
-	name = "skrellian apprenticeship contract"
+	name = "Tau apprenticeship contract"
 	var/obj/item/spellbook/linked
 	color = "#3366ff"
 	contract_spells = list(/spell/contract/return_master) //somewhat of a necessity due to how many spells they would have after a while.

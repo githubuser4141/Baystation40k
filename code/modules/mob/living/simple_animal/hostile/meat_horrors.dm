@@ -11,13 +11,13 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "pokes"
-	maxHealth = 250
+	maxhealth = 250
 	health = 250
 	movement_cooldown = 7
 	natural_weapon = /obj/item/natural_weapon/meatbits
 	heat_damage_per_tick = 20
 	cold_damage_per_tick = 0
-	faction = "meat"
+	faction = "Demon"
 	pass_flags = PASS_FLAG_TABLE
 	move_to_delay = 3
 	speed = 0.5
@@ -29,7 +29,7 @@
 	max_gas = null
 	minbodytemp = 0
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES
+		melee = ARMOR_MELEE_FLAK
 		)
 
 	ai_holder = /datum/ai_holder/simple_animal/melee/meat
@@ -55,13 +55,13 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "pokes"
-	maxHealth = 250
+	maxhealth = 250
 	health = 250
 	movement_cooldown = 8
 	natural_weapon = /obj/item/natural_weapon/meatbits
 	heat_damage_per_tick = 20
 	cold_damage_per_tick = 0
-	faction = "meat"
+	faction = "Demon"
 	pass_flags = PASS_FLAG_TABLE
 	move_to_delay = 3
 	speed = 0.5
@@ -73,7 +73,7 @@
 	max_gas = null
 	minbodytemp = 0
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES
+		melee = ARMOR_MELEE_FLAK
 		)
 
 /mob/living/simple_animal/hostile/meat/horror
@@ -89,12 +89,12 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "pokes"
-	maxHealth = 150
+	maxhealth = 150
 	health = 150
 	natural_weapon = /obj/item/natural_weapon/claws
 	heat_damage_per_tick = 100
 	cold_damage_per_tick = 0
-	faction = "meat"
+	faction = "Demon"
 	pass_flags = PASS_FLAG_TABLE
 	move_to_delay = 3
 	speed = 0.5
@@ -106,7 +106,7 @@
 	max_gas = null
 	minbodytemp = 0
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES
+		melee = ARMOR_MELEE_FLAK
 		)
 
 /mob/living/simple_animal/hostile/meat/strippedhuman
@@ -122,13 +122,13 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "pokes"
-	maxHealth = 100
+	maxhealth = 100
 	health = 100
 	movement_cooldown = 5
 	natural_weapon = /obj/item/natural_weapon/claws/weak
 	heat_damage_per_tick = 100
 	cold_damage_per_tick = 0
-	faction = "meat"
+	faction = "Demon"
 	pass_flags = PASS_FLAG_TABLE
 	move_to_delay = 3
 	speed = 0.5
@@ -140,14 +140,14 @@
 	max_gas = null
 	minbodytemp = 0
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES
+		melee = ARMOR_MELEE_FLAK
 		)
 
 	say_list = /datum/say_list/meat/human
 
 /mob/living/simple_animal/hostile/meat/humansecurity
 	name = "turned security"
-	desc = "What's left of a SAARE security guard. The only way you can tell is by the tatters of their uniform. That armor they wore in life now gives them a bit of hardiness in death..."
+	desc = "What's left of a imperial security guard. The only way you can tell is by the tatters of their uniform. That armor they wore in life now gives them a bit of hardiness in death..."
 	icon = 'icons/mob/simple_animal/nightmaremonsters.dmi'
 	icon_state = "horror_security"
 	icon_living = "horror_security"
@@ -158,13 +158,13 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "pokes"
-	maxHealth = 200
+	maxhealth = 200
 	health = 200
 	movement_cooldown = 5
 	natural_weapon = /obj/item/natural_weapon/claws
 	heat_damage_per_tick = 100
 	cold_damage_per_tick = 0
-	faction = "meat"
+	faction = "Demon"
 	pass_flags = PASS_FLAG_TABLE
 	move_to_delay = 3
 	speed = 0.5
@@ -176,7 +176,7 @@
 	max_gas = null
 	minbodytemp = 0
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES
+		melee = ARMOR_MELEE_FLAK
 		)
 
 /mob/living/simple_animal/hostile/meat/horrorminer
@@ -192,13 +192,13 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "pokes"
-	maxHealth = 150
+	maxhealth = 150
 	health = 150
 	movement_cooldown = 5
 	natural_weapon = /obj/item/natural_weapon/claws
 	heat_damage_per_tick = 100
 	cold_damage_per_tick = 0
-	faction = "meat"
+	faction = "Demon"
 	pass_flags = PASS_FLAG_TABLE
 	move_to_delay = 3
 	speed = 0.5
@@ -210,7 +210,7 @@
 	max_gas = null
 	minbodytemp = 0
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES
+		melee = ARMOR_MELEE_FLAK
 		)
 
 /mob/living/simple_animal/hostile/meat/horrorsmall
@@ -226,13 +226,13 @@
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "pokes"
-	maxHealth = 50
+	maxhealth = 50
 	health = 50
 	movement_cooldown = 2
 	natural_weapon = /obj/item/natural_weapon/claws
 	heat_damage_per_tick = 100
 	cold_damage_per_tick = 0
-	faction = "meat"
+	faction = "Demon"
 	pass_flags = PASS_FLAG_TABLE
 	move_to_delay = 3
 	speed = 0.5
@@ -244,7 +244,7 @@
 	max_gas = null
 	minbodytemp = 0
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES
+		melee = ARMOR_MELEE_FLAK
 		)
 
 /datum/ai_holder/simple_animal/melee/meat

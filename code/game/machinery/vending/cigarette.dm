@@ -1,9 +1,10 @@
 /obj/machinery/vending/cigarette
 	name = "\improper Cigarette Machine"
 	desc = "A specialized vending machine designed to contribute to your slow and uncomfortable death."
+	icon = 'icons/obj/vending.dmi'
 	icon_state = "cigs"
 	icon_vend = "cigs-vend"
-	icon_deny = "cigs-deny"
+	icon_deny = "cigs-off"
 	base_type = /obj/machinery/vending/cigarette
 	product_slogans = {"\
 		There's no better time to start smokin'.;\
@@ -27,9 +28,9 @@
 		Professionals. Better cigarettes for better people. Yes, better people.\
 	"}
 	antag_slogans = {"\
-		With your lungs full of smoke, you’ll share the experience of countless Gaian civilians!;\
+		With your lungs full of smoke, you’ll share the experience of countless Ultramar civilians!;\
 		Smoke your troubles away. Is being a citizen of Sol worth all this trouble?;\
-		We kill you, you buy! It's the SCG way!\
+		We kill you, you buy! It's the Imperial way!\
 	"}
 	prices = list(
 		/obj/item/storage/chewables/tobacco = 40,
@@ -75,25 +76,25 @@
 		/obj/item/storage/chewables/rollable/generic = 2,
 		/obj/item/storage/chewables/rollable/fine = 2,
 		/obj/item/storage/chewables/rollable/rollingkit = 2,
-		/obj/item/storage/fancy/smokable/transstellar = 5,
+		/obj/item/storage/fancy/smokable/transstellar = 2,
 		/obj/item/storage/fancy/smokable/luckystars = 2,
 		/obj/item/storage/fancy/smokable/jerichos = 2,
-		/obj/item/storage/fancy/smokable/menthols = 2,
+		/obj/item/storage/fancy/smokable/menthols = 1,
 		/obj/item/storage/fancy/smokable/carcinomas = 2,
 		/obj/item/storage/fancy/smokable/professionals = 2,
 		/obj/item/storage/fancy/smokable/trident = 2,
-		/obj/item/storage/fancy/smokable/trident_mint = 2,
-		/obj/item/storage/fancy/smokable/trident_fruit = 2,
+		/obj/item/storage/fancy/smokable/trident_mint = 1,
+		/obj/item/storage/fancy/smokable/trident_fruit = 1,
 		/obj/item/storage/fancy/matches/matchbox = 5,
 		/obj/item/storage/fancy/matches/matchbook = 5,
 		/obj/item/flame/lighter/random = 4,
 		/obj/item/storage/chewables/tobacco = 2,
 		/obj/item/storage/chewables/tobacco2 = 2,
 		/obj/item/storage/chewables/tobacco3 = 2,
-		/obj/item/clothing/mask/smokable/ecig/simple = 10,
-		/obj/item/clothing/mask/smokable/ecig/util = 5,
+		/obj/item/clothing/mask/smokable/ecig/simple = 1,
+		/obj/item/clothing/mask/smokable/ecig/util = 2,
 		/obj/item/clothing/mask/smokable/ecig/deluxe = 1,
-		/obj/item/reagent_containers/ecig_cartridge/med_nicotine = 10,
+		/obj/item/reagent_containers/ecig_cartridge/med_nicotine = 4,
 		/obj/item/reagent_containers/ecig_cartridge/high_nicotine = 5,
 		/obj/item/reagent_containers/ecig_cartridge/orange = 5,
 		/obj/item/reagent_containers/ecig_cartridge/mint = 5,
@@ -112,13 +113,13 @@
 		/obj/item/storage/fancy/smokable/killthroat = 5
 	)
 	rare_products = list(
-		/obj/item/storage/box/syndie_kit/cigarette = 50,
-		/obj/item/storage/box/syndie_kit/syringegun = 40,
+		/obj/item/storage/box/contraband/cigarette = 50,
+		/obj/item/storage/box/contraband/syringegun = 40,
 		/obj/item/clothing/mask/chameleon/voice = 20
 	)
 	antag = list(
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/storage/box/syndie_kit/cigarette = 0,
-		/obj/item/storage/box/syndie_kit/syringegun = 0,
+		/obj/item/storage/box/contraband/cigarette = 0,
+		/obj/item/storage/box/contraband/syringegun = 0,
 		/obj/item/clothing/mask/chameleon/voice = 0
 	)

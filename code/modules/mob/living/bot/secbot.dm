@@ -4,15 +4,15 @@
 
 /mob/living/bot/secbot
 	name = "Securitron"
-	desc = "A little security robot.  He looks less than thrilled."
+	desc = "A little militarum robot.  He looks less than thrilled."
 	icon = 'icons/mob/bot/secbot.dmi'
 	icon_state = "secbot0"
 	var/attack_state = "secbot-c"
 	layer = MOB_LAYER
-	maxHealth = 50
+	maxhealth = 50
 	health = 50
-	req_access = list(list(access_security, access_forensics_lockers))
-	botcard_access = list(access_security, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels)
+	req_access = list(access_restricted_command)
+	botcard_access = list(access_restricted, access_dauntless, access_restricted_command, access_mechanicus, access_bridge)
 
 	patrol_speed = 2
 	target_speed = 3
@@ -36,7 +36,7 @@
 
 /mob/living/bot/secbot/beepsky
 	name = "Officer Beepsky"
-	desc = "It's Officer Beep O'sky! Powered by a potato and a shot of whiskey."
+	desc = "It's Officer Beep O'sky! Powered by a potato and a shot of amasec."
 	will_patrol = 1
 
 /mob/living/bot/secbot/Initialize()
@@ -70,10 +70,10 @@
 	. += "<b>Automatic Security Unit</b>"
 
 /mob/living/bot/secbot/GetInteractPanel()
-	. = "Check for weapon authorization: <a href='?src=\ref[src];command=idcheck'>[idcheck ? "Yes" : "No"]</a>"
-	. += "<br>Check security records: <a href='?src=\ref[src];command=ignorerec'>[check_records ? "Yes" : "No"]</a>"
-	. += "<br>Check arrest status: <a href='?src=\ref[src];command=ignorearr'>[check_arrest ? "Yes" : "No"]</a>"
-	. += "<br>Report arrests: <a href='?src=\ref[src];command=declarearrests'>[declare_arrests ? "Yes" : "No"]</a>"
+	. = "Check for weapon authorization: <a href='?src=\ref[src];command=idcheck'>[idcheck ? "Compliance" : "No"]</a>"
+	. += "<br>Check militarum records: <a href='?src=\ref[src];command=ignorerec'>[check_records ? "Compliance" : "No"]</a>"
+	. += "<br>Check arrest status: <a href='?src=\ref[src];command=ignorearr'>[check_arrest ? "Compliance" : "No"]</a>"
+	. += "<br>Report arrests: <a href='?src=\ref[src];command=declarearrests'>[declare_arrests ? "Compliance" : "No"]</a>"
 	. += "<br>Auto patrol: <a href='?src=\ref[src];command=patrol'>[will_patrol ? "On" : "Off"]</a>"
 
 /mob/living/bot/secbot/GetInteractMaintenance()

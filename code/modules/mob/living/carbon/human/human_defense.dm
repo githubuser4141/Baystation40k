@@ -186,8 +186,9 @@ meteor_act
 		return target_zone
 
 	var/accuracy_penalty = user.melee_accuracy_mods()
-	accuracy_penalty += 5*get_skill_difference(SKILL_COMBAT, user)
-	accuracy_penalty += 10*(I.w_class - ITEM_SIZE_NORMAL)
+	accuracy_penalty += 2*get_skill_difference(SKILL_COMBAT, user)
+	accuracy_penalty += 3*(I.w_class - ITEM_SIZE_NORMAL) // Trying out lower penalties for large items and skill diff. It may be worth just lowering penalties for items and adding a flat penalty to all melee
+	accuracy_penalty += I.disorientation // disorientation var makes you miss more in melee
 	accuracy_penalty -= I.melee_accuracy_bonus
 
 	var/hit_zone = get_zone_with_miss_chance(target_zone, src, accuracy_penalty)
@@ -212,7 +213,7 @@ meteor_act
 		return FALSE
 
 	if (user.a_intent == I_DISARM)
-		effective_force *= 0.66 //reduced effective force...
+		effective_force *= 0.80 //reduced effective force...
 
 	var/blocked = get_blocked_ratio(hit_zone, I.damtype, I.damage_flags(), I.armor_penetration, effective_force)
 

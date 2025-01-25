@@ -1,6 +1,6 @@
 /obj/structure/closet/secure_closet/captains
 	name = "captain's locker"
-	req_access = list(access_captain)
+	req_access = list(access_roguetrader)
 	closet_appearance = /singleton/closet_appearance/secure_closet/command
 
 /obj/structure/closet/secure_closet/captains/WillContain()
@@ -16,7 +16,7 @@
 		/obj/item/clothing/shoes/brown,
 		/obj/item/device/radio/headset/heads/captain,
 		/obj/item/clothing/gloves/captain,
-		/obj/item/gun/energy/gun,
+		/obj/item/gun/energy/lasgun/laspistol/militarum,
 		/obj/item/clothing/suit/armor/captain,
 		/obj/item/melee/telebaton,
 		/obj/item/clothing/under/dress/dress_cap,
@@ -27,7 +27,7 @@
 /obj/structure/closet/secure_closet/hop
 	name = "head of personnel's locker"
 	closet_appearance = /singleton/closet_appearance/secure_closet/command/hop
-	req_access = list(access_hop)
+	req_access = list(access_dauntless)
 
 /obj/structure/closet/secure_closet/hop/WillContain()
 	return list(
@@ -41,7 +41,7 @@
 
 /obj/structure/closet/secure_closet/hop2
 	name = "head of personnel's attire"
-	req_access = list(access_hop)
+	req_access = list(access_dauntless)
 	closet_appearance = /singleton/closet_appearance/secure_closet/command/hop
 
 /obj/structure/closet/secure_closet/hop2/WillContain()
@@ -63,7 +63,7 @@
 
 /obj/structure/closet/secure_closet/hos
 	name = "head of security's locker"
-	req_access = list(access_hos)
+	req_access = list(access_restricted_command)
 	closet_appearance = /singleton/closet_appearance/secure_closet/security/hos
 
 /obj/structure/closet/secure_closet/hos/WillContain()
@@ -72,7 +72,7 @@
 		/obj/item/clothing/head/HoS,
 		/obj/item/clothing/head/helmet/nt,
 		/obj/item/clothing/suit/armor/vest/nt,
-		/obj/item/clothing/suit/storage/vest/nt/hos,
+		/obj/item/clothing/suit/armor/grim/storage/vest/nt/hos,
 		/obj/item/clothing/under/rank/head_of_security/jensen,
 		/obj/item/clothing/under/rank/head_of_security/corp,
 		/obj/item/clothing/suit/armor/hos/jensen,
@@ -80,13 +80,13 @@
 		/obj/item/clothing/head/HoS/dermal,
 		/obj/item/device/radio/headset/heads/hos,
 		/obj/item/clothing/glasses/hud/security/prot/sunglasses,
-		/obj/item/taperoll/police,
+		/obj/item/taperoll/enforcer,
 		/obj/item/shield/riot,
 		/obj/item/storage/box/flashbangs,
 		/obj/item/storage/belt/holster/security,
 		/obj/item/device/flash,
 		/obj/item/melee/baton/loaded,
-		/obj/item/gun/energy/gun,
+		/obj/item/gun/energy/lasgun/laspistol/militarum,
 		/obj/item/clothing/accessory/storage/holster/waist,
 		/obj/item/melee/telebaton,
 		/obj/item/clothing/head/beret/sec/corporate/hos,
@@ -95,7 +95,7 @@
 
 /obj/structure/closet/secure_closet/warden
 	name = "warden's locker"
-	req_access = list(access_armory)
+	req_access = list(access_restricted_command)
 	closet_appearance = /singleton/closet_appearance/secure_closet/security/warden
 
 /obj/structure/closet/secure_closet/warden/WillContain()
@@ -104,28 +104,28 @@
 		new/datum/atom_creator/simple(/obj/item/storage/backpack/dufflebag/sec, 50),
 		/obj/item/clothing/head/helmet/nt,
 		/obj/item/clothing/suit/armor/vest/nt,
-		/obj/item/clothing/suit/storage/vest/nt/warden,
+		/obj/item/clothing/suit/armor/grim/storage/vest/nt/warden,
 		/obj/item/clothing/under/rank/warden,
 		/obj/item/clothing/under/rank/warden/corp,
 		/obj/item/clothing/suit/armor/vest/warden,
 		/obj/item/clothing/head/warden,
 		/obj/item/device/radio/headset/headset_sec,
 		/obj/item/clothing/glasses/hud/security/prot/sunglasses,
-		/obj/item/taperoll/police,
+		/obj/item/taperoll/enforcer,
 		/obj/item/storage/box/flashbangs,
 		/obj/item/storage/box/teargas,
 		/obj/item/storage/belt/holster/security,
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/melee/baton/loaded,
-		/obj/item/gun/energy/gun,
+		/obj/item/gun/energy/lasgun/laspistol/militarum,
 		/obj/item/storage/box/holobadge,
 		/obj/item/clothing/head/beret/sec/corporate/warden,
 		/obj/item/device/holowarrant
 	)
 
 /obj/structure/closet/secure_closet/security
-	name = "security officer's locker"
-	req_access = list(access_brig)
+	name = "militarum officer's locker"
+	req_access = list(access_restricted)
 	closet_appearance = /singleton/closet_appearance/secure_closet/security
 
 /obj/structure/closet/secure_closet/security/WillContain()
@@ -141,7 +141,7 @@
 		/obj/item/grenade/chem_grenade/teargas,
 		/obj/item/melee/baton/loaded,
 		/obj/item/clothing/glasses/hud/security/prot/sunglasses,
-		/obj/item/taperoll/police,
+		/obj/item/taperoll/enforcer,
 		/obj/item/device/hailer,
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/head/soft/sec/corp,
@@ -173,7 +173,6 @@
 
 /obj/structure/closet/secure_closet/detective
 	name = "detective's cabinet"
-	req_access = list(access_forensics_lockers)
 	closet_appearance = /singleton/closet_appearance/cabinet/secure
 
 /obj/structure/closet/secure_closet/detective/WillContain()
@@ -181,10 +180,10 @@
 		/obj/item/clothing/under/det,
 		/obj/item/clothing/under/det/grey,
 		/obj/item/clothing/under/det/black,
-		/obj/item/clothing/suit/storage/det_trench,
-		/obj/item/clothing/suit/storage/det_trench/grey,
-		/obj/item/clothing/suit/storage/forensics/blue,
-		/obj/item/clothing/suit/storage/forensics/red,
+		/obj/item/clothing/suit/armor/grim/storage/det_trench,
+		/obj/item/clothing/suit/armor/grim/storage/det_trench/grey,
+		/obj/item/clothing/suit/armor/grim/storage/forensics/blue,
+		/obj/item/clothing/suit/armor/grim/storage/forensics/red,
 		/obj/item/clothing/gloves/thick,
 		/obj/item/clothing/head/det,
 		/obj/item/clothing/head/det/grey,
@@ -192,7 +191,7 @@
 		/obj/item/storage/box/evidence,
 		/obj/item/device/radio/headset/headset_sec,
 		/obj/item/clothing/suit/armor/vest/detective,
-		/obj/item/taperoll/police,
+		/obj/item/taperoll/enforcer,
 		/obj/item/gun/projectile/pistol/sec/detective,
 		/obj/item/clothing/accessory/storage/holster/armpit,
 		/obj/item/reagent_containers/food/drinks/flask/detflask,
@@ -202,14 +201,14 @@
 
 /obj/structure/closet/secure_closet/injection
 	name = "lethal injections locker"
-	req_access = list(access_captain)
+	req_access = list(access_roguetrader)
 
 /obj/structure/closet/secure_closet/injection/WillContain()
 	return list(/obj/item/reagent_containers/syringe/ld50_syringe/choral = 2)
 
 /obj/structure/closet/secure_closet/brig
 	name = "brig locker"
-	req_access = list(access_brig)
+	req_access = list(access_restricted)
 	anchored = TRUE
 	var/id = null
 
@@ -221,7 +220,6 @@
 
 /obj/structure/closet/secure_closet/courtroom
 	name = "courtroom locker"
-	req_access = list(access_lawyer)
 
 /obj/structure/closet/secure_closet/courtroom/WillContain()
 	return list(
@@ -235,7 +233,7 @@
 
 /obj/structure/closet/secure_closet/wall
 	name = "wall locker"
-	req_access = list(access_security)
+	req_access = list(access_restricted)
 	closet_appearance = /singleton/closet_appearance/wall
 
 	//too small to put a man in
@@ -243,7 +241,6 @@
 
 /obj/structure/closet/secure_closet/lawyer
 	name = "internal affairs secure closet"
-	req_access = list(access_lawyer)
 
 /obj/structure/closet/secure_closet/lawyer/WillContain()
 	return list(

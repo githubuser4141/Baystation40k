@@ -30,7 +30,7 @@
 
 /datum/codex_entry/toolbelt
 	associated_paths = list(/obj/item/storage/belt/utility)
-	mechanics_text = "The tool-belt has enough slots to carry a full engineer's toolset: screwdriver, crowbar, wrench, welder, cable coil, and multitool. Simply click the belt to move a tool to one of its slots."
+	mechanics_text = "The tool-belt has enough slots to carry a full tech priest's toolset: screwdriver, crowbar, wrench, welder, cable coil, and multitool. Simply click the belt to move a tool to one of its slots."
 	lore_text = "Good hide is hard to come by in certain regions of the galaxy. When they can't come across it, most TSCs will outfit their crews with toolbelts made of synthesized leather."
 	antag_text = "Only amateurs skip grabbing a tool-belt."
 
@@ -66,7 +66,7 @@
 /datum/codex_entry/multitool
 	associated_paths = list(/obj/item/device/multitool)
 	mechanics_text = "Multitools are incredibly versatile and can be used on a wide variety of machines. The most common use for this is to trip a device's wires without having to cut them. Simply click on an object with exposed wiring to use it. There might be other uses, as well..."
-	lore_text = "The common, every day multitool is descended from certain electrical tools from Earth's early space age. Though none too cheap, they are incredibly handy, and can be found in any self-respecting technician's toolbox."
+	lore_text = "The common, every day multitool is descended from certain electrical tools from Terra's early space age. Though none too cheap, they are incredibly handy, and can be found in any self-respecting technician's toolbox."
 	antag_text = "This handy little tool can get you through doors, turn off power, and anything else you might need."
 
 /datum/codex_entry/t_scanner

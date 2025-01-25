@@ -66,7 +66,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/template_noop)
 "m" = (
-/obj/structure/closet/crate/freezer,
+/obj/structure/closet/crate/warhammer/freezer,
 /obj/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
@@ -194,7 +194,7 @@
 /area/template_noop)
 "I" = (
 /obj/structure/table/rack,
-/obj/item/gun/projectile/pirate,
+/obj/item/gun/energy/lasgun/laspistol/grim,
 /obj/item/storage/box/ammo/shotgunshells,
 /turf/simulated/floor/wood,
 /area/template_noop)

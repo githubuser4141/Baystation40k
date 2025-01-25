@@ -366,7 +366,7 @@
 "ace" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "escape_pod_1_recovery_hatch";
 	locked = 1;
 	name = "Recovery Shuttle Dock"
@@ -379,7 +379,7 @@
 "acf" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "escape_pod_2_recovery_hatch";
 	locked = 1;
 	name = "Recovery Shuttle Dock"
@@ -480,7 +480,7 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_courtroom)
 "acH" = (
-/obj/structure/closet/emcloset,
+/obj/structure/closet/warhammer/emcloset,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
@@ -492,7 +492,7 @@
 	id_tag = "escape_pod_1_recovery";
 	pixel_x = 25;
 	pixel_y = 30;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
+	req_access = list("ACCESS_MECHANICUS");
 	tag_door = "escape_pod_1_recovery_hatch"
 	},
 /turf/unsimulated/floor{
@@ -501,7 +501,7 @@
 	},
 /area/centcom/evac)
 "acJ" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/firstaid/toxin{
 	pixel_x = -2;
 	pixel_y = 4
@@ -513,7 +513,7 @@
 	},
 /area/centcom/evac)
 "acK" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/firstaid/fire,
 /obj/item/storage/firstaid/fire{
 	pixel_x = -2;
@@ -525,7 +525,7 @@
 	},
 /area/centcom/evac)
 "acL" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/firstaid/regular{
 	pixel_x = 2
 	},
@@ -544,7 +544,7 @@
 	id_tag = "escape_pod_2_recovery";
 	pixel_x = -25;
 	pixel_y = 30;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
+	req_access = list("ACCESS_MECHANICUS");
 	tag_door = "escape_pod_2_recovery_hatch"
 	},
 /turf/unsimulated/floor{
@@ -802,7 +802,7 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_courtroom)
 "ael" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
@@ -907,7 +907,7 @@
 /turf/space,
 /area/shuttle/escape_pod5/centcom)
 "aeC" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/hand_labeler,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
@@ -934,7 +934,7 @@
 "aeI" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "escape_pod_5_recovery_hatch";
 	locked = 1;
 	name = "Recovery Shuttle Dock"
@@ -950,7 +950,7 @@
 	id_tag = "escape_pod_5_recovery";
 	pixel_x = -25;
 	pixel_y = 25;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
+	req_access = list("ACCESS_MECHANICUS");
 	tag_door = "escape_pod_5_recovery_hatch"
 	},
 /turf/unsimulated/floor{
@@ -973,7 +973,7 @@
 	id_tag = "escape_pod_3_recovery";
 	pixel_x = 25;
 	pixel_y = -25;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
+	req_access = list("ACCESS_MECHANICUS");
 	tag_door = "escape_pod_3_recovery_hatch"
 	},
 /turf/unsimulated/floor{
@@ -984,7 +984,7 @@
 "aeM" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "escape_pod_3_recovery_hatch";
 	locked = 1;
 	name = "Recovery Shuttle Dock"
@@ -1275,7 +1275,7 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_boxingcourt)
 "agp" = (
-/obj/structure/closet/secure_closet/personal/patient,
+/obj/structure/closet/warhammer/secure_closet/personal/patient,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor3"
@@ -1749,7 +1749,7 @@
 	},
 /area/centcom/evac)
 "ais" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/box/handcuffs,
 /obj/item/device/flash,
 /turf/unsimulated/floor{
@@ -2034,7 +2034,7 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "ano" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
@@ -2045,7 +2045,7 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "anp" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/clothing/glasses/sunglasses,
 /obj/item/clothing/head/collectable/petehat{
 	pixel_y = 5
@@ -2053,12 +2053,12 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "anP" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/reagent_containers/food/snacks/chips,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "anQ" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/reagent_containers/food/drinks/cans/cola,
 /obj/item/reagent_containers/food/drinks/cans/cola,
 /obj/item/reagent_containers/food/drinks/cans/cola,
@@ -2247,7 +2247,7 @@
 /turf/simulated/floor/shuttle/red,
 /area/shuttle/administration/centcom)
 "att" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "carpet"
 	},
@@ -2258,7 +2258,7 @@
 	},
 /area/centcom/living)
 "atv" = (
-/obj/structure/closet/secure_closet/personal,
+/obj/structure/closet/warhammer/secure_closet/personal,
 /turf/unsimulated/floor{
 	icon_state = "carpet"
 	},
@@ -2354,14 +2354,14 @@
 	pixel_x = 2;
 	pixel_y = 6
 	},
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
 /area/centcom/living)
 "atN" = (
 /obj/item/reagent_containers/food/drinks/cans/cola,
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -2419,13 +2419,13 @@
 /area/centcom)
 "atY" = (
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
 /area/centcom/living)
 "atZ" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -2490,7 +2490,7 @@
 "aun" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "admin_shuttle_bay_door";
 	locked = 1
 	},
@@ -2634,7 +2634,7 @@
 /obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -6
 	},
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -2703,14 +2703,14 @@
 /turf/simulated/floor/shuttle/red,
 /area/shuttle/administration/centcom)
 "avg" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/reagent_containers/food/drinks/shaker,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
 /area/centcom/living)
 "avh" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -2830,7 +2830,7 @@
 	},
 /area/centcom/living)
 "avz" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/random/donkpocket_box,
 /obj/item/material/kitchen/rollingpin,
 /turf/unsimulated/floor{
@@ -2907,7 +2907,7 @@
 	},
 /area/centcom/living)
 "avN" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/card/id/centcom,
 /turf/unsimulated/floor{
 	dir = 8;
@@ -2921,7 +2921,7 @@
 	},
 /area/centcom/living)
 "avP" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/reagent_containers/glass/beaker,
 /obj/item/reagent_containers/food/condiment/enzyme,
 /turf/unsimulated/floor{
@@ -2929,7 +2929,7 @@
 	},
 /area/centcom/living)
 "avQ" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/machinery/microwave{
 	pixel_x = -3;
 	pixel_y = 6
@@ -2941,7 +2941,7 @@
 "avS" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "admin_shuttle_hatch";
 	locked = 1;
 	name = "Shuttle Hatch"
@@ -2999,7 +2999,7 @@
 /obj/item/ammo_magazine/box/machinegun,
 /obj/item/ammo_magazine/box/machinegun,
 /obj/item/ammo_magazine/box/machinegun,
-/obj/item/gun/projectile/automatic/l6_saw,
+/obj/item/gun/projectile/automatic/slugrifle,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3035,9 +3035,9 @@
 /obj/item/ammo_magazine/smg_top/rubber,
 /obj/item/ammo_magazine/smg_top/rubber,
 /obj/item/ammo_magazine/smg_top/rubber,
-/obj/item/gun/projectile/automatic/sec_smg,
-/obj/item/gun/projectile/automatic/sec_smg,
-/obj/item/gun/projectile/automatic/sec_smg,
+/obj/item/gun/projectile/automatic/gaussrifle,
+/obj/item/gun/projectile/automatic/autogun/valhalla,
+/obj/item/gun/projectile/automatic/autogun/valhalla,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3045,7 +3045,7 @@
 /area/centcom/specops)
 "awj" = (
 /obj/structure/table/rack,
-/obj/item/gun/energy/ionrifle,
+/obj/item/gun/energy/plasma,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3053,9 +3053,9 @@
 /area/centcom/specops)
 "awk" = (
 /obj/structure/table/rack,
-/obj/item/gun/energy/gun/nuclear,
-/obj/item/gun/energy/gun/nuclear,
-/obj/item/gun/energy/gun/nuclear,
+/obj/item/gun/energy/tau/pulserifle,
+/obj/item/gun/energy/tau/pulserifle,
+/obj/item/gun/energy/tau/pulserifle,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3069,8 +3069,8 @@
 /obj/item/ammo_magazine/mil_rifle/heavy,
 /obj/item/ammo_magazine/mil_rifle/heavy,
 /obj/item/ammo_magazine/mil_rifle/heavy,
-/obj/item/gun/projectile/automatic/bullpup_rifle,
-/obj/item/gun/projectile/automatic/bullpup_rifle,
+/obj/item/gun/projectile/automatic/autogun/krieg,
+/obj/item/gun/projectile/automatic/autogun/krieg,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3427,9 +3427,9 @@
 /area/centcom/specops)
 "axk" = (
 /obj/structure/table/rack,
-/obj/item/gun/energy/gun,
-/obj/item/gun/energy/gun,
-/obj/item/gun/energy/gun,
+/obj/item/gun/energy/lasgun/laspistol/militarum,
+/obj/item/gun/energy/lasgun/laspistol/militarum,
+/obj/item/gun/energy/lasgun/laspistol/militarum,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3656,7 +3656,7 @@
 /obj/item/storage/belt/holster/security/tactical,
 /obj/item/storage/belt/holster/security/tactical,
 /obj/item/storage/belt/holster/security/tactical,
-/obj/item/taperoll/police,
+/obj/item/taperoll/enforcer,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3700,10 +3700,10 @@
 /obj/item/clothing/head/helmet/ert/security,
 /obj/item/clothing/head/helmet/ert/security,
 /obj/item/clothing/head/helmet/ert/security,
-/obj/item/storage/backpack/ert/security,
-/obj/item/storage/backpack/ert/security,
-/obj/item/storage/backpack/ert/security,
-/obj/item/storage/backpack/ert/security,
+/obj/item/storage/backpack/tau/security,
+/obj/item/storage/backpack/tau/security,
+/obj/item/storage/backpack/tau/security,
+/obj/item/storage/backpack/tau/security,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3720,11 +3720,11 @@
 /area/centcom/specops)
 "axW" = (
 /obj/structure/table/rack,
-/obj/item/clothing/suit/storage/vest/merc{
+/obj/item/clothing/suit/armor/grim/storage/vest/merc{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/clothing/suit/storage/vest/merc{
+/obj/item/clothing/suit/armor/grim/storage/vest/merc{
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -4054,7 +4054,7 @@
 /area/centcom/specops)
 "ayS" = (
 /obj/structure/table/reinforced,
-/obj/item/gun/energy/gun/nuclear,
+/obj/item/gun/energy/tau/pulserifle,
 /obj/prefab/hand_teleporter,
 /turf/unsimulated/floor{
 	dir = 1;
@@ -4143,7 +4143,7 @@
 /area/centcom/specops)
 "azp" = (
 /obj/structure/table/rack,
-/obj/item/clothing/suit/storage/vest/merc,
+/obj/item/clothing/suit/armor/grim/storage/vest/merc,
 /obj/item/clothing/head/helmet/swat,
 /turf/unsimulated/floor{
 	dir = 1;
@@ -4517,7 +4517,7 @@
 	},
 /area/centcom/specops)
 "aAH" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
@@ -4833,13 +4833,13 @@
 /obj/item/clothing/under/syndicate/combat,
 /obj/item/clothing/shoes/galoshes,
 /obj/item/clothing/head/bio_hood/janitor,
-/obj/item/clothing/suit/bio_suit/janitor,
+/obj/item/clothing/suit/armor/grim/bio_suit/janitor,
 /obj/item/clothing/glasses/science,
 /obj/item/storage/backpack/security,
 /obj/item/clothing/under/syndicate/combat,
 /obj/item/clothing/shoes/galoshes,
 /obj/item/clothing/head/bio_hood/janitor,
-/obj/item/clothing/suit/bio_suit/janitor,
+/obj/item/clothing/suit/armor/grim/bio_suit/janitor,
 /obj/item/clothing/glasses/science,
 /obj/item/reagent_containers/spray/cleaner{
 	pixel_x = 6;
@@ -5029,11 +5029,11 @@
 /area/centcom/specops)
 "aCo" = (
 /obj/structure/table/rack,
-/obj/item/clothing/suit/storage/vest/merc{
+/obj/item/clothing/suit/armor/grim/storage/vest/merc{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/clothing/suit/storage/vest/merc,
+/obj/item/clothing/suit/armor/grim/storage/vest/merc,
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
 /turf/unsimulated/floor{
@@ -5523,7 +5523,7 @@
 "aEW" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "specops_shuttle_port_hatch";
 	locked = 1;
 	name = "Port Docking Hatch"
@@ -5535,7 +5535,7 @@
 "aEX" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "specops_centcom_dock_door";
 	locked = 1
 	},
@@ -5630,7 +5630,7 @@
 	},
 /area/centcom/ferry)
 "aFC" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/paper,
 /obj/item/pen,
 /turf/unsimulated/floor{
@@ -5684,7 +5684,7 @@
 /area/centcom/holding)
 "aFN" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "closed";
+	icon_state = "door_closed";
 	locked = 1
 	},
 /turf/unsimulated/floor{
@@ -5772,7 +5772,7 @@
 "aGq" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "specops_shuttle_fore_hatch";
 	locked = 1;
 	name = "Forward Docking Hatch"
@@ -6144,7 +6144,7 @@
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
 	glass = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "centcom_shuttle_bay_door";
 	locked = 1;
 	name = "Transport Airlock"
@@ -6241,7 +6241,7 @@
 "aHR" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "centcom_shuttle_hatch";
 	locked = 1;
 	name = "Shuttle Hatch"
@@ -6449,7 +6449,7 @@
 	},
 /area/tdome)
 "aIA" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/reagent_containers/glass/beaker/cryoxadone{
 	pixel_x = 5;
 	pixel_y = 5
@@ -6498,7 +6498,7 @@
 	},
 /area/centcom/holding)
 "aIH" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -6568,7 +6568,7 @@
 	},
 /area/tdome)
 "aIU" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/FixOVein{
 	pixel_x = -6;
 	pixel_y = 1
@@ -6578,7 +6578,7 @@
 	},
 /area/centcom/holding)
 "aIV" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/cautery{
 	pixel_y = 4
 	},
@@ -6590,7 +6590,7 @@
 	},
 /area/centcom/holding)
 "aIW" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/retractor{
 	pixel_y = 6
 	},
@@ -6600,7 +6600,7 @@
 	},
 /area/centcom/holding)
 "aIX" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/bonesetter,
 /obj/item/bonegel{
 	pixel_x = 4;
@@ -6611,7 +6611,7 @@
 	},
 /area/centcom/holding)
 "aIY" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/surgicaldrill,
 /obj/item/circular_saw,
 /turf/unsimulated/floor{
@@ -6680,7 +6680,7 @@
 	},
 /area/centcom/holding)
 "aJo" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/box/latexgloves{
 	pixel_x = 3;
 	pixel_y = 4
@@ -6725,7 +6725,7 @@
 	},
 /area/tdome)
 "aJw" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/box/latexgloves{
 	pixel_x = 3;
 	pixel_y = 4
@@ -6751,7 +6751,7 @@
 	},
 /area/centcom/holding)
 "aJz" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/reagent_containers/ivbag/blood/human/opos{
 	pixel_x = 4;
 	pixel_y = 2
@@ -6789,7 +6789,7 @@
 	},
 /area/centcom/holding)
 "aJC" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/firstaid/regular{
 	pixel_x = 2;
 	pixel_y = 6
@@ -6810,7 +6810,7 @@
 	},
 /area/centcom/holding)
 "aJD" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/firstaid/o2{
 	pixel_x = 4;
 	pixel_y = 6
@@ -6825,7 +6825,7 @@
 	},
 /area/centcom/holding)
 "aJE" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/clothing/glasses/hud/health,
 /obj/item/clothing/glasses/hud/health,
 /obj/item/reagent_containers/spray/cleaner,
@@ -6935,7 +6935,7 @@
 	},
 /area/tdome/tdomeobserve)
 "aKm" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
@@ -6949,7 +6949,7 @@
 /obj/item/reagent_containers/food/drinks/cans/cola,
 /obj/item/reagent_containers/food/drinks/cans/cola,
 /obj/item/reagent_containers/food/drinks/cans/cola,
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
@@ -7013,13 +7013,13 @@
 /obj/random/donkpocket_box,
 /obj/random/donkpocket_box,
 /obj/random/donkpocket_box,
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
 /area/tdome)
 "aKB" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/machinery/microwave,
 /turf/unsimulated/floor{
 	icon_state = "white"
@@ -7339,7 +7339,7 @@
 /area/tdome/tdomeobserve)
 "aLh" = (
 /obj/item/paper{
-	info = "\[center]\[b]READ INSTRUCTIONS CAREFULLY\[/b]\[/center]\[br]\[br]Hello! Welcome and congratulations on being hired for NanoTrasen's new Television initiative. You are now tasked with the creation and production of NanoTrasen brand television that is to be broadcasted to all of our stations!\[br]\[br] We've outfitted these facilities with all the materials and objects you will need.\[br]On the port side you'll find various venders and machines, namely the Wardrobe Dispenser, which will dispense holoclothing and items for you to use, and a Quickee brand plastic surgery machine (which I would remind you you are contractually obligated to \[b]not\[/b] report to the authorities.) which can change your appearance into anything you want, even other races. Stern and aft you'll find all the materials we could muster up on short notice. Use it to decorate the stage to your liking. Starboard you'll find gases, microwaves, hydroponic trays and the like. Go silly! This is already paid for (as are you) so do what you want and entertain!";
+	info = "\[center]\[b]READ INSTRUCTIONS CAREFULLY\[/b]\[/center]\[br]\[br]Hello! Welcome and congratulations on being hired for Necromundan's new Television initiative. You are now tasked with the creation and production of Necromundan brand television that is to be broadcasted to all of our stations!\[br]\[br] We've outfitted these facilities with all the materials and objects you will need.\[br]On the port side you'll find various venders and machines, namely the Wardrobe Dispenser, which will dispense holoclothing and items for you to use, and a Quickee brand plastic surgery machine (which I would remind you you are contractually obligated to \[b]not\[/b] report to the authorities.) which can change your appearance into anything you want, even other races. Stern and aft you'll find all the materials we could muster up on short notice. Use it to decorate the stage to your liking. Starboard you'll find gases, microwaves, hydroponic trays and the like. Go silly! This is already paid for (as are you) so do what you want and entertain!";
 	name = "Actor's Guild Instruction Pamphlet"
 	},
 /turf/unsimulated/floor{
@@ -7969,7 +7969,7 @@
 /obj/item/clothing/shoes/brown,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/gun/energy/laser,
+/obj/item/gun/energy/lasgun/accatran,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -8000,7 +8000,7 @@
 /obj/item/clothing/shoes/brown,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/gun/energy/laser,
+/obj/item/gun/energy/lasgun/accatran,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -8269,7 +8269,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/merchant_station)
 "aOe" = (
-/obj/structure/closet/crate/freezer,
+/obj/structure/closet/crate/warhammer/freezer,
 /obj/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/merchant_station)
@@ -8640,7 +8640,7 @@
 	},
 /area/acting/backstage)
 "aPH" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
@@ -8659,7 +8659,7 @@
 /obj/item/grenade/chem_grenade/cleaner,
 /obj/item/grenade/chem_grenade/cleaner,
 /obj/item/grenade/chem_grenade/cleaner,
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
@@ -8699,13 +8699,13 @@
 /obj/item/stack/medical/ointment,
 /obj/item/stack/medical/ointment,
 /obj/item/stack/medical/ointment,
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
 /area/tdome/tdomeadmin)
 "aPO" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/stack/medical/bruise_pack,
 /obj/item/stack/medical/bruise_pack,
 /obj/item/stack/medical/bruise_pack,
@@ -8714,27 +8714,27 @@
 	},
 /area/tdome/tdomeadmin)
 "aPP" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/box/handcuffs,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
 /area/tdome/tdomeadmin)
 "aPQ" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
 /area/tdome/tdomeadmin)
 "aPR" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/toolbox/electrical,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
 /area/tdome/tdomeadmin)
 "aPS" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/storage/toolbox/mechanical,
 /turf/unsimulated/floor{
 	icon_state = "lino"
@@ -9037,7 +9037,7 @@
 /turf/simulated/floor/tiled,
 /area/merchant_station)
 "aQO" = (
-/obj/structure/closet/emcloset,
+/obj/structure/closet/warhammer/emcloset,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 25;
@@ -9582,7 +9582,7 @@
 	},
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "merchant_ship_interior";
 	locked = 1;
 	name = "Ship Exterior"
@@ -9653,7 +9653,7 @@
 /turf/simulated/floor/carpet/blue,
 /area/shuttle/merchant/home)
 "aTx" = (
-/obj/structure/closet/emcloset,
+/obj/structure/closet/warhammer/emcloset,
 /turf/simulated/floor/carpet/blue,
 /area/shuttle/merchant/home)
 "aTy" = (
@@ -9802,7 +9802,7 @@
 "aTY" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "merchant_ship_exterior";
 	locked = 1;
 	name = "Ship Exterior"
@@ -9906,7 +9906,7 @@
 "aUh" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "merchant_station_exterior";
 	locked = 1;
 	name = "Station Exterior"
@@ -9981,7 +9981,7 @@
 "aUy" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
-	icon_state = "closed";
+	icon_state = "door_closed";
 	id_tag = "merchant_station_interior";
 	locked = 1;
 	name = "Station Exterior"
@@ -10489,7 +10489,7 @@
 /turf/simulated/floor/plating,
 /area/merchant_station)
 "aWm" = (
-/obj/structure/closet/crate/freezer,
+/obj/structure/closet/crate/warhammer/freezer,
 /obj/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/merchant_station)
@@ -11111,7 +11111,7 @@
 /area/holodeck/source_plaza)
 "cjX" = (
 /obj/landmark{
-	name = "Syndicate-Commando"
+	name = "Heretic-Commando"
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"

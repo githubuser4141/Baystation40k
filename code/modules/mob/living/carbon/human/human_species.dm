@@ -23,14 +23,14 @@
 
 /mob/living/carbon/human/skrell/Initialize(mapload)
 	head_hair_style = "Skrell Male Tentacles"
-	. = ..(mapload, SPECIES_SKRELL)
+	. = ..(mapload, SPECIES_TAU)
 
 /mob/living/carbon/human/unathi/Initialize(mapload)
-	head_hair_style = "Unathi Horns"
-	. = ..(mapload, SPECIES_UNATHI)
+	head_hair_style = "Kroot Horns"
+	. = ..(mapload, SPECIES_KROOT)
 
 /mob/living/carbon/human/vox/Initialize(mapload)
-	head_hair_style = "Long Vox Quills"
+	head_hair_style = "Long Xenos Quills"
 	. = ..(mapload, SPECIES_VOX)
 
 /mob/living/carbon/human/diona/Initialize(mapload)

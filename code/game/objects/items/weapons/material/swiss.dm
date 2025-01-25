@@ -17,7 +17,7 @@
 	handle_icon = "swissknf_handle"
 	takes_colour = FALSE
 	valid_colors = null
-	max_force = 10
+	max_force = 30
 
 	var/active_tool = SWISSKNF_CLOSED
 	var/tools = list(SWISSKNF_LBLADE, SWISSKNF_CLIFTER, SWISSKNF_COPENER)
@@ -147,7 +147,7 @@
 	tools = list(SWISSKNF_SBLADE, SWISSKNF_CLIFTER, SWISSKNF_COPENER, SWISSKNF_GBLADE)
 
 /obj/item/material/knife/folding/swiss/engineer
-	name = "engineer's combi-knife"
+	name = "tech priest's combi-knife"
 	desc = "A small, yellow, multi-purpose folding knife. This one adds a wood saw and wire cutters."
 	color = COLOR_AMBER
 

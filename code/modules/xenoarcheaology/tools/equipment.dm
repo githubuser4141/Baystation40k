@@ -1,4 +1,4 @@
-/obj/item/clothing/suit/bio_suit/anomaly
+/obj/item/clothing/suit/armor/grim/bio_suit/anomaly
 	name = "anomaly suit"
 	desc = "A suit that protects against exotic alien energies and biological contamination."
 	icon_state = "bio_anom"
@@ -25,9 +25,9 @@
 		slot_r_hand_str = "excavation_voidsuit",
 	)
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
+		melee = ARMOR_MELEE_PRIMAL,
 		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SHIELDED
 	)
@@ -43,9 +43,9 @@
 		slot_r_hand_str = "excavation_helm",
 	)
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
+		melee = ARMOR_MELEE_PRIMAL,
 		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SHIELDED
 	)

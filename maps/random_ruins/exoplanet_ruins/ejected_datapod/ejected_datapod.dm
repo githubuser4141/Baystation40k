@@ -3,7 +3,7 @@
 	id = "ejected_datapod"
 	description = "A damaged capsule with some strange contents."
 	suffixes = list("ejected_datapod/ejected_datapod.dmm")
-	spawn_cost = 0.5
+	spawn_cost = 1
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS
 	ruin_tags = RUIN_HUMAN|RUIN_WRECK
 	apc_test_exempt_areas = list(
@@ -54,7 +54,7 @@
 	var/reagent_type = pickweight(list(
 		/datum/reagent/random = 50,
 		/datum/reagent/rezadone = 25,
-		/datum/reagent/drugs/three_eye = 20,
+		/datum/reagent/drugs/spicemelange = 20,
 		/datum/reagent/zombie = 5
 	))
 	reagents.add_reagent(reagent_type, 5)

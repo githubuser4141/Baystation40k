@@ -3,8 +3,7 @@
 	desc = "A little cleaning robot, he looks so excited!"
 	icon = 'icons/mob/bot/cleanbot.dmi'
 	icon_state = "cleanbot0"
-	req_access = list(list(access_janitor, access_robotics))
-	botcard_access = list(access_janitor, access_maint_tunnels)
+	botcard_access = list(access_mechanicus, access_dauntless)
 
 	wait_if_pulled = 1
 	min_target_dist = 0
@@ -111,12 +110,12 @@
 	. += "<b>Automatic Cleaner v1.0</b>"
 
 /mob/living/bot/cleanbot/GetInteractPanel()
-	. = "Cleans blood: <a href='?src=\ref[src];command=blood'>[blood ? "Yes" : "No"]</a>"
-	. += "<br>Patrol station: <a href='?src=\ref[src];command=patrol'>[will_patrol ? "Yes" : "No"]</a>"
+	. = "Cleans blood: <a href='?src=\ref[src];command=blood'>[blood ? "Compliance" : "No"]</a>"
+	. += "<br>Patrol station: <a href='?src=\ref[src];command=patrol'>[will_patrol ? "Compliance" : "No"]</a>"
 
 /mob/living/bot/cleanbot/GetInteractMaintenance()
-	. = "Odd looking screw twiddled: <a href='?src=\ref[src];command=screw'>[screwloose ? "Yes" : "No"]</a>"
-	. += "<br>Weird button pressed: <a href='?src=\ref[src];command=oddbutton'>[oddbutton ? "Yes" : "No"]</a>"
+	. = "Odd looking screw twiddled: <a href='?src=\ref[src];command=screw'>[screwloose ? "Compliance" : "No"]</a>"
+	. += "<br>Weird button pressed: <a href='?src=\ref[src];command=oddbutton'>[oddbutton ? "Compliance" : "No"]</a>"
 
 /mob/living/bot/cleanbot/ProcessCommand(mob/user, command, href_list)
 	..()

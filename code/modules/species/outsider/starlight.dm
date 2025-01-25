@@ -92,7 +92,7 @@
 	name_plural = "Blueforged"
 	icobase = 'icons/mob/human_races/species/blueforged/body.dmi'
 	deform = 'icons/mob/human_races/species/blueforged/body.dmi'
-	description = "Living chunks of Bluespace, carved out of the original dimension and given life by a being of unbelievable power."
+	description = "Living chunks of Warp, carved out of the original dimension and given life by a being of unbelievable power."
 
 	blood_color = "#2222ff"
 	flesh_color = "#2222ff"
@@ -102,8 +102,8 @@
 	hunger_factor = 0
 	breath_type = null
 
-	burn_mod = 10
-	brute_mod = 0
+	burn_mod = 1
+	brute_mod = 0.2
 	oxy_mod = 0
 	toxins_mod = 0
 	radiation_mod = 0

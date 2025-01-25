@@ -17,7 +17,7 @@
 	name = OUTFIT_JOB_NAME("Gardener")
 	uniform = /obj/item/clothing/under/rank/hydroponics
 	suit = /obj/item/clothing/suit/apron
-	gloves = /obj/item/clothing/gloves/thick/botany
+	gloves = /obj/item/clothing/gloves/thick/leather
 	r_pocket = /obj/item/device/scanner/plant
 	id_types = list(/obj/item/card/id/civilian/botanist)
 	pda_type = /obj/item/modular_computer/pda
@@ -44,7 +44,7 @@
 	name = OUTFIT_JOB_NAME("Internal affairs agent")
 	l_ear = /obj/item/device/radio/headset/ia
 	uniform = /obj/item/clothing/under/rank/internalaffairs
-	suit = /obj/item/clothing/suit/storage/toggle/suit/black
+	suit = /obj/item/clothing/suit/armor/grim/toggle/suit/black
 	shoes = /obj/item/clothing/shoes/brown
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	l_hand = /obj/item/storage/briefcase

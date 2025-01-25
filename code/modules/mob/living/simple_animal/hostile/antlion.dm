@@ -12,10 +12,10 @@
 	bleed_colour = COLOR_SKY_BLUE
 
 	health = 65
-	maxHealth = 65
+	maxhealth = 65
 	natural_weapon = /obj/item/natural_weapon/bite
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES
+		melee = ARMOR_MELEE_FLAK
 		)
 
 	special_attack_min_range = 2
@@ -96,7 +96,7 @@
 /mob/living/simple_animal/hostile/retaliate/beast/antlion/proc/process_healing()
 	if(!incapacitated() && healing)
 		var/old_health = health
-		if(old_health < maxHealth)
+		if(old_health < maxhealth)
 			health = old_health + heal_amount
 
 /mob/living/simple_animal/hostile/retaliate/beast/antlion/proc/prep_burrow(new_bool)
@@ -111,10 +111,10 @@
 	icon_dead = "queen_dead"
 	mob_size = MOB_LARGE
 	health = 275
-	maxHealth = 275
+	maxhealth = 275
 	natural_weapon = /obj/item/natural_weapon/bite/megalion
 	natural_armor = list(
-		melee = ARMOR_MELEE_RESISTANT
+		melee = ARMOR_MELEE_PRIMAL
 		)
 	heal_amount = 9
 	ability_cooldown = 45 SECONDS

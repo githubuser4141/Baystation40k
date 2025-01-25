@@ -1,4 +1,4 @@
-/* Two-handed Weapons
+/* Two-handed War Gear
  * Contains:
  * 		Twohanded
  *		Fireaxe
@@ -24,8 +24,6 @@
 	var/force_unwielded
 	var/wieldsound = null
 	var/unwieldsound = null
-	var/base_icon
-	var/base_name
 	var/unwielded_force_divisor = 0.25
 	var/wielded_parry_bonus = 20
 
@@ -42,7 +40,6 @@
 
 /obj/item/material/twohanded/update_force()
 	..()
-	base_name = name
 	force_unwielded = round(force*unwielded_force_divisor)
 	force_wielded = force
 	force = force_unwielded
@@ -57,27 +54,19 @@
 	if(wielded)
 		. += wielded_parry_bonus
 
-/obj/item/material/twohanded/on_update_icon()
-	..()
-	icon_state = "[base_icon][wielded]"
-	item_state_slots[slot_l_hand_str] = icon_state
-	item_state_slots[slot_r_hand_str] = icon_state
-	item_state_slots[slot_back_str] = base_icon
-
 /*
  * Fireaxe
  */
 /obj/item/material/twohanded/fireaxe  // DEM AXES MAN, marker -Agouri
 	icon = 'icons/obj/weapons/melee_physical.dmi'
 	icon_state = "fireaxe0"
-	base_icon = "fireaxe"
 	name = "fire axe"
 	desc = "Truly, the weapon of a madman. Who would think to fight fire with an axe?"
 
-	max_force = 60	//for wielded
-	force_multiplier = 0.6
-	unwielded_force_divisor = 0.3
-	attack_cooldown_modifier = 6
+	max_force = 85	//for wielded
+	force_multiplier = 0.38
+	unwielded_force_divisor = 0.32
+	attack_cooldown_modifier = 1
 	sharp = TRUE
 	edge = TRUE
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
@@ -110,14 +99,13 @@
 /obj/item/material/twohanded/spear
 	icon = 'icons/obj/weapons/melee_physical.dmi'
 	icon_state = "spearglass0"
-	base_icon = "spearglass"
 	name = "spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
-	max_force = 20	//for wielded
+	max_force = 50	//for wielded
 	applies_material_colour = 0
-	force_multiplier = 0.33 // 12/19 with hardness 60 (steel) or 10/16 with hardness 50 (glass)
-	unwielded_force_divisor = 0.20
-	thrown_force_multiplier = 1.5 // 20 when thrown with weight 15 (glass)
+	force_multiplier = 0.43
+	unwielded_force_divisor = 0.30
+	thrown_force_multiplier = 1.8
 	throw_speed = 6
 	sharp = TRUE
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -125,7 +113,7 @@
 	default_material = MATERIAL_GLASS
 	does_spin = FALSE
 	worth_multiplier = 7
-	base_parry_chance = 30
+	base_parry_chance = 20
 
 /obj/item/material/twohanded/spear/shatter(consumed)
 	if(!consumed)
@@ -138,19 +126,18 @@
 	desc = "HOME RUN!"
 	icon = 'icons/obj/weapons/melee_physical.dmi'
 	icon_state = "metalbat0"
-	base_icon = "metalbat"
 	item_state = "metalbat"
 	w_class = ITEM_SIZE_LARGE
 	throwforce = 7
 	attack_verb = list("smashed", "beaten", "slammed", "smacked", "struck", "battered", "bonked")
 	hitsound = 'sound/weapons/genhit3.ogg'
 	default_material = MATERIAL_MAPLE
-	max_force = 30	//for wielded
+	max_force = 55	//for wielded
 	force_multiplier = 1.1           // 22 when wielded with weight 20 (steel)
 	unwielded_force_divisor = 0.7 // 15 when unwielded based on above.
 	attack_cooldown_modifier = 1
 	melee_accuracy_bonus = -10
-	base_parry_chance = 30
+	base_parry_chance = 20
 
 /obj/item/material/twohanded/baseballbat/proc/deflect(mob/user, atom/target, atom/movable/item, range, speed)
 	item.throw_at(target, range, speed, user, TRUE)
@@ -163,7 +150,7 @@
 
 		var/bad_arc = reverse_direction(user.dir) //arc of directions from which we cannot block
 		if(check_shield_arc(user, bad_arc, damage_source, attacker))
-			if(!prob(user.skill_fail_chance(SKILL_HAULING, 50, SKILL_EXPERIENCED)))
+			if(!prob(user.skill_fail_chance(SKILL_VIGOR, 50, SKILL_EXPERIENCED)))
 				. = TRUE
 				//You hit it!
 				playsound(src, pick('sound/items/baseball/baseball_hit_01.wav', 'sound/items/baseball/baseball_hit_02.wav'), 75, 1)
@@ -194,8 +181,8 @@
 		return FALSE
 
 	if(is_held_twohanded(user) && !O.anchored && isturf(O.loc) && O.w_class <= ITEM_SIZE_SMALL)
-		if(!prob(user.skill_fail_chance(SKILL_HAULING, 20, SKILL_EXPERIENCED)))
-			var/skill = 0.25 + (user.get_skill_value(SKILL_HAULING) - SKILL_MIN)/(SKILL_MAX - SKILL_MIN)
+		if(!prob(user.skill_fail_chance(SKILL_VIGOR, 20, SKILL_EXPERIENCED)))
+			var/skill = 0.25 + (user.get_skill_value(SKILL_VIGOR) - SKILL_MIN)/(SKILL_MAX - SKILL_MIN)
 			var/dist = O.throw_range * skill
 			O.throw_at(get_ranged_target_turf(user, user.dir, dist), dist, O.throw_speed * skill, user, TRUE)
 			visible_message(SPAN_NOTICE("\The [user] hits \the [O], sending it flying!"))

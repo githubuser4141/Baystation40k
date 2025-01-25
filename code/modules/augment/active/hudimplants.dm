@@ -20,7 +20,7 @@
 				if (allowed(owner))
 					process_med_hud(owner, 1)
 			if (HUD_SECURITY)
-				req_access = list(access_security)
+				req_access = list(access_restricted)
 				if (allowed(owner))
 					process_sec_hud(owner, 1)
 			if (HUD_JANITOR)
@@ -54,7 +54,7 @@
 
 /obj/item/organ/internal/augment/active/hud/security
 	name = "integrated security HUD"
-	desc = "The Hephaestus Industries C-VSR is an implantable HUD, designed to interface with the user's optic nerve and local databases to display security information."
+	desc = "The Vostroyan C-VSR is an implantable HUD, designed to interface with the user's optic nerve and local databases to display security information."
 	hud_type = HUD_SECURITY
 
 

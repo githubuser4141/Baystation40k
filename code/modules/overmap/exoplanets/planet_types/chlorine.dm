@@ -6,10 +6,9 @@
 	rock_colors = list(COLOR_GRAY80, COLOR_PALE_GREEN_GRAY, COLOR_PALE_BTL_GREEN)
 	plant_colors = list("#eba487", "#ceeb87", "#eb879c", "#ebd687", "#f6d6c9", "#f2b3e0")
 	map_generators = list(/datum/random_map/noise/exoplanet/chlorine, /datum/random_map/noise/ore/poor)
-	ruin_tags_blacklist = RUIN_HABITAT|RUIN_WATER
 	surface_color = "#a3b879"
 	water_color = COLOR_BOTTLE_GREEN
-	habitability_weight = HABITABILITY_BAD
+	habitability_weight = HABITABILITY_EXTREME
 	has_trees = FALSE
 	flora_diversity = 5
 	fauna_types = list(/mob/living/simple_animal/thinbug, /mob/living/simple_animal/hostile/retaliate/beast/samak/alt, /mob/living/simple_animal/yithian, /mob/living/simple_animal/tindalos, /mob/living/simple_animal/hostile/retaliate/jelly)
@@ -38,7 +37,7 @@
 	water_type = /turf/simulated/floor/exoplanet/water/shallow/chlorine_liquid
 	water_level_min = 2
 	water_level_max = 3
-	fauna_prob = 2
+	fauna_prob = 0.5
 	flora_prob = 5
 	large_flora_prob = 0
 

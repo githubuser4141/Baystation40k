@@ -21,7 +21,7 @@
 	if(CE_SLOWDOWN in chem_effects)
 		tally += chem_effects[CE_SLOWDOWN]
 
-	var/health_deficiency = (maxHealth - health)
+	var/health_deficiency = (maxhealth - health)
 	if(health_deficiency >= 40) tally += (health_deficiency / 25)
 
 	if(can_feel_pain())
@@ -47,6 +47,18 @@
 						item_slowdown = item_slowdown / (size_mod + 1)
 					else
 						item_slowdown = item_slowdown - size_mod
+				if(I.str_requirement)
+					if(skill_check(SKILL_COMBAT, SKILL_DEMIGOD))
+						item_slowdown += 0.02
+					else if(skill_check(SKILL_COMBAT, SKILL_PRIMARIS))
+						item_slowdown += 0.05
+					else if(skill_check(SKILL_COMBAT, SKILL_LEGEND))
+						// Minor slowdown for high-level users.
+						item_slowdown += 0.4
+					else
+						to_chat(src, "<span class='danger'>You are too weak to use this item!</span>")
+						drop_item()
+
 				total_item_slowdown += max(item_slowdown, 0)
 		tally += total_item_slowdown
 
@@ -129,6 +141,8 @@
 	if(species.check_no_slip(src))
 		return 1
 	if(shoes && (shoes.item_flags & ITEM_FLAG_NOSLIP) && istype(shoes, /obj/item/clothing/shoes/magboots))  //magboots + dense_object = no floating
+		return 1
+	if(shoes && (shoes.item_flags & ITEM_FLAG_NOSLIP) && istype(shoes, /obj/item/clothing/shoes/jackboots))  //magboots + dense_object = no floating
 		return 1
 	return 0
 

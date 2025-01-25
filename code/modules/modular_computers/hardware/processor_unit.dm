@@ -1,4 +1,4 @@
-/// CPU that allows the computer to run programs. Better CPUs are obtainable via research and can run more programs at once.
+/// CPU that allows the cogitator to run programs. Better CPUs are obtainable via research and can run more programs at once.
 /obj/item/stock_parts/computer/processor_unit
 	name = "standard processor"
 	desc = "A standard CPU used in most computers. It can run up to three programs simultaneously."
@@ -28,7 +28,7 @@
 	hardware_size = 2
 	power_usage = 50
 	processing_power = 4
-	origin_tech = list(TECH_DATA = 5, TECH_ENGINEERING = 4)
+	origin_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 4)
 
 /obj/item/stock_parts/computer/processor_unit/photonic/small
 	name = "photonic microprocessor"
@@ -37,4 +37,4 @@
 	hardware_size = 1
 	power_usage = 10
 	processing_power = 2
-	origin_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 3)
+	origin_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 3)

@@ -17,14 +17,14 @@
 	pry_time = 2 SECONDS
 
 	health = 350
-	maxHealth = 350
+	maxhealth = 350
 	natural_weapon = /obj/item/natural_weapon/pincers/giant
 	return_damage_min = 2
 	return_damage_max = 5
 	harm_intent_damage = 1
 	natural_armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_PISTOL
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_FLAK
 		)
 	special_attack_min_range = 0
 	special_attack_max_range = 1
@@ -64,7 +64,7 @@
 	if(!.)
 		return FALSE
 
-	if((health > maxHealth / 1.5) && length(ai_holder.attackers) && prob(10))
+	if((health > maxhealth / 1.5) && length(ai_holder.attackers) && prob(10))
 		if(victim)
 			release_grab()
 		ai_holder.attackers = list() //TODO: does this still work?

@@ -5,19 +5,19 @@ var/global/list/department_radio_keys = list(
 	  ":h" = "department",	".h" = "department",
 	  ":+" = "special",		".+" = "special", //activate radio-specific special functions
 	  ":c" = "Command",		".c" = "Command",
-	  ":n" = "Science",		".n" = "Science",
-	  ":m" = "Medical",		".m" = "Medical",
-	  ":e" = "Engineering", ".e" = "Engineering",
-	  ":s" = "Security",	".s" = "Security",
+	  ":n" = "Biologis",		".n" = "Biologis",
+	  ":m" = "Medicae",		".m" = "Medicae",
+	  ":e" = "Mechanicus", ".e" = "Mechanicus",
+	  ":s" = "Militarum",	".s" = "Militarum",
 	  ":w" = "whisper",		".w" = "whisper",
-	  ":t" = "Mercenary",	".t" = "Mercenary",
+	  ":t" = "Unknown",	".t" = "Unknown",
 	  ":x" = "Raider",		".x" = "Raider",
-	  ":u" = "Supply",		".u" = "Supply",
+	  ":u" = "Secure",		".u" = "Secure",
 	  ":v" = "Service",		".v" = "Service",
 	  ":p" = "AI Private",	".p" = "AI Private",
 	  ":z" = "Entertainment",".z" = "Entertainment",
-	  ":y" = "Exploration",		".y" = "Exploration",
-	  ":o" = "Response Team",".o" = "Response Team", //ERT
+	  ":y" = "Explorator",		".y" = "Explorator",
+	  ":o" = "Ordos",".o" = "Ordos", //ERT
 	  ":j" = "Hailing", ".j" = "Hailing",
 
 	  ":R" = "right ear",	".R" = "right ear",
@@ -25,19 +25,19 @@ var/global/list/department_radio_keys = list(
 	  ":I" = "intercom",	".I" = "intercom",
 	  ":H" = "department",	".H" = "department",
 	  ":C" = "Command",		".C" = "Command",
-	  ":N" = "Science",		".N" = "Science",
-	  ":M" = "Medical",		".M" = "Medical",
-	  ":E" = "Engineering",	".E" = "Engineering",
-	  ":S" = "Security",	".S" = "Security",
+	  ":N" = "Biologis",		".N" = "Biologis",
+	  ":M" = "Medicae",		".M" = "Medicae",
+	  ":E" = "Mechanicus",	".E" = "Mechanicus",
+	  ":S" = "Militarum",	".S" = "Militarum",
 	  ":W" = "whisper",		".W" = "whisper",
-	  ":T" = "Mercenary",	".T" = "Mercenary",
+	  ":T" = "Unknown",	".T" = "Unknown",
 	  ":X" = "Raider",		".X" = "Raider",
-	  ":U" = "Supply",		".U" = "Supply",
+	  ":U" = "Secure",		".U" = "Secure",
 	  ":V" = "Service",		".V" = "Service",
 	  ":P" = "AI Private",	".P" = "AI Private",
 	  ":Z" = "Entertainment",".Z" = "Entertainment",
-	  ":Y" = "Exploration",		".Y" = "Exploration",
-	  ":O" = "Response Team", ".O" = "Response Team",
+	  ":Y" = "Explorator",		".Y" = "Explorator",
+	  ":O" = "Ordos", ".O" = "Ordos",
 	  ":J" = "Hailing", ".J" = "Hailing",
 
 	  //kinda localization -- rastaf0
@@ -47,19 +47,19 @@ var/global/list/department_radio_keys = list(
 	  ":ш" = "intercom",	".ш" = "intercom",
 	  ":р" = "department",	".р" = "department",
 	  ":с" = "Command",		".с" = "Command",
-	  ":т" = "Science",		".т" = "Science",
-	  ":ь" = "Medical",		".ь" = "Medical",
-	  ":у" = "Engineering", ".у" = "Engineering",
-	  ":ы" = "Security",	".ы" = "Security",
+	  ":т" = "Biologis",		".т" = "Biologis",
+	  ":ь" = "Medicae",		".ь" = "Medicae",
+	  ":у" = "Mechanicus", ".у" = "Mechanicus",
+	  ":ы" = "Militarum",	".ы" = "Militarum",
 	  ":ц" = "whisper",		".ц" = "whisper",
-	  ":е" = "Mercenary",	".е" = "Mercenary",
+	  ":е" = "Unknown",	".е" = "Unknown",
 	  ":ч" = "Raider",		".ч" = "Raider",
-	  ":г" = "Supply",		".г" = "Supply",
+	  ":г" = "Secure",		".г" = "Secure",
 	  ":м" = "Service",		".м" = "Service",
 	  ":з" = "AI Private",	".з" = "AI Private",
 	  ":я" = "Entertainment",".я" = "Entertainment",
-	  ":н" = "Exploration",		".н" = "Exploration",
-	  ":щ" = "Response Team",".щ" = "Response Team",
+	  ":н" = "Explorator",		".н" = "Explorator",
+	  ":щ" = "Ordos",".щ" = "Ordos",
 	  ":о" = "Hailing", ".о" = "Hailing",
 
 	  ":К" = "right ear",	".К" = "right ear",
@@ -67,19 +67,19 @@ var/global/list/department_radio_keys = list(
 	  ":Ш" = "intercom",	".Ш" = "intercom",
 	  ":Р" = "department",	".Р" = "department",
 	  ":С" = "Command",		".С" = "Command",
-	  ":Т" = "Science",		".Т" = "Science",
-	  ":Ь" = "Medical",		".Ь" = "Medical",
-	  ":У" = "Engineering", ".У" = "Engineering",
-	  ":Ы" = "Security",	".Ы" = "Security",
+	  ":Т" = "Biologis",		".Т" = "Biologis",
+	  ":Ь" = "Medicae",		".Ь" = "Medicae",
+	  ":У" = "Mechanicus", ".У" = "Mechanicus",
+	  ":Ы" = "Militarum",	".Ы" = "Militarum",
 	  ":Ц" = "whisper",		".Ц" = "whisper",
-	  ":Е" = "Mercenary",	".Е" = "Mercenary",
+	  ":Е" = "Unknown",	".Е" = "Unknown",
 	  ":Ч" = "Raider",		".Ч" = "Raider",
-	  ":Г" = "Supply",		".Г" = "Supply",
+	  ":Г" = "Secure",		".Г" = "Secure",
 	  ":М" = "Service",		".М" = "Service",
 	  ":З" = "AI Private",	".З" = "AI Private",
 	  ":Я" = "Entertainment",".Я" = "Entertainment",
-	  ":Н" = "Exploration",		".Н" = "Exploration",
-	  ":Щ" = "Response Team",".Щ" = "Response Team",
+	  ":Н" = "Explorator",		".Н" = "Explorator",
+	  ":Щ" = "Ordos",".Щ" = "Ordos",
 	  ":О" = "Hailing", ".О" = "Hailing",
 )
 
@@ -312,9 +312,10 @@ var/global/list/channel_to_radio_key = new
 			if(O) //It's possible that it could be deleted in the meantime.
 				O.hear_talk(src, message, verb, speaking)
 
+	var/list/eavesdroppers = list()
 	if(whispering)
-		var/eavesdroping_range = 5
 		var/list/eavesdroping = list()
+		var/eavesdroping_range = 5
 		var/list/eavesdroping_obj = list()
 		get_mobs_and_objs_in_view_fast(T, eavesdroping_range, eavesdroping, eavesdroping_obj)
 		eavesdroping -= listening
@@ -323,12 +324,16 @@ var/global/list/channel_to_radio_key = new
 			if(M)
 				M.hear_say(stars(message), verb, speaking, alt_name, italics, src, speech_sound, sound_vol)
 				if(M.client)
-					speech_bubble_recipients |= M.client
+					eavesdroppers |= M.client
 
 		for(var/obj/O in eavesdroping)
 			spawn(0)
 				if(O) //It's possible that it could be deleted in the meantime.
 					O.hear_talk(src, stars(message), verb, speaking)
+
+	invoke_async(src, /atom/movable/proc/animate_chat, message, speaking, italics, speech_bubble_recipients)
+	if (length(eavesdroppers))
+		invoke_async(src, /atom/movable/proc/animate_chat, stars(message), speaking, italics, eavesdroppers)
 
 	if(mind)
 		mind.last_words = message
@@ -338,6 +343,7 @@ var/global/list/channel_to_radio_key = new
 	else
 		log_say("[name]/[key] : [message]")
 
+	speech_bubble_recipients = speech_bubble_recipients | eavesdroppers
 	if (length(speech_bubble_recipients))
 		var/speech_intent = say_test(message)
 		var/image/speech_bubble = image('icons/mob/talk.dmi', src, "h[speech_intent]")
@@ -349,6 +355,8 @@ var/global/list/channel_to_radio_key = new
 		animate(speech_bubble, alpha = 255, time = 1 SECOND, easing = QUAD_EASING)
 		animate(time = 1 SECOND)
 		animate(alpha = 0, pixel_y = 8, time = 1 SECOND, easing = QUAD_EASING)
+
+
 	return 1
 
 

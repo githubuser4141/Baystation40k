@@ -7,7 +7,7 @@
 	icon_dead = "dead"
 
 	health = 250
-	maxHealth = 250
+	maxhealth = 250
 	meat_amount = 60
 	skin_amount = 15
 
@@ -31,8 +31,8 @@
 	response_disarm = "bumps"
 	response_harm = "strikes"
 
-	natural_armor = list(melee = ARMOR_MELEE_RESISTANT,
-						bullet = ARMOR_BALLISTIC_SMALL)
+	natural_armor = list(melee = ARMOR_MELEE_PRIMAL,
+						bullet = ARMOR_BALLISTIC_PRIMAL)
 
 	var/chosen_color
 	var/species_colors = list(COLOR_COMMAND_BLUE, COLOR_PURPLE, COLOR_DARK_BLUE_GRAY, COLOR_PALE_PINK)
@@ -65,7 +65,7 @@
 			bound_width = 128
 
 // /mob/living/simple_animal/hostile/retaliate/space_whale/Retaliate() //So they dont become hostile when spawned and thrown in migration event.
-// 	if(!(health < (maxHealth - 5)))
+// 	if(!(health < (maxhealth - 5)))
 // 		return
 // 	..()
 

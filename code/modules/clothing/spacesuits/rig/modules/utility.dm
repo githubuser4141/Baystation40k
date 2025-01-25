@@ -34,7 +34,7 @@
 	engage_string = "Display Readout"
 	usable = 1
 	use_power_cost = 200
-	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 3, TECH_ENGINEERING = 5)
+	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 3, TECH_ENGINEERING = 3)
 	device = /obj/item/device/scanner/health
 
 /obj/item/rig_module/device/defib
@@ -58,7 +58,7 @@
 	suit_overlay_inactive = null
 	use_power_cost = 3600 //2 Wh per use
 	module_cooldown = 0
-	origin_tech = list(TECH_MATERIAL = 6, TECH_POWER = 4, TECH_ENGINEERING = 6)
+	origin_tech = list(TECH_MATERIAL = 3, TECH_POWER = 4, TECH_ENGINEERING = 4)
 	device = /obj/item/pickaxe/diamonddrill
 
 /obj/item/rig_module/device/anomaly_scanner
@@ -72,7 +72,7 @@
 	usable = 1
 	selectable = 0
 	device = /obj/item/device/ano_scanner
-	origin_tech = list(TECH_BLUESPACE = 4, TECH_MAGNET = 4, TECH_ENGINEERING = 6)
+	origin_tech = list(TECH_BLUESPACE = 3, TECH_MAGNET = 3, TECH_ENGINEERING = 3)
 
 /obj/item/rig_module/device/orescanner
 	name = "ore scanner module"
@@ -86,7 +86,7 @@
 	toggleable = 1
 	use_power_cost = 200
 	device = /obj/item/device/scanner/mining
-	origin_tech = list(TECH_MATERIAL = 4, TECH_MAGNET = 4, TECH_ENGINEERING = 6)
+	origin_tech = list(TECH_MATERIAL = 2, TECH_MAGNET = 4, TECH_ENGINEERING = 3)
 
 /obj/item/rig_module/device/orescanner/activate()
 	if(!check() || !device)
@@ -104,7 +104,7 @@
 	usable = 1
 	engage_string = "Configure RCD"
 	use_power_cost = 300
-	origin_tech = list(TECH_MATERIAL = 6, TECH_MAGNET = 5, TECH_ENGINEERING = 7)
+	origin_tech = list(TECH_MATERIAL = 3, TECH_MAGNET = 3, TECH_ENGINEERING = 4)
 	device = /obj/item/rcd/mounted
 
 /obj/item/rig_module/device/Initialize()
@@ -146,11 +146,11 @@
 
 	charges = list(
 		list("dexalin plus",  "dexalin plus",  /datum/reagent/dexalinp,          80),
-		list("inaprovaline",  "inaprovaline",  /datum/reagent/inaprovaline,      80),
-		list("dylovene",      "dylovene",      /datum/reagent/dylovene,          80),
+		list("vitae stim",  "vitae stim",  /datum/reagent/inaprovaline,      80),
+		list("venaxilin",      "venaxilin",      /datum/reagent/dylovene,          80),
 		list("hyronalin",     "hyronalin",     /datum/reagent/hyronalin,         80),
 		list("spaceacillin",  "spaceacillin",  /datum/reagent/spaceacillin,      80),
-		list("tramadol",      "tramadol",      /datum/reagent/tramadol,          80)
+		list("morphium",      "morphium",      /datum/reagent/tramadol,          80)
 		)
 
 	var/max_reagent_volume = 80 //Used when refilling.
@@ -161,15 +161,15 @@
 	//just over a syringe worth of each. Want more? Go refill. Gives the ninja another reason to have to show their face.
 	charges = list(
 		list("dexalin plus",  "dexalin plus",  /datum/reagent/dexalinp,          20),
-		list("inaprovaline",  "inaprovaline",  /datum/reagent/inaprovaline,      20),
-		list("dylovene",      "dylovene",      /datum/reagent/dylovene,          20),
+		list("vitae stim",  "vitae stim",  /datum/reagent/inaprovaline,      20),
+		list("venaxilin",      "venaxilin",      /datum/reagent/dylovene,          20),
 		list("glucose",       "glucose",       /datum/reagent/nutriment/glucose, 80),
 		list("hyronalin",     "hyronalin",     /datum/reagent/hyronalin,         20),
-		list("bicaridine",    "bicaridine",    /datum/reagent/bicaridine,        20),
-		list("dermaline",     "dermaline",     /datum/reagent/dermaline,         20),
+		list("regeneris-d",    "regeneris-d",    /datum/reagent/bicaridine,        20),
+		list("regeneris-b2",     "regeneris-b2",     /datum/reagent/dermaline,         20),
 		list("spaceacillin",  "spaceacillin",  /datum/reagent/spaceacillin,      20),
 		list("coagulant",     "coagulant",     /datum/reagent/coagulant,         20),
-		list("tramadol",      "tramadol",      /datum/reagent/tramadol,          20)
+		list("morphium",      "morphium",      /datum/reagent/tramadol,          20)
 		)
 
 /obj/item/rig_module/chem_dispenser/accepts_item(obj/item/input_item, mob/living/user)
@@ -255,7 +255,7 @@
 	charges = list(
 		list("synaptizine", "synaptizine", /datum/reagent/synaptizine,       30),
 		list("hyperzine",   "hyperzine",   /datum/reagent/hyperzine,         30),
-		list("oxycodone",   "oxycodone",   /datum/reagent/tramadol/oxycodone,         30),
+		list("aqeuitas-d",   "aqeuitas-d",   /datum/reagent/tramadol/oxycodone,         30),
 		list("glucose",     "glucose",     /datum/reagent/nutriment/glucose, 80),
 		)
 
@@ -356,7 +356,7 @@
 
 	interface_name = "maneuvering jets"
 	interface_desc = "An inbuilt EVA maneuvering system that runs off the rig air supply."
-	origin_tech = list(TECH_MATERIAL = 6,  TECH_ENGINEERING = 7)
+	origin_tech = list(TECH_MATERIAL = 2,  TECH_ENGINEERING = 3)
 	var/obj/item/tank/jetpack/rig/jets
 
 /obj/item/rig_module/maneuvering_jets/engage()
@@ -471,14 +471,14 @@
 	icon_state = "ewar"
 	interface_name = "mounted matter decompiler"
 	interface_desc = "Eats trash like no one's business."
-	origin_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 5)
+	origin_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4)
 	device = /obj/item/matter_decompiler
 
 /obj/item/rig_module/cooling_unit
 	name = "mounted cooling unit"
 	icon_state = "cooling"
 	toggleable = 1
-	origin_tech = list(TECH_MAGNET = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 5)
+	origin_tech = list(TECH_MAGNET = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 3)
 	interface_name = "mounted cooling unit"
 	interface_desc = "A heat sink with a liquid cooled radiator."
 	module_cooldown = 0 SECONDS //no cd because its critical for a life-support module
@@ -510,7 +510,7 @@
 
 	interface_name = "gravikinetic module"
 	interface_desc = "A directed point-gravity manipulator module for lifting and moving things out of reach."
-	origin_tech = list(TECH_MAGNET = 2, TECH_MATERIAL = 6,  TECH_ENGINEERING = 6)
+	origin_tech = list(TECH_MAGNET = 2, TECH_MATERIAL = 3,  TECH_ENGINEERING = 4)
 
 	var/atom/movable/locked
 	var/datum/beam = null

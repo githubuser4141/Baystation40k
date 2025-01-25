@@ -8,8 +8,6 @@
 	icon = 'icons/obj/machines/suitstorage.dmi'
 	icon_state = "close"
 
-	req_access = list(access_captain, access_bridge)
-
 	var/active = 0          // PLEASE HOLD.
 	var/safeties = 1        // The cycler won't start with a living thing inside it unless safeties are off.
 	var/irradiating = 0     // If this is > 0, the cycler is decontaminating whatever is inside it.
@@ -43,7 +41,7 @@
 	)
 
 	//Species that the suits can be configured to fit.
-	var/list/species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+	var/list/species = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT)
 
 	var/singleton/item_modifier/target_modification
 	var/target_species
@@ -207,7 +205,7 @@
 		dat+= "<br>[SPAN_COLOR("red", "<b>The [model_text ? "[model_text] " : ""]suit cycler is currently in use. Please wait...</b>")]"
 
 	else if(locked)
-		dat += "<br>[SPAN_COLOR("red", "<b>The [model_text ? "[model_text] " : ""]suit cycler is currently locked. Please contact your system administrator.</b>")]"
+		dat += "<br>[SPAN_COLOR("red", "<b>The [model_text ? "[model_text] " : ""]suit cycler is currently locked. Please contact your local mechanicum.</b>")]"
 		if(allowed(user))
 			dat += "<br><a href='?src=\ref[src];toggle_lock=1'>\[unlock unit\]</a>"
 	else

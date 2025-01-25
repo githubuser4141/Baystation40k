@@ -39,7 +39,7 @@
 	..()
 	var/ringtype = list()
 	ringtype["CTI ring"] = /obj/item/clothing/ring/cti
-	ringtype["Mariner University ring"] = /obj/item/clothing/ring/mariner
+	ringtype["Schola Progenium ring"] = /obj/item/clothing/ring/mariner
 	ringtype["engagement ring"] = /obj/item/clothing/ring/engagement
 	ringtype["signet ring"] = /obj/item/clothing/ring/seal/signet
 	ringtype["masonic ring"] = /obj/item/clothing/ring/seal/mason
@@ -56,12 +56,12 @@
 
 /datum/gear/gloves/botany
 	display_name = "gloves, botany"
-	path = /obj/item/clothing/gloves/thick/botany
+	path = /obj/item/clothing/gloves/thick/leather
 	cost = 3
 	allowed_roles = list(
 		/datum/job/rd,
 		/datum/job/scientist,
-		/datum/job/chef,
+		/datum/job/chamber_magister,
 		/datum/job/assistant
 	)
 

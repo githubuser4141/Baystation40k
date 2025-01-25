@@ -4,9 +4,9 @@
 	icon = 'icons/obj/guns/coilgun.dmi'
 	icon_state = "coilgun"
 	item_state = "coilgun"
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_MAGNET = 4)
-	one_hand_penalty = 5
-	fire_delay = 20
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_MAGNET = 3)
+	one_hand_penalty = 4
+	fire_delay = 10
 	w_class = ITEM_SIZE_LARGE
 	bulk = GUN_BULK_RIFLE
 	combustion = 1

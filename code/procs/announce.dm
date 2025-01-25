@@ -1,6 +1,6 @@
 var/global/datum/announcement/priority/priority_announcement = new(do_log = 0)
 var/global/datum/announcement/priority/command/command_announcement = new(do_log = 0, do_newscast = 1)
-var/global/datum/announcement/minor/minor_announcement = new(new_sound = 'sound/AI/commandreport.ogg',)
+var/global/datum/announcement/minor/minor_announcement = new(new_sound = 'sound/items/cult/tesa.ogg',)
 
 /datum/announcement
 	var/title = "Attention"
@@ -26,8 +26,8 @@ var/global/datum/announcement/minor/minor_announcement = new(new_sound = 'sound/
 
 /datum/announcement/priority/command/New(do_log = 1, new_sound = 'sound/misc/notice2.ogg', do_newscast = 0)
 	..(do_log, new_sound, do_newscast)
-	title = "[GLOB.using_map.boss_name] Update"
-	announcement_type = "[GLOB.using_map.boss_name] Update"
+	title = "Vox Transmission"
+	announcement_type = "Vox Transmission"
 
 /datum/announcement/proc/Announce(message as text, new_title = "", new_sound = null, do_newscast = newscast, msg_sanitized = 0, zlevels = GLOB.using_map.contact_levels)
 	if(!message)
@@ -70,7 +70,7 @@ var/global/datum/announcement/minor/minor_announcement = new(new_sound = 'sound/
 	. += "<br>"
 
 /datum/announcement/priority/command/FormMessage(message as text, message_title as text)
-	. = "<h1 class='alert'>[GLOB.using_map.boss_name] Update</h1>"
+	. = "<h1 class='alert'>Vox Transmission</h1>"
 	if (message_title)
 		. += "<br><h2 class='alert'>[message_title]</h2>"
 
@@ -139,24 +139,24 @@ var/global/datum/announcement/minor/minor_announcement = new(new_sound = 'sound/
 	// During red alert all jobs are announced on main frequency.
 	var/singleton/security_state/security_state = GET_SINGLETON(GLOB.using_map.security_state)
 	if (security_state.current_security_level_is_same_or_higher_than(security_state.high_security_level))
-		return "Common"
+		return "Vox"
 
 	if(job.department_flag & (COM | CIV | MSC))
-		return "Common"
+		return "Vox"
 	if(job.department_flag & SUP)
-		return "Supply"
+		return "Machinarum"
 	if(job.department_flag & SPT)
 		return "Command"
 	if(job.department_flag & SEC)
-		return "Security"
+		return "Militarum"
 	if(job.department_flag & ENG)
-		return "Engineering"
+		return "Mechanicus"
 	if(job.department_flag & MED)
-		return "Medical"
+		return "Medicae"
 	if(job.department_flag & SCI)
-		return "Science"
+		return "Biologis"
 	if(job.department_flag & SRV)
 		return "Service"
 	if(job.department_flag & EXP)
-		return "Exploration"
-	return "Common"
+		return "Explorator"
+	return "Vox"

@@ -1,6 +1,6 @@
 /datum/map/torch
-	name = "\improper Torch"
-	full_name = "\improper SEV Torch"
+	name = "Dauntless"
+	full_name = "The Dauntless"
 	path = "torch"
 	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
 	config_path = "config/torch_config.txt"
@@ -11,31 +11,24 @@
 	accessible_z_levels = list("1"=1,"2"=3,"3"=1,"4"=1,"5"=1,"6"=1,"9"=30)
 	overmap_size = 35
 	overmap_event_areas = 34
-	usable_email_tlds = list("torch.ec.scg", "torch.fleet.mil", "freemail.net", "torch.scg")
+	usable_email_tlds = list("dauntless.ecnet", "dauntless.astro", "astropathica.net", "dauntless.net")
 
 	allowed_spawns = list("Cryogenic Storage", "Cyborg Storage")
 	default_spawn = "Cryogenic Storage"
 
-	station_name  = "\improper SEV Torch"
-	station_short = "\improper Torch"
+	station_name  = "The Dauntless"
+	station_short = "Dauntless"
 	dock_name     = "TBD"
-	boss_name     = "Expeditionary Command"
-	boss_short    = "Command"
-	company_name  = "Sol Central Government"
-	company_short = "SolGov"
+	boss_name     = "Administratum"
+	boss_short    = "RT"
+	company_name  = "Imperium Of Man"
+	company_short = "Imperium"
 
 	map_admin_faxes = list(
-		"Expeditionary Corps Command",
-		"Expeditionary Corps Logistics",
-		"EXO Head Office",
-		"EXO Internal Affairs",
-		"SFP Territory Support",
-		"SFP Special Investigations",
-		"SFP Fugitive Recovery",
-		"Sol Fleet Mars Command",
-		"Bureau of Diplomatic Affairs",
-		"Emergency Management Bureau",
-		"Secure Routing Service"
+		"High Command - General Staff",
+		"Adeptus Mechanicus - Explorator Fleet",
+		"Adeptus Administratum - Holy Terra",
+		"The Holy Ordos - Code Vermillion"
 	)
 
 	//These should probably be moved into the evac controller...
@@ -50,7 +43,7 @@
 	use_overmap = 1
 	num_exoplanets = 1
 
-	away_site_budget = 1
+	away_site_budget = 12
 	min_offmap_players = 0
 
 	id_hud_icons = 'maps/torch/icons/assignment_hud.dmi'

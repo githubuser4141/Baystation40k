@@ -10,21 +10,21 @@
 	icon_state = "sci_headset_alt"
 	item_state = "sci_headset_alt"
 
-/obj/item/device/radio/headset/heads/torchexec
+/obj/item/device/radio/headset/heads/bridge
 	name = "executive headset"
-	desc = "The headset of those brave men and women who command the Torch."
+	desc = "The headset of those brave men and women who command The Dauntless."
 	icon_state = "com_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/heads/torchexec
 
-/obj/item/device/radio/headset/heads/torchexec/alt
+/obj/item/device/radio/headset/heads/bridge/alt
 	name = "executive bowman headset"
 	icon_state = "com_headset_alt"
 	item_state = "com_headset_alt"
 
 /obj/item/device/radio/headset/heads/torchcorp
 	name = "corporate headset"
-	desc = "Headset of the servants to the corporate overlords."
+	desc = "Headset of the servants to the imperial overlords."
 	icon_state = "nt_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/headset_torchcorp
@@ -36,7 +36,7 @@
 
 /obj/item/device/radio/headset/heads/torchntcommand
 	name = "corporate command headset"
-	desc = "Headset of the corporate overlords."
+	desc = "Headset of the imperial overlords."
 	icon_state = "nt_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/headset_torchcl
@@ -76,14 +76,14 @@
 	item_state = "com_headset_alt"
 
 /obj/item/device/radio/headset/headset_deckofficer
-	name = "deck chief's vox headset"
+	name = "deck boss's vox headset"
 	desc = "The headset of the chief box pusher."
 	icon_state = "cargo_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/headset_deckofficer
 
 /obj/item/device/radio/headset/headset_deckofficer/alt
-	name = "deck chief's bowman headset"
+	name = "deck boss's bowman headset"
 	item_state = "cargo_headset_alt"
 	icon_state = "cargo_headset_alt"
 	max_keys = 3

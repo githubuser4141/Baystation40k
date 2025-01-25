@@ -144,7 +144,7 @@
 
 				var/title = job.title
 				var/title_link = length(job.alt_titles) ? "<a href='?src=\ref[src];select_alt_title=\ref[job]'>[pref.GetPlayerAltTitle(job)]</a>" : job.title
-				if((title in SSjobs.titles_by_department(COM)) || (title == "AI"))//Bold head jobs
+				if((title in SSjobs.titles_by_department(COM)) || (title == "Machine Spirit"))//Bold head jobs
 					title_link = "<b>[title_link]</b>"
 
 				var/help_link = "</td><td width = '10%' align = 'center'><a href='?src=\ref[src];job_info=[title]'>?</a></td>"
@@ -210,7 +210,7 @@
 
 				. += "<td>"
 				if(title == GLOB.using_map.default_assistant_title)//Assistant is special
-					var/yes_link = "Yes"
+					var/yes_link = "Compliance"
 					var/no_link = "No"
 					if(title in pref.job_low)
 						yes_link = SPAN_COLOR("#55cc55", yes_link)

@@ -8,7 +8,7 @@
 	icon_state = "utilitybelt"
 	item_state = "utility"
 	storage_slots = 7
-	force = 2
+	force = 5
 	item_flags = ITEM_FLAG_IS_BELT
 	max_w_class = ITEM_SIZE_NORMAL
 	slot_flags = SLOT_BELT
@@ -208,14 +208,14 @@
 		)
 
 /obj/item/storage/belt/medical/emt
-	name = "EMT belt"
+	name = "Medicae belt"
 	desc = "A sturdy black webbing belt with attached pouches."
 	icon_state = "emsbelt"
 	item_state = "emsbelt"
 
 /obj/item/storage/belt/holster/security
-	name = "security holster belt"
-	desc = "Can hold security gear like handcuffs and flashes. This one has a convenient holster."
+	name = "militarum holster belt"
+	desc = "Can hold militarum gear like handcuffs and flashes. This one has a convenient holster."
 	icon_state = "securitybelt"
 	item_state = "security"
 	storage_slots = 8
@@ -227,9 +227,10 @@
 		/obj/item/handcuffs,
 		/obj/item/device/flash,
 		/obj/item/clothing/glasses,
-		/obj/item/ammo_casing/shotgun,
+		/obj/item/ammo_casing,
 		/obj/item/ammo_magazine,
 		/obj/item/reagent_containers/food/snacks/donut,
+		/obj/item/material/twohanded/ravenor/knife,
 		/obj/item/melee/baton,
 		/obj/item/melee/telebaton,
 		/obj/item/flame/lighter,
@@ -258,8 +259,8 @@
 	queue_icon_update()
 
 /obj/item/storage/belt/security
-	name = "security belt"
-	desc = "Can hold security gear like handcuffs and flashes."
+	name = "militarum belt"
+	desc = "Can hold militarum gear like handcuffs and flashes."
 	icon_state = "basicsecuritybelt"
 	item_state = "basicsecurity"
 	overlay_flags = BELT_OVERLAY_ITEMS
@@ -270,9 +271,10 @@
 		/obj/item/handcuffs,
 		/obj/item/device/flash,
 		/obj/item/clothing/glasses,
-		/obj/item/ammo_casing/shotgun,
+		/obj/item/ammo_casing,
 		/obj/item/ammo_magazine,
 		/obj/item/reagent_containers/food/snacks/donut,
+		/obj/item/material/twohanded/ravenor/knife,
 		/obj/item/melee/baton,
 		/obj/item/melee/telebaton,
 		/obj/item/flame/lighter,
@@ -445,7 +447,7 @@
 		/obj/item/material/knife/folding,
 		/obj/item/modular_computer/tablet,
 		/obj/item/modular_computer/pda,
-		/obj/item/taperoll/police,
+		/obj/item/taperoll/enforcer,
 		/obj/item/clothing/glasses,
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/device/flash
@@ -481,7 +483,7 @@
 		/obj/item/material/knife/folding,
 		/obj/item/modular_computer/tablet,
 		/obj/item/modular_computer/pda,
-		/obj/item/taperoll/police,
+		/obj/item/taperoll/enforcer,
 		/obj/item/clothing/glasses,
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/device/flash
@@ -556,7 +558,7 @@
 
 /obj/item/storage/belt/holster/security/tactical
 	name = "combat belt"
-	desc = "Can hold security gear like handcuffs and flashes, with more pouches for more storage."
+	desc = "Can hold militarum gear like handcuffs and flashes, with more pouches for more storage."
 	icon_state = "swatbelt"
 	item_state = "swatbelt"
 	storage_slots = 10

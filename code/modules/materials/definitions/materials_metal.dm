@@ -12,7 +12,7 @@
 	wall_icon_reinf = "reinf_stone"
 	icon_colour = "#007a00"
 	weight = 22
-	stack_origin_tech = list(TECH_MATERIAL = 5)
+	stack_origin_tech = list(TECH_MATERIAL = 3)
 	chem_products = list(
 				/datum/reagent/uranium = 20
 				)
@@ -29,7 +29,7 @@
 	weight = 25
 	hardness = MATERIAL_FLEXIBLE + 5
 	integrity = 100
-	stack_origin_tech = list(TECH_MATERIAL = 4)
+	stack_origin_tech = list(TECH_MATERIAL = 3)
 	sheet_icon_base = "ingot"
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
@@ -119,6 +119,7 @@
 	wall_name = "bulkhead"
 	stack_type = /obj/item/stack/material/steel
 	brute_armor = 7
+	hardness = 100
 	wall_icon_base = "solid"
 	wall_icon_reinf = "reinf_over"
 	icon_colour = COLOR_GUNMETAL
@@ -218,7 +219,9 @@
 	value = 30
 
 /material/plasteel/ocp
-	name = MATERIAL_OSMIUM_CARBIDE_PLASTEEL
+	name = MATERIAL_CERAMITE_PLASTEEL
+	hardness = 150
+	lore_text = "A fusion of ceramite's heat resistance and plasteel's unmatched durability, this advanced composite forms the backbone of impenetrable armor and fortifications across the Imperium."
 	stack_type = /obj/item/stack/material/ocp
 	integrity = 200
 	melting_point = 12000
@@ -230,24 +233,25 @@
 	burn_armor = 20
 	weight = 27
 	stack_origin_tech = list(TECH_MATERIAL = 3)
-	alloy_materials = list(MATERIAL_PLASTEEL = 7500, MATERIAL_OSMIUM = 3750)
+	alloy_materials = list(MATERIAL_PLASTEEL = 7500, MATERIAL_CERAMITE = 3750)
 	construction_difficulty = MATERIAL_VERY_HARD_DIY
 	alloy_product = TRUE
 	sale_price = 3
 
 /material/osmium
-	name = MATERIAL_OSMIUM
-	lore_text = "An extremely hard form of platinum."
+	name = MATERIAL_CERAMITE
+	lore_text = "A near-indestructible, heat-resistant composite, ceramite is the material of choice for power armor and starship hulls, capable of withstanding the harshest conditions in battle.."
 	wall_name = "bulkhead"
+	hardness = 120
 	stack_type = /obj/item/stack/material/osmium
 	icon_colour = "#9999ff"
-	stack_origin_tech = list(TECH_MATERIAL = 5)
+	stack_origin_tech = list(TECH_MATERIAL = 3)
 	sheet_icon_base = "ingot"
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	construction_difficulty = MATERIAL_VERY_HARD_DIY
 	sale_price = 3
-	ore_smelts_to = MATERIAL_OSMIUM
+	ore_smelts_to = MATERIAL_CERAMITE
 	value = 30
 	weight = 29
 
@@ -258,7 +262,7 @@
 	wall_name = "bulkhead"
 	stack_type = /obj/item/stack/material/tritium
 	icon_colour = "#777777"
-	stack_origin_tech = list(TECH_MATERIAL = 5)
+	stack_origin_tech = list(TECH_MATERIAL = 3)
 	sheet_icon_base = "puck"
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
@@ -289,7 +293,7 @@
 	sheet_icon_base = "sheet-mythril"
 	sheet_has_plural_icon = FALSE
 	icon_colour = "#e6c5de"
-	stack_origin_tech = list(TECH_MATERIAL = 6, TECH_POWER = 6, TECH_MAGNET = 5)
+	stack_origin_tech = list(TECH_MATERIAL = 3, TECH_POWER = 3, TECH_MAGNET = 2)
 	is_fusion_fuel = 1
 	chem_products = list(
 				/datum/reagent/hydrazine = 20
@@ -316,7 +320,7 @@
 	sheet_plural_name = "ingots"
 	construction_difficulty = MATERIAL_HARD_DIY
 	ore_smelts_to = MATERIAL_PLATINUM
-	ore_compresses_to = MATERIAL_OSMIUM
+	ore_compresses_to = MATERIAL_CERAMITE
 	ore_result_amount = 5
 	ore_spread_chance = 10
 	ore_name = "raw platinum"
@@ -327,7 +331,7 @@
 
 /material/iron
 	name = MATERIAL_IRON
-	lore_text = "A ubiquitous, very common metal. The epitaph of stars and the primary ingredient in Earth's core."
+	lore_text = "A ubiquitous, very common metal. The epitaph of stars and the primary ingredient in Terra's core."
 	wall_name = "bulkhead"
 	stack_type = /obj/item/stack/material/iron
 	icon_colour = "#5c5454"
@@ -456,7 +460,7 @@
 	weight = 22
 	integrity = 100
 	hardness = MATERIAL_FLEXIBLE + 10
-	stack_origin_tech = list(TECH_MATERIAL = 4)
+	stack_origin_tech = list(TECH_MATERIAL = 3)
 	chem_products = list(
 		/datum/reagent/silver = 8,
 		/datum/reagent/gold = 8,

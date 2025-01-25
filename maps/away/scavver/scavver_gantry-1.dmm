@@ -108,12 +108,6 @@
 "cj" = (
 /obj/machinery/vitals_monitor,
 /obj/floor_decal/corner/blue/mono,
-/obj/machinery/alarm{
-	dir = 8;
-	locked = 0;
-	pixel_x = 25;
-	req_access = list()
-	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/scavver/calypso)
 "cr" = (
@@ -831,7 +825,7 @@
 /turf/simulated/floor/wood/yew,
 /area/scavver/yachtdown)
 "np" = (
-/obj/structure/closet/crate/freezer,
+/obj/structure/closet/crate/warhammer/freezer,
 /obj/item/reagent_containers/ivbag/blood/human/oneg,
 /obj/floor_decal/corner/blue/mono,
 /obj/item/reagent_containers/food/drinks/cans/waterbottle,
@@ -1042,7 +1036,6 @@
 /turf/simulated/floor,
 /area/scavver/yachtdown/thrusters)
 "rb" = (
-/obj/machinery/hologram/holopad/longrange,
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 10
 	},
@@ -1050,6 +1043,7 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/hologram/holopad/longrange/remoteship,
 /turf/simulated/floor/tiled,
 /area/scavver/calypso)
 "rr" = (
@@ -1442,6 +1436,7 @@
 	dir = 8
 	},
 /obj/floor_decal/corner/blue/mono,
+/obj/machinery/hologram/holopad/longrange/voxcaster,
 /turf/simulated/floor/tiled/monotile,
 /area/scavver/calypso)
 "xQ" = (
@@ -1927,12 +1922,6 @@
 /turf/simulated/floor,
 /area/scavver/yachtdown)
 "Gq" = (
-/obj/machinery/alarm{
-	dir = 4;
-	locked = 0;
-	pixel_x = -25;
-	req_access = list()
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -2477,12 +2466,6 @@
 /obj/item/clothing/gloves/insulated,
 /obj/item/device/multitool,
 /obj/floor_decal/corner/blue/mono,
-/obj/machinery/alarm{
-	dir = 4;
-	locked = 0;
-	pixel_x = -25;
-	req_access = list()
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 6
 	},
@@ -2867,7 +2850,7 @@
 	dir = 1;
 	icon_state = "railing0-1"
 	},
-/obj/structure/closet/crate/freezer/rations,
+/obj/structure/closet/crate/warhammer/freezer/rations,
 /turf/simulated/floor,
 /area/scavver/gantry/down1)
 "XN" = (

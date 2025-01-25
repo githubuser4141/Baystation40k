@@ -26,7 +26,7 @@ GLOBAL_LIST_INIT(scarySounds, list(
 GLOBAL_LIST_EMPTY(tagger_locations)
 
 GLOBAL_LIST_INIT(station_prefixes, list("", "Imperium", "Heretical", "Cuban",
-	"Psychic", "Elegant", "Common", "Uncommon", "Rare", "Unique",
+	"Psychic", "Elegant", "Vox", "Uncommon", "Rare", "Unique",
 	"Houseruled", "Religious", "Atheist", "Traditional", "Houseruled",
 	"Mad", "Super", "Ultra", "Secret", "Top Secret", "Deep", "Death",
 	"Zybourne", "Central", "Main", "Government", "Uoi", "Fat",
@@ -41,7 +41,7 @@ GLOBAL_LIST_INIT(station_names, list("", "Stanford", "Dorf", "Alium",
 	"Pete", "Control", "Nettle", "Aspie", "Class", "Crab", "Fist",
 	"Corrogated","Skeleton","Race", "Fatguy", "Gentleman", "Capitalist",
 	"Communist", "Bear", "Beard", "Derp", "Space", "Spess", "Star", "Moon",
-	"System", "Mining", "Neckbeard", "Research", "Supply", "Military",
+	"System", "Mining", "Neckbeard", "Research", "Supply", "Militarum",
 	"Orbital", "Battle", "Science", "Asteroid", "Home", "Production",
 	"Transport", "Delivery", "Extraplanetary", "Orbital", "Correctional",
 	"Robot", "Hats", "Pizza"))
@@ -65,7 +65,7 @@ GLOBAL_LIST_INIT(greek_letters, list("Alpha", "Beta", "Gamma", "Delta",
 GLOBAL_LIST_INIT(phonetic_alphabet, list("Alpha", "Bravo", "Charlie",
 	"Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliet",
 	"Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec",
-	"Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray",
+	"Romeo", "Sierra", "Tango", "Uniform", "Victor", "Amasec", "X-ray",
 	"Yankee", "Zulu"))
 
 GLOBAL_LIST_INIT(numbers_as_words, list("One", "Two", "Three", "Four",

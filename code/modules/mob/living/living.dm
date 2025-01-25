@@ -215,7 +215,7 @@ default behaviour is:
 		health = 100
 		set_stat(CONSCIOUS)
 	else
-		health = maxHealth - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - getHalLoss()
+		health = maxhealth - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - getHalLoss()
 
 
 //This proc is used for mobs which are affected by pressure to calculate the amount of pressure that actually
@@ -250,12 +250,12 @@ default behaviour is:
 	return btemperature
 
 /mob/living/proc/getBruteLoss()
-	return maxHealth - health
+	return maxhealth - health
 
 /mob/living/proc/adjustBruteLoss(amount)
 	if (status_flags & GODMODE)
 		return
-	health = clamp(health - amount, 0, maxHealth)
+	health = clamp(health - amount, 0, maxhealth)
 
 /mob/living/proc/getOxyLoss()
 	return 0
@@ -312,10 +312,10 @@ default behaviour is:
 	return
 
 /mob/living/proc/getMaxHealth()
-	return maxHealth
+	return maxhealth
 
 /mob/living/proc/setMaxHealth(newMaxHealth)
-	maxHealth = newMaxHealth
+	maxhealth = newMaxHealth
 
 // ++++ROCKDTBEN++++ MOB PROCS //END
 
@@ -776,8 +776,8 @@ default behaviour is:
 		to_chat(possessor, SPAN_WARNING("\The [src] already has a player."))
 		return 0
 
-	var/ask = alert(possessor, "Are you sure you want to possess [src.name]?", "Possess mob?", "Yes", "No")
-	if (ask != "Yes")
+	var/ask = alert(possessor, "Are you sure you want to possess [src.name]?", "Possess mob?", "Compliance", "No")
+	if (ask != "Compliance")
 		return 0
 
 	message_admins(SPAN_CLASS("adminnotice", "[key_name_admin(possessor)] has taken control of \the [src]."))

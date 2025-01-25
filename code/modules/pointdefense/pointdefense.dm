@@ -1,7 +1,7 @@
 //Point defense
 /obj/machinery/pointdefense_control
 	name = "fire assist mainframe"
-	desc = "A specialized computer designed to synchronize a variety of weapon systems and a vessel's astronav data."
+	desc = "A specialized cogitator designed to synchronize a variety of weapon systems and a vessel's astronav data."
 	icon = 'icons/obj/machines/artillery.dmi'
 	icon_state = "control"
 	var/ui_template = "pointdefense_control.tmpl"
@@ -13,7 +13,7 @@
 	var/list/targets = list()
 	atom_flags =  ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
 	machine_name = "fire assist mainframe"
-	machine_desc = "A control computer used to synchronize point defense batteries."
+	machine_desc = "A control cogitator used to synchronize point defense batteries."
 
 /obj/machinery/pointdefense_control/Initialize()
 	. = ..()
@@ -113,8 +113,8 @@
 	appearance_flags = DEFAULT_APPEARANCE_FLAGS | PIXEL_SCALE
 	machine_name = "point defense battery"
 	machine_desc = "A mounted turret that locks onto and destroys incoming meteors. Aim away from vessel."
-	var/active = TRUE
-	var/charge_cooldown = 1 SECOND  //time between it can fire at different targets
+	var/active = FALSE
+	var/charge_cooldown = 2 SECOND  //time between it can fire at different targets
 	var/last_shot = 0
 	var/kill_range = 18
 	var/rotation_speed = 0.25 SECONDS  //How quickly we turn to face threats

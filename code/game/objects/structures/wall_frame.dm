@@ -12,7 +12,7 @@
 	density = TRUE
 	throwpass = 1
 	layer = TABLE_LAYER
-	health_max = 100
+	health_max = 800
 
 	var/paint_color
 	var/stripe_color
@@ -195,7 +195,7 @@
 	material = MATERIAL_TITANIUM
 
 /obj/structure/wall_frame/ocp
-	material = MATERIAL_OSMIUM_CARBIDE_PLASTEEL
+	material = MATERIAL_CERAMITE_PLASTEEL
 
 /obj/structure/wall_frame/hull
 	paint_color = COLOR_SOL

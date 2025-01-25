@@ -36,8 +36,8 @@
 	item_state = "sl_suit"
 	gender_icons = 1
 
-/obj/item/clothing/under/waiter
-	name = "waiter's outfit"
+/obj/item/clothing/under/service
+	name = "magister's outfit"
 	desc = "It's a very smart uniform with a special pocket for tip."
 	icon_state = "waiter"
 	item_state = "waiter"
@@ -76,7 +76,7 @@
 	displays_id = 0
 
 /obj/item/clothing/under/rank/centcom_officer
-	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Admiral.\"."
+	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Lord Captain.\"."
 	name = "officer's dress uniform"
 	icon_state = "officer"
 	item_state = "lawyer_black"
@@ -84,7 +84,7 @@
 	displays_id = 0
 
 /obj/item/clothing/under/rank/centcom_captain
-	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Admiral-Executive.\"."
+	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Lord Captain-Executive.\"."
 	name = "officer's dress uniform"
 	icon_state = "centcom"
 	item_state = "lawyer_black"
@@ -98,7 +98,7 @@
 	item_state = "bl_suit"
 	worn_state = "ert_uniform"
 	armor = list(
-		melee = ARMOR_MELEE_SMALL
+		melee = ARMOR_MELEE_PRIMAL
 		)
 	siemens_coefficient = 0.9
 
@@ -125,9 +125,9 @@
 	permeability_coefficient = 0.01
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	armor = list(
-		melee = ARMOR_MELEE_SHIELDED,
-		bullet = ARMOR_BALLISTIC_HEAVY,
-		laser = ARMOR_LASER_HEAVY,
+		melee = ARMOR_MELEE_ASTARTES,
+		bullet = ARMOR_BALLISTIC_ASTARTES,
+		laser = ARMOR_LASER_ASTARTES,
 		energy = ARMOR_ENERGY_SHIELDED,
 		bomb = ARMOR_BOMB_SHIELDED,
 		bio = ARMOR_BIO_SHIELDED,
@@ -549,16 +549,16 @@
 	body_parts_covered = 0
 
 /obj/item/clothing/under/pcrc
-	name = "\improper PCRC uniform"
-	desc = "A uniform belonging to Proxima Centauri Risk Control, a private security firm."
+	name = "\improper imperial uniform"
+	desc = "A uniform belonging to Necromunda, a private security firm."
 	icon_state = "pcrc"
 	item_state = "jensensuit"
 	worn_state = "pcrc"
 	gender_icons = 1
 
 /obj/item/clothing/under/pcrcsuit
-	name = "\improper PCRC suit"
-	desc = "A suit belonging to Proxima Centauri Risk Control, a private security firm. This one looks more formal than its utility counterpart."
+	name = "\improper imperial suit"
+	desc = "A suit belonging to Necromunda, a private security firm. This one looks more formal than its utility counterpart."
 	icon_state = "pcrcsuit"
 	item_state = "jensensuit"
 	worn_state = "pcrcsuit"
@@ -571,8 +571,8 @@
 	worn_state = "grayson"
 
 /obj/item/clothing/under/wardt
-	name = "\improper Ward-Takahashi jumpsuit"
-	desc = "A jumpsuit belonging to Ward-Takahashi, a megacorp in the consumer goods and research market."
+	name = "\improper Vostroya jumpsuit"
+	desc = "A jumpsuit belonging to Vostroya, a megacorp in the consumer goods and research market."
 	icon_state = "wardt"
 	worn_state = "wardt"
 	gender_icons = 1
@@ -605,13 +605,13 @@
 // Replace this with actual uniform when someone wants to sprite one
 /obj/item/clothing/under/confederacy
 	name = "\improper Confederate uniform"
-	desc = "A military uniform belonging to the Gilgamesh Colonial Confederation, an independent human government."
+	desc = "A military uniform belonging to the Tau Empire, an independent human government."
 	icon_state = "confed"
 	worn_state = "confed"
 
 /obj/item/clothing/under/saare
-	name = "\improper SAARE uniform"
-	desc = "A uniform belonging to Strategic Assault and Asset Retention Enterprises, a minor private military corporation."
+	name = "\improper imperial uniform"
+	desc = "A uniform belonging to Vessorine Clans, a minor private military corporation."
 	icon_state = "saare"
 	worn_state = "saare"
 	gender_icons = 1
@@ -637,7 +637,7 @@
 
 /obj/item/clothing/under/hephaestus
 	name = "\improper Hephaestus jumpsuit"
-	desc = "A jumpsuit belonging to Hephaestus Industries, a megacorp best known for its arms production."
+	desc = "A jumpsuit belonging to Vostroyan, a megacorp best known for its arms production."
 	icon_state = "heph"
 	worn_state = "heph"
 	gender_icons = 1
@@ -697,8 +697,8 @@
 	gender_icons = 1
 	siemens_coefficient = 0.8
 	armor = list(
-		energy = ARMOR_ENERGY_SMALL,
-		rad = ARMOR_RAD_MINOR
+		energy = 5,
+		rad = 5
 		)
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 

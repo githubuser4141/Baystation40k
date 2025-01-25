@@ -5,7 +5,7 @@
 	icon_state = "energystun100"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	max_shots = 10
-	fire_delay = 10 // To balance for the fact that it is a pistol and can be used one-handed without penalty
+	fire_delay = 4.5 // To balance for the fact that it is a pistol and can be used one-handed without penalty
 
 	projectile_type = /obj/item/projectile/beam/stun
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
@@ -18,19 +18,19 @@
 		)
 
 /obj/item/gun/energy/gun/skrell
-	name = "skrellian handgun"
-	desc = "A common Skrellian side-arm, the Xuxquu*'Voom-5, or XV-5, is a more traditional energy weapon, tuned to dispense beams in three different wavelengths."
+	name = "Tau handgun"
+	desc = "A common Tau side-arm, the Xuxquu*'Voom-5, or XV-5, is a more traditional energy weapon, tuned to dispense beams in three different wavelengths."
 	w_class = ITEM_SIZE_NORMAL
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 	icon = 'icons/obj/guns/skrell_pistol.dmi'
 	icon_state = "skrell_pistol_stun100"
 	max_shots = 10
-	fire_delay = 6
+	fire_delay = 4.5
 	one_hand_penalty = 1
 	self_recharge = 1
 
 	projectile_type = /obj/item/projectile/beam/stun
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_POWER = 3)
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 3)
 	modifystate = "skrell_pistol_stun"
 
 	firemodes = list(
@@ -143,5 +143,5 @@
 	// Safety
 	if (ismob(loc))
 		var/mob/M = loc
-		if (M.skill_check(SKILL_WEAPONS, SKILL_BASIC))
+		if (M.skill_check(SKILL_GUNS, SKILL_BASIC))
 			AddOverlays(image('icons/obj/guns/gui.dmi', "safety[safety()]"))

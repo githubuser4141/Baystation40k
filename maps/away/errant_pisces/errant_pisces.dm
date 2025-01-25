@@ -5,7 +5,7 @@
 	desc = "Sensors detect civilian vessel with unusual signs of life aboard."
 	color = "#bd6100"
 	max_speed = 1/(3 SECONDS)
-	burn_delay = 15 SECONDS
+	burn_delay = 5 SECONDS
 	fore_dir = SOUTH
 
 /datum/map_template/ruin/away_site/errant_pisces
@@ -168,7 +168,7 @@
 
 /obj/item/clothing/under/carp
 	name = "space carp suit"
-	desc = "A suit in a shape of a space carp. Usually worn by corporate interns who are sent to entertain children during HQ excursions."
+	desc = "A suit in a shape of a space carp. Usually worn by imperial interns who are sent to entertain children during HQ excursions."
 	icon_state = "carp_suit"
 	icon = 'maps/away/errant_pisces/errant_pisces_sprites.dmi'
 	item_icons = list(slot_w_uniform_str = 'maps/away/errant_pisces/errant_pisces_sprites.dmi')
@@ -176,7 +176,7 @@
 /obj/landmark/corpse/carp_fisher
 	name = "carp fisher"
 	corpse_outfits = list(/singleton/hierarchy/outfit/corpse/carp_fisher)
-	species = list(SPECIES_HUMAN = 70, SPECIES_IPC = 20, SPECIES_UNATHI = 10)
+	species = list(SPECIES_HUMAN = 70, SPECIES_IPC = 20, SPECIES_KROOT = 10)
 
 /singleton/hierarchy/outfit/corpse/carp_fisher
 	name = "Dead carp fisher"

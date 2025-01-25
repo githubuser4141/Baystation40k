@@ -10,7 +10,7 @@
 	anchored = FALSE
 	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CHECKS_BORDER | ATOM_FLAG_CLIMBABLE | ATOM_FLAG_CAN_BE_PAINTED
 	obj_flags = OBJ_FLAG_ROTATABLE
-	health_max = 70
+	health_max = 300
 
 	var/broken =    FALSE
 	var/neighbor_status = 0
@@ -21,7 +21,23 @@
 /obj/structure/railing/mapped
 	material = MATERIAL_ALUMINIUM
 	anchored = TRUE
+	health_max = 1100
 	init_color = COLOR_GUNMETAL
+
+/obj/structure/railing/mapped/wood
+	icon = 'icons/map_project/roguefloor.dmi'
+	icon_state = "borderfall"
+	health_max = 1500
+	material = MATERIAL_WOOD
+	anchored = TRUE
+	layer = 2.9
+	init_color = "grey"
+	color = "grey"
+
+/obj/structure/railing/mapped/wood/on_update_icon()
+	ClearOverlays()
+	icon_state = "borderfall"
+
 
 
 /obj/structure/railing/mapped/no_density
@@ -284,7 +300,7 @@
 			SPAN_NOTICE("\The [user] starts dismantling \the [src] with \a [tool]."),
 			SPAN_NOTICE("You start dismantling \the [src] with \the [tool].")
 		)
-		if (!user.do_skilled((tool.toolspeed * 2) SECONDS, SKILL_CONSTRUCTION, src, do_flags = DO_REPAIR_CONSTRUCT) || !user.use_sanity_check(src, tool))
+		if (!user.do_skilled(10 SECONDS, SKILL_CONSTRUCTION, src, do_flags = DO_REPAIR_CONSTRUCT) || !user.use_sanity_check(src, tool))
 			return TRUE
 		if (anchored)
 			USE_FEEDBACK_FAILURE("\The [src]'s state has changed.")
@@ -292,11 +308,17 @@
 		playsound(src, 'sound/items/Ratchet.ogg', 50, TRUE)
 		var/obj/new_sheet = material.place_sheet(loc, 2)
 		transfer_fingerprints_to(new_sheet)
-		user.visible_message(
-			SPAN_NOTICE("\The [user] dismantles \the [src] with \a [tool]."),
-			SPAN_NOTICE("You dismantle \the [src] with \the [tool].")
-		)
-		qdel_self()
+		if(prob(50))
+			user.visible_message(
+				SPAN_NOTICE("\The [user] dismantles \the [src] with \a [tool]."),
+				SPAN_NOTICE("You dismantle \the [src] with \the [tool].")
+			)
+			qdel_self()
+		else
+			user.visible_message(
+			SPAN_NOTICE("\The [user] fails to dismantle \the [src] with \a [tool]. Try again bragg."),
+			SPAN_NOTICE("You fail to dismantle \the [src] with \the [tool]. Try again bragg.")
+			)
 		return TRUE
 
 	// Screwdriver - Toggle Anchored
@@ -362,7 +384,7 @@
 	var/mob/living/L = AM
 	if (!istype(L))
 		return
-	var/chance = TT.thrower.skill_check(SKILL_HAULING, SKILL_EXPERIENCED) ? 100 : 50
+	var/chance = TT.thrower.skill_check(SKILL_VIGOR, SKILL_EXPERIENCED) ? 100 : 50
 	if (prob(chance))
 		slam_into(L)
 

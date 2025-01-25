@@ -6,7 +6,7 @@
 	src.brainmob = new(src)
 	src.brainmob.set_stat(CONSCIOUS)
 	src.brainmob.add_language("Robot Talk")
-	src.brainmob.add_language("Encoded Audio Language")
+	src.brainmob.add_language("Binaric Speech")
 
 	src.brainmob.container = src
 	src.brainmob.silent = 0
@@ -35,7 +35,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	origin_tech = list(TECH_BIO = 3)
 
-	req_access = list(access_robotics)
+	req_access = list(access_mechanicus)
 
 	//Revised. Brainmob is now contained directly within object of transfer. MMI in this case.
 

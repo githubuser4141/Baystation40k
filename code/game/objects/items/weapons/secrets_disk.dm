@@ -11,7 +11,7 @@
 
 /obj/item/disk/secret_project/science
 	desc = "A special disk for storing massive amounts of data. It is marked as classified, and has an ID card slot on top. \
-	This one has a lengthy legal label on it denoting it the private, copyrighted property of the Expeditionary Corps Organisation."
+	This one has a lengthy legal label on it denoting it the private, copyrighted property of the Explorator Organisation."
 	req_access = access_rd
 
 /obj/item/disk/secret_project/Initialize()
@@ -26,7 +26,7 @@
 	"a bluespace gateway", "a teleporter", "a huge mining drill", "a strange spacecraft", "a space station",\
 	"a sleek-looking fighter spacecraft", "a ballistic rifle", "an energy sword", "an inanimate carbon rod")
 	subject += " " + pick("that is extremely powerful", "which is highly efficient", "which is incredibly compact",\
-	"that runs off of phoron", "that runs off of hydrogen gas", "created by the Skrell", "that just looks really cool")
+	"that runs off of phoron", "that runs off of hydrogen gas", "created by ancient xenos", "that just looks really cool")
 
 /obj/item/disk/secret_project/examine(mob/user)
 	. = ..()

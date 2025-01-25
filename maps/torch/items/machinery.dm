@@ -4,7 +4,7 @@
 	req_access = list(access_medical)
 
 /obj/machinery/drone_fabricator/torch
-	fabricator_tag = "SEV Torch Maintenance"
+	fabricator_tag = "Dauntless Maintenance"
 
 /obj/machinery/drone_fabricator/torch/adv
 	name = "advanced drone fabricator"
@@ -37,18 +37,17 @@
 /obj/machinery/telecomms/server/presets/exploration
 	id = "Exploration Server"
 	freq_listening = list(EXP_FREQ)
-	channel_tags = list(list(EXP_FREQ, "Exploration", COMMS_COLOR_EXPLORER))
+	channel_tags = list(list(EXP_FREQ, "Explorator", COMMS_COLOR_EXPLORER))
 	autolinkers = list("exploration")
 
 // Suit cyclers and storage
 /obj/machinery/suit_storage_unit/explorer
-	name = "exploration voidsuit storage unit"
-	suit = /obj/item/clothing/suit/space/void/exploration
-	helmet = /obj/item/clothing/head/helmet/space/void/exploration
-	boots = /obj/item/clothing/shoes/magboots
+	name = "hazard suit storage unit"
+	suit = /obj/item/clothing/suit/armor/grim/storage/hooded/mechanicus/bondsman
+	helmet = null
+	boots = /obj/item/clothing/shoes/jackboots
 	tank = /obj/item/tank/oxygen
-	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_explorer)
+	mask = /obj/item/clothing/mask/gas/explorer
 	islocked = 1
 
 /obj/machinery/suit_storage_unit/pilot
@@ -58,7 +57,7 @@
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_pilot)
+	req_access = list(access_dauntless)
 	islocked = 1
 
 /obj/machinery/suit_storage_unit/command
@@ -68,7 +67,7 @@
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_bridge, access_keycard_auth)
+	req_access = list(access_bridge)
 	islocked = 1
 
 /obj/machinery/suit_cycler/torch
@@ -86,21 +85,20 @@
 		/singleton/item_modifier/space_suit/science,
 		/singleton/item_modifier/space_suit/security/alt
 	)
-	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+	species = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT)
 
 /obj/machinery/suit_cycler/exploration
 	name = "exploration suit cycler"
-	model_text = "Exploration"
-	req_access = list(access_explorer)
+	model_text = "Explorator"
 	available_modifications = list(/singleton/item_modifier/space_suit/sol/explorer)
-	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+	species = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT)
 
 /obj/machinery/suit_cycler/command
 	name = "command suit cycler"
 	model_text = "Command"
 	req_access = list(access_bridge)
 	available_modifications = list(/singleton/item_modifier/space_suit/sol/command)
-	species = list(SPECIES_HUMAN,SPECIES_SKRELL)
+	species = list(SPECIES_HUMAN,SPECIES_TAU)
 
 /obj/machinery/suit_cycler/engineering/alt
 	available_modifications = list(

@@ -10,7 +10,7 @@
 	response_disarm = "shoves"
 	response_harm = "hits"
 	speed = 4
-	maxHealth = 100
+	maxhealth = 100
 	health = 100
 	harm_intent_damage = 5
 	can_escape = TRUE
@@ -32,7 +32,7 @@
 	ranged = 1
 	projectiletype = /obj/item/projectile/bullet
 	projectilesound = 'sound/weapons/gunshot/gunshot2.ogg'
-	casingtype = /obj/item/ammo_casing/pistol/magnum
+	casingtype = /obj/item/ammo_casing/magnum
 
 
 /mob/living/simple_animal/hostile/russian/death(gibbed, deathmessage, show_dead_message)

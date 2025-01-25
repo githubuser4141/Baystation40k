@@ -320,14 +320,7 @@
 
 	var/message = "\The [src] has thrown \the [item]."
 	var/skill_mod = 0.2
-	if(!skill_check(SKILL_HAULING, min(round(itemsize - ITEM_SIZE_HUGE) + 2, SKILL_MAX)))
-		if(prob(30))
-			Weaken(2)
-			message = "\The [src] barely manages to throw \the [item], and is knocked off-balance!"
-	else
-		skill_mod += 0.2
-
-	skill_mod += 0.8 * (get_skill_value(SKILL_HAULING) - SKILL_MIN)/(SKILL_MAX - SKILL_MIN)
+	skill_mod += 0.8 * (get_skill_value(SKILL_VIGOR) - SKILL_MIN)/(SKILL_MAX - SKILL_MIN)
 	throw_range *= skill_mod
 
 	//actually throw it!
@@ -379,7 +372,7 @@
 	set name = "Sleep"
 	set category = "IC"
 
-	if(alert("Are you sure you want to [player_triggered_sleeping ? "wake up?" : "sleep for a while? Use 'sleep' again to wake up"]", "Sleep", "No", "Yes") == "Yes")
+	if(alert("Are you sure you want to [player_triggered_sleeping ? "wake up?" : "sleep for a while? Use 'sleep' again to wake up"]", "Sleep", "No", "Compliance") == "Compliance")
 		player_triggered_sleeping = !player_triggered_sleeping
 
 /mob/living/carbon/Bump(atom/movable/AM, yes)

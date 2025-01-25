@@ -4,7 +4,7 @@ GLOBAL_DATUM_INIT(renegades, /datum/antagonist/renegade, new)
 	role_text = "Renegade"
 	role_text_plural = "Renegades"
 	blacklisted_jobs = list(/datum/job/ai, /datum/job/submap)
-	restricted_jobs = list(/datum/job/officer, /datum/job/warden, /datum/job/captain, /datum/job/hop, /datum/job/hos, /datum/job/chief_engineer, /datum/job/rd, /datum/job/cmo)
+	restricted_jobs = list(/datum/job/enforcer, /datum/job/enforcer_sergeant, /datum/job/rogue_trader, /datum/job/seneschal, /datum/job/guard_captain, /datum/job/magos_explorator, /datum/job/rd, /datum/job/magos_biologis)
 	welcome_text = "Something's going to go wrong today, you can just feel it. You're paranoid, you've got a gun, and you're going to survive."
 	antag_text = {"\
 	<p>You are a <b>minor</b> antagonist! Make sure <b>you</b> survive the round at any cost.</p> \
@@ -24,25 +24,25 @@ GLOBAL_DATUM_INIT(renegades, /datum/antagonist/renegade, new)
 	skill_setter = /datum/antag_skill_setter/station/renegade
 
 	var/list/spawn_guns = list(
-		/obj/item/gun/energy/retro,
-		/obj/item/gun/energy/gun,
-		/obj/item/gun/energy/crossbow,
-		/obj/item/gun/energy/pulse_rifle/pistol,
-		/obj/item/gun/projectile/automatic,
-		/obj/item/gun/projectile/automatic/machine_pistol,
-		/obj/item/gun/projectile/automatic/sec_smg,
-		/obj/item/gun/projectile/pistol/magnum_pistol,
-		/obj/item/gun/projectile/pistol/sec/lethal,
+		/obj/item/gun/energy/lasgun/accatran,
+		/obj/item/gun/energy/lasgun/accatran,
+		/obj/item/gun/energy/lasgun/accatran,
+		/obj/item/gun/energy/plasma,
+		/obj/item/gun/projectile/automatic/autogun,
+		/obj/item/gun/projectile/automatic/autogun,
+		/obj/item/gun/energy/tau/pulserifle,
+		/obj/item/gun/projectile/pistol/slug,
+		/obj/item/gun/projectile/pistol/slug,
 		/obj/item/gun/projectile/pistol/holdout,
-		/obj/item/gun/projectile/revolver,
-		/obj/item/gun/projectile/revolver/medium,
+		/obj/item/gun/projectile/revolver/imperial,
+		/obj/item/gun/projectile/revolver/imperial,
 		/obj/item/gun/projectile/shotgun/doublebarrel/sawn,
-		/obj/item/gun/projectile/pistol/magnum_pistol,
-		/obj/item/gun/projectile/revolver/holdout,
-		/obj/item/gun/projectile/pistol/throwback,
-		/obj/item/gun/energy/xray/pistol,
-		/obj/item/gun/energy/toxgun,
-		/obj/item/gun/energy/incendiary_laser,
+		/obj/item/gun/projectile/pistol/slug,
+		/obj/item/gun/projectile/revolver/imperial/holdout,
+		/obj/item/gun/projectile/pistol/slug/old,
+		/obj/item/gun/projectile/automatic/radcarbine/radpistol,
+		/obj/item/gun/energy/plasma/pistol/archeotech,
+		/obj/item/gun/energy/lasgun/hotshot/volkite,
 		/obj/item/gun/projectile/pistol/magnum_pistol
 		)
 

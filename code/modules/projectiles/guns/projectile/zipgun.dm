@@ -14,7 +14,6 @@
 	var/static/list/ammo_types = list(
 		/obj/item/ammo_casing/pistol,
 		/obj/item/ammo_casing/shotgun,
-		/obj/item/ammo_casing/shotgun,
 		/obj/item/ammo_casing/shotgun/pellet,
 		/obj/item/ammo_casing/shotgun/pellet,
 		/obj/item/ammo_casing/shotgun/pellet,
@@ -34,9 +33,9 @@
 	desc += " Uses [caliber] rounds."
 	if(caliber == CALIBER_SHOTGUN)
 		fire_sound = 'sound/weapons/gunshot/shotgun.ogg'
-	if(caliber == CALIBER_PISTOL)
+	if(caliber == CALIBER_SLUG)
 		fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg'
-	if(caliber == CALIBER_RIFLE || caliber == CALIBER_RIFLE_MILITARY)
+	if(caliber == CALIBER_AUTOGUN || caliber == CALIBER_AUTOGUN)
 		fire_sound = 'sound/weapons/gunshot/gunshot3.ogg'
 	. = ..()
 

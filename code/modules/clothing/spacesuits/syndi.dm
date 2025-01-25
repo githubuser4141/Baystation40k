@@ -1,17 +1,17 @@
-//Regular syndicate space suit
+//Regular heretic space suit
 /obj/item/clothing/head/helmet/space/syndicate
 	name = "red space helmet"
 	icon_state = "syndicate"
 	item_state = "syndicate"
 	desc = "A crimson helmet sporting clean lines and durable plating. Engineered to look menacing."
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SMALL,
-		rad = ARMOR_RAD_MINOR
+		rad = ARMOR_RAD_THIRTY
 		)
 	siemens_coefficient = 0.3
 
@@ -28,7 +28,8 @@
 		/obj/item/gun,
 		/obj/item/ammo_magazine,
 		/obj/item/ammo_casing,
-		/obj/item/melee/baton,
+		/obj/item/material/twohanded/ravenor,
+		/obj/item/melee,
 		/obj/item/melee/energy/sword,
 		/obj/item/handcuffs,
 		/obj/item/tank/oxygen_emergency,
@@ -36,18 +37,18 @@
 		/obj/item/tank/nitrogen_emergency
 	)
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SMALL,
-		rad = ARMOR_RAD_MINOR
+		rad = ARMOR_RAD_THIRTY
 		)
 	siemens_coefficient = 0.3
 
 
-//Black syndicate space suit
+//Black heretic space suit
 /obj/item/clothing/head/helmet/space/syndicate/black
 	name = "black space helmet"
 	desc = "A black helmet sporting clean lines and durable plating."

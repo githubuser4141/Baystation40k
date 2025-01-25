@@ -3,8 +3,8 @@ GLOBAL_LIST_EMPTY(vox_artifact_spawners)
 
 /datum/antagonist/vox
 	id = MODE_VOXRAIDER
-	role_text = "Vox Raider"
-	role_text_plural = "Vox Raiders"
+	role_text = "Xenos Raider"
+	role_text_plural = "Xenos Raiders"
 	landmark_id = "Vox-Spawn"
 	welcome_text = "Scrap has been hard to find lately, and the Shroud requires replacement parts. Do not disappoint your kin."
 	flags = ANTAG_VOTABLE | ANTAG_OVERRIDE_JOB | ANTAG_OVERRIDE_MOB | ANTAG_CLEAR_EQUIPMENT | ANTAG_CHOOSE_NAME | ANTAG_SET_APPEARANCE
@@ -256,7 +256,7 @@ GLOBAL_LIST_EMPTY(vox_artifact_spawners)
 	qdel(src)
 
 /obj/item/bluecrystal
-	name = "Bluespace crystal"
+	name = "Warp crystal"
 	desc = "Unusual looking crystal with eerie deep blue shimmering, holding it in your hand makes you feel like if your hand was sinking in to it."
 	icon = 'icons/obj/stock_parts.dmi'
 	icon_state = "ansible_crystal"
@@ -265,7 +265,7 @@ GLOBAL_LIST_EMPTY(vox_artifact_spawners)
 
 /obj/structure/voxanalyzer
 	name = "oddity analyzer"
-	desc = "An old, dusty machine meant to analyze various bluespace anomalies and send research data directly to SCGEC Observatory."
+	desc = "An old, dusty machine meant to analyze various bluespace anomalies and send research data directly to ImperialEC Observatory."
 	icon = 'icons/obj/machines/research/xenoarcheology_scanner.dmi'
 	icon_state = "scanner"
 	anchored = FALSE
@@ -282,7 +282,7 @@ GLOBAL_LIST_EMPTY(vox_artifact_spawners)
 		"Iatric monitor - 1" = list(1, /obj/item/organ/internal/augment/active/iatric_monitor),
 		"Internal Air System - 1" = list(1, /obj/item/organ/internal/augment/active/internal_air_system),
 		"Adaptive Binoculars - 1" = list(1, /obj/item/organ/internal/augment/active/item/adaptive_binoculars),
-		"Advanced Armored Vest - 4" = list(4, /obj/item/clothing/suit/armor/pcarrier/merc, /obj/item/clothing/head/helmet/merc),
+		"Advanced Armored Vest - 4" = list(4, /obj/item/clothing/suit/armor/grim/merc, /obj/item/clothing/head/helmet/merc),
 		"Nerve Dampeners - 6" = list(6, /obj/item/organ/internal/augment/active/nerve_dampeners),
 		"Hazard Hardsuit - 12" = list(12, /obj/item/rig/hazard),
 		)

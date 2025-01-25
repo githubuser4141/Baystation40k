@@ -14,18 +14,18 @@
 	icon_state = "cti-grad"
 
 /obj/item/clothing/ring/mariner
-	name = "\improper Mariner University ring"
-	desc = "A ring commemorating graduation from Mariner University."
+	name = "\improper Schola Progenium ring"
+	desc = "A ring commemorating graduation from Schola Progenium."
 	icon_state = "mariner-grad"
 
 /obj/item/clothing/ring/fleet
-	name = "\improper Fleet ring"
-	desc = "A ring commemorating honorable service with the Sol Government's Fleet."
+	name = "\improper Imperial Navy ring"
+	desc = "A ring commemorating honorable service with the Imperium's Fleet."
 	icon_state = "fleet"
 
 /obj/item/clothing/ring/ec
-	name = "\improper Expeditionary Corps ring"
-	desc = "A ring commemorating honorable service with the Sol Government's Expeditionary Corps."
+	name = "\improper Dauntless ring"
+	desc = "A ring commemorating honorable service with the Imperium's Dauntless."
 	icon_state = "ec"
 
 /////////////////////////////////////////

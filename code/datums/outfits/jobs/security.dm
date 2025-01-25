@@ -6,10 +6,6 @@
 	shoes = /obj/item/clothing/shoes/jackboots
 	backpack_contents = list(/obj/item/handcuffs = 1)
 
-/singleton/hierarchy/outfit/job/security/New()
-	..()
-	BACKPACK_OVERRIDE_SECURITY
-
 /singleton/hierarchy/outfit/job/security/hos
 	name = OUTFIT_JOB_NAME("Head of security")
 	l_ear = /obj/item/device/radio/headset/heads/hos
@@ -29,7 +25,7 @@
 	name = OUTFIT_JOB_NAME("Detective")
 	head = /obj/item/clothing/head/det
 	uniform = /obj/item/clothing/under/det
-	suit = /obj/item/clothing/suit/storage/det_trench
+	suit = /obj/item/clothing/suit/armor/grim/storage/det_trench
 	l_pocket = /obj/item/flame/lighter/zippo
 	shoes = /obj/item/clothing/shoes/laceup
 	r_hand = /obj/item/storage/briefcase/crimekit
@@ -37,14 +33,10 @@
 	pda_type = /obj/item/modular_computer/pda/forensics
 	backpack_contents = list(/obj/item/storage/box/evidence = 1)
 
-/singleton/hierarchy/outfit/job/security/detective/New()
-	..()
-	backpack_overrides.Cut()
-
 /singleton/hierarchy/outfit/job/security/detective/forensic
 	name = OUTFIT_JOB_NAME("Forensic technician")
 	head = null
-	suit = /obj/item/clothing/suit/storage/forensics/blue
+	suit = /obj/item/clothing/suit/armor/grim/storage/forensics/blue
 
 /singleton/hierarchy/outfit/job/security/officer
 	name = OUTFIT_JOB_NAME("Security Officer")

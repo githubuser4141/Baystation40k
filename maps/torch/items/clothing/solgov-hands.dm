@@ -5,7 +5,7 @@
 	item_icons = list(slot_gloves_str = 'maps/torch/icons/mob/onmob_hands_solgov.dmi')
 	icon = 'maps/torch/icons/obj/obj_hands_solgov.dmi'
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_hands_solgov_unathi.dmi'
+		SPECIES_KROOT = 'maps/torch/icons/mob/unathi/onmob_hands_solgov_unathi.dmi'
 	)
 
 /obj/item/clothing/gloves/thick/duty/solgov/eng
@@ -39,7 +39,7 @@
 	item_state = "duty_gloves_med"
 
 /obj/item/clothing/gloves/thick/duty/solgov/sec
-	name = "security duty gloves"
+	name = "militarum duty gloves"
 	desc = "These black duty gloves are made from durable synthetic materials, and have a lovely red accent color."
 	icon_state = "duty_gloves_sec"
 	item_state = "duty_gloves_sec"
@@ -58,6 +58,6 @@
 
 /obj/item/clothing/gloves/thick/duty/solgov/fleet
 	name = "fleet duty gloves"
-	desc = "These black duty gloves are made from durable synthetic materials. Standard issue to all ranks in the SCG Fleet."
+	desc = "These black duty gloves are made from durable synthetic materials. Standard issue to all ranks in the Imperial Fleet."
 	icon_state = "fleet_gloves"
 	item_state = "fleet_gloves"

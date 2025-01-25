@@ -244,7 +244,7 @@
 			message_admins("[key_name_admin(usr)] has edited a ban for [pckey]'s duration from [duration] to [value]",1)
 			update_query.Execute()
 		if("unban")
-			if(alert("Unban [pckey]?", "Unban?", "Yes", "No") == "Yes")
+			if(alert("Unban [pckey]?", "Unban?", "Compliance", "No") == "Compliance")
 				DB_ban_unban_by_id(banid)
 				return
 			else
@@ -345,7 +345,7 @@
 		output += "<option value='[j]'>[j]</option>"
 	for(var/j in SSjobs.titles_by_department(MSC))
 		output += "<option value='[j]'>[j]</option>"
-	var/list/bantypes = list("traitor","changeling","operative","revolutionary","cultist","wizard") //For legacy bans.
+	var/list/bantypes = list("traitor","genestealer","operative","revolutionary","cultist","wizard") //For legacy bans.
 	var/list/all_antag_types = GLOB.all_antag_types_
 	for(var/antag_type in all_antag_types) // Grab other bans.
 		var/datum/antagonist/antag = all_antag_types[antag_type]

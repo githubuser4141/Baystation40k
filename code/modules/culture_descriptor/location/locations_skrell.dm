@@ -1,71 +1,41 @@
-/singleton/cultural_info/location/qerrbalak
-	name = HOME_SYSTEM_QERRBALAK
-	description = "Qerr'Balak, in the Qerr'Valis system, is the ancient home of skrellkind. A large, swampy world, it consists of two continents separated by \
-		an archipelago filled ocean. The smaller continent, and original home of the Skrell civilisation, Qorr'gloa, is mostly swampland, with most cities being \
-		built on the coast. It is separated by the Qo'rria Sea from the other, larger continent, Xi'Krri'oal, which is more populous and varied, with snowy \
-		mountains in the south to temperate zones in the inner areas. Composed of hundreds of city-states, Qerr'Balak is still home to a sizable population of Skrell. \
-		While no longer the sole powerhouse of the Skrell civilisation, it is still widely respected among skrellkind as their homeworld, and for its academic and \
-		scientific prowess."
+/singleton/cultural_info/location/vorlaan
+	name = HOME_SYSTEM_VORLAAN
+	description = "Vor'laan, located in the Tau Empire's space, is a vibrant and advanced world known for its deep cultural significance. Its vast landmasses house sprawling cities and lush environments, with the planet playing a key role in Tau expansion. Though no longer a primary center of political power, Vor'laan remains influential in cultural, academic, and technological advancements within the Empire."
 	capital = "None"
-	ruling_body = "None"
+	ruling_body = "Tau Empire"
 	distance = "67 light years"
-	economic_power = 1.5
 
-/singleton/cultural_info/location/talamira
-	name = HOME_SYSTEM_TALAMIRA
-	description = "Talamira, in the Ri'Qora system, is located far on the other side of Skrell space far into what is, to humans, unchartered and unexplored territory.\
-	Established some 500 years ago Talamira is considered a trade and commerce hub in its sector. This is largely a result of its central position between a large \
-	number of established frontier city-states and the rest of Skrell space, The planet itself consists of a single swamp ridden supercontinent that is mildly \
-	warmer than Qerr'Balak, with hundreds of city-states dotting the surface, most of which are heavily invested in manufacturing and logistics, benefiting from the \
-	trade of raw resources with frontier worlds. This rising star of the Skrell territories is considered an economic powerhouse, with its city states wielding influence \
-	across the frontier."
+/singleton/cultural_info/location/talamir
+	name = HOME_SYSTEM_TALAMIR
+	description = "Talamir is a strategically important trade hub in the outer reaches of Tau-controlled space. Known for its bustling economy and resource exchange networks, the planet's city-states are vital in maintaining connections between frontier worlds and the core Tau systems. Its economic influence has steadily grown, making it a rising force within the Tau Empire."
 	capital = "None"
-	ruling_body = "None"
+	ruling_body = "Tau Empire"
 	distance = "300 light years"
-	economic_power = 2.5
 
-/singleton/cultural_info/location/roasora
-	name = HOME_SYSTEM_ROASORA
-	description = "Roa'Sora, in the Qrri'terr system, is a small planet consisting of a single city-state, Tri'sorr. Ro'moxi.Since its founding some 200 years prior \
-	The Skrell of Roa'Sora have been engaged in a state of constant defence against a nearby species that has made no diplomatic attempts to communicate known \
-	only as the 'Throom,' a name given because of a distinctive sound made by their vessels. The species, which appear to do little other than raid, make regular incursions.\
-	It is because of this state that Roa'Sora is heavily militarised in nature, with a heavy Raskinta influence and strong cooperation with its SDTF, Sora'terr.\
-	The primary export of the planet is rare minerals, though it possesses a strong military defence industry also. In spite of their situation the city-state regularly \
-	attempts to negotiate and open diplomatic channels with their assailants to little avail. Geographically, the planet is fairly mountainous and rocky, with a few deep lakes \
-	in mountain valleys, around which most mining stations are built."
+/singleton/cultural_info/location/roasara
+	name = HOME_SYSTEM_ROASARA
+	description = "Roa'sara is a militarized world, established as a defensive outpost against hostile incursions. Constantly patrolled and fortified, Roa'sara is known for its military production, rare mineral exports, and staunch defense against external threats. The Tau stationed here work closely with their military allies to ensure the protection of the Empire’s borders."
 	capital = "None"
-	ruling_body = "None"
+	ruling_body = "Tau Empire"
 	distance = "350 light years"
-	economic_power = 1.2
 
 /singleton/cultural_info/location/mitorqi
 	name = HOME_SYSTEM_MITORQI
-	description = "Mi'tor'qi, in the Qoa'lo system, is one of a multitude of planets along the human-skrell border. One of the newest colonies of Skrellkind, the numerous \
-	city states of Mi'tor'qi show a great deal of human influence in their society. Many of the city states have adapted their economies to focus on interstellar trade with \
-	humanity, and it is here that a number of skrellian corporations offer loan services of skilled Skrell to human organizations. Many inner-system city states use their \
-	counterparts and their corporations as an intermediary to trade with humanity while remaining obscure. Despite the planet's prosperity there is a growing conservative \
-	movement in many city-states concerned with the perceived invasive influence of humankind and its potential long-term damage."
+	description = "Mi'tor'qi is a frontier world near the human-Tau border, characterized by its significant interspecies interaction and trade. The planet's city-states are heavily influenced by human cultures, making it a unique bridge between the two civilizations and a hub for diplomatic and trade relations."
 	capital = "None"
-	ruling_body = "None"
+	ruling_body = "Tau Empire"
 	distance = "32 light years"
-	economic_power = 1.9
 
-/singleton/cultural_info/location/skrellspace
-	name = HOME_SYSTEM_SKRELLSPACE
-	description = "A very different style of living from a more traditional city-state based Skrell, those who live and reside in space belong to no particular city-state \
-	and instead are governed by the SDTF of the system in which they reside, with all services and installations under the control of the local Raskinta SDTF Commander \
-	rather than a Qerr-Skria. Life in these circumstances is often more regimented and disciplined, with a stronger emphasis on community and collaboration, with varying extremes \
-	depending on the status, funding and level of military engagements the SDTF is currently in."
+/singleton/cultural_info/location/tau_space
+	name = HOME_SYSTEM_TAUSPACE
+	description = "Tau Space refers to the countless orbital stations and vessels where many Tau live and work. Life aboard these stations is highly regimented, and the inhabitants are governed by the local Tau Defense Force. This lifestyle fosters a strong sense of duty, discipline, and unity, with a focus on supporting the greater goals of the Empire."
 	capital = "None"
-	ruling_body = "Your local SDTF"
+	ruling_body = "Tau Defense Force"
 	distance = "None"
-	economic_power = 1.9
 
-/singleton/cultural_info/location/otherskrell
-	name = HOME_SYSTEM_OTHERSKRELL
-	description = "Skrell control a much wider region of space than humanity, and to many their space is seen as uncountably infinite. This planet is one of the many skrellian worlds \
-	 that are less known."
+/singleton/cultural_info/location/other_tau
+	name = HOME_SYSTEM_OTHER_TAU
+	description = "The Tau Empire spans countless worlds, each contributing to the strength and diversity of the greater Empire. This category represents the many less-known Tau-controlled worlds, each with its unique role in supporting the ever-growing Empire through technology, culture, and military strength."
 	capital = "None"
-	ruling_body = "None"
-	distance = "None"
-	economic_power = 1.5
+	ruling_body = "Tau Empire"
+	distance = "Varies"

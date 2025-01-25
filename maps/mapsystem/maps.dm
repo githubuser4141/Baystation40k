@@ -37,7 +37,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	var/list/map_levels              // Z-levels available to various consoles, such as the crew monitor. Defaults to station_levels if unset.
 
 	var/list/base_turf_by_z = list() // Custom base turf by Z-level. Defaults to world.turf for unlisted Z-levels
-	var/list/usable_email_tlds = list("freemail.net")
+	var/list/usable_email_tlds = list("astropathica.net")
 	var/base_floor_type = /turf/simulated/floor/airless // The turf type used when generating floors between Z-levels at startup.
 	var/base_floor_area                                 // Replacement area, if a base_floor_type is generated. Leave blank to skip.
 
@@ -87,7 +87,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	var/overmap_size = 20		//Dimensions of overmap zlevel if overmap is used.
 	var/overmap_z = 0		//If 0 will generate overmap zlevel on init. Otherwise will populate the zlevel provided.
 	var/overmap_event_areas = 0 //How many event "clouds" will be generated
-
+	var/lobby_icon
 	var/list/lobby_screens = list('icons/default_lobby.png')    // The list of lobby screen images to pick() from.
 	var/current_lobby_screen
 	var/singleton/audio/track/lobby_track                     // The track that will play in the lobby screen.
@@ -109,16 +109,16 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	var/list/loadout_blacklist	//list of types of loadout items that will not be pickable
 
 	//Economy stuff
-	var/starting_money = 75000		//Money in station account
-	var/department_money = 5000		//Money in department accounts
+	var/starting_money = 1000		//Money in station account
+	var/department_money = 600		//Money in department accounts
 	var/salary_modifier	= 1			//Multiplier to starting character money
 	var/station_departments = list()//Gets filled automatically depending on jobs allowed
 
-	var/supply_currency_name = "Credits"
-	var/supply_currency_name_short = "Cr."
-	var/local_currency_name = "thalers"
-	var/local_currency_name_singular = "thaler"
-	var/local_currency_name_short = "T"
+	var/supply_currency_name = "Scrip"
+	var/supply_currency_name_short = "S"
+	var/local_currency_name = "Scrip"
+	var/local_currency_name_singular = "Scrip"
+	var/local_currency_name_short = "S"
 
 	//Whether or not the map should include the Interlude in teleports and the BSD event as a possibility.
 	var/use_bluespace_interlude = FALSE
@@ -127,100 +127,27 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 
 	var/list/available_cultural_info = list(
 		TAG_HOMEWORLD = list(
-			HOME_SYSTEM_MARS,
-			HOME_SYSTEM_LUNA,
-			HOME_SYSTEM_EARTH,
-			HOME_SYSTEM_VENUS,
-			HOME_SYSTEM_CERES,
-			HOME_SYSTEM_KUIPERB,
-			HOME_SYSTEM_KUIPERD,
-			HOME_SYSTEM_TAU_CETI,
-			HOME_SYSTEM_MAGNITKA,
-			HOME_SYSTEM_HELIOS,
-			HOME_SYSTEM_TERRA,
-			HOME_SYSTEM_SAFFAR,
-			HOME_SYSTEM_PIRX,
-			HOME_SYSTEM_TADMOR,
-			HOME_SYSTEM_BRAHE,
-			HOME_SYSTEM_IOLAUS,
-			HOME_SYSTEM_FOSTER,
-			HOME_SYSTEM_CASTILLA,
-			HOME_SYSTEM_GAIA,
-			HOME_SYSTEM_MAGNITKA,
+			HOME_SYSTEM_HUMAN,
 			HOME_SYSTEM_OTHER
 		),
 		TAG_FACTION = list(
-			FACTION_SOL_CENTRAL,
-			FACTION_INDIE_CONFED,
-			FACTION_CORPORATE,
-			FACTION_NANOTRASEN,
-			FACTION_FREETRADE,
-			FACTION_XYNERGY,
-			FACTION_HEPHAESTUS,
-			FACTION_DAIS,
-			FACTION_EXPEDITIONARY,
-			FACTION_FLEET,
-			FACTION_PCRC,
-			FACTION_SAARE,
+			FACTION_IMPERIUM,
 			FACTION_OTHER
 		),
 		TAG_CULTURE = list(
-			CULTURE_HUMAN_MARTIAN,
-			CULTURE_HUMAN_MARSTUN,
-			CULTURE_HUMAN_LUNAPOOR,
-			CULTURE_HUMAN_LUNARICH,
-			CULTURE_HUMAN_VENUSIAN,
-			CULTURE_HUMAN_VENUSLOW,
-			CULTURE_HUMAN_BELTER,
-			CULTURE_HUMAN_KUIPERI,
-			CULTURE_HUMAN_KUIPERO,
-			CULTURE_HUMAN_MAGNITKA,
-			CULTURE_HUMAN_EARTH,
-			CULTURE_HUMAN_CETIN,
-			CULTURE_HUMAN_CETIS,
-			CULTURE_HUMAN_CETII,
-			CULTURE_HUMAN_SPACER,
-			CULTURE_HUMAN_OFFWORLD,
-			CULTURE_HUMAN_CONFEDC,
-			CULTURE_HUMAN_CONFEDO,
-			CULTURE_HUMAN_FOSTER,
-			CULTURE_HUMAN_PIRXL,
-			CULTURE_HUMAN_PIRXB,
-			CULTURE_HUMAN_PIRXF,
-			CULTURE_HUMAN_TADMOR,
-			CULTURE_HUMAN_IOLAUS,
-			CULTURE_HUMAN_BRAHE,
-			CULTURE_HUMAN_EOS,
-			CULTURE_HUMAN_CONFEDC,
-			CULTURE_HUMAN_CONFEDO,
-			CULTURE_HUMAN_GAIAN,
+			CULTURE_HUMAN_IMPERIAL,
 			CULTURE_HUMAN_OTHER
 		),
 		TAG_RELIGION = list(
-			RELIGION_UNSTATED,
-			RELIGION_OTHER,
-			RELIGION_JUDAISM,
-			RELIGION_HINDUISM,
-			RELIGION_BUDDHISM,
-			RELIGION_SIKHISM,
-			RELIGION_JAINISM,
-			RELIGION_ISLAM,
-			RELIGION_CHRISTIANITY,
-			RELIGION_BAHAI_FAITH,
-			RELIGION_AGNOSTICISM,
-			RELIGION_DEISM,
-			RELIGION_ATHEISM,
-			RELIGION_THELEMA,
-			RELIGION_SPIRITUALISM,
-			RELIGION_SHINTO,
-			RELIGION_TAOISM
+			RELIGION_IMPERIUM,
+			RELIGION_OTHER
 		)
 	)
 
 	var/list/default_cultural_info = list(
-		TAG_HOMEWORLD = HOME_SYSTEM_MARS,
-		TAG_FACTION =   FACTION_SOL_CENTRAL,
-		TAG_CULTURE =   CULTURE_HUMAN_MARTIAN,
+		TAG_HOMEWORLD = HOME_SYSTEM_HUMAN,
+		TAG_FACTION =   FACTION_IMPERIUM,
+		TAG_CULTURE =   CULTURE_HUMAN_IMPERIAL,
 		TAG_RELIGION =  RELIGION_AGNOSTICISM
 	)
 
@@ -333,6 +260,18 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	RETURN_TYPE(/list)
 	var/spawn_cost = 0
 	var/player_cost = 0
+
+	// First, handle banned ruins before anything else.
+	for (var/banned_type in site.ban_ruins)
+		var/datum/map_template/ruin/away_site/banned = by_type[banned_type]
+		// Remove banned ruins from available and unavailable
+		if (banned in available)
+			available -= banned
+		if (banned in unavailable)
+			continue
+		unavailable += banned
+
+	// Now proceed with other checks
 	if (site in selected)
 		if (!(site.template_flags & TEMPLATE_FLAG_ALLOW_DUPLICATES))
 			return list(spawn_cost, player_cost)
@@ -342,18 +281,13 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	player_cost += site.player_cost
 	selected += site
 
+	// Handle forced ruins
 	for (var/forced_type in site.force_ruins)
 		var/list/costs = resolve_site_selection(by_type[forced_type], selected, available, unavailable, by_type)
 		spawn_cost += costs[1]
 		player_cost += costs[2]
 
-	for (var/banned_type in site.ban_ruins)
-		var/datum/map_template/ruin/away_site/banned = by_type[banned_type]
-		if (banned in unavailable)
-			continue
-		unavailable += banned
-		available -= banned
-
+	// Handle allowed ruins
 	for (var/allowed_type in site.allow_ruins)
 		var/datum/map_template/ruin/away_site/allowed = by_type[allowed_type]
 		if (allowed in available)
@@ -366,6 +300,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		available[allowed] = allowed.spawn_weight
 
 	return list(spawn_cost, player_cost)
+
 
 
 /datum/map/proc/build_away_sites()
@@ -487,7 +422,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	vendor_account = department_accounts["Vendor"]
 
 /datum/map/proc/map_info(client/victim)
-	to_chat(victim, "<h2>Current map information</h2>")
+	to_chat(victim, "<h2>THE DAUNTLESS</h2>")
 	to_chat(victim, get_map_info())
 
 /datum/map/proc/get_map_info()
@@ -516,11 +451,11 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		num2text(ENT_FREQ)   = list(),
 		num2text(ERT_FREQ)   = list(access_cent_specops),
 		num2text(COMM_FREQ)  = list(access_bridge),
-		num2text(ENG_FREQ)   = list(access_engine_equip, access_atmospherics),
+		num2text(ENG_FREQ)   = list(access_mechanicus_command, access_atmospherics),
 		num2text(MED_FREQ)   = list(access_medical_equip),
 		num2text(MED_I_FREQ) = list(access_medical_equip),
-		num2text(SEC_FREQ)   = list(access_security),
-		num2text(SEC_I_FREQ) = list(access_security),
+		num2text(SEC_FREQ)   = list(access_restricted),
+		num2text(SEC_I_FREQ) = list(access_restricted),
 		num2text(SCI_FREQ)   = list(access_tox,access_robotics,access_xenobiology),
 		num2text(SUP_FREQ)   = list(access_cargo),
 		num2text(SRV_FREQ)   = list(access_janitor, access_hydroponics),

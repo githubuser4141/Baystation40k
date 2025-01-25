@@ -30,7 +30,7 @@
 	glasses = /obj/item/clothing/glasses/meson
 
 /datum/rig_vision/sechud
-	mode = "security HUD"
+	mode = "militarum HUD"
 	glasses = /obj/item/clothing/glasses/hud/security
 
 /datum/rig_vision/medhud
@@ -90,7 +90,7 @@
 	name = "hardsuit meson scanner"
 	desc = "A layered, translucent visor system for a hardsuit."
 	icon_state = "meson"
-	origin_tech = list(TECH_MAGNET = 2, TECH_ENGINEERING = 5)
+	origin_tech = list(TECH_MAGNET = 2, TECH_ENGINEERING = 2)
 	usable = 0
 
 	interface_name = "meson scanner"
@@ -116,7 +116,7 @@
 	name = "hardsuit night vision interface"
 	desc = "A multi input night vision system for a hardsuit."
 	icon_state = "night"
-	origin_tech = list(TECH_MAGNET = 6, TECH_ENGINEERING = 6)
+	origin_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 2)
 	usable = 0
 
 	interface_name = "night vision interface"
@@ -126,14 +126,14 @@
 
 /obj/item/rig_module/vision/sechud
 
-	name = "hardsuit security hud"
+	name = "hardsuit militarum hud"
 	desc = "A simple tactical information system for a hardsuit."
 	icon_state = "securityhud"
-	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 2, TECH_ENGINEERING = 5)
+	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2, TECH_ENGINEERING = 2)
 	usable = 0
 
-	interface_name = "security HUD"
-	interface_desc = "An integrated security heads up display."
+	interface_name = "militarum HUD"
+	interface_desc = "An integrated militarum heads up display."
 
 	vision_modes = list(/datum/rig_vision/sechud)
 
@@ -142,7 +142,7 @@
 	name = "hardsuit medical hud"
 	desc = "A simple medical status indicator for a hardsuit."
 	icon_state = "healthhud"
-	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 2, TECH_ENGINEERING = 5)
+	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2, TECH_ENGINEERING = 2)
 	usable = 0
 
 	interface_name = "medical HUD"

@@ -68,8 +68,8 @@
 /obj/item/frame/intercom
 	name = "intercom frame"
 	desc = "Used for building intercoms."
-	icon = 'icons/obj/machines/radio.dmi'
-	icon_state = "intercom-f"
+	icon = 'icons/map_project/ship/machines.dmi'
+	icon_state = "scomm1"
 	build_machine_type = /obj/item/device/radio/intercom
 
 /obj/item/frame/intercom/get_mechanics_info()
@@ -104,7 +104,7 @@
 	refund_amt = 3
 
 /obj/item/frame/supermatter_alarm
-	name = "supermatter alarm frame"
+	name = "volkite alarm frame"
 	icon = 'icons/obj/structures/lighting.dmi'
 	icon_state = "bulb-construct-item"
 	refund_amt = 1

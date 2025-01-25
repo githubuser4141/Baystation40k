@@ -36,6 +36,13 @@
 
 	if(integrity >= 50 && hardness >= MATERIAL_FLEXIBLE + 10)
 		. += new/datum/stack_recipe/furniture/barricade(src)
+		. += new/datum/stack_recipe/furniture/barricade/boards(src)
+		. += new/datum/stack_recipe/furniture/campfire(src)
+		. += new/datum/stack_recipe/furniture/barricade/sandbag(src)
+		. += new/datum/stack_recipe/furniture/barricade/sandbagwall(src)
+		. += new/datum/stack_recipe/furniture/barricade/barbed(src)
+		. += new/datum/stack_recipe/furniture/barricade/barrels(src)
+		. += new/datum/stack_recipe/furniture/barricade/concrete(src)
 		. += new/datum/stack_recipe/furniture/stool(src)
 		. += new/datum/stack_recipe/furniture/bar_stool(src)
 		. += new/datum/stack_recipe/furniture/bed(src)
@@ -93,7 +100,7 @@
 	. += new/datum/stack_recipe/fire_alarm(src)
 	. += new/datum/stack_recipe/intercom(src)
 	. += new/datum/stack_recipe/supermatter_alarm(src)
-	. += new/datum/stack_recipe_list("modular computer frames", create_recipe_list(/datum/stack_recipe/computer))
+	. += new/datum/stack_recipe_list("modular cogitator frames", create_recipe_list(/datum/stack_recipe/computer))
 	. += new/datum/stack_recipe/furniture/coffin(src)
 
 /material/plasteel/generate_recipes(reinforce_material)

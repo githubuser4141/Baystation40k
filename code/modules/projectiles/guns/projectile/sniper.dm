@@ -7,22 +7,23 @@
 	w_class = ITEM_SIZE_HUGE
 	force = 10
 	slot_flags = SLOT_BACK
-	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 2, TECH_ESOTERIC = 8)
-	caliber = CALIBER_ANTIMATERIAL
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2, TECH_ESOTERIC = 4)
+	caliber = CALIBER_SNIPER
 	screen_shake = 2 //extra kickback
 	handle_casings = HOLD_CASINGS
 	load_method = SINGLE_CASING
 	max_shells = 1
 	ammo_type = /obj/item/ammo_casing/shell
-	one_hand_penalty = 6
+	one_hand_penalty = 3
 	accuracy = -2
-	bulk = 8
+	bulk = 2
 	scoped_accuracy = 8 //increased accuracy over the LWAP because only one shot
 	scope_zoom = 2
 	var/bolt_open = 0
 	wielded_item_state = "heavysniper-wielded" //sort of placeholder
 	load_sound = 'sound/weapons/guns/interaction/rifle_load.ogg'
-	fire_delay = 12
+	fire_delay = 6
+	slowdown_general = 0.05
 
 /obj/item/gun/projectile/heavysniper/on_update_icon()
 	..()
@@ -33,7 +34,7 @@
 
 /obj/item/gun/projectile/heavysniper/handle_post_fire(mob/user, atom/target, pointblank=0, reflex=0)
 	..()
-	if(user && user.skill_check(SKILL_WEAPONS, SKILL_EXPERIENCED))
+	if(user && user.skill_check(SKILL_GUNS, SKILL_EXPERIENCED))
 		to_chat(user, SPAN_NOTICE("You work the bolt open with a reflexive motion, ejecting [chambered]!"))
 		unload_shell()
 
@@ -106,8 +107,8 @@
 	item_state = "boltaction"
 	w_class = ITEM_SIZE_LARGE
 	origin_tech = list(TECH_COMBAT = 2)
-	caliber = CALIBER_RIFLE
-	ammo_type = /obj/item/ammo_casing/rifle
+	caliber = CALIBER_SNIPER
+	ammo_type = /obj/item/ammo_casing/sniper
 	load_method = SINGLE_CASING|SPEEDLOADER
 	max_shells = 5
 	accuracy = 4
@@ -118,24 +119,23 @@
 
 /obj/item/gun/projectile/sniper/panther //semi-automatic only
 	name = "marksman rifle"
-	desc = "An SD-Panther. It is a simple and durable rifle made of stamped steel manufactured by Novaya Zemlya Arms for the Confederation Navy. \
+	desc = "An SD-Panther. It is a simple and durable rifle made of stamped steel manufactured by Valhalla for the Tau Navy. \
 	While it lacks the burst fire of other military rifles, it's exceptionally accurate and has a powerful optic."
 	icon = 'icons/obj/guns/terran_rifle.dmi'
 	icon_state = "dmr"
 	item_state = "dmr"
-	fire_delay = 8
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_ESOTERIC = 5)
+	fire_delay = 5
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 4, TECH_ESOTERIC = 3)
 	w_class = ITEM_SIZE_HUGE
 	force = 10
-	caliber = CALIBER_RIFLE
+	caliber = CALIBER_AUTOGUN
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/rifle
 	allowed_magazines = /obj/item/ammo_magazine/rifle
-	one_hand_penalty = 8
+	one_hand_penalty = 4
 	scoped_accuracy = 8
 	scope_zoom = 1
-	accuracy_power = 8
 	accuracy = 4
 	bulk = GUN_BULK_RIFLE
 	wielded_item_state = "dmr-wielded"
@@ -159,15 +159,14 @@
 	origin_tech = list(TECH_COMBAT = 2)
 	w_class = ITEM_SIZE_HUGE
 	force = 10
-	caliber = CALIBER_RIFLE
+	caliber = CALIBER_AUTOGUN
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/iclipr
 	allowed_magazines = /obj/item/ammo_magazine/iclipr
 	auto_eject = TRUE
 	auto_eject_sound = 'sound/weapons/guns/interaction/garand_magout.ogg'
-	one_hand_penalty = 9
-	accuracy_power = 5
+	one_hand_penalty = 4
 	accuracy = 2
 	bulk = GUN_BULK_HEAVY_RIFLE
 	wielded_item_state = "garand-wielded"
@@ -186,7 +185,7 @@
 
 /obj/item/gun/projectile/sniper/semistrip
 	name = "carbine rifle"
-	desc = "An old semi-automatic carbine chambered in large pistol rounds, this thing looks older than the SCG."
+	desc = "An old semi-automatic carbine chambered in large pistol rounds, this thing looks older than the Imperium."
 	icon = 'icons/obj/guns/semistrip.dmi'
 	icon_state = "semistrip"
 	item_state = "semistrip"
@@ -194,11 +193,11 @@
 	force = 10
 	origin_tech = list(TECH_COMBAT = 2)
 	slot_flags = SLOT_BACK
-	caliber = CALIBER_PISTOL_MAGNUM
-	ammo_type = /obj/item/ammo_casing/pistol/magnum
+	caliber = CALIBER_SLUG_MAGNUM
+	ammo_type = /obj/item/ammo_casing/magnum
 	load_method = SINGLE_CASING|SPEEDLOADER
-	fire_delay = 2
-	one_hand_penalty = 8
+	fire_delay = 3.3
+	one_hand_penalty = 4
 	max_shells = 10
 	accuracy = 1
 	wielded_item_state = "semistrip-wielded"

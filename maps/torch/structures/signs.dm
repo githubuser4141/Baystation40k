@@ -1,10 +1,10 @@
 /obj/structure/sign/dedicationplaque
-	name = "\improper SEV Torch dedication plaque"
+	name = "\improper Dauntless dedication plaque"
 	icon_state = "lightplaque"
 
 /obj/structure/sign/dedicationplaque/Initialize()
 	. = ..()
-	desc = "S.E.V. Torch - Mako Class - Sol Expeditionary Corps Registry 95519 - Shiva Fleet Yards, Mars - First Vessel To Bear The Name - Launched [GLOB.using_map.game_year - 5] - Sol Central Government - 'Never was anything great achieved without danger.'"
+	desc = "Dauntless - Mako Class - Sol Explorator Registry 95519 - Shiva Imperial Navy Yards, Sancor - First Vessel To Bear The Name - Launched [GLOB.using_map.game_year - 5] - Imperial Government - 'Never was anything great achieved without danger.'"
 
 
 /obj/floor_decal/scglogo
@@ -13,21 +13,21 @@
 	icon_state = "center"
 
 /obj/structure/sign/solgov
-	name = "\improper SolGov Seal"
+	name = "\improper Imperial Seal"
 	desc = "A sign which signifies who this vessel belongs to."
-	icon = 'maps/torch/icons/obj/solgov-decals.dmi'
-	icon_state = "solgovseal"
+	icon = 'icons/obj/structures/decals.dmi'
+	icon_state = "imperial"
 
 /obj/structure/sign/double/solgovflag
-	name = "\improper Sol Central Government Flag"
-	desc = "The flag of the Sol Central Government, a symbol of many things to many people."
-	icon = 'maps/torch/icons/obj/solgov-decals.dmi'
+	name = "\improper Imperial Flag"
+	desc = "The flag of the Imperial Government, a symbol of many things to many people."
+	icon = 'icons/obj/structures/decals.dmi'
 
 /obj/structure/sign/double/solgovflag/left
-	icon_state = "solgovflag-left"
+	icon_state = "imperials"
 
 /obj/structure/sign/double/solgovflag/right
-	icon_state = "solgovflag-right"
+	icon_state = "imperials"
 
 /obj/structure/sign/memorial
 	name = "memorial rock"
@@ -41,7 +41,7 @@
 	unacidable = TRUE
 	var/list/fallen = list()
 	var/list/accepted_branches = list(
-		"Expeditionary Corps",
+		"Explorator",
 		"Fleet"
 	)
 

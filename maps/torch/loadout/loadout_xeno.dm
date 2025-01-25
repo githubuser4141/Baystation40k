@@ -6,7 +6,7 @@
 	path = /obj/item/clothing/gloves/color/white/modified
 	sort_category = "Xenowear"
 	whitelisted = list(
-		SPECIES_UNATHI
+		SPECIES_KROOT
 	)
 
 /datum/gear/gloves/duty/modified
@@ -14,7 +14,7 @@
 	path = /obj/item/clothing/gloves/thick/duty/modified
 	sort_category = "Xenowear"
 	whitelisted = list(
-		SPECIES_UNATHI
+		SPECIES_KROOT
 	)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 
@@ -37,11 +37,11 @@
 /datum/gear/accessory/cultex_patch
 	display_name = "Cultural Exchange patch"
 	path = /obj/item/clothing/accessory/solgov/cultex_patch
-	description = "A shoulder patch representing the Expeditionary Corps."
+	description = "A shoulder patch representing the Explorator."
 	allowed_branches = list(/datum/mil_branch/expeditionary_corps)
 	whitelisted = list(
-		SPECIES_SKRELL,
-		SPECIES_UNATHI,
+		SPECIES_TAU,
+		SPECIES_KROOT,
 		SPECIES_YEOSA,
 		SPECIES_IPC
 	)

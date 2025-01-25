@@ -18,8 +18,7 @@
 	var/overlay_state = null
 	var/list/accessory_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_accessories.dmi', slot_wear_suit_str = 'icons/mob/onmob/onmob_accessories.dmi')
 	sprite_sheets = list(
-		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_accessories_gas.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_accessories_unathi.dmi'
+		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_accessories_gas.dmi'
 		)
 	/// String (One of `ACCESSORY_ROLLED_*` or a valid icon state). The icon_state or flag to use when the attached uniform is rolled down.
 	var/on_rolled_down = ACCESSORY_ROLLED_DEFAULT
@@ -89,7 +88,6 @@
 	parent = S
 	forceMove(parent)
 	parent.AddOverlays(get_inv_overlay())
-
 	if(user)
 		to_chat(user, SPAN_NOTICE("You attach \the [src] to \the [parent]."))
 		src.add_fingerprint(user)
@@ -99,6 +97,10 @@
 	if(!parent)
 		return
 	parent.CutOverlays(get_inv_overlay())
+	if (equip_delay > 0)
+		equip_delay_before(user)
+		sleep(equip_delay)
+		equip_delay_after(user)
 	parent = null
 	if(user)
 		usr.put_in_hands(src)

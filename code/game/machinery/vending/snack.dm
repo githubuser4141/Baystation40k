@@ -1,6 +1,6 @@
 /obj/machinery/vending/snack
 	name = "\improper Getmore Chocolate Corp"
-	desc = "A snack machine courtesy of the Getmore Chocolate Corporation, based out of Mars."
+	desc = "A snack machine courtesy of the Getmore Chocolate Corporation, based out of Sancor."
 	icon_state = "snack"
 	icon_vend = "snack-vend"
 	icon_deny = "snack-deny"
@@ -54,13 +54,13 @@
 		/obj/item/reagent_containers/food/snacks/tastybread = 0
 	)
 	rare_products = list(
-		/obj/item/storage/box/syndie_kit/shuriken = 70
+		/obj/item/storage/box/contraband/shuriken = 70
 	)
 	contraband = list(
 		/obj/item/reagent_containers/food/snacks/syndicake = 6,
-		/obj/item/reagent_containers/food/snacks/skrellsnacks = 3
+		/obj/item/reagent_containers/food/snacks/tau = 3
 	)
 	antag = list(
 		/obj/item/beartrap = 3,
-		/obj/item/storage/box/syndie_kit/shuriken = 0
+		/obj/item/storage/box/contraband/shuriken = 0
 	)

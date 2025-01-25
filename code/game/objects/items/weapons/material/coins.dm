@@ -5,7 +5,6 @@
 	applies_material_colour = TRUE
 	randpixel = 8
 	throwforce = 1
-	max_force = 5
 	force_multiplier = 0.1
 	thrown_force_multiplier = 0.1
 	w_class = ITEM_SIZE_TINY
@@ -151,7 +150,7 @@
 
 ///Antag challenge coins, used to hack vendors.
 /obj/item/material/coin/challenge/syndie
-	name = "Syndicate Challenge Coin"
+	name = "Heretic Challenge Coin"
 	desc = "A heavy coin emblazoned with a shiny, red skull. The rim of the coin shows words in a language you do not understand."
 	icon = 'icons/obj/materials/coin.dmi'
 	icon_state = "syndie"

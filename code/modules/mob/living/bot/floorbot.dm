@@ -3,7 +3,6 @@
 	desc = "A little floor repairing robot, he looks so excited!"
 	icon = 'icons/mob/bot/floorbot.dmi'
 	icon_state = "floorbot0"
-	req_access = list(list(access_construction, access_robotics))
 	wait_if_pulled = 1
 	min_target_dist = 0
 
@@ -44,9 +43,9 @@
 	. += "<br>Tiles left: [amount]"
 
 /mob/living/bot/floorbot/GetInteractPanel()
-	. = "Improves floors: <a href='?src=\ref[src];command=improve'>[improvefloors ? "Yes" : "No"]</a>"
-	. += "<br>Finds tiles: <a href='?src=\ref[src];command=tiles'>[eattiles ? "Yes" : "No"]</a>"
-	. += "<br>Make single pieces of metal into tiles when empty: <a href='?src=\ref[src];command=make'>[maketiles ? "Yes" : "No"]</a>"
+	. = "Improves floors: <a href='?src=\ref[src];command=improve'>[improvefloors ? "Compliance" : "No"]</a>"
+	. += "<br>Finds tiles: <a href='?src=\ref[src];command=tiles'>[eattiles ? "Compliance" : "No"]</a>"
+	. += "<br>Make single pieces of metal into tiles when empty: <a href='?src=\ref[src];command=make'>[maketiles ? "Compliance" : "No"]</a>"
 
 /mob/living/bot/floorbot/GetInteractMaintenance()
 	. = "Disassembly mode: "

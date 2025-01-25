@@ -1,18 +1,18 @@
 /obj/machinery/computer
-	name = "computer"
+	name = "cogitator"
 	icon = 'icons/obj/machines/computer.dmi'
 	icon_state = "computer"
 	density = TRUE
 	anchored = TRUE
-	idle_power_usage = 300
-	active_power_usage = 300
+	idle_power_usage = 50
+	active_power_usage = 100
 	construct_state = /singleton/machine_construction/default/panel_closed/computer
 	uncreated_component_parts = null
 	stat_immune = 0
 	frame_type = /obj/machinery/constructable_frame/computerframe/deconstruct
 	var/processing = 0
 
-	health_max = 80
+	health_max = 400
 	damage_hitsound = 'sound/weapons/smash.ogg'
 
 	var/icon_keyboard = "generic_key"
@@ -20,6 +20,7 @@
 	var/light_power_on = 1
 	var/light_range_on = 2
 	var/overlay_layer
+	var/broken = "broken" // Used for warhammer terminal icons only. DW if messing with default ss13 terminals, this is ignored.
 	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
 	clicksound = "keyboard"
 
@@ -46,7 +47,7 @@
 	icon = initial(icon)
 	icon_state = initial(icon_state)
 
-	// Connecting multiple computers in a row
+	// Connecting multiple cogitators in a row
 	if(initial(icon_state) == "computer")
 		var/append_string = ""
 		var/left = turn(dir, 90)
@@ -60,31 +61,37 @@
 		if(RC && RC.dir == dir && initial(RC.icon_state) == "computer")
 			append_string += "_R"
 		icon_state = "computer[append_string]"
+		if(reason_broken & MACHINE_BROKEN_NO_PARTS)
+			icon = 'icons/obj/machines/computer.dmi'
+			icon_state = "wired"
+			var/screen = get_component_of_type(/obj/item/stock_parts/console_screen)
+			var/keyboard = get_component_of_type(/obj/item/stock_parts/keyboard)
+			if(screen)
+				AddOverlays("comp_screen")
+			if(keyboard)
+				AddOverlays(icon_keyboard ? "[icon_keyboard]_off" : "keyboard")
+			return
 
+		if(!is_powered())
+			if(icon_keyboard)
+				AddOverlays(image(icon,"[icon_keyboard]_off", overlay_layer))
+			return
 
-	if(reason_broken & MACHINE_BROKEN_NO_PARTS)
-		icon = 'icons/obj/machines/computer.dmi'
-		icon_state = "wired"
-		var/screen = get_component_of_type(/obj/item/stock_parts/console_screen)
-		var/keyboard = get_component_of_type(/obj/item/stock_parts/keyboard)
-		if(screen)
-			AddOverlays("comp_screen")
-		if(keyboard)
-			AddOverlays(icon_keyboard ? "[icon_keyboard]_off" : "keyboard")
-		return
+		if(MACHINE_IS_BROKEN(src))
+			AddOverlays(image(icon,"[icon_state]_broken", overlay_layer))
+		else
+			AddOverlays(get_screen_overlay())
 
-	if(!is_powered())
-		if(icon_keyboard)
-			AddOverlays(image(icon,"[icon_keyboard]_off", overlay_layer))
-		return
-
-	if(MACHINE_IS_BROKEN(src))
-		AddOverlays(image(icon,"[icon_state]_broken", overlay_layer))
-	else
-		AddOverlays(get_screen_overlay())
-
-	AddOverlays(get_keyboard_overlay())
+		AddOverlays(get_keyboard_overlay())
 	var/screen_is_glowing = update_glow()
+	if(MACHINE_IS_BROKEN(src))
+		icon_state = broken
+		icon_keyboard = null
+		icon_screen = null
+	else
+		icon_state = icon_state
+		icon_keyboard = null
+		icon_screen = null
 	if(screen_is_glowing)
 		AddOverlays(emissive_appearance(icon, icon_screen))
 		if(icon_keyboard)
@@ -103,7 +110,7 @@
 	return text
 
 /**
- * Makes the computer emit light if the screen is on.
+ * Makes the cogitator emit light if the screen is on.
  * Returns TRUE if the screen is on, otherwise FALSE.
  */
 /obj/machinery/computer/proc/update_glow()

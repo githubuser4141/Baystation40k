@@ -3,18 +3,18 @@
 	desc = "A piece of headgear used in dangerous working conditions to protect the head. Comes with a built-in flashlight."
 	icon_state = "hardhat0_yellow"
 	action_button_name = "Toggle Headlamp"
-	brightness_on = 0.5 //luminosity when on
+	brightness_on = 0.4
 	light_overlay = "hardhat_light"
 	w_class = ITEM_SIZE_NORMAL
 	item_flags = null
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
-		bio = ARMOR_BIO_MINOR,
-		rad = ARMOR_RAD_MINOR
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_BASIC,
+		laser = ARMOR_LASER_PRIMAL,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY,
+		bio = ARMOR_BIO_THIRTY,
+		rad = ARMOR_RAD_THIRTY
 	)
 	flags_inv = 0
 	siemens_coefficient = 0.9
@@ -40,16 +40,16 @@
 	icon_state = "Damage-Control-Helmet-light"
 	light_overlay = "EMS_light"
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
-		bio = ARMOR_BIO_MINOR
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_BASIC,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY,
+		bio = ARMOR_BIO_THIRTY
 	)
 
 /obj/item/clothing/head/hardhat/light/medic
 	name = "\improper EMS helmet"
-	desc = "A polymer helmet worn by EMTs throughout human space to protect their head. This one comes with an attached flashlight and has 'Medic' written on its back in blue lettering."
+	desc = "A polymer helmet worn by Medicaes throughout human space to protect their head. This one comes with an attached flashlight and has 'Medic' written on its back in blue lettering."
 	icon_state = "EMS_helmet"
 
 /obj/item/clothing/head/hardhat/firefighter

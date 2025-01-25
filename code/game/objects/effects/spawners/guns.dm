@@ -5,20 +5,20 @@
 	icon_state = "secguncomp"
 
 /obj/random/lilgun/spawn_choices()
-	return list(/obj/item/gun/projectile/pistol/sec,
-				/obj/item/gun/energy/gun,
+	return list(/obj/item/gun/projectile/pistol/slug,
+				/obj/item/gun/energy/lasgun/laspistol/militarum,
 				/obj/item/gun/energy/stunrevolver,
 				/obj/item/gun/projectile/shotgun/doublebarrel/sawn,
-				/obj/item/gun/energy/xray/pistol,
-				/obj/item/gun/energy/pulse_rifle/pistol,
+				/obj/item/gun/projectile/automatic/radcarbine/radpistol,
+				/obj/item/gun/energy/tau/pulsepistol,
 				/obj/item/gun/energy/plasmacutter,
-				/obj/item/gun/energy/incendiary_laser,
-				/obj/item/gun/projectile/automatic/machine_pistol,
+				/obj/item/gun/energy/lasgun/hotshot/volkite,
+				/obj/item/gun/projectile/automatic/autogun,
 				/obj/item/gun/projectile/pistol/holdout,
-				/obj/item/gun/projectile/revolver,
-				/obj/item/gun/projectile/revolver/medium,
-				/obj/item/gun/energy/retro,
-				/obj/item/gun/projectile/pistol/throwback,
+				/obj/item/gun/projectile/revolver/imperial,
+				/obj/item/gun/projectile/revolver/imperial,
+				/obj/item/gun/energy/lasgun/laspistol/grim,
+				/obj/item/gun/projectile/pistol/slug/old,
 				/obj/item/gun/energy/ionrifle/small
 	)
 
@@ -29,21 +29,20 @@
 	icon_state = "arifle"
 
 /obj/random/biggun/spawn_choices()
-	return list(/obj/item/gun/energy/lasercannon,
-				/obj/item/gun/energy/laser,
-				/obj/item/gun/energy/captain,
-				/obj/item/gun/energy/pulse_rifle,
-				/obj/item/gun/energy/pulse_rifle/carbine,
-				/obj/item/gun/energy/sniperrifle,
-				/obj/item/gun/projectile/shotgun/doublebarrel,
-				/obj/item/gun/energy/xray,
-				/obj/item/gun/projectile/automatic/battlerifle,
-				/obj/item/gun/projectile/sniper/semistrip,
-				/obj/item/gun/projectile/sniper/garand,
-				/obj/item/gun/projectile/automatic/assault_rifle,
-				/obj/item/gun/projectile/automatic/sec_smg,
+	return list(/obj/item/gun/projectile/automatic/radcarbine/radpistol,
+				/obj/item/gun/energy/lasgun/kantrael,
+				/obj/item/gun/energy/tau/pulsepistol,
+				/obj/item/gun/energy/tau/pulsepistol,
+				/obj/item/gun/energy/lasgun/triplex,
+				/obj/item/gun/projectile/shotgun/pump/voxlegis/magrave,
+				/obj/item/gun/projectile/automatic/radcarbine,
+				/obj/item/gun/projectile/automatic/slugrifle,
+				/obj/item/gun/projectile/heavysniper/boltaction/imperial/triangong,
+				/obj/item/gun/projectile/heavysniper/boltaction/imperial/triangong,
+				/obj/item/gun/projectile/automatic/autogun/a80,
+				/obj/item/gun/projectile/automatic/autogun/valhalla,
 				/obj/item/gun/energy/crossbow/largecrossbow,
-				/obj/item/gun/projectile/shotgun/pump/combat,
-				/obj/item/gun/energy/ionrifle,
+				/obj/item/gun/projectile/shotgun/pump/voxlegis,
+				/obj/item/gun/energy/plasma,
 				/obj/item/gun/projectile/shotgun/pump
 	)

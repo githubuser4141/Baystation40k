@@ -15,10 +15,10 @@
 
 	density = FALSE
 	idle_power_usage = 50		//when inactive, this turret takes up constant 50 Equipment power
-	active_power_usage = 300	//when active, this turret takes up constant 300 Equipment power
+	active_power_usage = 200	//when active, this turret takes up constant 300 Equipment power
 	power_channel = EQUIP	//drains power from the EQUIPMENT channel
 
-	health_max = 80
+	health_max = 800
 	health_min_damage = 5
 
 	var/raised = 0			//if the turret cover is "open" and the turret is raised
@@ -59,7 +59,7 @@
 
 	var/last_target			//last target fired at, prevents turrets from erratically firing at all valid targets in range
 
-	req_access = list(list(access_security, access_bridge))
+	req_access = list(access_mechanicus_command)
 	obj_flags = OBJ_FLAG_ANCHORABLE
 
 /obj/machinery/porta_turret/crescent

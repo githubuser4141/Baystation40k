@@ -21,7 +21,7 @@
 	outfit_type = /singleton/hierarchy/outfit/job/service/gardener
 
 //Cargo
-/datum/job/qm
+/datum/job/noble_guest
 	title = "Quartermaster"
 	department = "Supply"
 	department_flag = SUP
@@ -34,7 +34,7 @@
 	ideal_character_age = 40
 	outfit_type = /singleton/hierarchy/outfit/job/cargo/qm
 
-/datum/job/cargo_tech
+/datum/job/pilgrim
 	title = "Cargo Technician"
 	department = "Supply"
 	department_flag = SUP
@@ -44,7 +44,7 @@
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station)
 	outfit_type = /singleton/hierarchy/outfit/job/cargo/cargo_tech
 
-/datum/job/mining
+/datum/job/shaft_miner
 	title = "Shaft Miner"
 	department = "Supply"
 	department_flag = SUP
@@ -63,7 +63,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
-	access = list(access_janitor, access_maint_tunnels, access_engine, access_research, access_sec_doors, access_medical)
+	access = list(access_janitor, access_maint_tunnels, access_mechanicus, access_research, access_sec_doors, access_medical)
 	alt_titles = list("Custodian","Sanitation Technician")
 	outfit_type = /singleton/hierarchy/outfit/job/service/janitor
 
@@ -75,7 +75,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the head of personnel"
-	access = list(access_library, access_maint_tunnels)
+	access = list(access_dauntless, access_maint_tunnels)
 	alt_titles = list("Journalist")
 	outfit_type = /singleton/hierarchy/outfit/job/librarian
 

@@ -39,7 +39,7 @@
 /obj/structure/closet/chefcloset/WillContain()
 	return list(
 		/obj/item/clothing/under/sundress,
-		/obj/item/clothing/under/waiter = 2,
+		/obj/item/clothing/under/service = 2,
 		/obj/item/device/radio/headset/headset_service = 2,
 		/obj/item/storage/box/mousetraps = 2,
 		/obj/item/clothing/under/rank/chef,
@@ -86,9 +86,9 @@
 		/obj/item/clothing/under/lawyer/black,
 		/obj/item/clothing/under/lawyer/red,
 		/obj/item/clothing/under/lawyer/bluesuit,
-		/obj/item/clothing/suit/storage/toggle/suit/blue,
+		/obj/item/clothing/suit/armor/grim/toggle/suit/blue,
 		/obj/item/clothing/under/lawyer/purpsuit,
-		/obj/item/clothing/suit/storage/toggle/suit/purple,
+		/obj/item/clothing/suit/armor/grim/toggle/suit/purple,
 		/obj/item/clothing/shoes/brown,
 		/obj/item/clothing/shoes/black
 	)

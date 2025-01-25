@@ -7,14 +7,14 @@
 	icon_living = "otherthing"
 	icon_dead = "otherthing-dead"
 	health = 100
-	maxHealth = 100
+	maxhealth = 100
 	natural_weapon = /obj/item/natural_weapon/bite/strong
 	faction = "creature"
 	speed = 4
 	supernatural = 1
 
 /mob/living/simple_animal/hostile/creature/cult
-	faction = "cult"
+	faction = "Chaos"
 	min_gas = null
 	max_gas = null
 	minbodytemp = 0

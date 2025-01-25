@@ -3,12 +3,15 @@
 #define SKILL_TRAINED     3
 #define SKILL_EXPERIENCED 4
 #define SKILL_MASTER      5
+#define SKILL_LEGEND      6
+#define SKILL_PRIMARIS    7
+#define SKILL_DEMIGOD     8
 #define HAS_PERK          SKILL_UNSKILLED + 1
 
 /// Min skill value selectable
-#define SKILL_MIN      SKILL_UNSKILLED
+#define SKILL_MIN      SKILL_TRAINED
 /// Max skill value selectable
-#define SKILL_MAX      SKILL_MASTER
+#define SKILL_MAX      SKILL_DEMIGOD
 /// Default skill value for mobs
 #define SKILL_DEFAULT  SKILL_EXPERIENCED
 /// Baseline skill level used for determining mechanical skill multipliers.
@@ -23,12 +26,12 @@
 #define SKILL_EVA           /singleton/hierarchy/skill/general/EVA
 #define SKILL_MECH          /singleton/hierarchy/skill/general/EVA/mech
 #define SKILL_PILOT         /singleton/hierarchy/skill/general/pilot
-#define SKILL_HAULING       /singleton/hierarchy/skill/general/hauling
+#define SKILL_VIGOR         /singleton/hierarchy/skill/general/vigor
 #define SKILL_COMPUTER      /singleton/hierarchy/skill/general/computer
 #define SKILL_BOTANY        /singleton/hierarchy/skill/service/botany
 #define SKILL_COOKING       /singleton/hierarchy/skill/service/cooking
 #define SKILL_COMBAT        /singleton/hierarchy/skill/security/combat
-#define SKILL_WEAPONS       /singleton/hierarchy/skill/security/weapons
+#define SKILL_GUNS          /singleton/hierarchy/skill/security/guns
 #define SKILL_FORENSICS     /singleton/hierarchy/skill/security/forensics
 #define SKILL_CONSTRUCTION  /singleton/hierarchy/skill/engineering/construction
 #define SKILL_ELECTRICAL    /singleton/hierarchy/skill/engineering/electrical

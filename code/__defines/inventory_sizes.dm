@@ -29,13 +29,13 @@
 */
 
 /// Emergency tanks, except doubles
-#define TANK_SIZE_SMALL 10
+#define TANK_SIZE_SMALL 5
 
 /// Double tanks & fuel tanks
-#define TANK_SIZE_MEDIUM 20
+#define TANK_SIZE_MEDIUM 10
 
 /// Full size tanks
-#define TANK_SIZE_LARGE 30
+#define TANK_SIZE_LARGE 15
 
 /// Scrubber tanks & jetpacks
-#define TANK_SIZE_HUGE 40
+#define TANK_SIZE_HUGE 20

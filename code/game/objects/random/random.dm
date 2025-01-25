@@ -45,6 +45,7 @@
 	return list(spawn_object)
 
 
+
 /obj/random/single/color
 	name = "randomly colored object"
 	desc = "This item is used to spawn a given object with a random color at round-start."
@@ -71,7 +72,7 @@
 	return A
 
 
-
+/////////////////////
 /obj/random/tool
 	name = "random tool"
 	desc = "This is a random tool."
@@ -106,13 +107,13 @@
 	icon_state = "hcell"
 
 /obj/random/powercell/spawn_choices()
-	return list(/obj/item/cell/crap = 1,
+	return list(/obj/item/cell/device/high/laspack = 3,
 				/obj/item/cell/standard = 8,
 				/obj/item/cell/high = 5,
 				/obj/item/cell/super = 2,
 				/obj/item/cell/hyper = 1,
 				/obj/item/cell/device/standard = 7,
-				/obj/item/cell/device/high = 5)
+				/obj/item/cell/device/high/laspack/hotshot = 1)
 
 /obj/random/bomb_supply
 	name = "bomb supply"
@@ -134,9 +135,9 @@
 	icon_state = "red"
 
 /obj/random/toolbox/spawn_choices()
-	return list(/obj/item/storage/toolbox/mechanical = 30,
-				/obj/item/storage/toolbox/electrical = 20,
-				/obj/item/storage/toolbox/emergency = 20,
+	return list(/obj/item/storage/toolbox/mechanical = 5,
+				/obj/item/storage/toolbox/electrical = 5,
+				/obj/item/storage/toolbox/emergency = 5,
 				/obj/item/storage/toolbox/syndicate = 1)
 
 /obj/random/tech_supply
@@ -169,11 +170,11 @@
 	icon_state = "pack0"
 
 /obj/random/medical/spawn_choices()
-	return list(/obj/random/medical/lite = 21,
-				/obj/item/bodybag = 2,
+	return list(/obj/random/medical/lite = 10,
+				/obj/item/bodybag = 4,
 				/obj/item/reagent_containers/glass/bottle/inaprovaline = 2,
 				/obj/item/reagent_containers/glass/bottle/antitoxin = 2,
-				/obj/item/storage/pill_bottle = 2,
+				/obj/item/storage/pill_bottle = 8,
 				/obj/item/storage/pill_bottle/tramadol = 1,
 				/obj/item/storage/pill_bottle/citalopram = 2,
 				/obj/item/storage/pill_bottle/dexalin_plus = 1,
@@ -194,6 +195,7 @@
 
 /obj/random/medical/lite/spawn_choices()
 	return list(/obj/item/stack/medical/bruise_pack = 4,
+				/obj/item/storage/pill_bottle = 12,
 				/obj/item/stack/medical/ointment = 4,
 				/obj/item/storage/pill_bottle/antidexafen = 2,
 				/obj/item/storage/pill_bottle/paracetamol = 2,
@@ -253,7 +255,7 @@
 				/obj/item/material/knife/folding/combat/balisong = 2,
 				/obj/item/material/knife/folding/combat/switchblade = 1,
 				/obj/item/storage/secure/briefcase/money = 1,
-				/obj/item/storage/box/syndie_kit/cigarette = 1,
+				/obj/item/storage/box/contraband/cigarette = 1,
 				/obj/item/stack/telecrystal = 1,
 				/obj/item/clothing/under/syndicate = 2,
 				/obj/item/reagent_containers/syringe = 3,
@@ -314,17 +316,17 @@
 				/obj/item/gun/projectile/automatic/merc_smg = 2,
 				/obj/item/gun/projectile/automatic/assault_rifle = 3,
 				/obj/item/gun/projectile/automatic/bullpup_rifle = 2,
-				/obj/item/gun/projectile/pistol/sec = 4,
+				/obj/item/gun/projectile/pistol/slug = 4,
 				/obj/item/gun/projectile/pistol/holdout = 2,
 				/obj/item/gun/projectile/pirate = 2,
 				/obj/item/gun/projectile/revolver = 4,
 				/obj/item/gun/projectile/automatic/sec_smg = 3,
-				/obj/item/gun/projectile/revolver/holdout = 2,
+				/obj/item/gun/projectile/revolver/imperial/holdout = 2,
 				/obj/item/gun/projectile/shotgun/doublebarrel = 3,
 				/obj/item/gun/projectile/shotgun/doublebarrel/sawn = 3,
 				/obj/item/gun/projectile/heavysniper = 1,
 				/obj/item/gun/projectile/shotgun/pump/combat = 2,
-				/obj/item/gun/projectile/pistol/throwback = 3,
+				/obj/item/gun/projectile/pistol/slug/old = 3,
 				/obj/item/gun/projectile/pistol/broomstick = 1)
 
 /obj/random/handgun
@@ -334,11 +336,11 @@
 	icon_state = "secguncomp"
 
 /obj/random/handgun/spawn_choices()
-	return list(/obj/item/gun/projectile/pistol/sec = 3,
+	return list(/obj/item/gun/projectile/pistol/slug = 3,
 				/obj/item/gun/energy/gun = 2,
 				/obj/item/gun/projectile/pistol/holdout = 2,
 				/obj/item/gun/energy/retro = 1,
-				/obj/item/gun/projectile/pistol/throwback = 1,
+				/obj/item/gun/projectile/pistol/slug/old = 1,
 				/obj/item/gun/projectile/pistol/broomstick = 1)
 
 /obj/random/ammo
@@ -478,15 +480,15 @@
 /obj/random/closet/spawn_choices()
 	return list(/obj/structure/closet,
 				/obj/structure/closet/firecloset,
-				/obj/structure/closet/emcloset,
+				/obj/structure/closet/warhammer/emcloset,
 				/obj/structure/closet/jcloset,
 				/obj/structure/closet/athletic_mixed,
 				/obj/structure/closet/toolcloset,
 				/obj/structure/closet/l3closet/general,
 				/obj/structure/closet/cabinet,
 				/obj/structure/closet/crate,
-				/obj/structure/closet/crate/freezer,
-				/obj/structure/closet/crate/freezer/rations,
+				/obj/structure/closet/crate/warhammer/freezer,
+				/obj/structure/closet/crate/warhammer/freezer/rations,
 				/obj/structure/closet/crate/internals,
 				/obj/structure/closet/crate/trashcart,
 				/obj/structure/closet/crate/medical,
@@ -734,7 +736,7 @@
 				/obj/item/pizzabox/mushroom,
 				/obj/item/pizzabox/fruit,
 				/obj/item/reagent_containers/food/snacks/plumphelmetbiscuit,
-				/obj/item/reagent_containers/food/snacks/skrellsnacks)
+				/obj/item/reagent_containers/food/snacks/tau)
 
 
 /obj/random/storage
@@ -813,7 +815,7 @@
 /obj/random/gloves/spawn_choices()
 	return list(/obj/item/clothing/gloves/insulated = 3,
 				/obj/item/clothing/gloves/thick = 6,
-				/obj/item/clothing/gloves/thick/botany = 5,
+				/obj/item/clothing/gloves/thick/leather = 5,
 				/obj/item/clothing/gloves/latex = 4,
 				/obj/item/clothing/gloves/thick/swat = 3,
 				/obj/item/clothing/gloves/thick/combat = 3,
@@ -880,21 +882,21 @@
 	icon_state = "syndicate"
 
 /obj/random/suit/spawn_choices()
-	return list(/obj/item/clothing/suit/storage/hazardvest = 4,
-				/obj/item/clothing/suit/storage/toggle/labcoat = 4,
+	return list(/obj/item/clothing/suit/armor/grim/storage/hazardvest = 4,
+				/obj/item/clothing/suit/armor/grim/toggle/labcoat = 4,
 				/obj/item/clothing/suit/space/emergency = 1,
 				/obj/item/clothing/suit/armor/vest = 4,
-				/obj/item/clothing/suit/storage/security_chest_rig = 4,
-				/obj/item/clothing/suit/storage/vest/tactical = 1,
-				/obj/item/clothing/suit/storage/vest = 3,
-				/obj/item/clothing/suit/storage/toggle/bomber = 3,
+				/obj/item/clothing/suit/armor/grim/storage/security_chest_rig = 4,
+				/obj/item/clothing/suit/armor/grim/storage/vest/tactical = 1,
+				/obj/item/clothing/suit/armor/grim/storage/vest = 3,
+				/obj/item/clothing/suit/armor/grim/toggle/bomber = 3,
 				/obj/item/clothing/suit/chef/classic = 3,
 				/obj/item/clothing/suit/surgicalapron = 2,
 				/obj/item/clothing/suit/apron/overalls = 3,
-				/obj/item/clothing/suit/bio_suit/general = 1,
-				/obj/item/clothing/suit/storage/toggle/hoodie/black = 3,
-				/obj/item/clothing/suit/storage/toggle/brown_jacket = 3,
-				/obj/item/clothing/suit/storage/leather_jacket = 3,
+				/obj/item/clothing/suit/armor/grim/bio_suit/general = 1,
+				/obj/item/clothing/suit/armor/grim/toggle/hoodie/black = 3,
+				/obj/item/clothing/suit/armor/grim/toggle/brown_jacket = 3,
+				/obj/item/clothing/suit/armor/grim/storage/leather_jacket = 3,
 				/obj/item/clothing/suit/apron = 4)
 
 /obj/random/clothing
@@ -956,7 +958,7 @@ GLOBAL_LIST_INIT(random_backpacks, list(
 /obj/random/backpack
 	name = "random backpack"
 	desc = "This is a random backpack."
-	icon = 'icons/obj/clothing/obj_backpacks.dmi'
+	icon = 'icons/obj/storage.dmi'
 	icon_state = "backpack"
 
 /obj/random/backpack/spawn_choices()
@@ -973,10 +975,9 @@ GLOBAL_LIST_INIT(random_backpacks, list(
 				/obj/item/spacecash/bundle/c10 = 3,
 				/obj/item/spacecash/bundle/c20 = 3,
 				/obj/item/spacecash/bundle/c50 = 2,
-				/obj/item/spacecash/bundle/c100 = 2,
-				/obj/item/spacecash/bundle/c1000 = 1)
+				/obj/item/spacecash/bundle/c100 = 2)
 
-/obj/random/documents // top secret documents for SCG eyes only
+/obj/random/documents // top secret documents for Imperial eyes only
 	name = "random secret documents"
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "docs_generic"
@@ -1044,56 +1045,8 @@ something, make sure it's not in one of the other lists.*/
 /obj/random/loot /*Better loot for away missions and salvage */
 	name = "random loot"
 	desc = "This is some random loot."
-	icon = 'icons/obj/parcels.dmi'
-	icon_state = "gift5"
-
-/obj/random/loot/spawn_choices()
-	return list(/obj/random/energy = 10,
-				/obj/random/projectile = 10,
-				/obj/random/voidhelmet = 10,
-				/obj/random/voidsuit = 10,
-				/obj/random/hardsuit = 10,
-				/obj/item/clothing/mask/muzzle = 7,
-				/obj/item/clothing/mask/gas/vox = 8,
-				/obj/item/clothing/mask/gas/syndicate = 10,
-				/obj/item/clothing/glasses/night = 3,
-				/obj/item/clothing/glasses/thermal = 1,
-				/obj/item/clothing/glasses/welding/superior = 7,
-				/obj/item/clothing/head/collectable/petehat = 4,
-				/obj/item/clothing/suit/storage/vest/merc = 3,
-				/obj/item/clothing/suit/straight_jacket = 6,
-				/obj/item/clothing/head/helmet/merc = 3,
-				/obj/item/stack/material/diamond/ten = 7,
-				/obj/item/stack/material/glass/boron_reinforced/ten = 7,
-				/obj/item/stack/material/marble/ten = 8,
-				/obj/item/stack/material/phoron/ten = 7,
-				/obj/item/stack/material/gold/ten = 7,
-				/obj/item/stack/material/silver/ten = 7,
-				/obj/item/stack/material/osmium/ten = 7,
-				/obj/item/stack/material/platinum/ten = 8,
-				/obj/item/stack/material/tritium/ten = 7,
-				/obj/item/stack/material/mhydrogen/ten = 6,
-				/obj/item/stack/material/plasteel/ten = 9,
-				/obj/item/storage/box/monkeycubes = 5,
-				/obj/item/storage/box/monkeycubes/neaeracubes = 4,
-				/obj/item/storage/box/monkeycubes/stokcubes = 4,
-				/obj/item/storage/box/monkeycubes/farwacubes = 4,
-				/obj/item/storage/firstaid/surgery = 4,
-				/obj/item/cell/infinite = 1,
-				/obj/item/archaeological_find = 2,
-				/obj/machinery/artifact = 1,
-				/obj/item/device/multitool/hacktool = 2,
-				/obj/item/surgicaldrill = 7,
-				/obj/item/FixOVein = 7,
-				/obj/item/retractor = 7,
-				/obj/item/hemostat = 7,
-				/obj/item/cautery = 7,
-				/obj/item/bonesetter = 7,
-				/obj/item/bonegel = 7,
-				/obj/item/circular_saw = 7,
-				/obj/item/scalpel/basic = 7,
-				/obj/item/melee/baton/loaded = 9,
-				/obj/item/device/radio/headset/syndicate = 6)
+	icon = 'icons/effects/random_spawners.dmi'
+	icon_state = "gift5" // do not fucking assign anything to this.
 
 /obj/random/voidhelmet
 	name = "Random Voidsuit Helmet"
@@ -1143,7 +1096,7 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/hardsuit
 	name = "Random Hardsuit"
-	desc = "This is a random hardsuit control module."
+	desc = "This is a random power armour."
 	icon = 'icons/obj/rig_modules.dmi'
 	icon_state = "generic"
 

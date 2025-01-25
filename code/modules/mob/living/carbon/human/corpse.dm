@@ -50,8 +50,8 @@
 /obj/landmark/corpse/LateInitialize(mapload)
 	var/new_species = pickweight(species)
 	var/mob/living/carbon/human/corpse = new (loc, new_species)
-	corpse.adjustOxyLoss(corpse.maxHealth)
-	corpse.setBrainLoss(corpse.maxHealth)
+	corpse.adjustOxyLoss(corpse.maxhealth)
+	corpse.setBrainLoss(corpse.maxhealth)
 	corpse.faction = MOB_FACTION_NEUTRAL
 	var/obj/item/organ/internal/heart/heart = corpse.internal_organs_by_name[BP_HEART]
 	if (heart)
@@ -169,7 +169,7 @@
 
 
 /obj/landmark/corpse/bridgeofficer
-	name = "Bridge Officer"
+	name = "Void Officer"
 	corpse_outfits = list(/singleton/hierarchy/outfit/nanotrasen/officer)
 
 /obj/landmark/corpse/commander
@@ -193,14 +193,23 @@
 /obj/landmark/corpse/russian/ranged
 	corpse_outfits = list(/singleton/hierarchy/outfit/soviet_soldier)
 
-/obj/landmark/corpse/syndicate
-	name = "Syndicate Operative"
-	corpse_outfits = list(/singleton/hierarchy/outfit/mercenary/syndicate)
+/obj/landmark/corpse/infardi
+	name = "Infardi Militia"
+	corpse_outfits = list(/singleton/hierarchy/outfit/mercenary/infardi)
 	spawn_flags = CORPSE_SPAWNER_NO_RANDOMIZATION
 
-/obj/landmark/corpse/syndicate/commando
-	name = "Syndicate Commando"
-	corpse_outfits = list(/singleton/hierarchy/outfit/mercenary/syndicate/commando)
+/obj/landmark/corpse/infardi/trooper
+	name = "Infardi Trooper"
+	corpse_outfits = list(/singleton/hierarchy/outfit/mercenary/infardi/trooper)
+	spawn_flags = CORPSE_SPAWNER_NO_RANDOMIZATION
+
+/obj/landmark/corpse/bloodpact
+	name = "Bloodpact Soldier"
+	corpse_outfits = list(/singleton/hierarchy/outfit/mercenary/bloodpact)
+
+/obj/landmark/corpse/bloodpact/commando
+	name = "Bloodpact Commando"
+	corpse_outfits = list(/singleton/hierarchy/outfit/mercenary/bloodpact/commando)
 
 /obj/landmark/corpse/anomalist
 	name = "Dead Anomalist"

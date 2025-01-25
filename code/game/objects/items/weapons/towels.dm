@@ -4,7 +4,7 @@
 	icon_state = "towel"
 	item_flags = ITEM_FLAG_IS_BELT | ITEM_FLAG_WASHER_ALLOWED
 	slot_flags = SLOT_HEAD | SLOT_BELT | SLOT_OCLOTHING
-	force = 0.5
+	force = 2
 	w_class = ITEM_SIZE_NORMAL
 	attack_verb = list("whipped")
 	hitsound = 'sound/weapons/towelwhip.ogg'
@@ -15,7 +15,6 @@
 		if(slot_head)
 			sprite_sheets = list(
 				SPECIES_VOX = 'icons/mob/species/vox/onmob_head_vox.dmi',
-				SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi',
 				SPECIES_NABBER = 'icons/mob/species/nabber/onmob_head_gas.dmi'
 				)
 		if(slot_belt)
@@ -23,7 +22,6 @@
 		if(slot_wear_suit)
 			sprite_sheets = list(
 				SPECIES_VOX = 'icons/mob/species/vox/onmob_suit_vox.dmi',
-				SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
 				SPECIES_NABBER = 'icons/mob/species/nabber/onmob_suit_gas.dmi'
 				)
 	return ..()
@@ -40,5 +38,5 @@
 	name = "golden fleece"
 	desc = "The legendary Golden Fleece of Jason made real."
 	color = "#ffd700"
-	force = 1
+	force = 13
 	attack_verb = list("smote")

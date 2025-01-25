@@ -264,37 +264,37 @@ var/global/default_mobloc = null
 	damagetype = DAMAGE_PAIN
 
 // =================================================================
-// Unathi
+// Kroot
 // =================================================================
 
 /datum/unit_test/mob_damage/unathi
-	name = "MOB: Unathi damage check template"
+	name = "MOB: Kroot damage check template"
 	template = /datum/unit_test/mob_damage/unathi
 	mob_type = /mob/living/carbon/human/unathi
 
 /datum/unit_test/mob_damage/unathi/brute
-	name = "MOB: Unathi Brute Damage Check"
+	name = "MOB: Kroot Brute Damage Check"
 	damagetype = DAMAGE_BRUTE
 	expected_vulnerability = ARMORED
 
 /datum/unit_test/mob_damage/unathi/fire
-	name = "MOB: Unathi Fire Damage Check"
+	name = "MOB: Kroot Fire Damage Check"
 	damagetype = DAMAGE_BURN
 
 /datum/unit_test/mob_damage/unathi/tox
-	name = "MOB: Unathi Toxins Damage Check"
+	name = "MOB: Kroot Toxins Damage Check"
 	damagetype = DAMAGE_TOXIN
 
 /datum/unit_test/mob_damage/unathi/oxy
-	name = "MOB: Unathi Oxygen Damage Check"
+	name = "MOB: Kroot Oxygen Damage Check"
 	damagetype = DAMAGE_OXY
 
 /datum/unit_test/mob_damage/unathi/genetic
-	name = "MOB: Unathi Genetic Damage Check"
+	name = "MOB: Kroot Genetic Damage Check"
 	damagetype = DAMAGE_GENETIC
 
 /datum/unit_test/mob_damage/unathi/pain
-	name = "MOB: Unathi Pain Damage Check"
+	name = "MOB: Kroot Pain Damage Check"
 	damagetype = DAMAGE_PAIN
 
 // =================================================================
@@ -338,34 +338,34 @@ var/global/default_mobloc = null
 // =================================================================
 
 /datum/unit_test/mob_damage/vox
-	name = "MOB: Vox damage check template"
+	name = "MOB: Xenos damage check template"
 	template = /datum/unit_test/mob_damage/vox
 	mob_type = /mob/living/carbon/human/vox
 
 /datum/unit_test/mob_damage/vox/brute
-	name = "MOB: Vox Brute Damage Check"
+	name = "MOB: Xenos Brute Damage Check"
 	damagetype = DAMAGE_BRUTE
 
 /datum/unit_test/mob_damage/vox/fire
-	name = "MOB: Vox Fire Damage Check"
+	name = "MOB: Xenos Fire Damage Check"
 	damagetype = DAMAGE_BURN
 
 /datum/unit_test/mob_damage/vox/tox
-	name = "MOB: Vox Toxins Damage Check"
+	name = "MOB: Xenos Toxins Damage Check"
 	damagetype = DAMAGE_TOXIN
 
 /datum/unit_test/mob_damage/vox/oxy
-	name = "MOB: Vox Oxygen Damage Check"
+	name = "MOB: Xenos Oxygen Damage Check"
 	damagetype = DAMAGE_OXY
 
 /datum/unit_test/mob_damage/vox/genetic
-	name = "MOB: Vox Genetic Damage Check"
+	name = "MOB: Xenos Genetic Damage Check"
 	damagetype = DAMAGE_GENETIC
 	expected_vulnerability = IMMUNE
 
 
 /datum/unit_test/mob_damage/vox/pain
-	name = "MOB: Vox Pain Damage Check"
+	name = "MOB: Xenos Pain Damage Check"
 	damagetype = DAMAGE_PAIN
 
 // =================================================================

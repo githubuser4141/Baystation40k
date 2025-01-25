@@ -1,6 +1,6 @@
 /obj/item/storage/bible
-	name = "bible"
-	desc = "Apply to head repeatedly."
+	name = "imperial cult"
+	desc = "The imperial creed deems the God Emperor as the master of Mankind, by the will of the gods."
 	icon = 'icons/obj/books.dmi'
 	icon_state ="bible"
 	throw_speed = 1
@@ -9,7 +9,7 @@
 	max_w_class = ITEM_SIZE_SMALL
 	max_storage_space = 4
 	var/mob/affecting = null
-	var/deity_name = "Christ"
+	var/deity_name = "The God Emperor"
 	var/renamed = 0
 	var/icon_changed = 0
 
@@ -25,8 +25,8 @@
 		)
 
 /obj/item/storage/bible/bible
-	name = "\improper Bible"
-	desc = "The central religious text of Christianity."
+	icon = 'icons/obj/items/books.dmi'
+	icon_state = "ERIT"
 	renamed = 1
 	icon_changed = 1
 
@@ -69,7 +69,7 @@
 	. = FALSE
 	if (user == M || !ishuman(user) || !ishuman(M))
 		return FALSE
-	if (user.mind && istype(user.mind.assigned_job, /datum/job/chaplain))
+	if (user.mind && istype(user.mind.assigned_job, /datum/job/chaplain_militant))
 		user.visible_message(SPAN_NOTICE("\The [user] places \the [src] on \the [M]'s forehead, reciting a prayer..."))
 		if (do_after(user, 5 SECONDS, M, DO_DEFAULT | DO_USER_UNIQUE_ACT | DO_PUBLIC_PROGRESS) && user.Adjacent(M))
 			var/datum/pronouns/pronouns = user.choose_from_pronouns()
@@ -81,7 +81,7 @@
 		return TRUE
 
 /obj/item/storage/bible/use_after(atom/A, mob/living/user, click_parameters)
-	if(user.mind && istype(user.mind.assigned_job, /datum/job/chaplain))
+	if(user.mind && istype(user.mind.assigned_job, /datum/job/chaplain_militant))
 		if(A.reagents && A.reagents.has_reagent(/datum/reagent/water))
 			to_chat(user, SPAN_NOTICE("You bless \the [A]."))
 			var/water2holy = A.reagents.get_reagent_amount(/datum/reagent/water)
@@ -97,7 +97,7 @@
 /obj/item/storage/bible/attack_self(mob/living/carbon/human/user)
 	if(!ishuman(user))
 		return
-	if(user.mind && istype(user.mind.assigned_job, /datum/job/chaplain))
+	if(user.mind && istype(user.mind.assigned_job, /datum/job/chaplain_militant))
 		user.visible_message("\The [user] begins to read a passage from \the [src]...", "You begin to read a passage from \the [src]...")
 		if(do_after(user, 5 SECONDS, src, do_flags = DO_PUBLIC_UNIQUE))
 			user.visible_message("\The [user] reads a passage from \the [src].", "You read a passage from \the [src].")
@@ -134,8 +134,8 @@
 				if(icon_picked != "don't change" && icon_picked)
 					icon_state = icon_picked
 				if(i != 0)
-					var/confirm = alert(M, "Is this what you want? Chances remaining: [i]", "Confirmation", "Yes", "No")
-					if(confirm == "Yes")
+					var/confirm = alert(M, "Is this what you want? Chances remaining: [i]", "Confirmation", "Compliance", "No")
+					if(confirm == "Compliance")
 						icon_changed = 1
 						break
 				if(i == 0)

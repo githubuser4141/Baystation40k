@@ -19,11 +19,11 @@
 		, "ahimsa" = "the Ahimsa, a symbol of Jainism"
 		, "yinandyang" = "the yin and yang, a symbol of Taoism"
 		, "torii" = "the torii, a symbol of Shinto"
-		, "lhossek" = "the Lhossek skull, a symbol of the Grand Stratagem, an Unathi faith"
-		, "threearrows" = "the Three Arrows, a symbol of the Fruitful Lights, an Unathi faith"
-		, "bushroot" = "the Hrukhza bush root, a symbol of the Hand of the Vine, an Unathi faith"
-		, "sundial" = "the sundial, a symbol of Precursor worship, an Unathi faith"
-		, "cupofknowledge" = "the Cup of Knowledge, a symbol of Markesheli, an Unathi faith"
+		, "lhossek" = "the Lhossek skull, a symbol of the Grand Stratagem, an Kroot faith"
+		, "threearrows" = "the Three Arrows, a symbol of the Fruitful Lights, an Kroot faith"
+		, "bushroot" = "the Hrukhza bush root, a symbol of the Hand of the Vine, an Kroot faith"
+		, "sundial" = "the sundial, a symbol of Precursor worship, an Kroot faith"
+		, "cupofknowledge" = "the Cup of Knowledge, a symbol of Markesheli, an Kroot faith"
 	)
 	icon = 'icons/obj/structures/banner.dmi'
 	icon_state = "blank_up"
@@ -46,7 +46,7 @@
 	update_icon()
 
 /obj/structure/banner/attack_hand(mob/user)
-	if (!user.mind || !istype(user.mind.assigned_job, /datum/job/chaplain))
+	if (!user.mind || !istype(user.mind.assigned_job, /datum/job/chaplain_militant))
 		to_chat(user, SPAN_WARNING("Only the Chaplain can change the banner!"))
 	else
 		var/banner = input(user, "Pick a symbol:") as null | anything in banner_type

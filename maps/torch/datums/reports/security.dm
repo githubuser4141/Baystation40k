@@ -4,7 +4,7 @@
 
 /datum/computer_file/report/recipient/sec/New()
 	..()
-	set_access(access_security)
+	set_access(access_restricted)
 	set_access(access_heads, override = 0)
 
 /datum/computer_file/report/recipient/sec/incident
@@ -14,7 +14,7 @@
 
 /datum/computer_file/report/recipient/sec/incident/generate_fields()
 	..()
-	add_field(/datum/report_field/text_label/header, "SEV Torch Security Department")
+	add_field(/datum/report_field/text_label/header, "Dauntless Security Department")
 	add_field(/datum/report_field/text_label/instruction, "To be filled out by Security Personnel on duty responding to the Incident. Report must be signed and submitted before the end of the shift!")
 	add_field(/datum/report_field/people/from_manifest, "Reporting Security Personnel")
 	add_field(/datum/report_field/simple_text, "Offense/Incident Type")
@@ -28,7 +28,7 @@
 	add_field(/datum/report_field/pencode_text, "Description of Items/Property")
 	add_field(/datum/report_field/pencode_text, "Narrative")
 	add_field(/datum/report_field/signature, "Reporting Security Personnel's signature")
-	set_access(access_edit = access_security)
+	set_access(access_edit = access_restricted)
 
 /datum/computer_file/report/recipient/sec/investigation
 	form_name = "SCG-SEC-02"
@@ -37,7 +37,7 @@
 
 /datum/computer_file/report/recipient/sec/investigation/generate_fields()
 	..()
-	add_field(/datum/report_field/text_label/header, "SEV Torch Security Department")
+	add_field(/datum/report_field/text_label/header, "Dauntless Security Department")
 	add_field(/datum/report_field/text_label/instruction, "For internal use only.")
 	add_field(/datum/report_field/people/from_manifest, "Name")
 	add_field(/datum/report_field/date, "Date")
@@ -46,7 +46,7 @@
 	add_field(/datum/report_field/pencode_text, "Summary")
 	add_field(/datum/report_field/pencode_text, "Observations")
 	add_field(/datum/report_field/signature, "Signature")
-	set_access(access_edit = access_security)
+	set_access(access_edit = access_restricted)
 
 /datum/computer_file/report/recipient/sec/evidence
 	form_name = "SCG-SEC-02b"
@@ -56,16 +56,16 @@
 /datum/computer_file/report/recipient/sec/evidence/generate_fields()
 	..()
 	var/datum/report_field/temp_field
-	add_field(/datum/report_field/text_label/header, "SEV Torch Security Department")
+	add_field(/datum/report_field/text_label/header, "Dauntless Security Department")
 	add_field(/datum/report_field/date, "Date")
 	add_field(/datum/report_field/time, "Time")
 	add_field(/datum/report_field/people/from_manifest, "Confiscated from")
 	add_field(/datum/report_field/pencode_text, "List of items in custody/evidence lockup")
-	set_access(access_edit = access_security)
+	set_access(access_edit = access_restricted)
 	temp_field = add_field(/datum/report_field/signature, "Brig Chief's signature")
-	temp_field.set_access(access_edit = list(access_security, access_armory))
+	temp_field.set_access(access_edit = list(access_restricted, access_restricted_command))
 	temp_field = add_field(/datum/report_field/signature, "Forensic Technician's signature")
-	temp_field.set_access(access_edit = list(access_security, access_forensics_lockers))
+	temp_field.set_access(access_edit = list(access_restricted, access_forensics_lockers))
 
 /datum/computer_file/report/recipient/sec/statement
 	form_name = "SCG-SEC-02c"
@@ -74,7 +74,7 @@
 
 /datum/computer_file/report/recipient/sec/statement/generate_fields()
 	..()
-	add_field(/datum/report_field/text_label/header, "SEV Torch Security Department")
+	add_field(/datum/report_field/text_label/header, "Dauntless Security Department")
 	add_field(/datum/report_field/text_label/instruction, "To be filled out by crewmember involved to document their side of an incident.")
 	add_field(/datum/report_field/people/from_manifest, "Submitting Individual")
 	add_field(/datum/report_field/simple_text, "Offense/Incident Type")
@@ -88,7 +88,7 @@
 	add_field(/datum/report_field/pencode_text, "Narrative")
 	add_field(/datum/report_field/text_label/instruction, "By submitting this form, I understand this is considered a formal security report. I understand that all information written above is truthful and accurate. I understand that intentionally filing a fraudulent security report is a criminal offense that will be prosecuted to the fullest extent of the law.  As this is a binding legal document, I understand that by filing this form that any intentionally false information may warrant disciplinary action against myself. This statement was given on my own volition to assist with documenting the above summarized incident.")
 	add_field(/datum/report_field/signature, "Signature")
-	set_access(access_edit = access_security)
+	set_access(access_edit = access_restricted)
 
 /datum/computer_file/report/recipient/sec/arrest
 	form_name = "SCG-SEC-03"
@@ -97,7 +97,7 @@
 
 /datum/computer_file/report/recipient/sec/arrest/generate_fields()
 	..()
-	add_field(/datum/report_field/text_label/header, "SEV Torch Security Department")
+	add_field(/datum/report_field/text_label/header, "Dauntless Security Department")
 	add_field(/datum/report_field/text_label/instruction, "To be filled out by Arresting Security Personnel or Brig Chief. Report must be signed and submitted before the end of the shift!")
 	add_field(/datum/report_field/people/from_manifest, "Booking Security Personnel")
 	add_field(/datum/report_field/people/list_from_manifest, "Arresting Security Personnel")
@@ -120,7 +120,7 @@
 	add_field(/datum/report_field/simple_text, "IF YES, what injuries are pre-existing?")
 	add_field(/datum/report_field/text_label/instruction, "This document MUST be submitted to, and reviewed by, the Chief of Security or Brig Chief.")
 	add_field(/datum/report_field/signature, "Reporting Security Personnel's signature")
-	set_access(access_edit = access_security)
+	set_access(access_edit = access_restricted)
 
 /datum/computer_file/report/recipient/sec/restraining
 	form_name = "SCG-SEC-04"
@@ -129,7 +129,7 @@
 
 /datum/computer_file/report/recipient/sec/restraining/generate_fields()
 	..()
-	add_field(/datum/report_field/text_label/header, "SEV Torch Security Department")
+	add_field(/datum/report_field/text_label/header, "Dauntless Security Department")
 	add_field(/datum/report_field/text_label/instruction, "To be filled out by the Chief of Security, Executive Officer, or Commanding Officer. Report must be signed and submitted for the order to be considered valid. Any paper copies must be stamped.")
 	add_field(/datum/report_field/people/from_manifest, "Plantiff")
 	add_field(/datum/report_field/people/from_manifest, "Defendant(s)")
@@ -146,7 +146,7 @@
 
 /datum/computer_file/report/recipient/sec/ltc/generate_fields()
 	..()
-	add_field(/datum/report_field/text_label/header, "SEV Torch Security Department")
+	add_field(/datum/report_field/text_label/header, "Dauntless Security Department")
 	add_field(/datum/report_field/text_label/instruction, "To be filled out by the Chief of Security, Executive Officer, or Commanding Officer. Report must be signed and submitted for the order to be considered valid. Any paper copies must be stamped.")
 	add_field(/datum/report_field/people/from_manifest, "Licensee")
 	add_field(/datum/report_field/date, "Date Effective")

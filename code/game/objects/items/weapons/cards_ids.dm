@@ -432,21 +432,21 @@ var/global/const/NO_EMAG_ACT = -50
 /obj/item/card/id/silver
 	name = "identification card"
 	desc = "A silver card which shows honour and dedication."
-	item_state = "silver_id"
-	job_access_type = /datum/job/hop
+	item_state = "silver_id" // This is on-mob so keep. It's under onmob/lefthand
+	job_access_type = /datum/job/seneschal
 
 /obj/item/card/id/gold
 	name = "identification card"
 	desc = "A golden card which shows power and might."
-	job_access_type = /datum/job/captain
+	job_access_type = /datum/job/rogue_trader
 	color = "#d4c780"
 	extra_details = list("goldstripe")
 
 /obj/item/card/id/syndicate_command
 	name = "syndicate ID card"
-	desc = "An ID straight from the Syndicate."
-	registered_name = "Syndicate"
-	assignment = "Syndicate Overlord"
+	desc = "An ID straight from the Heretic."
+	registered_name = "Heretic"
+	assignment = "Heretic Overlord"
 	access = list(access_syndicate, access_external_airlocks)
 	color = COLOR_RED_GRAY
 	detail_color = COLOR_GRAY40
@@ -556,56 +556,56 @@ var/global/const/NO_EMAG_ACT = -50
 /obj/item/card/id/medical
 	name = "identification card"
 	desc = "A card issued to medical staff."
-	job_access_type = /datum/job/doctor
+	job_access_type = /datum/job/medicae
 	detail_color = COLOR_PALE_BLUE_GRAY
 
 /obj/item/card/id/medical/chemist
-	job_access_type = /datum/job/chemist
+	job_access_type = /datum/job/pharmacologis
 
 /obj/item/card/id/medical/geneticist
-	job_access_type = /datum/job/geneticist
+	job_access_type = null
 
 /obj/item/card/id/medical/psychiatrist
-	job_access_type = /datum/job/psychiatrist
+	job_access_type = /datum/job/rogue_guest
 
 /obj/item/card/id/medical/paramedic
-	job_access_type = /datum/job/Paramedic
+	job_access_type = null
 
 /obj/item/card/id/medical/head
 	name = "identification card"
 	desc = "A card which represents care and compassion."
-	job_access_type = /datum/job/cmo
+	job_access_type = /datum/job/magos_biologis
 	extra_details = list("goldstripe")
 
 /obj/item/card/id/security
 	name = "identification card"
 	desc = "A card issued to security staff."
-	job_access_type = /datum/job/officer
+	job_access_type = /datum/job/enforcer
 	color = COLOR_OFF_WHITE
 	detail_color = COLOR_MAROON
 
 /obj/item/card/id/security/warden
-	job_access_type = /datum/job/warden
+	job_access_type = /datum/job/enforcer_sergeant
 
 /obj/item/card/id/security/detective
-	job_access_type = /datum/job/detective
+	job_access_type = /datum/job/guardsman
 
 /obj/item/card/id/security/head
 	name = "identification card"
 	desc = "A card which represents honor and protection."
-	job_access_type = /datum/job/hos
+	job_access_type = /datum/job/guard_captain
 	extra_details = list("goldstripe")
 
 /obj/item/card/id/engineering
 	name = "identification card"
 	desc = "A card issued to engineering staff."
-	job_access_type = /datum/job/engineer
+	job_access_type = /datum/job/tech_priest
 	detail_color = COLOR_SUN
 
 /obj/item/card/id/engineering/head
 	name = "identification card"
 	desc = "A card which represents creativity and ingenuity."
-	job_access_type = /datum/job/chief_engineer
+	job_access_type = /datum/job/magos_explorator
 	extra_details = list("goldstripe")
 
 /obj/item/card/id/science
@@ -629,16 +629,16 @@ var/global/const/NO_EMAG_ACT = -50
 /obj/item/card/id/cargo
 	name = "identification card"
 	desc = "A card issued to cargo staff."
-	job_access_type = /datum/job/cargo_tech
+	job_access_type = /datum/job/pilgrim
 	detail_color = COLOR_BROWN
 
 /obj/item/card/id/cargo/mining
-	job_access_type = /datum/job/mining
+	job_access_type = /datum/job/unexpected_guest
 
 /obj/item/card/id/cargo/head
 	name = "identification card"
 	desc = "A card which represents service and planning."
-	job_access_type = /datum/job/qm
+	job_access_type = /datum/job/noble_guest
 	extra_details = list("goldstripe")
 
 /obj/item/card/id/civilian
@@ -648,13 +648,13 @@ var/global/const/NO_EMAG_ACT = -50
 	detail_color = COLOR_CIVIE_GREEN
 
 /obj/item/card/id/civilian/chef
-	job_access_type = /datum/job/chef
+	job_access_type = /datum/job/chamber_magister
 
 /obj/item/card/id/civilian/botanist
 	job_access_type = /datum/job/hydro
 
 /obj/item/card/id/civilian/janitor
-	job_access_type = /datum/job/janitor
+	job_access_type = /datum/job/chamber_assistant
 
 /obj/item/card/id/civilian/librarian
 	job_access_type = /datum/job/librarian
@@ -664,7 +664,7 @@ var/global/const/NO_EMAG_ACT = -50
 	detail_color = COLOR_NAVY_BLUE
 
 /obj/item/card/id/civilian/chaplain
-	job_access_type = /datum/job/chaplain
+	job_access_type = /datum/job/chaplain_militant
 
 /obj/item/card/id/civilian/head //This is not the HoP. There's no position that uses this right now.
 	name = "identification card"
@@ -677,3 +677,191 @@ var/global/const/NO_EMAG_ACT = -50
 	access = list(access_merchant)
 	color = COLOR_OFF_WHITE
 	detail_color = COLOR_BEIGE
+
+// WARHAMEMR ID'S
+// WARHAMMER ID's
+
+/*
+/obj/item/card/id/merchant
+	name = "identification card"
+	desc = "A card issued to Merchants, indicating their right to sell and buy goods."
+	icon_state = "trader"
+	access = list(access_merchant)
+
+/obj/item/card/id/dog_tag
+	var/warfare_faction = null
+	icon_state = "dogtag"
+	item_state = "dogtag"
+	desc = "A metal dog tag. Functions like an ID."
+
+/obj/item/card/id/dog_tag/update_name()
+	var/final_name = "[registered_name]'s Dog Tag"
+	if(military_rank && military_rank.name_short)
+		final_name = military_rank.name_short + " " + final_name
+	if(assignment)
+		final_name = final_name + " ([assignment])"
+	SetName(final_name)
+
+/mob/living/carbon/human/set_id_info(var/obj/item/card/id/dog_tag)
+	..()
+	dog_tag.age = age
+
+/obj/item/card/id/dog_tag/guardsman
+	icon_state = "tagred"
+	access = list(access_village, access_restricted)
+
+/obj/item/card/id/dog_tag/guardsman/update_name()
+	var/final_name = "[registered_name]"
+	if(military_rank && military_rank.name_short)
+		final_name = military_rank.name_short + " " + final_name
+	if(assignment)
+		final_name = final_name + " ([assignment])"
+	SetName(final_name)
+
+/obj/item/card/id/commissar
+	name = "officio prefectus dog tag"
+	desc = "A metal dog tag with a winged skull engraved on it's opposite side, representing honor of the Officio Prefectus and Commissar and functioning like an ID."
+	assignment = "Commissar"
+	icon_state = "tagred"
+	item_state = "tagred"
+	access = list(access_restricted, access_guard_common, access_magi, access_restricted_command,
+			            access_village, access_all_personal_lockers,
+			            access_mechanicus, access_mining, access_medical,
+			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway)
+
+/obj/item/card/id/commissar/update_name()
+	var/final_name = "[registered_name]"
+	if(military_rank && military_rank.name_short)
+		final_name = military_rank.name_short + " " + final_name
+	if(assignment)
+		final_name = final_name + " ([assignment])"
+	SetName(final_name)
+
+
+/obj/item/card/id/psyker
+	name = "Sanctioned Psyker dog tag"
+	desc = "A metal dog tag with the symol of the Adeptus Astra Telepathica engraved on the front, acting as a symbol of a Primaris Psyker's sanctioend nature, and an access tag.."
+	assignment = "Sanctioned Psyker"
+	icon_state = "tagred"
+	item_state = "tagred"
+	access = list(access_restricted, access_guard_common, access_magi, access_restricted_command,
+			            access_village, access_all_personal_lockers,
+			            access_mechanicus, access_mining, access_medical,
+			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway)
+
+/obj/item/card/id/psyker/update_name()
+	var/final_name = "[registered_name]"
+	if(military_rank && military_rank.name_short)
+		final_name = military_rank.name_short + " " + final_name
+	if(assignment)
+		final_name = final_name + " ([assignment])"
+	SetName(final_name)
+
+/obj/item/card/id/commissar/spare
+	name = "commissar's spare dog tag"
+	desc = "A spare dog tag with a winged skull engraved on it's opposite side, representing honor of the Officio Prefectum and Commissar."
+
+/obj/item/card/id/dog_tag/kroot
+	icon_state = "tagred"
+	access = list(access_kroot)
+	sales_price = 15
+
+
+/obj/item/card/id/dog_tag/skitarii
+	icon_state = "tagred"
+	access = list(access_mechanicus, access_village, access_medical)
+
+/obj/item/card/id/dog_tag/ork
+	icon_state = "tagred"
+	access = list(access_kroot)
+	sales_price = 20
+
+*/
+
+// ALL RINGS AND ID'S BELOW THIS LINE DO NOT HAVE CORRECT ACCESSES. IF YOU USE THEM WITHOUT SETTING AN ACCESS THEY WILL BE USELESS AND WONT OPEN ANY DOORS.
+
+/obj/item/card/id/ring/tau
+	icon_state = "tau"
+	desc = "An ornate ring forged by Tau craftsmen. Functions like an ID."
+	sales_price = 20
+
+/obj/item/card/id/ring/administrator
+	icon_state = "admin_ring"
+	desc = "An ornate ring forged by Imperial jewelers. Functions like an ID."
+
+/obj/item/card/id/ring/goldring
+	name = "golden ring"
+	icon_state = "goldring"
+	desc = "A simple golden ring, can be combined with gems for some BLING BLING!"
+	sales_price = 20
+
+/obj/item/card/id/ring/disgracedmedicae
+	name = "access card"
+	icon_state = "medicae_ring"
+	desc = "An old ring signifying your position as a medicae. Still works to gain access to medical facilities and lockers."
+
+/obj/item/card/id/ring/miner
+	name = "access card"
+	icon_state = "cargo"
+	desc = "A ring entrusted to members of the mining guild. Additional access to the mines."
+
+
+// low tier key for peasants. easy for anyone to get
+/obj/item/card/id/key/on_update_icon()
+	ClearOverlays()
+	icon_state = initial(icon_state)
+
+/obj/item/card/id/key/low
+	name = "Lowly Key"
+	desc = "A lowly key befitting the common man upon this world. Probably opens a pilgrim's home, or something equally unimportant."
+	icon_state = "jail2"
+
+/obj/item/card/id/key/low/mineone
+	name = "Mining Hamlet Key 1"
+	desc = "Opens door 1"
+
+/obj/item/card/id/key/low/mine/two
+	name = "Mining Hamlet Key 2"
+	desc = "Opens door 2"
+
+/obj/item/card/id/key/low/mine/three
+	name = "Mining Hamlet Key 3"
+	desc = "Opens door 3"
+
+// middling key, for high tier peasant or cultist level
+/obj/item/card/id/key/middle
+	name = "Middling Key"
+	desc = "A key of mid-ground importance, maybe the thing it opens is actually valuable. Maybe not."
+	icon_state = "key2"
+
+// high tier super key, for nobles, mechanicus and other fancy things
+/obj/item/card/id/key/super
+	name = "Superior Key"
+	desc = "A key of notable quality. The door it guards surely has some sort of treasure locked away."
+	icon_state = "key3"
+
+/obj/item/card/id/key/super/inn
+	name = "Inn Key 1"
+	desc = "A Key belonging to the doors of the local Inn."
+/obj/item/card/id/key/super/inn/two
+	name = "Inn Key 2"
+	desc = "A Key belonging to the doors of the local Inn."
+
+
+// grand key. rogue trader, inquisitor, stuff like that
+/obj/item/card/id/key/grand
+	name = "Grand Key"
+	desc = "An exquisite piece of art, to open equally excellent doors and provide fortune to the owner of this key. Likely belonging to a high ranking officer or noble."
+	icon_state = "key4"
+
+/obj/item/card/id/key/grand/inq
+	name = "Inquisition Key"
+	desc = "A key to the Inquisitorial Black Ship, Simiel. This one also has access to the inquisitorial shuttle and other exotic parts of the ship"
+
+/obj/item/card/id/key/grand/monastary
+	name = "Monastary Key"
+	desc = "Key to general areas of His Monastary"
+
+/obj/item/card/id/key/grand/monastary/inner
+	name = "Inner Sanctum Key"
+	desc = "Key to the Inner Sactum of His Holyness' Church."

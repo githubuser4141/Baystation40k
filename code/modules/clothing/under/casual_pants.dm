@@ -7,9 +7,6 @@
 	gender = PLURAL
 	body_parts_covered = LOWER_TORSO|LEGS
 	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_under_pants.dmi')
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_under_pants_unathi.dmi',
-		)
 
 /obj/item/clothing/under/casual_pants/classicjeans
 	name = "classic jeans"
@@ -102,4 +99,5 @@
 /obj/item/clothing/under/casual_pants/baggy/camo
 	name = "baggy camo pants"
 	desc = "A pair of woodland camouflage pants. Probably not the best choice for space."
-	icon_state = "baggy_camopants"
+	icon_state = "camopants"
+	item_state = "camopants"

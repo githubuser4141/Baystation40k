@@ -4,14 +4,14 @@
  */
 
 /obj/item/storage/backpack
-	name = "backpack"
+	name = "rucksack"
 	desc = "You wear this on your back and put items into it."
-	icon = 'icons/obj/clothing/obj_backpacks.dmi'
+	icon = 'icons/obj/storage.dmi'
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/onmob/items/lefthand_backpacks.dmi',
 		slot_r_hand_str = 'icons/mob/onmob/items/righthand_backpacks.dmi',
 		)
-	icon_state = "backpack"
+	icon_state = "warfare_satchel"
 	item_state = null
 	//most backpacks use the default backpack state for inhand overlays
 	item_state_slots = list(
@@ -20,10 +20,11 @@
 		)
 	w_class = ITEM_SIZE_HUGE
 	slot_flags = SLOT_BACK
-	max_w_class = ITEM_SIZE_LARGE
+	max_w_class = ITEM_SIZE_HUGE
 	max_storage_space = DEFAULT_BACKPACK_STORAGE
 	open_sound = 'sound/effects/storage/unzip.ogg'
 	allow_slow_dump = TRUE
+	slowdown_general = 0.015
 
 	/// Can this backpack be opened while worn on the back?
 	var/worn_access = TRUE
@@ -63,6 +64,7 @@
 	desc = "A backpack that opens into a localized pocket of Blue Space."
 	origin_tech = list(TECH_BLUESPACE = 4)
 	icon_state = "holdingpack"
+	max_w_class = ITEM_SIZE_HUGE
 	item_state_slots = list(
 		slot_l_hand_str = "holdingpack",
 		slot_r_hand_str = "holdingpack"
@@ -75,7 +77,7 @@
 
 /obj/item/storage/backpack/holding/use_tool(obj/item/W, mob/living/user, list/click_params)
 	if(istype(W, /obj/item/storage/backpack/holding) || istype(W, /obj/item/storage/bag/trash/bluespace))
-		to_chat(user, SPAN_WARNING("The Bluespace interfaces of the two devices conflict and malfunction."))
+		to_chat(user, SPAN_WARNING("The Warp interfaces of the two devices conflict and malfunction."))
 		qdel(W)
 		return TRUE
 	return ..()
@@ -117,7 +119,7 @@
 	)
 
 /obj/item/storage/backpack/security
-	name = "security backpack"
+	name = "militarum backpack"
 	desc = "It's a very robust backpack, for security-related needs."
 	icon_state = "securitypack"
 	item_state_slots = list(
@@ -126,7 +128,7 @@
 	)
 
 /obj/item/storage/backpack/security/exo
-	name = "corporate security backpack"
+	name = "corporate militarum backpack"
 	desc = "It's a very robust backpack, for security-related needs. This one is in EXO colors."
 	icon_state = "securitypack_exo"
 
@@ -227,7 +229,7 @@
 
 /obj/item/storage/backpack/sci
 	name = "science backpack"
-	desc = "It's a stain-resistant light backpack, modeled for use by Expeditionary Corps science personnel in laboratories and other scientific settings."
+	desc = "It's a stain-resistant light backpack, modeled for use by Dauntless science personnel in laboratories and other scientific settings."
 	icon_state = "scipack"
 	item_state_slots = list(
 		slot_l_hand_str = "scipack",
@@ -244,8 +246,21 @@
 	icon_state = "duffle"
 	item_state_slots = null
 	w_class = ITEM_SIZE_HUGE
-	max_storage_space = DEFAULT_BACKPACK_STORAGE + 10
+	max_storage_space = DEFAULT_BACKPACK_STORAGE + 6
 	worn_access = FALSE
+
+/obj/item/storage/backpack/dufflebag/gangerloot
+	startswith = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/heavyplate,
+		/obj/item/clothing/suit/armor/grim/scrapforged/heavycuirass,
+		/obj/item/clothing/suit/armor/grim/scrapforged/heavycuirass,
+		/obj/item/clothing/suit/armor/grim/scrapforged/heavycuirass,
+		/obj/item/clothing/head/helmet/pilgrimhelm/metalvisor,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/metalheavy,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/metalheavy,
+	)
+
 
 /obj/item/storage/backpack/dufflebag/syndie
 	name = "black dufflebag"
@@ -291,8 +306,8 @@
 	item_state_slots = list(slot_l_hand_str = "duffle_med", slot_r_hand_str = "duffle_med")
 
 /obj/item/storage/backpack/dufflebag/sec
-	name = "security dufflebag"
-	desc = "A large dufflebag for holding extra security supplies and ammunition."
+	name = "militarum dufflebag"
+	desc = "A large dufflebag for holding extra militarum supplies and ammunition."
 	icon_state = "duffle_sec"
 	item_state_slots = list(slot_l_hand_str = "duffle_sec", slot_r_hand_str = "duffle_sec")
 
@@ -362,7 +377,7 @@
 	icon_state = "pocketbook"
 	w_class = ITEM_SIZE_HUGE // to avoid recursive backpacks
 	slot_flags = SLOT_BACK
-	max_w_class = ITEM_SIZE_NORMAL
+	max_w_class = ITEM_SIZE_LARGE
 	max_storage_space = DEFAULT_LARGEBOX_STORAGE
 	color = "#212121"
 
@@ -412,7 +427,7 @@
 	icon_state = "satchel-gen"
 
 /obj/item/storage/backpack/satchel/sec
-	name = "security satchel"
+	name = "militarum satchel"
 	desc = "A robust satchel for security-related needs."
 	icon_state = "satchel-sec"
 	item_state_slots = list(
@@ -421,8 +436,8 @@
 		)
 
 /obj/item/storage/backpack/satchel/sec/exo
-	name = "corporate security satchel"
-	desc = "A robust satchel for corporate security-related needs. This one is in EXO colors."
+	name = "corporate militarum satchel"
+	desc = "A robust satchel for imperial security-related needs. This one is in EXO colors."
 	icon_state = "satchel-sec_exo"
 
 /obj/item/storage/backpack/satchel/hyd
@@ -441,52 +456,19 @@
 
 /obj/item/storage/backpack/satchel/sci
 	name = "science satchel"
-	desc = "It's a stain-resistant satchel, modeled for use by Expeditionary Corps science personnel in laboratories and other scientific settings."
+	desc = "It's a stain-resistant satchel, modeled for use by Dauntless science personnel in laboratories and other scientific settings."
 	icon_state = "satchel-sci"
 	item_state_slots = list(
 		slot_l_hand_str = "satchel-sci",
 		slot_r_hand_str = "satchel-sci",
 		)
 
-//Smuggler's satchel
-/obj/item/storage/backpack/satchel/flat
-	name = "\improper Smuggler's satchel"
-	desc = "A very slim satchel, that can easily fit into tight spaces."
-	icon_state = "satchel-flat"
-	item_state = "satchel-norm"
-	level = ATOM_LEVEL_UNDER_TILE
-	w_class = ITEM_SIZE_NORMAL //Can fit in backpacks itself.
-	storage_slots = 5
-	max_w_class = ITEM_SIZE_NORMAL
-	max_storage_space = 15
-	contents_banned = list(/obj/item/storage/backpack/satchel/flat)
-	startswith = list(
-		/obj/item/stack/tile/floor,
-		/obj/item/crowbar
-		)
 
-/obj/item/storage/backpack/satchel/flat/MouseDrop(obj/over_object)
-	var/turf/T = get_turf(src)
-	if(hides_under_flooring() && isturf(T) && !T.is_plating())
-		return
-	..()
-
-/obj/item/storage/backpack/satchel/flat/hide(i)
-	set_invisibility(i ? INVISIBILITY_ABSTRACT : 0)
-	anchored = i ? TRUE : FALSE
-	alpha = i ? 128 : initial(alpha)
-
-/obj/item/storage/backpack/satchel/flat/use_tool(obj/item/tool, mob/living/user, list/click_params)
-	var/turf/T = get_turf(src)
-	if(hides_under_flooring() && isturf(T) && !T.is_plating())
-		to_chat(user, SPAN_WARNING("You must remove the plating first."))
-		return TRUE
-	return ..()
 
 //ERT backpacks.
-/obj/item/storage/backpack/ert
-	name = "emergency response team backpack"
-	desc = "A spacious backpack with lots of pockets, used by members of the Emergency Response Team."
+/obj/item/storage/backpack/tau
+	name = "xenos backpack"
+	desc = "A spacious backpack with lots of pockets, used by members of the tau empire."
 	icon_state = "ert_commander"
 	item_state_slots = list(
 		slot_l_hand_str = "securitypack",
@@ -494,26 +476,26 @@
 		)
 
 //Commander
-/obj/item/storage/backpack/ert/commander
-	name = "emergency response team commander backpack"
-	desc = "A spacious backpack with lots of pockets, worn by the commander of an Emergency Response Team."
+/obj/item/storage/backpack/tau/commander
+	name = "xenos backpack"
+	desc = "A spacious backpack with lots of pockets, worn by the veterans of the tau empire."
 
 //Security
-/obj/item/storage/backpack/ert/security
-	name = "emergency response team security backpack"
-	desc = "A spacious backpack with lots of pockets, worn by security members of an Emergency Response Team."
+/obj/item/storage/backpack/tau/security
+	name = "xenos backpack"
+	desc = "A spacious backpack with lots of pockets, worn by militarum members of the tau empire."
 	icon_state = "ert_security"
 
 //Engineering
-/obj/item/storage/backpack/ert/engineer
-	name = "emergency response team engineer backpack"
-	desc = "A spacious backpack with lots of pockets, worn by engineering members of an Emergency Response Team."
+/obj/item/storage/backpack/tau/engineer
+	name = "xenos backpack"
+	desc = "A spacious backpack with lots of pockets, worn by engineering members of the tau empire."
 	icon_state = "ert_engineering"
 
 //Medical
-/obj/item/storage/backpack/ert/medical
-	name = "emergency response team corpsman backpack"
-	desc = "A spacious backpack with lots of pockets, worn by the corpsmen of an Emergency Response Team."
+/obj/item/storage/backpack/tau/medical
+	name = "xenos backpack"
+	desc = "A spacious backpack with lots of pockets, worn by the corpsmen of the tau empire."
 	icon_state = "ert_medical"
 
 /*
@@ -556,19 +538,19 @@
 	icon_state = "courierbaghyd"
 
 /obj/item/storage/backpack/messenger/sec
-	name = "security messenger bag"
+	name = "militarum messenger bag"
 	desc = "A small, tactical backpack worn over one shoulder."
 	icon_state = "courierbagsec"
 
 /obj/item/storage/backpack/messenger/sec/exo
-	name = "corporate security messenger bag"
+	name = "corporate militarum messenger bag"
 	desc = "A small, tactical backpack worn over one shoulder. This one is in EXO colors."
 	icon_state = "courierbagsec_exo"
 
 
 /obj/item/storage/backpack/messenger/sci
 	name = "science messenger bag"
-	desc = "A small, stain-resistant backpack worn over one shoulder. This one was modeled for use by Expeditionary Corps science personnel in laboratories and other scientific settings."
+	desc = "A small, stain-resistant backpack worn over one shoulder. This one was modeled for use by Dauntless science personnel in laboratories and other scientific settings."
 	icon_state = "courierbagsci"
 
 
@@ -585,3 +567,403 @@
 // prevents consumption by dept versions
 /obj/item/storage/backpack/messenger/grey
 	name = "grey messenger bag"
+
+
+
+// WARHAMMER
+// WARHAMMER
+//Smuggler's satchel
+/obj/item/storage/backpack/satchel/flat
+	name = "light satchel"
+	desc = "A very slim satchel, that can easily fit into tight spaces."
+	icon_state = "satchel-flat"
+	item_state = "satchel-norm"
+	level = ATOM_LEVEL_UNDER_TILE
+	w_class = ITEM_SIZE_NORMAL //Can fit in backpacks itself.
+	storage_slots = 5
+	max_w_class = ITEM_SIZE_LARGE
+	max_storage_space = DEFAULT_BACKPACK_STORAGE-1
+	contents_banned = list(/obj/item/storage/backpack/satchel/flat)
+	startswith = list(
+		/obj/item/crowbar
+		)
+
+/obj/item/storage/backpack/satchel/flat/MouseDrop(obj/over_object)
+	var/turf/T = get_turf(src)
+	if(hides_under_flooring() && isturf(T) && !T.is_plating())
+		return
+	..()
+
+/obj/item/storage/backpack/satchel/flat/hide(i)
+	set_invisibility(i ? INVISIBILITY_ABSTRACT : 0)
+	anchored = i ? TRUE : FALSE
+	alpha = i ? 128 : initial(alpha)
+
+/obj/item/storage/backpack/satchel/deserter
+	startswith = list(
+		/obj/item/clothing/mask/gas/half/cadianrespirator,
+		/obj/item/clothing/shoes/jackboots/cadian,
+		/obj/item/grenade/frag/high_yield/krak/detpack,
+		/obj/item/clothing/gloves/thick/swat/cadian,
+	)
+
+/obj/item/storage/backpack/satchel/thief1
+	startswith = list(
+		/obj/item/device/multitool/hacktool,
+		/obj/item/device/radio_jammer,
+		/obj/item/device/uplink_service/fake_rad_storm,
+		/obj/item/card/id/syndicate,
+		/obj/item/device/cosmetic_surgery_kit,
+		/obj/item/storage/backpack/chameleon/sydie_kit,
+		/obj/item/clothing/mask/fakemoustache,
+		/obj/item/device/radio/headset/headset_service,
+	)
+
+/obj/item/storage/backpack/satchel/thief2
+	startswith = list(
+		/obj/item/card/emag,
+		/obj/item/clothing/mask/chameleon/voice,
+		/obj/item/device/chameleon,
+		/obj/item/device/uplink_service/fake_command_report,
+		/obj/item/card/id/syndicate,
+		/obj/item/device/radio/headset/headset_service,
+		/obj/item/clothing/shoes/jackboots/pilgrim_boots,
+	)
+
+/obj/item/storage/backpack/satchel/thief3
+	startswith = list(
+		/obj/item/device/multitool/hacktool,
+		/obj/item/device/cosmetic_surgery_kit,
+		/obj/item/card/id/torch/crew,
+		/obj/item/device/radio/headset/headset_service,
+		/obj/item/clothing/shoes/jackboots/pilgrim_boots,
+		/obj/item/clothing/accessory/armor_plate/bodyglove,
+	)
+
+/obj/item/storage/backpack/satchel/interrogator1
+	startswith = list(
+		/obj/item/card/emag,
+		/obj/item/storage/box/contraband/toxin,
+		/obj/item/device/uplink_service/fake_command_report,
+		/obj/item/card/id/syndicate,
+		/obj/item/device/radio/headset/headset_sec,
+		/obj/item/clothing/suit/armor/grim/agent,
+		/obj/item/clothing/head/helmet/inquisition/acolyte,
+		/obj/item/clothing/head/helmet/inquisition/stealth,
+	)
+
+/obj/item/storage/backpack/satchel/interrogator2
+	startswith = list(
+		/obj/item/card/emag,
+		/obj/item/storage/box/contraband/toxin,
+		/obj/item/device/uplink_service/fake_command_report,
+		/obj/item/card/id/syndicate,
+		/obj/item/device/radio/headset/headset_sec,
+		/obj/item/clothing/suit/armor/grim/witch,
+		/obj/item/clothing/head/helmet/pilgrimhelm/witch,
+		/obj/item/clothing/head/helmet/inquisition/shrouded,
+	)
+
+/obj/item/storage/backpack/satchel/warfare
+	name = "light satchel"
+	desc = "Fit for war, and not much else."
+	icon_state = "warfare_satchel"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE
+	slowdown_general = 0.015
+	max_w_class = ITEM_SIZE_HUGE
+
+/obj/item/storage/backpack/satchel/warfare/heavy
+	name = "heavy rucksack"
+	desc = "A heavy rucksack."
+	icon_state = "warfare_satchel"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE+3
+	slowdown_general = 0.03
+	max_w_class = ITEM_SIZE_HUGE
+
+/obj/item/storage/backpack/satchel/krieger
+	desc = "Field ready kit, tried and tested through countless encounters."
+	icon_state = "kriegpack"
+	item_state = "kriegpack"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE+2
+	slowdown_general = 0.023
+	max_w_class = ITEM_SIZE_HUGE
+
+/obj/item/storage/backpack/satchel/krieger/grenadier
+	desc = "An assembled kit for air filtration, weapon power supply, and basic storage. Perfect to bring with you into no man's land."
+	icon_state = "grenpack"
+	item_state = "grenpack"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE+1
+	slowdown_general = 0.015
+
+/obj/item/storage/backpack/satchel/maccabian
+	desc = "Field ready kit, tried and tested through countless encounters."
+	icon_state = "M_Backpack-Icon"
+	item_state = "M_Backpack-Icon"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE+1
+	slowdown_general = 0.015
+
+/obj/item/storage/backpack/satchel/maccabian/sergeant
+	desc = "Field ready kit, tried and tested through countless encounters."
+	icon_state = "M_SBackpack-Icon"
+	item_state = "M_SBackpack-Icon"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE+1
+	slowdown_general = 0.015
+
+/obj/item/storage/backpack/satchel/ordinate
+	name = "Administratum Ink Pack"
+	desc = "Burocracy on the go"
+	icon_state = "ordinate"
+	item_state = "ordinate"
+
+/obj/item/storage/backpack/satchel/warfare/techpriest
+	desc = "BZZZRRRRT."
+	icon_state = "warfare_satchel"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE+3
+	max_w_class = ITEM_SIZE_HUGE
+	// var/can_toggle = 1
+
+
+/obj/item/storage/backpack/satchel/warfare/sisterofbattle
+	name = "Order of the Sacred Rose Powerpack"
+	desc = "A Powerpack belongs to the Battle Sister of the Order Of The Sacred Rose. It bears the Sigil of the Adepta Sororitas.</i>"
+	icon_state = "sister"
+	item_state = "sister"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE
+	max_w_class = ITEM_SIZE_HUGE
+	canremove = 1
+
+/obj/item/storage/backpack/satchel/warfare/sisterofbattle/mlsister
+	name = "Order of Our Martyred Lady Powerpack"
+	desc = "A Powerpack for the consecrated power armor of the Adeptas Sororitas. It has the colors of the Order of Our Martyred Lady.</i>"
+	icon_state = "mlsister"
+	item_state = "mlsister"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE
+	canremove = 1
+
+
+/obj/item/storage/backpack/satchel/warfare/sisterofbattle/brsister
+	name = "Order of the Bloody Rose Powerback"
+	desc = "A Powerpack for the consecrated power armor of the Adeptas Sororitas. It has the colors of the Order of the Bloody Rose.</i>"
+	icon_state = "brsister"
+	item_state = "brsister"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE
+	canremove = 1
+
+/obj/item/storage/backpack/satchel/astartes
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings."
+	item_icons = list(slot_back_str = 'icons/mob/32x40/storage.dmi')
+	icon_state = "ultrapack"
+	item_state = "ultrapack"
+	canremove = 1
+	max_w_class = ITEM_SIZE_HUGE
+	max_storage_space = DEFAULT_BACKPACK_STORAGE+2
+
+/obj/item/storage/backpack/satchel/astartes/ultramarine
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the XIIIth Chapter, Ultramarines."
+	icon_state = "ultrapack"
+	item_state = "ultrapack"
+
+/obj/item/storage/backpack/satchel/astartes/ultramarinenew
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the XIIIth Chapter, Ultramarines."
+	icon_state = "ultrab"
+	item_state = "ultrab"
+
+/obj/item/storage/backpack/satchel/astartes/nightlords
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the IIIrd Legion, Night Lords."
+	icon_state = "nightlordb"
+	item_state = "nightlordb"
+
+/obj/item/storage/backpack/satchel/astartes/alphalegion
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the XXth Legion, Alpha Legion."
+	icon_state = "alphalegb"
+	item_state = "alphalegb"
+
+/obj/item/storage/backpack/satchel/astartes/worldbearers
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the XXth Legion, World Bearers."
+	icon_state = "worldbb"
+	item_state = "worldbb"
+
+/obj/item/storage/backpack/satchel/astartes/plaguemarines
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the XXth Legion, Alpha Legion."
+	icon_state = "plaguemb"
+	item_state = "plaguemb"
+
+/obj/item/storage/backpack/satchel/astartes/ravenguard
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the XIXth Chapter, Raven Guards."
+	icon_state = "ravpack"
+	item_state = "ravpack"
+
+/obj/item/storage/backpack/satchel/astartes/bloodangel
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the IXth Chapter, Blood Angels."
+	icon_state = "bravpack"
+	item_state = "bravpack"
+
+/obj/item/storage/backpack/satchel/astartes/bloodangel/lamenter
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the IXth Chapter, Blood Angels."
+	icon_state = "lamenterb"
+	item_state = "lamenterb"
+
+/obj/item/storage/backpack/satchel/astartes/salamander
+	name = "Astartes Mark VII Powerpack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This one bears the marking of the XVIIIth Chapter, Salamanders."
+	icon_state = "salpack"
+	item_state = "salpack"
+
+/obj/item/storage/backpack/satchel/astartes/apothecary
+	name = "Astartes Mark VII Medipack"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This Powerpack has been upgraded with additional spotlight and surgical arms to serve medical purposes."
+	icon_state = "salpack"
+	item_state = "salpack"
+
+/obj/item/storage/backpack/satchel/warfare/techpriest/techmarine //because it uses techpriest stuff.
+	name = "Astartes Mark VII Servo-Harness"
+	desc = "Standard powerpack, issued to Adeptus Astartes to store their belongings. This Powerpack has been equipped with additional Servo-Arms to serve engineering purposes."
+	item_icons = list(slot_back_str = 'icons/mob/32x40/storage.dmi')
+	icon_state = "techpack"
+	item_state = "techpack"
+	max_storage_space = DEFAULT_BACKPACK_STORAGE+2
+
+/obj/item/storage/backpack/satchel/warfare/kroot
+	desc = "Fit for war, and not much else."
+	icon_state = "krootbag"
+
+/*
+/obj/item/storage/backpack/satchel/warfare/techpriest/verb/toggleallen()
+	set name = "Pull Out Allen Wrench"
+	set category = "Tools"
+	set src in usr
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return
+	if(!can_toggle)
+		to_chat(usr,"This tool cannot be toggled!")
+	else
+		to_chat(usr,"You pull out the holy Wrench of Allen!")
+		usr.put_in_hands(new /obj/item/device/allenwrench(usr))
+
+
+
+/obj/item/storage/backpack/satchel/warfare/techpriest/verb/toggleoils()
+	set name = "Pull Out Holy Oils"
+	set category = "Tools"
+	set src in usr
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return
+	if(!can_toggle)
+		to_chat(usr,"This tool cannot be toggled!")
+	else
+		to_chat(usr,"You pull out a bottle of holy oil.")
+		usr.put_in_hands(new /obj/item/device/holyoils(usr))
+
+
+
+/obj/item/storage/backpack/satchel/warfare/techpriest/verb/togglechisel()
+	set name = "Activate Chisel"
+	set category = "Tools"
+	set src in usr
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return
+	if(!can_toggle)
+		to_chat(usr,"This tool cannot be toggled!")
+	else
+		to_chat(usr,"You pull out the auto-chisel and activate it in a single motion.")
+		usr.put_in_hands(new /obj/item/device/autochisel(usr))
+
+
+/obj/item/storage/backpack/satchel/warfare/techpriest/verb/togglecutter()
+	set name = "Activate Laser Cutter"
+	set category = "Tools"
+	set src in usr
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return
+	if(!can_toggle)
+		to_chat(usr,"This tool cannot be toggled!")
+	else
+		to_chat(usr,"You pull out a small laser cutter and prepare to cut stuff.")
+		usr.put_in_hands(new /obj/item/device/lasercutter(usr))
+
+
+/obj/item/storage/backpack/satchel/warfare/techpriest/magos
+	name = "Combat Servo-Satchel"
+
+/obj/item/storage/backpack/satchel/warfare/techpriest/magos/verb/toggle_axe()
+	set name = "Pull Out Omnissian Axe"
+	set category = "Tools"
+	set src in usr
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return
+	if(!can_toggle)
+		to_chat(usr,"This tool cannot be toggled!")
+	else
+		to_chat(usr,"You pull out giant power axe from under your robes and activate it! For the omnissiah!.")
+		usr.put_in_hands(new /obj/item/melee/omnissiah_axe(usr))
+
+/obj/item/storage/backpack/satchel/warfare/techpriest/techmarine
+	name = "Combat Servo-Satchel"
+
+/obj/item/storage/backpack/satchel/warfare/techpriest/techmarine/verb/toggle_aaxe()
+	set name = "Pull Out Omnissian Axe"
+	set category = "Tools"
+	set src in usr
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return
+	if(!can_toggle)
+		to_chat(usr,"This tool cannot be toggled!")
+	else
+		to_chat(usr,"You pull out giant power axe from under your robes and activate it! For the Emperor!")
+		usr.put_in_hands(new /obj/item/melee/omnissiah_axe/astartes(usr))
+
+
+/obj/item/storage/backpack/satchel/warfare/techpriest/biologis
+	name = "Medical Servo-Satchel"
+	icon_state = "warfare_satchel"
+	canremove = FALSE
+
+/obj/item/storage/backpack/satchel/warfare/techpriest/biologis/verb/toggleneural()
+	set name = "Configure Neural Adapter"
+	set category = "Tools"
+	set src in usr
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return
+	if(!can_toggle)
+		to_chat(usr,"This tool cannot be toggled!")
+	else
+		to_chat(usr,"You pull out a Neural Adapter and activate it quickly in a single brief motion.")
+		usr.put_in_hands(new /obj/item/device/neuraladapter(usr))
+
+
+/obj/item/storage/backpack/satchel/warfare/chestrig
+	name = "Chestrig"
+	desc = "Holds ammo and other goodies. But not a lot of it."
+	icon_state = "chestrig"
+
+/obj/item/storage/backpack/satchel/warfare/ruststalker
+	var/can_toggle = 1
+	var/is_toggled = 1
+	canremove = FALSE
+
+/obj/item/storage/backpack/satchel/warfare/ruststalker/verb/toggleclaw()
+	set name = "Extend Claws"
+	set category = "Tools"
+	set src in usr
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return
+	if(!can_toggle)
+		to_chat(usr,"This tool cannot be toggled!")
+	else
+		to_chat(usr,"You extend your power claws.")
+		usr.put_in_hands(new /obj/item/melee/energy/powersword/claw/integrated(usr))
+
+
+
+
+*/

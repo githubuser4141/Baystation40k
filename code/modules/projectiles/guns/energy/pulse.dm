@@ -31,7 +31,7 @@
 	one_hand_penalty= 3
 	burst_delay = 2
 	move_delay = 2
-	bulk = GUN_BULK_RIFLE - 3
+	bulk = GUN_BULK_RIFLE
 	accuracy = 0
 
 /obj/item/gun/energy/pulse_rifle/pistol
@@ -60,7 +60,7 @@
 	name = "pulse destroyer"
 	desc = "A heavy-duty, pulse-based energy weapon. Because of its complexity and cost, it is rarely seen in use except by specialists."
 	cell_type = /obj/item/cell/super
-	fire_delay = 25
+	fire_delay = 8
 	projectile_type=/obj/item/projectile/beam/pulse/destroy
 	charge_cost= 40
 
@@ -68,12 +68,12 @@
 	to_chat(user, SPAN_WARNING("[src.name] has three settings, and they are all DESTROY."))
 
 /obj/item/gun/energy/pulse_rifle/skrell
-	name = "skrellian carbine"
+	name = "Tau carbine"
 	icon = 'icons/obj/guns/skrell_carbine.dmi'
 	icon_state = "skrell_carbine"
 	item_state = "skrell_carbine"
 	slot_flags = SLOT_BACK|SLOT_BELT
-	desc = "The Vuu'Xqu*ix T-3, known as 'VT-3' by SolGov. Rarely seen out in the wild by anyone outside of a Skrellian SDTF."
+	desc = "The Vuu'Xqu*ix T-3, known as 'VT-3' by SolGov. Rarely seen out in the wild by anyone outside of a Tau Empire."
 	cell_type = /obj/item/cell/high
 	self_recharge = 1
 	move_delay = 2

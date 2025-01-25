@@ -92,7 +92,7 @@
 	generate_network_log("Completed download of file [file_info].")
 	if(!computer || !computer.create_file(downloaded_file))
 		// The download failed
-		downloaderror = "I/O ERROR - Unable to save file. Check whether you have enough free space on your hard drive and whether your hard drive is properly connected. If the issue persists contact your system administrator for assistance."
+		downloaderror = "I/O ERROR - Unable to save file. Check whether you have enough free space on your hard drive and whether your hard drive is properly connected. If the issue persists contact your local mechanicum for assistance."
 	downloaded_file = null
 	download_completion = 0
 	ui_header = "downloader_finished.gif"
@@ -175,7 +175,7 @@
 			all_entries.Add(list(list("category"=category, "programs"=category_list)))
 
 	data["hackedavailable"] = FALSE
-	if(prog.computer.emagged()) // If we are running on emagged computer we have access to some "bonus" software
+	if(prog.computer.emagged()) // If we are running on emagged cogitator we have access to some "bonus" software
 		var/list/hacked_programs[0]
 		for(var/datum/computer_file/program/P in ntnet_global.available_antag_software)
 			data["hackedavailable"] = TRUE

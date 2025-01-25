@@ -11,7 +11,7 @@
 	hardness = MATERIAL_VERY_HARD + 20
 	brute_armor = 10
 	burn_armor = 50		// Diamond walls are immune to fire, therefore it makes sense for them to be almost undamageable by burn damage type.
-	stack_origin_tech = list(TECH_MATERIAL = 6)
+	stack_origin_tech = list(TECH_MATERIAL = 2)
 	conductive = 0
 	construction_difficulty = MATERIAL_VERY_HARD_DIY
 	ore_name = "rough diamonds"
@@ -61,7 +61,7 @@
 
 /material/stone/marble
 	name = MATERIAL_MARBLE
-	lore_text = "A metamorphic rock largely sourced from Earth. Prized for use in extremely expensive decorative surfaces."
+	lore_text = "A metamorphic rock largely sourced from Terra. Prized for use in extremely expensive decorative surfaces."
 	icon_colour = "#aaaaaa"
 	weight = 26
 	hardness = MATERIAL_HARD
@@ -75,7 +75,7 @@
 
 /material/stone/concrete
 	name = MATERIAL_CONCRETE
-	lore_text = "The most ubiquitous building material of old Earth, now in space. Consists of mineral aggregate bound with some sort of cementing solution."
+	lore_text = "The most ubiquitous building material of old Terra, now in space. Consists of mineral aggregate bound with some sort of cementing solution."
 	stack_type = /obj/item/stack/material/generic/brick
 	icon_colour = COLOR_GRAY
 	value = 1

@@ -1,18 +1,18 @@
 // Alien clothing.
 
-// Unathi clothing
+// Kroot clothing
 /datum/gear/suit/unathi
 	sort_category = "Xenowear"
 	category = /datum/gear/suit/unathi
-	whitelisted = list(SPECIES_UNATHI, SPECIES_YEOSA)
+	whitelisted = list(SPECIES_KROOT, SPECIES_YEOSA)
 
 /datum/gear/suit/unathi/mantle
-	display_name = "hide mantle (Unathi)"
+	display_name = "hide mantle (Kroot)"
 	path = /obj/item/clothing/suit/unathi/mantle
 	cost = 1
 
 /datum/gear/suit/unathi/robe
-	display_name = "roughspun robe (Unathi)"
+	display_name = "roughspun robe (Kroot)"
 	path = /obj/item/clothing/suit/unathi/robe
 	cost = 1
 
@@ -22,13 +22,13 @@
 	cost = 5
 
 /datum/gear/suit/unathi/savage_hunter
-	display_name = "savage hunter hides (Male, Unathi)"
+	display_name = "savage hunter hides (Male, Kroot)"
 	path = /obj/item/clothing/under/savage_hunter
 	slot = slot_w_uniform
 	cost = 2
 
 /datum/gear/suit/unathi/savage_hunter/female
-	display_name = "savage hunter hides (Female, Unathi)"
+	display_name = "savage hunter hides (Female, Kroot)"
 	path = /obj/item/clothing/under/savage_hunter/female
 	slot = slot_w_uniform
 	cost = 2
@@ -37,7 +37,7 @@
 /datum/gear/ears/skrell
 	sort_category = "Xenowear"
 	category = /datum/gear/ears/skrell
-	whitelisted = list(SPECIES_SKRELL)
+	whitelisted = list(SPECIES_TAU)
 
 /datum/gear/ears/skrell/chains
 	display_name = "headtail chain selection (Skrell)"
@@ -73,22 +73,22 @@
 	flags = GEAR_HAS_COLOR_SELECTION
 
 /datum/gear/head/skrell_helmet
-	display_name = "Skrellian helmet"
+	display_name = "Tau helmet"
 	path = /obj/item/clothing/head/helmet/skrell
-	whitelisted = list(SPECIES_SKRELL)
+	whitelisted = list(SPECIES_TAU)
 	sort_category = "Xenowear"
-	allowed_roles = list(/datum/job/hos, /datum/job/warden, /datum/job/officer, /datum/job/detective)
+	allowed_roles = list(/datum/job/guard_captain, /datum/job/enforcer_sergeant, /datum/job/enforcer, /datum/job/guardsman)
 
 /datum/gear/accessory/skrell_badge
-	display_name = "skrellian SDTF badge"
+	display_name = "Tau Empire badge"
 	path = /obj/item/clothing/accessory/badge/tags/skrell
-	whitelisted = list(SPECIES_SKRELL)
+	whitelisted = list(SPECIES_TAU)
 	sort_category = "Xenowear"
 
 // IPC clothing
 /datum/gear/suit/lab_xyn_machine
 	display_name = "Xynergy labcoat"
-	path = /obj/item/clothing/suit/storage/toggle/labcoat/xyn_machine
+	path = /obj/item/clothing/suit/armor/grim/toggle/labcoat/xyn_machine
 	slot = slot_wear_suit
 	sort_category = "Xenowear"
 	whitelisted = list(SPECIES_IPC)
@@ -127,45 +127,45 @@
 	display_name = "modified gloves, colored"
 	path = /obj/item/clothing/gloves/color/modified
 	sort_category = "Xenowear"
-	whitelisted = list(SPECIES_UNATHI, SPECIES_YEOSA)
+	whitelisted = list(SPECIES_KROOT, SPECIES_YEOSA)
 
 /datum/gear/gloves/latex/modified
 	display_name = "modified gloves, latex"
 	path = /obj/item/clothing/gloves/latex/modified
 	sort_category = "Xenowear"
-	whitelisted = list(SPECIES_UNATHI, SPECIES_YEOSA)
+	whitelisted = list(SPECIES_KROOT, SPECIES_YEOSA)
 
 /datum/gear/gloves/nitrile/modified
 	display_name = "modified gloves, nitrile"
 	path = /obj/item/clothing/gloves/latex/nitrile/modified
 	sort_category = "Xenowear"
-	whitelisted = list(SPECIES_UNATHI, SPECIES_YEOSA)
+	whitelisted = list(SPECIES_KROOT, SPECIES_YEOSA)
 
 /datum/gear/gloves/rainbow/modified
 	display_name = "modified gloves, rainbow"
 	path = /obj/item/clothing/gloves/rainbow/modified
 	sort_category = "Xenowear"
-	whitelisted = list(SPECIES_UNATHI, SPECIES_YEOSA)
+	whitelisted = list(SPECIES_KROOT, SPECIES_YEOSA)
 
 /datum/gear/gloves/evening/modified
 	display_name = "modified gloves, evening"
 	path = /obj/item/clothing/gloves/color/evening/modified
 	sort_category = "Xenowear"
-	whitelisted = list(SPECIES_UNATHI, SPECIES_YEOSA)
+	whitelisted = list(SPECIES_KROOT, SPECIES_YEOSA)
 
 /datum/gear/gloves/botany/modified
 	display_name = "modified gloves, botany"
-	path = /obj/item/clothing/gloves/thick/botany/modified
+	path = /obj/item/clothing/gloves/thick/leather/modified
 	sort_category = "Xenowear"
-	whitelisted = list(SPECIES_UNATHI, SPECIES_YEOSA)
+	whitelisted = list(SPECIES_KROOT, SPECIES_YEOSA)
 
 /datum/gear/gloves/work/modified
 	display_name = "modified gloves, work"
 	path = /obj/item/clothing/gloves/thick/modified
 	sort_category = "Xenowear"
-	whitelisted = list(SPECIES_UNATHI, SPECIES_YEOSA)
+	whitelisted = list(SPECIES_KROOT, SPECIES_YEOSA)
 
-// Vox clothing
+// Xenos clothing
 /datum/gear/vox_mask
 	display_name = "vox breathing mask"
 	path = /obj/item/clothing/mask/gas/vox

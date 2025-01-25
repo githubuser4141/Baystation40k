@@ -144,7 +144,7 @@
 
 	fabrication_type = /obj/item/energy_net
 	use_power_cost = 50 KILOWATTS
-	origin_tech = list(TECH_MATERIAL = 5, TECH_POWER = 6, TECH_MAGNET = 5, TECH_ESOTERIC = 4, TECH_ENGINEERING = 6)
+	origin_tech = list(TECH_MATERIAL = 3, TECH_POWER = 3, TECH_MAGNET = 3, TECH_ESOTERIC = 4, TECH_ENGINEERING = 3)
 
 /obj/item/rig_module/fabricator/energy_net/engage(atom/target)
 
@@ -201,7 +201,7 @@
 		return 1
 
 	if(!skip_check)
-		if(!usr || alert(usr, "Are you sure you want to push that button?", "Self-destruct", "No", "Yes") == "No")
+		if(!usr || alert(usr, "Are you sure you want to push that button?", "Self-destruct", "No", "Compliance") == "No")
 			return
 
 		if(usr == holder.wearer)

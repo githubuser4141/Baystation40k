@@ -24,7 +24,7 @@ var/global/list/mob_hat_cache = list()
 	real_name = "drone"
 	icon = 'icons/mob/robots_drones.dmi'
 	icon_state = "repairbot"
-	maxHealth = 35
+	maxhealth = 35
 	health = 35
 	cell_emp_mult = 1
 	universal_speak = FALSE
@@ -35,7 +35,7 @@ var/global/list/mob_hat_cache = list()
 	braintype = "Drone"
 	lawupdate = FALSE
 	density = TRUE
-	req_access = list(access_engine, access_robotics)
+	req_access = list(access_mechanicus, access_robotics)
 	integrated_light_power = 0.5
 	local_transmit = 1
 	possession_candidate = TRUE
@@ -149,7 +149,7 @@ var/global/list/mob_hat_cache = list()
 	additional_law_channels["Drone"] = ":d"
 	if(!module) module = new module_type(src)
 
-	flavor_text = "It's a tiny little repair drone. The casing is stamped with an corporate logo and the subscript: '[GLOB.using_map.company_name] Recursive Repair Systems: Fixing Tomorrow's Problem, Today!'"
+	flavor_text = "It's a tiny little repair drone. The casing is stamped with an imperial logo and the subscript: '[GLOB.using_map.company_name] Recursive Repair Systems: Fixing Tomorrow's Problem, Today!'"
 	playsound(src.loc, 'sound/machines/twobeep.ogg', 50, 0)
 
 //Redefining some robot procs...
@@ -373,13 +373,13 @@ var/global/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/construction/welcome_drone()
 	to_chat(src, "<b>You are a construction drone, an autonomous engineering and fabrication system.</b>.")
-	to_chat(src, "You are assigned to a Sol Central construction project. The name is irrelevant. Your task is to complete construction and subsystem integration as soon as possible.")
+	to_chat(src, "You are assigned to a Imperial construction project. The name is irrelevant. Your task is to complete construction and subsystem integration as soon as possible.")
 	to_chat(src, "Use <b>:d</b> to talk to other drones and <b>say</b> to speak silently to your nearby fellows.")
 	to_chat(src, "<b>You do not follow orders from anyone; not the AI, not humans, and not other synthetics.</b>.")
 
 /mob/living/silicon/robot/drone/construction/init()
 	..()
-	flavor_text = "It's a bulky construction drone stamped with a Sol Central glyph."
+	flavor_text = "It's a bulky construction drone stamped with a Imperial glyph."
 
 /proc/too_many_active_drones()
 	var/drones = 0

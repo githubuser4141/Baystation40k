@@ -7,45 +7,32 @@
 
 /datum/map/torch
 	branch_types = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet,
-		/datum/mil_branch/civilian,
-		/datum/mil_branch/solgov,
-		/datum/mil_branch/alien,
-		/datum/mil_branch/skrell_fleet,
-		/datum/mil_branch/iccgn,
-		/datum/mil_branch/scga
+		/datum/mil_branch/civilian
 	)
 
 	spawn_branch_types = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet,
 		/datum/mil_branch/civilian,
-		/datum/mil_branch/solgov,
 		/datum/mil_branch/alien,
-		/datum/mil_branch/skrell_fleet,
-		/datum/mil_branch/iccgn,
-		/datum/mil_branch/scga
+		/datum/mil_branch/tau_fleet
 	)
 
 	species_to_branch_blacklist = list(
-		/datum/species/human   = list(/datum/mil_branch/alien, /datum/mil_branch/skrell_fleet),
-		/datum/species/machine = list(/datum/mil_branch/alien, /datum/mil_branch/skrell_fleet),
+		/datum/species/human   = list(/datum/mil_branch/alien),
+		/datum/species/machine = list(/datum/mil_branch/alien, /datum/mil_branch/tau_fleet),
 		/datum/species/vox     = list(
 			/datum/mil_branch/expeditionary_corps,
 			/datum/mil_branch/fleet,
-			/datum/mil_branch/civilian,
 			/datum/mil_branch/solgov,
-			/datum/mil_branch/skrell_fleet
+			/datum/mil_branch/tau_fleet
 		)
 	)
 
 	species_to_branch_whitelist = list(
 		/datum/species/diona        = list(/datum/mil_branch/civilian),
 		/datum/species/nabber       = list(/datum/mil_branch/civilian),
-		/datum/species/skrell       = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps, /datum/mil_branch/skrell_fleet),
-		/datum/species/unathi       = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
-		/datum/species/unathi/yeosa = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/tau       = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps, /datum/mil_branch/tau_fleet),
+		/datum/species/kroot       = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
+		/datum/species/kroot/yeosa = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
 		/datum/species/adherent     = list(/datum/mil_branch/civilian),
 		/datum/species/vox          = list(/datum/mil_branch/alien)
 	)
@@ -77,7 +64,7 @@
 				/datum/mil_rank/fleet/o1
 			)
 		),
-		/datum/species/skrell = list(
+		/datum/species/tau = list(
 			/datum/mil_branch/expeditionary_corps = list(
 				/datum/mil_rank/ec/e3,
 				/datum/mil_rank/ec/e5,
@@ -85,13 +72,13 @@
 				/datum/mil_rank/ec/o1
 			)
 		),
-		/datum/species/unathi = list(
+		/datum/species/kroot = list(
 			/datum/mil_branch/expeditionary_corps = list(
 				/datum/mil_rank/ec/e3,
 				/datum/mil_rank/ec/e5
 			)
 		),
-		/datum/species/unathi/yeosa = list(
+		/datum/species/kroot/yeosa = list(
 			/datum/mil_branch/expeditionary_corps = list(
 				/datum/mil_rank/ec/e3,
 				/datum/mil_rank/ec/e5
@@ -110,8 +97,8 @@
  */
 
 /datum/mil_branch/expeditionary_corps
-	name = "Expeditionary Corps"
-	name_short = "SCGEC"
+	name = "Explorator Crew"
+	name_short = "Explorator"
 	email_domain = "torch.ec.scg"
 
 	rank_types = list(
@@ -134,10 +121,10 @@
 		/datum/mil_rank/ec/o6
 	)
 
-	assistant_job = /datum/job/crew
+	assistant_job = /datum/job/deck_scum
 
 	min_skill = list( // 4 points
-		SKILL_HAULING = SKILL_BASIC, // 1 point
+		SKILL_VIGOR = SKILL_BASIC, // 1 point
 		SKILL_SCIENCE = SKILL_BASIC, // 2 points
 		SKILL_EVA = SKILL_BASIC // 1 point
 	)
@@ -191,18 +178,18 @@
 		/datum/mil_rank/fleet/o5
 	)
 
-	assistant_job = /datum/job/crew
+	assistant_job = /datum/job/deck_scum
 	min_skill = list( // 4 points
-		SKILL_HAULING = SKILL_BASIC, // 1 point
-		SKILL_WEAPONS = SKILL_BASIC, // 2 points
+		SKILL_VIGOR = SKILL_BASIC, // 1 point
+		SKILL_GUNS = SKILL_BASIC, // 2 points
 		SKILL_EVA = SKILL_BASIC // 1 point
 	)
 
 
 /datum/mil_branch/civilian
-	name = "Civilian"
-	name_short = "Civ"
-	email_domain = "freemail.net"
+	name = "Terran"
+	name_short = "GEN"
+	email_domain = "astropathica.net"
 	allow_custom_email = TRUE
 
 	rank_types = list(
@@ -242,7 +229,7 @@
 		return "E[sort_order]"
 	return "O[sort_order - 10]"
 
-// Within the scope of the Torch, this is the only necessary differentiation.
+// Within the scope of The Dauntless, this is the only necessary differentiation.
 /datum/mil_rank/rank_category()
 	. = ..()
 	if(!sort_order)
@@ -325,7 +312,7 @@
 	sort_order = 9
 
 /datum/mil_rank/fleet/e9_alt2
-	name = "Fleet Master Chief Petty Officer"
+	name = "Imperial Navy Master Chief Petty Officer"
 	name_short = "FLTCM"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/enlisted/e9_alt2, /obj/item/clothing/accessory/solgov/specialty/enlisted)
 	sort_order = 9
@@ -385,25 +372,25 @@
 	sort_order = 17
 
 /datum/mil_rank/fleet/o8
-	name = "Rear Admiral"
+	name = "Rear Lord Captain"
 	name_short = "RADM"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o8, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 18
 
 /datum/mil_rank/fleet/o9
-	name = "Vice Admiral"
+	name = "Vice Lord Captain"
 	name_short = "VADM"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o9, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 19
 
 /datum/mil_rank/fleet/o10
-	name = "Admiral"
+	name = "Lord Captain"
 	name_short = "ADM"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o10, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 20
 
 /datum/mil_rank/fleet/o10_alt
-	name = "Fleet Admiral"
+	name = "Imperial Navy Lord Captain"
 	name_short = "FADM"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/fleet/flag/o10_alt, /obj/item/clothing/accessory/solgov/specialty/officer)
 	sort_order = 20
@@ -462,7 +449,7 @@
 	sort_order = 16
 
 /datum/mil_rank/ec/o8
-	name = "Admiral"
+	name = "Lord Captain"
 	name_short = "ADM"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/ec/officer/o8)
 	sort_order = 18
@@ -474,7 +461,7 @@
  */
 
 /datum/mil_rank/civ/civ
-	name = "Civilian"
+	name = "Imperial"
 
 /datum/mil_rank/civ/contractor
 	name = "Contractor"
@@ -493,7 +480,7 @@
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/representative)
 
 /datum/mil_rank/sol/agent
-	name = "SFP Agent"
+	name = "Magistratum Agent"
 	name_short = "AGT"
 	accessory = list(/obj/item/clothing/accessory/badge/agent)
 

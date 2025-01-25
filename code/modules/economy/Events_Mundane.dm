@@ -32,7 +32,7 @@
 				"I will maintain my company's record profits","I believe in our future","We must return to our moral core","Just like... chill out dudes")]'."
 
 			if(RESIGNATION)
-				body = "[GLOB.using_map.company_name] regretfully announces the resignation of [pick("Sector Admiral","Division Admiral","Ship Admiral","Vice Admiral")] [random_name(pick(MALE,FEMALE))]."
+				body = "[GLOB.using_map.company_name] regretfully announces the resignation of [pick("Sector Lord Captain","Division Lord Captain","Ship Lord Captain","Vice Lord Captain")] [random_name(pick(MALE,FEMALE))]."
 				if(prob(25))
 					var/locstring = pick("Segunda","Salusa","Cepheus","Andromeda","Gruis","Corona","Aquila","Asellus") + " " + pick("I","II","III","IV","V","VI","VII","VIII")
 					body += " In a ceremony on [affected_dest.name] this afternoon, they will be awarded the \
@@ -54,7 +54,7 @@
 				body = "It is with regret today that we announce the sudden passing of the "
 				if(prob(33))
 					body += "[pick("distinguished","decorated","veteran","highly respected")] \
-					[pick("Ship's Captain","Vice Admiral","Colonel","Lieutenant Colonel")] "
+					[pick("Ship's Captain","Vice Lord Captain","Colonel","Lieutenant Colonel")] "
 				else if(prob(50))
 					body += "[pick("award-winning","popular","highly respected","trend-setting")] \
 					[pick("comedian","singer/songwright","artist","playwright","TV personality","model")] "
@@ -75,14 +75,14 @@
 			if(SONG_DEBUT)
 				body += "[pick("Singer","Singer/songwriter","Saxophonist","Pianist","Guitarist","TV personality","Star")] [random_name(pick(MALE,FEMALE))] \
 				announced the debut of their new [pick("single","album","EP","label")] '[pick("Everyone's","Look at the","Baby don't eye those","All of those","Dirty nasty")] \
-				[pick("roses","three stars","starships","nanobots","cyborgs",SPECIES_SKRELL,"Sren'darr")] \
-				[pick("on Venus","on Reade","on Moghes","in my hand","slip through my fingers","die for you","sing your heart out","fly away")]' \
+				[pick("roses","three stars","starships","nanobots","cyborgs",SPECIES_TAU,"Sren'darr")] \
+				[pick("on Vostroya","on Reade","on Moghes","in my hand","slip through my fingers","die for you","sing your heart out","fly away")]' \
 				with [pick("pre-puchases available","a release tour","cover signings","a launch concert")] on [affected_dest.name]."
 
 			if(MOVIE_RELEASE)
 				body += "From the [pick("desk","home town","homeworld","mind")] of [pick("acclaimed","award-winning","popular","stellar")] \
 				[pick("playwright","author","director","actor","TV star")] [random_name(pick(MALE,FEMALE))] comes the latest sensation: '\
-				[pick("Deadly","The last","Lost","Dead")] [pick("Starships","Warriors","outcasts",SPECIES_UNATHI,SPECIES_SKRELL)] \
+				[pick("Deadly","The last","Lost","Dead")] [pick("Starships","Warriors","outcasts",SPECIES_KROOT,SPECIES_TAU)] \
 				[pick("of","from","raid","go hunting on","visit","ravage","pillage","destroy")] \
 				[pick("Moghes","Earth","Biesel","Ahdomai","S'randarr","the Void","the Edge of Space")]'.\
 				. Own it on webcast today, or visit the galactic premier on [affected_dest.name]!"
@@ -151,7 +151,7 @@
 	"World largest carp patty at display on [affected_dest.name].",\
 	"Man travels 7000 light years to retrieve lost hankie, 'It was my favourite'.",\
 	"New bowling lane that shoots mini-meteors at bowlers very popular.",\
-	"[pick(SPECIES_UNATHI,"Spacer")] gets tattoo of Nyx on chest '[pick("[GLOB.using_map.boss_short]","star","starship","asteroid")] tickles most'.",\
+	"[pick(SPECIES_KROOT,"Low Gothic")] gets tattoo of Nyx on chest '[pick("[GLOB.using_map.boss_short]","star","starship","asteroid")] tickles most'.",\
 	"Skrell marries computer; wedding attended by 100 modems.",\
 	"Chef reports successfully using harmonica as cheese grater.",\
 	"[GLOB.using_map.company_name] invents handkerchief that says 'Bless you' after sneeze.",\
@@ -180,7 +180,7 @@
 	"Spotted Owl Spotted on [affected_dest.name]",\
 	"From The Desk Of Wise Guy Sammy: One Word In This Gazette Is Sdrawkcab",\
 	"From The Desk Of Wise Guy Sammy: It's Hard To Have Too Much Shelf Space",\
-	"From The Desk Of Wise Guy Sammy: Wine And Friendships Get Better With Age",\
+	"From The Desk Of Wise Guy Sammy: Amasec And Friendships Get Better With Age",\
 	"From The Desk Of Wise Guy Sammy: The Insides Of Golf Balls Are Mostly Rubber Bands",\
 	"From The Desk Of Wise Guy Sammy: You Don't Have To Fool All The People, Just The Right Ones",\
 	"From The Desk Of Wise Guy Sammy: If You Made The Mess, You Clean It Up",\

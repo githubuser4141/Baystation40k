@@ -42,14 +42,14 @@ var/global/list/ai_verbs_default = list(
 
 
 /mob/living/silicon/ai
-	name = "AI"
+	name = "Machine Spirit"
 	icon = 'icons/mob/AI.dmi'//
 	icon_state = "ai"
 	anchored = TRUE // -- TLE
 	density = TRUE
 	status_flags = CANSTUN|CANPARALYSE|CANPUSH
 	shouldnt_see = list(/obj/rune)
-	maxHealth = 200
+	maxhealth = 200
 	var/list/network = list("Exodus")
 	var/obj/machinery/camera/camera = null
 	var/list/connected_robots = list()
@@ -149,17 +149,17 @@ var/global/list/ai_verbs_default = list(
 
 	//Languages
 	add_language(LANGUAGE_ROBOT_GLOBAL, TRUE)
-	add_language(LANGUAGE_EAL, TRUE)
-	add_language(LANGUAGE_HUMAN_EURO, TRUE)
+	add_language(LANGUAGE_MECHANICUS, TRUE)
+	add_language(LANGUAGE_HIGH_GOTHIC, TRUE)
 	add_language(LANGUAGE_HUMAN_ARABIC, TRUE)
 	add_language(LANGUAGE_HUMAN_CHINESE, TRUE)
 	add_language(LANGUAGE_HUMAN_IBERIAN, TRUE)
 	add_language(LANGUAGE_HUMAN_INDIAN, TRUE)
 	add_language(LANGUAGE_HUMAN_RUSSIAN, TRUE)
 	add_language(LANGUAGE_HUMAN_SELENIAN, TRUE)
-	add_language(LANGUAGE_UNATHI_SINTA, TRUE)
-	add_language(LANGUAGE_SKRELLIAN, TRUE)
-	add_language(LANGUAGE_SPACER, TRUE)
+	add_language(LANGUAGE_KROOT_SINTA, TRUE)
+	add_language(LANGUAGE_TAU, TRUE)
+	add_language(LANGUAGE_LOW_GOTHIC, TRUE)
 	add_language(LANGUAGE_SIGN, FALSE)
 
 	if(!safety)//Only used by AIize() to successfully spawn an AI.
@@ -214,7 +214,7 @@ var/global/list/ai_verbs_default = list(
 		show_laws()
 		to_chat(src, "<b>These laws may be changed by other players or by other random events.</b>")
 
-	job = "AI"
+	job = "Machine Spirit"
 	setup_icon()
 	eyeobj.possess(src)
 
@@ -292,7 +292,7 @@ var/global/list/ai_verbs_default = list(
 	if(stat || !has_power())
 		return
 
-	var/new_sprite = input("Select an icon!", "AI", selected_sprite) as null|anything in available_icons()
+	var/new_sprite = input("Select an icon!", "Machine Spirit", selected_sprite) as null|anything in available_icons()
 	if(new_sprite)
 		selected_sprite = new_sprite
 
@@ -339,12 +339,12 @@ var/global/list/ai_verbs_default = list(
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
 
-	var/confirm = alert("Are you sure you want to evacuate?", "Confirm Evacuation", "Yes", "No")
+	var/confirm = alert("Are you sure you want to evacuate?", "Confirm Evacuation", "Compliance", "No")
 
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
 
-	if(confirm == "Yes")
+	if(confirm == "Compliance")
 		call_shuttle_proc(src)
 
 	post_status("shuttle")
@@ -356,11 +356,11 @@ var/global/list/ai_verbs_default = list(
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
 
-	var/confirm = alert("Are you sure you want to cancel the evacuation?", "Confirm Cancel", "Yes", "No")
+	var/confirm = alert("Are you sure you want to cancel the evacuation?", "Confirm Cancel", "Compliance", "No")
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
 
-	if(confirm == "Yes")
+	if(confirm == "Compliance")
 		cancel_call_proc(src)
 
 /mob/living/silicon/ai/var/emergency_message_cooldown = 0
@@ -371,7 +371,7 @@ var/global/list/ai_verbs_default = list(
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
 	if(!is_relay_online())
-		to_chat(usr, SPAN_WARNING("No Emergency Bluespace Relay detected. Unable to transmit message."))
+		to_chat(usr, SPAN_WARNING("No Emergency Warp Relay detected. Unable to transmit message."))
 		return
 	if(emergency_message_cooldown)
 		to_chat(usr, SPAN_WARNING("Arrays recycling. Please stand by."))
@@ -380,7 +380,7 @@ var/global/list/ai_verbs_default = list(
 	if(!input)
 		return
 	Centcomm_announce(input, usr)
-	to_chat(usr, SPAN_NOTICE("Message transmitted."))
+	to_chat(usr, SPAN_NOTICE("Compliance. Message transmitted.."))
 	log_say("[key_name(usr)] has made an IA [GLOB.using_map.boss_short] announcement: [input]")
 	emergency_message_cooldown = 1
 	spawn(300)

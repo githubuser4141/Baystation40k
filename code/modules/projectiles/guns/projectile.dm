@@ -7,10 +7,12 @@
 	w_class = ITEM_SIZE_NORMAL
 	matter = list(MATERIAL_STEEL = 1000)
 	screen_shake = 1
-	space_recoil = 1
+	space_recoil = 0 // Kinda silly to use rifles to  be flying around instead of jetpacks.
 	combustion = 1
+	slowdown_general = 0.03
+	slot_flags = SLOT_BELT|SLOT_HOLSTER
 
-	var/caliber = CALIBER_PISTOL		//determines which casings will fit
+	var/caliber = CALIBER_SLUG		//determines which casings will fit
 	var/handle_casings = EJECT_CASINGS	//determines how spent casings should be handled
 	var/load_method = SINGLE_CASING|SPEEDLOADER //1 = Single shells, 2 = box or quick loader, 4 = magazine
 	var/obj/item/ammo_casing/chambered = null
@@ -55,12 +57,14 @@
 	update_icon()
 
 /obj/item/gun/projectile/consume_next_projectile()
+	if(calibrated == 0) // If not calibrated, adjust jam chance
+		jam_chance = calibration_penalty
 	if(!is_jammed && prob(jam_chance))
 		src.visible_message(SPAN_DANGER("\The [src] jams!"))
 		is_jammed = 1
 		var/mob/user = loc
 		if(istype(user))
-			if(prob(user.skill_fail_chance(SKILL_WEAPONS, 100, SKILL_MASTER)))
+			if(prob(user.skill_fail_chance(SKILL_GUNS, 100, SKILL_MASTER)))
 				return null
 			else
 				to_chat(user, SPAN_NOTICE("You reflexively clear the jam on \the [src]."))
@@ -164,7 +168,7 @@
 					to_chat(user, SPAN_WARNING("\The [A] won't fit into [src]."))
 					return
 				if(ammo_magazine)
-					if(user.a_intent == I_HELP || user.a_intent == I_DISARM || !user.skill_check(SKILL_WEAPONS, SKILL_TRAINED))
+					if(user.a_intent == I_HELP || user.a_intent == I_DISARM || !user.skill_check(SKILL_GUNS, SKILL_TRAINED))
 						to_chat(user, SPAN_WARNING("[src] already has a magazine loaded."))//already a magazine here
 						return
 					else
@@ -175,7 +179,7 @@
 							if(!user.unEquip(AM, src))
 								return
 							//Experienced gets a 1 second delay, master gets a 0.5 second delay
-							if(do_after(user, user.get_skill_value(SKILL_WEAPONS) == SKILL_MASTER ? PROF_TAC_RELOAD : EXP_TAC_RELOAD, src, DO_DEFAULT | DO_BOTH_UNIQUE_ACT))
+							if(do_after(user, user.get_skill_value(SKILL_GUNS) == SKILL_MASTER ? PROF_TAC_RELOAD : EXP_TAC_RELOAD, src, DO_DEFAULT | DO_BOTH_UNIQUE_ACT))
 								if(jam_chance && (!(ammo_magazine.type == magazine_type)))
 									jam_chance -= 20
 								ammo_magazine.update_icon()
@@ -191,7 +195,7 @@
 							if(!user.unEquip(AM, src))
 								return
 							//Experienced gets a 0.5 second delay, master gets a 0.25 second delay
-							if(do_after(user, user.get_skill_value(SKILL_WEAPONS) == SKILL_MASTER ? PROF_SPD_RELOAD : EXP_SPD_RELOAD, src, DO_DEFAULT | DO_BOTH_UNIQUE_ACT))
+							if(do_after(user, user.get_skill_value(SKILL_GUNS) == SKILL_MASTER ? PROF_SPD_RELOAD : EXP_SPD_RELOAD, src, DO_DEFAULT | DO_BOTH_UNIQUE_ACT))
 								if(jam_chance && istype(ammo_magazine, magazine_type))
 									jam_chance -= 10
 								ammo_magazine.update_icon()
@@ -329,13 +333,13 @@
 
 /obj/item/gun/projectile/examine(mob/user)
 	. = ..()
-	if(is_jammed && user.skill_check(SKILL_WEAPONS, SKILL_BASIC))
+	if(is_jammed && user.skill_check(SKILL_GUNS, SKILL_BASIC))
 		to_chat(user, SPAN_WARNING("It looks jammed."))
 	if(ammo_magazine)
 		to_chat(user, "It has \a [ammo_magazine] loaded.")
-	if(user.skill_check(SKILL_WEAPONS, SKILL_TRAINED))
+	if(user.skill_check(SKILL_GUNS, SKILL_TRAINED))
 		to_chat(user, "Has [getAmmo()] round\s remaining.")
-	if (user.skill_check(SKILL_WEAPONS, SKILL_EXPERIENCED))
+	if (user.skill_check(SKILL_GUNS, SKILL_EXPERIENCED))
 		to_chat(user, "[src.DrawChamber()]")
 
 /obj/item/gun/projectile/proc/getAmmo()

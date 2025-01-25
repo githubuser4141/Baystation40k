@@ -5,13 +5,13 @@
 
 /obj/structure/cult/talisman
 	name = "Altar"
-	desc = "A bloodstained altar dedicated to Nar-Sie."
+	desc = "A bloodstained altar dedicated to the Sovereign."
 	icon_state = "talismanaltar"
 
 
 /obj/structure/cult/forge
 	name = "Daemon forge"
-	desc = "A forge used in crafting the unholy weapons used by the armies of Nar-Sie."
+	desc = "A forge used in crafting the unholy weapons used by the armies of the Sovereign."
 	icon_state = "forge"
 
 /obj/structure/cult/pylon
@@ -22,7 +22,7 @@
 	light_power = 0.5
 	light_range = 13
 	light_color = "#3e0000"
-	health_max = 20
+	health_max = 200
 	health_min_damage = 4
 	damage_hitsound = 'sound/effects/Glasshit.ogg'
 
@@ -75,17 +75,17 @@
 	light_range=5
 	light_color="#ff0000"
 	spawnable=list(
-		/mob/living/simple_animal/hostile/scarybat,
-		/mob/living/simple_animal/hostile/creature,
-		/mob/living/simple_animal/hostile/faithless
+		/mob/living/simple_animal/hostile/daemon,
+		/mob/living/simple_animal/hostile/daemon/hulk,
+		/mob/living/simple_animal/hostile/daemon/zygote/worm
 	)
 
 /obj/gateway/active/cult
 	light_color="#ff0000"
 	spawnable=list(
-		/mob/living/simple_animal/hostile/scarybat/cult,
-		/mob/living/simple_animal/hostile/creature/cult,
-		/mob/living/simple_animal/hostile/faithless/cult
+		/mob/living/simple_animal/hostile/daemon,
+		/mob/living/simple_animal/hostile/daemon/hulk,
+		/mob/living/simple_animal/hostile/daemon/zygote/worm
 	)
 
 /obj/gateway/active/New()

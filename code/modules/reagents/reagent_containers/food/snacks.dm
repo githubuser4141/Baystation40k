@@ -1528,7 +1528,7 @@
 		src.visible_message(SPAN_WARNING("[src] transforms, the dummy body's features twisting and cracking as it imitates the provided blood!"))
 		H.dropInto(src.loc)
 		H.setBrainLoss(200)
-		H.adjustOxyLoss(H.maxHealth)
+		H.adjustOxyLoss(H.maxhealth)
 		domutcheck(H, null)
 		H.UpdateAppearance()
 		qdel(src)
@@ -1560,7 +1560,7 @@
 
 /obj/item/reagent_containers/food/snacks/bigbiteburger
 	name = "big bite burger"
-	desc = "Forget the Luna Burger! THIS is the future!"
+	desc = "Forget the Holy TerraBurger! THIS is the future!"
 	icon_state = "bigbiteburger"
 	filling_color = "#e3d681"
 	center_of_mass = "x=16;y=11"
@@ -3372,10 +3372,30 @@
 
 //Just a short line of Canned Consumables, great for treasure in faraway abandoned outposts
 
+/obj/item/reagent_containers/food/snacks/canned/warfare
+	name = "\improper canned beans"
+	desc = "Supposedly what's in there is edible."
+	icon_state = "cbeans"
+	icon = 'icons/obj/food.dmi'
+	trash = /obj/item/trash/warfare_can
+	nutriment_desc = list("meat" = 1)
+	nutriment_amt = 5
+	var/drop_sound = 'sound/items/handle/can_drop.ogg'
+
+/obj/item/reagent_containers/food/snacks/canned/warfare/throw_impact(atom/hit_atom)
+	..()
+	if(drop_sound)
+		playsound(src, drop_sound, 50, 0)
+
+/obj/item/reagent_containers/food/snacks/canned/warfare/on_update_icon()
+	if(!sealed)
+		icon_state = "[initial(icon_state)]_open"
+
+
 /obj/item/reagent_containers/food/snacks/canned/beef
 	name = "quadrangled beefium"
 	icon_state = "beef"
-	desc = "Proteins carefully cloned from extinct stock of holstein in the meat foundries of Mars."
+	desc = "Proteins carefully cloned from extinct stock of holstein in the meat foundries of Sancor."
 	trash = /obj/item/trash/beef
 	filling_color = "#663300"
 	center_of_mass = "x=15;y=9"
@@ -3388,7 +3408,7 @@
 /obj/item/reagent_containers/food/snacks/canned/beans
 	name = "baked beans"
 	icon_state = "beans"
-	desc = "Luna Colony beans. Carefully synthethized from soy."
+	desc = "Holy TerraColony beans. Carefully synthethized from soy."
 	trash = /obj/item/trash/beans
 	filling_color = "#ff6633"
 	center_of_mass = "x=15;y=9"
@@ -3399,7 +3419,7 @@
 /obj/item/reagent_containers/food/snacks/canned/tomato
 	name = "tomato soup"
 	icon_state = "tomato"
-	desc = "Plain old unseasoned tomato soup. This can predates the formation of the SCG."
+	desc = "Plain old unseasoned tomato soup. This can looks centuries old..."
 	trash = /obj/item/trash/tomato
 	filling_color = "#ae0000"
 	center_of_mass = "x=15;y=9"
@@ -3457,7 +3477,7 @@
 /obj/item/reagent_containers/food/snacks/canned/caviar
 	name = "caviar"
 	icon_state = "fisheggs"
-	desc = "Terran caviar, or space carp eggs. Carefully faked using alginate, artificial flavoring and salt. Skrell approved!"
+	desc = "Imperial caviar, or space carp eggs. Carefully faked using alginate, artificial flavoring and salt. Skrell approved!"
 	trash = /obj/item/trash/fishegg
 	filling_color = "#000000"
 	center_of_mass = "x=15;y=9"
@@ -3468,7 +3488,7 @@
 /obj/item/reagent_containers/food/snacks/canned/caviar/true
 	name = "caviar"
 	icon_state = "carpeggs"
-	desc = "Terran caviar, or space carp eggs. Banned by the Sol Food Health Administration for exceeding the legally set amount of carpotoxins in foodstuffs."
+	desc = "Imperial caviar, or space carp eggs. Banned by the Sol Food Health Administration for exceeding the legally set amount of carpotoxins in foodstuffs."
 	trash = /obj/item/trash/carpegg
 	filling_color = "#330066"
 	center_of_mass = "x=15;y=9"
@@ -3581,7 +3601,7 @@
 /obj/item/reagent_containers/food/snacks/croutons
 	name = "suhariki"
 	icon_state = "croutons"
-	desc = "Fried bread cubes. Popular in Terran territories."
+	desc = "Fried bread cubes. Popular in Imperial territories."
 	trash = /obj/item/trash/croutons
 	filling_color = "#c6b17f"
 	center_of_mass = "x=15;y=9"
@@ -3653,7 +3673,7 @@
 	nutriment_amt = 6
 	bitesize = 2
 
-/obj/item/reagent_containers/food/snacks/skrellsnacks
+/obj/item/reagent_containers/food/snacks/tau
 	name = "skrellsnax"
 	desc = "Cured fungus shipped all the way from Jargon 4, almost like jerky! Almost."
 	icon_state = "skrellsnacks"
@@ -3712,7 +3732,7 @@
 
 /obj/item/reagent_containers/food/snacks/candy_corn
 	name = "candy corn"
-	desc = "It's a handful of candy corn. Cannot be stored in a detective's hat, alas."
+	desc = "It's a handful of candy corn. Cannot be stored in a investigator's hat, alas."
 	icon_state = "candy_corn"
 	filling_color = "#fffcb0"
 	center_of_mass = "x=14;y=10"
@@ -3777,7 +3797,7 @@
 
 /obj/item/reagent_containers/food/snacks/donut
 	name = "donut"
-	desc = "Goes great with Robust Coffee."
+	desc = "Goes great with Recaf."
 	icon_state = "donut1"
 	filling_color = "#b87b12"
 	var/overlay_state = "box-donut1"
@@ -3786,7 +3806,7 @@
 
 /obj/item/reagent_containers/food/snacks/donut/normal
 	name = "donut"
-	desc = "Goes great with Robust Coffee."
+	desc = "Goes great with Recaf."
 	icon_state = "donut1"
 	nutriment_amt = 3
 	bitesize = 3
@@ -4029,7 +4049,7 @@
 
 /obj/item/reagent_containers/food/snacks/hatchling_surprise
 	name = "hatchling surprise"
-	desc = "A poached egg on top of several fried strips of meat, favoured by Unathi young and old alike. The real surprise is if you can feed it to your hatchling without losing a finger or two."
+	desc = "A poached egg on top of several fried strips of meat, favoured by Kroot young and old alike. The real surprise is if you can feed it to your hatchling without losing a finger or two."
 	icon_state = "hatchling-surprise"
 	trash = /obj/item/trash/snack_bowl
 	bitesize = 5
@@ -4042,7 +4062,7 @@
 
 /obj/item/reagent_containers/food/snacks/red_sun_special
 	name = "red sun special"
-	desc = "A single piece of sausage sitting on melted cheese curds. A cheap dish for Unathi working in human space."
+	desc = "A single piece of sausage sitting on melted cheese curds. A cheap dish for Kroot working in human space."
 	icon_state = "red-sun-special"
 	trash = /obj/item/trash/snack_bowl
 	bitesize = 4
@@ -4080,7 +4100,7 @@
 
 /obj/item/reagent_containers/food/snacks/gukhe_fish
 	name = "cured gukhe platter"
-	desc = "A fish cutlet cured in a bitter gukhe rub, served with a tangy dipping sauce and a garnish of seaweed. A staple of Yeosa'Unathi cooking."
+	desc = "A fish cutlet cured in a bitter gukhe rub, served with a tangy dipping sauce and a garnish of seaweed. A staple of Kroot cooking."
 	icon_state = "gukhe-fish"
 	nutriment_amt = 5
 	nutriment_desc = list("tangy fish", "bitter gukhe")
@@ -4097,7 +4117,7 @@
 
 /obj/item/reagent_containers/food/snacks/aghrassh_cake
 	name = "aghrassh cake"
-	desc = "A dense, calorie-packed puck of aghrassh paste, spices, and ground meat, usually eaten by desert-going Unathi. This one has an egg cracked over it to make it a bit more palatable."
+	desc = "A dense, calorie-packed puck of aghrassh paste, spices, and ground meat, usually eaten by desert-going Kroot. This one has an egg cracked over it to make it a bit more palatable."
 	icon_state = "aghrassh-cake"
 	nutriment_amt = 8
 	nutriment_desc = list("aghrassh nuts", "mealy paste")

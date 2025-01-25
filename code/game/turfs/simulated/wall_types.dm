@@ -14,7 +14,7 @@
 
 /turf/simulated/wall/r_wall/hull
 	name = "hull"
-	color = COLOR_SOL
+	color = COLOR_DARK_BLUE_GRAY
 
 /turf/simulated/wall/r_wall/hull/vox
 	initial_gas = list("nitrogen" = 101.38)
@@ -55,10 +55,11 @@
 	..(newloc, MATERIAL_TITANIUM,MATERIAL_TITANIUM)
 
 /turf/simulated/wall/ocp_wall
-	icon_state = "r_ocp"
+	icon_state = "generic"
+	paint_color = COLOR_GUNMETAL
 
 /turf/simulated/wall/ocp_wall/New(newloc)
-	..(newloc, MATERIAL_OSMIUM_CARBIDE_PLASTEEL, MATERIAL_OSMIUM_CARBIDE_PLASTEEL)
+	..(newloc, MATERIAL_CERAMITE_PLASTEEL, MATERIAL_CERAMITE_PLASTEEL)
 
 //Material walls
 
@@ -188,7 +189,8 @@
 	icon_state = "techno0"
 	walltype = "techno"
 
-
+/turf/simulated/wall/warhammer/techno/New(newloc)
+	..(newloc, MATERIAL_TITANIUM,MATERIAL_TITANIUM)
 
 /*
 /turf/simulated/wall/r_wall/imperial // Bay Walls

@@ -1,20 +1,15 @@
 /obj/item/clothing/accessory/helmet_cover
 	name = "helmet cover"
 	desc = "A fabric cover for armored helmets."
-	icon_override = 'icons/mob/onmob/onmob_modular_armor.dmi'
-	icon = 'icons/obj/clothing/obj_suit_modular_armor.dmi'
+	icon_override = 'icons/mob/onmob/onmob_suit.dmi'
+	icon = 'icons/obj/clothing/obj_suit.dmi'
 	accessory_icons = list(
-		slot_tie_str = 'icons/mob/onmob/onmob_modular_armor.dmi',
-		slot_head_str = 'icons/mob/onmob/onmob_modular_armor.dmi'
+		slot_tie_str = 'icons/mob/onmob/onmob_suit.dmi',
+		slot_head_str = 'icons/mob/onmob/onmob_suit.dmi'
 	)
 	icon_state = null
 	slot = ACCESSORY_SLOT_HELMET_COVER
 	body_location = HEAD
-
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_modular_armor_unathi.dmi'
-		)
-
 
 /obj/item/clothing/accessory/helmet_cover/blue
 	name = "blue helmet cover"
@@ -47,14 +42,14 @@
 
 
 /obj/item/clothing/accessory/helmet_cover/pcrc
-	name = "\improper PCRC helmet cover"
+	name = "\improper imperial helmet cover"
 	desc = "A fabric cover for armored helmets. This one is colored navy blue and has a tag in the back with the words PROXIMA CENTAURI RISK CONTROL printed in cyan lettering on it."
 	icon_state = "helmcover_pcrc"
 
 
 /obj/item/clothing/accessory/helmet_cover/saare
-	name = "\improper SAARE helmet cover"
-	desc = "A fabric cover for armored helmets. This one has SAARE's colors."
+	name = "\improper imperial helmet cover"
+	desc = "A fabric cover for armored helmets. This one has Vessorine's colors."
 	icon_state = "helmcover_saare"
 
 /obj/item/clothing/accessory/helmet_cover/lead

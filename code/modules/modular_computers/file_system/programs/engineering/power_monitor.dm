@@ -7,7 +7,7 @@
 	program_menu_icon = "battery-3"
 	extended_desc = "This program connects to sensors to provide information about electrical systems"
 	ui_header = "power_norm.gif"
-	required_access = access_engine
+	required_access = access_mechanicus
 	requires_ntnet = TRUE
 	network_destination = "power monitoring system"
 	size = 9
@@ -53,7 +53,7 @@
 	return 0
 
 // If PC is not null header template is loaded. Use PC.get_header_data() to get relevant nanoui data from it. All data entries begin with "PC_...."
-// In future it may be expanded to other modular computer devices.
+// In future it may be expanded to other modular cogitator devices.
 /datum/nano_module/power_monitor/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 1, datum/topic_state/state = GLOB.default_state)
 	var/list/data = host.initial_data()
 

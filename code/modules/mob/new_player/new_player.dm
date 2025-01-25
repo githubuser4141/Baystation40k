@@ -13,7 +13,7 @@
 	var/totalPlayers = 0		 //Player counts for the Lobby tab
 	var/totalPlayersReady = 0
 	var/datum/browser/panel
-	var/show_invalid_jobs = 0
+	var/show_invalid_jobs = 1
 
 
 /mob/new_player/Destroy()
@@ -134,7 +134,7 @@
 			to_chat(src, SPAN_WARNING("Please wait for server initialization to complete..."))
 			return
 
-		if(!config.respawn_delay || client.holder || alert(src,"Are you sure you wish to observe? You will have to wait [config.respawn_delay] minute\s before being able to respawn!","Player Setup","Yes","No") == "Yes")
+		if(!config.respawn_delay || client.holder || alert(src,"Are you sure you wish to observe? You will have to wait [config.respawn_delay] minute\s before being able to respawn!","Player Setup","Compliance","No") == "Compliance")
 			if(!client)	return 1
 			var/mob/observer/ghost/observer = new()
 
@@ -241,8 +241,8 @@
 		return 0
 
 	if (!check_occupation_set(job))
-		var/choice = alert("You do not have [job.title] set as your occupation, are you sure you want to join as this role?", "Occupation Mismatch", "Yes", "No")
-		if (choice != "Yes")
+		var/choice = alert("You do not have [job.title] set as your occupation, are you sure you want to join as this role?", "Occupation Mismatch", "Compliance", "No")
+		if (choice != "Compliance")
 			return FALSE
 
 	SSjobs.assign_role(src, job.title, 1)
@@ -255,7 +255,7 @@
 	SScustomitems.equip_custom_items(character)
 
 	// AIs don't need a spawnpoint, they must spawn at an empty core
-	if(character.mind.assigned_role == "AI")
+	if(character.mind.assigned_role == "Machine Spirit")
 
 		character = character.AIize(move=0) // AIize the character, but don't move them yet
 
@@ -297,7 +297,7 @@
 		if(character.mind.role_alt_title)
 			rank = character.mind.role_alt_title
 		// can't use their name here, since cyborg namepicking is done post-spawn, so we'll just say "A new Cyborg has arrived"/"A new Android has arrived"/etc.
-		GLOB.global_announcer.autosay("A new[rank ? " [rank]" : " visitor" ] [join_message ? join_message : "has arrived"].", "Arrivals Announcement Computer")
+		// GLOB.global_announcer.autosay("A new[rank ? " [rank]" : " visitor" ] [join_message ? join_message : "has arrived"].", "Arrivals Announcement Computer")
 
 /mob/new_player/proc/LateChoices()
 	var/name = client.prefs.real_name
@@ -331,7 +331,7 @@
 		"Medical" =         list(jobs = list(), dep = MED, color = "#99ffe6"),
 		"Research" =        list(jobs = list(), dep = SCI, color = "#e6b3e6", colBreak = 1),
 		"Supply" =          list(jobs = list(), dep = SUP, color = "#ead4ae"),
-		"Exploration" =     list(jobs = list(), dep = EXP, color = "#ffd699"),
+		"Explorator" =     list(jobs = list(), dep = EXP, color = "#ffd699"),
 		"ERROR" =           list(jobs = list(), color = "#ffffff", colBreak = 1)
 	)
 	// TORCH JOBS
@@ -396,10 +396,7 @@
 			continue
 		for(var/datum/job/prof in categorizedJobs[jobcat]["jobs"])
 			if(jobcat == "Command")
-				if(istype(prof, /datum/job/captain))
-					dat += prof.get_join_link(client, "byond://?src=\ref[src];SelectedJob=[prof.title]", show_invalid_jobs, TRUE)
-				else
-					dat += prof.get_join_link(client, "byond://?src=\ref[src];SelectedJob=[prof.title]", show_invalid_jobs)
+				dat += prof.get_join_link(client, "byond://?src=\ref[src];SelectedJob=[prof.title]", show_invalid_jobs)
 			else if(prof.department_flag & COM)
 				dat += prof.get_join_link(client, "byond://?src=\ref[src];SelectedJob=[prof.title]", show_invalid_jobs, TRUE)
 			else

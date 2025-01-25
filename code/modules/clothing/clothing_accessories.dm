@@ -143,7 +143,7 @@
 	return FALSE
 
 
-/obj/item/clothing/suit/storage/attempt_store_item(obj/item/I, mob/user, silent)
+/obj/item/clothing/suit/armor/grim/storage/attempt_store_item(obj/item/I, mob/user, silent)
 	if (pockets?.can_be_inserted(I, user, TRUE) && pockets.handle_item_insertion(I, silent))
 		return TRUE
 	return ..()
@@ -190,8 +190,8 @@
 	if(usr.stat) return
 	if(!length(accessories)) return
 
-	var/choice = alert("Are you sure you want to remove all accessories from \the [src]?", "Confirmation", "Yes", "No")
-	if(choice == "Yes")
+	var/choice = alert("Are you sure you want to remove all accessories from \the [src]?", "Confirmation", "Compliance", "No")
+	if(choice == "Compliance")
 		for(var/obj/item/clothing/accessory/ac in accessories)
 			if (ac.accessory_flags & ACCESSORY_REMOVABLE)
 				src.remove_accessory(usr,ac)

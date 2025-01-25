@@ -27,7 +27,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/parrot
 	name = "parrot"
-	desc = "A large, colourful tropical bird native to Earth, known for its strong beak and ability to mimic speech."
+	desc = "A large, colourful tropical bird native to Terra, known for its strong beak and ability to mimic speech."
 	icon = 'icons/mob/simple_animal/parrot.dmi'
 	icon_state = "parrot_fly"
 	icon_living = "parrot_fly"
@@ -99,7 +99,7 @@
 
 	var/list/spawn_headset_options = list(
 		/obj/item/device/radio/headset/headset_sec,
-		/obj/item/device/radio/headset/headset_eng,
+		/obj/item/device/radio/headset/headset_mechanicus,
 		/obj/item/device/radio/headset/headset_med,
 		/obj/item/device/radio/headset/headset_sci,
 		/obj/item/device/radio/headset/headset_cargo
@@ -210,20 +210,10 @@
 						available_channels.Cut()
 						for(var/ch in headset_to_add.channels)
 							switch(ch)
-								if("Engineering")
-									available_channels.Add(":e")
 								if("Command")
 									available_channels.Add(":c")
-								if("Security")
-									available_channels.Add(":s")
-								if("Science")
-									available_channels.Add(":n")
-								if("Medical")
+								if("Medicae")
 									available_channels.Add(":m")
-								if("Mining")
-									available_channels.Add(":d")
-								if("Cargo")
-									available_channels.Add(":q")
 			return TOPIC_HANDLED
 
 	return ..()
@@ -706,7 +696,7 @@
 /mob/living/simple_animal/hostile/retaliate/parrot/Poly
 	name = "Poly"
 	desc = "Poly the Parrot. An expert on quantum cracker theory."
-	spawn_headset_options = list(/obj/item/device/radio/headset/headset_eng)
+	spawn_headset_options = list(/obj/item/device/radio/headset/headset_mechanicus)
 
 
 /mob/living/simple_animal/hostile/retaliate/parrot/say(message)

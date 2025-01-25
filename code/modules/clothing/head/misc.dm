@@ -77,7 +77,7 @@
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/head/nursehat
-	name = "nurse's hat"
+	name = "medicae hat"
 	desc = "It allows quick identification of trained medical personnel."
 	icon_state = "nursehat"
 	siemens_coefficient = 0.9
@@ -185,11 +185,11 @@
 	does_spin = FALSE
 	attack_verb = list("sliced", "torn", "cut")
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_CARAPACE,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_SMALL,
-		bomb = ARMOR_BOMB_PADDED
+		bomb = ARMOR_BOMB_THIRTY
 		)
 
 /obj/item/clothing/head/beaverhat
@@ -267,7 +267,7 @@
 
 /obj/item/clothing/head/philosopher_wig
 	name = "natural philosopher's wig"
-	desc = "A stylish monstrosity unearthed from Earth's Renaissance period. With this most distinguish'd wig, you'll be ready for your next soiree!"
+	desc = "A stylish monstrosity unearthed from Terra's Renaissance period. With this most distinguish'd wig, you'll be ready for your next soiree!"
 	icon_state = "philosopher_wig"
 	item_state_slots = list(
 		slot_l_hand_str = "pwig",
@@ -325,8 +325,8 @@
 	flags_inv = BLOCKHEADHAIR
 	color = "#5f5f5f"
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bomb = ARMOR_BOMB_PADDED
+		melee = ARMOR_MELEE_FLAK,
+		bomb = ARMOR_BOMB_THIRTY
 		)
 
 /obj/item/clothing/head/tank/olive
@@ -353,13 +353,13 @@
 	flash_protection = FLASH_PROTECTION_MAJOR
 
 /obj/item/clothing/head/beret/pcrc
-	name = "\improper PCRC beret"
-	desc = "A navy beret with the emblem of Proxima Centauri Risk Control, a private security firm. For agents that are more inclined towards style than safety."
+	name = "\improper imperial beret"
+	desc = "A navy beret with the emblem of Necromunda, a private security firm. For agents that are more inclined towards style than safety."
 	icon_state = "beret_corporate_pcrc"
 
 /obj/item/clothing/head/beret/saare
-	name = "\improper SAARE beret"
-	desc = "A gray beret with the emblem of Strategic Assault and Asset Retention Enterprises, a private military corporation. For mercenaries that are more inclined towards style than safety."
+	name = "\improper imperial beret"
+	desc = "A gray beret with the emblem of Vessorine Clans, a private military corporation. For mercenaries that are more inclined towards style than safety."
 	icon_state = "beret_corporate_saare"
 
 /obj/item/clothing/head/deckcrew
@@ -371,25 +371,25 @@
 
 /obj/item/clothing/head/deckcrew/green
 	name = "green deck crew helmet"
-	desc = "A helmet with ear protection and a visor, used by support staff in Fleet hangars."
+	desc = "A helmet with ear protection and a visor, used by support staff in Imperial Navy hangars."
 	icon_state = "deckcrew_g"
 
 /obj/item/clothing/head/deckcrew/blue
 	name = "blue deck crew helmet"
-	desc = "A helmet with ear protection and a visor, used by tug operators in Fleet hangars."
+	desc = "A helmet with ear protection and a visor, used by tug operators in Imperial Navy hangars."
 	icon_state = "deckcrew_b"
 
 /obj/item/clothing/head/deckcrew/yellow
 	name = "yellow deck crew helmet"
-	desc = "A helmet with ear protection and a visor, used by traffic control in Fleet hangars."
+	desc = "A helmet with ear protection and a visor, used by traffic control in Imperial Navy hangars."
 	icon_state = "deckcrew_y"
 
 /obj/item/clothing/head/deckcrew/purple
 	name = "purple deck crew helmet"
-	desc = "A helmet with ear protection and a visor, used by fueling personnel in Fleet hangars."
+	desc = "A helmet with ear protection and a visor, used by fueling personnel in Imperial Navy hangars."
 	icon_state = "deckcrew_p"
 
 /obj/item/clothing/head/deckcrew/red
 	name = "red deck crew helmet"
-	desc = "A helmet with ear protection and a visor, used by munitions handlers in Fleet hangars."
+	desc = "A helmet with ear protection and a visor, used by munitions handlers in Imperial Navy hangars."
 	icon_state = "deckcrew_r"

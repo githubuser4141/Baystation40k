@@ -4,12 +4,12 @@
 	icon = 'icons/obj/guns/pneumatic.dmi'
 	icon_state = "pneumatic"
 	item_state = "pneumatic"
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3)
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 3)
 	slot_flags = SLOT_BELT
 	w_class = ITEM_SIZE_HUGE
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	fire_sound_text = "a loud whoosh of moving air"
-	fire_delay = 50
+	fire_delay = 14
 	fire_sound = 'sound/weapons/tablehit1.ogg'
 
 	var/fire_pressure                                   // Used in fire checks/pressure checks.

@@ -219,31 +219,21 @@ var/global/list/all_objectives = list()
 	var/target_name
 
 	var/static/possible_items[] = list(
-		"the captain's antique laser gun" = /obj/item/gun/energy/captain,
+		"the lord traders archeotech pistol" = /obj/item/gun/energy/lasgun/laspistol/lord,
 		"a bluespace rift generator" = /obj/item/integrated_circuit/manipulation/bluespace_rift,
 		"an RCD" = /obj/item/rcd,
 		"a jetpack" = /obj/item/tank/jetpack,
-		"a captain's jumpsuit" = /obj/item/clothing/under/rank/captain,
-		"a functional AI" = /obj/item/aicard,
 		"a pair of magboots" = /obj/item/clothing/shoes/magboots,
-		"the [station_name()] blueprints" = /obj/item/blueprints,
-		"a nasa voidsuit" = /obj/item/clothing/suit/space/void,
 		"28 moles of phoron (full tank)" = /obj/item/tank,
 		"a sample of slime extract" = /obj/item/slime_extract,
 		"a piece of corgi meat" = /obj/item/reagent_containers/food/snacks/meat/corgi,
-		"a chief science officer's jumpsuit" = /obj/item/clothing/under/rank/research_director,
-		"a chief engineer's jumpsuit" = /obj/item/clothing/under/rank/chief_engineer,
-		"a chief medical officer's jumpsuit" = /obj/item/clothing/under/rank/chief_medical_officer,
-		"a head of security's jumpsuit" = /obj/item/clothing/under/rank/head_of_security,
-		"a head of personnel's jumpsuit" = /obj/item/clothing/under/rank/head_of_personnel,
 		"the hypospray" = /obj/item/reagent_containers/hypospray,
 		"the captain's pinpointer" = /obj/item/pinpointer,
-		"an ablative armor vest" = /obj/item/clothing/suit/armor/laserproof,
 	)
 
 	var/static/possible_items_special[] = list(
 		/*"nuclear authentication disk" = /obj/item/disk/nuclear,*///Broken with the change to nuke disk making it respawn on z level change.
-		"nuclear gun" = /obj/item/gun/energy/gun/nuclear,
+		"tau pulse rifle" = /obj/item/gun/energy/tau/pulserifle,
 		"diamond drill" = /obj/item/pickaxe/diamonddrill,
 		"bag of holding" = /obj/item/storage/backpack/holding,
 		"hyper-capacity cell" = /obj/item/cell/hyper,
@@ -311,7 +301,7 @@ var/global/list/all_objectives = list()
 				n_p ++
 	else if (GAME_STATE == RUNLEVEL_GAME)
 		for(var/mob/living/carbon/human/P in GLOB.player_list)
-			if(P.client && !(P.mind.changeling) && P.mind!=owner)
+			if(P.client && !(P.mind.genestealer) && P.mind!=owner)
 				n_p ++
 	target_amount = min(target_amount, n_p)
 
@@ -323,7 +313,7 @@ var/global/list/all_objectives = list()
 	return
 
 /datum/objective/heist/kidnap
-	var/list/roles = list(/datum/job/chief_engineer, /datum/job/rd, /datum/job/roboticist, /datum/job/chemist, /datum/job/engineer)
+	var/list/roles = list(/datum/job/magos_explorator, /datum/job/rd, /datum/job/roboticist, /datum/job/pharmacologis, /datum/job/tech_priest)
 
 /datum/objective/heist/kidnap/choose_target()
 	var/list/possible_targets = list()
@@ -438,10 +428,10 @@ var/global/list/all_objectives = list()
 	explanation_text = "Our knowledge must live on. Make sure at least [target_amount] acolytes escape to spread their work."
 
 /datum/objective/cult/eldergod
-	explanation_text = "Summon Nar-Sie via the use of the appropriate rune (Hell join self). It will only work if nine cultists stand on and around it. The convert rune is join blood self."
+	explanation_text = "Serve the chaos god or entity who wields a direct hand on the font of power you draw from..."
 
 /datum/objective/cult/sacrifice
-	explanation_text = "Conduct a ritual sacrifice for the glory of Nar-Sie."
+	explanation_text = "Conduct a ritual corruption and bring a non believer into our midst. Convert or corrupt a loyalist to the glory of chaos"
 
 /datum/objective/cult/sacrifice/find_target()
 	var/list/possible_targets = list()

@@ -2,7 +2,7 @@
 
 	// Text shown when becoming this antagonist.
 	var/list/restricted_jobs = 		list()   // Jobs that cannot be this antagonist at roundstart (depending on config)
-	var/list/blacklisted_jobs =		list(/datum/job/submap)   // Jobs that can NEVER be this antagonist
+	var/list/blacklisted_jobs =		list()   // Jobs that can NEVER be this antagonist
 
 	// Strings.
 	var/welcome_text = "Cry havoc and let slip the dogs of war!"
@@ -55,7 +55,7 @@
 	var/datum/language/required_language = null
 
 	// Used for setting appearance.
-	var/list/valid_species =       list(SPECIES_UNATHI,SPECIES_SKRELL,SPECIES_HUMAN,SPECIES_VOX)
+	var/list/valid_species =       list(SPECIES_KROOT,SPECIES_TAU,SPECIES_HUMAN,SPECIES_VOX)
 	var/min_player_age = 14
 
 	// Runtime vars.
@@ -73,11 +73,9 @@
 	var/id_type = /obj/item/card/id
 
 	var/antag_text = "You are an antagonist! Within the rules, \
-		try to act as an opposing force to the crew. Further RP and try to make sure \
+		try to act as a character with a story to tell. Further your legend and try to make sure \
 		other players have <i>fun</i>! If you are confused or at a loss, always adminhelp, \
-		and before taking extreme actions, please try to also contact the administration! \
-		Think through your actions and make the roleplay immersive! <b>Please remember all \
-		rules aside from those without explicit exceptions apply to antagonists.</b>"
+		Murder should always have a motivation so that those you kill feel there is meaning to their deaths.</b>"
 
 	// Map template that antag needs to load before spawning. Nulled after it's loaded.
 	var/datum/map_template/base_to_load

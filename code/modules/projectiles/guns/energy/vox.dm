@@ -17,7 +17,7 @@
 		. = voxform.check_held_user(user, src)
 
 /*
- * Vox Darkmatter Cannon
+ * Xenos Darkmatter Cannon
  */
 /obj/item/gun/energy/darkmatter
 	name = "flux cannon"
@@ -40,7 +40,7 @@
 	set_extension(src, /datum/extension/voxform)
 
 /*
- * Vox Sonic Cannon
+ * Xenos Sonic Cannon
  */
 /obj/item/gun/energy/sonic
 	name = "soundcannon"
@@ -52,7 +52,7 @@
 	one_hand_penalty = 1
 	self_recharge = 1
 	recharge_time = 10
-	fire_delay = 15
+	fire_delay = 8
 	projectile_type=/obj/item/projectile/energy/plasmastun/sonic/weak
 	firemodes = list(
 		list(mode_name="normal", projectile_type=/obj/item/projectile/energy/plasmastun/sonic/weak, charge_cost = 50),

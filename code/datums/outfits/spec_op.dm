@@ -45,7 +45,7 @@
 	return 1
 
 /singleton/hierarchy/outfit/syndicate_command
-	name = "Spec Ops - Syndicate commando"
+	name = "Spec Ops - Heretic commando"
 
 /singleton/hierarchy/outfit/syndicate_command/equip(mob/living/carbon/human/H, rank, assignment, equip_adjustments)
 	GLOB.commandos.equip(H)
@@ -53,36 +53,50 @@
 
 /singleton/hierarchy/outfit/mercenary
 	name = "Spec Ops - Mercenary"
-	uniform = /obj/item/clothing/under/syndicate
-	shoes = /obj/item/clothing/shoes/combat
-	l_ear = /obj/item/device/radio/headset/syndicate/alt
-	belt = /obj/item/storage/belt/holster/security
+	uniform = /obj/item/clothing/under/tactical
+	suit = /obj/item/clothing/suit/armor/grim/cult/militia
+	mask = /obj/item/clothing/mask/gas/prac_mask
+	head = /obj/item/clothing/head/helmet/flak/chaos/renegade
+	shoes = /obj/item/clothing/shoes/jackboots/pilgrim_boots
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/thick/swat
-	l_pocket = /obj/item/reagent_containers/pill/cyanide
 
 	id_slot = slot_wear_id
 	id_types = list(/obj/item/card/id/syndicate)
 	id_pda_assignment = "Mercenary"
 
-	backpack_contents = list(/obj/item/clothing/suit/space/void/merc/prepared = 1, /obj/item/clothing/mask/gas/syndicate = 1)
-
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_RESET_EQUIPMENT
 
-/singleton/hierarchy/outfit/mercenary/syndicate
-	name = "Spec Ops - Syndicate"
-	suit = /obj/item/clothing/suit/armor/vest
-	mask = /obj/item/clothing/mask/gas
-	head = /obj/item/clothing/head/helmet/swat
-	shoes = /obj/item/clothing/shoes/swat
-	id_desc = "Syndicate Operative"
+/singleton/hierarchy/outfit/mercenary/infardi
+	name = "Infardi Militia"
+	suit = /obj/item/clothing/suit/armor/grim/cult/militia
+	mask = /obj/item/clothing/mask/gas/prac_mask
+	head = /obj/item/clothing/head/helmet/flak/chaos/renegade
+	shoes = /obj/item/clothing/shoes/jackboots/pilgrim_boots
+	id_desc = "Infardi"
 
-/singleton/hierarchy/outfit/mercenary/syndicate/commando
-	name = "Spec Ops - Syndicate Commando"
-	suit = /obj/item/clothing/suit/space/void/merc
-	mask = /obj/item/clothing/mask/gas/syndicate
-	head = /obj/item/clothing/head/helmet/space/void/merc
-	back = /obj/item/tank/jetpack/oxygen
+/singleton/hierarchy/outfit/mercenary/infardi/trooper
+	name = "Infardi Trooper"
+	suit = /obj/item/clothing/suit/armor/grim/cult/sekite
+	mask = /obj/item/clothing/mask/gas/prac_mask
+	head = /obj/item/clothing/head/helmet/flak/chaos/sekite
+	shoes = /obj/item/clothing/shoes/jackboots/pilgrim_boots
+	l_pocket = /obj/item/tank/oxygen_emergency
+	id_desc = "Infardi Trooper"
+
+/singleton/hierarchy/outfit/mercenary/bloodpact
+	name = "Bloodpact Soldier"
+	suit = /obj/item/clothing/suit/armor/grim/cult/bloodpact
+	mask = /obj/item/clothing/mask/gas/security/bloodpact
+	head = /obj/item/clothing/head/helmet/flak/chaos/bloodpact
+	shoes = /obj/item/clothing/shoes/jackboots/noble
+	id_desc = "Infardi"
+
+/singleton/hierarchy/outfit/mercenary/bloodpact/commando
+	name = "Bloodpact Commando"
+	suit = /obj/item/clothing/suit/armor/grim/cult/bloodpact
+	mask = /obj/item/clothing/mask/gas/security/bloodpact
+	head = /obj/item/clothing/head/helmet/flak/chaos/bloodpact
+	shoes = /obj/item/clothing/shoes/jackboots/noble
 	l_pocket = /obj/item/tank/oxygen_emergency
 
 /singleton/hierarchy/outfit/foundation

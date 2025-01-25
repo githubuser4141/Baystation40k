@@ -3,27 +3,27 @@
 	desc = "A spiky, golden crown. It's probably worth more than your bank account."
 	icon_state = "champhelm"
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_AP,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_CARAPACE,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_SMALL,
 		bomb = ARMOR_BOMB_RESISTANT,
-		bio = ARMOR_BIO_MINOR
+		bio = ARMOR_BIO_THIRTY
 		)
 
 /obj/item/clothing/suit/champarmor
-	name = "champion's armor"
+	name = "champion's armour"
 	desc = "A mighty suit of silver and gold armor, with a gleaming blue crystal inlaid into its left gaunlet."
 	icon_state = "champarmor"
 	siemens_coefficient = 0.5
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_AP,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_CARAPACE,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_SMALL,
 		bomb = ARMOR_BOMB_RESISTANT,
-		bio = ARMOR_BIO_MINOR
+		bio = ARMOR_BIO_THIRTY
 		)
 
 /obj/item/clothing/under/bluetunic
@@ -33,7 +33,7 @@
 	siemens_coefficient = 0.8
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(
-		melee = ARMOR_MELEE_MINOR
+		melee = ARMOR_MELEE_BASIC
 	)
 
 /obj/item/clothing/shoes/jackboots/medievalboots
@@ -42,11 +42,11 @@
 	icon_state = "medievalboots"
 	force = 5
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		laser = ARMOR_LASER_MINOR,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_BASIC,
+		laser = ARMOR_LASER_BASIC,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY
 	)
 
 /obj/item/excalibur
@@ -61,9 +61,9 @@
 					)
 	item_state = "excalibur"
 	edge = TRUE
-	sharp = TRUE
+	sharp = FALSE
 	w_class = ITEM_SIZE_HUGE
-	force = 35
+	force = 45
 	throw_range = 2
 	throwforce = 10
 	slot_flags = SLOT_BELT

@@ -6,9 +6,9 @@
 	pursuit than haring off across the stars to attack the meat and steal their goods."
 	hidden_from_codex = TRUE
 	language = LANGUAGE_VOX
-	secondary_langs = list(
-		LANGUAGE_HUMAN_EURO,
-		LANGUAGE_SPACER,
+	additional_langs = list(
+		LANGUAGE_HIGH_GOTHIC,
+		LANGUAGE_LOW_GOTHIC,
 		LANGUAGE_GUTTER,
 		LANGUAGE_SIGN
 	)

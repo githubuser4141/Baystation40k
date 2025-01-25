@@ -7,14 +7,10 @@
 			SETUP_ONMOB_SHEET = list(slot_wear_suit_str = 'icons/mob/onmob/onmob_head.dmi'),
 			SETUP_ICON_STATE = "void",
 			SETUP_SPECIES_OBJ = list(
-				SPECIES_HUMAN = 'icons/obj/clothing/obj_head.dmi',
-				SPECIES_UNATHI = 'icons/obj/clothing/species/unathi/obj_head_unathi.dmi',
-				SPECIES_SKRELL = 'icons/obj/clothing/species/skrell/obj_head_skrell.dmi'
+				SPECIES_HUMAN = 'icons/obj/clothing/obj_head.dmi'
 				),
 			SETUP_SPECIES_ONMOB = list(
-				SPECIES_HUMAN = 'icons/mob/onmob/onmob_head.dmi',
-				SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi',
-				SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi'
+				SPECIES_HUMAN = 'icons/mob/onmob/onmob_head.dmi'
 				)
 		),
 		/obj/item/clothing/suit/space/void = list(
@@ -23,14 +19,10 @@
 			SETUP_ONMOB_SHEET = list(slot_wear_suit_str = 'icons/mob/onmob/onmob_suit.dmi'),
 			SETUP_ICON_STATE = "void",
 			SETUP_SPECIES_OBJ = list(
-				SPECIES_HUMAN = 'icons/obj/clothing/obj_suit.dmi',
-				SPECIES_UNATHI = 'icons/obj/clothing/species/unathi/obj_suit_unathi.dmi',
-				SPECIES_SKRELL = 'icons/obj/clothing/species/skrell/obj_suit_skrell.dmi'
+				SPECIES_HUMAN = 'icons/obj/clothing/obj_suit.dmi'
 				),
 			SETUP_SPECIES_ONMOB = list(
-				SPECIES_HUMAN = 'icons/mob/onmob/onmob_suit.dmi',
-				SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
-				SPECIES_SKRELL = 'icons/mob/onmob/onmob_suit.dmi'
+				SPECIES_HUMAN = 'icons/mob/onmob/onmob_suit.dmi'
 				)
 		)
 	)
@@ -133,12 +125,12 @@
 /singleton/item_modifier/space_suit/security/Initialize()
 	. = ..()
 	var/helmet_setup = type_setups[/obj/item/clothing/head/helmet/space]
-	helmet_setup[SETUP_NAME] = "security voidsuit helmet"
+	helmet_setup[SETUP_NAME] = "militarum voidsuit helmet"
 	helmet_setup[SETUP_ICON_STATE] = "rig0-sec"
 	helmet_setup[SETUP_ITEM_STATE] = "sec_helm"
 
 	var/suit_setup = type_setups[/obj/item/clothing/suit/space/void]
-	suit_setup[SETUP_NAME] = "security voidsuit"
+	suit_setup[SETUP_NAME] = "militarum voidsuit"
 	suit_setup[SETUP_ICON_STATE] = "rig-sec"
 	suit_setup[SETUP_ITEM_STATE_SLOTS] = list(
 			slot_l_hand_str = "sec_voidsuit",
@@ -152,12 +144,12 @@
 /singleton/item_modifier/space_suit/security/alt/Initialize()
 	. = ..()
 	var/helmet_setup = type_setups[/obj/item/clothing/head/helmet/space]
-	helmet_setup[SETUP_NAME] = "security voidsuit helmet"
+	helmet_setup[SETUP_NAME] = "militarum voidsuit helmet"
 	helmet_setup[SETUP_ICON_STATE] = "rig0-secalt"
 	helmet_setup[SETUP_ITEM_STATE] = "secalt_helm"
 
 	var/suit_setup = type_setups[/obj/item/clothing/suit/space/void]
-	suit_setup[SETUP_NAME] = "security voidsuit"
+	suit_setup[SETUP_NAME] = "militarum voidsuit"
 	suit_setup[SETUP_ICON_STATE] = "rig-secalt"
 
 
@@ -191,14 +183,10 @@
 	helmet_setup[SETUP_ITEM_STATE] = "syndie_helm"
 	helmet_setup[SETUP_SPECIES_OBJ] = list(
 			SPECIES_HUMAN = 'icons/obj/clothing/obj_head.dmi',
-			SPECIES_UNATHI = 'icons/obj/clothing/species/unathi/obj_head_unathi.dmi',
-			SPECIES_SKRELL = 'icons/obj/clothing/species/skrell/obj_head_skrell.dmi',
 			SPECIES_VOX = 'icons/obj/clothing/species/vox/obj_head_vox.dmi'
 		)
 	helmet_setup[SETUP_SPECIES_ONMOB] = list(
 			SPECIES_HUMAN = 'icons/mob/onmob/onmob_head.dmi',
-			SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi',
-			SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
 			SPECIES_VOX = 'icons/mob/species/vox/onmob_head_vox.dmi'
 		)
 
@@ -211,14 +199,10 @@
 		)
 	suit_setup[SETUP_SPECIES_OBJ] = list(
 			SPECIES_HUMAN = 'icons/obj/clothing/obj_suit.dmi',
-			SPECIES_UNATHI = 'icons/obj/clothing/species/unathi/obj_suit_unathi.dmi',
-			SPECIES_SKRELL = 'icons/obj/clothing/species/skrell/obj_suit_skrell.dmi',
 			SPECIES_VOX = 'icons/obj/clothing/species/vox/obj_suit_vox.dmi'
 		)
 	suit_setup[SETUP_SPECIES_ONMOB] = list(
 			SPECIES_HUMAN = 'icons/mob/onmob/onmob_suit.dmi',
-			SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
-			SPECIES_SKRELL = 'icons/mob/onmob/onmob_suit.dmi',
 			SPECIES_VOX = 'icons/mob/species/vox/onmob_suit_vox.dmi'
 		)
 
@@ -257,14 +241,10 @@
 			SETUP_ICON_STATE = "rig_explorer",
 			SETUP_ITEM_STATE = "explorer_helm",
 			SETUP_SPECIES_OBJ = list(
-				SPECIES_HUMAN = 'maps/torch/icons/obj/obj_head_solgov.dmi',
-				SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_head_solgov_unathi.dmi',
-				SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_head_solgov_skrell.dmi'
+				SPECIES_HUMAN = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 				),
 			SETUP_SPECIES_ONMOB = list(
-				SPECIES_HUMAN = 'maps/torch/icons/mob/onmob_head_solgov.dmi',
-				SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_head_spacesuits_solgov_unathi.dmi',
-				SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi'
+				SPECIES_HUMAN = 'maps/torch/icons/mob/onmob_head_solgov.dmi'
 				)
 		),
 		/obj/item/clothing/suit/space/void = list(
@@ -273,14 +253,10 @@
 			SETUP_ONMOB_SHEET = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi'),
 			SETUP_ICON_STATE = "rig0_explorer",
 			SETUP_SPECIES_OBJ = list(
-				SPECIES_HUMAN = 'maps/torch/icons/obj/obj_suit_solgov.dmi',
-				SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
-				SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi'
+				SPECIES_HUMAN = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
 				),
 			SETUP_SPECIES_ONMOB = list(
-				SPECIES_HUMAN = 'maps/torch/icons/mob/onmob_suit_solgov.dmi',
-				SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_spacesuits_solgov_unathi.dmi',
-				SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi'
+				SPECIES_HUMAN = 'maps/torch/icons/mob/onmob_suit_solgov.dmi'
 				)
 		)
 	)

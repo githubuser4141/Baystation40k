@@ -24,7 +24,7 @@
 	shuttle = "Cyclopes"
 	fore_dir = NORTH
 	vessel_size = SHIP_SIZE_SMALL
-	vessel_mass = 10000
+	vessel_mass = 3000
 
 /datum/shuttle/autodock/overmap/merc_shuttle
 	name = "Cyclopes"
@@ -35,8 +35,8 @@
 	ceiling_type = /turf/simulated/floor/shuttle_ceiling/merc
 	warmup_time = 5
 	range = 2
-	fuel_consumption = 2
-	skill_needed = SKILL_UNSKILLED
+	fuel_consumption = 0.5
+	skill_needed = SKILL_BASIC
 
 /turf/simulated/floor/shuttle_ceiling/merc
 	color = COLOR_DARK_GUNMETAL
@@ -89,7 +89,7 @@
 
 //Flavorful reminders
 /obj/item/paper/merc
-	language = LANGUAGE_SPACER
+	language = LANGUAGE_LOW_GOTHIC
 
 /obj/item/paper/merc/tutorial_1
 	name = "highlighted note"

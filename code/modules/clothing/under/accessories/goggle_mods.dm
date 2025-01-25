@@ -13,7 +13,6 @@
 		slot_head_str = 'icons/mob/onmob/onmob_goggle_mod.dmi'
 	)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_goggle_mod_unathi.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_goggle_mod_vox.dmi',
 		SPECIES_HUMAN = 'icons/mob/onmob/onmob_goggle_mod.dmi'
 	)
@@ -78,8 +77,8 @@
 	return
 
 /obj/item/clothing/accessory/glassesmod/hud/security
-	name = "security HUD attachment"
-	desc = "An attachable security HUD for ballistic goggles."
+	name = "militarum HUD attachment"
+	desc = "An attachable militarum HUD for ballistic goggles."
 	icon_state = "sechud"
 	slot = ACCESSORY_SLOT_GLASSES_HUD
 	hud_type = HUD_SECURITY
@@ -93,7 +92,7 @@
 
 /obj/item/clothing/accessory/glassesmod/hud/medical
 	name = "medical HUD attachment"
-	desc = "An attachable security HUD for ballistic goggles."
+	desc = "An attachable militarum HUD for ballistic goggles."
 	icon_state = "medhud"
 	slot = ACCESSORY_SLOT_GLASSES_HUD
 	hud_type = HUD_MEDICAL

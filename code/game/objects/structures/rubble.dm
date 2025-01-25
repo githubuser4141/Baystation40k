@@ -7,7 +7,7 @@
 	opacity = 1
 	density = TRUE
 	anchored = TRUE
-	health_max = 40
+	health_max = 400
 
 	var/list/loot = list(/obj/item/cell,/obj/item/stack/material/iron,/obj/item/stack/material/rods)
 	var/lootleft = 1
@@ -71,7 +71,7 @@
 			SPAN_NOTICE("\The [user] starts clearing away \the [src] with \a [tool]."),
 			SPAN_NOTICE("You start clearing away \the [src] with \the [tool].")
 		)
-		if (!user.do_skilled(pickaxe.digspeed, SKILL_HAULING, src) || !user.use_sanity_check(src, tool))
+		if (!user.do_skilled(pickaxe.digspeed, SKILL_VIGOR, src) || !user.use_sanity_check(src, tool))
 			return TRUE
 		if (lootleft && prob(1))
 			var/booty = pickweight(loot)

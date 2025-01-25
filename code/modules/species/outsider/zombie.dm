@@ -1,9 +1,9 @@
 
 //// Zombie Defines
 
-#define SPECIES_ZOMBIE "Zombie"
-#define LANGUAGE_ZOMBIE "Zombie"
-#define ANTAG_ZOMBIE "Zombie"
+#define SPECIES_ZOMBIE "Poxwalker"
+#define LANGUAGE_ZOMBIE "Poxwalker"
+#define ANTAG_ZOMBIE "Poxwalker"
 
 //// Zombie Globals
 
@@ -37,9 +37,9 @@ GLOBAL_LIST_INIT(zombie_messages, list(
 
 
 GLOBAL_LIST_INIT(zombie_species, list(\
-	SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_VOX,\
-	SPECIES_SKRELL, SPECIES_PROMETHEAN, SPECIES_ALIEN, SPECIES_YEOSA, SPECIES_VATGROWN,\
-	SPECIES_SPACER, SPECIES_TRITONIAN, SPECIES_GRAVWORLDER, SPECIES_MULE, SPECIES_MONKEY,\
+	SPECIES_HUMAN, SPECIES_KROOT, SPECIES_VOX,\
+	SPECIES_TAU, SPECIES_PROMETHEAN, SPECIES_ALIEN, SPECIES_YEOSA, SPECIES_VATGROWN,\
+	SPECIES_SPACER, SPECIES_TRITONIAN, SPECIES_GRAVWORLDER, SPECIES_PSYKER, SPECIES_MONKEY,\
 	SPECIES_FARWA, SPECIES_NEAERA, SPECIES_STOK
 ))
 
@@ -47,16 +47,16 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 //// Zombie Types
 
 /datum/species/zombie
-	name = "Zombie"
-	name_plural = "Zombies"
+	name = "Poxwalker"
+	name_plural = "Poxwalkers"
 	blood_color = "#411111"
 	preview_icon = null
 	death_message = "writhes and twitches before falling motionless."
 	species_flags = SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SCAN
 	spawn_flags = SPECIES_IS_RESTRICTED
 	vision_flags = SEE_SELF | SEE_MOBS
-	brute_mod = 1.0
-	burn_mod = 1.5 //Vulnerable to fire
+	brute_mod = 0.5
+	burn_mod = 0.5
 	oxy_mod = 0.0
 	stun_mod = 0.2
 	weaken_mod = 0.3
@@ -166,7 +166,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	name = "Shuffle"
 	flags = MOVE_INTENT_DELIBERATE
 	hud_icon_state = "creeping"
-	move_delay = 10
+	move_delay = 5
 
 /datum/say_list/zombie
 	emote_hear = list("wails!","groans!")
@@ -306,8 +306,8 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	speech_verb = "growls"
 	exclaim_verb = "wails"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 20,
-		LANGUAGE_SPACER = 30
+		LANGUAGE_HIGH_GOTHIC = 60,
+		LANGUAGE_LOW_GOTHIC = 60
 	)
 	syllables = list("mhh..", "grr..", "nnh..")
 	shorthand = "ZM"
@@ -458,7 +458,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		skillset.skill_list = list()
 		for(var/singleton/hierarchy/skill/S in GLOB.skills) //Only want trained CQC and athletics
 			skillset.skill_list[S.type] = SKILL_UNSKILLED
-		skillset.skill_list[SKILL_HAULING] = SKILL_TRAINED
+		skillset.skill_list[SKILL_VIGOR] = SKILL_TRAINED
 		skillset.skill_list[SKILL_COMBAT] = SKILL_EXPERIENCED
 		skillset.on_levels_change()
 
@@ -553,7 +553,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 			return
 
 		target.reagents.add_reagent(/datum/reagent/zombie, 35) //Just in case they haven't been infected already
-		if (target.getBruteLoss() > target.maxHealth * 1.5)
+		if (target.getBruteLoss() > target.maxhealth * 1.5)
 			to_chat(src,SPAN_WARNING("You've scraped \the [target] down to the bones already!."))
 			if (target.stat != DEAD)
 				target.zombify()
@@ -589,7 +589,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 
 		playsound(loc, 'sound/effects/splat.ogg', 20, 1)
 		new /obj/decal/cleanable/blood/splatter(get_turf(src), target.species.blood_color)
-		if (target.getBruteLoss() > target.maxHealth*0.75)
+		if (target.getBruteLoss() > target.maxhealth*0.75)
 			if (prob(50))
 				gibs(get_turf(src), target.dna)
 				visible_message(SPAN_DANGER("\The [src] tears out \the [target]'s insides!"))
@@ -609,8 +609,8 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 
 	for (var/mob/living/carbon/human/candidate)
 		if (candidate.is_zombie() && !candidate.ckey && candidate.stat == CONSCIOUS)
-			var/response = alert(src, "Are you sure you want to become a zombie?","Confirm","Yes","No")
-			if(response != "Yes")
+			var/response = alert(src, "Are you sure you want to become a zombie?","Confirm","Compliance","No")
+			if(response != "Compliance")
 				return
 			candidate.do_possession(src)
 
@@ -684,7 +684,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		skillset.skill_list = list()
 		for(var/singleton/hierarchy/skill/S in GLOB.skills) //Only want trained CQC and athletics
 			skillset.skill_list[S.type] = SKILL_UNSKILLED
-		skillset.skill_list[SKILL_HAULING] = SKILL_TRAINED
+		skillset.skill_list[SKILL_VIGOR] = SKILL_TRAINED
 		skillset.skill_list[SKILL_COMBAT] = SKILL_EXPERIENCED
 		skillset.on_levels_change()
 

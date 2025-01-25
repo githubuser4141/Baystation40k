@@ -109,3 +109,58 @@
 /obj/structure/table/woodentable/walnut
 	color = WOOD_COLOR_CHOCOLATE
 	material = MATERIAL_WALNUT
+
+/obj/structure/table/warhammer
+	name = "table"
+	desc = "..."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "fancy"
+	can_plate = 0
+	can_reinforce = 0
+	flipped = -1
+
+/obj/structure/table/warhammer/Initialize()
+	auto_align()
+	. = ..()
+
+/obj/structure/table/warhammer/update_connections()
+	return
+
+/obj/structure/table/warhammer/on_update_icon()
+	icon_state = "[icon_state]"
+
+/obj/structure/table/warhammer/dirty_table
+	icon_state = "wooden"
+
+/obj/structure/table/warhammer/rusty_table
+	icon_state = "table1"
+
+/obj/structure/table/warhammer/polished_steel
+	icon_state = "table2"
+
+/obj/structure/table/warhammer/rich_table
+	icon_state = "table3"
+
+/obj/structure/table/warhammer/old_table
+	icon_state = "table4"
+
+/obj/structure/table/warhammer/polished_table
+	icon_state = "table5"
+
+/obj/structure/table/warhammer/butcher_table
+	icon_state = "table7"
+
+/obj/structure/table/warhammer/big_wood_table
+	icon_state = "bigtable"
+
+/obj/structure/table/warhammer/pagan
+	icon_state = "pagan_altar"
+
+/obj/structure/table/warhammer/shrine
+	icon_state = "minorshrine"
+
+/obj/structure/table/warhammer/wood_office_table
+	icon_state = "minorshrine"
+
+/obj/structure/table/warhammer/reinf_table
+	icon_state = "reinf_table2"

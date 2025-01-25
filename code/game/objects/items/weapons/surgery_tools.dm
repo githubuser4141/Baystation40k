@@ -38,7 +38,7 @@
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	matter = list(MATERIAL_STEEL = 15000, MATERIAL_GLASS = 10000)
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
-	force = 15.0
+	force = 23.0
 	w_class = ITEM_SIZE_NORMAL
 	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
 	attack_verb = list("drilled")
@@ -47,7 +47,7 @@
 	icon = 'icons/obj/surgery_tools.dmi'
 	abstract_type = /obj/item/scalpel
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
-	force = 10.0
+	force = 20.0
 	sharp = TRUE
 	edge = TRUE
 	w_class = ITEM_SIZE_TINY
@@ -69,18 +69,18 @@
 	name = "laser scalpel"
 	desc = "An advanced scalpel augmented with a directed laser, for more precise cutting without blood entering the field."
 	icon_state = "scalpel_laser3_on"
-	origin_tech = list(TECH_BIO = 5, TECH_MATERIAL = 6, TECH_MAGNET = 4)
+	origin_tech = list(TECH_BIO = 2, TECH_MATERIAL = 2, TECH_MAGNET = 3)
 	matter = list(MATERIAL_STEEL = 12500, MATERIAL_GLASS = 7500, MATERIAL_SILVER = 2000, MATERIAL_GOLD = 1500)
 	damtype = DAMAGE_BURN
-	force = 15.0
+	force = 25.0
 
 /obj/item/scalpel/ims
 	name = "incision management system"
 	desc = "A true extension of the surgeon's body, this marvel instantly and completely prepares an incision allowing for the immediate commencement of therapeutic steps."
 	icon_state = "scalpel_manager_on"
-	origin_tech = list(TECH_BIO = 6, TECH_MATERIAL = 6, TECH_MAGNET = 5, TECH_DATA = 5)
+	origin_tech = list(TECH_BIO = 2, TECH_MATERIAL = 2, TECH_MAGNET = 2, TECH_DATA = 4)
 	matter = list(MATERIAL_STEEL = 12500, MATERIAL_GLASS = 7500, MATERIAL_SILVER = 1500, MATERIAL_GOLD = 1500, MATERIAL_DIAMOND = 750)
-	force = 7.5
+	force = 17.5
 
 /obj/item/circular_saw
 	name = "circular saw"
@@ -89,7 +89,7 @@
 	icon_state = "saw"
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
-	force = 15.0
+	force = 25.0
 	w_class = ITEM_SIZE_NORMAL
 	throwforce = 9.0
 	throw_speed = 3
@@ -126,7 +126,7 @@
 	desc = "A large, heavy clamp for setting dislocated or fractured bones back in place."
 	icon = 'icons/obj/surgery_tools.dmi'
 	icon_state = "bone setter"
-	force = 8.0
+	force = 18.0
 	throwforce = 9.0
 	throw_speed = 3
 	throw_range = 5

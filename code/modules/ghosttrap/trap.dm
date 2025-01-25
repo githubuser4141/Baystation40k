@@ -112,7 +112,7 @@ var/global/list/ghost_traps
 		if(!assess_candidate(candidate, target))
 			return
 		// Modal yes/no alert to guard misclicks
-		if(alert("Would you like to occupy \a [object]?", "Occupy", "Yes", "No") != "Yes")
+		if(alert("Would you like to occupy \a [object]?", "Occupy", "Compliance", "No") != "Compliance")
 			return
 		transfer_personality(candidate,target)
 		return TRUE
@@ -148,7 +148,7 @@ var/global/list/ghost_traps
 *********************/
 /datum/ghosttrap/positronic
 	object = "positronic brain"
-	ban_checks = list("AI","Robot")
+	ban_checks = list("Machine Spirit","Robot")
 	ghost_trap_message = "They are occupying a positronic brain now."
 	ghost_trap_role = "Positronic Brain"
 

@@ -2,8 +2,7 @@
 	name = "glasses"
 	icon = 'icons/obj/clothing/obj_eyes.dmi'
 	sprite_sheets = list(
-		SPECIES_VOX = 'icons/mob/species/vox/onmob_eyes_vox.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_eyes_unathi.dmi'
+		SPECIES_VOX = 'icons/mob/species/vox/onmob_eyes_vox.dmi'
 		)
 	var/prescription = FALSE
 	off_state = "degoggles"
@@ -61,9 +60,9 @@
 	origin_tech = list(TECH_COMBAT = 2)
 	siemens_coefficient = 0.6
 	armor = list(
-		melee = ARMOR_MELEE_SMALL,
-		bullet = ARMOR_BALLISTIC_SMALL,
-		bomb = ARMOR_BOMB_MINOR
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_PRIMAL,
+		bomb = ARMOR_BOMB_TEN
 	)
 	action_button_name = "Toggle Attachments"
 	valid_accessory_slots = list(ACCESSORY_SLOT_GLASSES_VISION, ACCESSORY_SLOT_GLASSES_HUD)
@@ -173,30 +172,6 @@
 	. = ..()
 	overlay = GLOB.global_hud.science
 
-/obj/item/clothing/glasses/night
-	name = "night vision goggles"
-	desc = "You can totally see in the dark now!"
-	icon_state = "night"
-	item_state = "glasses"
-	origin_tech = list(TECH_MAGNET = 2)
-	darkness_view = 7
-	action_button_name = "Toggle Goggles"
-	toggleable = TRUE
-	see_invisible = SEE_INVISIBLE_NOLIGHTING
-	off_state = "denight"
-	electric = TRUE
-
-/obj/item/clothing/glasses/night/Initialize()
-	. = ..()
-	overlay = GLOB.global_hud.nvg
-
-/obj/item/clothing/glasses/night/aviators
-	name = "HUD aviators"
-	desc = "Night-vision glasses integrated into a pair of aviator sunglasses. It does little to protect against the sun, but it sure looks cool."
-	icon_state = "nvg_avi_on"
-	off_state = "avi_off"
-	item_state = "nvg_avi_on"
-
 /obj/item/clothing/glasses/tacgoggles
 	name = "tactical goggles"
 	desc = "Self-polarizing goggles with light amplification for dark environments. Made from durable synthetic."
@@ -228,11 +203,9 @@
 	vision_flags = SEE_OBJS
 	electric = TRUE
 
-
 /obj/item/clothing/glasses/material/prescription
 	desc = "Very confusing goggles. This set has corrective lenses."
 	prescription = 5
-
 
 /obj/item/clothing/glasses/threedglasses
 	name = "3D glasses"
@@ -243,7 +216,7 @@
 
 /obj/item/clothing/glasses/welding
 	name = "welding goggles"
-	desc = "Protects the eyes from welders, approved by the mad scientist association."
+	desc = "Protects the eyes from welders, approved by the mad researcher association."
 	icon_state = "welding-g"
 	item_state = "welding-g"
 	action_button_name = "Flip Welding Goggles"
@@ -315,3 +288,277 @@
 		unzoom(user)
 	else
 		zoom(user)
+
+/*
+
+
+
+/obj/item/clothing/glasses/necron
+	name = "Necron Visual Suite"
+	desc = "A complex system of scanners, which make up the primary visual systems for a Necron."
+	darkness_view = 50
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	flash_protection = FLASH_PROTECTION_MAJOR
+	icon_state = null
+	item_state = null
+	body_parts_covered = EYES
+	siemens_coefficient = 0
+	canremove = 0
+	unacidable = 1
+	flash_protection =  FLASH_PROTECTION_MAJOR
+	vision_flags = SEE_TURFS|SEE_MOBS
+	species_restricted = list(SPECIES_NECRON)
+
+/obj/item/clothing/glasses/blacksun/psyker
+	name = "Psyker soulsights"
+	desc = "A Psyker's inherent ability to see, no matter the conditions."
+	icon_state = null
+	item_state = null
+	off_state = null
+	toggleable = 1
+	canremove = 0
+	vision_flags = SEE_MOBS
+	flash_protection = FLASH_PROTECTION_MAJOR
+
+/obj/item/clothing/glasses/tacgoggles
+	name = "Prototype Photovisor"
+	desc = "Self-polarizing goggles with light amplification for dark environments. Manufactured by the Mechanicus."
+	icon_state = "night"
+	item_state = "glasses"
+	origin_tech = list(TECH_MAGNET = 2, TECH_COMBAT = 4)
+	darkness_view = 40
+	action_button_name = "Toggle Goggles"
+	toggleable = 1
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	off_state = "denight"
+	electric = 1
+
+*/
+
+//ASTRA MILITARUM STUFF
+
+/obj/item/clothing/glasses/cadiangoggles
+	name = "Mark XIc Visor"
+	desc = "The Mark XIc Visor are issued along with the Mark XIc Rebreather as part of the Frigid Survival Kit, It is designed to prevent flare and blindness."
+	icon_state = "iggoggles"
+	item_state = "iggoggles"
+	darkness_view = 10
+	body_parts_covered = EYES
+	flash_protection = FLASH_PROTECTION_MODERATE
+
+/obj/item/clothing/glasses/cadiangoggles/elite
+	name = "Mark XIc/NV Visor"
+	desc = "The Mark XIc Visor are issued along with the Mark XIc Rebreather as part of the Frigid Survival Kit, It is designed to prevent flare and blindness. This version has built in tactical HUD and Nightvision support, It is issued to Cadian Veterans and Kasrkin Stormtroopers."
+	darkness_view = 16
+	icon_state = "iggoggles"
+	item_state = "iggoggles"
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	flash_protection = FLASH_PROTECTION_MODERATE
+
+/obj/item/clothing/glasses/cadiangoggles/elite/New()
+	..()
+	overlay = GLOB.global_hud.nvg
+
+/obj/item/clothing/glasses/night
+	name = "Mark IX Photovisor"
+	desc = "You can totally see in the dark now!"
+	icon_state = "night"
+	item_state = "glasses"
+	origin_tech = list(TECH_MAGNET = 2)
+	darkness_view = 10
+	action_button_name = "Toggle Goggles"
+	toggleable = TRUE
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	off_state = "denight"
+	electric = TRUE
+
+/obj/item/clothing/glasses/night/Initialize()
+	. = ..()
+	overlay = GLOB.global_hud.nvg
+
+/obj/item/clothing/glasses/night/aviators
+	name = "HUD aviators"
+	desc = "Night-vision glasses integrated into a pair of aviator sunglasses. It does little to protect against the sun, but it sure looks cool."
+	icon_state = "nvg_avi_on"
+	off_state = "avi_off"
+	item_state = "nvg_avi_on"
+	darkness_view = 14
+
+/obj/item/clothing/glasses/night/aviators/catachan
+	name = "tech aviators"
+	desc = "Night-vision glasses integrated into a pair of aviator sunglasses. It does little to protect against the sun, but it sure looks cool."
+	icon_state = "nvg_avi_on"
+	off_state = "avi_off"
+	item_state = "nvg_avi_on"
+	darkness_view = 13
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	body_parts_covered = EYES
+	siemens_coefficient = 0.9
+	unacidable = 1
+	flash_protection =  FLASH_PROTECTION_MODERATE
+	vision_flags = SEE_TURFS|SEE_MOBS
+
+/obj/item/clothing/glasses/scion
+	name = "Omnishield Visor"
+	desc = "An integrated multi-spectral scanning system."
+	darkness_view = 13
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	icon_state = "thermal"
+	item_state = "glasses"
+	body_parts_covered = EYES
+	siemens_coefficient = 0.9
+	unacidable = 1
+	flash_protection =  FLASH_PROTECTION_MODERATE
+	vision_flags = SEE_TURFS|SEE_MOBS
+
+/obj/item/clothing/glasses/sniper
+	name = "Mark XIIc Visor"
+	desc = "The Mark XIIc sniper variant night vision visor are special night vision goggles which make a much larger area visible to the user without adding any negative effects to their vision."
+	icon_state = "thermal"
+	darkness_view = 20
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	item_state = "glasses"
+	body_parts_covered = EYES
+	unacidable = 1
+	flash_protection = FLASH_PROTECTION_MODERATE
+
+/obj/item/clothing/glasses/sniper/New()
+	..()
+	overlay = GLOB.global_hud.nvg
+
+// XENOS VISION
+
+/obj/item/clothing/glasses/tyranid
+	name = "eyeballs"
+	desc = "Gross!"
+	darkness_view = 20
+	body_parts_covered = EYES
+	icon_state = "gsfeet"
+	item_state = "gsfeet"
+	canremove = 0
+	unacidable = 1
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	flash_protection = FLASH_PROTECTION_MODERATE
+
+/obj/item/clothing/glasses/blacksun
+	name = "blacksun goggles"
+	desc = "The Blacksun Filter is an advanced Tau optical filter that allows the user not only to see at much greater distances when fighting in nighttime conditions but also filters bright flares of light that could blind them."
+	icon_state = "blacksun"
+	item_state = "blacksun"
+	darkness_view = 13
+	action_button_name = "Toggle Goggles"
+	toggleable = 1
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	off_state = "blacksun"
+	electric = 1
+	sales_price = 20
+	flash_protection = FLASH_PROTECTION_MODERATE
+
+
+/obj/item/clothing/glasses/science/magos
+	name = "magos goggles"
+	desc = "The goggles do nothing!"
+	hud = HUD_MEDICAL
+	icon_state = "thermoncle"
+	item_state = "thermoncle"
+	action_button_name = "Toggle Goggles"
+	toggleable = 1
+	electric = 1
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	vision_flags = SEE_MOBS|SEE_TURFS
+	flash_protection = FLASH_PROTECTION_MODERATE
+	canremove = 0
+	unacidable = 1
+	darkness_view = 13
+
+/obj/item/clothing/glasses/science/rat
+	name = "rat goggles"
+	desc = "The goggles do nothing!"
+	hud = HUD_MEDICAL
+	icon_state = "thermoncle"
+	item_state = "thermoncle"
+	action_button_name = "Toggle Goggles"
+	toggleable = 1
+	electric = 1
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	vision_flags = SEE_MOBS|SEE_TURFS
+	canremove = 0
+	unacidable = 1
+	darkness_view = 8
+
+/obj/item/clothing/glasses/science/techpriest
+	name = "priest goggles"
+	desc = "The goggles do nothing!"
+	hud = HUD_MEDICAL
+	action_button_name = "Toggle Goggles"
+	toggleable = 1
+	electric = 1
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	vision_flags = SEE_TURFS
+	canremove = 0
+	unacidable = 1
+	flash_protection = FLASH_PROTECTION_MINOR
+	darkness_view = 9
+
+/obj/item/clothing/glasses/blacksun/skitarii
+	name = "skitarii augments"
+	desc = "A series of augments used to replace the eyes of Skitarii with superior, mechanical optics."
+	canremove = 0
+	flash_protection = FLASH_PROTECTION_MAJOR
+
+// SPESS MUHREEN STUFF
+
+/obj/item/clothing/glasses/astartes/visor
+	name = "Mark VII Visor"
+	desc = "The support system of Astartes helmet."
+	darkness_view = 36
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	flash_protection = FLASH_PROTECTION_MAJOR
+	icon_state = "thermal"
+	item_state = "glasses"
+	body_parts_covered = EYES
+	siemens_coefficient = 0.9
+	unacidable = 1
+	flash_protection =  FLASH_PROTECTION_MAJOR
+
+/obj/item/clothing/glasses/astartes/visor/apoth
+	name = "Mark VII Apothecary Visor"
+	desc = "The support system of Astartes helmet. This one has intergrated medical scanner."
+	hud = /obj/item/clothing/glasses/hud/health
+	darkness_view = 36
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	flash_protection = FLASH_PROTECTION_MAJOR
+	icon_state = "thermal"
+	item_state = "glasses"
+	body_parts_covered = EYES
+	siemens_coefficient = 0.9
+	unacidable = 1
+
+/obj/item/clothing/glasses/astartes/visor/techmarine
+	name = "Mark VII Techmarine Visor"
+	desc = "The support system of Astartes helmet."
+	hud = /obj/item/clothing/glasses/meson
+	darkness_view = 36
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	flash_protection = FLASH_PROTECTION_MAJOR
+	icon_state = "thermal"
+	item_state = "glasses"
+	body_parts_covered = EYES
+	siemens_coefficient = 0.9
+	unacidable = 1
+	flash_protection =  FLASH_PROTECTION_MAJOR
+
+/obj/item/clothing/glasses/vindicare
+	name = "Vindicare Visor"
+	desc = "The peak of vision augmentation techology, these goggles are permanently bonded to the user's eyes."
+	icon_state = "thermal"
+	canremove = 0
+	darkness_view = 26
+	hud = HUD_MEDICAL
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	item_state = "thermal"
+	body_parts_covered = EYES
+	siemens_coefficient = 0
+	flash_protection = FLASH_PROTECTION_MAJOR
+	unacidable = 1
+	vision_flags = SEE_TURFS|SEE_MOBS|SEE_OBJS

@@ -1,8 +1,8 @@
 // Laser version of defense robots: Kiting mobs that pack a moderate punch.
 
 /mob/living/simple_animal/hostile/hivebot/ranged_damage/fleet_robot
-	name = "\improper security robot"
-	desc = "A relatively recent model of a 'tracker' security subaltern, armed with a laser carbine."
+	name = "\improper militarum robot"
+	desc = "A relatively recent model of a 'tracker' militarum subaltern, armed with a laser carbine."
 	icon = 'icons/mob/hostile_robot.dmi'
 	icon_state = "fleetlaser"
 	icon_dead = "fleetlaser"
@@ -19,11 +19,11 @@
 	reload_sound = 'sound/mecha/internaldmgalarm.ogg'
 
 	natural_armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_HANDGUNS,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SHIELDED
 		)
@@ -34,7 +34,7 @@
 	var/explosion_radius = 3
 	var/explosion_max_power = EX_ACT_HEAVY
 
-	maxHealth = 100
+	maxhealth = 100
 	health = 100
 
 /mob/living/simple_animal/hostile/hivebot/ranged_damage/fleet_robot/Process_Spacemove()
@@ -73,7 +73,7 @@
 // Ion version of the defending robots. Watch the friendly fire!
 
 /mob/living/simple_animal/hostile/hivebot/ranged_damage/fleet_robot/ion
-	desc = "A relatively recent model of a 'tracker' security subaltern, armed with an ion rifle."
+	desc = "A relatively recent model of a 'tracker' militarum subaltern, armed with an ion rifle."
 	projectiletype = /obj/item/projectile/ion
 	projectilesound = 'sound/weapons/Laser.ogg'
 	icon_state = "fleetmagnetic"
@@ -86,9 +86,9 @@
 // Ballistic version of the defending robots. Deals way more damage than your regular bot.
 
 /mob/living/simple_animal/hostile/hivebot/ranged_damage/fleet_robot/ballistic
-	desc = "A relatively recent model of a 'tracker' security subaltern, armed with a sub-machine gun."
+	desc = "A relatively recent model of a 'tracker' militarum subaltern, armed with a sub-machine gun."
 	projectiletype = /obj/item/projectile/bullet/pistol/holdout
-	casingtype = /obj/item/ammo_casing/pistol/small
+	casingtype = /obj/item/ammo_casing/pistol/tech
 	projectilesound = 'sound/weapons/gunshot/gunshot_smg.ogg'
 	base_attack_cooldown = 0.5 SECONDS
 	projectile_dispersion = 2
@@ -115,7 +115,7 @@
 	muzzle_type = /obj/projectile/laser/pulse/muzzle
 	tracer_type = /obj/projectile/laser/pulse/tracer
 	impact_type = /obj/projectile/laser/pulse/impact
-	penetration_modifier = 1.5
+	rupture_artery = 1.5
 
 /obj/item/projectile/beam/bunkerbuster/check_penetrate(atom/A)
 	..()
@@ -123,7 +123,7 @@
 	var/chance = damage
 	var/datum/extension/penetration/P = get_extension(A, /datum/extension/penetration)
 	if(P)
-		chance = min(100, P.PenetrationProbability(chance, damage, damage_type) * penetration_modifier)
+		chance = min(100, P.PenetrationProbability(chance, damage, damage_type) * rupture_artery)
 
 	if(prob(chance))
 		if(A.opacity)
@@ -160,16 +160,16 @@
 	skin_material = null
 	skin_amount =   0
 
-	maxHealth = 150
+	maxhealth = 150
 	health = 150
 	can_escape = TRUE
 
 	natural_armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_HANDGUNS,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SHIELDED
 		)
@@ -185,7 +185,7 @@
 
 	ai_holder = /datum/ai_holder/simple_animal/ranged/kiting/threatening/fleet_heavy
 
-	ranged_attack_delay = 2 SECOND //How much time we wait before really shooting
+	ranged_attack_delay = 1 SECOND //How much time we wait before really shooting
 
 /datum/ai_holder/simple_animal/ranged/kiting/threatening/fleet_heavy
 	firing_lanes = FALSE        // Lets you use others as shields

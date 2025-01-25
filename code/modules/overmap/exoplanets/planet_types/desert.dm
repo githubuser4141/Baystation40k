@@ -9,8 +9,8 @@
 	surface_color = "#d6cca4"
 	water_color = null
 	has_trees = FALSE
-	fauna_types = list(/mob/living/simple_animal/thinbug, /mob/living/simple_animal/tindalos, /mob/living/simple_animal/hostile/voxslug, /mob/living/simple_animal/hostile/retaliate/beast/antlion)
-	megafauna_types = list(/mob/living/simple_animal/hostile/retaliate/beast/antlion/mega)
+	fauna_types = list(/mob/living/simple_animal/thinbug, /mob/living/simple_animal/hostile/retaliate/beast/antlion, /mob/living/simple_animal/hostile/human/heretic/trooper, /mob/living/simple_animal/hostile/retaliate/beast/antlion/mega)
+	megafauna_types = list(/mob/living/simple_animal/hostile/human/heretic/bloodpact, /mob/living/simple_animal/hostile/human/heretic/bloodpact/commando)
 
 /obj/overmap/visitable/sector/exoplanet/desert/generate_map()
 	if(prob(70))
@@ -20,7 +20,8 @@
 /obj/overmap/visitable/sector/exoplanet/desert/generate_atmosphere()
 	..()
 	var/datum/species/H = all_species[SPECIES_HUMAN]
-	var/generator/new_temp = generator("num", H.heat_level_1, 2 * H.heat_level_1, NORMAL_RAND)
+	// var/generator/new_temp = generator("num", H.heat_level_1, 2 * H.heat_level_1, NORMAL_RAND)
+	var/generator/new_temp = generator("num", T0C, H.heat_level_1 - 10, UNIFORM_RAND)
 	atmosphere.temperature = new_temp.Rand()
 	atmosphere.update_values()
 

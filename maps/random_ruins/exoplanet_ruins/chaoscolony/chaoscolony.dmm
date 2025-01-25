@@ -1,0 +1,8937 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/template_noop,
+/area/template_noop)
+"ab" = (
+/turf/simulated/wall/r_titanium,
+/area/template_noop)
+"ac" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/command)
+"ad" = (
+/obj/machinery/door/firedoor,
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/command)
+"ae" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/tcomms)
+"af" = (
+/obj/structure/grille,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ag" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/paper_bin,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"ah" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/implantcase/imprinting,
+/obj/item/implantcase/imprinting,
+/obj/item/implantcase/imprinting,
+/obj/item/implanter,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"ai" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/implantpad,
+/obj/item/reagent_containers/syringe/drugs,
+/obj/item/reagent_containers/syringe/drugs,
+/obj/item/reagent_containers/syringe/drugs,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"aj" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ak" = (
+/obj/structure/catwalk,
+/obj/machinery/door/airlock/warhammer/command,
+/obj/machinery/door/blast/shutters{
+	id_tag = "colsen";
+	name = "Hard Storage Shutter"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony)
+"al" = (
+/obj/machinery/power/solar,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/template_noop)
+"an" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/device/encryptionkey/map_preset/playablecolony,
+/obj/item/device/encryptionkey/map_preset/playablecolony,
+/obj/item/device/encryptionkey/map_preset/playablecolony,
+/obj/item/device/encryptionkey/map_preset/playablecolony,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"ao" = (
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"ap" = (
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"aq" = (
+/obj/submap_landmark/joinable_submap/ccolony,
+/turf/template_noop,
+/area/template_noop)
+"as" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"at" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/dorms)
+"au" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/medbay)
+"av" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/button/blast_door{
+	id_tag = "colsecarm";
+	name = "Armory Secure Access"
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "colarm";
+	name = "Armory Blast Door Control";
+	pixel_y = 8
+	},
+/obj/item/card/id/merchant{
+	desc = "this card can be used to access the Colony's telepad to exchange goods.";
+	name = "trade array access card"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"aw" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/surgery)
+"ax" = (
+/obj/structure/filingcabinet/chestdrawer,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"ay" = (
+/obj/machinery/computer/modular/preset/merchant,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"az" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/button/blast_door{
+	id_tag = "colsen2";
+	name = "Exterior Doors";
+	pixel_y = 28
+	},
+/obj/machinery/door/blast/shutters{
+	id_tag = "colsen3";
+	name = "Hard Storage Shutter"
+	},
+/obj/machinery/door/airlock/warhammer/command,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"aA" = (
+/obj/machinery/merchant_pad,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"aB" = (
+/obj/structure/sign/double/map/left,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/medbay)
+"aC" = (
+/obj/item/gun/energy/lasgun/laspistol/grim,
+/obj/item/device/flashlight/upgraded,
+/obj/item/crowbar/prybar,
+/obj/item/clothing/under/captain_fly,
+/obj/item/clothing/under/color/blackjumpshorts,
+/obj/item/clothing/under/frontier,
+/obj/item/clothing/under/hazard,
+/obj/item/clothing/under/suit_jacket/female,
+/obj/item/clothing/under/suit_jacket/charcoal,
+/obj/item/clothing/under/syndicate,
+/obj/item/clothing/under/det/grey,
+/obj/item/clothing/under/casual_pants/baggy,
+/obj/item/clothing/under/casual_pants/youngfolksjeans,
+/obj/item/clothing/suit/armor/grim/toggle/bomber,
+/obj/item/clothing/suit/armor/grim/storage/hooded/wintercoat/miner,
+/obj/item/clothing/suit/armor/grim/storage/hooded/wintercoat,
+/obj/item/clothing/suit/armor/grim/toggle/brown_jacket,
+/obj/item/clothing/suit/armor/grim/toggle/hoodie/nt,
+/obj/item/clothing/suit/armor/grim/toggle/hoodie/smw,
+/obj/item/clothing/suit/armor/grim/toggle/track/gcc,
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/structure/closet/shipping_wall{
+	pixel_y = -28
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"aD" = (
+/obj/structure/flora/pottedplant/unusual{
+	desc = "Steve's distant cousin.";
+	name = "Randy"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"aE" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/item/stack/material/tritium/fifty,
+/obj/item/stack/material/deuterium/fifty,
+/obj/item/stack/material/deuterium/fifty,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"aF" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/atmospherics)
+"aH" = (
+/obj/structure/closet/crate,
+/obj/item/stock_parts/circuitboard/fusion/core_control,
+/obj/item/stock_parts/circuitboard/fusion_core,
+/obj/item/stock_parts/circuitboard/fusion_fuel_compressor,
+/obj/item/stock_parts/circuitboard/fusion_fuel_control,
+/obj/item/stock_parts/circuitboard/fusion_injector,
+/obj/item/stock_parts/circuitboard/fusion_injector,
+/obj/item/stock_parts/circuitboard/fusion_injector,
+/obj/item/stock_parts/circuitboard/fusion_injector,
+/obj/item/stock_parts/circuitboard/fusion_injector,
+/obj/item/stock_parts/circuitboard/fusion_injector,
+/obj/item/stock_parts/circuitboard/gyrotron_control,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/subspace/crystal,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/command)
+"aJ" = (
+/obj/machinery/door/firedoor,
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/barricade/boards,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony)
+"aK" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/messhall)
+"aL" = (
+/obj/machinery/door/firedoor,
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/engineering)
+"aM" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"aN" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/engineering)
+"aO" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/jail)
+"aP" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/bathroom)
+"aQ" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/commons)
+"aS" = (
+/obj/structure/sign/double/map/right,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/medbay)
+"aU" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/armory)
+"aW" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"aX" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"aY" = (
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"aZ" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ba" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/hydroponics)
+"bc" = (
+/obj/machinery/power/tracker,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/template_noop)
+"be" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"bf" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"bg" = (
+/obj/submap_landmark/spawnpoint/colonist_spawn,
+/obj/structure/bed/padded,
+/obj/item/bedsheet/hop,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"bh" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/airlock)
+"bi" = (
+/obj/structure/closet/crate/warhammer/freezer/rations,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony)
+"bj" = (
+/obj/structure/closet/firecloset,
+/obj/item/device/flashlight/lamp/floodlamp,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony)
+"bk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"bl" = (
+/obj/structure/curtain/black,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"bm" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/engineering)
+"bn" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"bp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"bq" = (
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"br" = (
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"bs" = (
+/obj/structure/closet/crate,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony)
+"bt" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"bu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"bv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"bw" = (
+/obj/machinery/radio_beacon,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"bx" = (
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 4;
+	pixel_x = -21
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony)
+"by" = (
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"bA" = (
+/obj/machinery/power/smes/buildable/max_cap_in_out,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"bB" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"bC" = (
+/obj/structure/closet/firecloset,
+/obj/item/device/flashlight/lamp/floodlamp,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"bD" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/random/loot/lootstructureartifact,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"bE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"bF" = (
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"bG" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable,
+/obj/machinery/telecomms/bus/map_preset/playablecolony,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"bH" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 6
+	},
+/turf/simulated/floor/reinforced/nitrogen,
+/area/map_template/chaoscolony/atmospherics)
+"bI" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"bJ" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 4
+	},
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/atmospherics)
+"bK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony)
+"bL" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 6
+	},
+/turf/simulated/floor/reinforced/oxygen,
+/area/map_template/chaoscolony/atmospherics)
+"bM" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"bN" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction,
+/turf/simulated/floor/reinforced/carbon_dioxide,
+/area/map_template/chaoscolony/atmospherics)
+"bO" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"bP" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"bQ" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"bR" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"bS" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 10
+	},
+/obj/machinery/air_sensor{
+	id_tag = "c1"
+	},
+/turf/simulated/floor/reinforced/nitrogen,
+/area/map_template/chaoscolony/atmospherics)
+"bT" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"bU" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/floor_decal/techfloor/hole/right,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"bV" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony)
+"bW" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 10
+	},
+/obj/machinery/air_sensor{
+	id_tag = "c2"
+	},
+/turf/simulated/floor/reinforced/oxygen,
+/area/map_template/chaoscolony/atmospherics)
+"bX" = (
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 4;
+	pixel_x = -21
+	},
+/obj/machinery/telecomms/broadcaster/map_preset/playablecolony,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"bY" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 10
+	},
+/obj/machinery/air_sensor{
+	id_tag = "c3"
+	},
+/turf/simulated/floor/reinforced/carbon_dioxide,
+/area/map_template/chaoscolony/atmospherics)
+"ca" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/floor_decal/industrial/hatch/orange,
+/obj/machinery/power/port_gen/pacman/mrs,
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"cb" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/solar_control/autostart,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"cc" = (
+/obj/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/medbay)
+"cd" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/commons)
+"ce" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1441;
+	id = "cn2n"
+	},
+/turf/simulated/floor/reinforced/nitrogen,
+/area/map_template/chaoscolony/atmospherics)
+"cf" = (
+/obj/structure/catwalk,
+/obj/machinery/power/emitter/gyrotron{
+	req_lock_access = list()
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"cg" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/power/smes/buildable/max_cap_in_out,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"ch" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/tank{
+	id_tag = "cn2o"
+	},
+/turf/simulated/floor/reinforced/nitrogen,
+/area/map_template/chaoscolony/atmospherics)
+"ci" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"cj" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/spacecash/bundle/c1000,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/random/cash,
+/obj/item/spacecash/bundle/c1000,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"ck" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/warhammer/command,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/command)
+"cl" = (
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cm" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"co" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cp" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/black{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cq" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"cr" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"cs" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ct" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/machinery/atmospherics/pipe/simple/visible/black{
+	dir = 5
+	},
+/obj/wallframe_spawn/reinforced_phoron,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cu" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/black{
+	dir = 4
+	},
+/obj/wallframe_spawn/reinforced_phoron,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cv" = (
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/obj/wallframe_spawn/reinforced_phoron,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cw" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"cx" = (
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony)
+"cy" = (
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/wallframe_spawn/reinforced_phoron,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cz" = (
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/machinery/door/firedoor,
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cA" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 5
+	},
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/tank{
+	id_tag = "co2o"
+	},
+/turf/simulated/floor/reinforced/oxygen,
+/area/map_template/chaoscolony/atmospherics)
+"cB" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cC" = (
+/obj/machinery/door/airlock/warhammer/command,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"cD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"cE" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cF" = (
+/obj/floor_decal/techfloor/hole/right,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony)
+"cH" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1441;
+	id = "co2n"
+	},
+/turf/simulated/floor/reinforced/oxygen,
+/area/map_template/chaoscolony/atmospherics)
+"cJ" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 5
+	},
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1441;
+	id = "cco2n"
+	},
+/turf/simulated/floor/reinforced/carbon_dioxide,
+/area/map_template/chaoscolony/atmospherics)
+"cK" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"cL" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/machinery/meter,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cM" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cN" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cO" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 9
+	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cP" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/sign/warning/compressed_gas{
+	pixel_y = -28
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"cQ" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cR" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cS" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cT" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"cU" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cV" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cW" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cX" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
+	},
+/obj/machinery/atmospherics/binary/pump,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cY" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 4;
+	target_pressure = 303.96
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"cZ" = (
+/obj/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/messhall)
+"da" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony)
+"db" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/tank{
+	id_tag = "cco2o"
+	},
+/turf/simulated/floor/reinforced/carbon_dioxide,
+/area/map_template/chaoscolony/atmospherics)
+"dc" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony)
+"dd" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"de" = (
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"dg" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"dh" = (
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"di" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 8;
+	target_pressure = 200
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"dj" = (
+/obj/structure/closet/cabinet,
+/obj/item/device/radio/headset/map_preset/playablecolony,
+/obj/item/crowbar/prybar,
+/obj/item/device/flashlight/upgraded,
+/obj/item/clothing/under/hazard,
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/item/clothing/suit/armor/grim/hiver,
+/obj/random/loot/randomsupply,
+/turf/simulated/floor/warhammer/fancyfloor/carpet,
+/area/map_template/chaoscolony/dorms)
+"dk" = (
+/obj/machinery/gibber,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/messhall)
+"dl" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"dm" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light/spot,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"dn" = (
+/obj/structure/catwalk,
+/obj/machinery/power/rad_collector,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"do" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/messhall)
+"dp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"dq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"dr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/floor_decal/techfloor/hole/right{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"ds" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/card/id/torch/crew/security,
+/obj/item/device/uplink_service/fake_command_report,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"dt" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"du" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"dw" = (
+/obj/floor_decal/techfloor,
+/obj/floor_decal/techfloor/hole/right,
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"dx" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"dy" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"dz" = (
+/obj/machinery/door/firedoor,
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/atmospherics)
+"dA" = (
+/obj/structure/dispenser,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"dB" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/hos,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"dC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/surgery)
+"dD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/item/clothing/under/wetsuit,
+/obj/item/clothing/under/wetsuit,
+/obj/item/clothing/under/savage_hunter,
+/obj/item/clothing/under/savage_hunter/female,
+/obj/item/clothing/under/harness,
+/obj/item/clothing/under/harness,
+/obj/item/clothing/head/cowboy_hat,
+/obj/item/clothing/head/cowboy_hat,
+/obj/item/clothing/suit/armor/grim/storage/det_trench/ft,
+/obj/structure/closet/crate/warhammer/xenos/chest3,
+/obj/random/loot/randomsupply,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"dE" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"dF" = (
+/obj/structure/catwalk,
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/surgery)
+"dG" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"dI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"dJ" = (
+/obj/machinery/atmospherics/unary/freezer{
+	icon_state = "freezer"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"dK" = (
+/obj/machinery/optable,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/surgery)
+"dL" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/box/latexgloves,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/surgery)
+"dM" = (
+/obj/structure/curtain/black,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"dN" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/firstaid/surgery,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/item/clothing/accessory/stethoscope,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/surgery)
+"dO" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"dP" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"dQ" = (
+/obj/structure/closet/crate/warhammer/freezer,
+/obj/item/reagent_containers/ivbag/nanoblood,
+/obj/item/reagent_containers/ivbag/blood/human/oneg,
+/obj/item/reagent_containers/ivbag/blood/human/oneg,
+/obj/item/reagent_containers/ivbag/blood/tau/oneg,
+/obj/item/reagent_containers/ivbag/blood/tau/oneg,
+/obj/item/reagent_containers/ivbag/blood/unathi/oneg,
+/obj/item/reagent_containers/ivbag/blood/unathi/oneg,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/surgery)
+"dR" = (
+/obj/structure/closet/crate/warhammer/freezer,
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/stab,
+/obj/item/storage/firstaid/stab,
+/obj/item/storage/firstaid/regular,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"dS" = (
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/machinery/meter,
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"dT" = (
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/computer/air_control{
+	input_tag = "cn2n";
+	name = "Nitrogen Supply Control";
+	output_tag = "cn2o";
+	sensor_name = "Nitrogen Tank";
+	sensor_tag = "c1"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"dU" = (
+/obj/machinery/chem_master,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"dV" = (
+/obj/machinery/chemical_dispenser/full,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"dW" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/reagent_temperature,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"dX" = (
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"dY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"ea" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/box/syringes,
+/obj/item/storage/box/autoinjectors,
+/obj/item/storage/box/autoinjectors,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"eb" = (
+/obj/structure/iv_stand,
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 16
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/surgery)
+"ec" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/glass/medical,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/white,
+/area/map_template/chaoscolony/medbay)
+"ed" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/submap_landmark/spawnpoint/chaos2_spawn,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"ee" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"ef" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"eg" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"eh" = (
+/obj/structure/catwalk,
+/obj/structure/closet/crate/solar_assembly,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ej" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable,
+/obj/item/storage/box/freezer,
+/obj/item/storage/box/freezer,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/surgery)
+"ek" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"el" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/sign/warning/compressed_gas{
+	pixel_y = -28
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"em" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"en" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"eo" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ep" = (
+/obj/machinery/atmospherics/pipe/cap/hidden,
+/turf/simulated/wall/r_titanium,
+/area/template_noop)
+"eq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	level = 2
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"er" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"es" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1;
+	name = "waste pump"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"et" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"eu" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"ev" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"ew" = (
+/obj/structure/railing/mapped{
+	dir = 1;
+	icon_state = "railing0-1"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ex" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/medical,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"ey" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/meter,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"ez" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"eA" = (
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/floor_decal/techfloor/hole/right{
+	dir = 1
+	},
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"eB" = (
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"eC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/table/marble,
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony/messhall)
+"eD" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "colsen3";
+	name = "Hard Equipment Storage";
+	pixel_y = 32;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"eF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/surgery)
+"eG" = (
+/obj/machinery/door/blast/shutters{
+	id_tag = "colsen2";
+	name = "Hard Storage Shutter"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"eH" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/closet/crate,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/micro_laser,
+/obj/item/stock_parts/micro_laser/high,
+/obj/item/stock_parts/scanning_module,
+/obj/item/stock_parts/scanning_module,
+/obj/item/stock_parts/scanning_module/adv,
+/obj/item/stock_parts/smes_coil/weak,
+/obj/item/stock_parts/smes_coil/super_capacity,
+/obj/item/stock_parts/smes_coil/super_capacity,
+/obj/item/stock_parts/smes_coil/super_io,
+/obj/item/stock_parts/smes_coil/super_io,
+/obj/item/stock_parts/smes_coil/weak,
+/obj/item/stock_parts/smes_coil/weak,
+/obj/item/stack/material/tritium/fifty,
+/obj/item/stack/material/tritium/fifty,
+/obj/structure/torchwall{
+	dir = 4
+	},
+/obj/item/device/multitool/hacktool,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"eI" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
+	dir = 1
+	},
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/device/paint_sprayer,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"eJ" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"eK" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/vending/tool,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"eL" = (
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"eM" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/device/integrated_circuit_printer/upgraded,
+/obj/random/loot/randomcolonyitems,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"eN" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony/messhall)
+"eO" = (
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable,
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/box/beakers,
+/obj/item/storage/box/beakers,
+/obj/item/storage/belt/medical,
+/obj/item/device/scanner/health,
+/obj/item/storage/pill_bottle/tramadol,
+/obj/item/storage/pill_bottle/tramadol,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/antidexafen,
+/obj/item/reagent_containers/glass/beaker/large,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"eP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony/messhall)
+"eQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/item/tank/phoron,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"eR" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"eS" = (
+/obj/machinery/reagentgrinder,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/stack/material/phoron/ten,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"eT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/item/card/id/torch/crew/security,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"eU" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"eV" = (
+/obj/machinery/atmospherics/binary/pump,
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"eW" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/warhammer,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"eX" = (
+/obj/item/device/radio/headset/map_preset/playablecolony,
+/obj/item/crowbar/prybar,
+/obj/item/device/flashlight/upgraded,
+/obj/item/clothing/under/hazard,
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/structure/closet/shipping_wall{
+	pixel_y = 34
+	},
+/obj/item/clothing/suit/armor/grim/medicae,
+/obj/item/clothing/suit/armor/grim/medicae,
+/obj/item/clothing/gloves/prac_gloves,
+/obj/item/clothing/gloves/prac_gloves,
+/obj/item/clothing/mask/gas/prac_mask,
+/obj/item/clothing/mask/gas/prac_mask,
+/obj/item/clothing/shoes/jackboots/prac_boots,
+/obj/item/clothing/shoes/jackboots/prac_boots,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"eY" = (
+/obj/machinery/sleeper{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/medbay)
+"fa" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fd" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/toolbox/syndicate,
+/obj/item/tape_roll,
+/obj/item/tape_roll,
+/obj/item/material/twohanded/jack,
+/obj/item/clothing/head/hardhat/white,
+/obj/random/loot/randomcolonyitems,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"fe" = (
+/obj/structure/table/woodentable_reinforced,
+/obj/structure/flora/pottedplant/smallcactus{
+	pixel_y = 12
+	},
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/sugar,
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"ff" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony/messhall)
+"fh" = (
+/obj/machinery/atmospherics/portables_connector,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fi" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/atmospherics)
+"fj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/submap_landmark/spawnpoint/chaos3_spawn,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"fk" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_coffee/full,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"fl" = (
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fm" = (
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/computer/air_control{
+	input_tag = "co2n";
+	name = "Oxygen Supply Control";
+	output_tag = "co2o";
+	sensor_name = "Oxygen Tank";
+	sensor_tag = "c2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fn" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"fo" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fp" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/machinery/vending/engineering{
+	req_access = list()
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"fq" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony/messhall)
+"fr" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"fs" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"ft" = (
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/computer/air_control{
+	input_tag = "cco2n";
+	name = "Carbon Dioxide Tank Control";
+	output_tag = "cco2o";
+	sensor_name = "Carbon Dioxide Tank";
+	sensor_tag = "c3"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fu" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"fv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/torchwall{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fw" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/machinery/vending/engivend{
+	req_access = list()
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"fx" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"fz" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fA" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/wood/fifty,
+/obj/item/stack/material/wood/fifty,
+/obj/item/stack/material/wood/fifty,
+/obj/item/stack/material/wood/fifty,
+/obj/random/loot/randomsupply/tech,
+/obj/random/loot/randomsupply/tech,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"fB" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/glass/fifty,
+/obj/item/stack/material/glass/fifty,
+/obj/item/stack/material/glass/boron_reinforced/ten,
+/obj/item/clothing/head/hardhat/orange,
+/obj/random/loot/randomsupply/engineering,
+/obj/random/loot/randomsupply/engineering,
+/obj/random/loot/randomsupply/engineering,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"fC" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fD" = (
+/obj/machinery/atmospherics/binary/pump,
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fF" = (
+/obj/machinery/atmospherics/binary/pump,
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/floor_decal/techfloor/hole/right{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fG" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/warhammer/glass,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/messhall)
+"fH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"fI" = (
+/obj/structure/table/woodentable_reinforced,
+/obj/item/storage/box/donut,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/sugar,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"fJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/messhall)
+"fK" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/bed/chair/comfy/brown{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"fL" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/warhammer/glass/engineering,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/engineering)
+"fM" = (
+/obj/structure/closet/cabinet,
+/obj/item/device/radio/headset/map_preset/playablecolony,
+/obj/item/crowbar/prybar,
+/obj/item/device/flashlight/upgraded,
+/obj/item/clothing/under/hazard,
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/item/clothing/suit/armor/grim/hiver/smuggler,
+/obj/random/loot/randomsupply,
+/turf/simulated/floor/warhammer/fancyfloor/carpet{
+	dir = 1
+	},
+/area/map_template/chaoscolony/dorms)
+"fN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fP" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/warhammer/vaultold,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"fR" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fS" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fV" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fX" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fY" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"fZ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"ga" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/table/marble,
+/obj/item/storage/box/glasses/mug,
+/obj/item/storage/box/glasses/pint,
+/obj/item/storage/box/glasses/square,
+/obj/item/storage/box/glass_extras/straws,
+/obj/item/reagent_containers/food/drinks/pitcher,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"gc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/messhall)
+"gd" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/airlock/civilian,
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony/messhall)
+"ge" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/closet/crate/warhammer/freezer,
+/obj/random/drinkbottle,
+/obj/random/drinkbottle,
+/obj/random/drinkbottle,
+/obj/random/drinkbottle,
+/obj/random/drinkbottle,
+/obj/random/drinkbottle,
+/obj/random/drinkbottle,
+/obj/item/storage/lunchbox/syndicate/filled,
+/obj/item/storage/lunchbox/cat/filled,
+/obj/item/storage/lunchbox/nt/filled,
+/obj/item/storage/lunchbox/nymph/filled,
+/obj/item/pizzabox/meat,
+/obj/item/pizzabox/margherita,
+/obj/item/pizzabox/mushroom,
+/obj/item/pizzabox/vegetable,
+/obj/item/storage/box/cola/spaceup,
+/obj/item/storage/box/cola/spacewind,
+/obj/item/storage/box/cola/icedtea,
+/obj/item/storage/box/cola/drgibb,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/reagent_containers/food/drinks/pitcher,
+/obj/item/reagent_containers/glass/beaker/bowl,
+/obj/item/reagent_containers/food/condiment/salt,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/messhall)
+"gf" = (
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"gg" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gi" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gk" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4
+	},
+/obj/floor_decal/techfloor,
+/obj/machinery/light/spot,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/map_template/chaoscolony/armory)
+"gm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"go" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony)
+"gp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gq" = (
+/obj/structure/catwalk,
+/obj/item/pyre/self_lit/church,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"gr" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/obj/structure/closet/fridge,
+/obj/item/storage/box/snack/tastybread,
+/obj/item/storage/box/snack/tastybread,
+/obj/item/storage/box/snack/noraisin,
+/obj/item/storage/box/snack/jerky,
+/obj/item/storage/box/snack/candy,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/messhall)
+"gs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"gt" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"gu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"gv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"gw" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/floor_decal/techfloor/hole/right{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gx" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/floor_decal/techfloor/hole/right,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gy" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gz" = (
+/obj/structure/closet/fridge/meat,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/messhall)
+"gA" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"gB" = (
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gC" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/obj/structure/table/marble,
+/obj/machinery/microwave,
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony/messhall)
+"gD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/hygiene/drain,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gF" = (
+/obj/machinery/atmospherics/binary/pump/high_power,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gG" = (
+/obj/machinery/atmospherics/unary/tank/air,
+/obj/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gH" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/stack/material/glass/fifty,
+/obj/item/stack/material/steel/fifty,
+/obj/item/device/geiger,
+/obj/item/device/geiger,
+/obj/random/loot/randomcolonyitems,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"gI" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_soft/full,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"gJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/closet/firecloset,
+/obj/item/device/flashlight/lamp/floodlamp,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"gK" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_alc/full,
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony/messhall)
+"gL" = (
+/obj/machinery/atmospherics/unary/heater{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gM" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/machinery/meter,
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gN" = (
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gO" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/red,
+/obj/floor_decal/techfloor,
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gP" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/bathroom)
+"gQ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4;
+	pressure_checks = 0
+	},
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped{
+	dir = 1;
+	icon_state = "railing0-1"
+	},
+/obj/floor_decal/industrial/hatch/orange,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"gR" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "cplayablecolonymain_pump_out_external"
+	},
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped,
+/obj/floor_decal/industrial/hatch/orange,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"gT" = (
+/obj/machinery/atmospherics/binary/pump,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gU" = (
+/obj/machinery/atmospherics/omni/mixer{
+	tag_east = 1;
+	tag_east_con = 0.21;
+	tag_south = 2;
+	tag_west = 1;
+	tag_west_con = 0.79
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gV" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/green,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gX" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"gY" = (
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"gZ" = (
+/obj/machinery/atmospherics/unary/heat_exchanger{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/atmospherics)
+"ha" = (
+/obj/machinery/atmospherics/unary/heat_exchanger{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/atmospherics)
+"hb" = (
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"hc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/floor_decal/techfloor/hole/right{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hd" = (
+/obj/machinery/pipedispenser,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"he" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"hf" = (
+/obj/floor_decal/techfloor,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor/hole/right,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hg" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hh" = (
+/obj/floor_decal/techfloor,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hi" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/floor_decal/industrial/outline,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"hj" = (
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/manifold/visible/black{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"hk" = (
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hl" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/green{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"hm" = (
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 2;
+	tag_north = 4;
+	tag_south = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"hn" = (
+/obj/floor_decal/techfloor,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"ho" = (
+/obj/floor_decal/techfloor,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hp" = (
+/obj/machinery/door/firedoor,
+/obj/floor_decal/techfloor,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hq" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on{
+	dir = 4
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/atmospherics)
+"hr" = (
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony)
+"hs" = (
+/obj/structure/bed/chair/warhammer/stoolw/wood,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"ht" = (
+/obj/floor_decal/techfloor,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hu" = (
+/obj/machinery/door/firedoor,
+/obj/floor_decal/techfloor,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hv" = (
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hw" = (
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hx" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"hy" = (
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"hz" = (
+/obj/machinery/vending/cola{
+	name = "hacked Robust Softdrinks";
+	prices = list()
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"hA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hB" = (
+/obj/structure/table/rack,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/item/ammo_magazine/autogun/militarum,
+/obj/item/ammo_magazine/autogun/ap,
+/obj/item/ammo_magazine/autogunheavy,
+/obj/item/ammo_magazine/heavy/ap,
+/obj/item/ammo_magazine/shotholder/ms,
+/obj/item/ammo_magazine/shotholder/shell,
+/obj/item/ammo_magazine/shotholder/flechette,
+/obj/item/ammo_magazine/shotholder/stun,
+/obj/item/ammo_magazine/speedloader/clip/stub/ms,
+/obj/item/ammo_magazine/speedloader/clip/stub/ms,
+/obj/item/ammo_magazine/speedloader/clip/sniper,
+/obj/item/ammo_magazine/bolt_rifle_magazine,
+/obj/item/ammo_magazine/bolt_rifle_magazine,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/chaoscolony/armory)
+"hC" = (
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"hD" = (
+/obj/machinery/vending/snack{
+	name = "hacked Getmore Chocolate Corp";
+	prices = list()
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"hE" = (
+/obj/machinery/vending/fitness{
+	name = "hacked SweatMAX";
+	prices = list()
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hF" = (
+/obj/machinery/atmospherics/binary/oxyregenerator,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/atmospherics)
+"hG" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony/messhall)
+"hI" = (
+/obj/structure/bed/chair/warhammer/stoolw/wood,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"hJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/bed/chair/warhammer/stoolw/wood,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/messhall)
+"hL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/floor_decal/industrial/warning{
+	dir = 1;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/map_template/chaoscolony/armory)
+"hM" = (
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"hP" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"hQ" = (
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/box/donut,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"hS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/table/gamblingtable,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"hT" = (
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable,
+/obj/structure/bed/chair/warhammer/stoolw/wood,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"hU" = (
+/obj/structure/barricade/barrels/four,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"hV" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/highsecurity{
+	req_access = list("ACCESS_RESTRICTED_COMMAND")
+	},
+/obj/machinery/door/blast/regular{
+	id_tag = "colarm"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/map_template/chaoscolony/armory)
+"hW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/hygiene/drain,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"hX" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"hZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"ia" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"ib" = (
+/obj/structure/closet/cabinet,
+/obj/item/device/radio/headset/map_preset/playablecolony,
+/obj/item/crowbar/prybar,
+/obj/item/device/flashlight/upgraded,
+/obj/item/clothing/under/hazard,
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/item/clothing/suit/armor/grim/hiver/leather,
+/obj/random/loot/randomsupply,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"ic" = (
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"id" = (
+/obj/machinery/cryopod{
+	dir = 2
+	},
+/obj/machinery/computer/cryopod{
+	pixel_y = 25
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"ie" = (
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"if" = (
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"ig" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/warhammer/glass,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/commons)
+"ih" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"ii" = (
+/obj/structure/table/rack,
+/obj/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/obj/random/loot/basicarmorbundle,
+/obj/item/material/twohanded/ravenor/chainsword/guard,
+/obj/item/material/twohanded/ravenor/sword/chopper/heavy/adamantine,
+/obj/item/material/twohanded/ravenor/sword/cutro/adamantine,
+/obj/item/material/twohanded/ravenor/lashoftorment,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/chaoscolony/armory)
+"ij" = (
+/obj/structure/hygiene/shower{
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"ik" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/floor_decal/industrial/outline,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"il" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/floor_decal/industrial/outline/red,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"im" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"in" = (
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/floor_decal/techfloor/hole/right{
+	dir = 1
+	},
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -8;
+	pixel_y = 20
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 8;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"io" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/washing_machine,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"ip" = (
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"iq" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/red,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"ir" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"is" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/map_template/chaoscolony/armory)
+"it" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/highsecurity,
+/obj/machinery/door/blast/regular{
+	id_tag = "colsecarm"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/map_template/chaoscolony/armory)
+"iu" = (
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iv" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iw" = (
+/obj/structure/table/marble,
+/obj/machinery/reagent_temperature,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/machinery/vending/boozeomat{
+	density = 0;
+	pixel_y = -32;
+	req_access = list()
+	},
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony/messhall)
+"ix" = (
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_y = 28
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iy" = (
+/obj/random/ironing_board_structure,
+/obj/item/ironing_iron,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"iz" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/warhammer/command,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iA" = (
+/obj/structure/table/rack,
+/obj/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/obj/item/stack/barbwire,
+/obj/item/stack/barbwire,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/chaoscolony/armory)
+"iB" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/floor_decal/industrial/outline/orange,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"iC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"iD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"iE" = (
+/obj/floor_decal/techfloor,
+/obj/floor_decal/techfloor/hole/right,
+/obj/machinery/hologram/holopad/longrange/voxcaster,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"iF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"iG" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iJ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iK" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/floor_decal/techfloor,
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable,
+/obj/floor_decal/corner_techfloor_grid{
+	dir = 4
+	},
+/obj/floor_decal/corner_techfloor_grid{
+	dir = 1
+	},
+/obj/structure/closet/firecloset,
+/obj/item/device/flashlight/lamp/floodlamp,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"iL" = (
+/obj/machinery/door/firedoor,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"iM" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"iN" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/floor_decal/industrial/outline/orange,
+/obj/machinery/light/spot,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"iO" = (
+/obj/structure/table/gamblingtable,
+/obj/item/material/ashtray/glass,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"iP" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/bed/chair/warhammer/stoolw/wood,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"iQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"iR" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/closet/crate,
+/obj/item/deck/cards,
+/obj/item/deck/cards,
+/obj/item/storage/pill_bottle/dice,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/random/drinkbottle,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"iS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/map_template/chaoscolony/armory)
+"iT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iV" = (
+/obj/machinery/pointdefense{
+	initial_id_tag = "CColony"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"iW" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"iX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/hygiene/drain,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"iY" = (
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/table/rack,
+/obj/item/device/scanner/gas,
+/obj/item/device/scanner/gas,
+/obj/item/device/scanner/gas,
+/obj/item/clamp,
+/obj/item/clamp,
+/obj/item/clamp,
+/obj/item/clamp,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"iZ" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"ja" = (
+/obj/machinery/vending/sovietsoda,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"jc" = (
+/obj/structure/sign/warning/smoking{
+	pixel_y = -28
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"jd" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/flora/pottedplant/minitree,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"je" = (
+/obj/structure/bed/chair/warhammer/stoolw/wood,
+/obj/structure/sign/warning/smoking{
+	pixel_y = 28
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"jf" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jg" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"jh" = (
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/machinery/suit_storage_unit/explorer,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"ji" = (
+/obj/floor_decal/techfloor,
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable,
+/obj/machinery/suit_storage_unit/explorer,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jj" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	level = 2
+	},
+/obj/structure/bed/chair/warhammer/stoolw/wood,
+/obj/decal/cleanable/cobweb2,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"jk" = (
+/obj/structure/hygiene/toilet{
+	pixel_y = 12
+	},
+/obj/decal/cleanable/vomit,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"jl" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"jm" = (
+/obj/floor_decal/techfloor,
+/obj/structure/flora/pottedplant{
+	desc = "Used to bring the room together...before the accident.";
+	icon_state = "plant-25";
+	name = "Jamie"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jn" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/warhammer,
+/turf/simulated/floor/tiled/white,
+/area/map_template/chaoscolony/bathroom)
+"jo" = (
+/obj/floor_decal/techfloor,
+/obj/floor_decal/techfloor/hole/right,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jp" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"jq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"jr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"js" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"jt" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/table/gamblingtable,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"ju" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/bed/chair/warhammer/stoolw/wood,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"jv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/bed/chair/warhammer/stoolw/wood,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"jw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"jx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/map_template/chaoscolony/armory)
+"jy" = (
+/obj/floor_decal/techfloor,
+/obj/structure/table/steel_reinforced,
+/obj/item/paper_bin,
+/obj/item/pen/multi,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jz" = (
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/structure/bed/chair/comfy/brown{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jA" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/warhammer/glass/engineering,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jB" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 4;
+	pixel_x = -21
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"jC" = (
+/obj/machinery/conveyor{
+	id = "colonymine"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"jD" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/box/detergent,
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"jE" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/structure/bed/chair/warhammer/stoolw/wood,
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"jF" = (
+/obj/machinery/door/airlock/warhammer,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"jG" = (
+/obj/structure/table/gamblingtable,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"jH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"jI" = (
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 16
+	},
+/obj/item/storage/mirror{
+	pixel_y = 32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"jJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"jK" = (
+/obj/structure/catwalk,
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/messhall)
+"jL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"jM" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"jN" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"jO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"jQ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/obj/machinery/vending/lavatory{
+	name = "hacked Lavatory Essentials";
+	prices = list()
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"jR" = (
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/closet/firecloset,
+/obj/item/device/flashlight/lamp/floodlamp,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"jS" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/warhammer/glass/engineering,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"jU" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/warhammer/glass,
+/obj/structure/barricade/boards,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"jW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/steel_grid,
+/area/map_template/chaoscolony/armory)
+"jX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jY" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"jZ" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/reagent_dispensers/watertank,
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"ka" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/obj/structure/flora/pottedplant/orientaltree,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/commons)
+"kb" = (
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"kd" = (
+/obj/machinery/door/unpowered/jail_door,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"ke" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/hydroponics)
+"kf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/seed_extractor,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"kg" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/warhammer/command,
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony)
+"kk" = (
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"kl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/seed_storage/garden,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"km" = (
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/vending/hydronutrients,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"kn" = (
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 4;
+	tag_south = 1;
+	tag_west = 2
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"ko" = (
+/obj/machinery/mineral/processing_unit{
+	input_turf = 2;
+	output_turf = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"kp" = (
+/obj/structure/table/rack,
+/obj/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/random/loot/raresidearmbundle,
+/obj/random/loot/sidearmbundle,
+/obj/random/loot/sidearmbundle,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/chaoscolony/armory)
+"kq" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible,
+/obj/machinery/meter,
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"kr" = (
+/obj/structure/table/rack,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/floor_decal/industrial/warning{
+	dir = 10;
+	icon_state = "warning"
+	},
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable,
+/obj/random/loot/lasbundle,
+/obj/random/loot/raregunslug,
+/obj/random/loot/gunbundle,
+/obj/random/loot/gunbundle,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/chaoscolony/armory)
+"kt" = (
+/obj/machinery/atmospherics/unary/freezer{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"ku" = (
+/obj/structure/reagent_dispensers/beerkeg,
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"kv" = (
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/structure/closet/crate,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/oxycandle,
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"kw" = (
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 3;
+	tag_north = 2;
+	tag_south = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"kx" = (
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/structure/closet/crate/hydroponics/prespawned,
+/obj/item/reagent_containers/glass/bucket,
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"ky" = (
+/obj/floor_decal/techfloor,
+/obj/machinery/atmospherics/pipe/manifold4w/visible,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"kz" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/machinery/vending/coffee{
+	name = "hacked Hot Drinks machine";
+	prices = list()
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 4;
+	pixel_x = -21
+	},
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony)
+"kA" = (
+/obj/structure/flora/pottedplant/tropical,
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony)
+"kB" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/paper_bin,
+/obj/item/pen/multi,
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony)
+"kC" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"kD" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/atmospherics)
+"kE" = (
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"kF" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/reagent_containers/spray/pepper,
+/obj/machinery/recharger,
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/item/storage/box/handcuffs,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"kG" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "colj";
+	name = "Jail Bolt Control";
+	pixel_x = 28
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"kH" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/item/storage/backpack/rucksack/tan,
+/obj/item/storage/backpack/rucksack/navy,
+/obj/item/storage/backpack/rucksack/green,
+/obj/item/storage/backpack/rucksack/blue,
+/obj/item/storage/backpack/satchel/leather/black,
+/obj/item/storage/backpack/satchel/leather/khaki,
+/obj/item/storage/backpack/satchel/leather/navy,
+/obj/item/storage/backpack/satchel/leather/olive,
+/obj/item/storage/backpack/satchel/leather/reddish,
+/obj/item/storage/backpack/messenger/med,
+/obj/item/clothing/accessory/storage/black_drop,
+/obj/item/clothing/accessory/storage/black_drop,
+/obj/item/clothing/accessory/storage/brown_drop,
+/obj/item/clothing/accessory/storage/brown_drop,
+/obj/item/clothing/accessory/storage/white_drop,
+/obj/item/clothing/accessory/storage/white_drop,
+/obj/structure/closet/crate/warhammer/xenos/chest3,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"kI" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
+/obj/machinery/door/airlock/warhammer/glass/engineering,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"kJ" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8
+	},
+/obj/floor_decal/techfloor,
+/obj/floor_decal/techfloor/hole,
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"kK" = (
+/obj/floor_decal/industrial/loading{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"kM" = (
+/obj/structure/crematorium{
+	id = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"kN" = (
+/obj/machinery/button/crematorium{
+	id_tag = 8;
+	pixel_y = 25;
+	req_access = list()
+	},
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"kO" = (
+/obj/structure/closet/firecloset,
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/item/device/flashlight/lamp/floodlamp,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"kP" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/pointdefense_control{
+	initial_id_tag = "CColony"
+	},
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony)
+"kQ" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony)
+"kR" = (
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"kS" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"kT" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"kV" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"kW" = (
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"kX" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/sign/warning/secure_area/armory{
+	dir = 4;
+	pixel_x = -32
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"kZ" = (
+/obj/machinery/computer/mining,
+/obj/structure/table/steel_reinforced,
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"la" = (
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lb" = (
+/obj/machinery/door/window/eastright,
+/obj/structure/table/steel_reinforced,
+/obj/machinery/button/blast_door{
+	id_tag = "colmainexit";
+	name = "Exit Blast Doors"
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "colmainblast";
+	name = "Entry Blast Doors";
+	pixel_y = 8
+	},
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony)
+"lc" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 5
+	},
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1441;
+	id = "cn2n"
+	},
+/turf/simulated/floor/reinforced/nitrogen,
+/area/map_template/chaoscolony/atmospherics)
+"le" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/mob/living/simple_animal/passive/cow{
+	color = "green";
+	name = "mutant cow"
+	},
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"lf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"lh" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	id_tag = "cplayablecolonymain_exterior_door";
+	locked = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"li" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/machinery/conveyor_switch{
+	id = "colonymine"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lj" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"lk" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"ll" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"lm" = (
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/vending/cigarette{
+	name = "hacked Cigarette machine";
+	prices = list()
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"ln" = (
+/obj/structure/catwalk,
+/obj/floor_decal/industrial/warning/dust{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lo" = (
+/mob/living/simple_animal/passive/cow{
+	color = "green";
+	name = "mutant cow"
+	},
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"lp" = (
+/obj/structure/hygiene/drain,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"lq" = (
+/obj/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/commons)
+"lr" = (
+/obj/floor_decal/techfloor,
+/obj/floor_decal/techfloor/hole/right,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"ls" = (
+/obj/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/jail)
+"lt" = (
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/catwalk,
+/obj/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lu" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/catwalk,
+/obj/floor_decal/industrial/warning/dust{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lv" = (
+/obj/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lw" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/airlock)
+"lx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/closet/firecloset,
+/obj/item/device/flashlight/lamp/floodlamp,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"lz" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/machinery/computer/mining,
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lA" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/item/stack/material/wood/fifty,
+/obj/item/stack/material/wood/fifty,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/steel/fifty,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lB" = (
+/obj/machinery/door/firedoor,
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/hydroponics)
+"lC" = (
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/obj/structure/closet/crate,
+/obj/item/stack/material/plasteel/ten,
+/obj/item/stack/material/plasteel/ten,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/uranium/ten,
+/obj/item/stack/material/uranium/ten,
+/obj/item/stack/material/platinum/ten,
+/obj/item/stack/material/diamond/ten,
+/obj/item/stack/material/gold/ten,
+/obj/item/stack/material/silver/ten,
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lD" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lG" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/warhammer/command{
+	id_tag = "colj"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"lH" = (
+/obj/structure/table/rack,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/random/loot/superrarearmor,
+/obj/random/loot/rigloot,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/chaoscolony/armory)
+"lI" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger,
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"lJ" = (
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	cycle_to_external_air = 1;
+	frequency = 1380;
+	id_tag = "cplayablecolonymain";
+	pixel_y = 28;
+	tag_airpump = "cplayablecolonymain_pump";
+	tag_chamber_sensor = "cplayablecolonymain_sensor_chamber";
+	tag_exterior_door = "cplayablecolonymain_exterior_door";
+	tag_exterior_sensor = "cplayablecolonymain_sensor_external";
+	tag_interior_door = "cplayablecolonymain_interior_door";
+	tag_interior_sensor = "cplayablecolonymain_sensor_interior"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "cplayablecolonymain_pump";
+	power_rating = 25000
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"lK" = (
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 2;
+	tag_north = 3;
+	tag_west = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"lL" = (
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 2;
+	tag_north = 5;
+	tag_west = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/atmospherics)
+"lM" = (
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	id_tag = "cplayablecolonymain_sensor_chamber";
+	pixel_x = 22
+	},
+/obj/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "cplayablecolonymain_pump";
+	power_rating = 25000
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"lN" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/warhammer/command{
+	id_tag = "colj"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"lO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"lP" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"lQ" = (
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/access_button/airlock_interior{
+	frequency = 1380;
+	master_tag = "cplayablecolonymain";
+	pixel_x = -22;
+	pixel_y = 5
+	},
+/obj/machinery/airlock_sensor/airlock_interior{
+	frequency = 1380;
+	id_tag = "cplayablecolonymain_sensor_interior";
+	pixel_x = -22
+	},
+/obj/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"lR" = (
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/obj/machinery/suit_storage_unit/explorer,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"lS" = (
+/obj/structure/catwalk,
+/obj/floor_decal/industrial/warning/dust{
+	dir = 10
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lT" = (
+/obj/structure/catwalk,
+/obj/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lU" = (
+/obj/structure/catwalk,
+/obj/floor_decal/industrial/warning/dust{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lV" = (
+/obj/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/closet/crate/trashcart,
+/obj/item/storage/box/detergent,
+/obj/item/storage/box/detergent,
+/obj/item/mop,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/item/clothing/mask/plunger,
+/obj/item/device/lightreplacer,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"lX" = (
+/obj/floor_decal/industrial/warning/dust,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"lY" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"lZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"ma" = (
+/obj/machinery/airlock_sensor/airlock_exterior{
+	frequency = 1380;
+	id_tag = "cplayablecolonymain_sensor_external";
+	pixel_x = 22
+	},
+/obj/machinery/access_button/airlock_exterior{
+	frequency = 1380;
+	master_tag = "cplayablecolonymain";
+	pixel_x = 19;
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	desc = "A flexible superconducting cable for heavy-duty power transfer. It's been labeled 'chaos reigns'.";
+	icon_state = "2-8"
+	},
+/obj/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/closet/warhammer/emcloset,
+/obj/item/clothing/head/helmet/space/emergency,
+/obj/item/clothing/suit/space/emergency,
+/obj/item/clothing/suit/space/emergency,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"mb" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"mc" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"md" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"me" = (
+/obj/machinery/fabricator/hacked,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/engineering)
+"mf" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/obj/structure/bed/warhammer/barrack,
+/obj/structure/bed/warhammer/barrack1,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"mg" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/obj/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"mh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	id_tag = "cplayablecolonymain_interior_door"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"mi" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"mj" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "colmainblast";
+	name = "Entry Blast Door"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mk" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/submap_landmark/spawnpoint/chaos_spawn,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"ml" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/jail)
+"mm" = (
+/obj/machinery/door/firedoor,
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/jail)
+"mn" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"mo" = (
+/obj/machinery/door/firedoor,
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "colmainexit"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mp" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable,
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/jail)
+"mq" = (
+/obj/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony)
+"mr" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/obj/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"ms" = (
+/obj/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	dir = 8;
+	target_pressure = 500
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"mt" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/plating,
+/area/map_template/chaoscolony/jail)
+"mu" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
+/obj/structure/barricade/boards,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"mv" = (
+/obj/structure/railing/mapped,
+/obj/floor_decal/industrial/warning/dust,
+/obj/structure/ore_box,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"mx" = (
+/obj/machinery/hologram/holopad/longrange/remoteship,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/command)
+"my" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mz" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/warhammer/command,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"mA" = (
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/structure/closet/firecloset,
+/obj/item/device/flashlight/lamp/floodlamp,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mB" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "colmainblast";
+	name = "Entry Blast Door"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mC" = (
+/obj/structure/catwalk,
+/obj/machinery/button/blast_door{
+	id_tag = "colsen";
+	name = "Hard Equipment Storage";
+	pixel_y = 28
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mD" = (
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/gas/void,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/device/suit_cooling_unit,
+/obj/item/clothing/suit/space/void/atmos,
+/obj/item/clothing/head/helmet/space/void/atmos,
+/obj/item/tank/oxygen_emergency_extended,
+/obj/item/tank/oxygen_emergency_extended,
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"mE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/barricade/sandbagwall,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"mF" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4;
+	level = 2
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"mG" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"mH" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/floor_decal/corner/lime{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"mI" = (
+/obj/structure/table/rack,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/floor_decal/industrial/warning{
+	dir = 1;
+	icon_state = "warning"
+	},
+/obj/random/loot/tech2,
+/obj/random/loot/tech2,
+/obj/random/loot/lootcontraband,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/chaoscolony/armory)
+"mJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/floor_decal/industrial/warning{
+	dir = 1;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/map_template/chaoscolony/armory)
+"mL" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"mM" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/closet/crate/warhammer/freezer/rations,
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mN" = (
+/obj/structure/closet/crate/warhammer/freezer/rations,
+/obj/floor_decal/techfloor,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"mP" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/cell_charger,
+/obj/item/device/flashlight/lamp/floodlamp,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"mQ" = (
+/obj/structure/railing/mapped,
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/machinery/recharge_station,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"mS" = (
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mW" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"mX" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/floor_decal/corner/lime{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/reagentgrinder/juicer,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/structure/table/warhammer/polished_table,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"mZ" = (
+/obj/machinery/mining/brace{
+	dir = 4
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"na" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"nb" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/barricade/concrete{
+	dir = 4
+	},
+/mob/living/simple_animal/passive/tomato,
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"nc" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nd" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"ne" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/barricade/concrete{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"nf" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/bed/warhammer/barrack,
+/obj/structure/bed/warhammer/barrack1,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nh" = (
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/gas/void,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/device/suit_cooling_unit,
+/obj/item/clothing/suit/space/void/engineering/salvage,
+/obj/item/clothing/head/helmet/space/void/engineering/salvage,
+/obj/item/tank/oxygen_emergency_extended,
+/obj/item/tank/oxygen_emergency_extended,
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"ni" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"nj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"nk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/lino,
+/area/map_template/chaoscolony)
+"nm" = (
+/obj/machinery/mining/drill,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"no" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/pill_bottle/zoom,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"np" = (
+/obj/structure/bed/chair,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nq" = (
+/obj/machinery/mining/brace{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"nr" = (
+/obj/machinery/atmospherics/unary/heater{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"ns" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/barricade/concrete{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"nt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/airlock)
+"nv" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nw" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/gas/void,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/device/suit_cooling_unit,
+/obj/item/clothing/suit/space/void/mining/alt,
+/obj/item/clothing/head/helmet/space/void/mining/alt,
+/obj/item/tank/oxygen_emergency_extended,
+/obj/item/tank/oxygen_emergency_extended,
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"nx" = (
+/obj/structure/sign/warning/moving_parts{
+	dir = 4
+	},
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/jail)
+"ny" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/mineralprocessing)
+"nz" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/mineralprocessing)
+"nA" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/mineralprocessing)
+"nB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/mob/living/simple_animal/passive/tomato,
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"nD" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nE" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/railing/mapped,
+/obj/structure/railing/mapped{
+	dir = 1;
+	icon_state = "railing0-1"
+	},
+/obj/structure/closet/warhammer/emcloset,
+/obj/item/clothing/suit/space/emergency,
+/obj/item/clothing/suit/space/emergency,
+/obj/item/clothing/head/helmet/space/emergency,
+/obj/item/clothing/head/helmet/space/emergency,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"nF" = (
+/obj/structure/bed/warhammer/barrack,
+/obj/structure/bed/warhammer/barrack1,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nJ" = (
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"nK" = (
+/obj/structure/hygiene/shower{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nL" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/obj/machinery/light/spot,
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nM" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/light/spot,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nN" = (
+/obj/structure/hygiene/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/jail)
+"nO" = (
+/obj/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	dir = 8;
+	id_tag = "cplayablecolonymain_pump_out_internal";
+	power_rating = 25000
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 4;
+	pixel_x = -21
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"nP" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/mineralprocessing)
+"nQ" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "colmainexit"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"nR" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/mineralprocessing)
+"nS" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	dir = 1;
+	id_tag = "cplayablecolonymain_pump";
+	power_rating = 25000
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"nT" = (
+/obj/machinery/mineral/stacking_machine{
+	input_turf = 8;
+	output_turf = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"nU" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	dir = 1;
+	id_tag = "cplayablecolonymain_pump";
+	power_rating = 25000
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"nV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/airlock)
+"nW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"nX" = (
+/obj/machinery/mineral/unloading_machine{
+	input_turf = 2;
+	output_turf = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"nY" = (
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/structure/sign/warning/nosmoking_burned{
+	dir = 1;
+	pixel_x = -32
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"nZ" = (
+/obj/structure/sign/warning/high_voltage{
+	pixel_y = 28
+	},
+/turf/template_noop,
+/area/template_noop)
+"oa" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"ob" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"oc" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"od" = (
+/obj/structure/railing/mapped,
+/obj/floor_decal/industrial/warning/dust,
+/obj/floor_decal/industrial/loading{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"oe" = (
+/obj/structure/railing/mapped,
+/obj/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"oi" = (
+/obj/structure/railing/mapped,
+/obj/floor_decal/industrial/warning/dust,
+/obj/item/stack/material/rods/fifty,
+/obj/item/stack/material/rods/fifty,
+/obj/item/stack/material/rods/fifty,
+/obj/item/stack/material/rods/fifty,
+/obj/item/pickaxe,
+/obj/item/pickaxe,
+/obj/item/shovel,
+/obj/item/shovel,
+/obj/item/storage/ore,
+/obj/item/storage/ore,
+/obj/item/storage/backpack/dufflebag/eng,
+/obj/item/storage/backpack/dufflebag/eng,
+/obj/item/cell/super,
+/obj/item/cell/super,
+/obj/item/cell/super,
+/obj/item/device/scanner/mining,
+/obj/item/storage/box/greenglowsticks,
+/obj/item/storage/box/greenglowsticks,
+/obj/item/storage/box/greenglowsticks,
+/obj/item/stack/flag/yellow,
+/obj/item/stack/flag/yellow,
+/obj/item/stack/flag/yellow,
+/obj/structure/closet/crate/warhammer/xenos,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"oj" = (
+/obj/structure/railing/mapped,
+/obj/floor_decal/industrial/warning/dust,
+/obj/item/gun/projectile/heavysniper/boltaction/imperial/thrower,
+/obj/item/ammo_magazine/speedloader/clip/sniper/xenos,
+/obj/structure/closet/crate/warhammer/xenos,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"ok" = (
+/obj/structure/railing/mapped,
+/obj/floor_decal/industrial/warning/dust,
+/obj/structure/ore_box,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"ol" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/industrial/warning/dust{
+	dir = 9
+	},
+/obj/floor_decal/industrial/warning/dust{
+	dir = 10
+	},
+/obj/structure/catwalk,
+/obj/structure/barricade/sandbagwall,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/mineralprocessing)
+"om" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/floor_decal/industrial/warning/dust,
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/mineralprocessing)
+"on" = (
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/industrial/warning/dust{
+	dir = 5
+	},
+/obj/floor_decal/industrial/warning/dust{
+	dir = 6
+	},
+/obj/structure/catwalk,
+/obj/structure/barricade/sandbagwall,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/mineralprocessing)
+"oo" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/mineralprocessing)
+"oq" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/table/warhammer/shrine,
+/obj/structure/torchwall{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"or" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/structure/sign/warning/high_voltage{
+	pixel_y = 28
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"os" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ot" = (
+/obj/structure/catwalk,
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/hydroponics)
+"ou" = (
+/obj/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"ov" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"ow" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/barricade/boards,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"ox" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	dir = 8;
+	id_tag = "cplayablecolonymain_pump_out_internal";
+	power_rating = 25000
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/airlock)
+"oy" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"oz" = (
+/obj/floor_decal/industrial/warning/dust{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"oA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/catwalk,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"oB" = (
+/obj/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"oC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"oD" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"oE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"oF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"oG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"oH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"oI" = (
+/obj/floor_decal/techfloor,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1;
+	level = 2
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"oJ" = (
+/obj/floor_decal/techfloor,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"pB" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/grille,
+/obj/structure/barricade/spike,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ry" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/armory)
+"sS" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/airlock)
+"tq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 4;
+	pixel_x = -21
+	},
+/obj/item/tank/phoron,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"tz" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/structure/table/warhammer/shrine,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"tG" = (
+/obj/machinery/telecomms/server/map_preset/playablecolony,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"tI" = (
+/obj/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"tS" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/command)
+"ux" = (
+/obj/structure/torchwall{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"uK" = (
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"vt" = (
+/mob/living/simple_animal/passive/chicken,
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"vE" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony)
+"vJ" = (
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"wH" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/atmospherics)
+"yE" = (
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"yN" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony)
+"zj" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/dorms)
+"Bc" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"Ce" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/engineering)
+"Dj" = (
+/obj/structure/closet/cabinet,
+/obj/item/device/radio/headset/map_preset/playablecolony,
+/obj/item/crowbar/prybar,
+/obj/item/device/flashlight/upgraded,
+/obj/item/clothing/under/hazard,
+/obj/item/device/radio/map_preset/playablecolony,
+/obj/item/clothing/suit/armor/grim/hiver/leather,
+/obj/random/loot/randomsupply,
+/turf/simulated/floor/warhammer/fancyfloor/carpet{
+	dir = 1
+	},
+/area/map_template/chaoscolony/dorms)
+"Ek" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/device/radio/intercom/map_preset/playablecolony{
+	dir = 4;
+	pixel_x = -21
+	},
+/obj/submap_landmark/spawnpoint/chaos3_spawn,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"Fz" = (
+/obj/machinery/telecomms/processor/map_preset/playablecolony,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"Gh" = (
+/obj/structure/barricade/concrete{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"Gr" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/messhall)
+"GU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"Hy" = (
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/table/warhammer/pagan,
+/obj/structure/torchwall{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"IA" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/solar,
+/turf/simulated/floor/warhammer/plating,
+/area/template_noop)
+"JN" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"Kn" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/floor_decal/corner/lime{
+	dir = 9
+	},
+/obj/machinery/smartfridge/drying_rack,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"Kz" = (
+/obj/structure/catwalk,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/chaoscolony/hydroponics)
+"KK" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"LQ" = (
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"LT" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/oldsmoothdirt,
+/area/map_template/chaoscolony/hydroponics)
+"Md" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"MD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/card/id/torch/crew/security,
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"NN" = (
+/obj/machinery/telecomms/receiver/map_preset/playablecolony,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"Og" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/mineralprocessing)
+"Ot" = (
+/turf/simulated/floor/warhammer/coldroom,
+/area/map_template/chaoscolony/bathroom)
+"Pt" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/medbay)
+"Rt" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/template_noop)
+"RR" = (
+/obj/floor_decal/techfloor{
+	dir = 5
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"Sn" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/jail)
+"Vc" = (
+/obj/structure/torchwall,
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/hydroponics)
+"Vk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/r_titanium,
+/area/map_template/chaoscolony/hydroponics)
+"Xh" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+"XO" = (
+/obj/structure/torchwall{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/metal/alt,
+/area/map_template/chaoscolony/dorms)
+"YD" = (
+/obj/machinery/telecomms/hub/map_preset/playablecolony,
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/tcomms)
+"YV" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/map_template/chaoscolony/hydroponics)
+
+(1,1,1) = {"
+aq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+wH
+dz
+dz
+dz
+dz
+aF
+hq
+aF
+aU
+aU
+aU
+aU
+aU
+aU
+aU
+aU
+aO
+JN
+JN
+JN
+JN
+JN
+Sn
+aO
+aa
+"}
+(2,1,1) = {"
+af
+af
+af
+af
+af
+af
+af
+af
+af
+Rt
+aF
+aF
+aF
+aF
+aF
+dJ
+iW
+gL
+gX
+aF
+kD
+aF
+hB
+iA
+ii
+kp
+kr
+aU
+mI
+lH
+aO
+ml
+mp
+mp
+mp
+mt
+aO
+aO
+aa
+"}
+(3,1,1) = {"
+af
+IA
+IA
+IA
+bc
+IA
+IA
+IA
+aj
+ab
+bH
+ce
+ct
+eI
+er
+ey
+eU
+gN
+fz
+iY
+gM
+aF
+hL
+is
+iS
+jx
+jW
+it
+mJ
+gl
+aO
+mf
+no
+nF
+bF
+nF
+nK
+aO
+aa
+"}
+(4,1,1) = {"
+af
+aM
+aZ
+aZ
+aZ
+be
+be
+be
+cK
+ab
+bS
+lc
+cu
+dT
+cl
+hm
+cE
+cL
+cE
+dd
+gk
+aF
+aU
+hV
+aU
+aU
+ry
+aU
+aU
+ry
+aO
+nc
+gt
+bF
+bF
+nG
+nL
+aO
+aa
+"}
+(5,1,1) = {"
+af
+al
+al
+al
+al
+al
+al
+al
+cP
+ab
+bH
+ch
+cv
+fD
+cm
+dP
+hi
+gT
+ik
+hP
+gO
+aF
+ie
+iG
+kX
+jO
+jX
+jX
+jX
+jX
+lG
+nd
+gu
+gv
+gv
+nH
+nM
+aO
+aa
+"}
+(6,1,1) = {"
+af
+aM
+aZ
+aZ
+aZ
+aZ
+aZ
+aZ
+dl
+ab
+bJ
+aF
+aF
+eA
+gU
+eu
+gF
+cM
+cU
+hX
+kJ
+aF
+if
+iT
+jf
+jS
+jY
+jY
+mL
+kG
+lN
+nf
+np
+nv
+nD
+nF
+nN
+aO
+aa
+"}
+(7,1,1) = {"
+af
+al
+al
+al
+al
+al
+al
+al
+dm
+ab
+bW
+cA
+cv
+fD
+de
+dP
+eJ
+cN
+cV
+hX
+il
+aF
+aO
+iz
+Sn
+aO
+aO
+aO
+aO
+aO
+aO
+mm
+mp
+mp
+mp
+mt
+aO
+aO
+aa
+"}
+(8,1,1) = {"
+af
+aM
+aZ
+aZ
+aZ
+aZ
+aZ
+aZ
+el
+ab
+bL
+cH
+cy
+fm
+dh
+lK
+gG
+cO
+cW
+dg
+iB
+aF
+hC
+iU
+jh
+aO
+jZ
+lW
+mM
+hr
+nx
+mn
+mn
+mn
+mn
+mn
+Sn
+aO
+nZ
+"}
+(9,1,1) = {"
+af
+al
+al
+al
+al
+al
+al
+al
+bM
+ab
+bJ
+aF
+aF
+eB
+co
+dP
+fh
+hl
+cX
+iq
+gZ
+aF
+hQ
+iH
+ji
+aO
+ku
+du
+mN
+hr
+jC
+jC
+jC
+ko
+jC
+nX
+od
+ny
+aj
+"}
+(10,1,1) = {"
+af
+aM
+aZ
+aZ
+aZ
+aZ
+aZ
+aZ
+dl
+ab
+bY
+cJ
+cy
+ft
+cl
+lL
+bq
+cQ
+cY
+di
+ha
+aF
+in
+iI
+jm
+aO
+kO
+lO
+kv
+hr
+nT
+kZ
+li
+lz
+Og
+mQ
+oe
+nz
+aj
+"}
+(11,1,1) = {"
+af
+al
+al
+al
+al
+al
+al
+al
+cP
+ep
+bN
+db
+cv
+fF
+cp
+cB
+hF
+gV
+hb
+hb
+iN
+aF
+iu
+iX
+jo
+aO
+vE
+jT
+hr
+hr
+kK
+la
+la
+la
+la
+la
+oe
+nz
+aj
+"}
+(12,1,1) = {"
+af
+aM
+aZ
+aZ
+aZ
+aZ
+aZ
+aZ
+eo
+ab
+aF
+aF
+aF
+cR
+hj
+cB
+hF
+cS
+fN
+gi
+iK
+aF
+iv
+iJ
+jr
+jA
+lf
+lP
+mA
+hr
+hU
+la
+la
+la
+la
+la
+oe
+nz
+gq
+"}
+(13,1,1) = {"
+af
+al
+al
+al
+al
+al
+al
+bB
+ci
+ew
+eL
+fi
+cz
+dS
+es
+fl
+eV
+ff
+fO
+fQ
+hd
+aF
+ix
+kF
+jy
+Sn
+lj
+oE
+oI
+hr
+kM
+la
+ln
+lA
+lS
+la
+lv
+ol
+aj
+"}
+(14,1,1) = {"
+af
+aM
+aZ
+aZ
+aZ
+aZ
+aZ
+bI
+Ce
+aN
+aN
+aN
+aF
+aF
+aF
+aF
+aF
+aF
+fP
+aF
+aF
+aF
+hM
+iZ
+jz
+aO
+oD
+oF
+iE
+hr
+kN
+la
+lt
+iV
+lT
+la
+lv
+om
+aj
+"}
+(15,1,1) = {"
+af
+al
+al
+al
+al
+al
+al
+bM
+aN
+bA
+cg
+dy
+eH
+ia
+eK
+fp
+fw
+aN
+gh
+gJ
+hE
+aO
+ls
+aO
+ls
+aO
+lj
+gD
+ho
+hr
+mP
+la
+lu
+lC
+lU
+la
+lv
+on
+aj
+"}
+(16,1,1) = {"
+af
+aM
+aZ
+aZ
+aZ
+aZ
+aZ
+bI
+aL
+bt
+bO
+dX
+cw
+dX
+dX
+fr
+gf
+aN
+gE
+gB
+hG
+hw
+ic
+iL
+jg
+jB
+ll
+du
+ho
+hr
+kR
+la
+lv
+lD
+lV
+la
+oi
+nA
+gq
+"}
+(17,1,1) = {"
+af
+al
+al
+al
+al
+al
+al
+bR
+bm
+dG
+bP
+dX
+cD
+dY
+dY
+fs
+fy
+fL
+gw
+hZ
+hJ
+hA
+hZ
+ih
+ir
+jP
+hA
+lY
+mS
+hr
+gQ
+gR
+lX
+na
+oz
+oB
+oj
+nP
+aj
+"}
+(18,1,1) = {"
+af
+aM
+aZ
+aZ
+aZ
+aZ
+aZ
+bT
+aL
+cb
+bQ
+dX
+cT
+dX
+dX
+eR
+fA
+Ce
+fZ
+gj
+hk
+gP
+aP
+aP
+jF
+aP
+gP
+iC
+kb
+hr
+nt
+bh
+bh
+oy
+oA
+oC
+mv
+nR
+cK
+"}
+(19,1,1) = {"
+af
+al
+al
+al
+al
+al
+al
+bM
+aN
+ca
+he
+dA
+fd
+eM
+gH
+me
+fB
+aN
+fC
+gD
+hn
+aP
+jk
+by
+jH
+io
+aP
+dq
+ho
+hr
+kn
+kw
+lw
+ma
+lZ
+ov
+ok
+oo
+bM
+"}
+(20,1,1) = {"
+aj
+aM
+aZ
+aZ
+aZ
+aZ
+aZ
+ci
+at
+at
+at
+at
+at
+at
+at
+at
+at
+at
+at
+fT
+hf
+aP
+aP
+aP
+jI
+iy
+aP
+dr
+dw
+kI
+kq
+ky
+nV
+nt
+lh
+ow
+sS
+bh
+or
+"}
+(21,1,1) = {"
+aa
+ad
+ad
+ac
+ac
+ac
+hr
+hr
+at
+dB
+XO
+dj
+at
+eX
+at
+Dj
+XO
+dB
+at
+fX
+hp
+aP
+id
+Ot
+jJ
+ip
+aP
+fX
+hu
+hr
+kt
+nr
+bh
+nO
+ou
+ox
+bh
+mZ
+os
+"}
+(22,1,1) = {"
+ad
+ad
+mi
+ac
+bg
+ac
+bi
+cx
+at
+at
+dM
+at
+at
+dM
+at
+at
+dM
+at
+at
+gm
+hh
+aP
+aP
+aP
+jw
+jD
+aP
+oG
+oI
+hr
+hr
+hr
+hr
+lJ
+mb
+nS
+bh
+nm
+os
+"}
+(23,1,1) = {"
+ad
+ax
+ap
+bl
+aC
+ac
+bj
+cx
+at
+dD
+MD
+tq
+eq
+ed
+fj
+Ek
+ds
+kH
+at
+gn
+ht
+aP
+ij
+by
+jL
+lI
+aP
+oH
+oJ
+hr
+kz
+kP
+aJ
+lM
+mg
+nU
+bh
+nq
+os
+"}
+(24,1,1) = {"
+ad
+av
+ap
+tS
+ac
+ac
+bs
+cx
+at
+at
+dM
+at
+at
+eQ
+at
+at
+dM
+at
+at
+gp
+hv
+aP
+aP
+aP
+jn
+aP
+gP
+iD
+iF
+kg
+go
+nk
+hr
+bh
+mh
+mu
+bh
+bh
+os
+"}
+(25,1,1) = {"
+ad
+ag
+ap
+bn
+bD
+ac
+hr
+cC
+at
+dB
+ux
+ib
+at
+eT
+at
+fM
+ux
+dB
+at
+gE
+gB
+jR
+jR
+jd
+jM
+jQ
+lm
+my
+kb
+hr
+kA
+kQ
+mq
+lQ
+mr
+nW
+nY
+bh
+os
+"}
+(26,1,1) = {"
+ad
+ay
+aW
+mx
+bE
+ac
+bx
+cF
+zj
+at
+at
+at
+at
+eW
+at
+at
+at
+at
+zj
+hc
+fa
+ao
+ao
+jp
+kT
+lk
+ao
+du
+lr
+hr
+kB
+lb
+hr
+lR
+ms
+oa
+mD
+bh
+os
+"}
+(27,1,1) = {"
+ad
+aA
+aX
+bf
+bU
+ck
+da
+bK
+dx
+dI
+ek
+dI
+fv
+fR
+ek
+fW
+dI
+dI
+gx
+hg
+fb
+hW
+dt
+dp
+jq
+ao
+lp
+ga
+mV
+mB
+iM
+iQ
+nQ
+ni
+mO
+ob
+nh
+bh
+os
+"}
+(28,1,1) = {"
+ad
+aD
+ap
+bk
+bC
+ac
+dc
+bV
+dE
+eD
+et
+dO
+fx
+fS
+fU
+fY
+gg
+dO
+gy
+fV
+dO
+fY
+et
+dO
+jN
+yN
+dO
+et
+mW
+mj
+kC
+kS
+mo
+nj
+nE
+oc
+nw
+bh
+os
+"}
+(29,1,1) = {"
+ac
+ac
+aY
+bk
+ac
+ac
+hr
+az
+au
+cc
+ec
+cc
+au
+cZ
+do
+cZ
+fG
+aK
+aK
+aK
+aK
+aQ
+ig
+aQ
+lq
+aQ
+ba
+jU
+ba
+ba
+ba
+ba
+ba
+Vc
+ba
+ba
+ba
+ab
+os
+"}
+(30,1,1) = {"
+aa
+tS
+ap
+bp
+ac
+aH
+eG
+fo
+au
+dR
+ee
+eS
+au
+fk
+gb
+gI
+hx
+aK
+ge
+dk
+aK
+iR
+jl
+ju
+jE
+aQ
+lx
+mE
+Vc
+kk
+kk
+vt
+kk
+lo
+kk
+vt
+ba
+aj
+os
+"}
+(31,1,1) = {"
+ae
+ae
+ae
+mz
+ae
+ae
+hr
+mC
+au
+dU
+ef
+eO
+au
+fn
+em
+br
+gY
+aK
+fJ
+gz
+Gr
+ja
+js
+iO
+jG
+cd
+kf
+mF
+kd
+kk
+kk
+kk
+kk
+vt
+kk
+kk
+ba
+Kz
+mc
+"}
+(32,1,1) = {"
+ae
+ah
+uK
+bu
+bX
+ae
+cf
+fo
+au
+dV
+eg
+eY
+au
+fe
+em
+br
+hz
+aK
+gc
+gr
+aK
+hy
+im
+iP
+hT
+aQ
+kl
+mG
+ke
+Vk
+Vk
+kV
+le
+GU
+LT
+nB
+lB
+aj
+mc
+"}
+(33,1,1) = {"
+ae
+ai
+as
+bv
+bG
+ae
+dn
+fo
+au
+dW
+ez
+ea
+aB
+fu
+em
+br
+hD
+Gr
+gd
+aK
+aK
+je
+hS
+hI
+jc
+aQ
+km
+mH
+mX
+Kn
+ba
+nb
+ne
+Gh
+ne
+ns
+lB
+aj
+mc
+"}
+(34,1,1) = {"
+ae
+an
+uK
+uK
+YD
+ae
+dn
+fo
+Pt
+au
+ex
+Pt
+aS
+fn
+en
+ev
+hK
+eC
+eP
+gC
+aK
+jj
+jt
+jv
+ka
+aQ
+kx
+kE
+kW
+vJ
+vJ
+vJ
+yE
+vJ
+LQ
+nJ
+ba
+aj
+mc
+"}
+(35,1,1) = {"
+ae
+aE
+uK
+uK
+Fz
+ae
+dn
+fo
+aw
+eb
+eF
+ej
+aw
+fI
+gs
+br
+hs
+eN
+fg
+iw
+aK
+aQ
+aQ
+aQ
+aQ
+aQ
+Bc
+RR
+YV
+YV
+mk
+YV
+YV
+mk
+Xh
+tI
+ba
+aj
+mc
+"}
+(36,1,1) = {"
+ae
+bw
+cj
+tG
+NN
+ae
+dn
+fo
+aw
+dK
+dC
+dQ
+aw
+fK
+gA
+fH
+fH
+hH
+fq
+gK
+aK
+aj
+aj
+aj
+aj
+ba
+ba
+Md
+KK
+KK
+tz
+oq
+KK
+KK
+KK
+Hy
+ba
+aj
+mc
+"}
+(37,1,1) = {"
+ae
+ae
+ae
+ae
+ae
+ae
+hr
+ak
+aw
+dL
+dN
+aw
+aw
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aj
+aa
+aa
+aj
+aj
+ba
+lB
+lB
+lB
+ba
+ba
+lB
+lB
+lB
+ba
+ba
+aj
+mc
+"}
+(38,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+pB
+eh
+aj
+aw
+aw
+aw
+aw
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+jK
+aj
+aa
+aa
+aa
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+ot
+aj
+mc
+"}
+(39,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+cq
+eh
+aj
+aj
+dF
+aj
+aj
+aj
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+mc
+"}
+(40,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+cr
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+cs
+md
+"}

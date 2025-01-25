@@ -1345,3 +1345,420 @@ var/global/list/floor_decals = list()
 
 /obj/floor_decal/stoneborder/corner
 	icon_state = "stoneborder_c"
+
+
+/obj/effect/floor_decal/newcorner
+	icon = 'icons/turf/flooring/misc2.dmi'
+	layer = 2.03
+
+/obj/effect/floor_decal/newcorner/red
+	icon_state = "red"
+/obj/effect/floor_decal/newcorner/red/quarter
+	icon_state = "red-quarter"
+/obj/effect/floor_decal/newcorner/red/corner
+	icon_state = "red-corner"
+/obj/effect/floor_decal/newcorner/red/diagonal
+	icon_state = "red-diagonal"
+/obj/effect/floor_decal/newcorner/red/solid
+	icon_state = "redsolid"
+
+/obj/effect/floor_decal/newcorner/blue
+	icon_state = "blue"
+/obj/effect/floor_decal/newcorner/blue/quarter
+	icon_state = "blue-quarter"
+/obj/effect/floor_decal/newcorner/blue/corner
+	icon_state = "blue-corner"
+/obj/effect/floor_decal/newcorner/blue/diagonal
+	icon_state = "blue-diagonal"
+/obj/effect/floor_decal/newcorner/blue/solid
+	icon_state = "bluesolid"
+
+/obj/effect/floor_decal/newcorner/green
+	icon_state = "green"
+/obj/effect/floor_decal/newcorner/green/quarter
+	icon_state = "green-quarter"
+/obj/effect/floor_decal/newcorner/green/corner
+	icon_state = "green-corner"
+/obj/effect/floor_decal/newcorner/green/diagonal
+	icon_state = "green-diagonal"
+/obj/effect/floor_decal/newcorner/green/solid
+	icon_state = "greensolid"
+
+/obj/effect/floor_decal/newcorner/grey
+	icon_state = "grey"
+/obj/effect/floor_decal/newcorner/grey/quarter
+	icon_state = "grey-quarter"
+/obj/effect/floor_decal/newcorner/grey/corner
+	icon_state = "grey-corner"
+/obj/effect/floor_decal/newcorner/grey/diagonal
+	icon_state = "grey-diagonal"
+/obj/effect/floor_decal/newcorner/grey/solid
+	icon_state = "greysolid"
+
+/obj/effect/floor_decal/newcorner/yellow
+	icon_state = "yellow"
+/obj/effect/floor_decal/newcorner/yellow/quarter
+	icon_state = "yellow-quarter"
+/obj/effect/floor_decal/newcorner/yellow/corner
+	icon_state = "yellow-corner"
+/obj/effect/floor_decal/newcorner/yellow/diagonal
+	icon_state = "yellow-diagonal"
+/obj/effect/floor_decal/newcorner/yellow/solid
+	icon_state = "yellowsolid"
+
+/obj/effect/floor_decal/newcorner/purple
+	icon_state = "purple"
+/obj/effect/floor_decal/newcorner/purple/quarter
+	icon_state = "purple-quarter"
+/obj/effect/floor_decal/newcorner/purple/corner
+	icon_state = "purple-corner"
+/obj/effect/floor_decal/newcorner/purple/diagonal
+	icon_state = "purple-diagonal"
+/obj/effect/floor_decal/newcorner/purple/solid
+	icon_state = "purplesolid"
+
+/obj/effect/floor_decal/newcorner/teal
+	icon_state = "teal"
+/obj/effect/floor_decal/newcorner/teal/quarter
+	icon_state = "teal-quarter"
+/obj/effect/floor_decal/newcorner/teal/corner
+	icon_state = "teal-corner"
+/obj/effect/floor_decal/newcorner/teal/diagonal
+	icon_state = "teal-diagonal"
+/obj/effect/floor_decal/newcorner/teal/solid
+	icon_state = "tealsolid"
+
+/obj/effect/floor_decal/newcorner/white
+	icon_state = "white"
+/obj/effect/floor_decal/newcorner/white/quarter
+	icon_state = "white-quarter"
+/obj/effect/floor_decal/newcorner/white/corner
+	icon_state = "white-corner"
+/obj/effect/floor_decal/newcorner/white/diagonal
+	icon_state = "white-diagonal"
+/obj/effect/floor_decal/newcorner/white/solid
+	icon_state = "whitesolid"
+
+/obj/effect/floor_decal/newcorner/whitegreen
+	icon_state = "wgreen"
+/obj/effect/floor_decal/newcorner/whitegreen/quarter
+	icon_state = "wgreen-quarter"
+/obj/effect/floor_decal/newcorner/whitegreen/corner
+	icon_state = "wgreen-corner"
+/obj/effect/floor_decal/newcorner/whitegreen/diagonal
+	icon_state = "wgreen-diagonal"
+/obj/effect/floor_decal/newcorner/whitegreen/solid
+	icon_state = "wgreensolid"
+
+/obj/effect/floor_decal/newcorner/black
+	icon_state = "black"
+/obj/effect/floor_decal/newcorner/black/quarter
+	icon_state = "black-quarter"
+/obj/effect/floor_decal/newcorner/black/corner
+	icon_state = "black-corner"
+/obj/effect/floor_decal/newcorner/black/diagonal
+	icon_state = "black-diagonal"
+/obj/effect/floor_decal/newcorner/black/solid
+	icon_state = "blacksolid"
+
+/obj/effect/floor_decal/newcorner/plating
+	icon_state = "plating"
+/obj/effect/floor_decal/newcorner/plating/quarter
+	icon_state = "plating-quarter"
+/obj/effect/floor_decal/newcorner/plating/corner
+	icon_state = "plating-corner"
+/obj/effect/floor_decal/newcorner/plating/diagonal
+	icon_state = "plating-diagonal"
+
+/obj/effect/floor_decal/newcorner/polar
+	icon_state = "polar"
+/obj/effect/floor_decal/newcorner/polar/quarter
+	icon_state = "polar-quarter"
+/obj/effect/floor_decal/newcorner/polar/corner
+	icon_state = "polar-corner"
+
+/obj/effect/floor_decal/newcorner/reinforced
+	icon_state = "reinforced"
+/obj/effect/floor_decal/newcorner/reinforced/corner
+	icon_state = "rcorner"
+
+/obj/effect/floor_decal/newcorner/train
+	icon_state = "train"
+/obj/effect/floor_decal/newcorner/train/corner
+	icon_state = "train_c"
+
+/obj/effect/floor_decal/newcorner/train2
+	icon_state = "train2"
+/obj/effect/floor_decal/newcorner/train2/corner
+	icon_state = "train2_c"
+
+/obj/effect/floor_decal/newcorner/shaft
+	icon_state = "shaftplating"
+/obj/effect/floor_decal/newcorner/shaft/quarter
+	icon_state = "shaftplating-quarter"
+/obj/effect/floor_decal/newcorner/shaft/corner
+	icon_state = "shaftplating-corner"
+/obj/effect/floor_decal/newcorner/shaft/diagonal
+	icon_state = "shaftplating-diagonal"
+
+/obj/effect/floor_decal/newcorner/step
+	icon_state = "step"
+/obj/effect/floor_decal/newcorner/step_i
+	icon_state = "step_i"
+
+/obj/effect/floor_decal/newcorner/nbar
+	icon_state = "nbar"
+/obj/effect/floor_decal/newcorner/nbar/corner
+	icon_state = "nbar_corner"
+
+/obj/effect/floor_decal/newcorner/dwood
+	icon_state = "dwood"
+
+/obj/effect/floor_decal/industrial/direction
+	icon_state = "dir_white"
+/obj/effect/floor_decal/industrial/direction/black
+	icon_state = "dir_black"
+
+/obj/effect/floor_decal/industrial/mark
+	icon_state = "mark_white"
+/obj/effect/floor_decal/industrial/mark/black
+	icon_state = "mark_black"
+
+/obj/effect/floor_decal/industrial/punctuation
+	icon_state = "punctuation_white"
+/obj/effect/floor_decal/industrial/punctuation/black
+	icon_state = "punctuation_black"
+
+/obj/effect/floor_decal/industrial/plaza
+	icon_state = "plaza"
+/obj/effect/floor_decal/industrial/plaza/box
+	icon_state = "plazabox"
+/obj/effect/floor_decal/warhammer/steel
+	icon_state = "steel"
+
+/obj/effect/floor_decal/warhammer/piping
+	icon = 'icons/map_project/piping.dmi'
+	icon_state = "trubas"
+
+/obj/effect/floor_decal/warhammer/big_cables1
+	icon = 'icons/map_project/piping.dmi'
+	icon_state = "cable0"
+
+/obj/effect/floor_decal/warhammer/big_cables2
+	icon = 'icons/map_project/piping.dmi'
+	icon_state = "cable1"
+
+/obj/effect/floor_decal/warhammer/armory
+	icon = 'icons/map_project/furniture_and_decor.dmi'
+	icon_state = "arm1"
+//////////////////////////////////
+////////// NEW FLOORING //////////
+//////////////////////////////////
+
+// Even Newer
+/obj/effect/floor_decal/warhammer/grimy
+	name = "grimy floor"
+	icon = 'icons/turf/flooring/floors.dmi' // It will break without this.
+	icon_state = "grimy"
+
+/obj/effect/floor_decal/warhammer/nf2
+	name = "stone floor"
+	icon = 'icons/turf/flooring/floors.dmi'
+	icon_state = "nf2"
+
+/obj/effect/floor_decal/warhammer/lfloorscorched1
+	name = "scorched floor"
+	icon = 'icons/turf/flooring/floors.dmi'
+	icon_state = "lfloorscorched1"
+
+// Slightly New
+/obj/effect/floor_decal/warhammer/basalt0
+	name = "volcanic floor"
+	icon_state = "basalt0"
+
+/obj/effect/floor_decal/warhammer/basalt1
+	name = "volcanic floor"
+	icon_state = "basalt1"
+
+/obj/effect/floor_decal/warhammer/basalt3
+	name = "volcanic floor"
+	icon_state = "basalt3"
+
+/obj/effect/floor_decal/warhammer/basalt9
+	name = "volcanic floor"
+	icon_state = "basalt9"
+
+/obj/effect/floor_decal/warhammer/basalt10
+	name = "volcanic floor"
+	icon_state = "basalt10"
+
+/obj/effect/floor_decal/warhammer/necro1
+	name = "infestation"
+	icon_state = "necro1"
+
+/obj/effect/floor_decal/warhammer/necro2
+	name = "infestation"
+	icon = 'icons/map_project/eldritch/Flesh_Ground.dmi'
+	icon_state = "flesh_floor-1"
+
+/obj/effect/floor_decal/warhammer/necro3
+	name = "infestation"
+	icon = 'icons/map_project/eldritch/Flesh_Ground.dmi'
+	icon_state = "flesh_floor-2"
+
+/obj/effect/floor_decal/warhammer/necro4
+	name = "infestation"
+	icon = 'icons/map_project/eldritch/Flesh_Ground.dmi'
+	icon_state = "flesh_floor-3"
+
+/obj/effect/floor_decal/warhammer/oldsmoothdirt
+	name = "dirt floor"
+	icon_state = "oldsmoothdirt"
+
+/obj/effect/floor_decal/warhammer/tunneldirty
+	name = "tunnel floor"
+	icon_state = "tunneldirty"
+
+/obj/effect/floor_decal/warhammer/tunnelchess
+	name = "tunnel floor"
+	icon_state = "tunnelchess"
+
+/obj/effect/floor_decal/warhammer/carpetn00
+	name = "carpet floor"
+	icon_state = "n00"
+
+/obj/effect/floor_decal/warhammer/surgery2
+	name = "surgery floor"
+	icon_state = "surgery2"
+
+/obj/effect/floor_decal/warhammer/brothel
+	name = "stone floor"
+	icon_state = "brothel"
+
+/obj/effect/floor_decal/warhammer/clockwork
+	name = "alien floor"
+	icon_state = "clockwork"
+
+//////////////////////////////////
+//////// REGULAR FLOORING ////////
+//////////////////////////////////
+
+/obj/effect/floor_decal/warhammer/aesculapius
+	icon_state = "aesculapius"
+/obj/effect/floor_decal/warhammer/aesculapius/mem
+	icon_state = "mem"
+/obj/effect/floor_decal/warhammer/aesculapius/mento
+	icon_state = "mento"
+/obj/effect/floor_decal/warhammer/aesculapius/mori
+	icon_state = "mori"
+
+/obj/effect/floor_decal/warhammer/plating
+	icon_state = "platingfull"
+
+/obj/effect/floor_decal/warhammer/plate
+	icon_state = "plate"
+
+/obj/effect/floor_decal/warhammer/barnew
+	icon_state = "barnew"
+
+/obj/effect/floor_decal/warhammer/splate
+	icon_state = "shaftplating"
+
+/obj/effect/floor_decal/warhammer/checkers
+	icon_state = "checkers1"
+
+/obj/effect/floor_decal/warhammer/checkers/two
+	icon_state = "checkers2"
+
+/obj/effect/floor_decal/warhammer/rectangles
+	icon_state = "rectangles1"
+
+
+/obj/effect/floor_decal/warhammer/rectangles/two
+	icon_state = "rectangles2"
+
+/obj/effect/floor_decal/warhammer/brick
+	icon_state = "brick1"
+
+/obj/effect/floor_decal/warhammer/brick/two
+	icon_state = "brick2"
+
+/obj/effect/floor_decal/warhammer/metal
+	icon_state = "metal1"
+
+/obj/effect/floor_decal/warhammer/metal/two
+	icon_state = "metal2"
+
+/obj/effect/floor_decal/warhammer/metal/three
+	icon_state = "metal3"
+
+/obj/effect/floor_decal/warhammer/metal/four
+	icon_state = "metal4"
+
+/obj/effect/floor_decal/warhammer/metal/five
+	icon_state = "metal5"
+
+/obj/effect/floor_decal/warhammer/metal/six
+	icon_state = "metal6"
+
+/obj/effect/floor_decal/warhammer/metal/seven
+	icon_state = "metal7"
+
+/obj/effect/floor_decal/warhammer/metal/eight
+	icon_state = "metal8"
+
+/obj/effect/floor_decal/warhammer/metal/nine
+	icon_state = "metal9"
+
+/obj/effect/floor_decal/warhammer/metal/ten
+	icon_state = "metal10"
+
+/obj/effect/floor_decal/warhammer/metal/metal_wall
+	name = "metal wall"
+	icon_state = "2"
+
+
+/obj/effect/floor_decal/newcorner/stone
+	icon = 'icons/turf/flooring/plating.dmi'
+	icon_state = "sborder1"
+
+/obj/effect/floor_decal/newcorner/stone/corner
+	icon = 'icons/turf/flooring/plating.dmi'
+	icon_state = "sborder2"
+
+/obj/effect/floor_decal/newcorner/caveramp
+	icon = 'icons/turf/flooring/plating.dmi'
+	icon_state = "caveramp"
+
+/obj/effect/floor_decal/newcorner/grass
+	icon = 'icons/map_project/furniture_and_decor.dmi'
+	icon_state = "grass1"
+
+/obj/effect/floor_decal/newcorner/trench_flooring
+	icon = 'icons/turf/flooring/plating.dmi'
+	icon_state = "trench_flooring"
+
+/obj/effect/floor_decal/newcorner/mine_walls
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "2"
+
+/obj/effect/floor_decal/newcorner/rails
+	icon = 'icons/map_project/furniture_and_decor.dmi'
+	icon_state = "rail"
+	color = "grey" // Else it looks too shining and does not fit
+
+/obj/effect/floor_decal/newcorner/crater_big
+	icon = 'icons/turf/trenches_turfs.dmi'
+	icon_state = "l1"
+
+/obj/effect/floor_decal/newcorner/crater_small
+	icon = 'icons/turf/trenches_turfs.dmi'
+	icon_state = "crater"
+
+/obj/effect/floor_decal/newcorner/entrace
+	icon = 'icons/map_project/gate.dmi'
+	icon_state = "entrance"
+
+/obj/effect/floor_decal/newcorner/brokenwood
+	icon = 'icons/turf/flooring/wood.dmi'
+	icon_state = "wood_broken0"

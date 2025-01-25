@@ -4,7 +4,7 @@
 	feedback = "TP"
 	school = "conjuration"
 	charge_max = 600
-	spell_flags = NEEDSCLOTHES
+	spell_flags = Z2NOCAST
 	invocation = "Scyar Peranda!"
 	invocation_type = SpI_SHOUT
 	charge_max = 30 MINUTES
@@ -24,9 +24,9 @@
 
 /spell/portal_teleport/choose_targets()
 	var/area/thearea
-	var/message = alert("Would you like to show station areas?\nNote: it can take up to 5 minutes for the away sites to load in and show up.",, "Yes", "No")
+	var/message = alert("Would you like to show station areas?\nNote: it can take up to 5 minutes for the away sites to load in and show up.",, "Compliance", "No")
 	switch(message)
-		if("Yes")
+		if("Compliance")
 			select_areas = stationlocs
 		if("No")
 			select_areas = (stationlocs) ^ (wizportallocs)

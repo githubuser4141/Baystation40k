@@ -40,7 +40,7 @@
 #define MODE_NINJA         "operatives"
 #define MODE_RAIDER        "raider"
 #define MODE_WIZARD        "wizard"
-#define MODE_CHANGELING    "changeling"
+#define MODE_GENESTEALER    "genestealer"
 #define MODE_CULTIST       "cultist"
 #define MODE_MONKEY        "monkey"
 #define MODE_RENEGADE      "renegade"
@@ -54,8 +54,8 @@
 #define MODE_HUNTER        "hunter"
 #define MODE_VOXRAIDER     "vox raider"
 
-#define DEFAULT_TELECRYSTAL_AMOUNT 130
-#define IMPLANT_TELECRYSTAL_AMOUNT(x) (round(x * 0.49)) // If this cost is ever greater than half of DEFAULT_TELECRYSTAL_AMOUNT then it is possible to buy more TC than you spend
+#define DEFAULT_TELECRYSTAL_AMOUNT 100
+#define IMPLANT_TELECRYSTAL_AMOUNT(x) (round(x * 0.5)) // If this cost is ever greater than half of DEFAULT_TELECRYSTAL_AMOUNT then it is possible to buy more TC than you spend
 
 /////////////////
 ////WIZARD //////

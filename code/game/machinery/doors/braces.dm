@@ -3,14 +3,13 @@
 	desc = "A heavy-duty combination hammer and prying tool that can be used to remove airlock braces."
 	icon = 'icons/obj/tools/crowbar.dmi'
 	icon_state = "jack0"
-	base_icon = "jack"
 	w_class = ITEM_SIZE_LARGE
 	attack_cooldown = 2.5 * DEFAULT_WEAPON_COOLDOWN
-	melee_accuracy_bonus = -25
+	melee_accuracy_bonus = -5
 	throwforce = 15
 	force = 25
-	force_multiplier = 1.1
-	unwielded_force_divisor = 0.7
+	force_multiplier = 0.29
+	unwielded_force_divisor = 0.27
 	attack_cooldown_modifier = 1
 	base_parry_chance = 30
 	applies_material_colour = FALSE
@@ -37,7 +36,7 @@
 	desc = "A sturdy device that can be attached to an airlock to reinforce it and provide additional security."
 	icon = 'icons/obj/doors/airlock_machines.dmi'
 	icon_state = "brace_open"
-	health_max = 300
+	health_max = 700
 	var/obj/machinery/door/airlock/airlock
 	var/obj/item/airlock_electronics/brace/electronics
 

@@ -33,6 +33,8 @@
 	var/list/say_stand_down = list()	// When the threatened thing goes away.
 	var/list/say_escalate = list()		// When the threatened thing doesn't go away.
 
+	var/emotehear_sound = null // This does not work unless emote_hear or emote_see are set.
+	var/emotesee_sound = null
 	var/threaten_sound = null			// Sound file played when the mob's AI calls threaten_target() for the first time.
 	var/stand_down_sound = null			// Sound file played when the mob's AI loses sight of the threatened target.
 
@@ -112,7 +114,7 @@
 
 /* For Meatbag */
 /datum/say_list/parrot/heist
- speak = list("Yaaar!","Squaaak!","Fight me Matey!","BAWWWWK Vox trying to eat me!")
+ speak = list("Yaaar!","Squaaak!","Fight me Matey!","BAWWWWK Xenos trying to eat me!")
 
 /datum/say_list/thoom
 	speak = list("Q'moo","Q'mooooo","Q'rrrr","Q'emb")

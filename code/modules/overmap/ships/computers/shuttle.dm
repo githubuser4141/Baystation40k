@@ -1,10 +1,10 @@
-//Shuttle controller computer for shuttles going between sectors
+//Shuttle controller cogitator for shuttles going between sectors
 /obj/machinery/computer/shuttle_control/explore
 	name = "general shuttle control console"
 	ui_template = "shuttle_control_console_exploration.tmpl"
 	base_type = /obj/machinery/computer/shuttle_control/explore
 	machine_name = "long range shuttle console"
-	machine_desc = "Used to control spacecraft that are designed to move between local sectors in open space."
+	machine_desc = "Used to control spacecraft that are desisgned to move between local sectors in open space."
 
 
 /obj/machinery/computer/shuttle_control/explore/is_valid_shuttle(datum/shuttle/shuttle)
@@ -27,7 +27,7 @@
 		. += list(
 			"destination_name" = shuttle.get_destination_name(),
 			"can_pick" = shuttle.moving_status == SHUTTLE_IDLE,
-			"fuel_usage" = shuttle.fuel_consumption * 100,
+			"fuel_usage" = shuttle.fuel_consumption * 10,
 			"remaining_fuel" = round(total_gas, 0.01) * 100,
 			"fuel_span" = fuel_span
 		)

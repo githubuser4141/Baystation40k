@@ -212,7 +212,7 @@ var/global/datum/paiController/paiController			// Global handler for pAI candida
 				<td class="desc">[candidate.role]&nbsp;</td>
 			</tr>
 			<tr class="d1">
-				<td>Do you like to partner with sneaky social ninjas? Like to help security hunt down thugs? Enjoy watching an engineer's back while he saves the day yet again? This doesn't have to be limited to just actually-existing-in-game jobs. Pretty much any general descriptor for what you'd like to be doing works here.</td>
+				<td>Do you like to partner with sneaky social ninjas? Like to help security hunt down thugs? Enjoy watching an tech priest's back while he saves the day yet again? This doesn't have to be limited to just actually-existing-in-game jobs. Pretty much any general descriptor for what you'd like to be doing works here.</td>
 			</tr>
 			<tr class="d0">
 				<th rowspan="2"><a href='byond://?src=\ref[src];option=ooc;new=1;allow_submit=[allowSubmit];candidate=\ref[candidate]'>OOC Comments</a>:</th>
@@ -397,9 +397,9 @@ var/global/datum/paiController/paiController			// Global handler for pAI candida
 		if(!C)	return
 		asked.Add(C.key)
 		asked[C.key] = world.time
-		var/response = alert(C, "[inquirer] is requesting a pAI personality. Would you like to play as a personal AI?", "pAI Request", "Yes", "No", "Never for this round")
+		var/response = alert(C, "[inquirer] is requesting a pAI personality. Would you like to play as a personal AI?", "pAI Request", "Compliance", "No", "Never for this round")
 		if(!C)	return		//handle logouts that happen whilst the alert is waiting for a response.
-		if(response == "Yes")
+		if(response == "Compliance")
 			recruitWindow(C.mob)
 		else if (response == "Never for this round")
 			C.prefs.be_special_role -= BE_PAI

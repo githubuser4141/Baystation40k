@@ -12,7 +12,7 @@ LEGACY_RECORD_STRUCTURE(all_warrants, warrant)
 	program_menu_icon = "star"
 	requires_ntnet = TRUE
 	available_on_ntnet = TRUE
-	required_access = access_security
+	required_access = access_restricted
 	nanomodule_path = /datum/nano_module/program/digitalwarrant
 	category = PROG_SEC
 
@@ -76,7 +76,7 @@ LEGACY_RECORD_STRUCTURE(all_warrants, warrant)
 				activewarrant = W
 				break
 
-	// The following actions will only be possible if the user has an ID with security access equipped. This is in line with modular computer framework's authentication methods,
+	// The following actions will only be possible if the user has an ID with security access equipped. This is in line with modular cogitator framework's authentication methods,
 	// which also use RFID scanning to allow or disallow access to some functions. Anyone can view warrants, editing requires ID. This also prevents situations where you show a tablet
 	// to someone who is to be arrested, which allows them to change the stuff there.
 
@@ -84,7 +84,7 @@ LEGACY_RECORD_STRUCTURE(all_warrants, warrant)
 	if(!istype(user))
 		return
 	var/obj/item/card/id/I = user.GetIdCard()
-	if(!istype(I) || !I.registered_name || !(access_security in I.access))
+	if(!istype(I) || !I.registered_name || !(access_restricted in I.access))
 		to_chat(user, "Authentication error: Unable to locate ID with apropriate access to allow this operation.")
 		return
 
@@ -237,7 +237,7 @@ LEGACY_RECORD_STRUCTURE(all_warrants, warrant)
 		activewarrant = null
 
 
-//SEV Torch Arrest Warrant
+//Dauntless Arrest Warrant
 //System: Geneva 291
 //
 //Suspect Name: Joe Schmoe

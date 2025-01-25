@@ -11,7 +11,7 @@
 #define PASSEMOTES  FLAG(4)  // Mob has a cortical borer or holders inside of it that need to see emotes.
 #define LEAPING     FLAG(5)
 #define GODMODE     FLAG(6)
-#define FAKEDEATH   FLAG(7)  // Replaces stuff like changeling.changeling_fakedeath.
+#define FAKEDEATH   FLAG(7)  // Replaces stuff like genestealer.genestealer_fakedeath.
 #define NO_ANTAG    FLAG(8)  // Players are restricted from gaining antag roles when occupying this mob
 #define NOTARGET    FLAG(9)  // Player is invisible to all simple mobs
 
@@ -106,10 +106,10 @@
 
 // Click cooldown
 #define DEFAULT_ATTACK_COOLDOWN 8 //Default timeout for aggressive actions
-#define DEFAULT_QUICK_COOLDOWN  4
+#define DEFAULT_QUICK_COOLDOWN  5
 
-#define FAST_WEAPON_COOLDOWN 3
-#define DEFAULT_WEAPON_COOLDOWN 5
+#define FAST_WEAPON_COOLDOWN 4
+#define DEFAULT_WEAPON_COOLDOWN 6
 #define SLOW_WEAPON_COOLDOWN 7
 
 #define MIN_SUPPLIED_LAW_NUMBER 15
@@ -209,7 +209,7 @@
 #define BP_PHORON   "phoron filter"
 #define BP_ACETONE  "acetone reactor"
 
-// Vox bits.
+// Xenos bits.
 #define BP_HINDTONGUE "hindtongue"
 
 // Robo Organs.
@@ -347,27 +347,32 @@
 #define SPECIES_DIONA       "Diona"
 #define SPECIES_VOX         "Vox"
 #define SPECIES_IPC         "Machine"
-#define SPECIES_UNATHI      "Unathi"
-#define SPECIES_SKRELL      "Skrell"
+#define SPECIES_ORK         "Ork"
+#define SPECIES_GRET        "Gretchin"
+#define SPECIES_ORK_NOB     "Ork Nob"
+#define SPECIES_ORK_MEK     "Mekboy"
+#define SPECIES_ORK_BOSS    "Warboss"
+#define SPECIES_KROOT       "Kroot"
+#define SPECIES_TAU         "Tau"
 #define SPECIES_PROMETHEAN  "Promethean"
 #define SPECIES_ALIEN       "Humanoid"
 #define SPECIES_ADHERENT    "Adherent"
 #define SPECIES_GOLEM       "Golem"
-#define SPECIES_YEOSA       "Yeosa'Unathi"
+#define SPECIES_YEOSA       "Kroot"
 #define SPECIES_VATGROWN    "Vat-Grown Human"
 #define SPECIES_SPACER      "Space-Adapted Human"
 #define SPECIES_TRITONIAN   "Tritonian"
 #define SPECIES_GRAVWORLDER "Grav-Adapted Human"
-#define SPECIES_MULE        "Mule"
+#define SPECIES_PSYKER        "Psyker"
 #define SPECIES_MONKEY      "Monkey"
 #define SPECIES_NABBER      "Giant Armoured Serpentid"
 #define SPECIES_FARWA       "Farwa"
 #define SPECIES_NEAERA      "Neaera"
 #define SPECIES_STOK        "Stok"
 
-#define UNRESTRICTED_SPECIES list(SPECIES_HUMAN, SPECIES_VOX)
-#define RESTRICTED_SPECIES   list(SPECIES_ALIEN, SPECIES_GOLEM, SPECIES_DIONA, SPECIES_IPC, SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_SKRELL, SPECIES_TRITONIAN, SPECIES_SPACER, SPECIES_VATGROWN, SPECIES_GRAVWORLDER, SPECIES_MULE)
-#define HUMAN_SPECIES        list(SPECIES_HUMAN, SPECIES_VATGROWN, SPECIES_SPACER, SPECIES_GRAVWORLDER, SPECIES_MULE)
+#define UNRESTRICTED_SPECIES list(SPECIES_HUMAN, SPECIES_VOX, SPECIES_TAU, SPECIES_KROOT)
+#define RESTRICTED_SPECIES   list(SPECIES_ALIEN, SPECIES_GOLEM, SPECIES_DIONA, SPECIES_IPC, SPECIES_YEOSA, SPECIES_TRITONIAN, SPECIES_SPACER, SPECIES_VATGROWN, SPECIES_GRAVWORLDER, SPECIES_PSYKER)
+#define HUMAN_SPECIES        list(SPECIES_HUMAN, SPECIES_VATGROWN, SPECIES_SPACER, SPECIES_GRAVWORLDER)
 
 #define SURGERY_CLOSED 0
 #define SURGERY_OPEN 1

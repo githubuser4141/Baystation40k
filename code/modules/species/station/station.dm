@@ -5,13 +5,13 @@
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
 	description = "Humanity originated in the Sol system, and over the last three centuries has spread \
 	colonies across a wide swathe of space. They hold a wide range of forms and creeds.<br/><br/> \
-	The two largest human governments are the Sol Central Government and the Gilgamesh Colonial Confederation, \
+	The two largest human governments are the Sol Central Government and the Tau Empire, \
 	which are currently locked in a cold war. Many other human states exist, however - these include the Frontier \
 	Alliance, a loose collection of planets which has recently seceded from the Sol Central Government; \
 	Magnitka, an independent authoritarian planet; and many other minor colonies."
 	assisted_langs = list(LANGUAGE_NABBER)
 	min_age = 18
-	max_age = 100
+	max_age = 200
 	hidden_from_codex = FALSE
 	bandages_icon = 'icons/mob/bandage.dmi'
 
@@ -24,35 +24,7 @@
 
 	available_cultural_info = list(
 		TAG_CULTURE = list(
-			CULTURE_HUMAN_MARTIAN,
-			CULTURE_HUMAN_MARSTUN,
-			CULTURE_HUMAN_LUNAPOOR,
-			CULTURE_HUMAN_LUNARICH,
-			CULTURE_HUMAN_VENUSIAN,
-			CULTURE_HUMAN_VENUSLOW,
-			CULTURE_HUMAN_BELTER,
-			CULTURE_HUMAN_KUIPERI,
-			CULTURE_HUMAN_KUIPERO,
-			CULTURE_HUMAN_MAGNITKA,
-			CULTURE_HUMAN_EARTH,
-			CULTURE_HUMAN_CETIN,
-			CULTURE_HUMAN_CETIS,
-			CULTURE_HUMAN_CETII,
-			CULTURE_HUMAN_SPACER,
-			CULTURE_HUMAN_OFFWORLD,
-			CULTURE_HUMAN_CONFEDC,
-			CULTURE_HUMAN_CONFEDO,
-			CULTURE_HUMAN_FOSTER,
-			CULTURE_HUMAN_PIRXL,
-			CULTURE_HUMAN_PIRXB,
-			CULTURE_HUMAN_PIRXF,
-			CULTURE_HUMAN_TADMOR,
-			CULTURE_HUMAN_IOLAUS,
-			CULTURE_HUMAN_BRAHE,
-			CULTURE_HUMAN_EOS,
-			CULTURE_HUMAN_CONFEDC,
-			CULTURE_HUMAN_CONFEDO,
-			CULTURE_HUMAN_GAIAN,
+			CULTURE_HUMAN_IMPERIAL,
 			CULTURE_HUMAN_OTHER
 		)
 	)
@@ -83,52 +55,46 @@
 		return "staring blankly, not reacting to your presence"
 	return ..()
 
-/datum/species/skrell
-	name = SPECIES_SKRELL
-	name_plural = SPECIES_SKRELL
+/datum/species/tau
+	name = SPECIES_TAU
+	name_plural = SPECIES_TAU
 	icobase = 'icons/mob/human_races/species/skrell/body.dmi'
 	deform = 'icons/mob/human_races/species/skrell/deformed_body.dmi'
 	preview_icon = 'icons/mob/human_races/species/skrell/preview.dmi'
 	bandages_icon = 'icons/mob/bandage.dmi'
 	primitive_form = "Neaera"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
-	description = "An amphibious species, Skrell come from the star system known as Qerr'Vallis, which translates to 'Star of \
-	the royals' or 'Light of the Crown'.<br/><br/>Skrell are a highly advanced and logical race who live under the rule \
-	of the Qerr'Katish, a caste within their society which keeps the empire of the Skrell running smoothly. Skrell are \
-	herbivores on the whole and tend to be co-operative with the other species of the galaxy, although they rarely reveal \
-	the secrets of their empire to their allies."
-	assisted_langs = list(LANGUAGE_NABBER)
+	description = "A technologically advanced species, the Tau are a highly logical and progressive race governed by a complex \
+	caste system, with the Ethereals at the helm ensuring the smooth operation of their expanding Empire. Though primarily \
+	herbivores, the Tau maintain cooperative relations with various species across the galaxy. However, they are often \
+	reticent about their advanced technologies and the inner workings of their society, sharing little even with their closest allies."
 	health_hud_intensity = 1.75
 	meat_type = /obj/item/reagent_containers/food/snacks/fish/octopus
 	bone_material = MATERIAL_BONE_CARTILAGE
-	genders = list(PLURAL)
-	pronouns = list(PRONOUNS_THEY_THEM)
 	hidden_from_codex = FALSE
 	min_age = 19
-	max_age = 90
+	max_age = 190
 
-	burn_mod = 0.9
-	oxy_mod = 1.3
-	flash_mod = 1.2
-	toxins_mod = 0.8
+	burn_mod = 0.8
+	oxy_mod = 0.7
 	siemens_coefficient = 1.3
-	warning_low_pressure = WARNING_LOW_PRESSURE * 1.4
-	hazard_low_pressure = HAZARD_LOW_PRESSURE * 2
-	warning_high_pressure = WARNING_HIGH_PRESSURE / 0.8125
-	hazard_high_pressure = HAZARD_HIGH_PRESSURE / 0.84615
+	slowdown = -0.15
+	brute_mod = 0.78
+	warning_low_pressure = WARNING_LOW_PRESSURE
+	hazard_low_pressure = HAZARD_LOW_PRESSURE
+	warning_high_pressure = WARNING_HIGH_PRESSURE
+	hazard_high_pressure = HAZARD_HIGH_PRESSURE
 	water_soothe_amount = 5
-
-	body_temperature = null // cold-blooded, implemented the same way nabbers do it
 
 	darksight_range = 4
 	darksight_tint = DARKTINT_MODERATE
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = SPECIES_APPEARANCE_HAS_HAIR_COLOR | SPECIES_APPEARANCE_HAS_STATIC_HAIR | SPECIES_APPEARANCE_HAS_LIPS | SPECIES_APPEARANCE_HAS_UNDERWEAR | SPECIES_APPEARANCE_HAS_SKIN_COLOR
 
 	flesh_color = "#8cd7a3"
-	blood_color = "#1d2cbf"
-	base_color = "#006666"
+	blood_color = "#4450be"
+	base_color = "#4450be"
 	organs_icon = 'icons/mob/human_races/species/skrell/organs.dmi'
 
 	cold_level_1 = 280 //Default 260 - Lower is better
@@ -142,57 +108,32 @@
 	cold_discomfort_level = 292 //Higher than perhaps it should be, to avoid big speed reduction at normal room temp
 	heat_discomfort_level = 368
 
-	descriptors = list(
-		/datum/mob_descriptor/height = 1,
-		/datum/mob_descriptor/build = 0,
-		/datum/mob_descriptor/headtail_length = 0
-	)
-
-	speech_sounds = list(
-		'sound/skrell/warble1.ogg',
-		'sound/skrell/warble2.ogg',
-		'sound/skrell/warble3.ogg'
-	)
-	speech_chance = 10
-
 	available_cultural_info = list(
 		TAG_CULTURE = list(
-			CULTURE_SKRELL_QERR,
-			CULTURE_SKRELL_MALISH,
-			CULTURE_SKRELL_KANIN,
-			CULTURE_SKRELL_TALUM,
-			CULTURE_SKRELL_RASKINTA
+			CULTURE_TAU,
+			CULTURE_TAU_FIO,
+			CULTURE_TAU_POR,
+			CULTURE_TAU_KOR,
+			CULTURE_TAU_SHAS
 		),
 		TAG_HOMEWORLD = list(
-			HOME_SYSTEM_QERRBALAK,
-			HOME_SYSTEM_TALAMIRA,
-			HOME_SYSTEM_ROASORA,
+			HOME_SYSTEM_VORLAAN,
+			HOME_SYSTEM_TALAMIR,
+			HOME_SYSTEM_ROASARA,
 			HOME_SYSTEM_MITORQI,
-			HOME_SYSTEM_SKRELLSPACE,
-			HOME_SYSTEM_OTHERSKRELL
+			HOME_SYSTEM_TAUSPACE,
+			HOME_SYSTEM_OTHER_TAU
 		),
 		TAG_FACTION = list(
-			FACTION_EXPEDITIONARY,
-			FACTION_CORPORATE,
-			FACTION_NANOTRASEN,
-			FACTION_PCRC,
-			FACTION_HEPHAESTUS,
-			FACTION_DAIS,
-			FACTION_SKRELL_QERRVOAL,
-			FACTION_SKRELL_QALAOA,
-			FACTION_SKRELL_YIITALANA,
-			FACTION_SKRELL_KRRIGLI,
-			FACTION_SKRELL_QONPRRI,
-			FACTION_SKRELL_OTHERSKRELLFAC,
-			FACTION_SKRELL_OTHERSDTF,
+			FACTION_IMPERIUM,
+			FACTION_TAU_EMPIRE,
+			FACTION_TAU_VOKAR,
 			FACTION_OTHER
 		),
 		TAG_RELIGION = list(
 			RELIGION_OTHER,
-			RELIGION_ATHEISM,
-			RELIGION_DEISM,
-			RELIGION_AGNOSTICISM,
-			RELIGION_SKRELL
+			RELIGION_IMPERIUM,
+			RELIGION_TAU
 		)
 	)
 
@@ -232,13 +173,13 @@
 
 	bodyfall_sound = 'sound/effects/bodyfall_skrell.ogg'
 
-/datum/species/skrell/get_sex(mob/living/carbon/human/H)
+/datum/species/tau/get_sex(mob/living/carbon/human/H)
 	return istype(H) && (H.descriptors["headtail length"] == 1 ? MALE : FEMALE)
 
-/datum/species/skrell/check_background()
+/datum/species/tau/check_background()
 	return TRUE
 
-/datum/species/skrell/can_float(mob/living/carbon/human/H)
+/datum/species/tau/can_float(mob/living/carbon/human/H)
 	if(!H.is_physically_disabled())
 		if(H.encumbrance() < 2)
 			return TRUE
@@ -254,7 +195,7 @@
 	move_intents = list(/singleton/move_intent/walk, /singleton/move_intent/creep)
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/diona)
 	//primitive_form = "Nymph"
-	slowdown = 5
+	slowdown = 3
 	rarity_value = 3
 	hud_type = /datum/hud_data/diona
 	siemens_coefficient = 0.3
@@ -263,7 +204,7 @@
 	assisted_langs = list(LANGUAGE_NABBER)
 	spawns_with_stack = 0
 	health_hud_intensity = 2
-	hunger_factor = 3
+	hunger_factor = 1
 	thirst_factor = 0.01
 
 	min_age = 1
@@ -323,9 +264,9 @@
 
 	body_temperature = T0C + 15		//make the plant people have a bit lower body temperature, why not
 
-	species_flags = SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_IS_PLANT | SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SLIP
+	species_flags = SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_IS_PLANT | SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SLIP | SPECIES_IS_RESTRICTED
 	appearance_flags = 0
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
+	spawn_flags = SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 
 	blood_color = "#004400"
 	flesh_color = "#907e4a"

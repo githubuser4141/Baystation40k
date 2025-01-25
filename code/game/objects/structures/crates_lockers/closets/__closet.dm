@@ -5,7 +5,7 @@
 	icon_state = "base"
 	density = TRUE
 	w_class = ITEM_SIZE_NO_CONTAINER
-	health_max = 100
+	health_max = 500
 	health_min_damage = 3
 
 	var/welded = 0
@@ -26,10 +26,57 @@
 	var/broken = FALSE
 	var/opened = FALSE
 	var/locked = FALSE
+	var/icon_closed = "closed"
+	var/icon_opened = "open"
+
+	var/icon_locked
+	var/icon_broken = "sparks"
+	var/icon_off
+
+/obj/structure/closet/on_update_icon()
+	if(opened)
+		icon_state = "open"
+		ClearOverlays()
+	else
+		if(broken)
+			icon_state = "closed_emagged[welded ? "_welded" : ""]"
+		else
+			if(locked)
+				icon_state = "closed_locked[welded ? "_welded" : ""]"
+			else
+				icon_state = "closed_unlocked[welded ? "_welded" : ""]"
+			ClearOverlays()
+
+/obj/structure/closet/warhammer/on_update_icon() // closets
+	if(!opened)
+		if(broken && icon_off)
+			icon_state = icon_off
+			overlays += icon_broken
+		else if(locked)
+			icon_state = icon_locked
+		else
+			icon_state = icon_closed
+		ClearOverlays()
+	else
+		icon_state = icon_opened
+		ClearOverlays()
+
+/obj/structure/closet/crate/warhammer/on_update_icon() // crates
+	if(!opened)
+		if(broken && icon_off)
+			icon_state = icon_off
+			overlays += icon_broken
+		else if(locked)
+			icon_state = icon_locked
+		else
+			icon_state = icon_closed
+		ClearOverlays()
+	else
+		icon_state = icon_opened
+		ClearOverlays()
 
 /obj/structure/closet/Initialize()
 	..()
-
 	if((setup & CLOSET_HAS_LOCK))
 		verbs += /obj/structure/closet/proc/togglelock_verb
 
@@ -43,6 +90,8 @@
 	material = SSmaterials.get_material_by_name(material)
 
 	return INITIALIZE_HINT_LATELOAD
+
+
 
 /obj/structure/closet/LateInitialize(mapload)
 	var/list/will_contain = WillContain()
@@ -425,20 +474,6 @@
 		src.toggle(usr)
 	else
 		to_chat(usr, SPAN_WARNING("This mob type can't use this verb."))
-
-/obj/structure/closet/on_update_icon()
-	if(opened)
-		icon_state = "open"
-		ClearOverlays()
-	else
-		if(broken)
-			icon_state = "closed_emagged[welded ? "_welded" : ""]"
-		else
-			if(locked)
-				icon_state = "closed_locked[welded ? "_welded" : ""]"
-			else
-				icon_state = "closed_unlocked[welded ? "_welded" : ""]"
-			ClearOverlays()
 
 /obj/structure/closet/on_death()
 	dump_contents()

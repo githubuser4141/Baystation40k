@@ -3,10 +3,11 @@
 	name = "master shotgun object"
 	desc = "You should not see this."
 	fire_sound = 'sound/weapons/gunshot/shotgun.ogg'
+	accuracy = -1.5
 
 /obj/item/gun/projectile/shotgun/pump
 	name = "shotgun"
-	desc = "A mass-produced shotgun by Mars Security Industries. The rugged ZX-870 'Bulldog' is common throughout most frontier worlds. Useful for sweeping alleys or ship corridors."
+	desc = "A mass-produced shotgun by Sancor. The rugged ZX-870 'Bulldog' is common throughout most frontier worlds. Useful for sweeping alleys or ship corridors."
 	icon = 'icons/obj/guns/shotguns.dmi'
 	icon_state = "shotgun"
 	item_state = "shotgun"
@@ -16,12 +17,13 @@
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BACK
 	caliber = CALIBER_SHOTGUN
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = SINGLE_CASING
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
 	handle_casings = HOLD_CASINGS
-	one_hand_penalty = 8
-	bulk = 6
+	one_hand_penalty = 4
+	accuracy = -1
+	bulk = 1
 	var/recentpump = 0 // to prevent spammage
 	wielded_item_state = "shotgun-wielded"
 	load_sound = 'sound/weapons/guns/interaction/shotgun_instert.ogg'
@@ -48,8 +50,8 @@
 /obj/item/gun/projectile/shotgun/pump/attack_self(mob/living/user as mob)
 	if(world.time >= recentpump + 10)
 		if(!is_held_twohanded(user))
-			var/fail_chance = user.skill_fail_chance(SKILL_WEAPONS, 90, SKILL_EXPERIENCED, 0.25)
-			var/drop_chance = user.skill_fail_chance(SKILL_WEAPONS, 50, SKILL_EXPERIENCED, 0.5)
+			var/fail_chance = user.skill_fail_chance(SKILL_GUNS, 90, SKILL_EXPERIENCED, 0.25)
+			var/drop_chance = user.skill_fail_chance(SKILL_GUNS, 50, SKILL_EXPERIENCED, 0.5)
 
 			if (!fail_chance)
 				user.visible_message(
@@ -158,7 +160,7 @@
 
 /obj/item/gun/projectile/shotgun/pump/sawn
 	name = "riot shotgun"
-	desc = "A mass-produced shotgun by Mars Security Industries. The rugged ZX-870 'Bulldog' is common throughout most frontier worlds. This one has had its stock cut off..."
+	desc = "A mass-produced shotgun by Sancor. The rugged ZX-870 'Bulldog' is common throughout most frontier worlds. This one has had its stock cut off..."
 	icon = 'icons/obj/guns/shotguns.dmi'
 	icon_state = "rshotgun"
 	item_state = "rshotgun"
@@ -168,26 +170,26 @@
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT|SLOT_BACK
 	caliber = CALIBER_SHOTGUN
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = SINGLE_CASING
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
 	handle_casings = HOLD_CASINGS
 	one_hand_penalty = 4
-	bulk = 4
+	bulk = 1
 	wielded_item_state = "rshotgun-wielded"
 	load_sound = 'sound/weapons/guns/interaction/shotgun_instert.ogg'
 
 
 /obj/item/gun/projectile/shotgun/pump/combat
 	name = "combat shotgun"
-	desc = "Built for close quarters combat, the Hephaestus Industries KS-40 is widely regarded as a weapon of choice for repelling boarders."
+	desc = "Built for close quarters combat, the Vostroyan KS-40 is widely regarded as a weapon of choice for repelling boarders."
 	icon_state = "cshotgun"
 	item_state = "cshotgun"
 	wielded_item_state = "cshotgun-wielded"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
 	max_shells = 7 //match the ammo box capacity, also it can hold a round in the chamber anyways, for a total of 8.
 	ammo_type = /obj/item/ammo_casing/shotgun
-	one_hand_penalty = 8
+	one_hand_penalty = 4
 
 /obj/item/gun/projectile/shotgun/pump/combat/on_update_icon()
 	..()
@@ -201,32 +203,28 @@
 	starts_loaded = FALSE
 
 /obj/item/gun/projectile/shotgun/doublebarrel
-	name = "double-barreled shotgun"
-	desc = "A classic double-barreled shotgun. In production for centuries, it has proliferated across human space, earning a sizable reputation for being simple and effective. Produced by Novaya Zemlya Arms."
+	name = "MS Doom"
+	desc = "A classic three-barreled shotgun. In production for centuries, it has proliferated across human space, earning a sizable reputation for being simple and effective. Produced by Valhalla."
 	icon = 'icons/obj/guns/shotguns.dmi'
 	icon_state = "dshotgun"
 	item_state = "dshotgun"
 	wielded_item_state = "dshotgun-wielded"
-	//SPEEDLOADER because rapid unloading.
-	//In principle someone could make a speedloader for it, so it makes sense.
 	load_method = SINGLE_CASING|SPEEDLOADER
 	handle_casings = CYCLE_CASINGS
-	max_shells = 2
+	max_shells = 3
 	w_class = ITEM_SIZE_HUGE
 	force = 10
+	fire_delay = 2.5
+	accuracy = -1
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BACK
 	caliber = CALIBER_SHOTGUN
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 1)
-	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
-	one_hand_penalty = 8
+	ammo_type = /obj/item/ammo_casing/shotgun/flechette
+	one_hand_penalty = 4
 	wielded_item_state = "gun_wielded"
 
 	burst_delay = 0
-	firemodes = list(
-		list(mode_name="fire one barrel at a time", burst=1),
-		list(mode_name="fire both barrels at once", burst=2),
-		)
 
 /obj/item/gun/projectile/shotgun/doublebarrel/pellet
 	ammo_type = /obj/item/ammo_casing/shotgun/pellet
@@ -298,23 +296,24 @@
 
 /obj/item/gun/projectile/shotgun/doublebarrel/sawn
 	name = "sawn-off shotgun"
-	desc = "A ubiquitous weapon, commonplace in almost every settlement and slum. It is one of many basic firearms for those who want to be able to defend themselves with as little fuss as possible. Produced by Novaya Zemlya Arms."
+	desc = "A ubiquitous weapon, commonplace in almost every settlement and slum. It is one of many basic firearms for those who want to be able to defend themselves with as little fuss as possible. Produced by Valhalla."
 	icon_state = "sawnshotgun"
 	item_state = "sawnshotgun"
 	wielded_item_state = "sawnshotgun-wielded"
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
-	ammo_type = /obj/item/ammo_casing/shotgun/pellet
+	ammo_type = /obj/item/ammo_casing/shotgun/ms
 	w_class = ITEM_SIZE_NORMAL
-	force = 5
-	one_hand_penalty = 4
-	bulk = 2
+	accuracy = -1.5
+	one_hand_penalty = 0
+	fire_delay = 2.2
+
 
 /obj/item/gun/projectile/shotgun/doublebarrel/sawn/empty
 	starts_loaded = FALSE
 
 /obj/item/gun/projectile/shotgun/magshot
 	name = "auto shotgun"
-	desc = "A remnant of a bygone era, the NZ CSG-242 was formerly standard issue for Confederate Naval Forces for ship defense during hostile boarding actions. With a change in doctrine after the losses at Gaia, and with more focus on a multi-role weapons platform, the weapon is slowly being phased out of service."
+	desc = "A remnant of a bygone era, the NZ CSG-242 was formerly standard issue for Confederate Naval Forces for ship defense during hostile boarding actions. With a change in doctrine after the losses at Ultramar, and with more focus on a multi-role weapons platform, the weapon is slowly being phased out of service."
 	icon = 'icons/obj/guns/magshot.dmi'
 	icon_state = "magshot"
 	item_state = "magshot"
@@ -331,10 +330,10 @@
 	auto_eject = TRUE
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 	fire_sound = 'sound/weapons/gunshot/shotgun.ogg'
-	one_hand_penalty = 8
+	one_hand_penalty = 4
 	bulk = GUN_BULK_RIFLE
 	burst_delay = 2
-	accuracy = -1
+	accuracy = -1.5
 	jam_chance = 0.5
 	safety_icon = "safety"
 

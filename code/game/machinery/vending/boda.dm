@@ -22,16 +22,16 @@
 	antag_slogans = {"\
 		It may not be the best, but our wares are actually GOOD for the consumer. Suck it, capitalists.;\
 		There is only our, there is no mine. Unless you're sent to gulag.;\
-		Guaranteed to help you tear 'em a new Gaia.;\
-		100% less additives and preservatives than our SCG competitors.\
+		Guaranteed to help you tear 'em a new Ultramar.;\
+		100% less additives and preservatives than our Imperial competitors.\
 	"}
 	products = list(
-		/obj/item/reagent_containers/food/drinks/cans/syndicola = 0,
-		/obj/item/reagent_containers/food/drinks/cans/syndicolax = 0,
-		/obj/item/reagent_containers/food/drinks/cans/artbru = 0,
-		/obj/item/reagent_containers/food/drinks/glass2/square/boda = 0,
-		/obj/item/reagent_containers/food/drinks/glass2/square/bodaplus = 0,
-		/obj/item/reagent_containers/food/drinks/bottle/small/space_up = 0
+		/obj/item/reagent_containers/food/drinks/cans/syndicola = 1,
+		/obj/item/reagent_containers/food/drinks/cans/syndicolax = 1,
+		/obj/item/reagent_containers/food/drinks/cans/artbru = 2,
+		/obj/item/reagent_containers/food/drinks/glass2/square/boda = 3,
+		/obj/item/reagent_containers/food/drinks/glass2/square/bodaplus = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/small/space_up = 1
 	)
 	contraband = list(
 		/obj/item/clothing/under/soviet = 1,
@@ -41,11 +41,11 @@
 	rare_products = list(
 		/obj/item/reagent_containers/food/drinks/bottle/small/space_up = 50,
 		/obj/item/card/id/syndicate = 25,
-		/obj/item/storage/box/syndie_kit/spy = 50
+		/obj/item/storage/box/contraband/spy = 50
 	)
 	antag = list(
 		/obj/item/gun/projectile/heavysniper/boltaction = 1,
 		/obj/item/ammo_magazine/rifle  = 1,
 		/obj/item/card/id/syndicate = 0,
-		/obj/item/storage/box/syndie_kit/spy = 0
+		/obj/item/storage/box/contraband/spy = 0
 	)

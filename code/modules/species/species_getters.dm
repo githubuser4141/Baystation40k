@@ -41,7 +41,7 @@
 	return ((H && H.isSynthetic()) ? "encounters a hardware fault and suddenly reboots!" : knockout_message)
 
 /datum/species/proc/get_death_message(mob/living/carbon/human/H)
-	return ((H && H.isSynthetic()) ? "gives one shrill beep before falling lifeless." : death_message)
+	return ((H && H.isSynthetic()) ? "gives one shrill beep before falling lifeless." : (death_message ? death_message : pick(death_messages)))
 
 /datum/species/proc/get_ssd(mob/living/carbon/human/H)
 	if (H.ai_holder)
@@ -102,9 +102,16 @@
 
 /datum/species/proc/get_toxins_mod(mob/living/carbon/human/H)
 	. = toxins_mod
+	var/skill_reduction = get_combat_skill_reduction(H)
+	if(skill_reduction > 0)
+		. *= (1 - skill_reduction)
+
 
 /datum/species/proc/get_radiation_mod(mob/living/carbon/human/H)
-	. = (H && H.isSynthetic() ? 0.5 : radiation_mod)
+	. = (H && H.isSynthetic()) ? 0.5 : radiation_mod
+	var/skill_reduction = get_combat_skill_reduction(H)
+	if(skill_reduction > 0)
+		. *= (1 - skill_reduction)
 
 /datum/species/proc/get_slowdown(mob/living/carbon/human/H)
 	. = (H && H.isSynthetic() ? 0 : slowdown)

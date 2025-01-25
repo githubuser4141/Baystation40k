@@ -12,7 +12,7 @@
 	var/stop_move = 0							// Whether or not the grabbed person can move out of the grab
 	var/force_stand = 0							// Whether or not the grabbed person is forced to be standing
 	var/reverse_facing = 0						// Whether the person being grabbed is facing forwards or backwards.
-	var/can_absorb = 0							// Whether this grab state is strong enough to, as a changeling, absorb the person you're grabbing.
+	var/can_absorb = 0							// Whether this grab state is strong enough to, as a genestealer, absorb the person you're grabbing.
 	var/shield_assailant = 0					// Whether the person you're grabbing will shield you from bullets.,,
 	var/point_blank_mult = 1					// How much the grab increases point blank damage.
 	var/damage_stage = 1						// Affects how much damage is being dealt using certain actions.
@@ -24,7 +24,7 @@
 	var/force_danger = 0						// If the grab is strong enough to be able to force someone to do something harmful to them.
 	var/restrains = 0							// If the grab acts like cuffs and prevents action from the victim.
 
-	var/grab_slowdown = 7
+	var/grab_slowdown = 5
 
 	var/shift = 0
 

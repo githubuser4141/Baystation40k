@@ -17,23 +17,21 @@
 		/datum/unarmed_attack/bite/strong
 	)
 	rarity_value = 4
-	description = "The Vox are the broken remnants of a once-proud race, now reduced to little more than \
-	scavenging vermin who prey on isolated stations, ships or planets to keep their own ancient arkships \
-	alive. They are four to five feet tall, reptillian, beaked, tailed and quilled; human crews often \
-	refer to them as 'shitbirds' for their violent and offensive nature, as well as their horrible \
-	smell. \
+	description = "The Tarrellians are the shattered remnants of a once-proud species, now reduced to scavenging \
+	and mercenary work to sustain their dwindling numbers. These reptilian-avians stand four to five feet tall, \
+	with beaked faces, tails, and a covering of quills. Among human crews, they are often disparagingly referred \
+	to as 'scale-birds' due to their violent nature, foul temperament, and the distinct, unpleasant odor they emit. \
 	<br/><br/> \
-	Most humans will never meet a Vox raider, instead learning of this insular species through \
-	dealing with their traders and merchants; those that do rarely enjoy the experience."
-	codex_description = "The Vox are a hostile, deeply untrustworthy species from the edges of human space. They prey \
-	on isolated stations, ships or settlements without any apparent logic or reason, and tend to refuse communications \
-	or negotiations except when their backs are to the wall or they are in dire need of resources. They are four to five \
-	feet tall, reptillian, beaked, tailed and quilled."
+	Most humans will never encounter a Tarrellian directly, instead knowing of them through tales of their mercenary \
+	activities or encounters with their traders. Those few who do come face to face with a Tarrellian rarely find the \
+	experience enjoyable."
+	codex_description = "The Tarrellians are a hostile and deeply untrustworthy species dwelling at the fringes of the \
+	known galaxy. They raid isolated stations, ships, and settlements seemingly without rhyme or reason, often refusing \
+	any form of communication or negotiation unless they are desperate or severely outnumbered. These reptilian-avians \
+	are four to five feet tall, with beaked faces, tails, and quilled bodies."
 	hidden_from_codex = FALSE
 
 	taste_sensitivity = TASTE_DULL
-	speech_sounds = list('sound/voice/shriek1.ogg')
-	speech_chance = 20
 
 	warning_low_pressure = 50
 	hazard_low_pressure = 0
@@ -44,16 +42,20 @@
 
 	min_age = 1
 	max_age = 100
+	brute_mod = 0.75 // Vunerable to Brute.
+	burn_mod = 0.55 // Resistance to Burn.
+	stun_mod = 0.7 // Resistant to concussion
+	weaken_mod = 0.7 // Advanced health systems.
+	paralysis_mod = 0.7
+	toxins_mod = 0.7
 
 	gluttonous = GLUT_TINY|GLUT_ITEM_NORMAL
 	stomach_capacity = 12
 
-	breath_type = GAS_NITROGEN
-	poison_types = list(GAS_OXYGEN = TRUE)
 	siemens_coefficient = 0.2
 
 	species_flags = SPECIES_FLAG_NO_SCAN
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 	appearance_flags = SPECIES_APPEARANCE_HAS_EYE_COLOR | SPECIES_APPEARANCE_HAS_HAIR_COLOR
 
 	blood_color = "#2299fc"
@@ -67,7 +69,7 @@
 	)
 
 	has_organ = list(
-		BP_STOMACH =    /obj/item/organ/internal/stomach/vox,
+		BP_STOMACH =    /obj/item/organ/internal/stomach,
 		BP_HEART =      /obj/item/organ/internal/heart/vox,
 		BP_LUNGS =      /obj/item/organ/internal/lungs/vox,
 		BP_LIVER =      /obj/item/organ/internal/liver/vox,
@@ -130,11 +132,11 @@
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/vox(H), slot_wear_mask)
 
 	if(istype(H.get_equipped_item(slot_back), /obj/item/storage/backpack))
-		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_r_hand)
+		H.equip_to_slot_or_del(new /obj/item/tank/oxygen(H), slot_r_hand)
 		H.equip_to_slot_or_del(new /obj/item/storage/box/vox(H.back), slot_in_backpack)
 		H.set_internals(H.r_hand)
 	else
-		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_back)
+		H.equip_to_slot_or_del(new /obj/item/tank/oxygen(H), slot_back)
 		H.equip_to_slot_or_del(new /obj/item/storage/box/vox(H), slot_r_hand)
 		H.set_internals(H.back)
 
@@ -159,7 +161,7 @@
 		return
 	if (user.species.name == SPECIES_VOX || !is_alien_whitelisted(user, all_species[SPECIES_VOX]))
 		return
-	var/data = input(user, "Become Vox?", "Become Vox") as null | anything in list("No", "Yes")
+	var/data = input(user, "Become Vox?", "Become Vox") as null | anything in list("No", "Compliance")
 	if (isnull(data) || data == "No")
 		return
 	var/mob/living/carbon/human/vox/vox = new(get_turf(src), SPECIES_VOX)
@@ -177,7 +179,7 @@
 /obj/item/vox_changer/proc/OnCreated(mob/living/carbon/human/vox, mob/living/carbon/human/old)
 	vox.equip_to_slot_or_del(new /obj/item/clothing/under/vox/vox_casual(vox), slot_w_uniform)
 	vox.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/vox(vox), slot_wear_mask)
-	vox.equip_to_slot_or_del(new /obj/item/tank/nitrogen(vox), slot_back)
+	vox.equip_to_slot_or_del(new /obj/item/tank/oxygen(vox), slot_back)
 	vox.set_internals(locate(/obj/item/tank) in vox.contents)
 
 /obj/item/vox_changer/proc/OnReady(mob/living/carbon/human/vox, mob/living/carbon/human/old)

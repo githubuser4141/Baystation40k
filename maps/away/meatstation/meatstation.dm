@@ -23,22 +23,27 @@
 
 /obj/shuttle_landmark/nav_meatstation/nav1
 	name = "Navpoint #1"
+	warpspace = TRUE
 	landmark_tag = "nav_meatstation_1"
 
 /obj/shuttle_landmark/nav_meatstation/nav2
 	name = "Navpoint #2"
+	warpspace = TRUE
 	landmark_tag = "nav_meatstation_2"
 
 /obj/shuttle_landmark/nav_meatstation/nav3
 	name = "Navpoint #3"
+	warpspace = TRUE
 	landmark_tag = "nav_meatstation_3"
 
 /obj/shuttle_landmark/nav_meatstation/nav4
 	name = "Navpoint #4"
+	warpspace = TRUE
 	landmark_tag = "nav_meatstation_4"
 
 /obj/shuttle_landmark/nav_meatstation/nav5
 	name = "Navpoint #5"
+	warpspace = TRUE
 	landmark_tag = "nav_meatstation_antag"
 
 //structural
@@ -67,7 +72,7 @@
 	flash_vulnerability = 0 //eyeless
 	turns_per_move = 5
 	natural_weapon = /obj/item/natural_weapon/bite/weak
-	faction = "meat"
+	faction = "Demon"
 	min_gas = null
 	minbodytemp = 0
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/meatstationmeat
@@ -84,7 +89,7 @@
 	icon_dead = "meatworm_dead"
 	turns_per_move = 3
 	speed = -2
-	maxHealth = 20
+	maxhealth = 20
 	health = 20
 	natural_weapon = /obj/item/natural_weapon/bite/weak
 	mob_size = MOB_SMALL
@@ -100,7 +105,7 @@
 	icon_living = "meatball"
 	icon_dead = "meatball_dead"
 	speed = 2
-	maxHealth = 50
+	maxhealth = 50
 	health = 50
 	natural_weapon = /obj/item/natural_weapon/meatball
 	meat_amount = 2
@@ -114,12 +119,12 @@
 
 /mob/living/simple_animal/hostile/meatstation/wormscientist
 	name = "infested scientist"
-	desc = "A scientist infested with some sort of parasitic worms."
+	desc = "A researcher infested with some sort of parasitic worms."
 	icon_state = "wormscientist"
 	icon_living = "wormscientist"
 	icon_dead = "wormscientist_dead"
 	speed = 7
-	maxHealth = 90
+	maxhealth = 90
 	health = 90
 	natural_weapon = /obj/item/natural_weapon/wormscience
 	meat_amount = 3
@@ -137,7 +142,7 @@
 	icon_living = "wormguard"
 	icon_dead = "wormguard_dead"
 	speed = 7
-	maxHealth = 60
+	maxhealth = 60
 	health = 60
 	natural_weapon = /obj/item/natural_weapon/wormguard
 	meat_amount = 3
@@ -158,7 +163,7 @@
 	icon_dead = "meatmound_dead"
 	flash_vulnerability = 1
 	speed = 10
-	maxHealth = 160
+	maxhealth = 160
 	health = 160
 	natural_weapon = /obj/item/natural_weapon/meatmound
 	meat_amount = 4
@@ -194,13 +199,13 @@
 	icon = 'maps/away/meatstation/meatstation_sprites.dmi'
 	icon_state = "meatchunk"
 
-/obj/item/cell/infinite/meatstation
+/obj/item/cell/meatstation
 	name = "biological power cell"
 	desc = "A throbbing, biological power cell."
 	icon = 'maps/away/meatstation/meatstation_sprites.dmi'
 	icon_state = "biocell"
 	origin_tech =  list(TECH_ENGINEERING = 3, TECH_MATERIAL = 4, TECH_BIO = 7)
-	maxcharge = 500
+	maxcharge = 7000
 	matter = null
 
 //notes
@@ -250,7 +255,7 @@
 
 /obj/random/single/meatstation/cell
 	icon_state = "biocell50"
-	spawn_object = /obj/item/cell/infinite/meatstation
+	spawn_object = /obj/item/cell/meatstation
 
 /obj/random/single/meatstation/laser
 	icon_state = "laser50"
@@ -258,7 +263,7 @@
 
 /obj/random/single/meatstation/low/biocell
 	icon_state = "biocell10"
-	spawn_object = /obj/item/cell/infinite/meatstation
+	spawn_object = /obj/item/cell/meatstation
 
 /obj/random/single/meatstation/low/wormguard
 	icon_state = "wormguard10"

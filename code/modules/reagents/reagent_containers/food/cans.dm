@@ -89,7 +89,7 @@
 
 /obj/item/reagent_containers/food/drinks/cans/iced_tea
 	name = "vrisk serket iced tea"
-	desc = "That sweet, refreshing southern earthy flavor. That's where it's from, right? South Earth?"
+	desc = "That sweet, refreshing southern earthy flavor. That's where it's from, right? South Terra?"
 	icon_state = "ice_tea_can"
 	center_of_mass = "x=16;y=10"
 
@@ -161,7 +161,7 @@
 
 /obj/item/reagent_containers/food/drinks/cans/syndicola
 	name = "terra-cola"
-	desc = "A can of the only soft drink state approved for the benefit of the people. Served at room temperature regardless of ambient temperatures thanks to innovative Terran insulation technology."
+	desc = "A can of the only soft drink state approved for the benefit of the people. Served at room temperature regardless of ambient temperatures thanks to innovative Imperial insulation technology."
 	icon_state = "syndi_cola"
 	center_of_mass = "x=16;y=10"
 
@@ -222,7 +222,7 @@
 	reagents.add_reagent(/datum/reagent/ethanol/ale, 30)
 
 
-//Fox's Sodas from Legacy Bay: NSV Luna
+//Fox's Sodas from Legacy Bay: NSV Vostroya
 
 
 
@@ -237,7 +237,7 @@
 
 /obj/item/reagent_containers/food/drinks/cans/rootbeer
 	name = "rocket root beer"
-	desc = "Blast away with Rocket Root Beer!"
+	desc = "Blast away with Rocket Root Gothic Ale!"
 	icon_state = "cola-brown"
 
 /obj/item/reagent_containers/food/drinks/cans/rootbeer/Initialize()

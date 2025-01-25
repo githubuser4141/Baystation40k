@@ -79,14 +79,14 @@
 	icon_state = "holobadge"
 	item_state = "holobadge"
 	badge_string = "Security"
-	var/badge_access = access_security
+	var/badge_access = access_restricted
 	var/badge_number
 	var/emagged
 
 
 /obj/item/clothing/accessory/badge/holo/NT
 	name = "corporate holobadge"
-	desc = "This glowing green badge marks the holder as a member of corporate security."
+	desc = "This glowing green badge marks the holder as a member of imperial security."
 	icon_state = "ntholobadge"
 	color = null
 	badge_string = "Corporate Security"
@@ -127,7 +127,7 @@
 		to_chat(user, SPAN_DANGER("\The [src] is already cracked."))
 		return NO_EMAG_ACT
 	emagged = TRUE
-	to_chat(user, SPAN_DANGER("You crack the security checks on \the [src]."))
+	to_chat(user, SPAN_DANGER("You crack the militarum checks on \the [src]."))
 	return 1
 
 
@@ -148,7 +148,7 @@
 
 /obj/item/storage/box/holobadge
 	name = "holobadge box"
-	desc = "A box containing security holobadges."
+	desc = "A box containing militarum holobadges."
 	startswith = list(
 		/obj/item/clothing/accessory/badge/holo = 4,
 		/obj/item/clothing/accessory/badge/holo/cord = 2
@@ -157,7 +157,7 @@
 
 /obj/item/storage/box/holobadgeNT
 	name = "corporate holobadge box"
-	desc = "A box containing corporate security holobadges."
+	desc = "A box containing imperial militarum holobadges."
 	startswith = list(
 		/obj/item/clothing/accessory/badge/holo/NT = 4,
 		/obj/item/clothing/accessory/badge/holo/NT/cord = 2
@@ -187,14 +187,14 @@
 
 /obj/item/clothing/accessory/badge/nanotrasen
 	name = "corporate badge"
-	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a corporate executive."
+	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a imperial executive."
 	icon_state = "ntbadge"
 	badge_string = "Corporate Executive Body"
 
 
 /obj/item/clothing/accessory/badge/agent
-	name = "\improper SFP Agent's badge"
-	desc = "A leather-backed gold badge displaying the crest of the Sol Federal Police."
+	name = "\improper Magistratum Agent's badge"
+	desc = "A leather-backed gold badge displaying the crest of the Magistratum."
 	icon_state = "agentbadge"
 	slot_flags = SLOT_BELT | SLOT_TIE | SLOT_MASK
 	slot = ACCESSORY_SLOT_INSIGNIA
@@ -203,7 +203,7 @@
 
 /obj/item/clothing/accessory/badge/tracker
 	name = "\improper Tracker's badge"
-	desc = "A blue leather-backed gold badge displaying the crest of the Sol Federal Police."
+	desc = "A blue leather-backed gold badge displaying the crest of the Magistratum."
 	icon_state = "trackerbadge"
 	slot_flags = SLOT_BELT | SLOT_TIE
 	slot = ACCESSORY_SLOT_INSIGNIA
@@ -218,8 +218,8 @@
 
 
 /obj/item/clothing/accessory/badge/tags/skrell
-	name = "skrellian holobadge"
-	desc = "A high tech Skrellian holobadge, designed to project information about the owner."
+	name = "Tau holobadge"
+	desc = "A high tech Tau holobadge, designed to project information about the owner."
 	icon_state = "skrell_badge"
 	badge_string = null
 
@@ -231,7 +231,7 @@
 
 
 /obj/item/clothing/accessory/badge/tags/skrell/verb/set_sdtf()
-	set name = "Set SDTF Name"
+	set name = "Set Empire Name"
 	set category = "Object"
 	set src in usr
 	if (!ishuman(usr) || usr.stat)
@@ -244,7 +244,7 @@
 	if (usr.get_active_hand() != B)
 		to_chat(usr, SPAN_WARNING("You must be holding \the [src] to modify it."))
 		return
-	var/value = input(usr, "Input your SDTF.", "SDTF Holobadge") as null | text
+	var/value = input(usr, "Input your Empire.", "Empire Holobadge") as null | text
 	if (isnull(value))
 		return
 	if (usr.stat || usr.get_active_hand() != B)

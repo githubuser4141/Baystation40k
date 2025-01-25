@@ -15,7 +15,7 @@
 	antag_slogans = {"\
 		Why you'd wear Solarian clothes is beyond me, you look ridiculous.;\
 		Forcing others to stare at that solarian outfit is an act of terrorism!;\
-		Dress your best as you bring down the SCG, make history in style!;\
+		Dress your best as you bring down the Imperial, make history in style!;\
 		Our clothes are 100% sweatshop guaranteed, for your convienience!\
 	"}
 	prices = list(
@@ -30,10 +30,10 @@
 		/obj/item/storage/wallet/poly = 600
 	)
 	products = list(
-		/obj/item/mirror = 8,
-		/obj/item/haircomb = 8,
-		/obj/item/clothing/glasses/monocle = 5,
-		/obj/item/clothing/glasses/sunglasses = 5,
+		/obj/item/mirror = 6,
+		/obj/item/haircomb = 6,
+		/obj/item/clothing/glasses/monocle = 3,
+		/obj/item/clothing/glasses/sunglasses = 4,
 		/obj/item/lipstick = 3,
 		/obj/item/lipstick/black = 3,
 		/obj/item/lipstick/purple = 3,

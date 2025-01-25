@@ -11,8 +11,8 @@
 	silent_steps = TRUE
 
 	antaghud_offset_y = 8
-
-	assisted_langs = list(LANGUAGE_GUTTER, LANGUAGE_UNATHI_SINTA, LANGUAGE_SKRELLIAN, LANGUAGE_HUMAN_EURO, LANGUAGE_EAL, LANGUAGE_HUMAN_RUSSIAN)
+	species_flags = SPECIES_IS_RESTRICTED
+	assisted_langs = list(LANGUAGE_GUTTER, LANGUAGE_KROOT_SINTA, LANGUAGE_TAU, LANGUAGE_HIGH_GOTHIC, LANGUAGE_MECHANICUS, LANGUAGE_HUMAN_RUSSIAN)
 	min_age = 8
 	max_age = 40
 
@@ -42,19 +42,19 @@
 
 	darksight_range = 8
 	darksight_tint = DARKTINT_GOOD
-	slowdown = -0.5
+	slowdown = -0.25
 	rarity_value = 4
 	hud_type = /datum/hud_data/nabber
 
 	total_health = 200
-	brute_mod = 0.9
-	burn_mod =  1.35
+	brute_mod = 0.65
+	burn_mod =  0.75
 	natural_armour_values = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_BASIC,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SHIELDED,
-		rad = 0.5*ARMOR_RAD_MINOR
+		rad = 0.5*ARMOR_RAD_THIRTY
 		)
 
 	gluttonous = GLUT_SMALLER
@@ -70,7 +70,7 @@
 
 	species_flags = SPECIES_FLAG_NO_SLIP | SPECIES_FLAG_NO_BLOCK | SPECIES_FLAG_NO_MINOR_CUT | SPECIES_FLAG_NEED_DIRECT_ABSORB
 	appearance_flags = SPECIES_APPEARANCE_HAS_SKIN_COLOR | SPECIES_APPEARANCE_HAS_EYE_COLOR | SPECIES_APPEARANCE_HAS_SKIN_TONE_NORMAL | SPECIES_APPEARANCE_HAS_BASE_SKIN_COLOURS
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
+	spawn_flags = SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 
 	bump_flag = HEAVY
 	push_flags = ALLMOBS

@@ -6,7 +6,7 @@
 	restricted_software = list(MECH_SOFTWARE_MEDICAL)
 	equipment_delay = 30 //don't spam it on people pls
 	active_power_use = 0 //Usage doesn't really require power. We don't want people stuck inside
-	origin_tech = list(TECH_DATA = 2, TECH_BIO = 3)
+	origin_tech = list(TECH_DATA = 2, TECH_BIO = 2)
 	passive_power_use = 0 //Raised to 1.5 KW when patient is present.
 	var/obj/machinery/sleeper/mounted/sleeper = null
 
@@ -57,7 +57,7 @@
 	stasis_power = 0
 	interact_offline = TRUE
 	stat_immune = MACHINE_STAT_NOPOWER
-	base_chemicals = list("Inaprovaline" = /datum/reagent/inaprovaline, "Paracetamol" = /datum/reagent/paracetamol, "Dylovene" = /datum/reagent/dylovene, "Dexalin" = /datum/reagent/dexalin, "Kelotane" = /datum/reagent/kelotane, "Hyronalin" = /datum/reagent/hyronalin)
+	base_chemicals = list("Vitae Stim" = /datum/reagent/inaprovaline, "Pain Suppressor" = /datum/reagent/paracetamol, "Nexros" = /datum/reagent/dylovene, "Dexalin" = /datum/reagent/dexalin, "Regeneris-B" = /datum/reagent/kelotane, "Hyronalin" = /datum/reagent/hyronalin)
 
 /obj/machinery/sleeper/mounted/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 1, datum/topic_state/state = GLOB.mech_state)
 	. = ..()

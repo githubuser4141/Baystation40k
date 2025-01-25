@@ -6,10 +6,10 @@
 	icon = 'icons/obj/weapons/folding_knife.dmi'
 	icon_state = "knife_preview"
 	item_state = null
-	force = 0.2 //force of folded obj
-	max_force = 10
+	force = 12 //force of folded obj
+	max_force = 40
 	max_pen = 0
-	force_multiplier = 0.2
+	force_multiplier = 0.22
 	applies_material_colour = FALSE
 	applies_material_name = FALSE
 	unbreakable = TRUE
@@ -53,7 +53,7 @@
 		hitsound = 'sound/weapons/bladeslice.ogg'
 		w_class = ITEM_SIZE_NORMAL
 		attack_verb = list("slashed", "stabbed")
-		attack_cooldown_modifier = -1
+		attack_cooldown_modifier = 0.5
 		base_parry_chance = 15
 		..()
 	else
@@ -81,7 +81,7 @@
 //Subtypes
 /obj/item/material/knife/folding/wood
 	name = "peasant knife"
-	desc = "A small folding knife with a wooden handle and carbon steel blade. Knives like this have been used on Earth for centuries."
+	desc = "A small folding knife with a wooden handle and carbon steel blade. Knives like this have been used on Terra for centuries."
 	hardware_closed = "peasant_hardware_closed"
 	hardware_open = "peasant_hardware"
 	handle_icon = "peasant_handle"
@@ -98,13 +98,13 @@
 /obj/item/material/knife/folding/combat //master obj
 	name = "the concept of a fighting knife in which the blade can be stowed in its own handle"
 	desc = "This is a master item - berate the admin or mapper who spawned this!"
-	max_force = 15
+	max_force = 45
 	max_pen = 30
-	force_multiplier = 0.25
+	force_multiplier = 0.28
 	thrown_force_multiplier = 0.25
 	takes_colour = FALSE
 	worth_multiplier = 8
-	base_parry_chance = 30
+	base_parry_chance = 20
 
 /obj/item/material/knife/folding/combat/balisong
 	name = "butterfly knife"

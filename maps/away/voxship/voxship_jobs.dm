@@ -14,12 +14,12 @@
 		SKILL_EVA = SKILL_MAX,
 		SKILL_MECH = SKILL_MAX,
 		SKILL_PILOT = SKILL_MAX,
-		SKILL_HAULING = SKILL_MAX,
+		SKILL_VIGOR = SKILL_MAX,
 		SKILL_COMPUTER = SKILL_MAX,
 		SKILL_BOTANY = SKILL_MAX,
 		SKILL_COOKING = SKILL_MAX,
 		SKILL_COMBAT = SKILL_MAX,
-		SKILL_WEAPONS = SKILL_MAX,
+		SKILL_GUNS = SKILL_MAX,
 		SKILL_FORENSICS = SKILL_MAX,
 		SKILL_CONSTRUCTION = SKILL_MAX,
 		SKILL_ELECTRICAL = SKILL_TRAINED,
@@ -39,7 +39,7 @@
 	your kin alive at all costs."
 	whitelisted_species = list(SPECIES_VOX)
 	min_skill = list( // 45 points
-		SKILL_HAULING = SKILL_BASIC, // 1 point
+		SKILL_VIGOR = SKILL_BASIC, // 1 point
 		SKILL_EVA = SKILL_EXPERIENCED, // 4 points
 		SKILL_MEDICAL = SKILL_EXPERIENCED, // 16 points
 		SKILL_ANATOMY = SKILL_EXPERIENCED, // 16 points
@@ -53,12 +53,12 @@
 		SKILL_EVA = SKILL_MAX,
 		SKILL_MECH = SKILL_MAX,
 		SKILL_PILOT = SKILL_MAX,
-		SKILL_HAULING = SKILL_MAX,
+		SKILL_VIGOR = SKILL_MAX,
 		SKILL_COMPUTER = SKILL_MAX,
 		SKILL_BOTANY = SKILL_MAX,
 		SKILL_COOKING = SKILL_MAX,
 		SKILL_COMBAT = SKILL_MAX,
-		SKILL_WEAPONS = SKILL_MAX,
+		SKILL_GUNS = SKILL_MAX,
 		SKILL_FORENSICS = SKILL_MAX,
 		SKILL_CONSTRUCTION = SKILL_TRAINED,
 		SKILL_ELECTRICAL = SKILL_TRAINED,
@@ -78,7 +78,7 @@
 	info = "You are the mechanic of your scavenger crew. Keep all your salvaged technology running, fix robotics, and disassemble some of \
 	the more complex devices your crew comes across."
 	min_skill = list( // 16 points
-		SKILL_HAULING = SKILL_BASIC, // 1 point
+		SKILL_VIGOR = SKILL_BASIC, // 1 point
 		SKILL_COMPUTER = SKILL_BASIC, // 1 point
 		SKILL_EVA = SKILL_EXPERIENCED, // 4 points
 		SKILL_CONSTRUCTION = SKILL_TRAINED, // 2 points
@@ -93,12 +93,12 @@
 		SKILL_EVA = SKILL_MAX,
 		SKILL_MECH = SKILL_MAX,
 		SKILL_PILOT = SKILL_MAX,
-		SKILL_HAULING = SKILL_MAX,
+		SKILL_VIGOR = SKILL_MAX,
 		SKILL_COMPUTER = SKILL_MAX,
 		SKILL_BOTANY = SKILL_MAX,
 		SKILL_COOKING = SKILL_MAX,
 		SKILL_COMBAT = SKILL_MAX,
-		SKILL_WEAPONS = SKILL_MAX,
+		SKILL_GUNS = SKILL_MAX,
 		SKILL_FORENSICS = SKILL_MAX,
 		SKILL_CONSTRUCTION = SKILL_MAX,
 		SKILL_ELECTRICAL = SKILL_MAX,
@@ -119,12 +119,12 @@
 	supervisors = "apex and the arkship"
 	info = "You're in charge. You fly the ship, and dictate what the crew does. Do not disappoint the Apex."
 	min_skill = list( // 25 points
-		SKILL_HAULING = SKILL_BASIC, // 1 point
+		SKILL_VIGOR = SKILL_BASIC, // 1 point
 		SKILL_EVA = SKILL_EXPERIENCED, // 4 points
 		SKILL_SCIENCE = SKILL_TRAINED, // 4 points
 		SKILL_PILOT = SKILL_TRAINED, // 4 points
 		SKILL_COMBAT = SKILL_TRAINED, // 6 points
-		SKILL_WEAPONS = SKILL_TRAINED // 6 points
+		SKILL_GUNS = SKILL_TRAINED // 6 points
 	)
 
 	max_skill = list(
@@ -133,12 +133,12 @@
 		SKILL_EVA = SKILL_MAX,
 		SKILL_MECH = SKILL_MAX,
 		SKILL_PILOT = SKILL_MAX,
-		SKILL_HAULING = SKILL_MAX,
+		SKILL_VIGOR = SKILL_MAX,
 		SKILL_COMPUTER = SKILL_MAX,
 		SKILL_BOTANY = SKILL_MAX,
 		SKILL_COOKING = SKILL_MAX,
 		SKILL_COMBAT = SKILL_MAX,
-		SKILL_WEAPONS = SKILL_MAX,
+		SKILL_GUNS = SKILL_MAX,
 		SKILL_FORENSICS = SKILL_MAX,
 		SKILL_CONSTRUCTION = SKILL_MAX,
 		SKILL_ELECTRICAL = SKILL_EXPERIENCED,
@@ -155,7 +155,7 @@
 var/global/const/access_voxship = "ACCESS_VOXSHIP"
 /datum/access/vox
 	id = access_voxship
-	desc = "Vox Ship"
+	desc = "Xenos Ship"
 	region = ACCESS_REGION_NONE
 
 /obj/item/card/id/voxship
@@ -171,7 +171,7 @@ var/global/const/access_voxship = "ACCESS_VOXSHIP"
 
 /singleton/hierarchy/outfit/job/voxship/crew
 	id_types = list(/obj/item/card/id/voxship)
-	name = ("Vox - Job - Shoal Scavenger")
+	name = ("Xenos - Job - Shoal Scavenger")
 	uniform = /obj/item/clothing/under/vox/vox_robes
 	r_pocket = /obj/item/device/radio
 	shoes = /obj/item/clothing/shoes/magboots/vox

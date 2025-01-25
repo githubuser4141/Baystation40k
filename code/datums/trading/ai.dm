@@ -7,9 +7,9 @@ They sell generic supplies and ask for generic supplies.
 */
 
 /datum/trader/trading_beacon
-	name = "AI"
+	name = "Machine Spirit"
 	origin = "Trading Beacon"
-	name_language = LANGUAGE_EAL
+	name_language = LANGUAGE_MECHANICUS
 	trade_flags = TRADER_MONEY|TRADER_GOODS
 	speech = list(TRADER_HAIL_GENERIC    = "Greetings, I am MERCHANT, Artifical Intelligence onboard ORIGIN, tasked with trading goods in return for CURRENCY and supplies.",
 				TRADER_HAIL_DENY         = "We are sorry, your connection has been blacklisted. Have a nice day.",
@@ -36,14 +36,14 @@ They sell generic supplies and ask for generic supplies.
 								/obj/item/modular_computer/pda                     = TRADER_BLACKLIST_SUB,
 								/obj/item/device/uplink                  = TRADER_BLACKLIST)
 	possible_trading_items = list(/obj/item/storage/bag                       = TRADER_SUBTYPES_ONLY,
-								/obj/item/storage/bag/cash/infinite           = TRADER_BLACKLIST,
+								/obj/item/storage/bag/cash/massivebundle           = TRADER_BLACKLIST,
 								/obj/item/storage/backpack                    = TRADER_ALL,
 								/obj/item/storage/backpack/cultpack           = TRADER_BLACKLIST,
 								/obj/item/storage/backpack/holding            = TRADER_BLACKLIST,
 								/obj/item/storage/backpack/satchel/grey/withwallet = TRADER_BLACKLIST,
-								/obj/item/storage/backpack/satchel/syndie_kit = TRADER_BLACKLIST_ALL,
+								/obj/item/storage/backpack/satchel/contraband = TRADER_BLACKLIST_ALL,
 								/obj/item/storage/backpack/chameleon          = TRADER_BLACKLIST,
-								/obj/item/storage/backpack/ert                = TRADER_BLACKLIST_ALL,
+								/obj/item/storage/backpack/tau                = TRADER_BLACKLIST_ALL,
 								/obj/item/storage/backpack/dufflebag/syndie   = TRADER_BLACKLIST_SUB,
 								/obj/item/storage/belt/champion               = TRADER_THIS_TYPE,
 								/obj/item/storage/briefcase                   = TRADER_THIS_TYPE,

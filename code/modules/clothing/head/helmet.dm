@@ -6,24 +6,17 @@
 		slot_l_hand_str = "helmet",
 		slot_r_hand_str = "helmet",
 		)
-	valid_accessory_slots = list(
-		ACCESSORY_SLOT_HELMET_COVER,
-		ACCESSORY_SLOT_HELMET_DECOR,
-		ACCESSORY_SLOT_HELMET_VISOR
-	)
-	restricted_accessory_slots = list(
-		ACCESSORY_SLOT_HELMET_COVER,
-		ACCESSORY_SLOT_HELMET_DECOR,
-		ACCESSORY_SLOT_HELMET_VISOR
-	)
+	valid_accessory_slots = null
+	restricted_accessory_slots = null
 	item_flags = ITEM_FLAG_THICKMATERIAL
-	body_parts_covered = HEAD
+	body_parts_covered = HEAD|FACE|EYES
+	min_pressure_protection = 0
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_SMALL,
-		bomb = ARMOR_BOMB_PADDED
+		bomb = ARMOR_BOMB_THIRTY
 		)
 	flags_inv = HIDEEARS|BLOCKHEADHAIR
 	cold_protection = HEAD
@@ -59,12 +52,12 @@
 
 
 /obj/item/clothing/head/helmet/nt
-	name = "corporate security helmet"
+	name = "corporate militarum helmet"
 	desc = "A helmet with 'CORPORATE SECURITY' printed on the back in red lettering."
 	icon_state = "helmet_nt"
 
 /obj/item/clothing/head/helmet/pcrc
-	name = "\improper PCRC helmet"
+	name = "\improper imperial helmet"
 	desc = "A helmet with 'PRIVATE SECURITY' printed on the back in cyan lettering."
 	icon_state = "helmet_pcrc"
 
@@ -76,11 +69,11 @@
 	desc = "A tan helmet made from advanced ceramic. Comfortable and robust."
 	icon_state = "helmet_tac"
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR,
-		bullet = ARMOR_BALLISTIC_RIFLE,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED
+		bomb = ARMOR_BOMB_THIRTY
 		)
 	siemens_coefficient = 0.6
 
@@ -89,11 +82,11 @@
 	desc = "A heavily reinforced helmet painted with red markings. Feels like it could take a lot of punishment."
 	icon_state = "helmet_merc"
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_RIFLE,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED
+		bomb = ARMOR_BOMB_THIRTY
 		)
 	siemens_coefficient = 0.5
 
@@ -104,8 +97,8 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_HELMET_VISOR)
 	body_parts_covered = HEAD|FACE|EYES //face shield
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_MINOR
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_BASIC
 		)
 	siemens_coefficient = 0.7
 	action_button_name = "Toggle Visor"
@@ -126,9 +119,9 @@
 	icon_state = "helmet_reflect"
 	valid_accessory_slots = list(ACCESSORY_SLOT_HELMET_VISOR)
 	armor = list(
-		melee = ARMOR_MELEE_SMALL,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		laser = ARMOR_LASER_RIFLES,
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_BASIC,
+		laser = ARMOR_LASER_CARAPACE,
 		energy = ARMOR_ENERGY_RESISTANT
 		)
 	siemens_coefficient = 0
@@ -139,10 +132,10 @@
 	icon_state = "helmet_bulletproof"
 	valid_accessory_slots = list(ACCESSORY_SLOT_HELMET_VISOR)
 	armor = list(
-		melee = ARMOR_MELEE_MINOR,
-		bullet = ARMOR_BALLISTIC_AP,
-		laser = ARMOR_LASER_SMALL,
-		bomb = ARMOR_BOMB_PADDED
+		melee = ARMOR_MELEE_BASIC,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_PRIMAL,
+		bomb = ARMOR_BOMB_THIRTY
 		)
 	siemens_coefficient = 0.7
 
@@ -151,11 +144,11 @@
 	desc = "They're often used by highly trained Swat Members."
 	icon_state = "helmet_merc"
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED
+		bomb = ARMOR_BOMB_THIRTY
 		)
 	valid_accessory_slots = list(ACCESSORY_SLOT_HELMET_VISOR)
 	cold_protection = HEAD
@@ -168,11 +161,11 @@
 	icon_state = "thunderdome"
 	valid_accessory_slots = null
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED
+		bomb = ARMOR_BOMB_THIRTY
 		)
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROTECTION_TEMPERATURE
@@ -193,11 +186,11 @@
 	icon_state = "v62"
 	valid_accessory_slots = null
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED
+		bomb = ARMOR_BOMB_THIRTY
 		)
 	flags_inv = HIDEEARS|HIDEEYES
 	body_parts_covered = HEAD|EYES|BLOCKHEADHAIR
@@ -209,7 +202,7 @@
 //Commander
 /obj/item/clothing/head/helmet/ert
 	name = "asset protection command helmet"
-	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has blue highlights."
+	desc = "An in-atmosphere helmet worn by many imperial and private asset protection forces. Has blue highlights."
 	icon_state = "erthelmet_cmd"
 	valid_accessory_slots = null
 	item_state_slots = list(
@@ -217,38 +210,38 @@
 		slot_r_hand_str = "syndicate-helm-green",
 		)
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR,
-		bullet = ARMOR_BALLISTIC_RIFLE,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BIO_MINOR
+		bomb = ARMOR_BIO_THIRTY
 		)
 
 //Security
 /obj/item/clothing/head/helmet/ert/security
-	name = "asset protection security helmet"
-	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has red highlights."
+	name = "asset protection militarum helmet"
+	desc = "An in-atmosphere helmet worn by many imperial and private asset protection forces. Has red highlights."
 	icon_state = "erthelmet_sec"
 
 //Engineer
 /obj/item/clothing/head/helmet/ert/engineer
 	name = "asset protection engineering helmet"
-	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has orange highlights."
+	desc = "An in-atmosphere helmet worn by many imperial and private asset protection forces. Has orange highlights."
 	icon_state = "erthelmet_eng"
 
 //Medical
 /obj/item/clothing/head/helmet/ert/medical
 	name = "asset protection medical helmet"
-	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has red and white highlights."
+	desc = "An in-atmosphere helmet worn by many imperial and private asset protection forces. Has red and white highlights."
 	icon_state = "erthelmet_med"
 
 /obj/item/clothing/head/helmet/nt/pilot
 	name = "corporate pilot's helmet"
-	desc = "A corporate pilot's helmet for operating the cockpit in style for a hefty paycheck."
+	desc = "A imperial pilot's helmet for operating the cockpit in style for a hefty paycheck."
 	icon_state = "pilotnt"
 
 /obj/item/clothing/head/helmet/skrell
-	name = "skrellian helmet"
+	name = "Tau helmet"
 	desc = "A helmet built for use by a Skrell. This one appears to be fairly standard and reliable."
 	icon_state = "helmet_skrell"
 	valid_accessory_slots = null
@@ -261,13 +254,13 @@
 	item_state = "pirate"
 	valid_accessory_slots = null
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_PRIMAL,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SMALL,
-		rad = ARMOR_RAD_MINOR
+		rad = ARMOR_RAD_THIRTY
 	)
 	flags_inv = BLOCKHAIR
 	body_parts_covered = 0
@@ -285,15 +278,15 @@
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	max_pressure_protection = VOIDSUIT_MAX_PRESSURE
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_RIFLE,
-		laser = ARMOR_LASER_MAJOR,
-		energy = ARMOR_ENERGY_MINOR,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_TEN,
 		bomb = ARMOR_BOMB_RESISTANT,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SMALL
 		)
-	species_restricted = list(SPECIES_HUMAN)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_TAU)
 
 /obj/item/clothing/head/helmet/nvgmount
 	name = "model helmet"
@@ -302,7 +295,7 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_HELMET_VISOR, ACCESSORY_SLOT_HELMET_DECOR)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_HELMET_VISOR, ACCESSORY_SLOT_HELMET_DECOR)
 	armor = list(
-		melee = ARMOR_MELEE_MINOR,
+		melee = ARMOR_MELEE_BASIC,
 		)
 
 /obj/item/clothing/head/helmet/nvgmount/nvg

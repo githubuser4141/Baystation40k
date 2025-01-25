@@ -1,13 +1,8 @@
 /datum/mil_branch/iccgn
-	name = "Gilgamesh Confederation Navy"
-	name_short = "ICCGN"
+	name = "Tau Empire Navy"
+	name_short = "Tau"
 	email_domain = "navy.gcc"
 	assistant_job = null
-	min_skill = list( // 4 points
-		SKILL_HAULING = SKILL_BASIC, // 1 point
-		SKILL_WEAPONS = SKILL_BASIC, // 2 points
-		SKILL_EVA = SKILL_BASIC // 1 point
-	)
 
 	rank_types = list(
 		/datum/mil_rank/iccgn/or1,
@@ -132,7 +127,7 @@
 
 
 /datum/mil_rank/iccgn/or9_alt
-	name = "Major of the Confederation Navy"
+	name = "Major of the Tau Navy"
 	name_short = "MjN"
 	accessory = list(
 		/obj/item/clothing/accessory/iccgn_rank/or9_alt
@@ -204,7 +199,7 @@
 
 
 /datum/mil_rank/iccgn/of8
-	name = "Vice-Admiral"
+	name = "Vice-Lord Captain"
 	name_short = "VAdm"
 	accessory = list(
 		/obj/item/clothing/accessory/iccgn_rank/of8
@@ -213,7 +208,7 @@
 
 
 /datum/mil_rank/iccgn/of9
-	name = "Admiral"
+	name = "Lord Captain"
 	name_short = "Adm"
 	accessory = list(
 		/obj/item/clothing/accessory/iccgn_rank/of9
@@ -222,7 +217,7 @@
 
 
 /datum/mil_rank/iccgn/of9_alt
-	name = "Marshal of the Confederation Navy"
+	name = "Marshal of the Tau Navy"
 	name_short = "Mshl"
 	accessory = list(
 		/obj/item/clothing/accessory/iccgn_rank/of9_alt

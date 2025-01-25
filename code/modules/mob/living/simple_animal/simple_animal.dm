@@ -2,7 +2,7 @@
 	name = "animal"
 	icon = 'icons/mob/simple_animal/animal.dmi'
 	health = 20
-	maxHealth = 20
+	maxhealth = 20
 	universal_speak = FALSE
 	pronouns = null
 
@@ -23,6 +23,7 @@
 	var/icon_dead = ""
 	var/icon_gib = null	//We only try to show a gibbing animation if this exists.
 	var/icon_rest = null			// The iconstate for resting, optional
+	var/deathsound = null // Sound on death
 
 	var/turns_per_move = 1
 	var/turns_since_move = 0
@@ -170,13 +171,14 @@
 	. = ..()
 
 	if(statpanel("Status") && show_stat_health)
-		stat(null, "Health: [round((health / maxHealth) * 100)]%")
+		stat(null, "Health: [round((health / maxhealth) * 100)]%")
 
-/mob/living/simple_animal/death(gibbed, deathmessage = "dies!", show_dead_message)
+/mob/living/simple_animal/death(gibbed, deathmessage = "collapses!", show_dead_message)
 	icon_state = icon_dead
+	playsound(deathsound, 50, 1)
 	update_icon()
 	density = FALSE
-	adjustBruteLoss(maxHealth) //Make sure dey dead.
+	adjustBruteLoss(maxhealth) //Make sure dey dead.
 	walk_to(src,0)
 	return ..(gibbed,deathmessage,show_dead_message)
 

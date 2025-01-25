@@ -84,13 +84,13 @@
 	icon_state = "rainbowsoft"
 
 /obj/item/clothing/head/soft/sec
-	name = "security cap"
+	name = "militarum cap"
 	desc = "It's a field cap in tasteful red color."
 	icon_state = "secsoft"
 
 /obj/item/clothing/head/soft/sec/corp
-	name = "corporate security cap"
-	desc = "It's field cap in corporate colors."
+	name = "corporate militarum cap"
+	desc = "It's field cap in imperial colors."
 	icon_state = "corpsoft"
 
 /obj/item/clothing/head/soft/mbill
@@ -104,6 +104,6 @@
 	icon_state = "blacksoft"
 
 /obj/item/clothing/head/soft/sec/corp/guard
-	name = "corporate security cap"
-	desc = "It's field cap in corporate colors."
+	name = "corporate militarum cap"
+	desc = "It's field cap in imperial colors."
 	icon_state = "corpsec_soft"

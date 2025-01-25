@@ -13,7 +13,7 @@
 
 /obj/structure/closet/secure_closet/xenoarchaeologist
 	name = "Xenoarchaeologist Locker"
-	req_access = list(access_xenoarch)
+	req_access = list(access_mechanicus_command)
 	closet_appearance = /singleton/closet_appearance/secure_closet/expedition/science
 
 /obj/structure/closet/secure_closet/xenoarchaeologist/New()
@@ -25,7 +25,7 @@
 	if(prob(50))
 		new /obj/item/storage/backpack/dufflebag(src)
 	new /obj/item/clothing/under/rank/scientist(src)
-	new /obj/item/clothing/suit/storage/toggle/labcoat(src)
+	new /obj/item/clothing/suit/armor/grim/toggle/labcoat(src)
 	new /obj/item/clothing/shoes/white(src)
 	new /obj/item/clothing/glasses/science(src)
 	new /obj/item/device/radio/headset/headset_sci(src)
@@ -58,7 +58,5 @@
 	new /obj/item/taperoll/research(src)
 
 /obj/machinery/alarm/isolation
-	req_access = list(list(access_research, access_atmospherics, access_engine_equip))
 
 /obj/machinery/alarm/monitor/isolation
-	req_access = list(list(access_research, access_atmospherics, access_engine_equip))

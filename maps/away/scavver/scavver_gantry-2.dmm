@@ -834,11 +834,6 @@
 /turf/simulated/floor,
 /area/scavver/yachtup)
 "hB" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -28;
-	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
-	},
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled,
@@ -893,7 +888,7 @@
 /obj/floor_decal/corner/lightgrey{
 	dir = 5
 	},
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/random/snack,
 /turf/simulated/floor/tiled,
 /area/scavver/hab)
@@ -1216,12 +1211,6 @@
 /area/scavver/lifepod)
 "kf" = (
 /obj/structure/largecrate/animal/cat/bones,
-/obj/machinery/alarm{
-	dir = 4;
-	locked = 0;
-	pixel_x = -25;
-	req_access = list()
-	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/scavver/hab)
 "ki" = (
@@ -1453,7 +1442,6 @@
 /obj/structure/bed,
 /obj/item/bedsheet/rd,
 /obj/floor_decal/corner/lightgrey/mono,
-/obj/submap_landmark/spawnpoint/scavver_engineer,
 /turf/simulated/floor/tiled/monotile,
 /area/scavver/hab)
 "mq" = (
@@ -1518,7 +1506,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet/clown,
 /obj/floor_decal/corner/lightgrey/mono,
-/obj/submap_landmark/spawnpoint/scavver_doctor,
+/obj/submap_landmark/spawnpoint/scavver_noble,
 /turf/simulated/floor/tiled/monotile,
 /area/scavver/hab)
 "mS" = (
@@ -1811,12 +1799,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/scavver/lifepod)
 "pc" = (
-/obj/machinery/alarm{
-	dir = 4;
-	locked = 0;
-	pixel_x = -25;
-	req_access = list()
-	},
 /obj/floor_decal/corner/lightgrey/mono,
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/monotile,
@@ -2135,7 +2117,7 @@
 /turf/simulated/floor,
 /area/scavver/yachtup)
 "rp" = (
-/obj/structure/closet/emcloset,
+/obj/structure/closet/warhammer/emcloset,
 /obj/item/crowbar,
 /obj/item/crowbar,
 /obj/floor_decal/industrial/outline/blue,
@@ -3349,7 +3331,7 @@
 /obj/decal/cleanable/dirt,
 /obj/item/bedsheet/green,
 /obj/floor_decal/corner/lightgrey/mono,
-/obj/submap_landmark/spawnpoint/scavver_pilot,
+/obj/submap_landmark/spawnpoint/scavver_crew,
 /turf/simulated/floor/tiled/monotile,
 /area/scavver/hab)
 "Bd" = (
@@ -3526,7 +3508,7 @@
 /obj/floor_decal/corner/lightgrey{
 	dir = 5
 	},
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/material/ashtray/plastic,
 /turf/simulated/floor/tiled,
 /area/scavver/hab)
@@ -4050,12 +4032,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/machinery/alarm{
-	dir = 4;
-	locked = 0;
-	pixel_x = -25;
-	req_access = list()
-	},
 /turf/simulated/floor/tiled/dark,
 /area/scavver/lifepod)
 "HW" = (
@@ -4456,6 +4432,7 @@
 	pixel_y = -3
 	},
 /obj/decal/cleanable/dirt,
+/obj/machinery/hologram/holopad/longrange/voxcaster,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/scavver/lifepod)
 "Mg" = (
@@ -4601,6 +4578,7 @@
 	dir = 8
 	},
 /obj/decal/cleanable/vomit,
+/obj/submap_landmark/spawnpoint/scavver_bard,
 /turf/simulated/floor/tiled/freezer,
 /area/scavver/hab)
 "Nw" = (
@@ -5369,7 +5347,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet/yellow,
 /obj/floor_decal/corner/lightgrey/mono,
-/obj/submap_landmark/spawnpoint/scavver_engineer,
+/obj/submap_landmark/spawnpoint/scavver_merc,
 /turf/simulated/floor/tiled/monotile,
 /area/scavver/hab)
 "Wl" = (
@@ -5550,6 +5528,29 @@
 /obj/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/scavver/escapepod)
+"XD" = (
+/obj/item/gun/energy/plasmacutter,
+/obj/structure/closet/wardrobe,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/random/gloves,
+/obj/random/hat,
+/obj/random/hat,
+/obj/random/shoes,
+/obj/random/shoes,
+/obj/item/device/binoculars,
+/obj/floor_decal/corner/lightgrey/mono,
+/obj/item/storage/belt/utility/full,
+/obj/item/storage/backpack/industrial,
+/obj/random/accessory,
+/obj/machinery/light_switch{
+	pixel_x = 21
+	},
+/obj/submap_landmark/spawnpoint/scavver_priest,
+/turf/simulated/floor/tiled/monotile,
+/area/scavver/hab)
 "XF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -20290,7 +20291,7 @@ Nw
 Wf
 Qn
 ml
-Nw
+XD
 VY
 eN
 eN

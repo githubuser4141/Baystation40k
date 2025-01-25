@@ -9,7 +9,7 @@
 
 /datum/exoplanet_theme/ruined_city
 	name = "Ruined City"
-	ruin_tags_whitelist = RUIN_ALIEN|RUIN_NATURAL|RUIN_WRECK
+	ruin_tags_whitelist = RUIN_ALIEN|RUIN_NATURAL|RUIN_WRECK|RUIN_HABITAT
 	sub_themes = list(/datum/exoplanet_theme/robotic_guardians)
 	var/spooky_ambience = list(
 		'sound/ambience/ominous1.ogg',
@@ -18,7 +18,7 @@
 		)
 
 /datum/exoplanet_theme/ruined_city/before_map_generation(obj/overmap/visitable/sector/exoplanet/E)
-	E.ruin_tags_whitelist |= RUIN_ALIEN
+	// E.ruin_tags_whitelist |= RUIN_ALIEN
 	for (var/zlevel in E.map_z)
 		new /datum/random_map/city(null,1,1,zlevel,E.maxx,E.maxy,0,1,1, E.planetary_area)
 
@@ -43,8 +43,8 @@
 	descriptor = "ruined city"
 	initial_wall_cell = 0
 	initial_cell_char = -1
-	var/max_building_size = 11	//Size of buildings in tiles. Must be odd number for building generation to work properly.
-	var/buildings_number = 4	//Buildings per block
+	var/max_building_size = 8	//Size of buildings in tiles. Must be odd number for building generation to work properly.
+	var/buildings_number = 3	//Buildings per block
 	var/list/blocks_x = list(TRANSITIONEDGE + 1)	//coordinates for start of blocs
 	var/list/blocks_y = list(TRANSITIONEDGE + 1)
 	var/list/building_types = list(

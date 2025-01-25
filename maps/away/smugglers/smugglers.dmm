@@ -27,11 +27,11 @@
 /turf/simulated/floor,
 /area/smugglers/base)
 "aj" = (
-/obj/item/ammo_casing/pistol/magnum{
+/obj/item/ammo_casing/magnum{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/ammo_casing/pistol/magnum,
+/obj/item/ammo_casing/magnum,
 /obj/item/shovel{
 	pixel_x = 10;
 	pixel_y = -5
@@ -267,7 +267,7 @@
 "aI" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1439;
-	icon_state = "door_locked";
+	icon_state = "door_closed";
 	id_tag = "asteroid_base_east_inner";
 	locked = 1;
 	name = "Internal Airlock"
@@ -298,7 +298,7 @@
 "aK" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1439;
-	icon_state = "door_locked";
+	icon_state = "door_closed";
 	id_tag = "asteroid_base_east_outer";
 	locked = 1
 	},
@@ -699,7 +699,7 @@
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/loot,
-/obj/random/projectile,
+/obj/random/loot/gunbundle,
 /obj/random/cash,
 /obj/random/cash,
 /obj/random/cash,
@@ -786,17 +786,17 @@
 /turf/simulated/floor/tiled,
 /area/smugglers/office)
 "bR" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/random/tech_supply,
 /turf/simulated/floor,
 /area/smugglers/base)
 "bS" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/random/toolbox,
 /turf/simulated/floor,
 /area/smugglers/base)
 "bT" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/random/firstaid,
 /turf/simulated/floor,
 /area/smugglers/base)
@@ -862,7 +862,7 @@
 	pixel_y = 30
 	},
 /obj/decal/cleanable/dirt,
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/machinery/microwave{
 	pixel_y = 10
 	},
@@ -891,7 +891,7 @@
 /turf/simulated/floor/tiled,
 /area/smugglers/dorms)
 "ci" = (
-/obj/structure/closet/crate/freezer/rations,
+/obj/structure/closet/crate/warhammer/freezer/rations,
 /obj/decal/cleanable/cobweb2,
 /obj/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
@@ -946,7 +946,7 @@
 /turf/simulated/floor/tiled,
 /area/smugglers/dorms)
 "cs" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/decal/cleanable/dirt,
 /obj/item/paper/smug_3,
 /obj/item/flame/lighter,
@@ -954,7 +954,7 @@
 /turf/simulated/floor/tiled,
 /area/smugglers/dorms)
 "ct" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/decal/cleanable/dirt,
 /obj/item/spacecash/bundle/c10,
 /obj/random/smokes,

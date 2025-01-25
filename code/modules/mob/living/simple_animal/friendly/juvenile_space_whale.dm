@@ -7,7 +7,7 @@
 	icon_dead = "dead"
 
 	health = 80
-	maxHealth = 80
+	maxhealth = 80
 	meat_amount = 25
 	skin_amount = 6
 
@@ -28,8 +28,8 @@
 	response_disarm = "bumps"
 	response_harm = "strikes"
 
-	natural_armor = list(melee = ARMOR_MELEE_SMALL,
-						bullet = ARMOR_BALLISTIC_MINOR)
+	natural_armor = list(melee = ARMOR_MELEE_PRIMAL,
+						bullet = ARMOR_BALLISTIC_BASIC)
 
 	var/mob/living/simple_animal/hostile/retaliate/space_whale/parent
 
@@ -54,7 +54,7 @@
 		if(parent.stance == STANCE_IDLE && (pulledby || length(grabbed_by)))
 			var/enemies = pulledby ? list(pulledby) : grabbed_by
 			parent.ai_holder.attackers += enemies
-		if(health < (maxHealth - 5))
+		if(health < (maxhealth - 5))
 			walk_to(src, parent, 1, 1 SECONDS)
 			if(parent.stance == STANCE_IDLE && length(ai_holder.attackers))
 				parent.ai_holder.react_to_attack(pick(ai_holder.attackers))

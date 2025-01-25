@@ -10,7 +10,8 @@
 
 	///This saves our blood splatter overlay, which will be processed not to go over the edges of the sprite
 	var/image/blood_overlay = null
-
+	var/str_requirement = 0
+	var/sales_price = 0
 	var/randpixel = 6
 	var/r_speed = 1.0
 	var/burn_point = null
@@ -25,9 +26,10 @@
 	///Used in use_weapon() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]"
 	var/list/attack_verb = list("attacked")
 	var/lock_picking_level = 0 //used to determine whether something can pick a lock, and how well.
-	var/force = 0
+	var/force = 10
 	var/attack_cooldown = DEFAULT_WEAPON_COOLDOWN
-	var/melee_accuracy_bonus = 0
+	var/melee_accuracy_bonus = 3
+	var/disorientation = 0 // Decreases accuracy for melee attacks.
 	/// Used to determine how fast an item completes a certain action. Lower values are faster.
 	var/toolspeed = 1
 
@@ -88,7 +90,7 @@
 	/* Species-specific sprites, concept stolen from Paradise//vg/.
 	ex:
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/lizard/are/bad'
+		SPECIES_KROOT = 'icons/lizard/are/bad'
 		)
 	If index term exists and icon_override is not set, this sprite sheet will be used.
 	*/

@@ -5,7 +5,7 @@
 	desc = "These stimulators augment the immune system and promote the growth of hunter-killer cells in the presence of a foreign invader, effectively boosting the body's immunity to parasites and disease."
 	action_button_name = "Toggle leukocyte breeder"
 	augment_flags = AUGMENT_BIOLOGICAL | AUGMENT_SCANNABLE
-	origin_tech = list(TECH_DATA = 2, TECH_BIO = 4)
+	origin_tech = list(TECH_DATA = 2, TECH_BIO = 3)
 	var/active = FALSE
 
 	/// How many processing ticks the augment has been enabled for
@@ -39,7 +39,7 @@
 		return
 	if (active && ticks_active >= ticks_to_acclimate)
 		// Give an alert if trying to deactivate while acclimated, so roundstart takers don't accidentally turn it off by learning the buttons
-		if (alert(owner, "Deactivate \the [src]?", name, "Yes", "No") != "Yes" || !can_activate())
+		if (alert(owner, "Deactivate \the [src]?", name, "Compliance", "No") != "Compliance" || !can_activate())
 			return
 	active = !active
 	owner.playsound_local(null, 'sound/effects/fastbeep.ogg', 20, is_global = TRUE)

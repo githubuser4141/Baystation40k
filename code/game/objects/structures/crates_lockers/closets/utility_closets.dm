@@ -14,18 +14,20 @@
 /*
  * Emergency Closet
  */
-/obj/structure/closet/emcloset
+/obj/structure/closet/warhammer/emcloset
 	name = "emergency closet"
 	desc = "It's a storage unit for emergency breathmasks and o2 tanks."
-	closet_appearance = /singleton/closet_appearance/oxygen
+	icon = 'icons/map_project/furniture_and_decor.dmi'
+	icon_state = "temergency"
+	icon_opened = "temergency_open"
+	icon_closed = "temergency"
 
-/obj/structure/closet/emcloset/WillContain()
+/obj/structure/closet/warhammer/emcloset/WillContain()
 	return list(/obj/item/tank/oxygen_emergency = 2,
 				/obj/item/clothing/mask/breath = 2,
 				/obj/item/storage/toolbox/emergency,
-				/obj/item/inflatable/wall = 2,
+				/obj/item/inflatable/wall = 1,
 				/obj/item/device/oxycandle,
-				/obj/item/storage/med_pouch/oxyloss = 2,
 				/obj/item/clothing/suit/space/emergency,
 				/obj/item/clothing/head/helmet/space/emergency
 	)
@@ -41,7 +43,6 @@
 
 /obj/structure/closet/firecloset/WillContain()
 	return list(
-		/obj/item/storage/med_pouch/burn,
 		/obj/item/storage/backpack/dufflebag/firefighter,
 		/obj/item/clothing/mask/gas,
 		/obj/item/device/flashlight
@@ -51,7 +52,6 @@
 
 /obj/structure/closet/firecloset/chief/WillContain()
 	return list(
-		/obj/item/storage/med_pouch/burn,
 		/obj/item/clothing/suit/fire/firefighter,
 		/obj/item/clothing/mask/gas,
 		/obj/item/device/flashlight,
@@ -70,8 +70,6 @@
 
 /obj/structure/closet/toolcloset/New()
 	..()
-	if(prob(40))
-		new /obj/item/clothing/suit/storage/hazardvest(src)
 	if(prob(70))
 		new /obj/item/device/flashlight(src)
 	if(prob(70))
@@ -112,7 +110,6 @@
 
 /obj/structure/closet/radiation/WillContain()
 	return list(
-		/obj/item/storage/med_pouch/radiation = 2,
 		/obj/item/clothing/suit/radiation,
 		/obj/item/clothing/head/radiation,
 		/obj/item/clothing/suit/radiation,
@@ -163,7 +160,6 @@
 /obj/structure/closet/hydrant/WillContain()
 	return list(
 		/obj/item/inflatable/door = 2,
-		/obj/item/storage/med_pouch/burn = 2,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/storage/backpack/dufflebag/firefighter
 		)
@@ -183,8 +179,7 @@
 
 /obj/structure/closet/medical_wall/filled/WillContain()
 	return list(
-		/obj/random/firstaid,
-		/obj/random/medical/lite = 12)
+		/obj/random/medical/lite = 1)
 
 /obj/structure/closet/toolcloset/excavation/awaysite //no teleport beacons
 	name = "excavation equipment closet"

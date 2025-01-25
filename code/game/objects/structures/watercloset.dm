@@ -612,6 +612,18 @@
 
 	return ..()
 
+/obj/structure/hygiene/sink/puddle/well
+	name = "well"
+	desc = "A well that seems to contain fresh water."
+	icon = 'icons/map_project/furniture_and_decor.dmi'
+	icon_state = "well"
+
+/obj/structure/hygiene/sink/puddle/fountain
+	name = "fountain water"
+	icon = 'icons/obj/structures/fountain.dmi'
+	icon_state = "water"
+	desc = "Fresh water streams from the fountain. Fresh is debatable."
+	layer = 4
 
 /obj/item/taperoll/bog
 	name = "toilet paper roll"
@@ -627,13 +639,11 @@
 	switch(slot)
 		if(slot_wear_suit)
 			sprite_sheets = list(
-				SPECIES_VOX = 'icons/mob/species/vox/onmob_suit_vox.dmi',
-				SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi'
+				SPECIES_VOX = 'icons/mob/species/vox/onmob_suit_vox.dmi'
 				)
 		if(slot_head)
 			sprite_sheets = list(
-				SPECIES_VOX = 'icons/mob/species/vox/onmob_head_vox.dmi',
-				SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi'
+				SPECIES_VOX = 'icons/mob/species/vox/onmob_head_vox.dmi'
 				)
 	return ..()
 

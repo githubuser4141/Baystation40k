@@ -19,7 +19,7 @@
 		/obj/item/forensics/sample_kit/powder,
 		/obj/item/gripper/forensics,
 		/obj/item/borg/sight/hud/sec,
-		/obj/item/taperoll/police,
+		/obj/item/taperoll/enforcer,
 		/obj/item/scalpel/laser,
 		/obj/item/autopsy_scanner,
 		/obj/item/device/scanner/reagent,
@@ -30,15 +30,15 @@
 	emag_gear = list(
 		/obj/item/melee/baton/robot/electrified_arm,
 		/obj/item/device/flash,
-		/obj/item/gun/energy/gun,
-		/obj/item/gun/projectile/automatic/sec_smg,
+		/obj/item/gun/energy/lasgun/laspistol/militarum,
+		/obj/item/gun/projectile/automatic/autogun/valhalla,
 		/obj/item/gun/energy/plasmacutter
 	)
 	skills = list(
 		SKILL_BUREAUCRACY         = SKILL_MASTER,
 		SKILL_COMPUTER            = SKILL_EXPERIENCED,
 		SKILL_FORENSICS           = SKILL_MASTER,
-		SKILL_WEAPONS             = SKILL_EXPERIENCED,
+		SKILL_GUNS             = SKILL_EXPERIENCED,
 		SKILL_CONSTRUCTION        = SKILL_TRAINED,
 		SKILL_ANATOMY             = SKILL_TRAINED
 	)

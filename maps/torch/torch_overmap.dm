@@ -1,9 +1,9 @@
 /obj/overmap/visitable/ship/torch
-	name = "SEV Torch"
-	desc = "A frankensteined HNS Mako-class corvette, broadcasting SCGEC codes and the designation \"SEV Torch, HSC-4-13-X\"."
+	name = "Dauntless"
+	desc = "A frankensteined imperial corvette-class explorer vessel, broadcasting Imperial codes and the designation \"Dauntless, HSC-4-13-X\"."
 	fore_dir = WEST
-	vessel_mass = 100000
-	burn_delay = 2 SECONDS
+	vessel_mass = 10000
+	burn_delay = 1 SECONDS
 	sector_flags = OVERMAP_SECTOR_KNOWN|OVERMAP_SECTOR_IN_SPACE|OVERMAP_SECTOR_BASE
 	known_ships = list(
 		/obj/overmap/visitable/ship/landable/exploration_shuttle,
@@ -15,15 +15,15 @@
 		"Charon" = list("nav_hangar_charon"), 	//can't have random shuttles popping inside the ship
 		"Guppy" = list("nav_hangar_guppy"),
 		"Aquila" = list("nav_hangar_aquila"),
-		"Skrellian Scout" = list("nav_skrellscout_dock"), //restricts Skrell Scoutship specific docking waypoint on deck 4 portside
-		"Skrellian Shuttle" = list("nav_skrellscoutsh_altdock"),
+		"Tau Scout" = list("nav_tauscout_dock"), //restricts Skrell Scoutship specific docking waypoint on deck 4 portside
+		"Tau Shuttle" = list("nav_tauscoutsh_altdock"),
 		"Rescue" = list("nav_ert_dock"), //restricts ERT Shuttle specific docking waypoint on deck 4 portside
 		"ITV The Reclaimer" = list("nav_hangar_gantry_torch"), //gantry shuttles
 		"ITV Vulcan" = list("nav_hangar_gantry_torch_two"),
 		"ITV Spiritus" = list("nav_hangar_gantry_torch_three"),
 		"SRV Venerable Catfish" = list("nav_verne_5"), //docking location for verne shuttle
 		"Cyclopes" = list("nav_merc_dock"),
-		"ICGNV Hound" = list("nav_hound_dock"),
+		"Tau Hound" = list("nav_hound_dock"),
 		"SFV Arbiter" = list("nav_sfv_arbiter_dock")
 	)
 
@@ -83,13 +83,13 @@
 
 /obj/overmap/visitable/ship/landable/exploration_shuttle
 	name = "Charon"
-	desc = "An SSE-U11 long range shuttle, broadcasting SCGEC codes and the callsign \"Torch-2 Charon\"."
+	desc = "An SSE-U11 long range shuttle, broadcasting ImperialEC codes and the callsign \"Dauntless-2 Charon\"."
 	shuttle = "Charon"
-	max_speed = 1/(2 SECONDS)
-	burn_delay = 1 SECONDS
-	vessel_mass = 3000
+	max_speed = 1/(1 SECONDS)
+	burn_delay = 0.5 SECONDS
+	vessel_mass = 2000
 	fore_dir = NORTH
-	skill_needed = SKILL_BASIC
+	skill_needed = SKILL_TRAINED
 	vessel_size = SHIP_SIZE_SMALL
 	known_ships = list(
 		/obj/overmap/visitable/ship/torch,
@@ -99,9 +99,9 @@
 
 /obj/overmap/visitable/ship/landable/aquila
 	name = "Aquila"
-	desc = "A PM-24 modular transport, broadcasting SCGEC codes and the callsign \"Torch-1 Aquila\"."
+	desc = "A PM-24 modular transport, broadcasting ImperialEC codes and the callsign \"Dauntless-1 Aquila\"."
 	shuttle = "Aquila"
-	vessel_mass = 10000
+	vessel_mass = 3000
 	max_speed = 1/(1 SECONDS)
 	burn_delay = 0.5 SECONDS //spammable, but expensive
 	fore_dir = NORTH
@@ -114,11 +114,11 @@
 
 /obj/overmap/visitable/ship/landable/guppy
 	name = "Guppy"
-	desc = "An SSE-U3 utility pod, broadcasting SCGEC codes and the callsign \"Torch-3 Guppy\"."
+	desc = "An SSE-U3 utility pod, broadcasting ImperialEC codes and the callsign \"Dauntless-3 Guppy\"."
 	shuttle = "Guppy"
 	max_speed = 1/(3 SECONDS)
-	burn_delay = 2 SECONDS
-	vessel_mass = 1800
+	burn_delay = 0.2 SECONDS
+	vessel_mass = 900
 	fore_dir = SOUTH
 	skill_needed = SKILL_BASIC
 	vessel_size = SHIP_SIZE_TINY
@@ -131,14 +131,14 @@
 /obj/machinery/computer/shuttle_control/explore/aquila
 	name = "aquila control console"
 	shuttle_tag = "Aquila"
-	req_access = list(access_aquila_helm)
+	req_access = list(access_restricted)
 
 /obj/machinery/computer/shuttle_control/explore/exploration_shuttle
 	name = "shuttle control console"
 	shuttle_tag = "Charon"
-	req_access = list(access_expedition_shuttle_helm)
+	req_access = list(access_dauntless)
 
 /obj/machinery/computer/shuttle_control/explore/guppy
 	name = "guppy control console"
 	shuttle_tag = "Guppy"
-	req_access = list(access_guppy_helm)
+	req_access = null

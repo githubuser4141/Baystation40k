@@ -3,7 +3,7 @@
 /turf/simulated/floor,
 /area/map_template/deepmaint)
 "b" = (
-/obj/structure/bed/chair/padded/brown{
+/obj/structure/bed/chair/warhammer/padded/brown{
 	dir = 4
 	},
 /obj/floor_decal/corner/lightgrey/mono,
@@ -60,7 +60,7 @@
 /turf/simulated/floor/plating,
 /area/map_template/deepmaint)
 "k" = (
-/obj/structure/bed/chair/padded/brown{
+/obj/structure/bed/chair/warhammer/padded/brown{
 	dir = 4
 	},
 /obj/floor_decal/corner/lightgrey/mono,
@@ -73,7 +73,7 @@
 	},
 /area/map_template/deepmaint)
 "m" = (
-/obj/structure/bed/chair/padded/brown{
+/obj/structure/bed/chair/warhammer/padded/brown{
 	dir = 1
 	},
 /obj/floor_decal/corner/lightgrey/mono,
@@ -89,7 +89,7 @@
 	},
 /area/map_template/deepmaint)
 "p" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/floor_decal/corner/lightgrey/mono,
 /obj/item/reagent_containers/food/drinks/cans/dr_gibb,
 /turf/simulated/floor/tiled/monotile,
@@ -123,7 +123,7 @@
 	},
 /area/map_template/deepmaint)
 "v" = (
-/obj/structure/bed/chair/padded/brown{
+/obj/structure/bed/chair/warhammer/padded/brown{
 	dir = 8
 	},
 /obj/floor_decal/corner/lightgrey/mono,
@@ -189,7 +189,7 @@
 /turf/simulated/mineral/random,
 /area/map_template/deepmaint)
 "F" = (
-/obj/structure/bed/chair/padded/brown{
+/obj/structure/bed/chair/warhammer/padded/brown{
 	dir = 8
 	},
 /obj/floor_decal/corner/lightgrey/mono,
@@ -239,7 +239,7 @@
 /turf/simulated/floor/tiled,
 /area/map_template/deepmaint)
 "M" = (
-/obj/structure/bed/chair/padded/brown,
+/obj/structure/bed/chair/warhammer/padded/brown,
 /obj/floor_decal/corner/lightgrey/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/map_template/deepmaint)
@@ -257,7 +257,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/map_template/deepmaint)
 "P" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/floor_decal/corner/lightgrey/mono,
 /obj/random/drinkbottle,
 /turf/simulated/floor/tiled/monotile,
@@ -283,7 +283,7 @@
 /turf/simulated/floor/tiled,
 /area/map_template/deepmaint)
 "T" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/floor_decal/corner/lightgrey/mono,
 /obj/machinery/fabricator/micro/bartender,
 /obj/item/stack/material/steel/ten,
@@ -292,7 +292,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/map_template/deepmaint)
 "U" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/floor_decal/corner/lightgrey/mono,
 /obj/item/reagent_containers/food/drinks/coffee,
 /turf/simulated/floor/tiled/monotile,
@@ -330,7 +330,7 @@
 /obj/structure/table/marble,
 /obj/item/paper/exodus_bartender,
 /obj/item/clothing/under/rank/bartender,
-/obj/item/gun/projectile/shotgun/doublebarrel,
+/obj/item/gun/projectile/shotgun/pump/voxlegis/magrave,
 /obj/item/storage/box/ammo/stunshells,
 /obj/item/reagent_containers/spray/pepper,
 /turf/simulated/floor/lino,

@@ -9,7 +9,7 @@
 	var/spawn_positions = 0               // How many players can spawn in as this job. Set to -1 for unlimited.
 	var/current_positions = 0             // How many players have this job
 	var/availablity_chance = 100          // Percentage chance job is available each round
-
+	var/datum/antag_skill_setter/skill_setter = /datum/antag_skill_setter/generic
 	var/supervisors = null                // Supervisors, who this person answers to directly
 	var/selection_color = "#515151"       // Selection screen color
 	var/list/alt_titles                   // List of alternate titles, if any and any potential alt. outfits as assoc values.
@@ -20,24 +20,24 @@
 	var/minimum_character_age			  // List of species = age, if species is not here, it's auto-pass
 	var/ideal_character_age = 30
 	var/create_record = 1                 // Do we announce/make records for people who spawn on this job?
-	var/is_semi_antagonist = FALSE        // Whether or not this job is given semi-antagonist status.
+	var/is_semi_antagonist = TRUE        // Whether or not this job is given semi-antagonist status.
 	var/account_allowed = 1               // Does this job type come with a station account?
 	var/economic_power = 2             // With how much does this job modify the initial account amount?
 
 	var/outfit_type                       // The outfit the employee will be dressed in, if any
 
-	var/loadout_allowed = TRUE            // Whether or not loadout equipment is allowed and to be created when joining.
+	var/loadout_allowed = FALSE            // Whether or not loadout equipment is allowed and to be created when joining.
 	var/list/allowed_branches             // For maps using branches and ranks, also expandable for other purposes
 	var/list/allowed_ranks                // Ditto
 
-	var/announced = TRUE                  //If their arrival is announced on radio
+	var/announced = FALSE                  //If their arrival is announced on radio
 	var/latejoin_at_spawnpoints           //If this job should use roundstart spawnpoints for latejoin (offstation jobs etc)
 
 	var/hud_icon						  //icon used for Sec HUD overlay
 
 	var/min_skill = list()				  //Minimum skills allowed for the job. List should contain skill (as in /singleton/hierarchy/skill path), with values which are numbers.
 	var/max_skill = list()				  //Maximum skills allowed for the job.
-	var/skill_points = 22				  //The number of unassigned skill points the job comes with (on top of the minimum skills).
+	var/skill_points = 28				  //The number of unassigned skill points the job comes with (on top of the minimum skills).
 	var/available_by_default = TRUE
 
 	var/list/possible_goals
@@ -71,14 +71,13 @@
 	return title
 
 /datum/job/proc/equip(mob/living/carbon/human/H, alt_title, datum/mil_branch/branch, datum/mil_rank/grade)
-
 	if (required_language)
 		H.add_language(required_language)
 		H.set_default_language(all_languages[required_language])
 
 	if (!length(H.languages))
-		H.add_language(LANGUAGE_SPACER)
-		H.set_default_language(all_languages[LANGUAGE_SPACER])
+		H.add_language(LANGUAGE_LOW_GOTHIC)
+		H.set_default_language(all_languages[LANGUAGE_LOW_GOTHIC])
 
 	if(psi_latency_chance && prob(psi_latency_chance))
 		H.set_psi_rank(pick(PSI_COERCION, PSI_REDACTION, PSI_ENERGISTICS, PSI_PSYCHOKINESIS), 1, defer_update = TRUE)

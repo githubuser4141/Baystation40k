@@ -3,7 +3,7 @@
 	helmet = /obj/item/clothing/head/helmet/space/fishbowl
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_eva)
+	req_access = list(access_dauntless)
 
 /obj/machinery/suit_storage_unit/atmos
 	name = "atmospherics voidsuit storage unit"
@@ -12,7 +12,7 @@
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_atmospherics)
+	req_access = list(access_dauntless)
 	islocked = 1
 
 /obj/machinery/suit_storage_unit/atmos/alt
@@ -26,7 +26,7 @@
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_construction)
+	req_access = list(access_dauntless)
 	islocked = 1
 
 /obj/machinery/suit_storage_unit/engineering/unishi
@@ -34,9 +34,10 @@
 	islocked = 0
 
 /obj/machinery/suit_storage_unit/engineering/alt
-	suit= /obj/item/clothing/suit/space/void/engineering/alt
-	helmet = /obj/item/clothing/head/helmet/space/void/engineering/alt
-	mask = /obj/item/clothing/mask/breath
+	name = "hazard suit storage"
+	suit = /obj/item/clothing/suit/armor/grim/storage/hooded/mechanicus/bondsman
+	helmet = null
+	mask = /obj/item/clothing/mask/gas/explorer
 
 /obj/machinery/suit_storage_unit/engineering/salvage
 	suit= /obj/item/clothing/suit/space/void/engineering/salvage
@@ -65,7 +66,7 @@
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_mining)
+	req_access = list(access_dauntless)
 	islocked = 1
 
 /obj/machinery/suit_storage_unit/mining/alt
@@ -80,17 +81,17 @@
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_xenoarch)
+	req_access = list(access_mechanicus_command)
 	islocked = 1
 
 /obj/machinery/suit_storage_unit/security
-	name = "security voidsuit storage unit"
+	name = "militarum voidsuit storage unit"
 	suit= /obj/item/clothing/suit/space/void/security
 	helmet = /obj/item/clothing/head/helmet/space/void/security
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_security)
+	req_access = list(access_restricted)
 	islocked = 1
 
 /obj/machinery/suit_storage_unit/security/alt

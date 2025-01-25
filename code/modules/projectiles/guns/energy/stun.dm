@@ -15,7 +15,7 @@
 
 /obj/item/gun/energy/taser/disposable
 	name = "disposable electrolaser"
-	desc = "The NT Mk30 NL is a small, disposable gun used for non-lethal takedowns. This is a cheaper model commonly issued to police forces to supplement their service weapons. It can switch between high and low intensity stun shots."
+	desc = "The NT Mk30 NL is a small, disposable gun used for non-lethal takedowns. This is a cheaper model commonly issued to enforcer forces to supplement their service weapons. It can switch between high and low intensity stun shots."
 	max_shots = 10
 	disposable = TRUE
 
@@ -26,8 +26,8 @@
 	icon_state = "tasercarbine"
 	w_class = ITEM_SIZE_LARGE
 	slot_flags = SLOT_BELT|SLOT_BACK
-	one_hand_penalty = 3
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
+	one_hand_penalty = 2
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 3)
 	force = 8
 	max_shots = 12
 	accuracy = 1
@@ -53,7 +53,7 @@
 
 /obj/item/gun/energy/stunrevolver
 	name = "stun revolver"
-	desc = "An A&M X6 Zeus. Designed by al-Maliki & Mosley, but produced under the wing of the Free Trade Union. Industry spies have been trying to get a hold of the blueprints for half a decade."
+	desc = "An A&M X6 Zeus. Designed by al-Maliki & Mosley, but produced under the wing of the Navigator Houses. Industry spies have been trying to get a hold of the blueprints for half a decade."
 	icon = 'icons/obj/guns/stunrevolver.dmi'
 	icon_state = "stunrevolver"
 	item_state = "stunrevolver"
@@ -70,8 +70,8 @@
 	item_state = "stunrifle"
 	w_class = ITEM_SIZE_HUGE
 	slot_flags = SLOT_BACK
-	one_hand_penalty = 6
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
+	one_hand_penalty = 3
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 3)
 	force = 10
 	max_shots = 10
 	accuracy = 1
@@ -85,7 +85,7 @@
 	icon_state = "crossbow"
 	w_class = ITEM_SIZE_NORMAL
 	item_state = "crossbow"
-	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 2, TECH_ESOTERIC = 5)
+	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 2, TECH_ESOTERIC = 4)
 	matter = list(MATERIAL_STEEL = 2000)
 	slot_flags = SLOT_BELT
 	silenced = TRUE
@@ -116,12 +116,12 @@
 
 /obj/item/gun/energy/plasmastun
 	name = "plasma pulse projector"
-	desc = "The Mars Military Industries MA21 Selkie is a weapon that uses a laser pulse to ionise the local atmosphere, creating a disorienting pulse of plasma and deafening shockwave as the wave expands."
+	desc = "The Sancor Militarum Industries MA21 Selkie is a weapon that uses a laser pulse to ionise the local atmosphere, creating a disorienting pulse of plasma and deafening shockwave as the wave expands."
 	icon = 'icons/obj/guns/plasma_stun.dmi'
 	icon_state = "plasma_stun"
 	item_state = "plasma_stun"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_POWER = 3)
-	fire_delay = 20
+	fire_delay = 12
 	max_shots = 4
 	projectile_type = /obj/item/projectile/energy/plasmastun
 	combustion = 0

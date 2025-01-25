@@ -257,7 +257,7 @@
 /turf/simulated/floor/tiled/white,
 /area/map_template/icarus/sci)
 "fE" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/random/loot,
 /turf/simulated/floor/tiled/dark,
 /area/map_template/icarus/bridge)
@@ -315,7 +315,7 @@
 	dir = 4
 	},
 /obj/decal/cleanable/dirt,
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/machinery/photocopier/faxmachine,
 /turf/simulated/floor/tiled/dark,
 /area/map_template/icarus/bridge)
@@ -459,7 +459,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/map_template/icarus/bridge)
 "lB" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/random/contraband,
 /turf/simulated/floor/carpet/red,
 /area/map_template/icarus/sec)
@@ -483,7 +483,7 @@
 /area/map_template/icarus/bridge)
 "nn" = (
 /obj/floor_decal/industrial/outline/grey,
-/obj/structure/closet/emcloset,
+/obj/structure/closet/warhammer/emcloset,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/icarus/bridge)
 "nO" = (
@@ -558,7 +558,7 @@
 	},
 /obj/structure/table/rack,
 /obj/floor_decal/industrial/outline/grey,
-/obj/random/projectile,
+/obj/random/loot/gunbundle,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/icarus/armory)
 "pL" = (
@@ -764,7 +764,7 @@
 /turf/simulated/floor/plating,
 /area/map_template/icarus/driver/east)
 "vK" = (
-/obj/structure/bed/chair/padded/blue{
+/obj/structure/bed/chair/warhammer/padded/blue{
 	dir = 8
 	},
 /obj/floor_decal/corner/blue{
@@ -837,7 +837,7 @@
 /turf/template_noop,
 /area/template_noop)
 "yi" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/floor_decal/corner/blue{
 	dir = 10
 	},
@@ -926,7 +926,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/map_template/icarus/bridge)
 "AQ" = (
-/obj/structure/table/standard,
+/obj/structure/table/steel,
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/simulated/floor/carpet/red,
@@ -1007,7 +1007,7 @@
 /turf/simulated/floor/plating,
 /area/map_template/icarus/bridge)
 "DV" = (
-/obj/structure/bed/chair/padded/blue{
+/obj/structure/bed/chair/warhammer/padded/blue{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
@@ -1159,7 +1159,7 @@
 /turf/simulated/floor/plating,
 /area/map_template/icarus/eng)
 "JU" = (
-/obj/structure/bed/chair/padded/red{
+/obj/structure/bed/chair/warhammer/padded/red{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -1401,7 +1401,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/map_template/icarus/bridge)
 "UU" = (
-/obj/structure/bed/chair/padded/blue{
+/obj/structure/bed/chair/warhammer/padded/blue{
 	dir = 4
 	},
 /obj/floor_decal/corner/blue/three_quarters,
@@ -1441,7 +1441,7 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/map_template/icarus/driver/east)
 "WJ" = (
-/obj/structure/bed/chair/padded/blue{
+/obj/structure/bed/chair/warhammer/padded/blue{
 	dir = 4
 	},
 /obj/floor_decal/corner/blue{

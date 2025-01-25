@@ -40,7 +40,7 @@ GLOBAL_LIST_INIT(possible_say_verbs, list(
 	var/network = "SS13"
 	var/obj/machinery/camera/current = null
 
-	var/ram = 100	// Used as currency to purchase different abilities
+	var/ram = 200	// Used as currency to purchase different abilities
 	var/list/software = list()
 	var/userDNA		// The DNA string of our assigned user
 	var/obj/item/device/paicard/card	// The card we inhabit
@@ -90,7 +90,7 @@ GLOBAL_LIST_INIT(possible_say_verbs, list(
 /mob/living/silicon/pai/Initialize(mapload, obj/item/device/paicard)
 	. = ..()
 	status_flags |= NO_ANTAG
-	add_language(LANGUAGE_HUMAN_EURO, TRUE)
+	add_language(LANGUAGE_HIGH_GOTHIC, TRUE)
 	verbs -= /mob/living/verb/ghost
 	software = default_pai_software.Copy()
 	card = paicard
@@ -327,7 +327,7 @@ GLOBAL_LIST_INIT(possible_say_verbs, list(
 
 	// Make sure people don't kill themselves accidentally
 	if(alert("WARNING: This will immediately wipe your software and ghost you, removing your character from the round permanently (similar to cryo and robotic storage). Are you entirely sure you want to do this?",
-					"Wipe Software", "No", "No", "Yes") != "Yes")
+					"Wipe Software", "No", "No", "Compliance") != "Compliance")
 		return
 
 	fold()

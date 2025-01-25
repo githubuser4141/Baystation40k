@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/hud
 	name = "\improper HUD"
 	desc = "A heads-up display that provides important info in (almost) real time."
-	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 2)
+	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 	var/list/icon/current = list() //the current hud icons
 	electric = TRUE
 	gender = NEUTER
@@ -68,18 +68,18 @@
 	desc = "A medical HUD integrated with a wide visor. This one has a corrective lense."
 
 /obj/item/clothing/glasses/hud/security
-	name = "security HUD"
-	desc = "A heads-up display that scans the humans in view and provides accurate data about their ID status and security records."
+	name = "militarum HUD"
+	desc = "A heads-up display that scans the humans in view and provides accurate data about their ID status and militarum records."
 	icon_state = "securityhud"
 	off_state = "securityhud_off"
 	hud_type = HUD_SECURITY
 	body_parts_covered = 0
 	var/static/list/jobs[0]
-	req_access = list(access_security)
+	req_access = list(access_restricted)
 
 /obj/item/clothing/glasses/hud/security/prescription
-	name = "prescription security HUD"
-	desc = "A security HUD integrated with a set of prescription glasses."
+	name = "prescription militarum HUD"
+	desc = "A militarum HUD integrated with a set of prescription glasses."
 	prescription = 5
 	icon_state = "sechudpresc"
 	off_state = "sechudpresc_off"

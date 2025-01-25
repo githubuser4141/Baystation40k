@@ -4,7 +4,7 @@
 	icon_state = "dron"
 	icon_dead = "dron_dead"
 	health = 50
-	maxHealth = 50
+	maxhealth = 50
 	natural_weapon = /obj/item/natural_weapon/drone_slicer
 	speak_emote = list("blares","buzzes","beeps")
 	faction = "silicon"
@@ -50,7 +50,7 @@
 
 /mob/living/simple_animal/hostile/rogue_drone/hijacked
 	name = "hijacked drone"
-	desc = "A small, junky-looking robot. It looks angry. The design is similar to those utilised on SCG vessels."
+	desc = "A small, junky-looking robot. It looks angry. The design is similar to those utilised on Imperium vessels."
 	icon_state = "hivedrone"
 	icon_dead = "hivedrone_dead"
 	faction = "hivebot"
@@ -99,7 +99,7 @@ Say List
 	icon_state = "constructiondrone"
 	icon_dead = "dron_dead"
 	health = 80
-	maxHealth = 80
+	maxhealth = 80
 	natural_weapon = /obj/item/natural_weapon/drone_slicer/construction
 	var/image/eye_layer
 

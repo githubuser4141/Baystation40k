@@ -3,7 +3,7 @@
 	expected_type = /atom/movable
 	flags = EXTENSION_FLAG_IMMEDIATE
 
-	/// Whether the computer is turned on
+	/// Whether the cogitator is turned on
 	var/on = FALSE
 	/// A currently active program running on the computer.
 	var/datum/computer_file/program/active_program = null
@@ -14,7 +14,7 @@
 
 	/// dmi where the screen overlays are kept, defaults to holder's icon if unset
 	var/screen_icon_file
-	/// Icon state overlay when the computer is turned on, but no program is loaded that would override the screen.
+	/// Icon state overlay when the cogitator is turned on, but no program is loaded that would override the screen.
 	var/menu_icon = "menu"
 	var/screensaver_icon = "standby"
 
@@ -28,7 +28,7 @@
 	var/last_world_time
 	var/list/last_header_icons
 
-	/// Pain and suffering. Sometimes computers are made to update, and you just have to sit through or risk damage by rebooting it
+	/// Pain and suffering. Sometimes cogitators are made to update, and you just have to sit through or risk damage by rebooting it
 	var/receives_updates = TRUE
 	var/updating = FALSE
 	var/updates = 0
@@ -149,7 +149,7 @@
 		loud && show_error(user, "Hardware Error - Incompatible software")
 		return
 	if (P.requires_ntnet && !get_ntnet_status(P.requires_ntnet_feature))
-		loud && show_error(user, "Unable to establish a working network connection. Please try again later. If problem persists, please contact your system administrator.")
+		loud && show_error(user, "Unable to establish a working network connection. Please try again later. If problem persists, please contact your local mechanicum.")
 		return
 
 	if (P in running_programs)
@@ -203,7 +203,7 @@
 		return 0
 	return 1 + C.processing_power
 
-/// Adds an entry to the NTNet log with this computer's identity, if the computer has a connection. Returns TRUE on success, otherwise FALSE.
+/// Adds an entry to the NTNet log with this computer's identity, if the cogitator has a connection. Returns TRUE on success, otherwise FALSE.
 /datum/extension/interactive/ntos/proc/add_log(text)
 	if(!get_ntnet_status())
 		return FALSE

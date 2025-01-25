@@ -20,7 +20,7 @@
 	w_class = ITEM_SIZE_LARGE
 
 	body_parts_covered = UPPER_TORSO | LOWER_TORSO| ARMS
-	armor = list(laser = ARMOR_LASER_MINOR, energy = ARMOR_ENERGY_MINOR, bomb = ARMOR_BOMB_MINOR)
+	armor = list(laser = ARMOR_LASER_BASIC, energy = ARMOR_ENERGY_TEN, bomb = ARMOR_BOMB_TEN)
 	allowed = list(
 		/obj/item/device/flashlight,
 		/obj/item/tank/oxygen_emergency,
@@ -70,11 +70,11 @@
 	desc = "Use in case of bomb."
 	icon_state = "bombsuit"
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_SHIELDED
+		melee = ARMOR_MELEE_FLAK-1,
+		bullet = ARMOR_BALLISTIC_CARAPACE-2,
+		laser = ARMOR_LASER_PRIMAL-1,
+		energy = ARMOR_ENERGY_RESISTANT-4,
+		bomb = ARMOR_BOMB_SHIELDED-10
 		)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
@@ -90,9 +90,9 @@
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.01
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_MINOR,
-		laser = ARMOR_LASER_SMALL,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_CARAPACE,
+		laser = ARMOR_LASER_PRIMAL,
 		energy = ARMOR_ENERGY_RESISTANT,
 		bomb = ARMOR_BOMB_SHIELDED
 		)
@@ -104,7 +104,7 @@
 
 /obj/item/clothing/suit/bomb_suit/Initialize()
 	. = ..()
-	slowdown_per_slot[slot_wear_suit] = 1.25
+	slowdown_per_slot[slot_wear_suit] = 0.8
 
 /obj/item/clothing/head/bomb_hood/security
 	icon_state = "bombsuitsec"
@@ -126,7 +126,7 @@
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 	armor = list(
-		bio = ARMOR_BIO_RESISTANT,
+		bio = ARMOR_BIO_FIFTY,
 		rad = ARMOR_RAD_SHIELDED
 		)
 
@@ -150,7 +150,7 @@
 		/obj/item/device/geiger
 	)
 	armor = list(
-		bio = ARMOR_BIO_RESISTANT,
+		bio = ARMOR_BIO_FIFTY,
 		rad = ARMOR_RAD_SHIELDED
 		)
 	flags_inv = HIDEJUMPSUIT|HIDETAIL|HIDEGLOVES|HIDESHOES

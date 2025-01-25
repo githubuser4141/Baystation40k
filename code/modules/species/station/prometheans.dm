@@ -35,7 +35,7 @@ var/global/datum/species/shapeshifter/promethean/prometheans
 	min_age =             1
 	max_age =             5
 	brute_mod =           0.5
-	burn_mod =            2
+	burn_mod =            0.8
 	oxy_mod =             0
 	total_health =        240
 	siemens_coefficient = -1
@@ -67,7 +67,7 @@ var/global/datum/species/shapeshifter/promethean/prometheans
 		/mob/living/carbon/human/proc/shapeshifter_select_gender
 		)
 
-	valid_transform_species = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_MONKEY)
+	valid_transform_species = list(SPECIES_HUMAN, SPECIES_KROOT, SPECIES_TAU, SPECIES_DIONA, SPECIES_MONKEY)
 	monochromatic = 1
 
 	var/heal_rate = 5 // Temp. Regen per tick.

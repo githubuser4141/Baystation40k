@@ -5,13 +5,13 @@
 	name = "exosuit armour plating"
 	desc = "A pair of flexible armor plates, used to protect the internals of exosuits and its pilot."
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_HANDGUNS,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SHIELDED,
-		rad = ARMOR_RAD_MINOR
+		rad = ARMOR_RAD_THIRTY
 		)
 	origin_tech = list(TECH_MATERIAL = 1)
 
@@ -21,11 +21,11 @@
 	icon_state = "armor_r"
 	icon_state_broken = "armor_r_broken"
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_HANDGUNS,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SHIELDED
 		)
@@ -37,11 +37,11 @@
 	icon_state = "armor_e"
 	icon_state_broken = "armor_e_broken"
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT ,
-		bullet = ARMOR_BALLISTIC_SMALL,
-		laser = ARMOR_LASER_SMALL,
+		melee = ARMOR_MELEE_PRIMAL ,
+		bullet = ARMOR_BALLISTIC_PRIMAL,
+		laser = ARMOR_LASER_PRIMAL,
 		energy = ARMOR_ENERGY_SHIELDED,
-		bomb = ARMOR_BOMB_MINOR,
+		bomb = ARMOR_BOMB_TEN,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SMALL
 		)
@@ -53,14 +53,14 @@
 	icon_state = "armor_c"
 	icon_state_broken = "armor_c_broken"
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS,
-		energy = ARMOR_ENERGY_MINOR,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_CARAPACE,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_TEN,
 		bomb = ARMOR_BOMB_RESISTANT,
 		bio = ARMOR_BIO_SHIELDED
 		)
-	origin_tech = list(TECH_MATERIAL = 5)
+	origin_tech = list(TECH_MATERIAL = 3)
 
 /obj/item/robot_parts/robot_component/armour/exosuit/Initialize()
 	. = ..()

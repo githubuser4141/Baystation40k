@@ -1,13 +1,13 @@
 /obj/item/rig/merc
-	name = "crimson hardsuit control module"
+	name = "crimson power armour"
 	desc = "A blood-red hardsuit module with heavy armour plates."
 	icon_state = "merc_rig"
 	suit_type = "crimson hardsuit"
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_RIFLE,
-		laser = ARMOR_LASER_MAJOR,
-		energy = ARMOR_ENERGY_MINOR,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_TEN,
 		bomb = ARMOR_BOMB_RESISTANT,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SMALL
@@ -60,25 +60,21 @@
 /obj/item/clothing/gloves/rig/merc
 	item_flags = ITEM_FLAG_THICKMATERIAL | ITEM_FLAG_NOCUFFS | ITEM_FLAG_AIRTIGHT
 	siemens_coefficient = 0
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC, SPECIES_VOX)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT,SPECIES_IPC, SPECIES_VOX)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_hands_unathi.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_hands_vox.dmi'
 		)
 /obj/item/clothing/head/helmet/space/rig/merc
 	light_overlay = "explorer_light"
 	camera = /obj/machinery/camera/network/mercenary
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC, SPECIES_VOX)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT,SPECIES_IPC, SPECIES_VOX)
 	sprite_sheets = list(
-		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_head_vox.dmi'
 		)
 
 /obj/item/clothing/suit/space/rig/merc
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC, SPECIES_VOX)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT,SPECIES_IPC, SPECIES_VOX)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_suit_vox.dmi'
 	)
 	allowed = list(
@@ -88,33 +84,33 @@
 		/obj/item/gun,
 		/obj/item/ammo_magazine,
 		/obj/item/ammo_casing,
-		/obj/item/melee/baton,
+		/obj/item/material/twohanded/ravenor,
+		/obj/item/melee,
 		/obj/item/melee/energy/sword,
 		/obj/item/handcuffs
 	)
 
 /obj/item/clothing/shoes/magboots/rig/merc
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC, SPECIES_VOX)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT,SPECIES_IPC, SPECIES_VOX)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_feet_unathi.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_feet_vox.dmi'
 		)
 
 /obj/item/rig/merc/heavy
-	name = "crimson EOD hardsuit control module"
+	name = "crimson EOD power armour"
 	desc = "A blood-red hardsuit with heavy armoured plates. Judging by the abnormally thick plates, this one is for working with explosives."
 	icon_state = "merc_rig_heavy"
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_AP,
-		laser = ARMOR_LASER_MAJOR,
-		energy = ARMOR_ENERGY_MINOR,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_CARAPACE,
+		laser = ARMOR_LASER_FLAK,
+		energy = ARMOR_ENERGY_TEN,
 		bomb = ARMOR_BOMB_SHIELDED,
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SMALL
 		)
-	online_slowdown = 2
-	offline_slowdown = 4
+	online_slowdown = 1
+	offline_slowdown = 2
 	max_pressure_protection = FIRESUIT_MAX_PRESSURE
 
 	chest_type = /obj/item/clothing/suit/space/rig/merc/heavy
@@ -131,30 +127,25 @@
 /obj/item/clothing/head/helmet/space/rig/merc/heavy
 	light_overlay = "explorer_light"
 	camera = /obj/machinery/camera/network/mercenary
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC, SPECIES_VOX)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT,SPECIES_IPC, SPECIES_VOX)
 	sprite_sheets = list(
-		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_head_vox.dmi'
 		)
 
 /obj/item/clothing/suit/space/rig/merc/heavy
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC, SPECIES_VOX)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT,SPECIES_IPC, SPECIES_VOX)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_suit_vox.dmi'
 		)
 
 /obj/item/clothing/shoes/magboots/rig/merc/heavy
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC, SPECIES_VOX)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT,SPECIES_IPC, SPECIES_VOX)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_feet_unathi.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_feet_vox.dmi'
 		)
 
 /obj/item/clothing/gloves/rig/merc/heavy
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC, SPECIES_VOX)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_TAU,SPECIES_KROOT,SPECIES_IPC, SPECIES_VOX)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_hands_unathi.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_hands_vox.dmi'
 		)

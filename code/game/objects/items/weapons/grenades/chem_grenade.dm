@@ -4,7 +4,7 @@
 	item_state = "grenade"
 	desc = "A hand made chemical grenade."
 	w_class = ITEM_SIZE_SMALL
-	force = 2.0
+	force = 10
 	det_time = null
 	unacidable = TRUE
 	var/stage = 0
@@ -194,7 +194,7 @@
 	desc = "An oversized grenade that affects a larger area."
 	icon_state = "large_grenade"
 	allowed_containers = list(/obj/item/reagent_containers/glass)
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3)
+	origin_tech = list(TECH_COMBAT = 1, TECH_MATERIAL = 1)
 	affected_area = 4
 
 

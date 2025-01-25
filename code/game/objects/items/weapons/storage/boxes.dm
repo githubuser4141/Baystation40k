@@ -16,7 +16,7 @@
  *		Snap-pops and matchboxes,
  *		Replacement light boxes.
  *
- *		For syndicate call-ins see uplink_kits.dm
+ *		For heretic call-ins see uplink_kits.dm
  */
 
 
@@ -91,10 +91,11 @@
 	icon_state = "survival"
 	startswith = list(/obj/item/clothing/mask/breath/scba = 1,
 					/obj/item/tank/oxygen_emergency = 1,
+					/obj/item/crowbar/prybar = 1,
 					/obj/item/reagent_containers/hypospray/autoinjector/pouch_auto/inaprovaline = 1,
 					/obj/item/stack/medical/bruise_pack = 1,
 					/obj/item/device/flashlight/flare/glowstick = 1,
-					/obj/item/reagent_containers/food/snacks/proteinbar = 1,
+					/obj/item/reagent_containers/hypospray/autoinjector/pain = 1,
 					/obj/item/device/oxycandle = 1)
 
 
@@ -107,7 +108,7 @@
 					/obj/item/reagent_containers/hypospray/autoinjector/pouch_auto/inaprovaline = 1,
 					/obj/item/stack/medical/bruise_pack = 1,
 					/obj/item/device/flashlight/flare/glowstick = 1,
-					/obj/item/reagent_containers/food/snacks/proteinbar = 1)
+					/obj/item/reagent_containers/hypospray/autoinjector/combatpain = 1)
 
 
 /obj/item/storage/box/engineer
@@ -119,8 +120,9 @@
 					/obj/item/reagent_containers/hypospray/autoinjector/pouch_auto/inaprovaline = 1,
 					/obj/item/reagent_containers/hypospray/autoinjector/antirad = 1,
 					/obj/item/stack/medical/bruise_pack = 1,
+					/obj/item/crowbar/prybar = 1,
 					/obj/item/device/flashlight/flare/glowstick = 1,
-					/obj/item/reagent_containers/food/snacks/proteinbar = 1,
+					/obj/item/reagent_containers/hypospray/autoinjector/combatpain = 1,
 					/obj/item/device/oxycandle = 1)
 
 
@@ -317,8 +319,8 @@
 
 
 /obj/item/storage/box/supermatters
-	name = "box of supermatter grenades"
-	desc = "A box containing 5 highly experimental supermatter grenades."
+	name = "box of volkite grenades"
+	desc = "A box containing 5 highly experimental volkite grenades."
 	icon_state = "radbox"
 	startswith = list(/obj/item/grenade/supermatter = 5)
 
@@ -457,7 +459,7 @@
 	desc = "Contains autoinjectors."
 	icon_state = "syringe"
 
-	startswith = list(/obj/item/reagent_containers/hypospray/autoinjector = 7)
+	startswith = list(/obj/item/reagent_containers/hypospray/autoinjector = 4)
 
 /obj/item/storage/box/lights
 	name = "box of replacement bulbs"
@@ -614,7 +616,7 @@
 /obj/item/storage/box/taperolls
 	name = "box of spare taperolls"
 	desc = "A box full of mixed barricade tapes."
-	startswith = list(/obj/item/taperoll/police,
+	startswith = list(/obj/item/taperoll/enforcer,
 						/obj/item/taperoll/engineering,
 						/obj/item/taperoll/atmos,
 						/obj/item/taperoll/research,
@@ -669,7 +671,7 @@
 /obj/item/storage/box/snack
 	name = "box of snack food"
 	desc = "A box full of snack foods."
-	startswith = list(/obj/item/reagent_containers/food/snacks/skrellsnacks = 7)
+	startswith = list(/obj/item/reagent_containers/food/snacks/tau = 7)
 
 /obj/item/storage/box/snack/jerky
 	startswith = list(/obj/item/reagent_containers/food/snacks/sosjerky = 7)

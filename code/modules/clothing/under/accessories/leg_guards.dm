@@ -1,98 +1,103 @@
 /obj/item/clothing/accessory/leg_guards
-	name = "leg guards"
-	desc = "A pair of armored leg pads in black. Attaches to a plate carrier."
-	icon_override = 'icons/mob/onmob/onmob_modular_armor.dmi'
-	icon = 'icons/obj/clothing/obj_suit_modular_armor.dmi'
-	accessory_icons = list(slot_tie_str = 'icons/mob/onmob/onmob_modular_armor.dmi', slot_wear_suit_str = 'icons/mob/onmob/onmob_modular_armor.dmi')
+	name = "crude legplates"
+	desc = "Heavy armor reinforcement, similar in design to a bodyglove but worn on the outside for maximum protection covering the legs."
+	icon_override = 'icons/mob/onmob/onmob_suit.dmi'
+	icon = 'icons/obj/clothing/obj_suit.dmi'
+	accessory_icons = list(
+		slot_tie_str = 'icons/mob/onmob/onmob_suit.dmi',
+		slot_wear_suit_str = 'icons/mob/onmob/onmob_suit.dmi'
+	)
 	icon_state = "legguards"
 	gender = PLURAL
-	body_parts_covered = LEGS
+	body_parts_covered = LEGS // Don't assign melee defense to leg_guards unless absolutely necessary. Can break the meta.
+	slowdown = 0.02
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_SMALL,
-		bomb = ARMOR_BOMB_PADDED
+		melee = 0,
+		bullet = 1,
+		laser = 1,
+		energy = 1,
+		rad = 5,
+		bomb = 5
 	)
 	slot = ACCESSORY_SLOT_ARMOR_LEGS
 	body_location = LEGS
 	flags_inv = CLOTHING_BULKY
 
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_modular_armor_unathi.dmi'
-		)
-
 
 /obj/item/clothing/accessory/leg_guards/blue
-	desc = "A pair of armored leg pads in blue. Attaches to a plate carrier."
 	icon_state = "legguards_blue"
 
 
 /obj/item/clothing/accessory/leg_guards/navy
-	desc = "A pair of armored leg pads in navy blue. Attaches to a plate carrier."
 	icon_state = "legguards_navy"
 
 
 /obj/item/clothing/accessory/leg_guards/green
-	desc = "A pair of armored leg pads in green. Attaches to a plate carrier."
 	icon_state = "legguards_green"
 
 
 /obj/item/clothing/accessory/leg_guards/tan
-	desc = "A pair of armored leg pads in tan. Attaches to a plate carrier."
 	icon_state = "legguards_tan"
 
 
 /obj/item/clothing/accessory/leg_guards/merc
-	name = "heavy leg guards"
-	desc = "A pair of heavily armored leg pads in red-trimmed black. Attaches to a plate carrier."
+	name = "carapace legplates"
+	desc = "A pair of extra light red-trimmed black carapace legplates."
 	icon_state = "legguards_merc"
+	slowdown = 0.015
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_HANDGUNS,
-		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED
+		melee = 1,
+		bullet = 1,
+		laser = 1,
+		energy = 1,
+		rad = 7,
+		bomb = 7
 	)
 
 
-/obj/item/clothing/accessory/leg_guards/riot
-	name = "riot leg guards"
-	desc = "A pair of armored leg pads with heavy padding to protect against melee attacks. Looks like they might impair movement."
+/obj/item/clothing/accessory/leg_guards/flak
+	name = "flak legplates"
+	desc = "A pair of heavy armored flak legplates."
 	icon_state = "legguards_riot"
+	slowdown = 0.02
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_SMALL,
-		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED
+		melee = 1,
+		bullet = 1,
+		laser = 1,
+		energy = 1,
+		rad = 5,
+		bomb = 5
 	)
 	siemens_coefficient = 0.5
 
 
-/obj/item/clothing/accessory/leg_guards/ballistic
-	name = "ballistic leg guards"
-	desc = "A pair of armored leg pads with heavy plates to protect against ballistic projectiles. Looks like they might impair movement."
+/obj/item/clothing/accessory/leg_guards/reactiveslug
+	name = "heavy legplates"
+	desc = "A pair of reactive armor tech legplates. Designed to stop slug rounds."
 	icon_state = "legguards_ballistic"
+	slowdown = 0.025
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_RIFLE,
-		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED
+		melee = 1,
+		bullet = 2,
+		laser = 1,
+		rad = 6,
+		energy = 3,
+		bomb = 10
 	)
 	siemens_coefficient = 0.7
 
 
-/obj/item/clothing/accessory/leg_guards/ablative
-	name = "ablative leg guards"
-	desc = "A pair of armored leg pads with advanced shielding to protect against energy weapons. Looks like they might impair movement."
+/obj/item/clothing/accessory/leg_guards/reactivelas
+	name = "heavy legplates"
+	desc = "A pair of reactive armor tech legplates. Designed to stop energy weapons."
 	icon_state = "legguards_ablative"
+	slowdown = 0.025
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_SMALL,
-		laser = ARMOR_LASER_RIFLES,
-		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED
+		melee = 1,
+		bullet = 1,
+		laser = 2,
+		rad = 10,
+		energy = 10,
+		bomb = 15
 	)
 	siemens_coefficient = 0

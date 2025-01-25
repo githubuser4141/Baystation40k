@@ -8,8 +8,8 @@
 	body_parts_covered = FULL_TORSO | ARMS | FULL_LEGS
 	siemens_coefficient = 0.9
 	armor = list(
-		melee = ARMOR_MELEE_MINOR,
-		energy = ARMOR_ENERGY_MINOR
+		melee = ARMOR_MELEE_BASIC,
+		energy = ARMOR_ENERGY_TEN
 	)
 
 
@@ -25,7 +25,7 @@
 		slot_w_uniform_str = "vacsuit"
 	)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'packs/factions/fa/clothing_unathi.dmi'
+		SPECIES_KROOT = 'packs/factions/fa/clothing_unathi.dmi'
 	)
 	rolled_down = FALSE
 	rolled_sleeves = FALSE

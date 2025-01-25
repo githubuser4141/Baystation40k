@@ -6,7 +6,7 @@
 	icon_living = "basic"
 	icon_dead = "basic"
 	health = 65
-	maxHealth = 65
+	maxhealth = 65
 	natural_weapon = /obj/item/natural_weapon/hivebot
 	faction = "hivebot"
 	min_gas = null
@@ -14,7 +14,7 @@
 	minbodytemp = 0
 	speed = 4
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES
+		melee = ARMOR_MELEE_FLAK
 		)
 	bleed_colour = SYNTH_BLOOD_COLOUR
 
@@ -44,12 +44,12 @@
 /mob/living/simple_animal/hostile/hivebot/strong
 	desc = "A junky looking robot with four spiky legs - this one has thick armour plating."
 	health = 160
-	maxHealth = 160
+	maxhealth = 160
 	melee_attack_delay = 6
 	ranged = 1
 	can_escape = 1
 	natural_armor = list(
-		melee = ARMOR_MELEE_RESISTANT
+		melee = ARMOR_MELEE_PRIMAL
 		)
 
 	natural_weapon = /obj/item/natural_weapon/hivebot/strong
@@ -72,7 +72,7 @@ Teleporter beacon, and its subtypes
 	icon_state = "def_radar-off"
 	icon_living = "def_radar-off"
 	health = 200
-	maxHealth = 200
+	maxhealth = 200
 	status_flags = 0
 	anchored = TRUE
 
@@ -146,13 +146,13 @@ The megabot
 	icon_living = "megabot"
 	icon_dead = "megabot_dead"
 	health = 440
-	maxHealth = 440
+	maxhealth = 440
 	natural_weapon = /obj/item/natural_weapon/circular_saw
 	speed = 0
 	special_attack_cooldown = 3 MINUTES
 	natural_armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_PISTOL
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_FLAK
 		)
 	can_escape = TRUE
 	armor_type = /datum/extension/armor/toggle

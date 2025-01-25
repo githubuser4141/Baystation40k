@@ -58,13 +58,13 @@
 	gas_transfer_coefficient = 0.01 // IT'S MAGICAL OKAY JEEZ +1 TO NOT DIE
 	permeability_coefficient = 0.01
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_SMALL,
-		laser = ARMOR_LASER_SMALL,
+		melee = ARMOR_MELEE_PRIMAL,
+		bullet = ARMOR_BALLISTIC_PRIMAL,
+		laser = ARMOR_LASER_PRIMAL,
 		energy = ARMOR_ENERGY_SMALL,
-		bomb = ARMOR_BOMB_PADDED,
-		bio = ARMOR_BIO_MINOR,
-		rad = ARMOR_RAD_MINOR
+		bomb = ARMOR_BOMB_THIRTY,
+		bio = ARMOR_BIO_THIRTY,
+		rad = ARMOR_RAD_THIRTY
 		)
 	allowed = list(/obj/item/teleportation_scroll)
 	siemens_coefficient = 0.8

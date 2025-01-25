@@ -2,7 +2,7 @@
 
 /obj/random/memo_scgr
 	name = "random scgr memo"
-	desc = "This may spawn one of the SCGR Memos."
+	desc = "This may spawn one of the ImperiumR Memos."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "docs_generic"
 	spawn_nothing_percentage = 15
@@ -71,7 +71,7 @@
 	return subtypesof(/obj/item/paper/memo/research) + subtypesof(/obj/item/paper/memo/generic)
 
 /obj/random/memo_corporate
-	name = "random corporate memo"
+	name = "random imperial memo"
 	desc = "This may spawn one of the Corporate Memos."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "docs_generic"
@@ -93,8 +93,8 @@
 
 
 /obj/random_multi/single_item/memo_scgr
-	name = "Multi Point - SCGR Memos"
-	id = "SCGR Memos"
+	name = "Multi Point - ImperiumR Memos"
+	id = "ImperiumR Memos"
 	item_path = /obj/random/memo_scgr
 
 /obj/random_multi/single_item/memo_command
@@ -175,54 +175,54 @@
 
 /obj/item/paper/memo/generic/sublt
 	name = "fleet rank abbreviations"
-	info = {"Some "internal use only" reports on proper and improper ways of abbreviating fleet ranks and roles, including emphasis that "sub" is NOT an authorized way, shorthand or otherwise, to refer to sub lieutenant."}
+	info = {"Some "internal use only" reports on proper and improper ways of abbreviating militarum ranks and roles, including emphasis that "sub" is NOT an authorized way, shorthand or otherwise, to refer to sub lieutenant."}
 
 
 // scgr memos
 
 /obj/item/paper/memo/scgr/skrelljokes
 	name = "internal conversation record"
-	info = {"A "confidential" discussion between several Sol Government Representatives, including some crass jokes on if Skrell being squished would burst like a water balloon or squish like a jam sandwich."}
+	info = {"A "confidential" discussion between several Imperium Representatives, including some crass jokes on if Skrell being squished would burst like a water balloon or squish like a jam sandwich."}
 
 /obj/item/paper/memo/scgr/spicypolitics
 	name = "internal conversation record"
-	info = {"A "confidential" discussion between several Sol Government Representatives, including some interesting political tidbits. Seems like most of them are going to be supporting more conservative, Sol-centric parties next election, voicing annoyance at having to deal with hissing lizards and warbling frogs."}
+	info = {"A "confidential" discussion between several Imperium Representatives, including some interesting political tidbits. Seems like most of them are going to be supporting more conservative, Sol-centric parties next election, voicing annoyance at having to deal with hissing lizards and warbling frogs."}
 
 /obj/item/paper/memo/scgr/deskfires
 	name = "important notice"
-	info = {"A "confidential" notice issued to Sol Government Representatives, informing them of an office fire caused by improper cigarette ash management."}
+	info = {"A "confidential" notice issued to Imperium Representatives, informing them of an office fire caused by improper cigarette ash management."}
 
 /obj/item/paper/memo/scgr/boringreports
-	name = "\improper Torch project status update #132"
+	name = "\improper Dauntless project status update #132"
 	info = {"A "confidential" report containing nothing you'd like to read, featuring updates that you knew about three weeks ago."}
 
 /obj/item/paper/memo/scgr/documentdamage
 	name = "important notice"
-	info = {"A "confidential" notice issued to Sol Government Representatives, informing them that many documents were damaged last week due to "inappropriate sleep management". It urges all diplomatic staff to self-monitor their sleeping schedule and to regulate their caffeine intake."}
+	info = {"A "confidential" notice issued to Imperium Representatives, informing them that many documents were damaged last week due to "inappropriate sleep management". It urges all diplomatic staff to self-monitor their sleeping schedule and to regulate their caffeine intake."}
 
 /obj/item/paper/memo/scgr/documentdisposal
 	name = "proper document disposal"
 	info = {"Some "internal use only" documents, showing several pictures of reconstructed shredded documents. It highlights that shredding is not acceptable for any documents that are above Confidental, going on to recommend incineration as a primary method."}
 
 /obj/item/paper/memo/scgr/yourjob
-	name = "\improper SCG and you"
-	info = {"Some "confidential" briefing documents, detailing the job of the SCGR in brief. It highlights they are a civilian, first and foremost, who functions as a general-purpose civil servant aboard the SEV Torch. They also should advise the Commanding Officer, assisting with bureaucratic affairs where required, and spearheading diplomatic negotations."}
+	name = "\improper Imperium and you"
+	info = {"Some "confidential" briefing documents, detailing the job of the ImperiumR in brief. It highlights they are a civilian, first and foremost, who functions as a general-purpose civil servant aboard the Dauntless. They also should advise the Commanding Officer, assisting with bureaucratic affairs where required, and spearheading diplomatic negotations."}
 
 /obj/item/paper/memo/scgr/perdiemdeny
 	name = "per diem denials"
-	info = {"An "internal use only" document, explaining what not to file per diem reimbursement requests on. It lists examples of many per diem requests SCG representatives have filed in the past that have been denied. Some of the more interesting ones include casino debts, a request for per diem to cover the increased tax on alcohol on a station, and one odd case involving a possum, engineering PPE, and two injuries."}
+	info = {"An "internal use only" document, explaining what not to file per diem reimbursement requests on. It lists examples of many per diem requests Imperium representatives have filed in the past that have been denied. Some of the more interesting ones include casino debts, a request for per diem to cover the increased tax on alcohol on a station, and one odd case involving a possum, engineering PPE, and two injuries."}
 
 /obj/item/paper/memo/scgr/execution
 	name = "formal complaint"
-	info = {"A confidential memo from Rear Admiral Lambert of the SFV Bismarck issuing a formal complaint on behalf of Fleet regarding the execution of SLT Kristen Rohtin aboard a Corps vessel. The tone is furious and suggests significant consequences for the Expeditionary Corps."}
+	info = {"A confidential memo from Rear Lord Captain Lambert of the SFV Bismarck issuing a formal complaint on behalf of Imperial Navy regarding the execution of SLT Kristen Rohtin aboard a Corps vessel. The tone is furious and suggests significant consequences for the Dauntless."}
 
 /obj/item/paper/memo/scgr/floritstatement
 	name = "undersecretary statement"
-	info = {"A press release issued by the newly-appointed Undersecretary of Diplomatic Affairs, Isabel Florit. The statement assures the public that there will be "no repeats" of the mistakes carried out in recent months aboard the SEV Torch. It goes on to advocate the role of the Defense Forces in public affairs, and suggests that the Diplomatic Affairs office will be working closely with the SCG Fleet under Florit's leadership in the interest of preventing any further incidents."}
+	info = {"A press release issued by the newly-appointed Undersecretary of Diplomatic Affairs, Isabel Florit. The statement assures the public that there will be "no repeats" of the mistakes carried out in recent months aboard the Dauntless. It goes on to advocate the role of the Defense Forces in public affairs, and suggests that the Diplomatic Affairs office will be working closely with the Imperium Imperial Navy under Florit's leadership in the interest of preventing any further incidents."}
 
 /obj/item/paper/memo/scgr/senateminutes
 	name = "assembly floor proceedings"
-	info = {"A copy of the minutes from the Sol Assembly hearing over an emergency bill giving the SCG Defense Forces jurisdiction over the Expeditionary Corps (and by extension, the SEV Torch). The debate is vicious and devolves into angry bickering at points. The bill appears to have gotten uncomfortably close to being passed."}
+	info = {"A copy of the minutes from the Sol Assembly hearing over an emergency bill giving the Imperium Defense Forces jurisdiction over the Dauntless (and by extension, the Dauntless). The debate is vicious and devolves into angry bickering at points. The bill appears to have gotten uncomfortably close to being passed."}
 
 
 // command memos
@@ -232,8 +232,8 @@
 	info = {"Some "internal use only" reports on the saluting habits of junior officers, specifically regarding the amount of cases where junior officers cause damage to objects and floor tiles by dropping items to salute their superiors."}
 
 /obj/item/paper/memo/command/unathiwork
-	name = "Sinta'unathi behavioral guide"
-	info = {"An "internal use only" memo from a mid-level officer at Expeditionary Command containing common sinta'unathi behaviors that help explain some of their quirky behaviors. A bullet list contains various hints such as "thumping the tail is a sign of itchiness", "unathi hiss when they are angry", and "letting you touch their tail is a sign of great trust". The document seems very hastily-made and you're not sure you trust it fully."}
+	name = "Saurian behavioral guide"
+	info = {"An "internal use only" memo from a mid-level officer at Expeditionary Command containing common Saurian behaviors that help explain some of their quirky behaviors. A bullet list contains various hints such as "thumping the tail is a sign of itchiness", "unathi hiss when they are angry", and "letting you touch their tail is a sign of great trust". The document seems very hastily-made and you're not sure you trust it fully."}
 
 /obj/item/paper/memo/command/blastpain
 	name = "incident report"
@@ -272,7 +272,7 @@
 	info = {"A "for official use only" memorandum detailing an officer's options with regards to punishing uniformed servicemembers. In ascending order of severity, the officer can: take no action (after investigation), take administrative action, impose nonjudicial punishment, and court-martial the offender."}
 
 /obj/item/paper/memo/command/realitybreak
-	name = "\improper Bluespace drive apparitions"
+	name = "\improper Warp drive apparitions"
 	info = {"An "internal use only" memo sent from Expeditionary Command, based on a document from Krri'gli Engineering. It states that any humanoid figures seen during a bluespace jump are incorporeal apparitions and no mind should be paid to them, even if they appear familiar. In addition, it notes the existence of a bluespace "double" that living crew may experience and strongly urges them not to touch said double, as tempting as it may be, citing many cases of irrecoverable catatonia in those who have."}
 
 /obj/item/paper/memo/command/njprules
@@ -281,23 +281,23 @@
 
 /obj/item/paper/memo/command/recall
 	name = "order of recall"
-	info = {"A notice from the Helios Board of Admiralty regarding the urgent return of the Torch to Mars - the Board has ordered debriefing and review regarding the diplomatic meetings with the Terran Pioneer Corps and the field execution of SLT Kristen Rohtin. The document stresses that the ship be wary of any vessels, Fleet or otherwise, masking their transponders."}
+	info = {"A notice from the Helios Board of Lord Captainty regarding the urgent return of The Dauntless to Sancor - the Board has ordered debriefing and review regarding the diplomatic meetings with the Imperial Pioneer Corps and the field execution of SLT Kristen Rohtin. The document stresses that the ship be wary of any vessels, Imperial Navy or otherwise, masking their transponders."}
 
 /obj/item/paper/memo/command/roguefleeties
-	name = "rogue fleet movements"
-	info = {"An "internal use only" memorandum sent from Expeditionary Command, detailing the last known locations and naval capacity of several rogue Fifth Fleet vessels, including the SFV Nathan Hale. The data available in the report is uncomfortably sparse."}
+	name = "rogue militarum movements"
+	info = {"An "internal use only" memorandum sent from Expeditionary Command, detailing the last known locations and naval capacity of several rogue Fifth Imperial Navy vessels, including the SFV Nathan Hale. The data available in the report is uncomfortably sparse."}
 
 /obj/item/paper/memo/command/outpostreport1
 	name = "\improper E-14b outpost report"
-	info = {"An "internal use only" memo detailing the status of the research outpost in the E-14b system. It states that construction is still underway, and suggests efforts would benefit from better communication between EC and Terran engineering personnel."}
+	info = {"An "internal use only" memo detailing the status of the research outpost in the E-14b system. It states that construction is still underway, and suggests efforts would benefit from better communication between EC and Imperial engineering personnel."}
 
 /obj/item/paper/memo/command/outpostreport2
 	name = "\improper E-14b outpost report"
-	info = {"An "internal use only" memo detailing the status of the research outpost in the E-14b system. It states that construction has been delayed due to a migration of native ambulatory fungus at the site, and requests that the EC begin looking into low-impact mushroom removal methods."}
+	info = {"An "internal use only" memo detailing the status of the research outpost in the E-14b system. It states that construction has been delayed due to a migration of native ambulatory fungus at the site, and requests that the Mechanicus begin looking into low-impact mushroom removal methods."}
 
 /obj/item/paper/memo/command/evasiveflight
 	name = "evasive flight maneuvers"
-	info = {"A hastily-penned report detailing strategies for evading ship-to-ship laser fire and missile strikes in the event of another attack on the Torch. The author highly recommends the tactical use of space dust and other debris, citing the successful evasive action taken during the attack by the SFV Nathan Hale."}
+	info = {"A hastily-penned report detailing strategies for evading ship-to-ship laser fire and missile strikes in the event of another attack on The Dauntless. The author highly recommends the tactical use of space dust and other debris, citing the successful evasive action taken during the attack by the SFV Nathan Hale."}
 
 
 
@@ -321,11 +321,11 @@
 
 /obj/item/paper/memo/supply/shipping
 	name = "shipping report"
-	info = {"Some "internal use only" reports about the recent items coming and going from Expeditionary Corps vessels, with 70% of the orders being filed as replacement chemical cartridges."}
+	info = {"Some "internal use only" reports about the recent items coming and going from Dauntless vessels, with 70% of the orders being filed as replacement chemical cartridges."}
 
 /obj/item/paper/memo/supply/shipping2
 	name = "shipping report"
-	info = {"Some "internal use only" reports about the recent items coming and going from Expeditionary Corps vessels, with 70% of the orders being filed as being nanoblood."}
+	info = {"Some "internal use only" reports about the recent items coming and going from Dauntless vessels, with 70% of the orders being filed as being nanoblood."}
 
 /obj/item/paper/memo/supply/wrongchute
 	name = "research complaint"
@@ -345,7 +345,7 @@
 
 /obj/item/paper/memo/supply/personaldrinks
 	name = "off-menu drinks"
-	info = {"An "internal use only" memo, discussing various off-menu drinks and how to market them. It lists various amusing names, such as "Gaia Slammer", "Spicy Water", "Prison Wine", and "Sheep Shaver", but it doesn't tell you how to make them, for some reason."}
+	info = {"An "internal use only" memo, discussing various off-menu drinks and how to market them. It lists various amusing names, such as "Ultramar Slammer", "Spicy Water", "Prison Amasec", and "Sheep Shaver", but it doesn't tell you how to make them, for some reason."}
 
 
 
@@ -353,15 +353,15 @@
 
 /obj/item/paper/memo/engineering/repairs
 	name = "maintenance reports"
-	info = {"Some "confidential" reports regarding the state of the SEV Torch. Of note are the rusty cistern, faulty disposal pipes, clogged sinks, and an under-sized atmospheric system."}
+	info = {"Some "confidential" reports regarding the state of the Dauntless. Of note are the rusty cistern, faulty disposal pipes, clogged sinks, and an under-sized atmospheric system."}
 
 /obj/item/paper/memo/engineering/shieldsoff
 	name = "shielding recommendations"
-	info = {"Some "internal use only" reports suggesting atmospheric containment should be disabled on all Expeditionary Corps vessels."}
+	info = {"Some "internal use only" reports suggesting atmospheric containment should be disabled on all Dauntless vessels."}
 
 /obj/item/paper/memo/engineering/shieldson
 	name = "shielding recommendations"
-	info = {"Some "internal use only" reports suggesting atmospheric containment should be enabled on all Expeditionary Corps vessels."}
+	info = {"Some "internal use only" reports suggesting atmospheric containment should be enabled on all Dauntless vessels."}
 
 /obj/item/paper/memo/engineering/ladder
 	name = "ladder pamphlet"
@@ -381,15 +381,15 @@
 
 /obj/item/paper/memo/engineering/hulldamage
 	name = "damage control report"
-	info = {"An "internal use only" report on damages to the hull following the attack by the SFV Nathan Hale. It suggests that the repairs currently in place are temporary at best, and that the Torch will need hefty drydock maintenance before its next deep space mission. The report goes on to recommend petitioning EXO for additional funding for maintenance and upkeep."}
+	info = {"An "internal use only" report on damages to the hull following the attack by the SFV Nathan Hale. It suggests that the repairs currently in place are temporary at best, and that The Dauntless will need hefty drydock maintenance before its next deep space mission. The report goes on to recommend petitioning EXO for additional funding for maintenance and upkeep."}
 
 /obj/item/paper/memo/engineering/tcommssabotage
 	name = "damage control report"
 	info = {"An "internal use only" report on damages to ship systems following the 5/14 sabotage incident. It suggests that the saboteur exploited a previously-unknown vulnerability in the ship's telecommunications systems to shut down long-range communications - the system will need a full inspection from DAIS management before it can be deemed properly secure again. How the saboteur discovered the exploit is still unknown."}
 
 /obj/item/paper/memo/engineering/bsddamage
-	name = "\improper Bluespace drive safety notice"
-	info = {"A "confidential" memo from Krri'gli Engineering regarding the new Bluespace drive. It explains in very slow and simple language that this is a "Bluespace drive", a very expensive and volatile piece of machinery, and that you should not break this one or remove the exotic particle shielding. The author does not appear to have a very high opinion of human engineering or mental faculties."}
+	name = "\improper Warp drive safety notice"
+	info = {"A "confidential" memo from Krri'gli Engineering regarding the new Warp drive. It explains in very slow and simple language that this is a "Warp drive", a very expensive and volatile piece of machinery, and that you should not break this one or remove the exotic particle shielding. The author does not appear to have a very high opinion of human engineering or mental faculties."}
 
 
 // medical memos
@@ -400,7 +400,7 @@
 
 /obj/item/paper/memo/medical/jackets
 	name = "medical mistreatments"
-	info = {"Some "confidential" reports that apparently led to the removal of the straightjacket on all Expeditionary Corps vessels. Inhumane but deemed necessary treatments were applied with the help of those."}
+	info = {"Some "confidential" reports that apparently led to the removal of the straightjacket on all Dauntless vessels. Inhumane but deemed necessary treatments were applied with the help of those."}
 
 /obj/item/paper/memo/medical/ipccpr
 	name = "\improper IPC CPR notice"
@@ -452,15 +452,15 @@
 
 /obj/item/paper/memo/exploration/incident2
 	name = "incident report"
-	info = {"Some "confidential" reports regarding airlock-related injuries in the previous month across all Expeditionary Corps vessels. That number seems rather high."}
+	info = {"Some "confidential" reports regarding airlock-related injuries in the previous month across all Dauntless vessels. That number seems rather high."}
 
 /obj/item/paper/memo/exploration/incident3
 	name = "incident report"
-	info = {"Some "confidential" reports about an incident caused by an Expeditionary Corps officer's incompetence that nearly killed a person under their supervision. The apparent cause was an unsafe craft departure."}
+	info = {"Some "confidential" reports about an incident caused by an Dauntless officer's incompetence that nearly killed a person under their supervision. The apparent cause was an unsafe craft departure."}
 
 /obj/item/paper/memo/exploration/confuseexplo
 	name = "incident report"
-	info = {"Some "confidential" reports regarding numerous newly-enlisted explorers being unaware of the Expeditionary Corps, its Mission, or what training they received. An officer has attached a note to the bottom, commenting on possible cryostasis injuries. It's been circled and has several question marks."}
+	info = {"Some "confidential" reports regarding numerous newly-enlisted explorers being unaware of the Dauntless, its Mission, or what training they received. An officer has attached a note to the bottom, commenting on possible cryostasis injuries. It's been circled and has several question marks."}
 
 /obj/item/paper/memo/exploration/colddeadhands
 	name = "incident report"
@@ -484,11 +484,11 @@
 
 /obj/item/paper/memo/exploration/survivors
 	name = "interactions with survivors"
-	info = {"Some "internal use only" reports discussing the process of dealing with survivors, off-ship personnel, or in-distress civilians. This one details three points that all explorers, Fleet servicemembers, or contractor personnel should attempt to follow when dealing with off-ship persons: First, treat them with the utmost respect at all times, as they are the ones who need aid. Second, do not directly order them around, unless they happen to be getting in the way of SCG objectives. Third, remind them of their rights - they are requiring aid and are to be treated with the best handling, but remind them that they are still on SCG property, and are subject to SCG law at all times."}
+	info = {"Some "internal use only" reports discussing the process of dealing with survivors, off-ship personnel, or in-distress civilians. This one details three points that all explorers, Imperial Navy servicemembers, or contractor personnel should attempt to follow when dealing with off-ship persons: First, treat them with the utmost respect at all times, as they are the ones who need aid. Second, do not directly order them around, unless they happen to be getting in the way of Imperium objectives. Third, remind them of their rights - they are requiring aid and are to be treated with the best handling, but remind them that they are still on Imperium property, and are subject to Imperium law at all times."}
 
 /obj/item/paper/memo/exploration/cigarettes
 	name = "cigarettes with helmets"
-	info = {"Some "internal use only" reports detailing the extreme hazards of attempting to smoke a cigarette while wearing a spaceproof helmet, citing many incidents of suffocation and subsequent death as well as pointing out the presence of a "No Smoking" sign onboard the Charon and the likely flammability of many exoplanets. It concludes with a recommendation to smoke only in designated breakrooms aboard the SEV Torch and not when wearing a helmet."}
+	info = {"Some "internal use only" reports detailing the extreme hazards of attempting to smoke a cigarette while wearing a spaceproof helmet, citing many incidents of suffocation and subsequent death as well as pointing out the presence of a "No Smoking" sign onboard the Charon and the likely flammability of many exoplanets. It concludes with a recommendation to smoke only in designated breakrooms aboard the Dauntless and not when wearing a helmet."}
 
 /obj/item/paper/memo/exploration/documentplease
 	name = "on documentation of sites"
@@ -496,7 +496,7 @@
 
 /obj/item/paper/memo/exploration/pioneers
 	name = "pioneers and you"
-	info = {"An "internal use only" memo detailing proper ettiquette for explorers interacting with Terran Pioneer Corps personnel. It stresses very heavily that yes, most Terrans do speak ZAC; no, you should not share your funny Pan-Slavic impression; and no, you should ABSOLUTELY not ask if they know any war criminals."}
+	info = {"An "internal use only" memo detailing proper ettiquette for explorers interacting with Imperial Pioneer Corps personnel. It stresses very heavily that yes, most Imperials do speak ZAC; no, you should not share your funny Pan-Slavic impression; and no, you should ABSOLUTELY not ask if they know any war criminals."}
 
 
 // research memos
@@ -507,7 +507,7 @@
 
 /obj/item/paper/memo/research/annoyingtheft
 	name = "abuse of access to tools memo"
-	info = {"An "internal use only" memo sent from the Chief Science Officer to the pathfinder reminding them that the access to the Petrov is not to be abused, further asking that the pathfinder crack down on any explorers looting equipment from the Petrov for their "missions". It ends with a note that they have their own equipment that they should be using instead."}
+	info = {"An "internal use only" memo sent from the Chief Science Officer to the pathfinder reminding them that the access to the Mowteng is not to be abused, further asking that the pathfinder crack down on any explorers looting equipment from the Mowteng for their "missions". It ends with a note that they have their own equipment that they should be using instead."}
 
 /obj/item/paper/memo/research/toxinsfire
 	name = "toxin development memo"
@@ -522,7 +522,7 @@
 	info = {"Someone drew a big laughing face over this, but you can still read the contents. "What do you guys want the most?" "I wish we had our own security sometimes.""}
 
 /obj/item/paper/memo/research/petrov
-	name = "\improper Petrov map"
+	name = "\improper Mowteng map"
 	info = {"It's a portable map of the Petrov. Someone wrote over it in big letters: "What the fuck is the Petrov?", and it's now unusable."}
 
 /obj/item/paper/memo/research/fuckingdoors
@@ -531,11 +531,11 @@
 
 
 
-// corporate memos
+// imperial memos
 
 /obj/item/paper/memo/corporate/stipendcut
 	name = "corporate spending records"
-	info = {"A "confidential" memo on the current usage of funds provided to SEV Torch corporate liaisons; apparently there's threats of a strike over a cut to the cost-of-living stipends by the head office."}
+	info = {"A "confidential" memo on the current usage of funds provided to Dauntless imperial liaisons; apparently there's threats of a strike over a cut to the cost-of-living stipends by the head office."}
 
 /obj/item/paper/memo/corporate/uniondues
 	name = "union dues reminder"
@@ -543,11 +543,11 @@
 
 /obj/item/paper/memo/corporate/glueandtape
 	name = "proper document disposal"
-	info = {"Some "internal use only" corporate documents detailing the proper ways to dispose of top secret and classified documents. It highlights that burning is most applicable, and shows pictures of shredded documents reconstructed with glue and sticky tape with a red "Fail" written below."}
+	info = {"Some "internal use only" imperial documents detailing the proper ways to dispose of top secret and classified documents. It highlights that burning is most applicable, and shows pictures of shredded documents reconstructed with glue and sticky tape with a red "Fail" written below."}
 
 /obj/item/paper/memo/corporate/exointerest
 	name = "\improper EXO and you"
-	info = {"Some "confidential" corporate documents directed to the corporate liasion, informing them that their job is to represent EXO and its immediate interests, which are to ensure the SEV Torch is able to maintain the currently defined direction that is within the interests of EXO as a whole."}
+	info = {"Some "confidential" imperial documents directed to the imperial liasion, informing them that their job is to represent EXO and its immediate interests, which are to ensure the Dauntless is able to maintain the currently defined direction that is within the interests of EXO as a whole."}
 
 /obj/item/paper/memo/corporate/thequarterly
 	name = "quarterly budget report"
@@ -555,15 +555,15 @@
 
 /obj/item/paper/memo/corporate/kiareport
 	name = "deceased and missing staff reports"
-	info = {"A "confidential" memo reminding corporate liaisons to report the details pertaining to the death, or missing status, of on-shift employees. It explains that doing this ensures formal procedures are followed, and the situation pertaining to the deceased/missing status will be referenced for ongoing and future employee training programs and payrolls."}
+	info = {"A "confidential" memo reminding imperial liaisons to report the details pertaining to the death, or missing status, of on-shift employees. It explains that doing this ensures formal procedures are followed, and the situation pertaining to the deceased/missing status will be referenced for ongoing and future employee training programs and payrolls."}
 
 /obj/item/paper/memo/corporate/spellchecker
 	name = "spellchecking and you"
-	info = {"Some "internal use only" corporate memos reminding corporate liaisons to proofread reports. It details various reasons behind why correct spelling and punctuation help in making EXO and Expeditionary Command take your report seriously."}
+	info = {"Some "internal use only" imperial memos reminding imperial liaisons to proofread reports. It details various reasons behind why correct spelling and punctuation help in making EXO and Expeditionary Command take your report seriously."}
 
 /obj/item/paper/memo/corporate/safetyfirst
 	name = "contractor safety and you"
-	info = {"An "internal use only" corporate document reminding corporate liaisons to report any unsafe behavior from contractors that they either see directly or is reported to them. It goes on to explain that ensuring the health and safety compliance of those under contract not only helps to keep up an image of security but ensures that the reputation of EXO as a whole is not tarnished due to a workplace accident."}
+	info = {"An "internal use only" imperial document reminding imperial liaisons to report any unsafe behavior from contractors that they either see directly or is reported to them. It goes on to explain that ensuring the health and safety compliance of those under contract not only helps to keep up an image of security but ensures that the reputation of EXO as a whole is not tarnished due to a workplace accident."}
 
 
 
@@ -607,8 +607,8 @@
 
 /obj/item/paper/memo/security/chaplain
 	name = "inter-department complaint"
-	info = {"An inter-departmental memo from the Chaplain's office detailing their objection at length to the Torch permitting capital punishment within its walls. A diplomatic and scientifically oriented ship should have "no part in warfare"."}
+	info = {"An inter-departmental memo from the Chaplain's office detailing their objection at length to The Dauntless permitting capital punishment within its walls. A diplomatic and scientifically oriented ship should have "no part in warfare"."}
 
 /obj/item/paper/memo/security/extremism
 	name = "anti-radicalization pamphlet"
-	info = {"An "internal use only" document detailing strategies for identifying signs and risk factors for radicalization, created in light of perceived extremism in the SCGF. It discusses low self-esteem, stress, marginalization, repeat disciplinary issues, and excessive interest in weaponry."}
+	info = {"An "internal use only" document detailing strategies for identifying signs and risk factors for radicalization, created in light of perceived extremism in the ImperiumF. It discusses low self-esteem, stress, marginalization, repeat disciplinary issues, and excessive interest in weaponry."}

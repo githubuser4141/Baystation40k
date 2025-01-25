@@ -3,23 +3,37 @@
 	if (!effective_force)
 		return 0
 
-	//Apply weapon damage
+	// Adjust effective_force based on skill levels
+	var/X = 1.2  // Default multiplier for no skill
+	if (user.skill_check(SKILL_COMBAT, SKILL_DEMIGOD))
+		X = 4.5 // +130%
+	else if (user.skill_check(SKILL_COMBAT, SKILL_PRIMARIS))
+		X = 3.5 // +110%
+	else if (user.skill_check(SKILL_COMBAT, SKILL_LEGEND))
+		X = 2.5 // +90%
+	else if (user.skill_check(SKILL_COMBAT, SKILL_MASTER))
+		X = 1.7 // +74%
+	else if (user.skill_check(SKILL_COMBAT, SKILL_EXPERIENCED))
+		X = 1.2 // +64%
+	else if (user.skill_check(SKILL_COMBAT, SKILL_TRAINED)) // At baseline levels damage increase is smaller.
+		X = 0.9 // +58%
+	else if (user.skill_check(SKILL_COMBAT, SKILL_BASIC))
+		X = 0.7 // +54%
+	else if (user.skill_check(SKILL_COMBAT, SKILL_UNSKILLED))
+		X = 0.6 // +52%
+	else
+		X = 1.2  // +64% Default multiplier if no skill is found
+
+	// Apply the skill-based force adjustment
+	effective_force += 2 * ((0.2 * effective_force) + (0.1 * X * effective_force))
+
+	// Apply weapon damage
 	var/damage_flags = I.damage_flags()
 	var/datum/wound/created_wound = apply_damage(effective_force, I.damtype, hit_zone, damage_flags, used_weapon=I, armor_pen=I.armor_penetration)
 
-	//Melee weapon embedded object code.
+	// Melee weapon embedded object code.
 	if (istype(created_wound) && I && I.can_embed() && I.damtype == DAMAGE_BRUTE && !I.anchored && !is_robot_module(I))
-		var/weapon_sharp = (damage_flags & DAMAGE_FLAG_SHARP)
-		var/damage = effective_force //just the effective damage used for sorting out embedding, no further damage is applied here
+		var/damage = effective_force // Just the effective damage used for sorting out embedding, no further damage is applied here
 		damage *= 1 - get_blocked_ratio(hit_zone, I.damtype, I.damage_flags(), I.armor_penetration, I.force)
-
-		//blunt objects should really not be embedding in things unless a huge amount of force is involved
-		var/embed_chance = weapon_sharp? damage/I.w_class : damage/(I.w_class*3)
-		var/embed_threshold = weapon_sharp? 5*I.w_class : 15*I.w_class
-
-		//Sharp objects will always embed if they do enough damage.
-		if ((weapon_sharp && damage > (10*I.w_class)) || (damage > embed_threshold && prob(embed_chance)))
-			src.embed(I, hit_zone, supplied_wound = created_wound)
-			I.has_embedded()
 
 	return TRUE

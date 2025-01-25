@@ -203,11 +203,11 @@
 		var/obj/item/organ/internal/brain/brain = H.internal_organs_by_name[BP_BRAIN]
 		set_pin_data(IC_OUTPUT, 1, (brain && H.stat != DEAD))
 		set_pin_data(IC_OUTPUT, 2, (H.stat == 0))
-		set_pin_data(IC_OUTPUT, 3, damage_to_severity(100 * H.getBruteLoss() / H.maxHealth))
-		set_pin_data(IC_OUTPUT, 4, damage_to_severity(100 * H.getFireLoss() / H.maxHealth))
-		set_pin_data(IC_OUTPUT, 5, damage_to_severity(100 * H.getToxLoss() / H.maxHealth))
-		set_pin_data(IC_OUTPUT, 6, damage_to_severity(100 * H.getOxyLoss() / H.maxHealth))
-		set_pin_data(IC_OUTPUT, 7, damage_to_severity(100 * H.getCloneLoss() / H.maxHealth))
+		set_pin_data(IC_OUTPUT, 3, damage_to_severity(100 * H.getBruteLoss() / H.maxhealth))
+		set_pin_data(IC_OUTPUT, 4, damage_to_severity(100 * H.getFireLoss() / H.maxhealth))
+		set_pin_data(IC_OUTPUT, 5, damage_to_severity(100 * H.getToxLoss() / H.maxhealth))
+		set_pin_data(IC_OUTPUT, 6, damage_to_severity(100 * H.getOxyLoss() / H.maxhealth))
+		set_pin_data(IC_OUTPUT, 7, damage_to_severity(100 * H.getCloneLoss() / H.maxhealth))
 		set_pin_data(IC_OUTPUT, 8, H.get_pulse_as_number())
 		set_pin_data(IC_OUTPUT, 9, H.get_blood_oxygenation())
 		set_pin_data(IC_OUTPUT, 10, damage_to_severity(H.get_shock()))
@@ -252,7 +252,7 @@
 		set_pin_data(IC_OUTPUT, 2, T.is_adult)
 		set_pin_data(IC_OUTPUT, 3, T.nutrition/T.get_max_nutrition())
 		set_pin_data(IC_OUTPUT, 4, T.powerlevel)
-		set_pin_data(IC_OUTPUT, 5, round(T.health/T.maxHealth,0.01)*100)
+		set_pin_data(IC_OUTPUT, 5, round(T.health/T.maxhealth,0.01)*100)
 		set_pin_data(IC_OUTPUT, 6, T.GetMutations())
 		set_pin_data(IC_OUTPUT, 7, T.mutation_chance)
 		set_pin_data(IC_OUTPUT, 8, T.cores)
@@ -853,7 +853,7 @@
 /obj/item/integrated_circuit/input/microphone
 	name = "microphone"
 	desc = "Useful for spying on people, or for voice-activated machines."
-	extended_desc = "This will automatically translate most human languages to Zurich Accord Common. \
+	extended_desc = "This will automatically translate most human languages to Gothic. \
 	The first activation pin is always pulsed when the circuit hears someone talk, while the second one \
 	is only triggered if it successfully translated another language."
 	icon_state = "recorder"
@@ -868,8 +868,8 @@
 	spawn_flags = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 	power_draw_per_use = 5
 
-	var/language_preferred = LANGUAGE_HUMAN_EURO
-	var/languages_understood = list(LANGUAGE_HUMAN_EURO, LANGUAGE_HUMAN_CHINESE, LANGUAGE_HUMAN_ARABIC, LANGUAGE_HUMAN_INDIAN, LANGUAGE_HUMAN_IBERIAN, LANGUAGE_HUMAN_RUSSIAN, LANGUAGE_HUMAN_SELENIAN, LANGUAGE_SPACER)
+	var/language_preferred = LANGUAGE_HIGH_GOTHIC
+	var/languages_understood = list(LANGUAGE_HIGH_GOTHIC, LANGUAGE_HUMAN_CHINESE, LANGUAGE_HUMAN_ARABIC, LANGUAGE_HUMAN_INDIAN, LANGUAGE_HUMAN_IBERIAN, LANGUAGE_HUMAN_RUSSIAN, LANGUAGE_HUMAN_SELENIAN, LANGUAGE_LOW_GOTHIC)
 	var/invalid_flags = NONVERBAL | SIGNLANG | HIVEMIND | ALT_TRANSMIT
 
 /obj/item/integrated_circuit/input/microphone/Initialize()
@@ -900,20 +900,20 @@
 
 /obj/item/integrated_circuit/input/microphone/modem
 	name = "machine modulating microphone"
-	languages_understood = list(LANGUAGE_HUMAN_EURO, LANGUAGE_EAL)
+	languages_understood = list(LANGUAGE_HIGH_GOTHIC, LANGUAGE_MECHANICUS)
 	spawn_flags = IC_SPAWN_RESEARCH
-	extended_desc = "A microphone combined with repurposed fax machine circuitry, this will translate Encoded Audio Language used by some synthetics into ZAC."
+	extended_desc = "A microphone combined with repurposed fax machine circuitry, this will translate Binaric Speech used by some synthetics into ZAC."
 
 /obj/item/integrated_circuit/input/microphone/exo
 	name = "interspecies exchange microphone"
-	languages_understood = list(LANGUAGE_HUMAN_EURO, LANGUAGE_HUMAN_SELENIAN, LANGUAGE_UNATHI_SINTA, LANGUAGE_SKRELLIAN)
+	languages_understood = list(LANGUAGE_HIGH_GOTHIC, LANGUAGE_HUMAN_SELENIAN, LANGUAGE_KROOT_SINTA, LANGUAGE_TAU)
 	spawn_flags = IC_SPAWN_RESEARCH
-	extended_desc = "A microphone with a xenolinguistic database to facilitate EXO missions with mixed species. It translates the most common Skrellian and Unathi dialects to ZAC."
+	extended_desc = "A microphone with a xenolinguistic database to facilitate EXO missions with mixed species. It translates the most common Tau and Kroot dialects to ZAC."
 	//Selenian is an in-character undocumented feature demanded by a corp exec
 
 /obj/item/integrated_circuit/input/microphone/fringe
 	name = "gray market microphone"
-	languages_understood = list(LANGUAGE_SPACER, LANGUAGE_GUTTER, LANGUAGE_HUMAN_CHINESE, LANGUAGE_HUMAN_ARABIC, LANGUAGE_HUMAN_INDIAN, LANGUAGE_HUMAN_IBERIAN, LANGUAGE_HUMAN_RUSSIAN)
+	languages_understood = list(LANGUAGE_LOW_GOTHIC, LANGUAGE_GUTTER, LANGUAGE_HUMAN_CHINESE, LANGUAGE_HUMAN_ARABIC, LANGUAGE_HUMAN_INDIAN, LANGUAGE_HUMAN_IBERIAN, LANGUAGE_HUMAN_RUSSIAN)
 	language_preferred = LANGUAGE_HUMAN_RUSSIAN
 	spawn_flags = 0
 	extended_desc = "This microphone did not come with any documentation."

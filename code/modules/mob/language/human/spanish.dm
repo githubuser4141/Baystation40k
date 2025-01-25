@@ -6,15 +6,15 @@
 
 /datum/language/human/iberian
 	name = LANGUAGE_HUMAN_IBERIAN
-	desc = "One of the few great common Earth languages to come about naturally, this language developed in the late 21st century during\
+	desc = "One of the few great common Terra languages to come about naturally, this language developed in the late 21st century during\
 			 a historic period of closeness between Spain, Portugal and their former colonies."
 	colour = "iberian"
 	key = "5"
 	shorthand = "Iber"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 30,
+		LANGUAGE_HIGH_GOTHIC = 30,
 		LANGUAGE_HUMAN_SELENIAN = 15,
-		LANGUAGE_SPACER = 20
+		LANGUAGE_LOW_GOTHIC = 20
 	)
 	syllables = list(
 		"ad", "al", "an", "ar", "as", "ci", "co", "de", "do", "el", "en", "er", "es",

@@ -6,10 +6,10 @@
 	item_state = "chain"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	force = 10
+	force = 15
 	throwforce = 7
 	w_class = ITEM_SIZE_NORMAL
-	origin_tech = list(TECH_COMBAT = 4)
+	origin_tech = list(TECH_COMBAT = 1)
 	attack_verb = list("flicked", "whipped", "lashed")
 
 /obj/item/melee/whip/abyssal
@@ -19,10 +19,10 @@
 	item_state = "whip"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	force = 16 //max hit with 60 strength and no equipment. Duel Arena no No forfeit - Snapshot
+	force = 26 //max hit with 60 strength and no equipment. Duel Arena no No forfeit - Snapshot
 	throwforce = 7
 	w_class = ITEM_SIZE_NORMAL
-	origin_tech = list(TECH_COMBAT = 4)
+	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("flicked", "whipped", "lashed")
 
 /obj/item/melee/whip/tail
@@ -31,9 +31,61 @@
 	icon_state = "tailwhip"
 	item_state = "whip"
 	obj_flags = null
-	force = 19
+	force = 28
 	edge = TRUE
-	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 5)
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
+
+
+/obj/item/melee/whip/censer
+	name = "imperial censer"
+	desc = "A golden censer leaking pure smelling incense. Used by the Ecclesiarchy for blessings."
+	attack_verb = list("flogged", "whipped", "lashed", "disciplined")
+	icon = 'icons/obj/weapons/melee/misc.dmi'
+	icon_state = "censer"
+	item_state = "censer"
+	force = 22
+	w_class = ITEM_SIZE_SMALL
+/*
+//this blesses humans, pretty straight forward
+/obj/item/melee/whip/censer/attack(mob/living/carbon/M as mob, mob/living/carbon/human/user as mob) //very quick and simple blessing system, using attack incase I ever wanna make the censer need to be filled with stuff
+	if (istype(M, /mob/living/carbon/human))
+		if(M.isblessed == 1) //check this first
+			to_chat(user, "<span class='warning'>[M] has already been blessed!</span>")
+			return 1
+		else
+			M.STAT_LEVEL(dex) += 1
+			M.STAT_LEVEL(str) += 1
+			M.STAT_LEVEL(end) += 2
+			M.isblessed = 1
+			visible_message("[M] inhales the holy incense and is blessed!")
+
+
+//this blesses guns
+/obj/item/melee/whip/censer/attackby(var/obj/item/gun/O, var/mob/user)
+	if(O.isblessed == 1)
+		to_chat(user, "<span class='warning'>[O] has already been blessed!</span>")
+		return 1
+	else
+		O.name = "blessed [O.name]"
+		O.accuracy += 1
+		O.isblessed = 1
+		playsound(src, 'sound/voice/blessing.ogg', 70, 0, 1)
+		visible_message("[O] is bathed in righteous incense as the Confessor chants a short litany, you can sense a change in the weapon just by touching it.")
+
+//this blesses swords
+/obj/item/melee/whip/censer/attackby(var/obj/item/melee/sword/O, var/mob/user)
+	if(O.isblessed == 1)
+		to_chat(user, "<span class='warning'>[O] has already been blessed!</span>")
+		return 1
+	else
+		O.name = "blessed [O.name]"
+		O.sharpness += 5
+		O.block_chance += 5
+		O.isblessed = 1
+		playsound(src, 'sound/voice/blessing.ogg', 70, 0, 1)
+		visible_message("[O] is bathed in righteous incense as the Confessor chants a short litany, you can sense a change in the weapon just by touching it.")
+
+*/
 
 /obj/item/melee/whip/chainofcommand
 	name = "chain of command"
@@ -64,7 +116,7 @@
 	icon = 'icons/obj/augment.dmi'
 	desc = "Hardsuit gauntlet powered-up by servomotors. Capable of prying airlock open, but can't make people fly."
 	base_parry_chance = 12
-	force = 15
+	force = 31
 	attack_cooldown = SLOW_WEAPON_COOLDOWN
 	hitsound = 'sound/effects/bang.ogg'
 	attack_verb = list("smashed", "bludgeoned", "hammered", "battered")

@@ -22,7 +22,7 @@
 	feedback = "SB"
 
 	charge_max = 1200 //2 minutes
-	spell_flags = NEEDSCLOTHES
+	spell_flags = Z2NOCAST
 	invocation = "Bla'yo daya!"
 	invocation_type = SpI_SHOUT
 	level_max = list(Sp_TOTAL = 3, Sp_SPEED = 3, Sp_POWER = 3)
@@ -39,6 +39,6 @@
 	if(!..())
 		return 0
 
-	newVars = list("maxHealth" = 20 + spell_levels[Sp_POWER]*5, "health" = 20 + spell_levels[Sp_POWER]*5, "melee_damage_lower" = 10 + spell_levels[Sp_POWER], "melee_damage_upper" = 10 + spell_levels[Sp_POWER]*2)
+	newVars = list("maxhealth" = 20 + spell_levels[Sp_POWER]*5, "health" = 20 + spell_levels[Sp_POWER]*5, "melee_damage_lower" = 10 + spell_levels[Sp_POWER], "melee_damage_upper" = 10 + spell_levels[Sp_POWER]*2)
 
 	return "Your bats are now stronger."

@@ -12,7 +12,7 @@
 	throw_range = 5
 	w_class = ITEM_SIZE_NORMAL
 	var/charge			                // Current charge
-	var/maxcharge = 1000 // Capacity in Wh
+	var/maxcharge = 2000 // Capacity in Wh
 	var/overlay_state
 	matter = list(MATERIAL_STEEL = 700, MATERIAL_GLASS = 50, MATERIAL_PLASTIC = 20)
 
@@ -132,7 +132,7 @@
 	force = 0
 	throw_speed = 5
 	throw_range = 7
-	maxcharge = 100
+	maxcharge = 250
 	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 5)
 
 /obj/item/cell/device/Initialize()
@@ -145,28 +145,63 @@
 	return ..(mapload)
 
 /obj/item/cell/device/standard
-	name = "standard device power cell"
-	maxcharge = 100
+	name = "standard power pack"
+	maxcharge = 300
 
 /obj/item/cell/device/high
-	name = "advanced device power cell"
-	desc = "A small power cell designed to power more energy-demanding devices."
+	name = "advanced power pack"
+	desc = "A small power pack designed to power more energy-demanding devices."
 	icon_state = "hdevice"
-	maxcharge = 200
+	maxcharge = 400
 	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
 
 /obj/item/cell/device/high/laspack
 	name = "laspack"
-	desc = "A small power cell designed to power more energy-demanding devices."
-	icon_state = "hdevice"
-	maxcharge = 300
+	desc = "Standard issue laspack for standard pattern las weapons."
+	icon = 'icons/obj/power.dmi'
+	w_class = ITEM_SIZE_NORMAL
+	icon_state = "lgpp_small"
+	maxcharge = 550
+	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
+
+/obj/item/cell/device/high/laspack/hotshot
+	name = "hotshot laspack"
+	desc = "Standard issue hotshot laspack for more demanding las weapons."
+	icon_state = "lgpp"
+	color = COLOR_GUNMETAL
+	maxcharge = 620
+	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
+
+/obj/item/cell/device/high/mechanicus
+	name = "experimental power pack"
+	desc = "A mechanicus power pack with incredible charge capacity."
+	icon = 'icons/obj/power.dmi'
+	w_class = ITEM_SIZE_NORMAL
+	icon_state = "lgpp"
+	maxcharge = 680
+	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
+
+/obj/item/cell/device/high/xenos
+	name = "xenos power pack"
+	desc = "A xenos power pack with incredible charge capacity."
+	icon_state = "hpcell"
+	maxcharge = 700
+	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
+
+/obj/item/cell/device/high/melta
+	name = "melta pack"
+	desc = "A specialized promethium fuel pack for meltaguns."
+	icon = 'icons/obj/ammo.dmi'
+	w_class = ITEM_SIZE_NORMAL
+	icon_state = "melta"
+	maxcharge = 200
 	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 6)
 
 /obj/item/cell/crap
 	name = "old power cell"
 	desc = "A cheap old power cell. It's probably been in use for quite some time now."
 	origin_tech = list(TECH_POWER = 0)
-	maxcharge = 100
+	maxcharge = 200
 	matter = list(MATERIAL_STEEL = 700, MATERIAL_GLASS = 40, MATERIAL_PLASTIC = 20)
 
 /obj/item/cell/crap/empty
@@ -193,7 +228,7 @@
 /obj/item/cell/super
 	name = "super power cell"
 	desc = "A very advanced power cell with increased energy density, for use in critical applications."
-	origin_tech = list(TECH_POWER = 5)
+	origin_tech = list(TECH_POWER = 2)
 	icon_state = "scell"
 	maxcharge = 2500
 	matter = list(MATERIAL_STEEL = 700, MATERIAL_GLASS = 70, MATERIAL_ALUMINIUM = 20)
@@ -204,7 +239,7 @@
 /obj/item/cell/hyper
 	name = "mechanicus archeotech power cell"
 	desc = "Pinnacle of power storage technology, this very expensive power cell provides the best energy density reachable with conventional electrochemical cells."
-	origin_tech = list(TECH_POWER = 6)
+	origin_tech = list(TECH_POWER = 3)
 	icon_state = "hpcell"
 	maxcharge = 4000
 	matter = list(MATERIAL_STEEL = 700, MATERIAL_GLASS = 80, MATERIAL_ALUMINIUM = 20)
@@ -239,7 +274,7 @@
 /obj/item/cell/slime
 	name = "charged slime core"
 	desc = "A yellow slime core infused with phoron, it crackles with power."
-	origin_tech = list(TECH_POWER = 2, TECH_BIO = 4)
+	origin_tech = list(TECH_POWER = 2, TECH_BIO = 2)
 	icon = 'icons/mob/simple_animal/slimes.dmi' //'icons/obj/harvest.dmi'
 	icon_state = "yellow slime extract" //"potato_battery"
 	maxcharge = 200

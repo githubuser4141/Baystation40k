@@ -1,6 +1,6 @@
 /obj/machinery/power/generator
-	name = "thermoelectric generator"
-	desc = "It's a high efficiency thermoelectric generator."
+	name = "promethium generator"
+	desc = "It's a high efficiency promethium generator."
 	icon = 'icons/obj/machines/power/teg.dmi'
 	icon_state = "teg-unassembled"
 	density = TRUE
@@ -8,7 +8,7 @@
 	obj_flags = OBJ_FLAG_ANCHORABLE
 
 	use_power = POWER_USE_IDLE
-	idle_power_usage = 100 //Watts, I hope.  Just enough to do the computer and display things.
+	idle_power_usage = 100 //Watts, I hope.  Just enough to do the cogitator and display things.
 
 	var/max_power = 500000
 	var/thermal_efficiency = 0.65

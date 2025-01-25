@@ -1,20 +1,20 @@
 /***************************************
-* Highly Visible and Dangerous Weapons *
+* Highly Visible and Dangerous War Gear *
 ***************************************/
 /datum/uplink_item/item/visible_weapons
 	category = /datum/uplink_category/visible_weapons
 
 /datum/uplink_item/item/visible_weapons/smallenergy_gun
-	name = "Small Energy Gun"
-	desc = "A pocket-sized energy based sidearm with three different lethality settings."
+	name = "Small Energy Weapon"
+	desc = "A kantrael MG pattern pistol."
 	item_cost = 16
-	path = /obj/item/gun/energy/gun/small
+	path = /obj/item/gun/energy/lasgun/laspistol/militarum
 
 /datum/uplink_item/item/visible_weapons/shuriken
 	name = "Box of shurikens"
 	desc = "A small box with six shuriken, notably dangerous."
 	item_cost = 18
-	path = /obj/item/storage/box/syndie_kit/shuriken
+	path = /obj/item/storage/box/contraband/shuriken
 
 /datum/uplink_item/item/visible_weapons/dartgun
 	name = "Dart Gun"
@@ -36,7 +36,7 @@
 	path = /obj/item/reagent_containers/food/snacks/monkeycube/wrapped/pikecube
 
 /datum/uplink_item/item/visible_weapons/katana
-	name = "Katana"
+	name = "Grim Blade"
 	desc = "A large sharpened steel blade capable of cutting through anything but the thickest armor."
 	item_cost = 24
 	path = /obj/item/material/sword/katana
@@ -53,7 +53,7 @@
 	desc = "A kit with a pocket-sized holdout pistol, silencer, and an extra magazine. \
 			Attaching the silencer will make it too big to conceal in your pocket."
 	item_cost = 32
-	path = /obj/item/storage/box/syndie_kit/silenced
+	path = /obj/item/storage/box/contraband/silenced
 
 /datum/uplink_item/item/visible_weapons/broomstick
 	name = "Broomstick Pistol"
@@ -68,7 +68,7 @@
 	desc = "Too much money? Not enough screaming? Try the Money Cannon."
 
 /datum/uplink_item/item/visible_weapons/energy_gun
-	name = "Energy Gun"
+	name = "Energy Weapon"
 	desc = "A energy based sidearm with three different lethality settings."
 	item_cost = 32
 	path = /obj/item/gun/energy/gun
@@ -83,7 +83,7 @@
 	name = "Magnum Revolver"
 	desc = "A high-caliber revolver. Includes an extra speedloader of ammo."
 	item_cost = 56
-	path = /obj/item/storage/backpack/satchel/syndie_kit/revolver
+	path = /obj/item/storage/backpack/satchel/contraband/revolver
 
 /datum/uplink_item/item/visible_weapons/grenade_launcher
 	name = "Grenade Launcher"
@@ -123,7 +123,7 @@
 
 
 /datum/uplink_item/item/visible_weapons/advanced_energy_gun
-	name = "Advanced Energy Gun"
+	name = "Advanced Energy Weapon"
 	desc = "A highly experimental heavy energy weapon, with three different lethality settings."
 	item_cost = 60
 	path = /obj/item/gun/energy/gun/nuclear
@@ -172,7 +172,7 @@
 	name = "Small Revolver"
 	desc = "A pocket-sized holdout revolver. Easily concealable.."
 	item_cost = 24
-	path = /obj/item/gun/projectile/revolver/holdout
+	path = /obj/item/gun/projectile/revolver/imperial/holdout
 
 /datum/uplink_item/item/visible_weapons/pulserifle
 	name = "Pulse Rifle"
@@ -211,7 +211,7 @@
 
 /datum/uplink_item/item/visible_weapons/incendiary_laser
 	name = "Incendiary Laser Blaster"
-	desc = "A laser weapon developed and subsequently banned in Sol space, it sets its targets on fire with dispersed laser technology. \
+	desc = "A laser weapon developed and subsequently banned in Imperial space, it sets its targets on fire with dispersed laser technology. \
 			Most of these blasters were swiftly bought back and destroyed - but not this one."
 	item_cost = 40
 	path = /obj/item/gun/energy/incendiary_laser

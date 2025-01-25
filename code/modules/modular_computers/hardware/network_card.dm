@@ -24,7 +24,7 @@
 	name = "advanced NTNet network card"
 	desc = "An advanced network card for usage with standard NTNet frequencies. It's transmitter is strong enough to connect even when far away."
 	long_range = 1
-	origin_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 2)
+	origin_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 2)
 	power_usage = 100 // Better range but higher power usage.
 	icon_state = "netcard_advanced"
 	hardware_size = 1
@@ -33,7 +33,7 @@
 	name = "wired NTNet network card"
 	desc = "An advanced network card for usage with standard NTNet frequencies. This one also supports wired connection."
 	ethernet = 1
-	origin_tech = list(TECH_DATA = 5, TECH_ENGINEERING = 3)
+	origin_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 3)
 	power_usage = 100 // Better range but higher power usage.
 	icon_state = "netcard_ethernet"
 	hardware_size = 3
@@ -106,7 +106,7 @@
 	var/turf/T = get_turf(src)
 	if(!istype(T)) //no reception in nullspace
 		return
-	if(T.z in GLOB.using_map.station_levels) // Computer is on station. Low/High signal depending on what type of network card you have
+	if(T.z in GLOB.using_map.station_levels) // Cogitator is on station. Low/High signal depending on what type of network card you have
 		. = strength
 	else if(T.z in GLOB.using_map.contact_levels) // Not on station, but close enough for radio signal to travel, or long cables in case of ethernet
 		. = strength - 1

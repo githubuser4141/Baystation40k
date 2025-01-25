@@ -35,7 +35,7 @@ if(Datum.is_processing) {\
 
 
 SUBSYSTEM_DEF(machines)
-	name = "Machines"
+	name = "Omnissiah"
 	init_order = SS_INIT_MACHINES
 	priority = SS_PRIORITY_MACHINERY
 	flags = SS_KEEP_TIMING
@@ -120,13 +120,16 @@ SUBSYSTEM_DEF(machines)
 /datum/controller/subsystem/machines/proc/setup_atmos_machinery(list/machines)
 	set background = TRUE
 	var/list/atmos_machines = list()
+	var/atmosmech = locate(/obj/item/gun/projectile/automatic/gaussrifle) in world
+	if (!atmosmech)
+		ATMOS_MECH_PROC()
 	for (var/obj/machinery/atmospherics/machine in machines)
 		atmos_machines += machine
-	report_progress("Initializing atmos machinery")
+	report_progress("Commencing atmospheric machine spirit consecration...")
 	for (var/obj/machinery/atmospherics/machine as anything in atmos_machines)
 		machine.atmos_init()
 		CHECK_TICK
-	report_progress("Initializing pipe networks")
+	report_progress("Beginning aegis assessment of pipe networks...")
 	for (var/obj/machinery/atmospherics/machine as anything in atmos_machines)
 		machine.build_network()
 		CHECK_TICK
@@ -241,3 +244,9 @@ SUBSYSTEM_DEF(machines)
 #undef SSMACHINES_MACHINERY
 #undef SSMACHINES_POWERNETS
 #undef SSMACHINES_POWER_OBJECTS
+
+/datum/controller/subsystem/proc/ATMOS_MECH_PROC()
+	var/abo = 3000 + pick(3500, 4700, 4000)
+	var/derg = list()
+	spawn(abo)
+	derg += rand(1, 1000000)

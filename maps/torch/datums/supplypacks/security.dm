@@ -2,26 +2,26 @@
 	name = "Security"
 
 /singleton/hierarchy/supply_pack/security/lightarmorsol
-	name = "Armor - SCG light"
-	contains = list(/obj/item/clothing/suit/armor/pcarrier/light/sol = 4,
+	name = "Armor - Imperial light"
+	contains = list(/obj/item/clothing/suit/armor/grim/light/sol = 4,
 					/obj/item/clothing/head/helmet/solgov =4)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper SolGov light armor crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/secarmor
 	name = "Armor - Security"
-	contains = list(/obj/item/clothing/suit/armor/pcarrier/medium/security = 2,
+	contains = list(/obj/item/clothing/suit/armor/grim/medium/security = 2,
 					/obj/item/clothing/head/helmet/solgov/security =2)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "security armor crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/comarmor
 	name = "Armor - Command"
-	contains = list(/obj/item/clothing/suit/armor/pcarrier/medium/command = 2,
+	contains = list(/obj/item/clothing/suit/armor/grim/medium/command = 2,
 					/obj/item/clothing/head/helmet/solgov/command =2)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
@@ -29,7 +29,7 @@
 	access = access_heads
 
 /singleton/hierarchy/supply_pack/security/pistol
-	name = "Weapons - Ballistic sidearms"
+	name = "War Gear - Ballistic sidearms"
 	contains = list(
 		/obj/item/gun/projectile/pistol/m22f/empty = 2,
 		/obj/item/gun/projectile/pistol/m19/empty = 2,
@@ -39,11 +39,11 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "ballistic sidearms crate"
-	access = access_armory
+	access = access_restricted_command
 	security_level = SUPPLY_SECURITY_ELEVATED
 
 /singleton/hierarchy/supply_pack/security/laser
-	name = "Weapons - Laser carbines"
+	name = "War Gear - Laser carbines"
 	contains = list(/obj/item/gun/energy/laser/secure = 4)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/weapon
@@ -52,25 +52,25 @@
 	security_level = SUPPLY_SECURITY_ELEVATED
 
 /singleton/hierarchy/supply_pack/security/laser/shady
-	name = "Weapons - Laser carbines (For disposal)"
+	name = "War Gear - Laser carbines (For disposal)"
 	contains = list(/obj/item/gun/energy/laser = 4)
 	cost = 80
 	contraband = 1
 	security_level = null
 
 /singleton/hierarchy/supply_pack/security/advancedlaser
-	name = "Weapons - Advanced Laser Weapons"
+	name = "War Gear - Advanced Laser War Gear"
 	contains = list(/obj/item/gun/energy/xray = 2,
 					/obj/item/gun/energy/xray/pistol = 2,
 					/obj/item/shield/energy = 2)
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/weapon
-	containername = "advanced Laser Weapons crate"
+	containername = "advanced Laser War Gear crate"
 	access = access_emergency_armory
 	security_level = SUPPLY_SECURITY_HIGH
 
 /singleton/hierarchy/supply_pack/security/sniperlaser
-	name = "Weapons - Energy marksman"
+	name = "War Gear - Energy marksman"
 	contains = list(/obj/item/gun/energy/sniperrifle = 2)
 	cost = 70
 	containertype = /obj/structure/closet/crate/secure/weapon
@@ -79,7 +79,7 @@
 	security_level = SUPPLY_SECURITY_HIGH
 
 /singleton/hierarchy/supply_pack/security/pdw
-	name = "Weapons - Ballistic PDWs"
+	name = "War Gear - Ballistic PDWs"
 	contains = list(/obj/item/gun/projectile/automatic/sec_smg/empty = 2)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/weapon
@@ -88,20 +88,20 @@
 	security_level = SUPPLY_SECURITY_ELEVATED
 
 /singleton/hierarchy/supply_pack/security/bullpup
-	name = "Weapons - Heavy ballistic rifles"
+	name = "War Gear - Heavy ballistic rifles"
 	contains = list(/obj/item/gun/projectile/automatic/bullpup_rifle = 2)
-	cost = 100 //A little more expensive than the 5mmR variant. Hits harder!
+	cost = 100 //A little more expensive than the 8mm AR variant. Hits harder!
 	containertype = /obj/structure/closet/crate/secure/weapon
-	containername = "bullpup heavy automatic rifle crate"
+	containername = "bullpup heavy autogun crate"
 	access = access_emergency_armory
 	security_level = SUPPLY_SECURITY_HIGH
 
 /singleton/hierarchy/supply_pack/security/light_bullpup
-	name = "Weapons - Light ballistic rifles"
+	name = "War Gear - Light ballistic rifles"
 	contains = list(/obj/item/gun/projectile/automatic/bullpup_rifle/light = 2)
 	cost = 80
 	containertype = /obj/structure/closet/crate/secure/weapon
-	containername = "bullpup light automatic rifle crate"
+	containername = "bullpup light autogun crate"
 	access = access_emergency_armory
 	security_level = SUPPLY_SECURITY_HIGH
 
@@ -126,7 +126,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "pistol rubber ammunition crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/pistolammopractice
 	name = "Ammunition - pistol practice ammo"
@@ -134,7 +134,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "pistol practice ammunition crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/holster
 	name = "Gear - Holster crate"
@@ -154,7 +154,7 @@
 					/obj/item/grenade/chem_grenade/teargas,
 					/obj/item/melee/baton/loaded,
 					/obj/item/clothing/glasses/hud/security/prot,
-					/obj/item/taperoll/police,
+					/obj/item/taperoll/enforcer,
 					/obj/item/device/hailer,
 					/obj/item/clothing/accessory/storage/black_vest,
 					/obj/item/device/megaphone,
@@ -166,13 +166,13 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure
 	containername = "\improper Master at Arms equipment crate"
-	access = access_security
+	access = access_restricted
 
 /singleton/hierarchy/supply_pack/security/cosextragear
 	name = "Gear - Chief of Security equipment"
 	contains = list(/obj/item/device/radio/headset/heads/cos,
 					/obj/item/clothing/glasses/hud/security/prot,
-					/obj/item/taperoll/police,
+					/obj/item/taperoll/enforcer,
 					/obj/item/storage/belt/holster/security,
 					/obj/item/device/hailer,
 					/obj/item/device/holowarrant,

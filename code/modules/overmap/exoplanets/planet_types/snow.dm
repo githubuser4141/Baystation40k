@@ -8,18 +8,24 @@
 	map_generators = list(/datum/random_map/noise/exoplanet/snow, /datum/random_map/noise/ore/poor)
 	surface_color = "#e8faff"
 	water_color = "#b5dfeb"
-	habitability_weight = HABITABILITY_BAD
+	habitability_weight = HABITABILITY_TYPICAL
 	fauna_types = list(
 		/mob/living/simple_animal/hostile/retaliate/beast/samak,
 		/mob/living/simple_animal/hostile/retaliate/beast/diyaab,
-		/mob/living/simple_animal/hostile/retaliate/beast/shantak
+		/mob/living/simple_animal/hostile/meat/horrorminer,
+		/mob/living/simple_animal/hostile/meat/horrorsmall,
+		/mob/living/simple_animal/hostile/meat/abomination,
+		/mob/living/simple_animal/hostile/tree,
+		/mob/living/simple_animal/hostile/retaliate/beast/shantak,
+		/mob/living/simple_animal/hostile/retaliate/beast/shantak/lava
 	)
-	megafauna_types = list(/mob/living/simple_animal/hostile/retaliate/giant_crab)
+	megafauna_types = list(/mob/living/simple_animal/hostile/daemon/large)
 
 /obj/overmap/visitable/sector/exoplanet/snow/generate_atmosphere()
 	..()
 	var/datum/species/H = all_species[SPECIES_HUMAN]
-	var/generator/new_temp = generator("num", H.cold_level_1 - 50, H.cold_level_3, NORMAL_RAND)
+	// var/generator/new_temp = generator("num", H.cold_level_1 - 50, H.cold_level_3, NORMAL_RAND)
+	var/generator/new_temp = generator("num", T0C, H.heat_level_1 - 10, UNIFORM_RAND)
 	atmosphere.temperature = new_temp.Rand()
 	atmosphere.update_values()
 

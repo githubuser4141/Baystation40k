@@ -1,7 +1,7 @@
 /obj/structure/bed
 	name = "bed"
 	desc = "This is used to lie in, sleep in or strap on."
-	icon = 'icons/obj/structures/furniture.dmi'
+	icon = 'icons/obj/furniture.dmi'
 	icon_state = "bed"
 	anchored = TRUE
 	can_buckle = TRUE
@@ -52,9 +52,6 @@
 		AddOverlays(stool_cache[padding_cache_key])
 
 	// Strings.
-	if(material_alteration & MATERIAL_ALTERATION_NAME)
-		SetName(padding_material ? "[padding_material.adjective_name] [initial(name)]" : "[material.adjective_name] [initial(name)]") //this is not perfect but it will do for now.
-
 	if(material_alteration & MATERIAL_ALTERATION_DESC)
 		desc = initial(desc)
 		desc += padding_material ? " It's made of [material.use_name] and covered with [padding_material.use_name]." : " It's made of [material.use_name]."
@@ -212,3 +209,31 @@
 	name = "dirty mattress"
 	icon_state = "dirty_mattress"
 	desc = "A dirty, smelly mattress covered in body fluids. You wouldn't want to touch this."
+
+/obj/structure/bed/warhammer/on_update_icon()
+	icon_state = "[icon_state]"
+
+/obj/structure/bed/warhammer/royal
+	name = "royal bed"
+	desc = "For prime comfort in absolute luxury."
+	icon = 'icons/obj/bigbed.dmi'
+	icon_state = "bed"
+
+/obj/structure/bed/warhammer/royal/bottom
+	name = "royal bed"
+	desc = "For prime comfort in absolute luxury."
+	icon_state = "bed2"
+
+/obj/structure/bed/krootbed
+	name = "kroot bed"
+	desc = "The bed of a Kroot Hunter"
+
+/obj/structure/bed/warhammer/barrack
+	name = "bunk bed"
+	desc = "For tired soldiers to rest on, aswell as wounded, deceased, dying, and so on."
+	icon = 'icons/map_project/furniture_and_decor.dmi'
+	icon_state = "cerb0"
+
+/obj/structure/bed/warhammer/barrack1
+	icon = 'icons/map_project/furniture_and_decor.dmi'
+	icon_state = "cerb1"

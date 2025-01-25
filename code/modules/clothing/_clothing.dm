@@ -140,8 +140,8 @@
 
 	//Set species_restricted list
 	switch(target_species)
-		if(SPECIES_HUMAN, SPECIES_SKRELL)	//humanoid bodytypes
-			species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_IPC) //skrell/humans/machines can wear each other's suits
+		if(SPECIES_HUMAN, SPECIES_TAU)	//humanoid bodytypes
+			species_restricted = list(SPECIES_HUMAN, SPECIES_TAU, SPECIES_IPC) //skrell/humans/machines can wear each other's suits
 		else
 			species_restricted = list(target_species)
 
@@ -156,10 +156,10 @@
 
 	//Set species_restricted list
 	switch(target_species)
-		if(SPECIES_SKRELL)
-			species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_IPC) //skrell helmets fit humans too
+		if(SPECIES_TAU)
+			species_restricted = list(SPECIES_HUMAN, SPECIES_TAU, SPECIES_IPC) //skrell helmets fit humans too
 		if(SPECIES_HUMAN)
-			species_restricted = list(SPECIES_HUMAN, SPECIES_IPC) //human helmets fit IPCs too
+			species_restricted = list(SPECIES_HUMAN, SPECIES_TAU, SPECIES_IPC) //human helmets fit IPCs too
 		else
 			species_restricted = list(target_species)
 
@@ -259,9 +259,7 @@
 	item_state = "earmuffs"
 	slot_flags = SLOT_EARS | SLOT_TWOEARS
 	volume_multiplier = 0.1
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_ears_unathi.dmi'
-	)
+
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -285,7 +283,6 @@ BLIND     // can't see anything
 	slot_flags = SLOT_EYES
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_eyes_vox.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_eyes_unathi.dmi',
 	)
 
 /obj/item/clothing/glasses/get_icon_state(mob/user_mob, slot)
@@ -391,15 +388,27 @@ BLIND     // can't see anything
 	var/mob/living/carbon/human/wearer = null	//Used for covered rings when dropping
 	body_parts_covered = HANDS
 	slot_flags = SLOT_GLOVES
+	heat_protection = HANDS
+	cold_protection = HANDS
 	item_flags = ITEM_FLAG_WASHER_ALLOWED
+	min_cold_protection_temperature = ARMOR_MIN_COLD_PROTECTION_TEMPERATURE
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE
 	attack_verb = list("challenged")
-	species_restricted = list("exclude",SPECIES_NABBER, SPECIES_UNATHI, SPECIES_VOX)
+	species_restricted = list("exclude",SPECIES_NABBER, SPECIES_VOX)
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_hands_vox.dmi',
-		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_hands_gas.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_hands_unathi.dmi'
+		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_hands_gas.dmi'
 	)
 	blood_overlay_type = "bloodyhands"
+	armor = list(
+		melee = ARMOR_MELEE_FLAK-2,
+		bullet = ARMOR_BALLISTIC_FLAK-3,
+		laser = ARMOR_LASER_FLAK-3,
+		energy = ARMOR_ENERGY_TEN,
+		bio = ARMOR_BIO_THIRTY,
+		rad = ARMOR_RAD_THIRTY+15,
+		bomb = ARMOR_BOMB_TEN-5
+	)
 
 /obj/item/clothing/gloves/Initialize()
 	if(item_flags & ITEM_FLAG_PREMODIFIED)
@@ -447,7 +456,7 @@ BLIND     // can't see anything
 	name = "modified [name]"
 	desc = "[desc]<br>They have been modified to accommodate a different shape."
 	if("exclude" in species_restricted)
-		species_restricted -= SPECIES_UNATHI
+		species_restricted -= SPECIES_KROOT
 	return
 
 /obj/item/clothing/gloves/mob_can_equip(mob/user)
@@ -497,7 +506,6 @@ BLIND     // can't see anything
 		)
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_head_vox.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi',
 		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_head_gas.dmi'
 	)
 	body_parts_covered = HEAD
@@ -505,6 +513,10 @@ BLIND     // can't see anything
 	item_flags = ITEM_FLAG_WASHER_ALLOWED
 	w_class = ITEM_SIZE_SMALL
 	blood_overlay_type = "helmetblood"
+	cold_protection = HEAD
+	min_cold_protection_temperature = HELMET_MIN_COLD_PROTECTION_TEMPERATURE+25
+	heat_protection = HEAD
+	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE-100
 
 	var/image/light_overlay_image
 	var/light_overlay = "helmet_light"
@@ -625,8 +637,7 @@ BLIND     // can't see anything
 	item_flags = ITEM_FLAG_WASHER_ALLOWED
 	body_parts_covered = FACE|EYES
 	sprite_sheets = list(
-		SPECIES_VOX = 'icons/mob/species/vox/onmob_mask_vox.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_mask_unathi.dmi',
+		SPECIES_VOX = 'icons/mob/species/vox/onmob_mask_vox.dmi'
 		)
 
 	var/voicechange = 0
@@ -705,11 +716,10 @@ BLIND     // can't see anything
 	slot_flags = SLOT_FEET
 	item_flags = ITEM_FLAG_WASHER_ALLOWED
 	permeability_coefficient = 0.50
-	force = 2
-	species_restricted = list("exclude", SPECIES_NABBER, SPECIES_UNATHI, SPECIES_VOX)
+	force = 5
+	species_restricted = list("exclude", SPECIES_NABBER, SPECIES_VOX, SPECIES_KROOT)
 	sprite_sheets = list(
-		SPECIES_VOX = 'icons/mob/species/vox/onmob_feet_vox.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_feet_unathi.dmi',
+		SPECIES_VOX = 'icons/mob/species/vox/onmob_feet_vox.dmi'
 		)
 	blood_overlay_type = "shoeblood"
 	var/overshoes = 0
@@ -718,6 +728,21 @@ BLIND     // can't see anything
 	var/can_add_hidden_item = TRUE
 	var/hidden_item_max_w_class = ITEM_SIZE_SMALL
 	var/obj/item/hidden_item = null
+	cold_protection = FEET
+	heat_protection = FEET
+	max_pressure_protection = VOIDSUIT_MAX_PRESSURE
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE+100
+	min_cold_protection_temperature = ARMOR_MIN_COLD_PROTECTION_TEMPERATURE
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE+500
+	armor = list(
+		melee = ARMOR_MELEE_FLAK-2,
+		bullet = ARMOR_BALLISTIC_FLAK-3,
+		laser = ARMOR_LASER_FLAK-3,
+		energy = ARMOR_ENERGY_TEN,
+		bio = ARMOR_BIO_THIRTY+5,
+		rad = ARMOR_RAD_THIRTY+35,
+		bomb = ARMOR_BOMB_TEN
+	)
 
 /obj/item/clothing/shoes/Destroy()
 	. = ..()
@@ -874,11 +899,10 @@ BLIND     // can't see anything
 	item_flags = ITEM_FLAG_WASHER_ALLOWED
 	blood_overlay_type = "suit"
 	siemens_coefficient = 0.9
-	w_class = ITEM_SIZE_NORMAL
+	w_class = ITEM_SIZE_LARGE
 
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_suit_vox.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
 		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_suit_gas.dmi'
 	)
 
@@ -921,7 +945,7 @@ BLIND     // can't see anything
 	item_flags = ITEM_FLAG_WASHER_ALLOWED
 	w_class = ITEM_SIZE_NORMAL
 	force = 0
-	var/has_sensor = SUIT_HAS_SENSORS //For the crew computer 2 = unable to change mode
+	var/has_sensor = SUIT_NO_SENSORS //For the crew cogitator 2 = unable to change mode
 	var/sensor_mode = SUIT_SENSOR_OFF
 		/*
 		1 = Report living/dead
@@ -933,8 +957,7 @@ BLIND     // can't see anything
 	var/rolled_sleeves = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_under_vox.dmi',
-		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_under_gas.dmi',
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_under_unathi.dmi'
+		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_under_gas.dmi'
 	)
 
 	//convenience var for defining the icon state for the overlay used when the clothing is worn.
@@ -943,7 +966,7 @@ BLIND     // can't see anything
 	//Whether the clothing item has gender-specific states when worn.
 	var/gender_icons = 0
 	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY,ACCESSORY_SLOT_HOLSTER,ACCESSORY_SLOT_ARMBAND,ACCESSORY_SLOT_RANK,ACCESSORY_SLOT_FLASH,ACCESSORY_SLOT_DECOR,ACCESSORY_SLOT_MEDAL,ACCESSORY_SLOT_INSIGNIA)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_UTILITY,ACCESSORY_SLOT_HOLSTER,ACCESSORY_SLOT_ARMBAND,ACCESSORY_SLOT_RANK,ACCESSORY_SLOT_FLASH)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_UTILITY,ACCESSORY_SLOT_HOLSTER,ACCESSORY_SLOT_ARMBAND,ACCESSORY_SLOT_RANK,ACCESSORY_SLOT_FLASH,ACCESSORY_SLOT_ARMOR_CHEST, ACCESSORY_SLOT_ARMOR_ARMS, ACCESSORY_SLOT_ARMOR_LEGS, ACCESSORY_SLOT_ARMOR_STORAGE)
 
 /obj/item/clothing/under/New()
 	..()
@@ -1173,7 +1196,8 @@ BLIND     // can't see anything
 	update_clothing_icon()
 
 /obj/item/clothing/under/rank/New()
-	sensor_mode = pick(list_values(SUIT_SENSOR_MODES))
+	sensor_mode = SUIT_SENSOR_OFF
+	has_sensor = 1
 	..()
 
 /obj/item/clothing/under/AltClick(mob/user)

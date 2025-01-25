@@ -1,21 +1,21 @@
 /obj/landmark/corpse/fleet
-	name = "Fleet Armsman"
+	name = "Imperial Navy Armsman"
 	corpse_outfits = list(/singleton/hierarchy/outfit/job/torch/ert/hostile)
 	spawn_flags = CORPSE_SPAWNER_RANDOM_NAMELESS | CORPSE_SPAWNER_ALL_SKIPS
 
 /obj/landmark/corpse/fleet/leader
-	name = "Fleet Team Leader"
+	name = "Imperial Navy Team Leader"
 	corpse_outfits = list(/singleton/hierarchy/outfit/job/torch/ert/hostile/leader)
 
 /obj/landmark/corpse/fleet/space
-	name = "Fleet Assault Armsman"
+	name = "Imperial Navy Assault Armsman"
 	corpse_outfits = list(/singleton/hierarchy/outfit/job/torch/ert/hostile/suit)
 
 /obj/item/clothing/suit/armor/bulletproof/armsman
 	valid_accessory_slots = list(ACCESSORY_SLOT_INSIGNIA, ACCESSORY_SLOT_ARMOR_ARMS, ACCESSORY_SLOT_ARMOR_LEGS, ACCESSORY_SLOT_ARMOR_STORAGE)
 	accessories = list(
-		/obj/item/clothing/accessory/arm_guards/riot,
-		/obj/item/clothing/accessory/leg_guards/riot,
+		/obj/item/clothing/accessory/arm_guards/flak,
+		/obj/item/clothing/accessory/leg_guards/flak,
 		/obj/item/clothing/accessory/armor_tag/solgov/lead,
 		/obj/item/clothing/accessory/storage/pouches
 		)
@@ -24,8 +24,8 @@
 	accessories = list(/obj/item/clothing/accessory/helmet_cover/lead)
 
 /mob/living/simple_animal/hostile/human/fleet
-	name = "\improper Fleet Armsman"
-	desc = "An armsman wearing Fleet garbs. They have a Fleet patch on their uniform, and pride on their shoulders."
+	name = "\improper Imperial Navy Armsman"
+	desc = "An armsman wearing Imperial Navy garbs. They have a Imperial Navy patch on their uniform, and pride on their shoulders."
 	icon_state = "fleetarmsman"
 	icon_living = "fleetarmsman"
 	icon_dead = "fleetassault_dead"
@@ -35,12 +35,12 @@
 	response_disarm = "shoves"
 	response_harm = "hits"
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_SMALL
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_PRIMAL
 		)
 	speed = 8
-	maxHealth = 100
+	maxhealth = 100
 	health = 100
 	harm_intent_damage = 5
 	natural_weapon = /obj/item/natural_weapon/punch
@@ -72,7 +72,7 @@
 ///////////////Pistol////////////////
 
 /mob/living/simple_animal/hostile/human/fleet/ranged
-	name = "\improper Armed Fleet Armsman"
+	name = "\improper Armed Imperial Navy Armsman"
 	icon_state = "fleetarmsmanarmed"
 	icon_living = "fleetarmsmanarmed"
 
@@ -91,7 +91,7 @@
 //////////////Bullpup////////////////
 
 /mob/living/simple_animal/hostile/human/fleet/ranged/bullpup
-	name = "\improper Fleet Rifleman"
+	name = "\improper Imperial Navy Rifleman"
 	icon_state = "fleetrifleman"
 	icon_living = "fleetrifleman"
 	casingtype = /obj/item/ammo_casing/rifle
@@ -107,11 +107,11 @@
 //////////////Team Leader////////////////
 
 /mob/living/simple_animal/hostile/human/fleet/ranged/leader
-	name = "\improper Fleet Team Leader"
-	desc = "A Fleet armsman with armaments. This one seems to be more armed than the rest, sporting a Vesper machine-pistol."
+	name = "\improper Imperial Navy Team Leader"
+	desc = "A Imperial Navy armsman with armaments. This one seems to be more armed than the rest, sporting a Vesper machine-pistol."
 	icon_state = "fleetteamlead"
 	icon_living = "fleetteamlead"
-	maxHealth = 150
+	maxhealth = 150
 	health = 150
 	casingtype = /obj/item/ammo_casing/pistol
 	projectiletype = /obj/item/projectile/bullet/pistol
@@ -133,20 +133,20 @@
 //////////////Rigsuit////////////////
 
 /mob/living/simple_animal/hostile/human/fleet/space
-	name = "\improper Fleet Assault Armsman"
-	desc = "A Fleet Armsman clad in a special-purpose rigsuit. They seem tough and hardy."
+	name = "\improper Imperial Navy Assault Armsman"
+	desc = "A Imperial Navy Armsman clad in a special-purpose rigsuit. They seem tough and hardy."
 	icon_state = "fleetassault"
 	icon_living = "fleetassault"
 	icon_dead = "fleetassault_dead"
 	corpse = /obj/landmark/corpse/fleet/space
 	ranged = TRUE
 	natural_armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_CARAPACE,
+		laser = ARMOR_LASER_FLAK
 		)
 	speed = 4
-	maxHealth = 200
+	maxhealth = 200
 	health = 200
 	min_gas = null
 	max_gas = null
@@ -214,12 +214,12 @@
 #define ATTACK_MODE_SAW      "saw"
 
 /mob/living/simple_animal/hostile/human/fleet/space/ranged/heavy
-	name = "\improper Fleet Heavy Weapons Specialist"
-	desc = "A Fleet Specialist clad in a heavier variant of the special-purpose rigsuit. Their module seems to carry a shoulder-mounted laser. Complementing their L6 SAW."
+	name = "\improper Imperial Navy Heavy War Gear Specialist"
+	desc = "A Imperial Navy Specialist clad in a heavier variant of the special-purpose rigsuit. Their module seems to carry a shoulder-mounted laser. Complementing their L6 SAW."
 	icon_state = "fleetheavy"
 	icon_living = "fleetheavy"
 	rapid = TRUE
-	maxHealth = 300
+	maxhealth = 300
 	health = 300
 	special_attack_cooldown = 1.5 MINUTES
 	base_attack_cooldown = 0.5 SECONDS

@@ -10,9 +10,9 @@
 	flags_inv = HIDEFACE|BLOCKHAIR
 	permeability_coefficient = 0.01
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_SMALL,
 		bomb = ARMOR_BOMB_RESISTANT,
 		bio = ARMOR_BIO_SHIELDED,
@@ -21,8 +21,8 @@
 
 //Captain's space suit This is not the proper path but I don't currently know enough about how this all works to mess with it.
 /obj/item/clothing/suit/armor/captain
-	name = "Captain's armor"
-	desc = "A bulky, heavy-duty piece of exclusive corporate armor. YOU are in charge!"
+	name = "Captain's armour"
+	desc = "A bulky, heavy-duty piece of exclusive imperial armor. YOU are in charge!"
 	icon_state = "caparmor"
 	item_state_slots = list(
 		slot_l_hand_str = "capspacesuit",
@@ -43,13 +43,14 @@
 		/obj/item/gun/projectile,
 		/obj/item/ammo_magazine,
 		/obj/item/ammo_casing,
-		/obj/item/melee/baton,
+		/obj/item/material/twohanded/ravenor,
+		/obj/item/melee,
 		/obj/item/handcuffs
 	)
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR,
-		bullet = ARMOR_BALLISTIC_RESISTANT,
-		laser = ARMOR_LASER_HANDGUNS,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_FLAK,
 		energy = ARMOR_ENERGY_SMALL,
 		bomb = ARMOR_BOMB_RESISTANT,
 		bio = ARMOR_BIO_SHIELDED,

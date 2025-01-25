@@ -24,10 +24,9 @@ GLOBAL_DATUM_INIT(cult, /datum/antagonist/cultist, new)
 	id = MODE_CULTIST
 	role_text = "Cultist"
 	role_text_plural = "Cultists"
-	restricted_jobs = list(/datum/job/lawyer, /datum/job/captain, /datum/job/hos, /datum/job/officer, /datum/job/warden, /datum/job/detective)
-	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/chaplain, /datum/job/psychiatrist, /datum/job/submap)
+	restricted_jobs = list(/datum/job/lawyer, /datum/job/rogue_trader, /datum/job/guard_captain, /datum/job/enforcer, /datum/job/enforcer_sergeant, /datum/job/guardsman)
+	blacklisted_jobs = null
 	feedback_tag = "cult_objective"
-	antag_indicator = "hudcultist"
 	welcome_text = "You have a tome in your possession; one that will help you start the cult. Use it well and remember - there are others."
 	victory_text = "The cult wins! It has succeeded in serving its dark masters!"
 	loss_text = "The staff managed to stop the cult!"
@@ -38,8 +37,7 @@ GLOBAL_DATUM_INIT(cult, /datum/antagonist/cultist, new)
 	hard_cap_round = 6
 	initial_spawn_req = 4
 	initial_spawn_target = 6
-	antaghud_indicator = "hudcultist"
-	skill_setter = /datum/antag_skill_setter/station
+	antaghud_indicator = null // formerly hudcultist
 
 	var/allow_narsie = 1
 	var/powerless = 0
@@ -50,11 +48,11 @@ GLOBAL_DATUM_INIT(cult, /datum/antagonist/cultist, new)
 	var/cult_rating = 0
 	var/list/cult_rating_bounds = list(CULT_RUNES_1, CULT_RUNES_2, CULT_RUNES_3, CULT_GHOSTS_1, CULT_GHOSTS_2, CULT_GHOSTS_3)
 	var/max_cult_rating = 0
-	var/conversion_blurb = "You catch a glimpse of the Realm of Nar-Sie, the Geometer of Blood. You now see how flimsy the world is, you see that it should be open to the knowledge of That Which Waits. Assist your new compatriots in their dark dealings. Their goals are yours, and yours are theirs. You serve the Dark One above all else. Bring It back."
+	var/conversion_blurb = "You catch a glimpse of the Realm of the Sovereign, the Geometer of Blood. You now see how flimsy the world is, you see that it should be open to the knowledge of That Which Waits. Assist your new compatriots in their dark dealings. Their goals are yours, and yours are theirs. You serve the Dark One above all else. Bring It back."
 	var/station_summon_only = TRUE
 	var/no_shuttle_summon = TRUE
 
-	faction = "cult"
+	faction = "Chaos"
 
 /datum/antagonist/cultist/create_global_objectives()
 
@@ -62,8 +60,8 @@ GLOBAL_DATUM_INIT(cult, /datum/antagonist/cultist, new)
 		return
 
 	global_objectives = list()
-	if(prob(50))
-		global_objectives |= new /datum/objective/cult/survive
+	if(prob(20))
+		global_objectives |= new /datum/objective/cult/sacrifice
 	else
 		global_objectives |= new /datum/objective/cult/eldergod
 

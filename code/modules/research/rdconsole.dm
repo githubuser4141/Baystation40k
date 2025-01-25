@@ -61,7 +61,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	var/obj/machinery/r_n_d/circuit_imprinter/linked_imprinter = null	//Linked Circuit Imprinter
 
 	var/screen = 1.0	//Which screen is currently showing.
-	var/id = 0			//ID of the computer (for server restrictions).
+	var/id = 0			//ID of the cogitator (for server restrictions).
 	var/sync = 1		//If sync = 0, it doesn't show up on Server Control Console
 	var/can_analyze = TRUE //If the console is allowed to use destructive analyzers
 
@@ -72,7 +72,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	var/imprinter_search = ""
 	var/quick_deconstruct = FALSE
 
-	req_access = list(access_research)	//Data and setting manipulation requires scientist access.
+	req_access = list(access_mechanicus)	//Data and setting manipulation requires researcher access.
 
 /obj/machinery/computer/rdconsole/proc/CallMaterialName(ID)
 	var/return_name = ID
@@ -268,7 +268,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		if(linked_destroy.busy)
 			to_chat(usr, SPAN_NOTICE("The destructive analyzer is busy at the moment."))
 			return TOPIC_HANDLED
-		if(alert("Proceeding will destroy loaded item. Continue?", "Destructive analyzer confirmation", "Yes", "No") == "No")
+		if(alert("Proceeding will destroy loaded item. Continue?", "Destructive analyzer confirmation", "Compliance", "No") == "No")
 			return TOPIC_HANDLED
 		CHECK_DESTROY
 		deconstruct(weakref(usr))
@@ -988,7 +988,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 /obj/machinery/computer/rdconsole/robotics
 	name = "robotics fabrication console"
 	id = 2
-	req_access = list(access_robotics)
+	req_access = list(access_mechanicus)
 	can_analyze = FALSE
 
 /obj/machinery/computer/rdconsole/core

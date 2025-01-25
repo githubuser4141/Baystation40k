@@ -50,7 +50,7 @@
 	solribbons["Frontier ribbon"] = /obj/item/clothing/accessory/ribbon/solgov/frontier
 	solribbons["Instructor ribbon"] = /obj/item/clothing/accessory/ribbon/solgov/instructor
 	solribbons["Combat Action ribbon"] = /obj/item/clothing/accessory/ribbon/solgov/combat
-	solribbons["Gaia Conflict ribbon"] = /obj/item/clothing/accessory/ribbon/solgov/gaiaconflict
+	solribbons["Ultramar Conflict ribbon"] = /obj/item/clothing/accessory/ribbon/solgov/gaiaconflict
 	solribbons["Distinguished unit ribbon"] = /obj/item/clothing/accessory/ribbon/solgov/distinguished_unit
 	gear_tweaks += new/datum/gear_tweak/path(solribbons)
 
@@ -60,27 +60,27 @@
 	custom_setup_proc = /obj/item/clothing/accessory/badge/solgov/tags/proc/loadout_setup
 
 /datum/gear/accessory/ec_scarf
-	display_name = "Expeditionary Corps scarf"
+	display_name = "Explorator scarf"
 	path = /obj/item/clothing/accessory/solgov/ec_scarf
-	description = "A section-specific scarf for Expeditionary Corps uniforms."
+	description = "A section-specific scarf for Explorator uniforms."
 	flags = GEAR_HAS_TYPE_SELECTION | GEAR_HAS_NO_CUSTOMIZATION
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps
 	)
 
 /datum/gear/accessory/ec_patch
-	display_name = "Expeditionary Corps patch"
+	display_name = "Explorator patch"
 	path = /obj/item/clothing/accessory/solgov/ec_patch
-	description = "A shoulder patch representing the Expeditionary Corps."
+	description = "A shoulder patch representing the Explorator."
 	flags = GEAR_HAS_TYPE_SELECTION | GEAR_HAS_NO_CUSTOMIZATION
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps
 	)
 
 /datum/gear/accessory/torch_patch
-	display_name = "Torch mission patch"
+	display_name = "Dauntless mission patch"
 	path = /obj/item/clothing/accessory/solgov/torch_patch
-	description = "A shoulder patch representing the SEV Torch and its mission. Given to all the oddjobs pulled from various branches to work on the Torch."
+	description = "A shoulder patch representing the SEV Dauntless and its mission. Given to all the oddjobs pulled from various branches to work on The Dauntless."
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 
 /datum/gear/accessory/pilot_pin
@@ -104,7 +104,7 @@
 	)
 
 /datum/gear/accessory/armband_ma
-	display_name = "master at arms brassard"
+	display_name = "militarum brassard"
 	path = /obj/item/clothing/accessory/armband/solgov/ma
 	allowed_roles = SECURITY_ROLES
 	flags = GEAR_HAS_NO_CUSTOMIZATION
@@ -120,8 +120,8 @@
 
 /datum/gear/accessory/armband_emt
 	allowed_roles = list(
-		/datum/job/doctor,
-		/datum/job/medical_trainee
+		/datum/job/medicae,
+		/datum/job/novitiate
 	)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 
@@ -129,11 +129,11 @@
 	display_name = "medical armband"
 	path = /obj/item/clothing/accessory/armband/medblue
 	allowed_roles = list(
-		/datum/job/cmo,
-		/datum/job/senior_doctor,
-		/datum/job/junior_doctor,
-		/datum/job/doctor,
-		/datum/job/medical_trainee
+		/datum/job/magos_biologis,
+		/datum/job/juniormedicae,
+		/datum/job/sister_hospitaller,
+		/datum/job/medicae,
+		/datum/job/novitiate
 	)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 
@@ -150,16 +150,16 @@
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 
 /datum/gear/accessory/armband_nt
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/accessory/ntaward
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/accessory/tie
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/accessory/tie_color
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/accessory/neckerchief
 
@@ -197,59 +197,59 @@
 
 /datum/gear/clothing/hawaii
 	allowed_roles = SEMIFORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/scarf
 
 /datum/gear/clothing/flannel
 	allowed_roles = SEMIFORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/vest
 	allowed_roles = FORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/suspenders
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/suspenders/colorable
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/wcoat
 	allowed_roles = FORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/zhongshan
 	allowed_roles = FORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/dashiki
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/thawb
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/sherwani
 	allowed_roles = FORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/qipao
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/sweater
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/clothing/tangzhuang
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/accessory/bowtie
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/accessory/ftu_pin
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/foundation_civilian
-	allowed_roles = list(/datum/job/psychiatrist)
+	allowed_roles = list(/datum/job/rogue_guest)
 
 /*********************
  tactical accessories
@@ -275,7 +275,7 @@
 /datum/gear/tactical/ubac/misc
 	display_name = "miscellaneous UBAC shirt selection"
 	path = /obj/item/clothing/accessory/ubac
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/tactical/ubac/misc/New()
 	..()
@@ -294,15 +294,13 @@
 	display_name = "navy armor pouches"
 	path = /obj/item/clothing/accessory/storage/pouches/navy
 	allowed_branches = list(
-		/datum/mil_branch/fleet,
-		/datum/mil_branch/civilian
+		/datum/mil_branch/fleet
 	)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 
 /datum/gear/tactical/armor_pouches/misc
 	display_name = "miscellaneous armor pouches selection"
 	path = /obj/item/clothing/accessory/storage/pouches
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/tactical/armor_pouches/misc/New()
 	..()
@@ -321,15 +319,13 @@
 	display_name = "navy large armor pouches"
 	path = /obj/item/clothing/accessory/storage/pouches/large/navy
 	allowed_branches = list(
-		/datum/mil_branch/fleet,
-		/datum/mil_branch/civilian
+		/datum/mil_branch/fleet
 	)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 
 /datum/gear/tactical/large_pouches/misc
 	display_name = "miscellaneous large armor pouches selection"
 	path = /obj/item/clothing/accessory/storage/pouches/large
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/tactical/large_pouches/misc/New()
 	..()

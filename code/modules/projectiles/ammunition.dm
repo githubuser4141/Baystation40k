@@ -111,6 +111,7 @@
 	w_class = ITEM_SIZE_SMALL
 	throw_speed = 4
 	throw_range = 10
+	sales_price = 400
 
 	var/list/stored_ammo = list()
 	var/mag_type = SPEEDLOADER //ammo_magazines can only be used with compatible guns. This is not a bitflag, the load_method var on guns is.
@@ -202,9 +203,9 @@
 	else if (ammo_type == /obj/item/ammo_casing/pistol/practice)
 		AddOverlays(image(icon, "[initial(icon_state)]_p"))
 
-	else if (ammo_type == /obj/item/ammo_casing/pistol/small/rubber)
+	else if (ammo_type == /obj/item/ammo_casing/pistol/tech/rubber)
 		AddOverlays(image(icon, "[initial(icon_state)]_r"))
-	else if (ammo_type == /obj/item/ammo_casing/pistol/small/practice)
+	else if (ammo_type == /obj/item/ammo_casing/pistol/tech/practice)
 		AddOverlays(image(icon, "[initial(icon_state)]_p"))
 
 	else if (ammo_type == /obj/item/ammo_casing/rifle/military/practice)

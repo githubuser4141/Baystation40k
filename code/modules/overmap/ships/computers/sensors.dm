@@ -9,12 +9,12 @@
 	silicon_restriction = STATUS_UPDATE
 	machine_name = "sensors console"
 	machine_desc = "Used to activate, monitor, and configure a spaceship's sensors. Higher range means higher temperature; dangerously high temperatures may fry the delicate equipment."
-	health_max = 100
+	health_max = 1400
 	var/weakref/sensor_ref
 	var/list/last_scan
 	var/muted = FALSE
 	var/sound_off = FALSE
-	var/print_language = LANGUAGE_HUMAN_EURO
+	var/print_language = LANGUAGE_HIGH_GOTHIC
 	var/working_sound = 'sound/machines/sensors/sensorloop.ogg'
 	var/datum/sound_token/sound_token
 	var/sound_id
@@ -30,7 +30,7 @@
 /obj/machinery/computer/ship/sensors/spacer
 	construct_state = /singleton/machine_construction/default/panel_closed/computer/no_deconstruct
 	base_type = /obj/machinery/computer/ship/sensors
-	print_language = LANGUAGE_SPACER
+	print_language = LANGUAGE_LOW_GOTHIC
 
 
 /obj/machinery/computer/ship/sensors/attempt_hook_up(obj/overmap/visitable/ship/sector)
@@ -251,13 +251,14 @@
 	anchored = TRUE
 	density = TRUE
 	construct_state = /singleton/machine_construction/default/panel_closed
-	health_max = 200
-	var/critical_heat = 50 // sparks and takes damage when active & above this heat
-	var/heat_reduction = 1.5 // mitigates this much heat per tick
+	health_max = 3500
+	health_min_damage = 35
+	var/critical_heat = 900 // sparks and takes damage when active & above this heat
+	var/heat_reduction = 5 // mitigates this much heat per tick
 	var/sensor_strength //used for detecting ships via contacts
 	var/heat = 0
 	var/range = 1
-	idle_power_usage = 5000
+	idle_power_usage = 1000
 	base_type = /obj/machinery/shipsensors
 	maximum_component_parts = list(/obj/item/stock_parts = 10) // Circuit, 5 manipulators, 3 subspace shit and 1 tesla coil
 
@@ -345,7 +346,7 @@
 
 /obj/machinery/shipsensors/RefreshParts()
 	..()
-	heat_reduction = round(total_component_rating_of_type(/obj/item/stock_parts/manipulator) / 3)
+	heat_reduction = round(total_component_rating_of_type(/obj/item/stock_parts/manipulator) / 3) + 3
 
 
 /obj/item/stock_parts/circuitboard/shipsensors
@@ -353,7 +354,7 @@
 	board_type = "machine"
 	icon_state = "mcontroller"
 	build_path = /obj/machinery/shipsensors
-	origin_tech = list(TECH_POWER = 3, TECH_ENGINEERING = 5, TECH_BLUESPACE = 3)
+	origin_tech = list(TECH_POWER = 3, TECH_ENGINEERING = 3, TECH_BLUESPACE = 3)
 	req_components = list(
 		/obj/item/stock_parts/subspace/ansible = 1,
 		/obj/item/stock_parts/subspace/filter = 1,

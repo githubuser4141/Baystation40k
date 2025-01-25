@@ -4,18 +4,16 @@
 	description = "Heavier and stronger than a baseline human, gravity-adapted people have \
 	thick radiation-resistant skin with a high lead content, denser bones, and recessed \
 	eyes beneath a prominent brow in order to shield them from the glare of a dangerously \
-	bright, alien sun. This comes at the cost of mobility, flexibility, and increased \
-	oxygen requirements to support their robust metabolism."
+	bright, alien sun."
 	icobase =     'icons/mob/human_races/species/human/subspecies/gravworlder_body.dmi'
 	preview_icon= 'icons/mob/human_races/species/human/subspecies/gravworlder_preview.dmi'
-	health_hud_intensity = 3
+	health_hud_intensity = 2
 
 	flash_mod =     0.9
-	oxy_mod =       1.1
-	breath_pressure = 18
-	radiation_mod = 0.5
-	brute_mod =     0.85
-	slowdown =      1
+	oxy_mod =       0.6
+	breath_pressure = 17
+	radiation_mod = 1
+	brute_mod =     0.7
 	strength = STR_HIGH
 
 	descriptors = list(
@@ -25,27 +23,20 @@
 
 	appearance_flags = SPECIES_APPEARANCE_HAS_HAIR_COLOR | SPECIES_APPEARANCE_HAS_SKIN_TONE_GRAV | SPECIES_APPEARANCE_HAS_LIPS | SPECIES_APPEARANCE_HAS_UNDERWEAR | SPECIES_APPEARANCE_HAS_EYE_COLOR
 
-/datum/species/human/gravworlder/can_float(mob/living/carbon/human/H)
-	. = ..()
-	if(.)
-		return H.skill_check(SKILL_HAULING, SKILL_EXPERIENCED) //Hard for them to swim
-
 /datum/species/human/spacer
 	name = SPECIES_SPACER
 	name_plural = "Space-Adapted Humans"
 	description = "Lithe and frail, these sickly folk were engineered for work in environments that \
 	lack both light and atmosphere. As such, they're quite resistant to asphyxiation as well as \
-	toxins, but they suffer from weakened bone structure and a marked vulnerability to bright lights."
+	toxins, but they suffer from weakened bone structure and unnatural radiation / toxin resistance."
 	icobase =     'icons/mob/human_races/species/human/subspecies/spacer_body.dmi'
 	preview_icon= 'icons/mob/human_races/species/human/subspecies/spacer_preview.dmi'
 
-	oxy_mod =   0.8
-	breath_pressure = 14
-	toxins_mod =   0.9
-	flash_mod = 1.2
-	brute_mod = 1.1
-	burn_mod =  1.1
-	darksight_range = 6
+	oxy_mod =   0.35
+	toxins_mod =   0.7
+	brute_mod = 0.78
+	radiation_mod = 0.6
+	darksight_range = 4
 	darksight_tint = DARKTINT_MODERATE
 
 	descriptors = list(
@@ -56,10 +47,10 @@
 	appearance_flags = SPECIES_APPEARANCE_HAS_HAIR_COLOR | SPECIES_APPEARANCE_HAS_SKIN_TONE_SPCR | SPECIES_APPEARANCE_HAS_LIPS | SPECIES_APPEARANCE_HAS_UNDERWEAR | SPECIES_APPEARANCE_HAS_EYE_COLOR
 	species_flags = SPECIES_FLAG_LOW_GRAV_ADAPTED
 
-	hazard_high_pressure = HAZARD_HIGH_PRESSURE * 0.8            // Dangerously high pressure.
-	warning_high_pressure = WARNING_HIGH_PRESSURE * 0.8          // High pressure warning.
-	warning_low_pressure = WARNING_LOW_PRESSURE * 0.8            // Low pressure warning.
-	hazard_low_pressure = HAZARD_LOW_PRESSURE * 0.8              // Dangerously low pressure.
+	hazard_high_pressure = HAZARD_HIGH_PRESSURE * 0.9            // Dangerously high pressure.
+	warning_high_pressure = WARNING_HIGH_PRESSURE * 0.9          // High pressure warning.
+	warning_low_pressure = WARNING_LOW_PRESSURE * 0.9            // Low pressure warning.
+	hazard_low_pressure = HAZARD_LOW_PRESSURE * 0.9              // Dangerously low pressure.
 
 /datum/species/human/vatgrown
 	name = SPECIES_VATGROWN
@@ -77,7 +68,7 @@
 	icobase =     'icons/mob/human_races/species/human/subspecies/vatgrown_body.dmi'
 	preview_icon= 'icons/mob/human_races/species/human/subspecies/vatgrown_preview.dmi'
 
-	toxins_mod =   1.1
+	toxins_mod =   0.75
 	has_organ = list(
 		BP_HEART =    /obj/item/organ/internal/heart,
 		BP_STOMACH =  /obj/item/organ/internal/stomach,
@@ -89,10 +80,10 @@
 		)
 
 	additional_available_cultural_info = list(
-		TAG_CULTURE = list(CULTURE_HUMAN_VATGROWN)
+		TAG_CULTURE = list(CULTURE_HUMAN_IMPERIAL)
 	)
 	default_cultural_info = list(
-		TAG_CULTURE = CULTURE_HUMAN_VATGROWN
+		TAG_CULTURE = CULTURE_HUMAN_IMPERIAL
 	)
 
 /datum/species/human/tritonian
@@ -109,9 +100,9 @@
 	slowdown = 1
 
 	oxy_mod =             0.5
-	brute_mod =           0.8
-	toxins_mod =          1.15
-	radiation_mod =       1.15
+	brute_mod =           0.75
+	toxins_mod =          1
+	radiation_mod =       0.75
 	body_temperature =    302
 	water_soothe_amount = 5
 
@@ -134,7 +125,7 @@
 		/datum/mob_descriptor/height,
 		/datum/mob_descriptor/build = 1
 		)
-
+	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = SPECIES_APPEARANCE_HAS_HAIR_COLOR | SPECIES_APPEARANCE_HAS_SKIN_TONE_TRITON | SPECIES_APPEARANCE_HAS_LIPS | SPECIES_APPEARANCE_HAS_UNDERWEAR | SPECIES_APPEARANCE_HAS_EYE_COLOR
 
 /datum/species/human/tritonian/can_float(mob/living/carbon/human/H)
@@ -144,8 +135,8 @@
 	return FALSE
 
 /datum/species/human/mule
-	name = SPECIES_MULE
-	name_plural = "Mules"
+	name = SPECIES_PSYKER
+	name_plural = "Psykers"
 	description = "Psionics are a relatively new phenomenon, theorized to be linked to long-term exposure to deep, \
 	uninhabited space. Sometimes, rarely, spacers and frontier colonists inhabiting the very fringes of civilization \
 	develop a strange affinity for psionic operancy. Derogatorily known as \"mules\", these individuals are often \
@@ -153,16 +144,15 @@
 	are short, but their raw psionic potential is unmatched."
 	preview_icon= 'icons/mob/human_races/species/human/subspecies/mule_preview.dmi'
 
-	spawn_flags =   SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN | SPECIES_NO_ROBOTIC_INTERNAL_ORGANS
-	brute_mod =     1.25
-	burn_mod =      1.25
-	oxy_mod =       1.25
-	toxins_mod =    1.25
-	radiation_mod = 1.25
-	flash_mod =     1.25
-	blood_volume =  SPECIES_BLOOD_DEFAULT * 0.85
+	spawn_flags =   SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN | SPECIES_NO_ROBOTIC_INTERNAL_ORGANS
+	brute_mod =     0.65
+	burn_mod =      0.65
+	oxy_mod =       0.5
+	toxins_mod =    0.7
+	radiation_mod = 0.6
+	flash_mod =     1.2
 	min_age =       18
-	max_age =       45
+	max_age =       500
 
 /datum/species/human/mule/handle_post_spawn(mob/living/carbon/human/H)
 	if(!H.psi)

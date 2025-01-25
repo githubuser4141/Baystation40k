@@ -13,7 +13,7 @@
 	slot_flags = SLOT_BELT
 
 	matter = list(MATERIAL_PLASTIC = 50, MATERIAL_GLASS = 20)
-	force = 7
+	force = 15
 
 	action_button_name = "Toggle Flashlight"
 	var/on = FALSE
@@ -190,7 +190,7 @@
 	desc = "A very, very heavy duty flashlight."
 	icon_state = "maglight"
 	item_state = "maglight"
-	force = 10
+	force = 18
 	base_parry_chance = 15
 	attack_verb = list ("smacked", "thwacked", "thunked")
 	matter = list(MATERIAL_ALUMINIUM = 200, MATERIAL_GLASS = 50)
@@ -204,13 +204,12 @@
 	desc = "A mining lantern."
 	icon_state = "lantern"
 	item_state = "lantern"
-	force = 10
+	force = 19
 	attack_verb = list ("bludgeoned", "bashed", "whack")
-	w_class = ITEM_SIZE_NORMAL
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
 	matter = list(MATERIAL_STEEL = 200,MATERIAL_GLASS = 100)
-	flashlight_range = 3
+	flashlight_range = 5
 	light_wedge = LIGHT_OMNI
 	light_color = COLOR_ORANGE
 	flashlight_power = 1
@@ -231,11 +230,35 @@
 	item_state = ""
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	w_class = ITEM_SIZE_TINY
-	flashlight_range = 2
+	flashlight_range = 3
 	flashlight_flags = FLASHLIGHT_CANNOT_BLIND
 
 
 // the desk lamps are a bit special
+/obj/item/device/flashlight/candelabra
+	name = "candelabra"
+	desc = "A candle holder with multiple arms. While there's flashlights some nobles prefer this."
+	icon = 'icons/map_project/fluff_items.dmi'
+	icon_state = "0candelabrum3"
+	item_state = "lantern"
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+	flashlight_range = 4
+	light_wedge = LIGHT_OMNI
+	light_color = COLOR_ORANGE
+	flashlight_power = 1
+	w_class = ITEM_SIZE_NORMAL
+	sales_price = 15
+	activation_sound = 'sound/items/torch_light.ogg'
+
+/obj/item/device/flashlight/candelabra/on_update_icon()
+	if (flashlight_flags & FLASHLIGHT_ALWAYS_ON)
+		return // Prevent update_icon shennanigans with objects that won't have on/off variant sprites
+
+	if(on)
+		icon_state = "candelabrum3"
+	else
+		icon_state = "0candelabrum3"
+
 /obj/item/device/flashlight/lamp
 	name = "desk lamp"
 	desc = "A desk lamp with an adjustable mount."
@@ -285,7 +308,7 @@
 
 /obj/item/device/flashlight/flare/Initialize()
 	. = ..()
-	fuel = rand(4 MINUTES, 5 MINUTES) // Sorry for changing this so much but I keep under-estimating how long X number of ticks last in seconds.v
+	fuel = rand(6 MINUTES, 9 MINUTES) // Sorry for changing this so much but I keep under-estimating how long X number of ticks last in seconds.v
 	update_icon()
 
 /obj/item/device/flashlight/flare/Destroy()

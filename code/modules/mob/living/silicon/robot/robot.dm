@@ -5,7 +5,7 @@
 	real_name = "Cyborg"
 	icon = 'icons/mob/robots.dmi'
 	icon_state = "robot"
-	maxHealth = 300
+	maxhealth = 300
 	health = 300
 
 	mob_bump_flag = ROBOT
@@ -76,7 +76,7 @@
 
 	var/spawn_sound = 'sound/voice/liveagain.ogg'
 	var/pitch_toggle = TRUE
-	var/list/req_access = list(access_robotics)
+	var/list/req_access = list(access_mechanicus)
 	var/ident = 0
 	var/modtype = "Default"
 	var/datum/effect/spark_spread/spark_system //So they can initialize sparks whenever/N
@@ -101,7 +101,7 @@
 	spark_system.attach(src)
 
 	add_language(LANGUAGE_ROBOT_GLOBAL, 1)
-	add_language(LANGUAGE_EAL, 1)
+	add_language(LANGUAGE_MECHANICUS, 1)
 
 	wires = new(src)
 
@@ -351,7 +351,7 @@
 	var/dat = "<HEAD><TITLE>[src.name] Self-Diagnosis Report</TITLE></HEAD><BODY>\n"
 	for (var/V in components)
 		var/datum/robot_component/C = components[V]
-		dat += "<b>[C.name]</b><br><table><tr><td>Brute Damage:</td><td>[C.brute_damage]</td></tr><tr><td>Electronics Damage:</td><td>[C.electronics_damage]</td></tr><tr><td>Powered:</td><td>[(!C.idle_usage || C.is_powered()) ? "Yes" : "No"]</td></tr><tr><td>Toggled:</td><td>[ C.toggled ? "Yes" : "No"]</td></table><br>"
+		dat += "<b>[C.name]</b><br><table><tr><td>Brute Damage:</td><td>[C.brute_damage]</td></tr><tr><td>Electronics Damage:</td><td>[C.electronics_damage]</td></tr><tr><td>Powered:</td><td>[(!C.idle_usage || C.is_powered()) ? "Compliance" : "No"]</td></tr><tr><td>Toggled:</td><td>[ C.toggled ? "Compliance" : "No"]</td></table><br>"
 
 	return dat
 
@@ -1107,7 +1107,7 @@
 
 	if (length(module_sprites) > 1 && triesleft >= 1 && client)
 		icon_selection_tries--
-		var/choice = input("Look at your icon - is this what you want?") in list("Yes","No")
+		var/choice = input("Look at your icon - is this what you want?") in list("Compliance","No")
 		if(choice=="No")
 			choose_icon(icon_selection_tries, module_sprites)
 			return

@@ -38,7 +38,7 @@
 	gas_transfer_coefficient = 0.90
 	permeability_coefficient = 0.01
 	armor = list(
-		bio = ARMOR_BIO_RESISTANT
+		bio = ARMOR_BIO_FIFTY
 		)
 	down_gas_transfer_coefficient = 1
 	down_body_parts_covered = null
@@ -116,7 +116,7 @@
 	item_flags = null
 	body_parts_covered = FACE|EYES
 	action_button_name = "Toggle MUI"
-	origin_tech = list(TECH_DATA = 5, TECH_ENGINEERING = 5)
+	origin_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 3)
 	active = FALSE
 	var/mob/observer/eye/cameranet/eye
 
@@ -176,7 +176,7 @@
 
 /obj/item/clothing/mask/rubber/trasen
 	name = "\improper Jack Trasen mask"
-	desc = "CEO of NanoTrasen corporation. Perfect for scaring the unionizing children."
+	desc = "CEO of Necromundan corporation. Perfect for scaring the unionizing children."
 	icon_state = "trasen"
 	visible_name = "Jack Trasen"
 
@@ -187,14 +187,14 @@
 	visible_name = "Amaya Barros"
 
 /obj/item/clothing/mask/rubber/admiral
-	name = "\improper Admiral Diwali mask"
-	desc = "Admiral that led the infamous last stand at Helios against the Independent Navy in the Gaia conflict. For bridge officers who wish they'd achieve a fraction of that."
+	name = "\improper Lord Captain Diwali mask"
+	desc = "Lord Captain that led the infamous last stand at Helios against the Tyranids in the Ultramar conflict. For bridge officers who wish they'd achieve a fraction of that."
 	icon_state = "admiral"
-	visible_name = "Admiral Diwali"
+	visible_name = "Lord Captain Diwali"
 
 /obj/item/clothing/mask/rubber/turner
 	name = "\improper Charles Turner mask"
-	desc = "Premier of the Gilgamesh Colonial Confederation. Probably shouldn't wear this in front of your veteran uncle."
+	desc = "Premier of the Tau Empire. Probably shouldn't wear this in front of your veteran uncle."
 	icon_state = "turner"
 	visible_name = "Charles Turner"
 
@@ -220,15 +220,15 @@
 
 /obj/item/clothing/mask/rubber/species/unathi
 	name = "unathi mask"
-	desc = "A rubber unathi mask."
+	desc = "A rubber kroot mask."
 	icon_state = "lizmet"
-	species = SPECIES_UNATHI
+	species = SPECIES_KROOT
 
 /obj/item/clothing/mask/rubber/species/skrell
 	name = "skrell mask"
 	desc = "A rubber skrell mask."
 	icon_state = "skrellmet"
-	species = SPECIES_SKRELL
+	species = SPECIES_TAU
 
 /obj/item/clothing/mask/spirit
 	name = "spirit mask"
@@ -257,16 +257,14 @@
 			body_parts_covered = initial(body_parts_covered)
 			icon_state = initial(icon_state)
 			sprite_sheets = list(
-				SPECIES_VOX = 'icons/mob/species/vox/onmob_mask_vox.dmi',
-				SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_mask_unathi.dmi'
+				SPECIES_VOX = 'icons/mob/species/vox/onmob_mask_vox.dmi'
 				)
 		if(slot_head)
 			flags_inv = 0
 			body_parts_covered = HEAD
 			icon_state = "[initial(icon_state)]_up"
 			sprite_sheets = list(
-				SPECIES_VOX = 'icons/mob/species/vox/onmob_head_vox.dmi',
-				SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi'
+				SPECIES_VOX = 'icons/mob/species/vox/onmob_head_vox.dmi'
 				)
 
 	return ..()

@@ -16,7 +16,7 @@
 	max_gas = null
 	minbodytemp = 0
 	show_stat_health = 1
-	faction = "cult"
+	faction = "Chaos"
 	supernatural = 1
 	see_in_dark = 8
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
@@ -65,8 +65,8 @@
 
 /mob/living/simple_animal/construct/examine(mob/user)
 	. = ..()
-	if (health < maxHealth)
-		if (health >= maxHealth / 2)
+	if (health < maxhealth)
+		if (health >= maxhealth / 2)
 			to_chat(user, SPAN_WARNING("It looks slightly dented."))
 		else
 			to_chat(user, SPAN_WARNING(SPAN_BOLD("It looks severely dented!")))
@@ -89,7 +89,7 @@
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "behemoth"
 	icon_living = "behemoth"
-	maxHealth = 250
+	maxhealth = 250
 	health = 250
 	speak_emote = list("rumbles")
 	response_harm   = "harmlessly punches"
@@ -152,7 +152,7 @@
 	icon_state = "floating"
 	icon_living = "floating"
 	icon_dead = "floating_dead"
-	maxHealth = 75
+	maxhealth = 75
 	health = 75
 	natural_weapon = /obj/item/natural_weapon/wraith
 	speed = -1
@@ -181,11 +181,11 @@
 /mob/living/simple_animal/construct/builder
 	name = "Artificer"
 	real_name = "Artificer"
-	desc = "A bulbous construct dedicated to building and maintaining The Cult of Nar-Sie's armies."
+	desc = "A bulbous construct dedicated to building and maintaining The Cult of the Sovereign's armies."
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "artificer"
 	icon_living = "artificer"
-	maxHealth = 50
+	maxhealth = 50
 	health = 50
 	response_harm = "viciously beaten"
 	harm_intent_damage = 5
@@ -207,7 +207,7 @@
 /obj/item/natural_weapon/cult_builder/use_before(mob/living/M, mob/living/user)
 	. = FALSE
 	if (istype(M, /mob/living/simple_animal/construct))
-		if (M.health < M.maxHealth)
+		if (M.health < M.maxhealth)
 			M.adjustBruteLoss(-5)
 			user.visible_message(SPAN_NOTICE("\The [user] mends some of \the [M]'s wounds."))
 		else
@@ -220,11 +220,11 @@
 /mob/living/simple_animal/construct/behemoth
 	name = "Behemoth"
 	real_name = "Behemoth"
-	desc = "The pinnacle of occult technology, Behemoths are the ultimate weapon in the Cult of Nar-Sie's arsenal."
+	desc = "The pinnacle of occult technology, Behemoths are the ultimate weapon in the Cult of the Sovereign's arsenal."
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "behemoth"
 	icon_living = "behemoth"
-	maxHealth = 750
+	maxhealth = 750
 	health = 750
 	speak_emote = list("rumbles")
 	response_harm   = "harmlessly punched"
@@ -249,12 +249,12 @@
 /mob/living/simple_animal/construct/harvester
 	name = "Harvester"
 	real_name = "Harvester"
-	desc = "The promised reward of the livings who follow Nar-Sie. Obtained by offering their bodies to the geometer of blood."
+	desc = "The promised reward of the livings who follow the Sovereign. Obtained by offering their bodies to the geometer of blood."
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "harvester"
 	icon_living = "harvester"
 	icon_dead = "harvester_dead"
-	maxHealth = 150
+	maxhealth = 150
 	health = 150
 	natural_weapon = /obj/item/natural_weapon/harvester
 	speed = -1

@@ -243,7 +243,7 @@
 
 
 /obj/item/reagent_containers/food/drinks/coffee
-	name = "\improper Robust Coffee"
+	name = "\improper Imperial Recaf"
 	desc = "Careful, the beverage you're about to enjoy is extremely hot."
 	icon_state = "coffee"
 	center_of_mass = "x=15;y=10"
@@ -358,7 +358,7 @@
 
 /obj/item/reagent_containers/food/drinks/flask/detflask
 	name = "\improper Detective's flask"
-	desc = "A metal flask with a leather band and golden badge belonging to the detective."
+	desc = "A metal flask with a leather band and golden badge belonging to the investigator."
 	icon_state = "detflask"
 	volume = 60
 	center_of_mass = "x=17;y=8"

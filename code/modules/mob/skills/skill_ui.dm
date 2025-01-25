@@ -105,7 +105,7 @@
 The generic antag version.
 */
 /datum/nano_module/skill_ui/antag
-	var/list/max_choices = list(0, 0, 4, 2, 1)
+	var/list/max_choices = list(0, 0, 0, 2, 0)
 	var/list/currently_selected
 	var/buff_type = /datum/skill_buff/antag
 	template = "skill_ui_antag.tmpl"
@@ -163,7 +163,7 @@ The generic antag version.
 	if(href_list["submit"])
 		if(!can_choose())
 			return 1
-		if(alert(usr, "Are you sure you want to commit this selection? You won't be able to change it again.", "Warning", "Yes", "No")=="No")
+		if(alert(usr, "Are you sure you want to commit this selection? You won't be able to change it again.", "Warning", "Compliance", "No")=="No")
 			return 1
 		if(!can_choose())
 			return 1
@@ -228,15 +228,15 @@ The generic antag version.
 Similar, but for station antags that have jobs.
 */
 /datum/nano_module/skill_ui/antag/station
-	max_choices = list(0, 0, 2, 1, 1)
+	max_choices = list(0, 0, 1, 0, 0)
 
 /datum/nano_module/skill_ui/antag/rene
-	max_choices = list(0, 1, 1, 0, 0)
+	max_choices = list(0, 0, 1, 0, 0)
 /*
 Similar, but for off-station jobs (Bearcat, Verne, survivor etc.).
 */
 /datum/nano_module/skill_ui/antag/station/offstation
-	max_choices = list(0, 2, 2, 1, 1)
+	max_choices = list(0, 0, 2, 0, 0)
 /*
 Admin version, with debugging options.
 */

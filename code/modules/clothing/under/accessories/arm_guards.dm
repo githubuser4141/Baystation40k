@@ -1,101 +1,103 @@
 /obj/item/clothing/accessory/arm_guards
-	name = "arm guards"
-	desc = "A pair of black arm pads reinforced with armor plating. Attaches to a plate carrier."
-	icon_override = 'icons/mob/onmob/onmob_modular_armor.dmi'
-	icon = 'icons/obj/clothing/obj_suit_modular_armor.dmi'
+	name = "crude armplates"
+	desc = "Heavy armor reinforcement, similar in design to a bodyglove but worn on the outside for maximum protection covering the arms."
+	icon_override = 'icons/mob/onmob/onmob_suit.dmi'
+	icon = 'icons/obj/clothing/obj_suit.dmi'
 	accessory_icons = list(
-		slot_tie_str = 'icons/mob/onmob/onmob_modular_armor.dmi',
-		slot_wear_suit_str = 'icons/mob/onmob/onmob_modular_armor.dmi'
+		slot_tie_str = 'icons/mob/onmob/onmob_suit.dmi',
+		slot_wear_suit_str = 'icons/mob/onmob/onmob_suit.dmi'
 	)
 	icon_state = "armguards"
 	gender = PLURAL
-	body_parts_covered = ARMS
+	body_parts_covered = ARMS // Don't assign melee defense to arm_guards unless absolutely necessary. Can break the meta.
+	slowdown = 0.02
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_SMALL,
-		bomb = ARMOR_BOMB_PADDED
-	)
+		melee = 0,
+		bullet = 1,
+		laser = 1,
+		energy = 1,
+		rad = 5,
+		bomb = 5
+		)
 	slot = ACCESSORY_SLOT_ARMOR_ARMS
 	body_location = ARMS
 	flags_inv = CLOTHING_BULKY
 
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_modular_armor_unathi.dmi'
-		)
-
 
 /obj/item/clothing/accessory/arm_guards/blue
-	desc = "A pair of blue arm pads reinforced with armor plating. Attaches to a plate carrier."
 	icon_state = "armguards_blue"
 
 
 /obj/item/clothing/accessory/arm_guards/navy
-	desc = "A pair of navy blue arm pads reinforced with armor plating. Attaches to a plate carrier."
 	icon_state = "armguards_navy"
 
 
 /obj/item/clothing/accessory/arm_guards/green
-	desc = "A pair of green arm pads reinforced with armor plating. Attaches to a plate carrier."
 	icon_state = "armguards_green"
 
 
 /obj/item/clothing/accessory/arm_guards/tan
-	desc = "A pair of tan arm pads reinforced with armor plating. Attaches to a plate carrier."
 	icon_state = "armguards_tan"
 
 
 /obj/item/clothing/accessory/arm_guards/merc
-	name = "heavy arm guards"
-	desc = "A pair of red-trimmed black arm pads reinforced with heavy armor plating. Attaches to a plate carrier."
+	name = "carapace armplates"
+	desc = "A pair of extra light red-trimmed black carapace armplates."
 	icon_state = "armguards_merc"
+	slowdown = 0.02
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_HANDGUNS,
-		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED
-	)
+		melee = 1,
+		bullet = 1,
+		laser = 1,
+		energy = 1,
+		rad = 7,
+		bomb = 7
+		)
 
 
-/obj/item/clothing/accessory/arm_guards/riot
-	name = "riot arm guards"
-	desc = "A pair of armored arm pads with heavy padding to protect against melee attacks."
+/obj/item/clothing/accessory/arm_guards/flak
+	name = "flak armplates"
+	desc = "A pair of heavy armored flak armplates."
 	icon_state = "armguards_riot"
+	slowdown = 0.015
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH,
-		bullet = ARMOR_BALLISTIC_SMALL,
-		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED
+		melee = 1,
+		bullet = 1,
+		laser = 1,
+		energy = 1,
+		rad = 5,
+		bomb = 5
 	)
 	siemens_coefficient = 0.5
 
 
-/obj/item/clothing/accessory/arm_guards/ballistic
-	name = "ballistic arm guards"
-	desc = "A pair of armored arm pads with heavy plates to protect against ballistic projectiles."
+/obj/item/clothing/accessory/arm_guards/reactiveslug
+	name = "heavy arm guards"
+	desc = "A pair of reactive armor tech armplates. Designed to stop slug rounds."
 	icon_state = "armguards_ballistic"
+	slowdown = 0.025
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_RIFLE,
-		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED
+		melee = 1,
+		bullet = 2,
+		laser = 1,
+		rad = 6,
+		energy = 3,
+		bomb = 10
 	)
 	siemens_coefficient = 0.7
 
 
-/obj/item/clothing/accessory/arm_guards/ablative
-	name = "ablative arm guards"
-	desc = "A pair of armored arm pads with advanced shielding to protect against energy weapons."
+/obj/item/clothing/accessory/arm_guards/reactivelas
+	name = "heavy arm guards"
+	desc = "A pair of reactive armor tech armplates. Designed to stop energy weapons."
 	icon_state = "armguards_ablative"
+	slowdown = 0.025
 	armor = list(
-		melee = ARMOR_MELEE_KNIVES,
-		bullet = ARMOR_BALLISTIC_SMALL,
-		laser = ARMOR_LASER_RIFLES,
-		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_PADDED
+		melee = 1,
+		bullet = 1,
+		laser = 2,
+		rad = 10,
+		energy = 10,
+		bomb = 15
 	)
 	siemens_coefficient = 0

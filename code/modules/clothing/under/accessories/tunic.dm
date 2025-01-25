@@ -5,14 +5,14 @@
 
 
 /obj/item/clothing/accessory/tunic/nanotrasen
-	name = "\improper NanoTrasen tunic"
-	desc = "A fashionable tunic that NanoTrasen provides to their lab workers."
+	name = "\improper Necromundan tunic"
+	desc = "A fashionable tunic that Necromundan provides to their lab workers."
 	icon_state = "tunic_nt"
 
 
 /obj/item/clothing/accessory/tunic/heph
-	name = "\improper Hephaestus Industries tunic"
-	desc = "A fashionable tunic that Hephaestus Industries provides to their lab workers."
+	name = "\improper Vostroyan tunic"
+	desc = "A fashionable tunic that Vostroyan provides to their lab workers."
 	icon_state = "tunic_heph"
 
 
@@ -28,14 +28,14 @@
 
 
 /obj/item/clothing/accessory/tunic/exec/nanotrasen
-	name = "\improper NanoTrasen executive tunic"
-	desc = "A fashionable tunic that NanoTrasen provides to their lab workers."
+	name = "\improper Necromundan executive tunic"
+	desc = "A fashionable tunic that Necromundan provides to their lab workers."
 	icon_state = "tunicblack_nt"
 
 
 /obj/item/clothing/accessory/tunic/exec/heph
-	name = "\improper Hephaestus Industries executive tunic"
-	desc = "A fashionable tunic that Hephaestus Industries provides to their lab workers."
+	name = "\improper Vostroyan executive tunic"
+	desc = "A fashionable tunic that Vostroyan provides to their lab workers."
 	icon_state = "tunicblack_heph"
 
 

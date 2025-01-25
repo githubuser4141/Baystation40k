@@ -1,6 +1,34 @@
 /*
 	Datum-based species. Should make for much cleaner and easier to maintain race code.
 */
+var/list/death_messages = list(
+	"Seizes up, body convulsing once before falling still, lifeless.",
+	"A shudder runs through them before they crumple, eyes dull and empty.",
+	"Falls hard to the ground, death taking them with a final, vacant stare.",
+	"Their body gives out, collapsing lifeless as the light leaves their eyes.",
+	"Collapses, their last breath escaping as the world fades from their gaze."
+)
+var/list/knockout_messages = list(
+	"Falls to the ground, unconscious.",
+	"Slumps to the floor, out cold.",
+	"Drops hard, lying still as they pass out.",
+	"Hits the ground with a dull sound, unmoving.",
+	"Falls heavily, unconscious as they hit the floor."
+)
+var/list/halloss_messages = list(
+	"Staggers, strength failing, and collapses, too weak to go on.",
+	"Falls to their knees, every ounce of strength drained, before slumping over.",
+	"Legs buckle beneath them as they crumple, utterly spent.",
+	"Collapses under their own weight, too exhausted to stand.",
+	"Stumbles, then crashes to the ground, body too weak to continue."
+)
+var/list/halloss_messages_self = list(
+	"The pain overwhelms you, forcing your body to collapse under its weight.",
+	"Your legs give out, and the agony drags you down, unable to keep going.",
+	"The pain is too much to bear, and you drop, utterly spent.",
+	"Your body rebels, collapsing under the unrelenting agony coursing through you.",
+	"You can't fight it any longer, and you fall, the pain blinding your senses."
+)
 
 /datum/species
 
@@ -34,7 +62,7 @@
 	var/blood_color = COLOR_BLOOD_HUMAN               // Red.
 	var/flesh_color = "#ffc896"               // Pink.
 	var/blood_oxy = 1
-	var/base_color                            // Used by changelings. Should also be used for icon previes..
+	var/base_color                            // Used by genestealers. Should also be used for icon previes..
 	var/limb_blend = ICON_ADD
 	var/tail                                  // Name of tail state in species effects icon file.
 	var/tail_animation                        // If set, the icon to obtain tail animation states from.
@@ -70,7 +98,7 @@
 	var/silent_steps
 
 	var/min_age = 17
-	var/max_age = 70
+	var/max_age = 200
 
 	// Speech vars.
 	var/assisted_langs = list()               // The languages the species can't speak without an assisted organ.
@@ -86,17 +114,17 @@
 	var/list/unarmed_attacks = null           // For empty hand harm-intent attack
 
 	var/list/natural_armour_values            // Armour values used if naked.
-	var/brute_mod =      1                    // Physical damage multiplier.
-	var/burn_mod =       1                    // Burn damage multiplier.
-	var/toxins_mod =     1                    // Toxloss modifier
-	var/radiation_mod =  1                    // Radiation modifier
+	var/brute_mod =      0.75                    // Physical damage multiplier.
+	var/burn_mod =       0.75                    // Burn damage multiplier.
+	var/toxins_mod =     0.8                    // Toxloss modifier
+	var/radiation_mod =  0.6                    // Radiation modifier
 
-	var/oxy_mod =        1                    // Oxyloss modifier
-	var/flash_mod =      1                    // Stun from blindness modifier.
+	var/oxy_mod =        0.5                    // Oxyloss modifier
+	var/flash_mod =      0.9                    // Stun from blindness modifier.
 	var/metabolism_mod = 1                    // Reagent metabolism modifier
-	var/stun_mod =       1                    // Stun period modifier.
+	var/stun_mod =       0.9                    // Stun period modifier.
 	var/paralysis_mod =  1                    // Paralysis period modifier.
-	var/weaken_mod =     1                    // Weaken period modifier.
+	var/weaken_mod =     0.8                    // Weaken period modifier.
 
 	var/vision_flags = SEE_SELF               // Same flags as glasses.
 
@@ -112,10 +140,12 @@
 	var/dusted_anim =   "dust-h"
 
 	var/death_sound
-	var/death_message = "seizes up and falls limp, their eyes dead and lifeless..."
-	var/knockout_message = "collapses, having been knocked unconscious."
-	var/halloss_message = "slumps over, too weak to continue fighting..."
-	var/halloss_message_self = "The pain is too severe for you to keep going..."
+	// Usage in code
+	var/death_message
+	var/knockout_message
+	var/halloss_message
+	var/halloss_message_self
+
 
 	var/limbs_are_nonsolid
 	var/spawns_with_stack = 0
@@ -124,7 +154,7 @@
 	var/breath_type = GAS_OXYGEN                                  // Non-oxygen gas breathed, if any.
 	var/poison_types = list(GAS_PHORON = TRUE, GAS_CHLORINE = TRUE) // Noticeably poisonous air - ie. updates the toxins indicator on the HUD.
 	var/exhale_type = GAS_CO2                          // Exhaled gas type.
-	var/max_pressure_diff = 60                                  // Maximum pressure difference that is safe for lungs
+	var/max_pressure_diff = 80                                  // Maximum pressure difference that is safe for lungs
 	var/cold_level_1 = 243                                      // Cold damage level 1 below this point. -30 Celsium degrees
 	var/cold_level_2 = 200                                      // Cold damage level 2 below this point.
 	var/cold_level_3 = 120                                      // Cold damage level 3 below this point.
@@ -141,14 +171,14 @@
 	var/heat_discomfort_level = 315                             // Aesthetic messages about feeling warm.
 	var/cold_discomfort_level = 285                             // Aesthetic messages about feeling chilly.
 	var/list/heat_discomfort_strings = list(
-		"You feel sweat drip down your neck.",
-		"You feel uncomfortably warm.",
-		"Your skin prickles in the heat."
+		"It's hot in here.",
+		"You feel warm.",
+		"It's getting warmer in here."
 		)
 	var/list/cold_discomfort_strings = list(
-		"You feel chilly.",
-		"You shiver suddenly.",
-		"Your chilly flesh stands out in goosebumps."
+		"You feel cold.",
+		"It's getting colder.",
+		"You can feel the temperature dropping."
 		)
 
 	var/water_soothe_amount
@@ -164,7 +194,7 @@
 	var/list/inherent_verbs 	  // Species-specific verbs.
 	var/has_fine_manipulation = 1 // Can use small items.
 	var/siemens_coefficient = 1   // The lower, the thicker the skin and better the insulation.
-	var/darksight_range = 2       // Native darksight distance.
+	var/darksight_range = 3       // Native darksight distance.
 	var/darksight_tint = DARKTINT_NONE // How shadows are tinted.
 	var/species_flags = 0         // Various specific features.
 	var/appearance_flags = 0      // Appearance/display related features.
@@ -241,7 +271,7 @@
 		/datum/mob_descriptor/build = 0
 	)
 
-	var/standing_jump_range = 2
+	var/standing_jump_range = 3
 	var/list/maneuvers = list(
 		/singleton/maneuver/leap,
 		/singleton/maneuver/leap/quick
@@ -251,7 +281,7 @@
 		TAG_CULTURE =   list(CULTURE_OTHER),
 		TAG_HOMEWORLD = list(HOME_SYSTEM_STATELESS),
 		TAG_FACTION =   list(FACTION_OTHER),
-		TAG_RELIGION =  list(RELIGION_OTHER, RELIGION_ATHEISM, RELIGION_AGNOSTICISM, RELIGION_UNSTATED)
+		TAG_RELIGION =  list(RELIGION_OTHER, RELIGION_IMPERIUM)
 	)
 	var/list/force_cultural_info =                list()
 	var/list/default_cultural_info =              list()
@@ -531,7 +561,7 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 //Used for swimming
 /datum/species/proc/can_float(mob/living/carbon/human/H)
 	if(!H.is_physically_disabled())
-		if(H.skill_check(SKILL_HAULING, SKILL_BASIC))
+		if(H.skill_check(SKILL_VIGOR, SKILL_BASIC))
 			if(H.encumbrance() < 1)
 				return TRUE //Is not possible to swim while pulling big things
 	return FALSE
@@ -855,7 +885,7 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 	if (!exertion_effect_chance)
 		return
 	var/chance = exertion_effect_chance * H.encumbrance()
-	if (chance && prob(H.skill_fail_chance(SKILL_HAULING, chance)))
+	if (chance && prob(H.skill_fail_chance(SKILL_VIGOR, chance)))
 		var/synthetic = H.isSynthetic()
 		if (synthetic)
 			if (exertion_charge_scale)

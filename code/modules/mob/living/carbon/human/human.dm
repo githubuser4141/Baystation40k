@@ -110,9 +110,9 @@
 			f_loss = 60
 
 			if (get_sound_volume_multiplier() >= 0.2)
-				ear_damage += 30
+				ear_damage += 25
 				ear_deaf += 120
-			if (prob(70))
+			if (prob(30))
 				Paralyse(10)
 
 		if(EX_ACT_LIGHT)
@@ -120,8 +120,8 @@
 			if (get_sound_volume_multiplier() >= 0.2)
 				ear_damage += 15
 				ear_deaf += 60
-			if (prob(50))
-				Paralyse(10)
+			if (prob(15))
+				Paralyse(5)
 
 	// focus most of the blast on one organ
 	apply_damage(0.7 * b_loss, DAMAGE_BRUTE, null, DAMAGE_FLAG_EXPLODE, used_weapon = "Explosive blast")
@@ -563,8 +563,15 @@
 	if(species.vision_organ)
 		var/obj/item/organ/internal/eyes/I = internal_organs_by_name[species.vision_organ]
 		if(istype(I))
-			return I.flash_mod
-	return species.flash_mod
+			. = I.flash_mod
+		else
+			. = species.flash_mod
+	else
+		. = species.flash_mod
+	var/skill_reduction = get_combat_skill_reduction(src)
+	if(skill_reduction > 0)
+		. *= (1 - skill_reduction)
+	return .
 
 /mob/living/carbon/human/proc/getDarkvisionRange()
 	if(species.vision_organ)
@@ -622,9 +629,9 @@
 		stat(null, "Suit charge: [cell_status]")
 
 	if(mind)
-		if(mind.changeling)
-			stat("Chemical Storage", mind.changeling.chem_charges)
-			stat("Genetic Damage Time", mind.changeling.geneticdamage)
+		if(mind.genestealer)
+			stat("Chemical Storage", mind.genestealer.chem_charges)
+			stat("Genetic Damage Time", mind.genestealer.geneticdamage)
 
 /mob/living/carbon/human/IsAdvancedToolUser(silent)
 	if(species.has_fine_manipulation(src))
@@ -1226,7 +1233,7 @@
 	species.create_organs(src)
 	species.handle_post_spawn(src)
 
-	maxHealth = species.total_health
+	maxhealth = species.total_health
 	remove_extension(src, /datum/extension/armor)
 	if(species.natural_armour_values)
 		set_extension(src, /datum/extension/armor, species.natural_armour_values)
@@ -1781,7 +1788,7 @@
 
 //Point at which you dun breathe no more. Separate from asystole crit, which is heart-related.
 /mob/living/carbon/human/nervous_system_failure()
-	return getBrainLoss() >= maxHealth * 0.75
+	return getBrainLoss() >= maxhealth * 0.75
 
 /mob/living/carbon/human/melee_accuracy_mods()
 	. = ..()
@@ -1794,7 +1801,7 @@
 
 /mob/living/carbon/human/ranged_accuracy_mods()
 	. = ..()
-	if(get_shock() > 10 && !skill_check(SKILL_WEAPONS, SKILL_TRAINED))
+	if(get_shock() > 10 && !skill_check(SKILL_GUNS, SKILL_TRAINED))
 		. -= 1
 	if(get_shock() > 50)
 		. -= 1
@@ -1802,13 +1809,15 @@
 		. -= 1
 	if(shock_stage > 30)
 		. -= 1
-	if(skill_check(SKILL_WEAPONS, SKILL_BASIC))
+	if(skill_check(SKILL_GUNS, SKILL_EXPERIENCED)) // Temporarily experiment with only Experienced+ giving gun acc bonuses since the new meta allows pretty much everyone to get Exp level easily.
 		. += 1
-	if(skill_check(SKILL_WEAPONS, SKILL_TRAINED))
+	if(skill_check(SKILL_GUNS, SKILL_MASTER))
 		. += 1
-	if(skill_check(SKILL_WEAPONS, SKILL_EXPERIENCED))
+	if(skill_check(SKILL_GUNS, SKILL_LEGEND))
 		. += 1
-	if(skill_check(SKILL_WEAPONS, SKILL_MASTER))
+	if(skill_check(SKILL_GUNS, SKILL_PRIMARIS))
+		. += 1
+	if(skill_check(SKILL_GUNS, SKILL_DEMIGOD))
 		. += 1
 
 /mob/living/carbon/human/can_drown()
@@ -1918,14 +1927,14 @@
 
 GLOBAL_LIST_INIT(dream_tokens, list(
 	"an ID card", "a bottle", "a familiar face", "a crewmember",
-	"a toolbox", "a security officer", "the captain", "voices from all around",
+	"a toolbox", "a militarum officer", "the captain", "voices from all around",
 	"deep space", "a doctor", "the engine", "a traitor",
 	"an ally", "darkness", "light", "a scientist",
 	"a monkey", "a catastrophe", "a loved one", "a gun",
 	"warmth", "freezing", "the sun", "a hat",
 	"a ruined station", "a planet", "phoron", "air",
 	"the medical bay", "the bridge", "blinking lights", "a blue light",
-	"an abandoned laboratory", "NanoTrasen", "pirates", "mercenaries",
+	"an abandoned laboratory", "Necromundan", "pirates", "mercenaries",
 	"blood", "healing", "power", "respect",
 	"riches", "space", "a crash", "happiness",
 	"pride", "a fall", "water", "flames",
@@ -1939,11 +1948,11 @@ GLOBAL_LIST_INIT(dream_tokens, list(
 	"an operating table", "the rain", "a skrell", "an unathi",
 	"a beaker of strange liquid", "the supermatter", "a creature built completely of stolen flesh", "a GAS",
 	"an IPC", "a Dionaea", "a being made of light", "the commanding officer",
-	"the executive officer", "the chief of security", "the corporate liason", "the representative",
+	"the executive officer", "the chief of security", "the imperial liason", "the representative",
 	"the senior advisor", "the bridge officer", "the senior engineer", "the physician",
-	"the corpsman", "the counselor", "the medical contractor", "the security contractor",
+	"the corpsman", "the counselor", "the medical contractor", "the militarum contractor",
 	"a stowaway", "an old friend", "the prospector", "the pilot",
-	"the passenger", "the chief of security", "the master at arms", "the forensic technician",
+	"the passenger", "the chief of security", "the militarum", "the forensic technician",
 	"the brig chief", "the tower", "the man with no face", "a field of flowers",
 	"an old home", "the merc", "a surgery table", "a needle",
 	"a blade", "an ocean", "right behind you", "standing above you",

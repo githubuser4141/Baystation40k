@@ -39,7 +39,7 @@
 	var/list/category_contents = list()
 	var/showing_contents_of_ref = null
 	var/list/contents_of_order = list()
-	var/emagged = FALSE	// TODO: Implement synchronization with modular computer framework.
+	var/emagged = FALSE	// TODO: Implement synchronization with modular cogitator framework.
 	var/emagged_memory = FALSE // Keeps track if the program has to regenerate the catagories after an emag.
 	var/current_security_level
 	var/notifications_enabled = FALSE
@@ -178,7 +178,7 @@
 		O.comment = "#[O.ordernum]"
 		SSsupply.requestlist += O
 
-		if(can_print() && alert(user, "Would you like to print a confirmation receipt?", "Print receipt?", "Yes", "No") == "Yes")
+		if(can_print() && alert(user, "Would you like to print a confirmation receipt?", "Print receipt?", "Compliance", "No") == "Compliance")
 			print_order(O, user)
 		return 1
 

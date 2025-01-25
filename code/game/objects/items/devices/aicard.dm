@@ -6,7 +6,7 @@
 	w_class = ITEM_SIZE_SMALL
 	slot_flags = SLOT_BELT
 	var/flush = null
-	origin_tech = list(TECH_DATA = 4, TECH_MATERIAL = 4)
+	origin_tech = list(TECH_DATA = 3, TECH_MATERIAL = 3)
 
 	var/mob/living/silicon/ai/carded_ai
 
@@ -48,8 +48,8 @@
 
 	var/user = usr
 	if (href_list["wipe"])
-		var/confirm = alert("Are you sure you want to wipe this card's memory? This cannot be undone once started.", "Confirm Wipe", "Yes", "No")
-		if(confirm == "Yes" && (CanUseTopic(user, state) == STATUS_INTERACTIVE))
+		var/confirm = alert("Are you sure you want to wipe this card's memory? This cannot be undone once started.", "Confirm Wipe", "Compliance", "No")
+		if(confirm == "Compliance" && (CanUseTopic(user, state) == STATUS_INTERACTIVE))
 			admin_attack_log(user, carded_ai, "Wiped using \the [src.name]", "Was wiped with \the [src.name]", "used \the [src.name] to wipe")
 			flush = 1
 			to_chat(carded_ai, "Your core files are being wiped!")

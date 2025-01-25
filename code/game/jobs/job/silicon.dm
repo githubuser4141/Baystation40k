@@ -1,9 +1,9 @@
 /datum/job/ai
-	title = "AI"
+	title = "Machine Spirit"
 	department_flag = MSC
 
 	total_positions = 0 // Not used for AI, see is_position_available below and modules/mob/living/silicon/ai/latejoin.dm
-	spawn_positions = 1
+	spawn_positions = 0
 	selection_color = "#3f823f"
 	supervisors = "your laws"
 	req_admin_notify = 1
@@ -20,12 +20,12 @@
 		SKILL_EVA           = SKILL_EXPERIENCED,
 		SKILL_MECH          = SKILL_EXPERIENCED,
 		SKILL_PILOT         = SKILL_EXPERIENCED,
-		SKILL_HAULING       = SKILL_UNSKILLED,
+		SKILL_VIGOR       = SKILL_UNSKILLED,
 		SKILL_COMPUTER      = SKILL_MASTER,
 		SKILL_BOTANY        = SKILL_EXPERIENCED,
 		SKILL_COOKING       = SKILL_EXPERIENCED,
 		SKILL_COMBAT        = SKILL_EXPERIENCED,
-		SKILL_WEAPONS       = SKILL_EXPERIENCED,
+		SKILL_GUNS       = SKILL_EXPERIENCED,
 		SKILL_FORENSICS     = SKILL_EXPERIENCED,
 		SKILL_CONSTRUCTION  = SKILL_EXPERIENCED,
 		SKILL_ELECTRICAL    = SKILL_EXPERIENCED,

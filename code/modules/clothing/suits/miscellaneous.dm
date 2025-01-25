@@ -9,9 +9,10 @@
  * Lasertag
  */
 /obj/item/clothing/suit/bluetag
-	name = "blue laser tag armour"
+	name = "PDF training armour(blue team)"
 	desc = "Blue Pride, Galaxy Wide."
-	icon_state = "bluetag"
+	icon_state = "PDF-T"
+	item_state = "PDF-T"
 	blood_overlay_type = "armor"
 	item_flags = null
 	body_parts_covered = UPPER_TORSO
@@ -19,9 +20,10 @@
 	siemens_coefficient = 3.0
 
 /obj/item/clothing/suit/redtag
-	name = "red laser tag armour"
+	name = "PDF training armour(red team)"
 	desc = "Reputed to go faster."
-	icon_state = "redtag"
+	icon_state = "PDF-SpecialT"
+	item_state = "PDF-SpecialT"
 	blood_overlay_type = "armor"
 	item_flags = null
 	body_parts_covered = UPPER_TORSO
@@ -40,20 +42,21 @@
 		/obj/item/gun,
 		/obj/item/ammo_magazine,
 		/obj/item/ammo_casing,
-		/obj/item/melee/baton,
+		/obj/item/material/twohanded/ravenor,
+		/obj/item/melee,
 		/obj/item/handcuffs,
 		/obj/item/tank/oxygen_emergency,
 		/obj/item/tank/oxygen_emergency_extended,
 		/obj/item/tank/nitrogen_emergency
 	)
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR,
-		bullet = ARMOR_BALLISTIC_PISTOL,
-		laser = ARMOR_LASER_SMALL,
-		energy = ARMOR_ENERGY_MINOR,
-		bomb = ARMOR_BOMB_PADDED,
+		melee = ARMOR_MELEE_FLAK,
+		bullet = ARMOR_BALLISTIC_FLAK,
+		laser = ARMOR_LASER_PRIMAL,
+		energy = ARMOR_ENERGY_TEN,
+		bomb = ARMOR_BOMB_THIRTY,
 		bio = ARMOR_BIO_SMALL,
-		rad = ARMOR_RAD_MINOR
+		rad = ARMOR_RAD_THIRTY
 	)
 	siemens_coefficient = 0.9
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
@@ -102,7 +105,7 @@
 /obj/item/clothing/suit/syndicatefake
 	name = "red space suit replica"
 	icon_state = "syndicate"
-	desc = "A plastic replica of the syndicate space suit, you'll look just like a real murderous syndicate agent in this! This is a toy, it is not made for use in space!"
+	desc = "A plastic replica of the heretic space suit, you'll look just like a real murderous heretic agent in this! This is a toy, it is not made for use in space!"
 	w_class = ITEM_SIZE_NORMAL
 	item_flags = null
 	allowed = list(
@@ -304,90 +307,82 @@
 	desc = "A simple, comfortable cloak without sleeves. This one is blue."
 	icon_state = "blueponcho"
 
-/obj/item/clothing/suit/storage/toggle/bomber
+/obj/item/clothing/suit/armor/grim/toggle/bomber
 	name = "bomber jacket"
 	desc = "A thick, well-worn WW2 leather bomber jacket."
 	icon_state = "bomber"
-	body_parts_covered = UPPER_TORSO|ARMS
-	cold_protection = UPPER_TORSO|ARMS
 	min_cold_protection_temperature = T0C - 20
 	siemens_coefficient = 0.7
 
-/obj/item/clothing/suit/storage/leather_jacket
+/obj/item/clothing/suit/armor/grim/storage/leather_jacket
 	name = "black leather jacket"
 	desc = "A black leather coat."
 	icon_state = "leather_jacket"
-	body_parts_covered = UPPER_TORSO|ARMS
 
-/obj/item/clothing/suit/storage/leather_jacket/nanotrasen
-	name = "\improper NanoTrasen black leather jacket"
-	desc = "A black leather coat. The NanoTrasen logo is proudly displayed on the back."
+/obj/item/clothing/suit/armor/grim/storage/leather_jacket/nanotrasen
+	name = "\improper Necromundan black leather jacket"
+	desc = "A black leather coat. The Necromundan logo is proudly displayed on the back."
 	icon_state = "leather_jacket_nt"
 
 //This one has buttons for some reason
-/obj/item/clothing/suit/storage/toggle/brown_jacket
+/obj/item/clothing/suit/armor/grim/toggle/brown_jacket
 	name = "leather jacket"
 	desc = "A brown leather coat."
 	icon_state = "brown_jacket"
-	body_parts_covered = UPPER_TORSO|ARMS
 
-/obj/item/clothing/suit/storage/toggle/leather_hoodie
+/obj/item/clothing/suit/armor/grim/toggle/leather_hoodie
 	name = "leather hoodie jacket"
 	desc = "A brown leather hoodie, coloured in a dark tone. It's fun to tug at the strings."
 	icon_state = "leather_hoodie"
-	body_parts_covered = UPPER_TORSO|ARMS
 
-/obj/item/clothing/suit/storage/toggle/brown_jacket/nanotrasen
-	name = "\improper NanoTrasen leather jacket"
-	desc = "A brown leather coat. The NanoTrasen logo is proudly displayed on the back."
+/obj/item/clothing/suit/armor/grim/toggle/brown_jacket/nanotrasen
+	name = "\improper Necromundan leather jacket"
+	desc = "A brown leather coat. The Necromundan logo is proudly displayed on the back."
 	icon_state = "brown_jacket_nt"
 
-/obj/item/clothing/suit/storage/toggle/agent_jacket
+/obj/item/clothing/suit/armor/grim/toggle/agent_jacket
 	name = "agent jacket"
-	desc = "A black leather jacket belonging to an agent of the Sol Federal Police."
+	desc = "A black leather jacket belonging to an agent of the Magistratum."
 	icon_state = "agent_jacket"
-	valid_accessory_slots = list(ACCESSORY_SLOT_INSIGNIA)
-	body_parts_covered = UPPER_TORSO|ARMS
 
-/obj/item/clothing/suit/storage/toggle/hoodie
+/obj/item/clothing/suit/armor/grim/toggle/hoodie
 	name = "hoodie"
 	desc = "A warm sweatshirt."
 	icon_state = "hoodie"
 	min_cold_protection_temperature = T0C - 20
-	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 
-/obj/item/clothing/suit/storage/toggle/hoodie/cti
+/obj/item/clothing/suit/armor/grim/toggle/hoodie/cti
 	name = "\improper CTI hoodie"
-	desc = "A warm, black sweatshirt.  It bears the letters 'CTI' on the back, a lettering to the prestigious university in Tau Ceti, Ceti Technical Institute.  There is a blue supernova embroidered on the front, the emblem of CTI."
+	desc = "A warm, black sweatshirt.  It bears the letters 'CTI' on the back, a lettering to the prestigious university in Vostroya, Ceti Technical Institute.  There is a blue supernova embroidered on the front, the emblem of CTI."
 	icon_state = "cti_hoodie"
 
-/obj/item/clothing/suit/storage/toggle/hoodie/mu
-	name = "\improper Mariner University hoodie"
-	desc = "A warm, gray sweatshirt.  It bears the letters 'MU' on the front, a lettering to the well-known public college, Mariner University."
+/obj/item/clothing/suit/armor/grim/toggle/hoodie/mu
+	name = "\improper Schola Progenium hoodie"
+	desc = "A warm, gray sweatshirt.  It bears the letters 'MU' on the front, a lettering to the well-known public college, Schola Progenium."
 	icon_state = "mu_hoodie"
 
-/obj/item/clothing/suit/storage/toggle/hoodie/nt
-	name = "\improper NanoTrasen hoodie"
-	desc = "A warm, blue sweatshirt. It proudly bears the NanoTrasen logo on the back. The edges are trimmed with silver."
+/obj/item/clothing/suit/armor/grim/toggle/hoodie/nt
+	name = "\improper Necromundan hoodie"
+	desc = "A warm, blue sweatshirt. It proudly bears the Necromundan logo on the back. The edges are trimmed with silver."
 	icon_state = "nt_hoodie"
 
-/obj/item/clothing/suit/storage/toggle/hoodie/smw
+/obj/item/clothing/suit/armor/grim/toggle/hoodie/smw
 	name = "\improper Space Mountain Wind hoodie"
 	desc = "A warm, black sweatshirt.  It has the logo for the popular softdrink Space Mountain Wind on both the front and the back."
 	icon_state = "smw_hoodie"
 
-/obj/item/clothing/suit/storage/toggle/hoodie/black
+/obj/item/clothing/suit/armor/grim/toggle/hoodie/black
 	name = "black hoodie"
 	desc = "A warm, black sweatshirt."
 	color = COLOR_DARK_GRAY
 
-/obj/item/clothing/suit/storage/mbill
+/obj/item/clothing/suit/armor/grim/storage/mbill
 	name = "shipping jacket"
 	desc = "A green jacket bearing the logo of Major Bill's Shipping."
 	icon_state = "mbill"
 
 /obj/item/clothing/suit/poncho/security
-	name = "security poncho"
+	name = "militarum poncho"
 	desc = "A simple, comfortable cloak without sleeves. This one is black and red, which are standard Security colors."
 	icon_state = "secponcho"
 
@@ -403,12 +398,12 @@
 
 /obj/item/clothing/suit/poncho/science
 	name = "science poncho"
-	desc = "A simple, comfortable cloak without sleeves. This one is white with a few bottle green stripes, corporate colors."
+	desc = "A simple, comfortable cloak without sleeves. This one is white with a few bottle green stripes, imperial colors."
 	icon_state = "sciponcho"
 
 /obj/item/clothing/suit/poncho/nanotrasen
-	name = "\improper NanoTrasen poncho"
-	desc = "A simple, comfortable cloak without sleeves. This one is white with a few red stripes, colors of NanoTrasen. Go NanoTrasen!"
+	name = "\improper Necromundan poncho"
+	desc = "A simple, comfortable cloak without sleeves. This one is white with a few red stripes, colors of Necromundan. Go Necromundan!"
 	icon_state = "sciponcho_nt"
 
 /obj/item/clothing/suit/poncho/cargo
@@ -419,33 +414,33 @@
 /*
  * Track Jackets
  */
-/obj/item/clothing/suit/storage/toggle/track
+/obj/item/clothing/suit/armor/grim/toggle/track
 	name = "track jacket"
 	desc = "A track jacket, for the athletic."
 	icon_state = "trackjacket"
 
-/obj/item/clothing/suit/storage/toggle/track/blue
+/obj/item/clothing/suit/armor/grim/toggle/track/blue
 	name = "blue track jacket"
 	desc = "A blue track jacket, for the athletic."
 	icon_state = "trackjacketblue"
 
-/obj/item/clothing/suit/storage/toggle/track/green
+/obj/item/clothing/suit/armor/grim/toggle/track/green
 	name = "green track jacket"
 	desc = "A green track jacket, for the athletic."
 	icon_state = "trackjacketgreen"
 
-/obj/item/clothing/suit/storage/toggle/track/red
+/obj/item/clothing/suit/armor/grim/toggle/track/red
 	name = "red track jacket"
 	desc = "A red track jacket, for the athletic."
 	icon_state = "trackjacketred"
 
-/obj/item/clothing/suit/storage/toggle/track/white
+/obj/item/clothing/suit/armor/grim/toggle/track/white
 	name = "white track jacket"
 	desc = "A white track jacket, for the athletic."
 	icon_state = "trackjacketwhite"
 
-/obj/item/clothing/suit/storage/toggle/track/gcc
-	name = "\improper GCC track jacket"
+/obj/item/clothing/suit/armor/grim/toggle/track/gcc
+	name = "\improper Imperial track jacket"
 	desc = "An Independent track jacket, for the truly cheeki breeki."
 	icon_state = "trackjackettcc"
 
@@ -467,7 +462,7 @@
 
 /obj/item/clothing/suit/rubber/unathi
 	name = "unathi suit"
-	desc = "A Unathi suit made out of rubber."
+	desc = "A Kroot suit made out of rubber."
 	icon_state = "lizsuit"
 
 /obj/item/clothing/suit/hospital
@@ -487,13 +482,13 @@
 	color = "#ffb7db"
 
 
-/obj/item/clothing/suit/storage/toggle/zipper
+/obj/item/clothing/suit/armor/grim/toggle/zipper
 	name = "zip up sweater"
 	desc = "A black sweater that zips up in the front."
 	icon_state = "zipperjacket"
 
 
-/obj/item/clothing/suit/storage/pullover
+/obj/item/clothing/suit/armor/grim/storage/pullover
 	name = "pullover sweater"
 	desc = "A sweater made of a soft material with a short zipper on the collar."
 	icon_state = "pullover"

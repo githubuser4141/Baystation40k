@@ -1,7 +1,7 @@
 /obj/item/robot_module/flying/repair
 	name = "repair drone module"
 	display_name = "Repair"
-	channels = list ("Engineering" = TRUE)
+	channels = list ("Mechanicus" = TRUE)
 	networks = list(NETWORK_ENGINEERING)
 	subsystems = list(
 		/datum/nano_module/power_monitor,
@@ -52,7 +52,7 @@
 	emag_gear = list(
 		/obj/item/melee/baton/robot/electrified_arm,
 		/obj/item/device/flash,
-		/obj/item/gun/energy/gun,
+		/obj/item/gun/energy/lasgun/laspistol/militarum,
 		/obj/item/rcd/borg,
 		/obj/item/flamethrower/full/loaded,
 		/obj/item/shield_diffuser,

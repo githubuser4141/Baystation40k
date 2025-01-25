@@ -1,8 +1,8 @@
 /obj/item/holder/diona
-	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 5)
+	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 3)
 	slot_flags = SLOT_HEAD | SLOT_OCLOTHING | SLOT_HOLSTER
 	armor = list(
-		bio = ARMOR_BIO_RESISTANT,
+		bio = ARMOR_BIO_FIFTY,
 		rad = ARMOR_RAD_SHIELDED
 	)
 

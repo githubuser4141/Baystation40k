@@ -11,7 +11,7 @@
 	item_state = "nymph"
 	death_msg = "expires with a pitiful chirrup..."
 	health = 60
-	maxHealth = 60
+	maxhealth = 60
 	available_maneuvers = list(/singleton/maneuver/leap)
 	status_flags = NO_ANTAG
 	density = FALSE
@@ -68,7 +68,7 @@
 
 	species = all_species[SPECIES_DIONA]
 	add_language(LANGUAGE_ROOTGLOBAL)
-	add_language(LANGUAGE_HUMAN_EURO, 0)
+	add_language(LANGUAGE_HIGH_GOTHIC, 0)
 
 	eyes = image(icon = icon, icon_state = "eyes_[icon_state]")
 	eyes.layer = EYE_GLOW_LAYER

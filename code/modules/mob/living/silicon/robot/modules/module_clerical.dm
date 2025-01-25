@@ -74,7 +74,7 @@
 	display_name = "Clerical"
 	channels = list(
 		"Service" = TRUE,
-		"Supply" =  TRUE
+		"Machinarum" =  TRUE
 	)
 	sprites = list(
 		"Waitress" = "Service",
@@ -98,7 +98,7 @@
 	emag_gear = list(
 		/obj/item/melee/baton/robot/electrified_arm,
 		/obj/item/device/flash,
-		/obj/item/gun/energy/gun,
+		/obj/item/gun/energy/lasgun/laspistol/militarum,
 		/obj/item/flamethrower/full/loaded,
 		/obj/item/stamp/chameleon
 	)

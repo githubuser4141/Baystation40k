@@ -239,7 +239,7 @@
 
 /datum/reagent/drink/thoom
 	name = "Th'oom Juice"
-	description = "A thick off-white fluid expressed from the juice glands of the Skrellian Th'oom."
+	description = "A thick off-white fluid expressed from the juice glands of the Tau Th'oom."
 	taste_description = "thick, sweet, and savory ... milk?"
 	color = "#baeece"
 	glass_name = "th'oom juice"
@@ -315,7 +315,7 @@
 
 /datum/reagent/drink/coffee
 	name = "Coffee"
-	description = "Coffee is a brewed drink prepared from roasted seeds, commonly called coffee beans, of the coffee plant."
+	description = "Recaf is a brewed drink prepared from roasted seeds, commonly called coffee beans, of the coffee plant."
 	taste_description = "bitterness"
 	taste_mult = 1.3
 	color = "#482000"
@@ -352,8 +352,8 @@
 	M.add_chemical_effect(CE_PULSE, 1)
 
 /datum/reagent/drink/coffee/icecoffee
-	name = "Iced Coffee"
-	description = "Coffee and ice, refreshing and cool."
+	name = "Iced Recaf"
+	description = "Recaf and ice, refreshing and cool."
 	taste_description = "bitter coldness"
 	color = "#102838"
 	adj_temp = -5
@@ -420,11 +420,11 @@
 
 /datum/reagent/drink/coffee/cafe_latte/mocha
 	name = "Mocha Latte"
-	description = "Coffee and chocolate, smooth and creamy."
+	description = "Recaf and chocolate, smooth and creamy."
 	taste_description = "bitter creamy chocolate"
 	protein_amount = 0.3
 	glass_name = "mocha latte"
-	glass_desc = "Coffee and chocolate, smooth and creamy."
+	glass_desc = "Recaf and chocolate, smooth and creamy."
 
 /datum/reagent/drink/coffee/soy_latte/mocha
 	name = "Mocha Soy Latte"
@@ -436,12 +436,12 @@
 
 /datum/reagent/drink/coffee/icecoffee/cafe_latte/mocha
 	name = "Iced Mocha Latte"
-	description = "Coffee and chocolate, smooth and creamy. This one's cold."
+	description = "Recaf and chocolate, smooth and creamy. This one's cold."
 	taste_description = "cold bitter creamy chocolate"
 	protein_amount = 0.3
 
 	glass_name = "iced mocha latte"
-	glass_desc = "Coffee and chocolate, smooth and creamy. This one's cold."
+	glass_desc = "Recaf and chocolate, smooth and creamy. This one's cold."
 
 /datum/reagent/drink/coffee/icecoffee/soy_latte/mocha
 	name = "Iced Soy Mocha Latte"
@@ -588,14 +588,14 @@
 	glass_special = list(DRINK_FIZZ)
 
 /datum/reagent/drink/rootbeer
-	name = "Root WeiBeer"
+	name = "Root WeiGothic Ale"
 	description = "Root beer, brewed from the rare beer root. And a lot of chemicals."
 	taste_description = "faint toothpaste(?) and fizz"
 	color = "#290e05"
 	adj_temp = -5
 
-	glass_name = "Root Beer"
-	glass_desc = "Yep that sure is some rooty beer."
+	glass_name = "Root Gothic Ale"
+	glass_desc = "Yep that sure is some rooty ale."
 	glass_special = list(DRINK_FIZZ)
 
 /datum/reagent/drink/apple_soda
@@ -829,11 +829,11 @@
 
 /datum/reagent/drink/fools_gold
 	name = "Fool's Gold"
-	description = "A non-alcoholic beverage typically served as an alternative to whiskey."
+	description = "A non-alcoholic beverage typically served as an alternative to amasec."
 	taste_description = "watered down whiskey"
 	color = "#e78108"
 	glass_name = "fools gold"
-	glass_desc = "A non-alcoholic beverage typically served as an alternative to whiskey."
+	glass_desc = "A non-alcoholic beverage typically served as an alternative to amasec."
 
 /datum/reagent/drink/snowball
 	name = "Snowball"
@@ -853,13 +853,13 @@
 	glass_desc = "A large gas body made of chocolate that has failed to sustain nuclear fusion."
 
 /datum/reagent/drink/gingerbeer
-	name = "Ginger Beer"
-	description = "A hearty, non-alcoholic beverage extremely popular around the SCG."
+	name = "Ginger Gothic Ale"
+	description = "A hearty, non-alcoholic beverage extremely popular around the Imperium."
 	taste_description = "carbonated ginger"
 	color = "#f5f3c6"
 
 	glass_name = "ginger beer"
-	glass_desc = "A hearty, non-alcoholic beverage extremely popular around the SCG."
+	glass_desc = "A hearty, non-alcoholic beverage extremely popular around the Imperium."
 	glass_special = list(DRINK_FIZZ)
 
 /datum/reagent/drink/beastenergy
@@ -1028,7 +1028,7 @@
 	glass_special = list(DRINK_FIZZ)
 
 /datum/reagent/drink/coffee/coffee_cola
-	name = "Coffee Cola"
+	name = "Recaf Cola"
 	description = "There are people in town, man, crazy people in town."
 	taste_description = "coffee and cola"
 	reagent_state = LIQUID
@@ -1036,7 +1036,7 @@
 	adj_drowsy = -3
 	adj_temp = -5
 
-	glass_name = "Coffee Cola"
+	glass_name = "Recaf Cola"
 	glass_desc = "All you need is some bread and butter and honey"
 	glass_special = list(DRINK_FIZZ)
 
@@ -1112,15 +1112,15 @@
 
 /datum/reagent/drink/posca
 	name = "Posca"
-	description = "An ancient energy drink revived by Roman cosplayers on Luna."
+	description = "An ancient energy drink revived by Roman cosplayers on Vostroya."
 	taste_description = "spiced vinegar"
 	color = "#b3b599"
 
 	glass_name = "posca"
-	glass_desc = "An energy drink invented by the Romans and made space-famous by Luna cosplayers."
+	glass_desc = "An energy drink invented by the Romans and made space-famous by Holy Terracosplayers."
 
 /datum/reagent/drink/alcoholfreebeer
-	name = "Non-Alcoholic Beer"
+	name = "Non-Alcoholic Gothic Ale"
 	description = "An alcoholic beverage made from malted grains, hops, yeast, and water. This seems to be non-alcoholic"
 	taste_description = "non-alcoholic piss water"
 	color = "#ffd300"
@@ -1372,8 +1372,8 @@
 	glass_desc = "Thick spiced pumpkin syrup used to flavor drinks."
 
 /datum/reagent/drink/decafcoffee
-	name = "Decaffeinated Coffee"
-	description = "Coffee but without the caffeine."
+	name = "Decaffeinated Recaf"
+	description = "Recaf but without the caffeine."
 	taste_description = "decaffeinated bitterness"
 	color = "#482000"
 
@@ -1400,12 +1400,12 @@
 
 /datum/reagent/drink/coffee/yuenyeung
 	name = "Yuenyeung"
-	description = "Also known as Coffee with Tea."
+	description = "Also known as Recaf with Tea."
 	taste_description = "refreshing and energising"
 	color = "#482000"
 
 	glass_name = "yeunyeung"
-	glass_desc = "Coffee with tea. Delicious."
+	glass_desc = "Recaf with tea. Delicious."
 
 /datum/reagent/drink/coffee/iced/frappe
 	name = "Iced Frappe"
@@ -1462,18 +1462,18 @@
 
 /datum/reagent/ethanol/wasgaelhi
 	name = "Wasgaelhi"
-	description = "Wine made from various fruits from the swamps of Moghes."
+	description = "Amasec made from various fruits from the swamps of Moghes."
 	taste_description = "swampy fruit"
 	color = "#6b596b"
 	strength = 10
 	glass_name = "wasgaelhi"
-	glass_desc = "Wine made from various fruits from the swamps of Moghes."
+	glass_desc = "Amasec made from various fruits from the swamps of Moghes."
 
 /datum/reagent/drink/skrianhi
 	name = "Skrianhi Tea"
-	description = "A blend of teas from Moghes, commonly drank by Unathi."
+	description = "A blend of teas from Moghes, commonly drank by Kroot."
 	taste_description = "bitter energising tea"
 	color = "#0e0900"
 	glass_name = "skrianhi tea"
-	glass_desc = "A blend of teas from Moghes, commonly drank by Unathi."
+	glass_desc = "A blend of teas from Moghes, commonly drank by Kroot."
 	adj_temp = 20

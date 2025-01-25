@@ -57,7 +57,7 @@
 	icon_state = "test_subject"
 	icon_living = "test_subject"
 	icon_dead = "test_subject_dead"
-	maxHealth = 40
+	maxhealth = 40
 	health = 40
 	harm_intent_damage = 5
 	corpse = /obj/landmark/corpse/lar_maria/test_subject
@@ -83,7 +83,7 @@
 /singleton/hierarchy/outfit/corpse/zhp_guard
 	name = "Dead ZHP guard"
 	uniform = /obj/item/clothing/under/rank/virologist
-	suit = /obj/item/clothing/suit/armor/pcarrier
+	suit = /obj/item/clothing/suit/armor/grim
 	head = /obj/item/clothing/head/soft/lar_maria/zhp_cap
 	shoes = /obj/item/clothing/shoes/dutyboots
 	l_ear = /obj/item/device/radio/headset
@@ -92,7 +92,7 @@
 	name = "\improper security"
 	desc = "Guard dressed at Zeng-Hu Pharmaceuticals uniform."
 	icon_state = "guard_light"
-	maxHealth = 60
+	maxhealth = 60
 	health = 60
 	harm_intent_damage = 5
 	natural_weapon = /obj/item/melee/baton
@@ -126,7 +126,7 @@
 	name = "\improper virologist"
 	desc = "Virologist dressed at Zeng-Hu Pharmaceuticals uniform."
 	icon_state = "virologist_m"
-	maxHealth = 50
+	maxhealth = 50
 	health = 50
 	harm_intent_damage = 5
 	corpse = /obj/landmark/corpse/lar_maria/virologist
@@ -138,7 +138,7 @@
 /singleton/hierarchy/outfit/corpse/zhp_virologist
 	name = "Dead male ZHP virologist"
 	uniform = /obj/item/clothing/under/rank/virologist
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	suit = /obj/item/clothing/suit/armor/grim/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/white
 	gloves = /obj/item/clothing/gloves/latex/nitrile
 	head = /obj/item/clothing/head/surgery
@@ -160,7 +160,7 @@
 /singleton/hierarchy/outfit/corpse/zhp_virologist_female
 	name = "Dead female ZHP virologist"
 	uniform = /obj/item/clothing/under/rank/virologist
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	suit = /obj/item/clothing/suit/armor/grim/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/white
 	gloves = /obj/item/clothing/gloves/latex/nitrile
 	mask = /obj/item/clothing/mask/surgical
@@ -171,7 +171,7 @@
 	info = {"
 			<center><b><span style='color: green'>Zeng-Hu Pharmaceuticals</span></b></center>
 			<center><b><span style='color: red'><small>CONFIDENTIAL USE ONLY</small></span></b></center>
-			<i>We received the latest batch of subjects this evening. Evening? Is it even evening? The schedule out here is so fucked in terms of sleep-cycles I forget to even check what time it is sometimes. I'm pretty sure it's evening anyway. Anyway, point is, we got the new guys, and thus far they seem like they fit the criteria pretty well. No family histories of diseases or the like, no current illnesses, prime physical condition, perfect subjects for our work. Tomorrow we start testing out the type 008 Serum. Hell if I know where this stuff's coming from, but it's fascinating. Injected into live subjects, it seems like it has a tendancy to not only cure them of ailments, but actually improve their bodily functions...</i>
+			<i>We received the latest batch of subjects this evening. Evening? Is it even evening? The schedule out here is so fucked in terms of sleep-cycles I forget to even check what time it is sometimes. I'm pretty sure it's evening anyway. Anyway, point is, we got the new guys, and thus far they seem like they fit the criteria pretty well. No family histories of diseases or the like, no current illnesses, prime physical condition, perfect subjects for our work. Tomorrow we start testing out the type 008 Sesacra. Hell if I know where this stuff's coming from, but it's fascinating. Injected into live subjects, it seems like it has a tendancy to not only cure them of ailments, but actually improve their bodily functions...</i>
 			"}
 
 /obj/item/paper/lar_maria/note_2
@@ -199,7 +199,7 @@
 	name = "paper note"
 	info = {"<center><b><span style='color: green'>Zeng-Hu Pharmaceuticals</span></b></center>
 			<center><span style='color: red'><small>CONFIDENTIAL USE ONLY</small></span></center>
-			This is a reminder to all facility staff, while we may be doing important work for the good of humanity here, our methods are not necessarily one hundred percent legal under SCG law, and as such you are NOT permitted, as outlined in your contract, to discuss the nature of your work, nor any other related information, with anyone not directly involved with the project without express permission of your facility director. This includes family, friends, local or galactic news outlets and bluenet chat forums.
+			This is a reminder to all facility staff, while we may be doing important work for the good of humanity here, our methods are not necessarily one hundred percent legal under Imperium law, and as such you are NOT permitted, as outlined in your contract, to discuss the nature of your work, nor any other related information, with anyone not directly involved with the project without express permission of your facility director. This includes family, friends, local or galactic news outlets and bluenet chat forums.
 			"}
 
 /obj/item/paper/lar_maria/note_6
@@ -213,7 +213,7 @@
 	name = "paper note"
 	info = {"<center><b><span style='color: green'>Zeng-Hu Pharmaceuticals</span></b></center>
 			<center><span style='color: red'><small>CONFIDENTIAL USE ONLY</small></span></center>
-			<i>Can we get some more diversity in test subjects? I know we're mostly working off SCG undesirables, but martians and frontier colonists aren't exactly the most varied bunch. We could majorly benefit from having some Skrell test subjects, for example. Oooh, or one of those GAS things Xynergy's got a monopoly on.</i>
+			<i>Can we get some more diversity in test subjects? I know we're mostly working off Imperium undesirables, but martians and frontier colonists aren't exactly the most varied bunch. We could majorly benefit from having some Skrell test subjects, for example. Oooh, or one of those GAS things Xynergy's got a monopoly on.</i>
 			"}
 
 /obj/item/paper/lar_maria/note_8

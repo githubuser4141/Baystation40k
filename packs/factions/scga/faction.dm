@@ -1,13 +1,8 @@
 /datum/mil_branch/scga
-	name = "Sol Central Government Army"
+	name = "Sol Central Government Guard"
 	name_short = "SCGA"
 	email_domain = "army.mil.scg"
 	assistant_job = null
-	min_skill = list( // 6 points
-		SKILL_HAULING = SKILL_TRAINED, // 2 points
-		SKILL_WEAPONS = SKILL_BASIC, // 2 points
-		SKILL_COMBAT = SKILL_BASIC // 2 points
-	)
 
 	rank_types = list(
 		/datum/mil_rank/scga/e1,
@@ -165,7 +160,7 @@
 
 
 /datum/mil_rank/scga/e9_alt2
-	name = "Sergeant Major of the Army"
+	name = "Sergeant Major of the Guard"
 	name_short = "SMA"
 	accessory = list(
 		/obj/item/clothing/accessory/scga_rank/e9_alt2

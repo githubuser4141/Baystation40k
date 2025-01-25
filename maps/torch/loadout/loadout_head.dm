@@ -14,13 +14,13 @@
 	berets["customs and trade beret"] = /obj/item/clothing/head/beret/solgov/customs
 	berets["government research beret"] = /obj/item/clothing/head/beret/solgov/research
 	berets["health service beret"] = /obj/item/clothing/head/beret/solgov/health
-	berets["border security beret"] = /obj/item/clothing/head/beret/solgov/borderguard
+	berets["border militarum beret"] = /obj/item/clothing/head/beret/solgov/borderguard
 	gear_tweaks += new/datum/gear_tweak/path(berets)
 
 /datum/gear/head/veteranhat
 	display_name = "veteran hat"
 	path = /obj/item/clothing/head/soft/solgov/veteranhat
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 	flags = GEAR_HAS_NO_CUSTOMIZATION
 
 /datum/gear/head/solhat
@@ -60,33 +60,33 @@
 	allowed_roles = STERILE_ROLES
 
 /datum/gear/head/beret
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/sterile_mask
 	display_name = "sterile mask"
 	path = /obj/item/clothing/mask/surgical
 
 /datum/gear/head/beanie
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/head/bow
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/head/cap
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/head/hairflower
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/head/hardhat
 	allowed_roles = TECHNICAL_ROLES
 
 /datum/gear/head/formalhat
 	allowed_roles = FORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/head/informalhat
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/head/welding
 	allowed_roles = TECHNICAL_ROLES
@@ -95,8 +95,8 @@
 	allowed_roles = SECURITY_ROLES
 
 /datum/gear/head/fleetberet
-	display_name = "Fleet branch beret selection"
-	description = "A beret denoting service in one of the fleets within the SCG Fleet."
+	display_name = "Imperial Navy branch beret selection"
+	description = "A beret denoting service in one of the fleets within the Imperial Fleet."
 	path = /obj/item/clothing/head/beret/solgov/fleet/branch
 	allowed_branches = list(
 		/datum/mil_branch/fleet
@@ -106,16 +106,16 @@
 /datum/gear/head/fleetberet/New()
 	..()
 	var/berets = list()
-	berets["first fleet beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch
-	berets["second fleet beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch/second
-	berets["third fleet beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch/third
-	berets["fourth fleet beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch/fourth
-	berets["fifth fleet beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
+	berets["first militarum beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch
+	berets["second militarum beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch/second
+	berets["third militarum beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch/third
+	berets["fourth militarum beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch/fourth
+	berets["fifth militarum beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
 	gear_tweaks += new/datum/gear_tweak/path(berets)
 
 /datum/gear/head/ECberet
 	display_name = "EC sections beret selection"
-	description = "A beret denoting service in one of the branches within the SCG EC."
+	description = "A beret denoting service in one of the branches within the Imperial EC."
 	path = /obj/item/clothing/head/beret/solgov/expedition/branch
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps
@@ -130,7 +130,7 @@
 	gear_tweaks += new/datum/gear_tweak/path(berets)
 
 /datum/gear/head/corporateberet
-	allowed_branches = CIVILIAN_BRANCHES
+	allowed_branches = UNIFORMED_BRANCHES
 
 /datum/gear/head/deckcrew
 	allowed_roles = SUPPLY_ROLES
@@ -145,9 +145,9 @@
 /datum/gear/tactical/armor_tag_flag/New()
 	..()
 	var/list/options = list()
-	options["SCG flag"] = /obj/item/clothing/accessory/armor_tag/solgov
+	options["Imperial flag"] = /obj/item/clothing/accessory/armor_tag/solgov
 	options["EC flag"] = /obj/item/clothing/accessory/armor_tag/solgov/ec
-	options["Fleet flag"] =  /obj/item/clothing/accessory/armor_tag/solgov/fleet
+	options["Imperial Navy flag"] =  /obj/item/clothing/accessory/armor_tag/solgov/fleet
 	gear_tweaks += new /datum/gear_tweak/path (options)
 
 
@@ -180,6 +180,6 @@
 /datum/gear/tactical/armor_tag_corporate/New()
 	..()
 	var/list/options = list()
-	options["SAARE tag"] = /obj/item/clothing/accessory/armor_tag/saare
-	options["PCRC tag"] =  /obj/item/clothing/accessory/armor_tag/pcrc
+	options["Vessorine tag"] = /obj/item/clothing/accessory/armor_tag/saare
+	options["Necros tag"] =  /obj/item/clothing/accessory/armor_tag/pcrc
 	gear_tweaks += new /datum/gear_tweak/path (options)

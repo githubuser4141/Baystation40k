@@ -49,7 +49,7 @@
 
 /datum/reagent/nutriment/proc/adjust_nutrition(mob/living/carbon/M, removed)
 	if (HAS_TRAIT(M, /singleton/trait/boon/cast_iron_stomach))
-		removed *= 0.1 // Unathi get most of their nutrition from meat.
+		removed *= 0.1 // Kroot get most of their nutrition from meat.
 	var/nut_removed = removed
 	var/hyd_removed = removed
 	if(nutriment_factor)
@@ -160,7 +160,7 @@
 	condiment_name = "cake batter mix"
 
 /datum/reagent/nutriment/coffee
-	name = "Coffee Powder"
+	name = "Recaf Powder"
 	description = "A bitter powder made by grinding coffee beans."
 	taste_description = "bitterness"
 	taste_mult = 1.3
@@ -171,7 +171,7 @@
 	condiment_name = "coffee powder"
 
 /datum/reagent/nutriment/coffee/instant
-	name = "Instant Coffee Powder"
+	name = "Instant Recaf Powder"
 	description = "A bitter powder made by processing coffee beans."
 
 	condiment_name = "instant coffee powder"
@@ -489,7 +489,7 @@
 
 /datum/reagent/capsaicin/condensed
 	name = "Condensed Capsaicin"
-	description = "A chemical agent used for self-defense and in police work."
+	description = "A chemical agent used for self-defense and in enforcer work."
 	taste_description = "scorching agony"
 	taste_mult = 10
 	reagent_state = LIQUID
@@ -641,5 +641,5 @@
 	sugar_amount = 0.5
 
 	condiment_name = "NTella jar"
-	condiment_desc = "Originally called 'Entella', it was rebranded after being bought by NanoTrasen. Some humans insist this nutty chocolate spread might be the best thing they've ever created."
+	condiment_desc = "Originally called 'Entella', it was rebranded after being bought by Necromundan. Some humans insist this nutty chocolate spread might be the best thing they've ever created."
 	condiment_icon_state = "NTellajar"

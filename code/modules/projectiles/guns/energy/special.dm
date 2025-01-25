@@ -5,14 +5,14 @@
 	icon_state = "ionrifle"
 	item_state = "ionrifle"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)
-	w_class = ITEM_SIZE_HUGE
+	w_class = ITEM_SIZE_GARGANTUAN
 	force = 10
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BACK
 	one_hand_penalty = 4
 	charge_cost = 60
 	max_shots = 5
-	fire_delay = 60
+	fire_delay = 15
 	projectile_type = /obj/item/projectile/ion
 	wielded_item_state = "ionrifle-wielded"
 	combustion = 0
@@ -30,13 +30,13 @@
 	one_hand_penalty = 0
 	charge_cost = 40
 	max_shots = 3
-	fire_delay = 30
+	fire_delay = 8
 	projectile_type = /obj/item/projectile/ion/small
 
 /obj/item/gun/energy/ionrifle/mounted
 	name = "mounted ion gun"
 	desc = "You should not see this. Call a developer."
-	fire_delay = 30
+	fire_delay = 10
 	one_hand_penalty = 0
 	self_recharge = TRUE
 	use_external_power = TRUE
@@ -48,7 +48,7 @@
 	icon = 'icons/obj/guns/decloner.dmi'
 	icon_state = "decloner"
 	item_state = "decloner"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 4, TECH_POWER = 3)
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 3, TECH_POWER = 3)
 	max_shots = 10
 	projectile_type = /obj/item/projectile/energy/declone
 	combustion = 0
@@ -133,7 +133,7 @@
 	desc = "A custom-built weapon of some kind."
 	icon = 'icons/obj/guns/xray.dmi'
 	icon_state = "xray"
-	origin_tech = list(TECH_COMBAT = 5, TECH_MAGNET = 4)
+	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 4)
 	projectile_type = /obj/item/projectile/beam/mindflayer
 
 /obj/item/gun/energy/toxgun
@@ -142,7 +142,7 @@
 	icon = 'icons/obj/guns/toxgun.dmi'
 	icon_state = "toxgun"
 	w_class = ITEM_SIZE_NORMAL
-	origin_tech = list(TECH_COMBAT = 5, TECH_PHORON = 4)
+	origin_tech = list(TECH_COMBAT = 2, TECH_PHORON = 4)
 	projectile_type = /obj/item/projectile/energy/phoron
 
 /obj/item/gun/energy/plasmacutter
@@ -156,7 +156,7 @@
 	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEM_SIZE_NORMAL
 	force = 8
-	origin_tech = list(TECH_MATERIAL = 4, TECH_PHORON = 4, TECH_ENGINEERING = 6, TECH_COMBAT = 3)
+	origin_tech = list(TECH_MATERIAL = 2, TECH_PHORON = 2, TECH_ENGINEERING = 2, TECH_COMBAT = 3)
 	matter = list(MATERIAL_STEEL = 4000)
 	projectile_type = /obj/item/projectile/beam/plasmacutter
 	max_shots = 10
@@ -205,7 +205,7 @@
 	icon = 'icons/obj/guns/incendiary_laser.dmi'
 	icon_state = "incen"
 	item_state = "incen"
-	origin_tech = list(TECH_COMBAT = 7, TECH_MAGNET = 4, TECH_ESOTERIC = 4)
+	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 3, TECH_ESOTERIC = 4)
 	matter = list(MATERIAL_ALUMINIUM = 1000, MATERIAL_PLASTIC = 500, MATERIAL_DIAMOND = 500)
 	projectile_type = /obj/item/projectile/beam/incendiary_laser
 	max_shots = 4

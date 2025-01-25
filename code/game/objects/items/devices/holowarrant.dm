@@ -10,7 +10,7 @@
 	throw_range = 10
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	req_access = list(list(access_heads, access_security))
+	req_access = list(access_restricted)
 	var/datum/computer_file/data/warrant/active
 
 //look at it
@@ -66,8 +66,8 @@
 		if (!check_access(id))
 			USE_FEEDBACK_ID_CARD_DENIED(src, id_name)
 			return TRUE
-		var/input = alert(user, "Would you like to authorize this warrant?", "\The [src] - Authorization", "Yes", "No")
-		if (input != "Yes" || !user.use_sanity_check(src, tool))
+		var/input = alert(user, "Would you like to authorize this warrant?", "\The [src] - Authorization", "Compliance", "No")
+		if (input != "Compliance" || !user.use_sanity_check(src, tool))
 			return TRUE
 		active.fields["auth"] = "[id.registered_name] - [id.assignment ? id.assignment : "(Unknown)"]"
 		broadcast_security_hud_message("\A [active.fields["arrestsearch"]] warrant for <b>[active.fields["namewarrant"]]</b> has been authorized by [id.assignment ? id.assignment+" " : ""][id.registered_name].", src)
@@ -101,7 +101,7 @@
 	if(active.fields["arrestsearch"] == "arrest")
 		var/output = {"
 		<HTML><HEAD><TITLE>[active.fields["namewarrant"]]</TITLE></HEAD>
-		<BODY bgcolor='#ffffff'><center><large><b>SCG SFP Warrant Tracker System</b></large></br>
+		<BODY bgcolor='#ffffff'><center><large><b>Imperial Magistratum Warrant Tracker System</b></large></br>
 		</br>
 		Issued in the jurisdiction of the</br>
 		[GLOB.using_map.boss_name] in [GLOB.using_map.system_name]</br>
@@ -120,7 +120,7 @@
 	if(active.fields["arrestsearch"] ==  "search")
 		var/output= {"
 		<HTML><HEAD><TITLE>Search Warrant: [active.fields["namewarrant"]]</TITLE></HEAD>
-		<BODY bgcolor='#ffffff'><center><large><b>SCG SFP Warrant Tracker System</b></large></br>
+		<BODY bgcolor='#ffffff'><center><large><b>Imperial Magistratum Warrant Tracker System</b></large></br>
 		</br>
 		Issued in the jurisdiction of the</br>
 		[GLOB.using_map.boss_name] in [GLOB.using_map.system_name]</br>

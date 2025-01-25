@@ -4,14 +4,14 @@
 	icon = 'icons/obj/tools/inducers.dmi'
 	icon_state = "inducer-sci"
 	item_state = "inducer-sci"
-	force = 7
+	force = 13
 	var/powertransfer = 500
 	var/coefficient = 0.9
 	var/opened = FALSE
 	var/failsafe = 0
 	var/obj/item/cell/cell = /obj/item/cell/standard
 	var/recharging = FALSE
-	origin_tech = list(TECH_POWER = 6, TECH_ENGINEERING = 4)
+	origin_tech = list(TECH_POWER = 3, TECH_ENGINEERING = 3)
 	matter = list(MATERIAL_STEEL = 1000, MATERIAL_GLASS = 700)
 	slot_flags = SLOT_BELT
 
@@ -115,7 +115,7 @@
 				to_chat(user, SPAN_WARNING("There is no charging port on \the [gun]!"))
 				return TRUE
 			length = 3 SECONDS
-			if (user.get_skill_value(SKILL_WEAPONS) <= SKILL_TRAINED)
+			if (user.get_skill_value(SKILL_GUNS) <= SKILL_TRAINED)
 				length += rand(1, 3) SECONDS
 		if (user.get_skill_value(SKILL_ELECTRICAL) < SKILL_TRAINED)
 			length += rand(4, 6) SECONDS

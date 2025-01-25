@@ -95,7 +95,7 @@
 			to_chat(user, SPAN_NOTICE("\The [I] is no longer in storage."))
 			return TOPIC_HANDLED
 
-		visible_message(SPAN_NOTICE("The console beeps happily as it disgorges \the [I]."), range = 3)
+		visible_message(SPAN_NOTICE("The console beeps in compliance happily as it disgorges \the [I]."), range = 3)
 
 		I.dropInto(loc)
 		frozen_items -= I
@@ -108,7 +108,7 @@
 			to_chat(user, SPAN_NOTICE("There is nothing to recover from storage."))
 			return TOPIC_HANDLED
 
-		visible_message(SPAN_NOTICE("The console beeps happily as it disgorges the desired objects."), range = 3)
+		visible_message(SPAN_NOTICE("The console beeps in compliance happily as it disgorges the desired objects."), range = 3)
 
 		for(var/obj/item/I in frozen_items)
 			I.dropInto(loc)
@@ -118,12 +118,12 @@
 /obj/item/stock_parts/circuitboard/cryopodcontrol
 	name = "circuit board (cryogenic oversight console)"
 	build_path = /obj/machinery/computer/cryopod
-	origin_tech = list(TECH_DATA = 3)
+	origin_tech = list(TECH_DATA = 2)
 
 /obj/item/stock_parts/circuitboard/robotstoragecontrol
 	name = "circuit board (robotic storage console)"
 	build_path = /obj/machinery/computer/cryopod/robot
-	origin_tech = list(TECH_DATA = 3)
+	origin_tech = list(TECH_DATA = 2)
 
 //Decorative structures to go alongside cryopods.
 /obj/structure/cryofeed
@@ -431,8 +431,8 @@
 		to_chat(user, SPAN_WARNING("\The [target] isn't close enough."))
 		return
 	if (user != target  && target.client)
-		var/response = alert(target, "Enter the [src]?", null, "Yes", "No")
-		if (response != "Yes")
+		var/response = alert(target, "Enter the [src]?", null, "Compliance", "No")
+		if (response != "Compliance")
 			to_chat(user, SPAN_WARNING("\The [target] refuses."))
 			return
 	if (user.incapacitated() || !user.Adjacent(src))

@@ -68,12 +68,12 @@ GLOBAL_LIST_INIT(rpd_pipe_selection_skilled, list(
 	desc = "Portable, complex and deceptively heavy, it's the cousin of the RCD, use to dispense piping on the move."
 	icon = 'icons/obj/tools/rpd.dmi'//Needs proper icon
 	icon_state = "rpd"
-	force = 12
+	force = 15
 	throwforce = 15
 	throw_speed = 1
 	throw_range = 3
 	w_class = ITEM_SIZE_NORMAL
-	origin_tech = list(TECH_ENGINEERING = 5, TECH_MATERIAL = 4)
+	origin_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 2)
 
 	var/datum/effect/spark_spread/spark_system
 	var/datum/pipe/P

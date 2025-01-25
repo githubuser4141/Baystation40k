@@ -28,7 +28,7 @@
 	throwforce = 0
 	throw_speed = 4
 	throw_range = 20
-	force = 0
+	force = 1
 
 /*
  * Balloons
@@ -131,6 +131,39 @@
 	desc = "\"Singulo\" brand spinning toy."
 	icon = 'icons/obj/machines/power/singularity.dmi'
 	icon_state = "singularity_s1"
+
+/obj/item/toy/cursedbear
+	name = "teddy bear"
+	desc = "What the fuck is this thing?"
+	icon = 'icons/obj/bowl.dmi'
+	icon_state = "teddybear"
+	item_state = "teddybear"
+	w_class = ITEM_SIZE_SMALL
+	attack_verb = list("booped")
+	var/times_used = 0 //Number of times it's been used.
+	var/max_uses = 3
+
+/obj/item/toy/cursedbear/attack_self(mob/user)
+	if(times_used >= max_uses)
+		to_chat(user, "<span class='warning'>The teddy no longer responds to your commands...</span>")
+		return
+
+	var/list/stun_victims = list()
+	for(var/mob/living/carbon/human/M in orange(10, user))
+		stun_victims += M
+		spawn()
+			if(prob(60))
+				M.Weaken(rand(20,40))
+				M.apply_damage(rand(20,40), DAMAGE_BRUTE, BP_HEAD)
+				if(prob(25))
+					M.Stun(rand(10,20))
+				to_chat(M, "<span class='danger'>You feel your head swell -- as blood pours from your eyes and you vomit blood!</span>")
+			else
+				M.apply_damage(rand(5,20), DAMAGE_BRUTE, BP_HEAD)
+				to_chat(M, "<span class='danger'>You resist the psychic torment of the teddy bear managing to remain standing...</span>")
+
+	playsound(src.loc, 'sound/misc/teddynoise.ogg', 90, 1)
+	times_used += 1
 
 /*
  * Toy crossbow
@@ -290,7 +323,7 @@
 	return
 
 /obj/item/toy/katana
-	name = "katana"
+	name = "grim blade"
 	desc = "Woefully underpowered in D20."
 	icon = 'icons/obj/weapons/melee_physical.dmi'
 	icon_state = "katana"
@@ -342,7 +375,7 @@
 
 /obj/item/toy/bosunwhistle
 	name = "bosun's whistle"
-	desc = "A genuine Admiral Krush Bosun's Whistle, for the aspiring ship's captain! Suitable for ages 8 and up, do not swallow."
+	desc = "A genuine Lord Captain Krush Bosun's Whistle, for the aspiring ship's captain! Suitable for ages 8 and up, do not swallow."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "bosunwhistle"
 	var/cooldown = 0
@@ -790,7 +823,7 @@
 
 /obj/item/toy/plushie/lizard
 	name = "lizard plush"
-	desc = "A plushie of a scaly lizard! Very controversial, after being accused as \"racist\" by some Unathi."
+	desc = "A plushie of a scaly lizard! Very controversial, after being accused as \"racist\" by some Kroot."
 	icon_state = "lizardplushie"
 
 
@@ -999,7 +1032,7 @@
 		"As I see it, yes",
 		"Most likely",
 		"Outlook good",
-		"Yes",
+		"Compliance",
 		"Signs point to yes",
 		"Reply hazy, try again",
 		"Ask again later",

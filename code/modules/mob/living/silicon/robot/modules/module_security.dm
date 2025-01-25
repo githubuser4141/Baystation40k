@@ -15,13 +15,13 @@
 	)
 	skills = list(
 		SKILL_COMBAT      = SKILL_EXPERIENCED,
-		SKILL_WEAPONS     = SKILL_EXPERIENCED,
+		SKILL_GUNS     = SKILL_EXPERIENCED,
 		SKILL_FORENSICS   = SKILL_EXPERIENCED,
 		SKILL_BUREAUCRACY = SKILL_TRAINED
 	)
 
 /obj/item/robot_module/security/general
-	name = "security robot module"
+	name = "militarum robot module"
 	display_name = "Security"
 	crisis_locked = TRUE
 	sprites = list(
@@ -38,7 +38,7 @@
 		/obj/item/handcuffs/cyborg,
 		/obj/item/melee/baton/robot,
 		/obj/item/gun/energy/gun/secure/mounted,
-		/obj/item/taperoll/police,
+		/obj/item/taperoll/enforcer,
 		/obj/item/device/megaphone,
 		/obj/item/device/holowarrant,
 		/obj/item/crowbar,

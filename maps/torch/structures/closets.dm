@@ -45,7 +45,7 @@
 /obj/random/torchcloset/spawn_choices()
 	return list(/obj/structure/closet,
 				/obj/structure/closet/firecloset,
-				/obj/structure/closet/emcloset,
+				/obj/structure/closet/warhammer/emcloset,
 				/obj/structure/closet/jcloset_torch,
 				/obj/structure/closet/athletic_mixed,
 				/obj/structure/closet/toolcloset,
@@ -53,8 +53,8 @@
 				/obj/structure/closet/l3closet/general,
 				/obj/structure/closet/cabinet,
 				/obj/structure/closet/crate,
-				/obj/structure/closet/crate/freezer,
-				/obj/structure/closet/crate/freezer/rations,
+				/obj/structure/closet/crate/warhammer/freezer,
+				/obj/structure/closet/crate/warhammer/freezer/rations,
 				/obj/structure/closet/crate/internals,
 				/obj/structure/closet/crate/trashcart,
 				/obj/structure/closet/crate/medical,
@@ -78,7 +78,7 @@
 /obj/structure/closet/crate/ninja/sol/WillContain()
 	return list(
 		/obj/item/rig/light/ninja/sol,
-		/obj/item/gun/projectile/pistol/m22f,
+		/obj/item/gun/projectile/revolver/imperial/heavy,
 		/obj/item/ammo_magazine/pistol/double = 2,
 		/obj/item/clothing/under/scga/utility/urban,
 		/obj/item/clothing/shoes/swat,
@@ -92,7 +92,7 @@
 /obj/structure/closet/crate/ninja/gcc/WillContain()
 	return list(
 		/obj/item/rig/light/ninja/gcc,
-		/obj/item/gun/projectile/pistol/optimus,
+		/obj/item/gun/projectile/revolver/imperial/heavy/mateba,
 		/obj/item/ammo_magazine/pistol/double = 2,
 		/obj/item/ammo_magazine/box/minigun = 2,
 		/obj/item/clothing/under/iccgn/utility,
@@ -107,7 +107,7 @@
 /obj/structure/closet/crate/ninja/corpo/WillContain()
 	return list(
 		/obj/item/rig/light/ninja/corpo,
-		/obj/item/gun/energy/gun,
+		/obj/item/gun/energy/lasgun/laspistol/militarum,
 		/obj/item/inducer,
 		/obj/item/clothing/under/rank/security/corp,
 		/obj/item/clothing/shoes/swat,
@@ -121,7 +121,7 @@
 /obj/structure/closet/crate/ninja/merc/WillContain()
 	return list(
 		/obj/item/rig/merc/ninja,
-		/obj/item/gun/projectile/revolver/medium,
+		/obj/item/gun/projectile/revolver/imperial,
 		/obj/item/ammo_magazine/speedloader = 2,
 		/obj/item/clothing/under/syndicate/combat,
 		/obj/item/clothing/shoes/swat,

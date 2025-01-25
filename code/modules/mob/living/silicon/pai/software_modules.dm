@@ -66,8 +66,8 @@
 				return FALSE
 			M = M.loc
 			count++
-		var/answer = input(M, "\The [P] is requesting a DNA sample from you. Will you allow it to confirm your identity?", "[P] Check DNA", "No") in list("Yes", "No")
-		if (answer == "Yes")
+		var/answer = input(M, "\The [P] is requesting a DNA sample from you. Will you allow it to confirm your identity?", "[P] Check DNA", "No") in list("Compliance", "No")
+		if (answer == "Compliance")
 			var/turf/T = get_turf_or_move(P.loc)
 			var/datum/pronouns/pronouns = M.choose_from_pronouns()
 			for (var/mob/v in viewers(T))
@@ -261,15 +261,18 @@
 	ram_cost = 35
 	id = "translator"
 	var/list/languages = list(
-		LANGUAGE_EAL,
+		LANGUAGE_MECHANICUS,
 		LANGUAGE_HUMAN_ARABIC,
 		LANGUAGE_HUMAN_CHINESE,
 		LANGUAGE_HUMAN_IBERIAN,
 		LANGUAGE_HUMAN_INDIAN,
 		LANGUAGE_HUMAN_RUSSIAN,
 		LANGUAGE_HUMAN_SELENIAN,
-		LANGUAGE_SKRELLIAN,
-		LANGUAGE_UNATHI_SINTA
+		LANGUAGE_LOW_GOTHIC,
+		LANGUAGE_HIGH_GOTHIC,
+		LANGUAGE_KROOT,
+		LANGUAGE_TAU,
+		LANGUAGE_KROOT_SINTA
 	)
 
 /datum/pai_software/translator/toggle(mob/living/silicon/pai/user)

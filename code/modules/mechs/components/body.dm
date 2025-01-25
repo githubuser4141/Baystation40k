@@ -261,8 +261,8 @@
 	icon_state = "pod_body"
 	max_damage = 70
 	power_use = 5
-	has_hardpoints = list(HARDPOINT_BACK, HARDPOINT_POWER, HARDPOINT_BACKUP_POWER)
-	desc = "The NanoTrasen Katamari series cockpits have won a massive tender by SCG few years back. No one is sure why, but these terrible things keep popping up on every government facility."
+	has_hardpoints = list(HARDPOINT_BACK)
+	desc = "The Necromundan Katamari series cockpits have won a massive tender by Imperium few years back. No one is sure why, but these terrible things keep popping up on every government facility."
 
 /obj/item/mech_component/chassis/pod/Initialize()
 	pilot_positions = list(

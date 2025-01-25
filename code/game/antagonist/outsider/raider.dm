@@ -53,43 +53,43 @@ GLOBAL_DATUM_INIT(raiders, /datum/antagonist/raider, new)
 	var/list/raider_suits = list(
 		/obj/item/clothing/suit/pirate,
 		/obj/item/clothing/suit/hgpirate,
-		/obj/item/clothing/suit/storage/toggle/bomber,
-		/obj/item/clothing/suit/storage/leather_jacket,
-		/obj/item/clothing/suit/storage/toggle/brown_jacket,
-		/obj/item/clothing/suit/storage/toggle/hoodie,
-		/obj/item/clothing/suit/storage/toggle/hoodie/black,
+		/obj/item/clothing/suit/armor/grim/toggle/bomber,
+		/obj/item/clothing/suit/armor/grim/storage/leather_jacket,
+		/obj/item/clothing/suit/armor/grim/toggle/brown_jacket,
+		/obj/item/clothing/suit/armor/grim/toggle/hoodie,
+		/obj/item/clothing/suit/armor/grim/toggle/hoodie/black,
 		/obj/item/clothing/suit/unathi/mantle,
 		/obj/item/clothing/suit/poncho,
 		)
 
 	var/list/raider_guns = list(
-		/obj/item/gun/energy/laser,
-		/obj/item/gun/energy/retro,
-		/obj/item/gun/energy/xray,
-		/obj/item/gun/energy/xray/pistol,
-		/obj/item/gun/energy/mindflayer,
-		/obj/item/gun/energy/toxgun,
+		/obj/item/gun/energy/lasgun/laspistol/grim,
+		/obj/item/gun/energy/lasgun/laspistol/lucius,
+		/obj/item/gun/energy/tau/railgun,
+		/obj/item/gun/energy/lasgun/laspistol/hellpistol,
+		/obj/item/gun/energy/lasgun/grim,
+		/obj/item/gun/energy/lasgun/accatran,
 		/obj/item/gun/energy/stunrevolver,
-		/obj/item/gun/energy/ionrifle,
+		/obj/item/gun/energy/tau/railgun,
 		/obj/item/gun/energy/taser,
-		/obj/item/gun/energy/crossbow/largecrossbow,
+		/obj/item/gun/energy/plasma/pistol,
 		/obj/item/gun/launcher/crossbow,
 		/obj/item/gun/launcher/grenade/loaded,
 		/obj/item/gun/launcher/pneumatic,
-		/obj/item/gun/projectile/automatic/machine_pistol,
-		/obj/item/gun/projectile/automatic/merc_smg,
-		/obj/item/gun/projectile/automatic/sec_smg,
-		/obj/item/gun/projectile/automatic/assault_rifle,
-		/obj/item/gun/projectile/shotgun/pump,
-		/obj/item/gun/projectile/shotgun/pump/combat,
-		/obj/item/gun/projectile/shotgun/doublebarrel,
+		/obj/item/gun/projectile/automatic/autogun,
+		/obj/item/gun/projectile/automatic/autogun/a80,
+		/obj/item/gun/projectile/automatic/autogun/valhalla,
+		/obj/item/gun/projectile/automatic/autogun/a80,
+		/obj/item/gun/projectile/shotgun/pump/voxlegis,
+		/obj/item/gun/projectile/shotgun/pump/voxlegis,
+		/obj/item/gun/projectile/shotgun/pump/voxlegis/magrave,
 		/obj/item/gun/projectile/shotgun/doublebarrel/pellet,
 		/obj/item/gun/projectile/shotgun/doublebarrel/sawn,
-		/obj/item/gun/projectile/pistol/sec,
+		/obj/item/gun/projectile/pistol/slug,
 		/obj/item/gun/projectile/pistol/holdout,
-		/obj/item/gun/projectile/revolver,
-		/obj/item/gun/projectile/pirate,
-		/obj/item/gun/projectile/revolver/medium,
+		/obj/item/gun/projectile/revolver/imperial,
+		/obj/item/gun/energy/lasgun/laspistol/grim,
+		/obj/item/gun/projectile/revolver/imperial,
 		/obj/item/gun/projectile/pistol/broomstick
 		)
 
@@ -241,7 +241,7 @@ GLOBAL_DATUM_INIT(raiders, /datum/antagonist/raider, new)
 	vox.equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/vox(vox), slot_shoes) // REPLACE THESE WITH CODED VOX ALTERNATIVES.
 	vox.equip_to_slot_or_del(new /obj/item/clothing/gloves/vox(vox), slot_gloves) // AS ABOVE.
 	vox.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat/vox(vox), slot_wear_mask)
-	vox.equip_to_slot_or_del(new /obj/item/tank/nitrogen(vox), slot_back)
+	vox.equip_to_slot_or_del(new /obj/item/tank/oxygen(vox), slot_back)
 	vox.equip_to_slot_or_del(new /obj/item/device/flashlight(vox), slot_r_store)
 
 	var/obj/item/clothing/accessory/storage/holster/holster = new new_holster
@@ -256,7 +256,7 @@ GLOBAL_DATUM_INIT(raiders, /datum/antagonist/raider, new)
 
 /obj/random/raider/hardsuit
 	name = "Random Raider Hardsuit"
-	desc = "This is a random hardsuit control module."
+	desc = "This is a random power armour."
 	icon = 'icons/obj/rig_modules.dmi'
 	icon_state = "generic"
 
