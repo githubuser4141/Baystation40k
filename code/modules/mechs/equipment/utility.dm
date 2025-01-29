@@ -1013,7 +1013,6 @@
 	units_to_use = internal_chamber.get_reagent_amount(/datum/reagent/fuel)
 	internal_cell.give(units_to_use * production_ratio KILOWATTS * CELLRATE)
 	internal_chamber.remove_any(internal_chamber.total_volume)
-	GLOB.sound_player.PlayLoopingSound(src, "\ref[src]", 'sound/mecha/electricloop.ogg', 70, 6)
 
 /obj/item/mech_equipment/engine/deactivate(mob/living/user)
 	STOP_PROCESSING(SSprocessing,src)
@@ -1166,8 +1165,7 @@
 	if(!active || internal_cell.charge < 1)
 		deactivate()
 		return
-	GLOB.sound_player.PlayLoopingSound(src, "\ref[src]", 'sound/mecha/electricloop.ogg', 70, 6)
-//	playsound(owner, 'sound/mecha/electricloop.ogg', 100, FALSE)
+	playsound(owner, 'sound/mecha/electricloop.ogg', 100, FALSE)
 
 /obj/item/mech_equipment/power_cell/attack_self(mob/user)
 	. = ..()
