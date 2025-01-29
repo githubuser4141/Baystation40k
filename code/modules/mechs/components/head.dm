@@ -157,57 +157,30 @@
 	gender = PLURAL
 	exosuit_desc_string = "simple collision detection sensors"
 	desc = "A primitive set of sensors designed to work in tandem with most MKI Eyeball platforms."
-	max_damage = 150
+	max_damage = 100
 	power_use = 0
 	prebuilt_software = list(/obj/item/circuitboard/exosystem/utility, /obj/item/circuitboard/exosystem/engineering)
-
-	armor = list(
-		melee = ARMOR_MELEE_CARAPACE,
-		bullet = ARMOR_BALLISTIC_FLAK,
-		laser = ARMOR_LASER_FLAK,
-		energy = ARMOR_ENERGY_SMALL,
-		bomb = ARMOR_BOMB_RESISTANT,
-		bio = ARMOR_BIO_SHIELDED
-		)
 
 /obj/item/mech_component/sensors/light
 	name = "light sensors"
 	gender = PLURAL
 	exosuit_desc_string = "advanced sensor array"
 	icon_state = "light_head"
-	max_damage = 100
+	max_damage = 30
 	vision_flags = SEE_TURFS
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
 	power_use = 50
 	desc = "A series of high resolution optical sensors. They can overlay several images to give the pilot a sense of location even in total darkness. "
 	prebuilt_software = list(/obj/item/circuitboard/exosystem/medical, /obj/item/circuitboard/exosystem/utility)
 
-	armor = list(
-		melee = ARMOR_MELEE_FLAK,
-		bullet = ARMOR_BALLISTIC_FLAK,
-		laser = ARMOR_LASER_FLAK,
-		energy = ARMOR_ENERGY_SMALL,
-		bomb = ARMOR_BOMB_RESISTANT,
-		bio = ARMOR_BIO_SHIELDED
-		)
-
 /obj/item/mech_component/sensors/heavy
 	name = "heavy sensors"
 	exosuit_desc_string = "a reinforced monoeye"
 	desc = "A solitary sensor moves inside a recessed slit in the armour plates."
 	icon_state = "heavy_head"
-	max_damage = 300
+	max_damage = 120
 	power_use = 0
 	prebuilt_software = list(/obj/item/circuitboard/exosystem/weapons)
-
-	armor = list(
-		melee = ARMOR_MELEE_ASTARTES,
-		bullet = ARMOR_BALLISTIC_ASTARTES,
-		laser = ARMOR_LASER_ASTARTES,
-		energy = ARMOR_ENERGY_RESISTANT,
-		bomb = ARMOR_BOMB_RESISTANT,
-		bio = ARMOR_BIO_SHIELDED
-		)
 
 /obj/item/mech_component/sensors/combat
 	name = "combat sensors"
@@ -216,15 +189,5 @@
 	icon_state = "combat_head"
 	vision_flags = SEE_MOBS
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
-	max_damage = 100
 	power_use = 200
 	prebuilt_software = list(/obj/item/circuitboard/exosystem/weapons)
-
-	armor = list(
-		melee = ARMOR_MELEE_POWER_ARM,
-		bullet = ARMOR_BALLISTIC_CARAPACE,
-		laser = ARMOR_LASER_CARAPACE,
-		energy = ARMOR_ENERGY_SMALL,
-		bomb = ARMOR_BOMB_RESISTANT,
-		bio = ARMOR_BIO_SHIELDED
-		)

@@ -119,6 +119,37 @@
 	materials = list(MATERIAL_STEEL = 20000)
 	category = "Exosuits"
 
+/datum/design/item/mechfab/exosuit/basic_armour
+	name = "basic exosuit armour"
+	id = "mech_armour_basic"
+	build_path = /obj/item/robot_parts/robot_component/armour/exosuit
+	time = 30
+	materials = list(MATERIAL_STEEL = 7500)
+
+/datum/design/item/mechfab/exosuit/radproof_armour
+	name = "radiation-proof exosuit armour"
+	id = "mech_armour_radproof"
+	build_path = /obj/item/robot_parts/robot_component/armour/exosuit/radproof
+	time = 50
+	req_tech = list(TECH_MATERIAL = 2)
+	materials = list(MATERIAL_STEEL = 12500)
+
+/datum/design/item/mechfab/exosuit/em_armour
+	name = "EM-shielded exosuit armour"
+	id = "mech_armour_em"
+	build_path = /obj/item/robot_parts/robot_component/armour/exosuit/em
+	time = 50
+	req_tech = list(TECH_MATERIAL = 2)
+	materials = list(MATERIAL_STEEL = 12500, MATERIAL_SILVER = 1000)
+
+/datum/design/item/mechfab/exosuit/combat_armour
+	name = "Combat exosuit armour"
+	id = "mech_armour_combat"
+	build_path = /obj/item/robot_parts/robot_component/armour/exosuit/combat
+	time = 50
+	req_tech = list(TECH_MATERIAL = 4)
+	materials = list(MATERIAL_STEEL = 20000, MATERIAL_DIAMOND = 5000)
+
 /datum/design/item/mechfab/exosuit/control_module
 	name = "exosuit control module"
 	id = "mech_control_module"
