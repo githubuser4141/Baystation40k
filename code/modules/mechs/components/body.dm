@@ -23,6 +23,7 @@
 	gender = NEUTER
 
 	var/mech_health = 300
+	var/obj/item/cell/cell
 	var/obj/item/robot_parts/robot_component/diagnosis_unit/diagnostics
 	var/obj/item/robot_parts/robot_component/armour/exosuit/m_armour
 	var/obj/machinery/portable_atmospherics/canister/air_supply
@@ -35,7 +36,7 @@
 	var/pilot_coverage = 100
 	var/min_pilot_size = MOB_SMALL
 	var/max_pilot_size = MOB_LARGE
-	has_hardpoints = list(HARDPOINT_BACK, HARDPOINT_LEFT_SHOULDER, HARDPOINT_RIGHT_SHOULDER, HARDPOINT_POWER, HARDPOINT_BACKUP_POWER)
+	has_hardpoints = list(HARDPOINT_BACK, HARDPOINT_LEFT_SHOULDER, HARDPOINT_RIGHT_SHOULDER)
 	var/damage_sound = 'sound/effects/bang.ogg'
 	var/climb_time = 25
 
@@ -52,6 +53,7 @@
 		)
 
 /obj/item/mech_component/chassis/Destroy()
+	QDEL_NULL(cell)
 	QDEL_NULL(diagnostics)
 	QDEL_NULL(m_armour)
 	QDEL_NULL(air_supply)
@@ -60,11 +62,14 @@
 
 /obj/item/mech_component/chassis/update_components()
 	diagnostics = locate() in src
+	cell =        locate() in src
 	m_armour =    locate() in src
 	air_supply =  locate() in src
 	storage_compartment = locate() in src
 
 /obj/item/mech_component/chassis/show_missing_parts(mob/user)
+	if(!cell)
+		to_chat(user, SPAN_WARNING("It is missing a power cell."))
 	if(!diagnostics)
 		to_chat(user, SPAN_WARNING("It is missing a diagnostics unit."))
 	if(!m_armour)
@@ -95,7 +100,7 @@
 	var/changed
 	if(!cockpit)
 		return
-	if(!take_from_supply || pilot_coverage < 100 || total_damage == max_damage)
+	if(!take_from_supply || pilot_coverage < 100)
 		var/turf/T = get_turf(src)
 		if(!T)
 			return
@@ -132,10 +137,12 @@
 		cockpit.react()
 
 /obj/item/mech_component/chassis/ready_to_install()
-	return (diagnostics && m_armour)
+	return (cell && diagnostics && m_armour)
 
 /obj/item/mech_component/chassis/prebuild()
 	diagnostics = new(src)
+	cell = new /obj/item/cell/high(src)
+	cell.charge = cell.maxcharge
 
 /obj/item/mech_component/chassis/use_tool(obj/item/thing, mob/living/user, list/click_params)
 	if(istype(thing,/obj/item/robot_parts/robot_component/diagnosis_unit))
@@ -144,6 +151,14 @@
 			return TRUE
 		if(install_component(thing, user))
 			diagnostics = thing
+			return TRUE
+
+	else if(istype(thing, /obj/item/cell))
+		if(cell)
+			to_chat(user, SPAN_WARNING("\The [src] already has a cell installed."))
+			return TRUE
+		if(install_component(thing,user))
+			cell = thing
 			return TRUE
 
 	else if(istype(thing, /obj/item/robot_parts/robot_component/armour/exosuit))
@@ -232,7 +247,7 @@
 	icon_state = "light_body"
 	max_damage = 50
 	power_use = 5
-	has_hardpoints = list(HARDPOINT_BACK, HARDPOINT_POWER, HARDPOINT_BACKUP_POWER)
+	has_hardpoints = list(HARDPOINT_BACK, HARDPOINT_LEFT_SHOULDER)
 	damage_sound = 'sound/effects/glass_crack1.ogg'
 	desc = "The Veymed Odysseus series cockpits combine ultralight materials and clear aluminum laminates to provide an optimized cockpit experience."
 	climb_time = 15
@@ -262,7 +277,11 @@
 	max_damage = 70
 	power_use = 5
 	has_hardpoints = list(HARDPOINT_BACK)
+<<<<<<< HEAD
 	desc = "The Necromundan Katamari series cockpits have won a massive tender by Imperium few years back. No one is sure why, but these terrible things keep popping up on every government facility."
+=======
+	desc = "The NanoTrasen Katamari series cockpits have won a massive tender by SCG few years back. No one is sure why, but these terrible things keep popping up on every government facility."
+>>>>>>> parent of f18916acbe0 (V1)
 
 /obj/item/mech_component/chassis/pod/Initialize()
 	pilot_positions = list(
@@ -306,7 +325,7 @@
 	max_damage = 150
 	mech_health = 500
 	power_use = 50
-	has_hardpoints = list(HARDPOINT_BACK, HARDPOINT_POWER, HARDPOINT_BACKUP_POWER)
+	has_hardpoints = list(HARDPOINT_BACK)
 
 /obj/item/mech_component/chassis/heavy/prebuild()
 	pilot_positions = list(

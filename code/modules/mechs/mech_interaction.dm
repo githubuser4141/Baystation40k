@@ -39,7 +39,10 @@
 		//If this happens something broke tbh
 		user.RemoveClickHandler(src)
 		return
-	return E.ClickOn(A, params, user)
+	if(E.hatch_closed)
+		E.ClickOn(A, params, user)
+		return
+	else return ..()
 
 /datum/click_handler/default/mech/OnDblClick(atom/A, params)
 	OnClick(A, params)
@@ -76,9 +79,6 @@
 				setClickCooldown(3)
 			return
 
-	if(modifiers["alt"])
-		return user.AltClickOn(A)
-
 	if(!(user in pilots) && user != src)
 		return
 
@@ -99,10 +99,9 @@
 		setClickCooldown(15)
 		return
 
-	if(selected_system && !(selected_system.equipment_flags & ME_ARM_INDEPENDENT))
-		if(!get_cell(FALSE, ME_ANY_POWER)?.checked_use(arms.power_use * CELLRATE))
-			to_chat(user, power == MECH_POWER_ON ? SPAN_WARNING("Error: Power levels insufficient.") :  SPAN_WARNING("\The [src] is powered off."))
-			return
+	if(!get_cell()?.checked_use(arms.power_use * CELLRATE))
+		to_chat(user, power == MECH_POWER_ON ? SPAN_WARNING("Error: Power levels insufficient.") :  SPAN_WARNING("\The [src] is powered off."))
+		return
 
 	// User is not necessarily the exosuit, or the same person, so update intent.
 	if(user != src)
@@ -123,12 +122,6 @@
 		failed = TRUE
 
 	if(!failed)
-		if(istype(A, /obj/item/mech_equipment))
-			var/obj/item/mech_equipment/cast = A
-			if(cast.equipment_flags & ME_NOT_SELECTABLE)
-				setClickCooldown(5)
-				cast.attack_self(user)
-				return
 		if(selected_system)
 			if(selected_system == A)
 				selected_system.attack_self(user)
@@ -291,7 +284,6 @@
 	if (!LAZYISIN(pilots, user))
 		return
 	user.RemoveClickHandler(/datum/click_handler/default/mech)
-//	user.clear_alert(ALERT_CHARGE)
 	if (!QDELETED(user))
 		user.dropInto(loc)
 	if (user.client)
@@ -437,7 +429,7 @@
 			return TRUE
 		remove_system(input, user)
 		return TRUE
-/*
+
 	// Power Cell - Install cell
 	if (istype(tool, /obj/item/cell))
 		if (!maintenance_protocols)
@@ -456,50 +448,36 @@
 			SPAN_NOTICE("You install \the [tool] into \the [src].")
 		)
 		return TRUE
-*/
+
 	// Screwdriver - Remove cell
 	if (isScrewdriver(tool))
-		if(!maintenance_protocols)
-			to_chat(user, SPAN_WARNING("The power supply compartment remains locked while maintenance protocols are disabled."))
+		if (!maintenance_protocols)
+			USE_FEEDBACK_FAILURE("\The [src]'s maintenance protocols must be enabled to access the power cell.")
+			return TRUE
+		if (!body?.cell)
+			USE_FEEDBACK_FAILURE("\The [src] has no power cell to remove.")
+			return TRUE
+		user.visible_message(
+			SPAN_NOTICE("\The [user] starts removing \the [src]'s power cell with \a [tool]."),
+			SPAN_NOTICE("You start removing \the [src]'s power cell with \the [tool].")
+		)
+		if (!user.do_skilled((tool.toolspeed * 2) SECONDS, SKILL_DEVICES, src) || !user.use_sanity_check(src, tool))
 			return
-		var/chosen_hardpoint
-		if(hardpoints[HARDPOINT_POWER] && hardpoints[HARDPOINT_BACKUP_POWER])
-			chosen_hardpoint = input(user, "Choose power hardpoint to interact with", "MechEngineer3000", HARDPOINT_POWER) as anything in list(HARDPOINT_POWER, HARDPOINT_BACKUP_POWER)
-		else if(hardpoints[HARDPOINT_POWER])
-			chosen_hardpoint = HARDPOINT_POWER
-		else if(hardpoints[HARDPOINT_BACKUP_POWER])
-			chosen_hardpoint = HARDPOINT_BACKUP_POWER
-
-		if(!chosen_hardpoint)
-			to_chat(user, SPAN_WARNING("There is nothing to remove with the use of a screwdriver!"))
-			return
-		if(!hardpoints[chosen_hardpoint])
-			to_chat(user, SPAN_WARNING("There is nothing to remove with the use of a screwdriver!"))
-			return
-
-		if(!body)
-			to_chat(user, SPAN_WARNING("There is no power provider here for you to remove!"))
-			return
-		var/delay = 2.5 SECONDS * user.skill_delay_mult(SKILL_DEVICES)
-		if(!do_after(user, delay, bonus_percentage = 25) || !maintenance_protocols || !body || !hardpoints[chosen_hardpoint])
-			return
-
-		var/atom/movable/power_provider = hardpoints[chosen_hardpoint]
-		if(istype(power_provider, /obj/item/mech_equipment/power_cell))
-			var/obj/item/mech_equipment/power_cell/cast = power_provider
-			remove_system(chosen_hardpoint, null, TRUE)
-			power_provider = cast.internal_cell
-			power_provider.forceMove(get_turf(src))
-			cast.internal_cell = null
-			qdel(cast)
-		else
-			remove_system(chosen_hardpoint, null, TRUE)
-		user.put_in_hands(power_provider)
-		to_chat(user, SPAN_NOTICE("You remove \the [power_provider] from \the [src]."))
-		playsound(user.loc, 'sound/items/Crowbar.ogg', 50, 1)
-		visible_message(SPAN_NOTICE("\The [user] pries out \the [power_provider] using \the [tool]."))
+		if (!maintenance_protocols)
+			USE_FEEDBACK_FAILURE("\The [src]'s maintenance protocols must be enabled to access the power cell.")
+			return TRUE
+		if (!body?.cell)
+			USE_FEEDBACK_FAILURE("\The [src] has no power cell to remove.")
+			return TRUE
+		user.put_in_hands(body.cell)
 		power = MECH_POWER_OFF
-		return
+		hud_power_control.update_icon()
+		body.cell = null
+		user.visible_message(
+			SPAN_NOTICE("\The [user] removes \the [src]'s power cell with \a [tool]."),
+			SPAN_NOTICE("You remove \the [src]'s power cell with \the [tool].")
+		)
+		return TRUE
 
 	// Welding Tool - Repair physical damage
 	if (isWelder(tool))
@@ -539,18 +517,6 @@
 		)
 		dismantle()
 		return TRUE
-
-	if(user.a_intent != I_HURT)
-		if(istype(tool, /obj/item/reagent_containers))
-			var/obj/item/reagent_containers/W = tool
-			if(!(HARDPOINT_POWER in hardpoints))
-				to_chat(user, SPAN_WARNING("There is no engine to try refueling!"))
-				return
-			if(!istype(hardpoints[HARDPOINT_POWER], /obj/item/mech_equipment/engine ))
-				to_chat(user, SPAN_WARNING("There is no engine to try refueling!"))
-				return
-			W.standard_pour_into(user, hardpoints[HARDPOINT_POWER])
-			return TRUE
 
 	return ..()
 
