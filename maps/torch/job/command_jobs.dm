@@ -49,6 +49,7 @@
 	return "You are the Rogue Trader, an infamous member of the Landsraad, where noble houses vie for dominance over the Ghoul Stars. Through shared bonds and rivalries, they control the flow of power and resources. As one of their number, you forge your path amidst alliances, intrigue, and the perils of the void."
 
 /datum/job/rogue_trader/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -67,14 +68,14 @@
 		current_title = title // use default title
 	H.fully_replace_character_name("[current_title] [current_name]")
 	captain_announcement.Announce("All crew, [current_title] [current_name] has arrived...")
-	if(prob(2))
+	if(prob(4))
 		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 		spawn(30 SECONDS)
 		GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
 		to_chat(H, "<span class='notice'><b><font size=2>You are a heretical cultist loyal to one or more of the Chaos Gods -- unlike the many pretenders you are truly blessed by the warp and can survive encounters that would boil the brains of most mortal men.</font></b></span>")
 	to_chat(H, "<span class='notice'><b><font size=2>You are the [current_title], an infamous member of the Landsraad, where noble houses vie for dominance over the Ghoul Stars. Through shared bonds and rivalries, they control the flow of power and resources. As one of their number, you forge your path amidst alliances, intrigue, and the perils of the void.</font></b></span>")
-	return ..()
+	return
 
 /datum/job/seneschal
 	title = "Seneschal" // HOP/ Supply and Bridge Crew in one.
@@ -131,6 +132,7 @@
 	return "You are the Seneschal, the trusted advisor and chief administrator aboard the Dauntless. Your duties involve managing the vast wealth, resources, and trade networks of the Rogue Trader, ensuring colonies, contracts, and logistics run smoothly. You oversee the ship’s operations, handling everything from diplomacy to the darker dealings of the trade empire. While the Rogue Trader focuses on larger ventures, you maintain the foundations that keep the dynasty profitable and in control."
 
 /datum/job/seneschal/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -143,7 +145,7 @@
 		current_title = title // use default title
 	H.fully_replace_character_name("[current_title] [current_name]")
 	to_chat(H, "<span class='notice'><b><font size=2>You are the [current_title], the trusted advisor and chief administrator aboard the Dauntless. Your duties involve managing the vast wealth, resources, and trade networks of the Rogue Trader, ensuring colonies, contracts, and logistics run smoothly. You oversee the ship’s operations, handling everything from diplomacy to the darker dealings of the trade empire. While the Rogue Trader focuses on larger ventures, you maintain the foundations that keep the dynasty profitable and in control.</font></b></span>")
-	return ..()
+	return
 
 /datum/job/void_officer
 	title = "Voidmaster" // HOP/ Supply and Bridge Crew in one.
@@ -202,6 +204,7 @@
 	return "As the Voidmaster, you are a crucial officer aboard the Dauntless, responsible for piloting the ship, managing ship-wide vox communications, and executing the Rogue Trader's commands. Your role involves coordinating with the deck crew and all departments to ensure smooth and efficient operation of the voidship."
 
 /datum/job/void_officer/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -211,17 +214,17 @@
 		current_title = title // use default title
 	H.fully_replace_character_name("[current_title] [current_name]")
 	H.verbs += /mob/living/proc/set_ambition
-	if(prob(1))
+	if(prob(2))
 		H.make_genestealer()
 		to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-	else if(prob(1))
+	else if(prob(4))
 		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 		spawn(30 SECONDS)
 		GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
 		to_chat(H, "<span class='notice'><b><font size=2>You are a heretical cultist loyal to one or more of the Chaos Gods -- unlike the many pretenders you are truly blessed by the warp and can survive encounters that would boil the brains of most mortal men.</font></b></span>")
 	to_chat(H, "<span class='notice'><b><font size=2>As the [current_title], you are a crucial officer aboard the Dauntless, responsible for piloting the ship, managing ship-wide vox communications, and executing the Rogue Trader's commands. Your role involves coordinating with the deck crew and all departments to ensure smooth and efficient operations. </font></b></span>")
-	return ..()
+	return
 
 /datum/job/mercenary
 	title = "Kroot Tracker"
@@ -237,7 +240,7 @@
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/civ)
 	skill_points = 9
-	min_skill = list(SKILL_VIGOR = SKILL_DEMIGOD,
+	min_skill = list(SKILL_VIGOR = SKILL_LEGEND,
 					SKILL_COMBAT = SKILL_LEGEND, // Worse skills then imperials. Since they are more primitive bioforms.
 					SKILL_GUNS = SKILL_EXPERIENCED,
 				)
@@ -255,6 +258,7 @@
 	return "As the Xenos Mercenary, you serve as the Lifeward to the Rogue Trader, using your alien abilities to fulfill your duties. Your role is fluid, from enforcing order and discipline to handling tasks that fall beyond the reach of the human crew. You protect essential personnel, ensure the Trader's will is carried out, and use your unique skills to safeguard the vessel."
 
 /datum/job/mercenary/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.fully_replace_character_name("Tracker [current_name]")
@@ -264,7 +268,7 @@
 	else
 		current_title = title // use default title
 	to_chat(H, "<span class='notice'><b><font size=2>As the [current_title], you serve as the Lifeward to the Rogue Trader, using your alien abilities to fulfill your duties. Your role is fluid, from enforcing order and discipline to handling tasks that fall beyond the reach of the human crew. You protect essential personnel, ensure the Trader's will is carried out, and use your unique skills to safeguard the vessel.</font></b></span>")
-	return ..()
+	return
 
 
 // DONT USE THESE JOBS

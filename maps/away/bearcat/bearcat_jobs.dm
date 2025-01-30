@@ -60,9 +60,10 @@ else if(current_title == "Bounty Hunter")
 	max_skill = list(	SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_PRIMARIS,
 						SKILL_GUNS = SKILL_PRIMARIS,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/kasrkin/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -88,7 +89,7 @@ else if(current_title == "Bounty Hunter")
 	H.species.stun_mod = 0.61
 	H.species.slowdown = -0.2 // Kasrkin are renowned for incredible speed and the ability to scale any terrain, even mountains.
 	H.species.silent_steps = TRUE
-	return ..()
+	return
 
 /datum/job/submap/pdf
 	title = "Demeter Deserter"
@@ -110,9 +111,10 @@ else if(current_title == "Bounty Hunter")
 	max_skill = list(	SKILL_CONSTRUCTION = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_LEGEND,
 						SKILL_GUNS = SKILL_LEGEND,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/pdf/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -123,10 +125,10 @@ else if(current_title == "Bounty Hunter")
 		current_title = title // use default title
 	to_chat(H,"<span class='danger'><b><font size=4>THE DESERTER</font></b></span>")
 	to_chat(H, "<span class='notice'><b><font size=2>As the Deserter, you've abandoned the PDF in search of fortune as a mercenary. Your knowledge of Militarum codes and procedures now serves you as you navigate the dangerous life of a hired gun.</font></b></span>")
-	if(prob(3))
+	if(prob(5))
 		H.make_genestealer()
 		to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-	else if(prob(3))
+	else if(prob(5))
 		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 		spawn(30 SECONDS)
 		GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
@@ -160,7 +162,7 @@ else if(current_title == "Bounty Hunter")
 		H.equip_to_slot_or_store_or_drop(new /obj/item/gun/energy/lasgun/laspistol/hellpistol, slot_belt)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/gun/energy/lasgun/laspistol/lucius, slot_belt)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/cell/device/high/laspack, slot_in_backpack)
-	return ..()
+	return
 
 /datum/job/submap/merchant
 	title = "Merchant" // The only semi-free roles left to assign to Demeter is Witch Hunter and Deserter. Also something else somewhere maybe?
@@ -187,9 +189,10 @@ else if(current_title == "Bounty Hunter")
 						SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_MASTER,
 						SKILL_GUNS = SKILL_MASTER,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/merchant/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -200,10 +203,10 @@ else if(current_title == "Bounty Hunter")
 		current_title = title // use default title
 	to_chat(H,"<span class='danger'><b><font size=4>THE MERCHANT</font></b></span>")
 	to_chat(H, "<span class='notice'><b><font size=2>As the Merchant aboard the Demeter, you are a passenger seeking new opportunities in the Ghoul Stars. With your keen eye for profit and trade, you aim to expand your business, hoping to capitalize on the chaos and scarcity of resources in this grim sector.</font></b></span>")
-	if(prob(1))
+	if(prob(14))
 		H.make_genestealer()
 		to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-	else if(prob(1))
+	else if(prob(14))
 		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 		spawn(30 SECONDS)
 		GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
@@ -222,7 +225,7 @@ else if(current_title == "Bounty Hunter")
 		H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/victorian/black, slot_w_uniform)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/storage/box/contraband/imp_explosive, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/book/manual/chef_recipes(get_turf(src)))
-	return ..()
+	return
 
 /datum/job/submap/noble
 	title = "Witch Hunter" // The only semi-free roles left to assign to Demeter is Witch Hunter and Deserter. Also something else somewhere maybe?
@@ -243,9 +246,10 @@ else if(current_title == "Bounty Hunter")
 	max_skill = list(	SKILL_CONSTRUCTION = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_LEGEND,
 						SKILL_GUNS = SKILL_LEGEND,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/noble/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -276,7 +280,7 @@ else if(current_title == "Bounty Hunter")
 		H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/victorian/redbl, slot_w_uniform)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/material/twohanded/ravenor/axe, slot_belt)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/gun/projectile/pistol/slug/old, slot_in_backpack)
-	return ..()
+	return
 
 /datum/job/submap/demeter_crew
 	title = "Crewman"
@@ -303,9 +307,10 @@ else if(current_title == "Bounty Hunter")
 						SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_MASTER,
 						SKILL_GUNS = SKILL_MASTER,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/demeter_crew/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -317,10 +322,10 @@ else if(current_title == "Bounty Hunter")
 	if(prob(70))
 		to_chat(H,"<span class='danger'><b><font size=4>THE CREWMAN</font></b></span>")
 		to_chat(H, "<span class='notice'><b><font size=2>As the Crewman, you are a key member of the Demeter, a vessel once led by a captain now lost to the void. Your knowledge of the ship's operations is critical, shaped by loyalty to a dead master and the harsh realities of life within the grimdark of the ghoul stars.</font></b></span>")
-		if(prob(3))
+		if(prob(17))
 			H.make_genestealer()
 			to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-		else if(prob(3))
+		else if(prob(17))
 			to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 			spawn(30 SECONDS)
 			GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
@@ -351,7 +356,7 @@ else if(current_title == "Bounty Hunter")
 			H.equip_to_slot_or_store_or_drop(new /obj/item/storage/backpack/satchel/thief2, slot_r_hand)
 		else
 			H.equip_to_slot_or_store_or_drop(new /obj/item/storage/backpack/satchel/thief3, slot_r_hand)
-	return ..()
+	return
 
 /datum/job/submap/demeter_detective
 	title = "Detective"
@@ -378,9 +383,10 @@ else if(current_title == "Bounty Hunter")
 						SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_MASTER,
 						SKILL_GUNS = SKILL_MASTER,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/demeter_detective/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -406,7 +412,7 @@ else if(current_title == "Bounty Hunter")
 		H.equip_to_slot_or_store_or_drop(new /obj/item/gun/projectile/revolver/imperial/heavy/bounty, slot_r_hand)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/ammo_magazine/speedloader/revolver/kp, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/device/multitool/hacktool, slot_in_backpack)
-	return ..()
+	return
 
 /*
 			to_chat(H,"<span class='danger'><b><font size=4>THE DETECTIVE</font></b></span>")

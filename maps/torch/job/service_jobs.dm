@@ -33,6 +33,7 @@
 	return "The Chaplain Militant, spiritual guide and zealous warrior, leads prayers, upholds the Emperor’s light, and strikes down heresy to keep faith alive amid the void’s perils."
 
 /datum/job/chaplain_militant/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -41,7 +42,7 @@
 		current_title = trimtext(H.mind.role_alt_title) // Use alt_title if selected
 	else
 		current_title = title // use default title
-	return ..()
+	return
 
 
 /datum/job/chamber_assistant
@@ -74,6 +75,7 @@
 	return "The Chamber Assistant, one of many shipbound drudges, seeks employment wherever their labor can be tolerated. Whether scrubbing quarters, hauling provisions, or serving the needs of officers and crew, they toil in obscurity, hoping their service earns them a measure of survival aboard the Dauntless."
 
 /datum/job/chamber_assistant/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -83,7 +85,15 @@
 	else
 		current_title = title // use default title
 	H.verbs += /mob/living/proc/set_ambition
-	return ..()
+	if(prob(4))
+		H.make_genestealer()
+		to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
+	else if(prob(4))
+		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
+		spawn(30 SECONDS)
+		GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
+		to_chat(H, "<span class='notice'><b><font size=2>You are a heretical cultist loyal to one or more of the Chaos Gods -- unlike the many pretenders you are truly blessed by the warp and can survive encounters that would boil the brains of most mortal men.</font></b></span>")
+	return
 
 /datum/job/chamber_magister
 	title = "Tavern Keeper" // alt_titles; innkeeper. gets shotgun. magister has a las pistol.
@@ -117,6 +127,7 @@
 	return "The Tavern Keeper, master of the ship’s notorious two-level hab bar and motel, ensures the establishment thrives as a haven for revelry, intrigue, and shady dealings."
 
 /datum/job/chamber_magister/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -126,7 +137,15 @@
 	else
 		current_title = title // use default title
 	H.verbs += /mob/living/proc/set_ambition
-	return ..()
+	if(prob(4))
+		H.make_genestealer()
+		to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
+	else if(prob(11))
+		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
+		spawn(30 SECONDS)
+		GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
+		to_chat(H, "<span class='notice'><b><font size=2>You are a heretical cultist loyal to one or more of the Chaos Gods -- unlike the many pretenders you are truly blessed by the warp and can survive encounters that would boil the brains of most mortal men.</font></b></span>")
+	return
 
 /datum/job/noble_guest
 	title = "Noble Heir" // alt titles; noble heir, planetary governor, xenos ambassador(use the tithe to_world stuff for this)
@@ -204,6 +223,7 @@
 	return "An Unexpected Guest, you’re an outsider here on the Dauntless. Whether a stowaway or here on legitamete business, you’re here with your own purpose unknown to the rest of the crew."
 
 /datum/job/unexpected_guest/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -222,6 +242,7 @@
 	H.species.toxins_mod = 0.75
 	H.species.radiation_mod = 0.65
 	H.verbs += /mob/living/proc/set_ambition
+	return
 
 /datum/job/deck_scum
 	title = "Deck Scum"
@@ -265,12 +286,13 @@
 						SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_MASTER,
 						SKILL_GUNS = SKILL_MASTER,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/deck_scum/get_description_blurb()
 	return "As Deck Scum, you’re the bottom rung, drifting through whatever job you’re handed next. Your service may be a punishment for a crime, it may be that you were stolen from your world and enslaved, or worse... that you chose this life for yourself. You are a dredge of society now, an outcast, surviving in the underbelly of the Rogue Trader's corvette."
 
 /datum/job/deck_scum/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -303,14 +325,18 @@
 		else if(current_title == "Administratum Ordinate")
 			to_chat(H,"<span class='danger'><b><font size=4>THE ADMINISTRATUM ORDINATE</font></b></span>")
 			to_chat(H, "<span class='notice'><b><font size=2>As the Administratum Ordinate you have been transfered to serve the Rogue Trader as their personal link to Holy Terra herself. Trained by Prefectus Cornelius Decker who mentored you in the ways of the Adeptus Adminstratum. 'We do not traffic in the treachery of speech Scribe! Only bonds! Bonds! Chains of ink and parchment, unbreakable... we shackle The Imperium of Man to it's glorious purpose. Purity through procedure.</font></b></span>")
+			H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/victorian, slot_w_uniform)
 			H.equip_to_slot_or_store_or_drop(new /obj/item/material/twohanded/ravenor/knife, slot_in_backpack)
 			H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/pilgrim/merchant/administratum, slot_wear_suit)
 			H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/head/helmet/guardcap/ordinate, slot_head)
+			H.equip_to_slot_or_store_or_drop(new /obj/item/card/id/key/grand/ordinate, slot_in_backpack)
 			H.equip_to_slot_or_store_or_drop(new /obj/item/book/manual/law(get_turf(src)))
-			if(prob(1))
+			H.species.weaken_mod = 0.7
+			H.species.stun_mod = 0.7
+			if(prob(2))
 				H.make_genestealer()
 				to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-			else if(prob(1))
+			else if(prob(2))
 				to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 				spawn(30 SECONDS)
 				GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
@@ -319,37 +345,37 @@
 			to_chat(H,"<span class='danger'><b><font size=4>THE PATHFINDER</font></b></span>")
 			to_chat(H, "<span class='notice'><b><font size=2>As the Pathfinder, you’re tasked with leading the way on deadly planets and through uncharted terrain, scouring every grim corner for threats and relics.</font></b></span>")
 			H.equip_to_slot_or_store_or_drop(new /obj/item/material/twohanded/ravenor/knife/trench, slot_in_backpack)
-			if(prob(1))
+			if(prob(4))
 				H.make_genestealer()
 				to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-			else if(prob(1))
+			else if(prob(4))
 				to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 				spawn(30 SECONDS)
 				GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
 				to_chat(H, "<span class='notice'><b><font size=2>You are a heretical cultist loyal to one or more of the Chaos Gods -- unlike the many pretenders you are truly blessed by the warp and can survive encounters that would boil the brains of most mortal men.</font></b></span>")
 			if(prob(10))
 				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/head/helmet/pilgrimhelm/flak/ranger, slot_head)
-				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/scrapforged/ranger2, slot_wear_suit)
 				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/victorian, slot_w_uniform)
 				H.equip_to_slot_or_store_or_drop(new /obj/item/book/manual/chef_recipes(get_turf(src)))
+				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/scrapforged/ranger2, slot_wear_suit)
 			else if(prob(10))
 				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/head/helmet/pilgrimhelm/flak/ranger/alt, slot_head)
-				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/scrapforged/ranger3, slot_wear_suit)
 				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/victorian/grey, slot_w_uniform)
+				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/scrapforged/ranger3, slot_wear_suit)
 			else
+				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/victorian/redbl, slot_w_uniform)
 				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/head/helmet/pilgrimhelm/flak/metal, slot_head)
 				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/scrapforged/duster, slot_wear_suit)
-				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/victorian/redbl, slot_w_uniform)
 		else if(current_title == "Deck Scum")
 			to_chat(H,"<span class='danger'><b><font size=4>DECK SCUM</font></b></span>")
 			to_chat(H, "<span class='notice'><b><font size=2>As Deck Scum, you’re the bottom rung, drifting through whatever job you’re handed next. Your service may be a punishment for a crime, it may be that you were stolen from your world and enslaved, or worse... that you chose this life for yourself. You are a dredge of society now, an outcast, surviving in the underbelly of the Rogue Trader's corvette.</font></b></span>")
 			H.equip_to_slot_or_store_or_drop(new /obj/item/material/twohanded/ravenor/knife, slot_in_backpack)
 			H.species.weaken_mod = 0.75
 			H.species.stun_mod = 0.75
-			if(prob(1))
+			if(prob(6))
 				H.make_genestealer()
 				to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-			else if(prob(1))
+			else if(prob(11))
 				to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 				spawn(30 SECONDS)
 				GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
@@ -392,10 +418,10 @@
 			H.species.brute_mod = 0.71
 			H.species.weaken_mod = 0.73
 			H.species.stun_mod = 0.73
-			if(prob(1))
+			if(prob(9))
 				H.make_genestealer()
 				to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-			else if(prob(1))
+			else if(prob(4))
 				to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 				spawn(30 SECONDS)
 				GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
@@ -426,7 +452,7 @@
 				H.equip_to_slot_or_store_or_drop(new /obj/item/pickaxe/hand, slot_l_hand)
 				H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/feudal, slot_head)
 				H.equip_to_slot_or_store_or_drop(new /obj/item/book/manual/chef_recipes(get_turf(src)))
-	return ..()
+	return
 
 /datum/job/qm
 	title = "Chief Steward"

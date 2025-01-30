@@ -221,9 +221,10 @@
 	max_skill = list(	SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_PRIMARIS,
 						SKILL_GUNS = SKILL_PRIMARIS,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/captivekasrkin/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -249,7 +250,7 @@
 	H.species.stun_mod = 0.61
 	H.species.slowdown = -0.2 // Kasrkin are renowned for incredible speed and the ability to scale any terrain, even mountains.
 	H.species.silent_steps = TRUE
-	return ..()
+	return
 
 /datum/job/submap/captivesisterm
 	title = "Adeptus Sororitas"
@@ -267,9 +268,10 @@
 	max_skill = list(	SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_PRIMARIS,
 						SKILL_GUNS = SKILL_PRIMARIS,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/captivesisterm/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -293,7 +295,7 @@
 	H.species.weaken_mod = 0.61
 	H.species.stun_mod = 0.61
 	H.species.slowdown = -0.2
-	return ..()
+	return
 
 /datum/job/submap/captivecatachan
 	title = "Catachan Devil"
@@ -305,15 +307,16 @@
 	min_skill = list(
 		SKILL_COMBAT = SKILL_PRIMARIS,
 		SKILL_GUNS = SKILL_MASTER,
-		SKILL_VIGOR = SKILL_DEMIGOD,
+		SKILL_VIGOR = SKILL_LEGEND,
 	)
 
 	max_skill = list(	SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_PRIMARIS,
 						SKILL_GUNS = SKILL_PRIMARIS,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/captivecatachan/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -339,10 +342,11 @@
 		H.species.burn_mod = 0.6
 		H.species.toxins_mod = 0.6
 		H.species.slowdown = -0.1
+		H.species.radiation_mod = 0.55
 		H.species.hunger_factor = DEFAULT_HUNGER_FACTOR * 1.25
 		H.species.species_flags = SPECIES_FLAG_LOW_GRAV_ADAPTED
 		H.species.silent_steps = TRUE
-	return ..()
+	return
 
 /datum/job/submap/captive
 	title = "Mercenary"
@@ -360,9 +364,10 @@
 	max_skill = list(	SKILL_CONSTRUCTION = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_LEGEND,
 						SKILL_GUNS = SKILL_LEGEND,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/captive/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -411,7 +416,7 @@
 		H.equip_to_slot_or_store_or_drop(new /obj/item/gun/projectile/heavysniper/boltaction/imperial/crucible, slot_wear_suit)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/ammo_magazine/speedloader/clip/stub/ap, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/ammo_magazine/speedloader/clip/stub/ms, slot_in_backpack)
-	return ..()
+	return
 
 /datum/job/submap/captiveheretek
 	title = "Heretek Priest"
@@ -445,6 +450,7 @@
 						SKILL_PILOT = SKILL_MASTER)
 
 /datum/job/submap/captiveheretek/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -475,7 +481,7 @@
 	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/engineer, slot_w_uniform)
 	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/gloves/thick/swat/techpriest, slot_gloves)
 	H.equip_to_slot_or_store_or_drop(new /obj/item/storage/backpack/satchel/warfare/techpriest, slot_back)
-	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/mechanicus/techpriest, slot_wear_suit)
+	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/storage/hooded/techpriest, slot_wear_suit)
 	if(prob(50))
 		H.equip_to_slot_or_store_or_drop(new /obj/item/device/augment_implanter/wrist_blade, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/organ/internal/augment/active/iatric_monitor, slot_in_backpack)
@@ -484,7 +490,7 @@
 		H.equip_to_slot_or_store_or_drop(new /obj/item/device/augment_implanter/popout_shotgun, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/organ/internal/augment/active/polytool/engineer, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/implant/translator, slot_in_backpack)
-	return ..()
+	return
 
 /*
 /datum/job/submap/captivenoble
@@ -514,7 +520,7 @@
 	max_skill = list(	SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_PRIMARIS,
 						SKILL_GUNS = SKILL_PRIMARIS,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/captivenoble/equip(mob/living/carbon/human/H)
 	var/current_name = H.real_name
@@ -727,7 +733,7 @@
 						SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_MASTER,
 						SKILL_GUNS = SKILL_MASTER,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/captive/equip(mob/living/carbon/human/H)
 	var/current_name = H.real_name
@@ -881,7 +887,7 @@
 			H.species.hunger_factor = DEFAULT_HUNGER_FACTOR * 0.5
 			H.species.species_flags = SPECIES_FLAG_LOW_GRAV_ADAPTED | SPECIES_FLAG_NO_EMBED
 			H.equip_to_slot_or_store_or_drop(new /obj/item/material/twohanded/ravenor/knife, slot_in_backpack)
-			H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/mechanicus/techpriest, slot_wear_suit)
+			H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/storage/hooded/techpriest, slot_wear_suit)
 			H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/mask/gas/techpriest, slot_wear_mask)
 			H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/shoes/jackboots/skitshoes/techpriest, slot_shoes)
 			H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/engineer, slot_w_uniform)

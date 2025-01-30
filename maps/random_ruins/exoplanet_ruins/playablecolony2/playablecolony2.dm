@@ -52,9 +52,10 @@
 	max_skill = list(	SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_PRIMARIS,
 						SKILL_GUNS = SKILL_PRIMARIS,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/colonist2repentia/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -78,7 +79,7 @@
 	H.species.toxins_mod = 0.6
 	H.species.radiation_mod = 0.55
 	H.equip_to_slot_or_store_or_drop(new /obj/item/storage/box/survival, slot_in_backpack)
-	return ..()
+	return
 
 /datum/job/submap/colonist2_pdf
 	title = "Deserter"
@@ -97,9 +98,10 @@
 	max_skill = list(	SKILL_CONSTRUCTION = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_LEGEND,
 						SKILL_GUNS = SKILL_LEGEND,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/colonist2_pdf/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -113,7 +115,7 @@
 	if(prob(3))
 		H.make_genestealer()
 		to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-	else if(prob(3))
+	else if(prob(6))
 		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 		spawn(30 SECONDS)
 		GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
@@ -148,7 +150,7 @@
 		H.equip_to_slot_or_store_or_drop(new /obj/item/gun/energy/lasgun/laspistol/hellpistol, slot_belt)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/gun/energy/lasgun/laspistol/lucius, slot_belt)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/cell/device/high/laspack, slot_in_backpack)
-	return ..()
+	return
 
 
 /datum/job/submap/colonistheretek2
@@ -182,6 +184,7 @@
 						SKILL_PILOT = SKILL_MASTER)
 
 /datum/job/submap/colonistheretek2/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -211,7 +214,7 @@
 	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/engineer, slot_w_uniform)
 	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/gloves/thick/swat/techpriest, slot_gloves)
 	H.equip_to_slot_or_store_or_drop(new /obj/item/storage/backpack/satchel/warfare/techpriest, slot_back)
-	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/mechanicus/techpriest, slot_wear_suit)
+	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/storage/hooded/techpriest, slot_wear_suit)
 	H.equip_to_slot_or_store_or_drop(new /obj/item/storage/box/survival, slot_in_backpack)
 	if(prob(50))
 		H.equip_to_slot_or_store_or_drop(new /obj/item/device/augment_implanter/wrist_blade, slot_in_backpack)
@@ -221,7 +224,7 @@
 		H.equip_to_slot_or_store_or_drop(new /obj/item/device/augment_implanter/popout_shotgun, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/organ/internal/augment/active/polytool/engineer, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/implant/translator, slot_in_backpack)
-	return ..()
+	return
 
 /datum/job/submap/colonist2
 	title = "Ship Colonist" // Plan make the crashed ship technical roles. Landed colony tribals.
@@ -247,9 +250,10 @@
 						SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_MASTER,
 						SKILL_GUNS = SKILL_MASTER,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/colonist2/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -271,7 +275,7 @@
 	if(prob(6))
 		H.make_genestealer()
 		to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-	else if(prob(6))
+	else if(prob(9))
 		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 		spawn(30 SECONDS)
 		GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
@@ -285,7 +289,7 @@
 		H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/hiver/trenchcoat, slot_wear_suit)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/gun/projectile/pistol/stub/talon, slot_r_hand)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/ammo_magazine/pistol/small/ap, slot_in_backpack)
-	return ..()
+	return
 
 /singleton/hierarchy/outfit/job/colonist2
 	name = OUTFIT_JOB_NAME("Ship Colonest")

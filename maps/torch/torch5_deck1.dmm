@@ -601,12 +601,13 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
 	},
 /obj/structure/table/steel,
+/obj/item/reagent_containers/syringe/spice,
 /turf/simulated/floor/warhammer/coralg,
 /area/medical/chemistry)
 "abv" = (
@@ -778,7 +779,7 @@
 	pixel_x = 4;
 	pixel_y = 9
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "abK" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -887,7 +888,7 @@
 /area/thruster/d1starboard)
 "abX" = (
 /obj/machinery/r_n_d/destructive_analyzer,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "abY" = (
 /obj/machinery/door/airlock/atmos{
@@ -2076,7 +2077,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -3267,10 +3268,19 @@
 	},
 /obj/structure/cable/green,
 /obj/floor_decal/industrial/warning,
-/obj/structure/catwalk,
 /obj/machinery/alarm{
 	pixel_y = 23;
 	req_access = list("ACCESS_MECHANICUS_COMMAND")
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/warhammer/tunnelchess,
 /area/maintenance/substation/firstdeck)
@@ -3279,7 +3289,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -3376,7 +3386,8 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
 	id_tag = "brigvent2";
-	name = "Blast Doors"
+	name = "Blast Doors";
+	begins_closed = 1
 	},
 /turf/simulated/floor/warhammer/plating,
 /area/maintenance/firstdeck/foreport)
@@ -3385,7 +3396,8 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
 	id_tag = "brigvent1";
-	name = "Blast Doors"
+	name = "Blast Doors";
+	begins_closed = 1
 	},
 /turf/simulated/floor/warhammer/plating,
 /area/maintenance/firstdeck/foreport)
@@ -3403,7 +3415,8 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
 	id_tag = "brigvent2";
-	name = "Blast Doors"
+	name = "Blast Doors";
+	begins_closed = 1
 	},
 /turf/simulated/floor/warhammer/plating,
 /area/security/brig)
@@ -3540,7 +3553,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -4017,7 +4030,7 @@
 /obj/random/tech_supply,
 /obj/random/maintenance/solgov,
 /obj/structure/catwalk,
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -4049,7 +4062,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
-/obj/machinery/power/apc/high{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -4160,6 +4173,11 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
 /obj/structure/lattice,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/open,
 /area/maintenance/substation/firstdeck)
 "ali" = (
@@ -4355,6 +4373,11 @@
 	req_access = list("ACCESS_MECHANICUS");
 	name = "Substation Airlock"
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/firstdeck)
 "amr" = (
@@ -4447,7 +4470,7 @@
 /area/maintenance/firstdeck/centralstarboard)
 "amP" = (
 /obj/structure/table/rack/dark,
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -4527,6 +4550,11 @@
 	},
 /obj/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/warhammer/tunnelchess,
 /area/maintenance/firstdeck/centralstarboard)
@@ -5814,7 +5842,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -5835,7 +5863,7 @@
 /obj/structure/bed/chair/warhammer/padded/red{
 	dir = 4
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -7141,6 +7169,20 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/button/alternate/door{
+	desc = "A remote control switch for the brig foyer.";
+	id_tag = "brigvent1";
+	name = "Vent Brig";
+	pixel_x = -5;
+	pixel_y = 34
+	},
+/obj/machinery/button/alternate/door{
+	desc = "A remote control switch for the brig foyer.";
+	id_tag = "Blast Doors";
+	name = "Vent Perma";
+	pixel_x = 6;
+	pixel_y = 34
+	},
 /turf/simulated/floor/warhammer/metal/alt,
 /area/security/bo)
 "aGP" = (
@@ -7579,7 +7621,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "aJw" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -7855,7 +7897,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -8426,7 +8468,7 @@
 /obj/machinery/computer/modular{
 	dir = 8
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -9797,7 +9839,7 @@
 	name = "Biohazard Shutter";
 	opacity = 0
 	},
-/turf/simulated/floor/warhammer/metal/alt,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/xenobiology/entry)
 "aTC" = (
 /obj/machinery/door/blast/regular{
@@ -9815,7 +9857,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/warhammer/metal/alt,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/xenobiology/entry)
 "aTD" = (
 /obj/structure/closet/coffin/wooden,
@@ -9905,7 +9947,7 @@
 /turf/simulated/floor/warhammer/plating,
 /area/thruster/d1port)
 "aTS" = (
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -11088,7 +11130,7 @@
 	c_tag = "Research - Port Hallway";
 	dir = 4
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "btb" = (
 /obj/machinery/door/blast/regular{
@@ -11381,7 +11423,7 @@
 /area/shuttle/escape_pod13/station)
 "bOZ" = (
 /obj/structure/closet/warhammer/emcloset,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "bPR" = (
 /obj/structure/table/rack/dark,
@@ -12149,7 +12191,7 @@
 	req_access = list("ACCESS_MECHANICUS_COMMAND");
 	name = "Factorum Laboratory"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "cVb" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
@@ -12426,13 +12468,13 @@
 /obj/machinery/computer/guestpass{
 	pixel_y = 32
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "dob" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/table/steel,
 /obj/item/stack/material/plastic/ten,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "doe" = (
 /turf/simulated/floor/warhammer/fancyfloor/carpet{
@@ -12486,7 +12528,7 @@
 	dir = 4;
 	icon_state = "console"
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -12661,6 +12703,8 @@
 /obj/item/flamethrower/full/loaded,
 /obj/item/flamethrower/full/loaded,
 /obj/item/clothing/head/helmet/pilgrimhelm/witch,
+/obj/item/clothing/accessory/armor_plate/bodyglove2,
+/obj/item/clothing/accessory/armor_plate/bodyglovebio,
 /turf/simulated/floor/warhammer/brick,
 /area/chapel/memorial)
 "dPr" = (
@@ -14330,7 +14374,7 @@
 	opacity = 0
 	},
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "hqS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
@@ -14380,7 +14424,7 @@
 	opacity = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "huf" = (
 /obj/structure/table/rack/dark,
@@ -14406,7 +14450,7 @@
 	id_tag = "researchdoor_interior";
 	name = "Research Division"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "hwb" = (
 /obj/structure/sign/science_1{
@@ -14465,7 +14509,7 @@
 	layer = 3
 	},
 /obj/structure/table/steel,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "hBj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -14479,18 +14523,14 @@
 /area/maintenance/firstdeck/forestarboard)
 "hCb" = (
 /obj/structure/table/rack/dark,
-/obj/item/device/radio,
-/obj/item/device/flashlight,
 /obj/item/crowbar,
-/obj/item/device/megaphone,
-/obj/item/device/binoculars,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "hCE" = (
 /obj/item/device/radio/intercom/department/security{
@@ -14561,13 +14601,13 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "hGb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "hGs" = (
 /turf/simulated/wall/prepainted,
@@ -14589,14 +14629,14 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "hKb" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/bed/chair/comfy/lime{
 	dir = 1
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "hLf" = (
 /obj/floor_decal/techfloor{
@@ -14701,7 +14741,7 @@
 /obj/floor_decal/torchltdlogo{
 	icon_state = "topleft"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "hWb" = (
 /obj/machinery/alarm{
@@ -14784,7 +14824,7 @@
 "ibb" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "iej" = (
 /obj/wallframe_spawn/reinforced_phoron,
@@ -14836,7 +14876,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "ikj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -14893,7 +14933,7 @@
 /area/hallway/primary/firstdeck/fore)
 "imb" = (
 /obj/floor_decal/torchltdlogo,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "imF" = (
 /obj/structure/sign/warning/biohazard,
@@ -14934,7 +14974,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "isb" = (
 /obj/structure/disposalpipe/segment,
@@ -14950,7 +14990,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "isR" = (
 /obj/structure/cable/green{
@@ -14979,7 +15019,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "itr" = (
 /obj/structure/sign/warning/high_voltage{
@@ -15130,7 +15170,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "iKg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -15144,7 +15184,7 @@
 /turf/simulated/floor/warhammer/tunnelchess,
 /area/maintenance/firstdeck/centralstarboard)
 "iLb" = (
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "iLA" = (
 /obj/item/device/radio/intercom/department/security{
@@ -15216,7 +15256,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "iPV" = (
 /obj/structure/cable/green{
@@ -15409,7 +15449,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jei" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -15442,7 +15482,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jfn" = (
 /obj/machinery/computer/modular/preset/security{
@@ -15522,7 +15562,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "jjh" = (
 /turf/simulated/wall/r_wall/hull,
@@ -15552,7 +15592,7 @@
 	pixel_x = -24;
 	pixel_y = -24
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "jkm" = (
 /obj/structure/table/rack/dark,
@@ -15739,7 +15779,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jzb" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -15762,7 +15802,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jAb" = (
 /obj/structure/table/steel,
@@ -15892,11 +15932,11 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jMb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jMx" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
@@ -15910,7 +15950,7 @@
 /area/thruster/d1port)
 "jNb" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jOt" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
@@ -15940,13 +15980,13 @@
 /obj/item/modular_computer/telescreen/preset/generic{
 	pixel_y = 32
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jRb" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jUb" = (
 /obj/machinery/alarm{
@@ -15956,7 +15996,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jUP" = (
 /obj/structure/sign/warning/high_voltage,
@@ -15973,7 +16013,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/light,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "jXp" = (
 /obj/machinery/door/firedoor,
@@ -16225,7 +16265,7 @@
 /turf/simulated/floor/warhammer/surgerynew,
 /area/crew_quarters/head/deck1)
 "kss" = (
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -16265,7 +16305,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "kxs" = (
 /obj/item/paper_bin{
@@ -16404,7 +16444,7 @@
 /turf/simulated/floor/warhammer/coralg,
 /area/medical/staging)
 "kJb" = (
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -16619,6 +16659,8 @@
 /obj/item/clothing/shoes/jackboots/sisterofbattle/repentia,
 /obj/item/clothing/head/helmet/sisterofbattle/repentia,
 /obj/item/clothing/suit/armor/sister/repentia,
+/obj/item/clothing/accessory/armor_plate/bodyglove2,
+/obj/item/clothing/accessory/armor_plate/bodyglovebio,
 /turf/simulated/floor/warhammer/brick,
 /area/chapel/memorial)
 "lab" = (
@@ -16718,7 +16760,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -16756,7 +16798,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "lkb" = (
 /obj/machinery/hologram/holopad,
@@ -16765,7 +16807,7 @@
 	pixel_y = 23;
 	req_access = list("ACCESS_MECHANICUS_COMMAND")
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "llb" = (
 /obj/machinery/fabricator/hacked,
@@ -16775,7 +16817,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "llM" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -16789,7 +16831,7 @@
 /area/security/wing)
 "lmb" = (
 /obj/machinery/r_n_d/protolathe,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "lnb" = (
 /obj/machinery/r_n_d/circuit_imprinter,
@@ -16803,7 +16845,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "lob" = (
 /obj/structure/cable/green{
@@ -16819,7 +16861,7 @@
 	dir = 8;
 	icon_state = "console"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "lom" = (
 /obj/machinery/air_sensor{
@@ -16839,7 +16881,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "lqb" = (
 /obj/structure/cable/green{
@@ -16847,7 +16889,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "lsb" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
@@ -16857,7 +16899,7 @@
 /obj/machinery/computer/rdconsole/core{
 	dir = 1
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "lte" = (
 /obj/machinery/light/small{
@@ -16922,10 +16964,10 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "lxb" = (
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "lxs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -16943,7 +16985,7 @@
 /turf/simulated/floor/warhammer/plating,
 /area/thruster/d1starboard)
 "lyb" = (
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "lym" = (
 /obj/machinery/light{
@@ -16990,10 +17032,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "lAp" = (
-/obj/machinery/power/apc/high{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -17035,7 +17077,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "lBd" = (
 /obj/structure/railing/mapped{
@@ -17144,6 +17186,27 @@
 	},
 /turf/simulated/floor/warhammer/metal/northeast,
 /area/security/storage)
+"lRI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/floor_decal/industrial/warning,
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/warhammer/tunnelchess,
+/area/maintenance/firstdeck/foreport)
 "lUK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -17427,7 +17490,7 @@
 /obj/structure/noticeboard{
 	pixel_y = 32
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "mpq" = (
 /obj/structure/sign/mechanicus,
@@ -17787,7 +17850,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "mUb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -18137,9 +18200,13 @@
 	dir = 5
 	},
 /obj/structure/table/steel,
-/obj/item/device/taperecorder,
-/obj/item/folder/red,
-/turf/simulated/floor/warhammer/coralg,
+/obj/item/paper_bin{
+	icon = 'icons/map_project/fluff_items.dmi';
+	icon_state = "paperwork";
+	pixel_y = 4;
+	layer = 3
+	},
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "nAp" = (
 /obj/structure/table/rack/dark,
@@ -18222,6 +18289,8 @@
 "nGQ" = (
 /obj/structure/closet/secure_closet/CMO_torch,
 /obj/item/storage/belt/medical,
+/obj/item/material/twohanded/ravenor/axe/thunderhammer/omnissiah,
+/obj/item/reagent_containers/syringe/spice,
 /turf/simulated/floor/warhammer/plating,
 /area/crew_quarters/safe_room/medical)
 "nIb" = (
@@ -18233,7 +18302,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "nJb" = (
 /obj/structure/disposalpipe/segment,
@@ -18251,7 +18320,7 @@
 /obj/floor_decal/torchltdlogo{
 	icon_state = "topright"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "nJo" = (
 /obj/item/clothing/suit/space/emergency,
@@ -18262,7 +18331,7 @@
 	dir = 4;
 	icon_state = "railing0-1"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "nLb" = (
 /turf/simulated/open,
@@ -18294,12 +18363,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/structure/closet/secure_closet{
-	name = "Security Equipment Locker";
-	req_access = list("ACCESS_RESTRICTED")
-	},
-/obj/item/storage/mre/menu7,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "nPT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -18330,7 +18394,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "nRb" = (
 /obj/structure/disposalpipe/segment,
@@ -18344,7 +18408,7 @@
 /obj/floor_decal/torchltdlogo{
 	icon_state = "bottomright"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "nSb" = (
 /obj/machinery/rotating_alarm/security_alarm{
@@ -18354,7 +18418,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "nUp" = (
 /obj/structure/cable/green{
@@ -18478,7 +18542,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "obr" = (
 /obj/structure/sign/warning/hot_exhaust,
@@ -18517,7 +18581,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "ocG" = (
 /obj/structure/filingcabinet/chestdrawer{
@@ -18550,7 +18614,7 @@
 	name = "south bump";
 	pixel_y = -28
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/entry)
 "oeb" = (
 /obj/structure/cable/green{
@@ -18564,7 +18628,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "ofb" = (
 /obj/item/modular_computer/telescreen/preset/medical{
@@ -18952,7 +19016,7 @@
 	pixel_x = 10;
 	pixel_y = -21
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "oOt" = (
 /obj/floor_decal/floordetail/edgedrain,
@@ -18980,7 +19044,7 @@
 /obj/random/loot/tech1,
 /obj/random/loot/tech1,
 /obj/random/loot/tech1,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/development)
 "oPD" = (
 /obj/structure/disposalpipe/segment,
@@ -19005,7 +19069,7 @@
 /obj/machinery/rotating_alarm/security_alarm{
 	dir = 1
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "oRb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -19058,7 +19122,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "oTA" = (
 /obj/structure/torchwall{
@@ -19076,7 +19140,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "oVb" = (
 /obj/wallframe_spawn/reinforced,
@@ -19139,7 +19203,7 @@
 	pixel_x = 20;
 	pixel_y = 24
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "pcb" = (
 /obj/structure/cable/green{
@@ -19156,7 +19220,7 @@
 /obj/structure/closet/medical_wall/filled{
 	pixel_y = -32
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "pdb" = (
 /obj/structure/cable/green{
@@ -19170,7 +19234,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "pdO" = (
 /obj/floor_decal/techfloor{
@@ -19196,7 +19260,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "pfb" = (
 /obj/machinery/door/firedoor,
@@ -19215,7 +19279,7 @@
 	req_access = list("ACCESS_MECHANICUS_COMMAND");
 	name = "Hazardous Research"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/misc_lab)
 "pgb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -19289,6 +19353,7 @@
 /obj/item/clothing/suit/armor/grim/ministorumrobes,
 /obj/item/clothing/head/helmet/pilgrimhelm/preacher,
 /obj/item/clothing/head/helmet/pilgrimhelm/preacher,
+/obj/item/clothing/accessory/armor_plate/bodyglovebio,
 /turf/simulated/floor/warhammer/brick,
 /area/chapel/memorial)
 "pmb" = (
@@ -19300,7 +19365,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "pmz" = (
 /obj/machinery/light{
@@ -19364,7 +19429,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/armoury)
 "puL" = (
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -19394,7 +19459,7 @@
 	req_access = list("ACCESS_MECHANICUS_COMMAND");
 	name = "Xenoflora Laboratory"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/xenobiology/xenoflora)
 "pxb" = (
 /obj/structure/cable/green{
@@ -19608,14 +19673,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "pHE" = (
 /obj/machinery/door/airlock/warhammer/engineering{
 	req_access = list("ACCESS_MECHANICUS_COMMAND");
 	name = "Security Office"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/security/opscheck)
 "pIb" = (
 /obj/machinery/atmospherics/binary/pump{
@@ -19819,7 +19884,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "pZy" = (
 /obj/machinery/door/firedoor,
@@ -20026,7 +20091,7 @@
 /turf/simulated/wall/r_wall/hull,
 /area/rnd/xenobiology/cell_1)
 "qrb" = (
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "qrq" = (
 /obj/machinery/hologram/holopad,
@@ -20227,7 +20292,7 @@
 	req_access = list("ACCESS_MECHANICUS");
 	name = "Munitorum Office"
 	},
-/turf/simulated/floor/warhammer/metal,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/office)
 "qFb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -20241,7 +20306,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "qGb" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
@@ -20484,7 +20549,7 @@
 /obj/machinery/rotating_alarm/security_alarm{
 	dir = 8
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "qYy" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -20733,7 +20798,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "rsl" = (
 /obj/structure/disposalpipe/segment,
@@ -20839,7 +20904,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "rzq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -20856,11 +20921,6 @@
 /turf/simulated/floor/warhammer/coralg,
 /area/medical/sleeper)
 "rAb" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
 /obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
@@ -20872,7 +20932,12 @@
 /obj/structure/reagent_dispensers/water_cooler{
 	dir = 4
 	},
-/turf/simulated/floor/warhammer/coralg,
+/obj/machinery/power/apc/super/critical{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "rAu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
@@ -20923,13 +20988,13 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc{
+/obj/structure/closet/coffin/wooden,
+/obj/item/material/urn,
+/obj/machinery/power/apc/super/critical{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
 	},
-/obj/structure/closet/coffin/wooden,
-/obj/item/material/urn,
 /turf/simulated/floor/warhammer/brick,
 /area/chapel/memorial)
 "rDb" = (
@@ -21096,7 +21161,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "rNb" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -21119,7 +21184,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "rPz" = (
 /obj/item/roller_bed{
@@ -21134,7 +21199,7 @@
 /area/medical/staging)
 "rQb" = (
 /obj/structure/ladder,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "rRb" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -21296,7 +21361,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "sbJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -21336,9 +21401,9 @@
 	},
 /area/chapel/memorial)
 "scb" = (
-/obj/structure/sign/warning/biohazard,
-/turf/simulated/wall/prepainted,
-/area/rnd/research)
+/obj/structure/sign/mechanicus,
+/turf/simulated/floor/warhammer/plating,
+/area/rnd/entry)
 "scd" = (
 /obj/structure/table/steel,
 /obj/item/reagent_containers/food/snacks/cookie,
@@ -21382,20 +21447,15 @@
 /turf/simulated/floor/warhammer/coralg,
 /area/command/conference)
 "sdb" = (
-/obj/machinery/door/firedoor,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/button/alternate/door{
+	desc = "A remote control switch for the brig foyer.";
+	id_tag = "brigvent1";
+	name = "Vent Brig";
+	pixel_x = -5;
+	pixel_y = 34
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/warhammer/command/ancient{
-	name = "Maintenance Hatch";
-	req_access = list("ACCESS_MECHANICUS_COMMAND")
-	},
-/turf/simulated/floor/warhammer/coralg,
-/area/rnd/research)
+/turf/space,
+/area/space)
 "sde" = (
 /turf/simulated/floor/warhammer/tunnelchess,
 /area/maintenance/firstdeck/aftstarboard)
@@ -21417,15 +21477,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/warhammer/metal/alt,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/xenobiology/entry)
 "sgb" = (
 /obj/structure/cable/green{
@@ -21449,7 +21506,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/warhammer/metal/alt,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/xenobiology/entry)
 "shb" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
@@ -21652,7 +21709,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/warhammer/coralg,
+/turf/simulated/floor/warhammer/plating,
 /area/rnd/research)
 "ssg" = (
 /obj/structure/disposalpipe/segment,
@@ -23427,7 +23484,7 @@
 /turf/simulated/floor/warhammer/coralg,
 /area/medical/locker)
 "vnC" = (
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -23927,6 +23984,14 @@
 /obj/structure/sign/mechanicus,
 /turf/simulated/wall/prepainted,
 /area/rnd/entry)
+"wDh" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/prepainted,
+/area/maintenance/substation/firstdeck)
 "wDm" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/table/warhammer/butcher_table,
@@ -39650,7 +39715,7 @@ abP
 abP
 asF
 afR
-apT
+wDh
 ahR
 aje
 ake
@@ -39683,7 +39748,7 @@ aMX
 aNY
 aON
 aPH
-aQD
+lRI
 aRA
 tAS
 tAS
@@ -39891,7 +39956,7 @@ aCN
 tAS
 tAS
 tAS
-aaa
+sdb
 aaa
 aaa
 aaa
@@ -45341,7 +45406,7 @@ bta
 rsb
 jfb
 rQb
-scb
+qrb
 sfb
 aTB
 aUb
@@ -45543,7 +45608,7 @@ rzb
 rMb
 sbb
 ssb
-sdb
+ssb
 sgb
 aTC
 aUc
@@ -46132,7 +46197,7 @@ vIn
 ssg
 bEQ
 hdb
-wBc
+scb
 hGb
 nKb
 nKb

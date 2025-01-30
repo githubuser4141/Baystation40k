@@ -36,9 +36,10 @@
 	max_skill = list(	SKILL_CONSTRUCTION = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_LEGEND,
 						SKILL_GUNS = SKILL_LEGEND,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/scavver_merc/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -49,10 +50,10 @@
 		current_title = title // use default title
 	to_chat(H,"<span class='danger'><b><font size=4>THE MERCENARY</font></b></span>")
 	to_chat(H, "<span class='notice'><b><font size=2>As the Mercenary aboard the Scavv Gantry, you’re a mercenary seeking fortune in the Ghoul Stars. Once a soldier, you now sell your skills to the highest bidder, always on the lookout for lucrative opportunities that finally lead to an early retirement.</font></b></span>")
-	if(prob(2))
+	if(prob(6))
 		H.make_genestealer()
 		to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-	else if(prob(2))
+	else if(prob(6))
 		to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 		spawn(30 SECONDS)
 		GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
@@ -88,7 +89,7 @@
 		H.equip_to_slot_or_store_or_drop(new /obj/item/gun/projectile/heavysniper/boltaction/imperial/crucible, slot_wear_suit)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/ammo_magazine/speedloader/clip/stub/ap, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/ammo_magazine/speedloader/clip/stub/ms, slot_in_backpack)
-	return ..()
+	return
 
 
 /datum/job/submap/scavver_noble
@@ -111,9 +112,10 @@
 	max_skill = list(	SKILL_CONSTRUCTION = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_LEGEND,
 						SKILL_GUNS = SKILL_LEGEND,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/scavver_noble/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -145,7 +147,7 @@
 		H.equip_to_slot_or_store_or_drop(new /obj/item/gun/projectile/revolver/imperial/heavy/mateba, slot_belt)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/ammo_magazine/speedloader/revolver/ms, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/ammo_magazine/speedloader/revolver/ms, slot_in_backpack)
-	return ..()
+	return
 
 /datum/job/submap/scavver_crew
 	title = "Scavver"
@@ -171,9 +173,10 @@
 						SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_MASTER,
 						SKILL_GUNS = SKILL_MASTER,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/scavver_crew/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -184,10 +187,10 @@
 		current_title = title // use default title
 	if(prob(60))
 		to_chat(H,"<span class='danger'><b><font size=4>THE SCAVVER</font></b></span>")
-		if(prob(3))
+		if(prob(6))
 			H.make_genestealer()
 			to_chat(H, "<span class='notice'><b><font size=2>You are a genestealer bioform, a unique strain of tyranid genestealer capable of rapid transformation. The swarm considers you to be an abomination, but under the guidance of what you believe to be the true hivemind, you will surely succeed where the others have failed. Everything is connected.</font></b></span>")
-		else if(prob(3))
+		else if(prob(6))
 			to_chat(H,"<span class='danger'><b><font size=4>YOUR CULT ITEMS ARE BEING SUMMONED. FIND SOMEWHERE PRIVATE TO HIDE. SUMMONING IN THIRTY SECONDS</font></b></span>")
 			spawn(30 SECONDS)
 			GLOB.cult.add_antagonist(H.mind, ignore_role = 1, do_not_equip = 0)
@@ -224,7 +227,7 @@
 			H.equip_to_slot_or_store_or_drop(new /obj/item/gun/energy/lasgun/laspistol/militarum, slot_r_hand)
 		else
 			H.equip_to_slot_or_store_or_drop(new /obj/item/gun/projectile/pistol/slug, slot_r_hand)
-	return ..()
+	return
 
 
 /datum/job/submap/scavver_priest
@@ -260,6 +263,7 @@
 						SKILL_PILOT = SKILL_MASTER)
 
 /datum/job/submap/scavver_priest/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -290,7 +294,7 @@
 	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/engineer, slot_w_uniform)
 	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/gloves/thick/swat/techpriest, slot_gloves)
 	H.equip_to_slot_or_store_or_drop(new /obj/item/storage/backpack/satchel/warfare/techpriest, slot_back)
-	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/mechanicus/techpriest, slot_wear_suit)
+	H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/suit/armor/grim/storage/hooded/techpriest, slot_wear_suit)
 	H.equip_to_slot_or_store_or_drop(new /obj/item/storage/box/survival, slot_in_backpack)
 	if(prob(50))
 		H.equip_to_slot_or_store_or_drop(new /obj/item/device/augment_implanter/wrist_blade, slot_in_backpack)
@@ -300,7 +304,7 @@
 		H.equip_to_slot_or_store_or_drop(new /obj/item/device/augment_implanter/popout_shotgun, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/organ/internal/augment/active/polytool/engineer, slot_in_backpack)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/implant/translator, slot_in_backpack)
-	return ..()
+	return
 
 /datum/job/submap/scavver_bard
 	title = "Scavver Bard"
@@ -324,9 +328,10 @@
 						SKILL_PILOT = SKILL_MASTER,
 						SKILL_COMBAT = SKILL_MASTER,
 						SKILL_GUNS = SKILL_MASTER,
-						SKILL_VIGOR = SKILL_MASTER)
+						SKILL_VIGOR = SKILL_DEMIGOD)
 
 /datum/job/submap/scavver_bard/equip(mob/living/carbon/human/H)
+	..()
 	var/current_name = H.real_name
 	var/current_title = trimtext(H.mind.role_alt_title)
 	H.voice_in_head(pick(GLOB.lone_thoughts))
@@ -350,7 +355,7 @@
 	else
 		H.equip_to_slot_or_store_or_drop(new /obj/item/clothing/under/rank/victorian/black, slot_w_uniform)
 		H.equip_to_slot_or_store_or_drop(new /obj/item/device/synthesized_instrument/guitar, slot_wear_suit)
-	return ..()
+	return
 
 /datum/job/submap/scavver_engineer
 	title = "Salvage Engineer"

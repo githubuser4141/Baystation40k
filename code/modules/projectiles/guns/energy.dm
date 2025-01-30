@@ -22,7 +22,7 @@
 	//self-recharging
 	var/self_recharge = 0	//if set, the weapon will recharge itself
 	var/use_external_power = 0 //if set, the weapon will look for an external power source to draw from, otherwise it recharges magically
-	var/recharge_time = 9
+	var/recharge_time = 10
 	var/charge_tick = 0
 	calibration_penalty = 2
 
@@ -53,8 +53,8 @@
 		charge_tick = 0
 	if (!power_supply || power_supply.charge >= power_supply.maxcharge)
 		return PROCESS_KILL
-	if (++charge_tick < recharge_time)
-		return
+//	if (++charge_tick < recharge_time)
+//		return
 
 	var/obj/item/cell/external = get_external_power_supply()
 	charge_tick = 0
