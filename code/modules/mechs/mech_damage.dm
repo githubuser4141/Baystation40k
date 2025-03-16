@@ -86,16 +86,17 @@
 	switch(def_zone)
 		if(BP_HEAD , BP_CHEST, BP_MOUTH, BP_EYES)
 			if(LAZYLEN(pilots))
-				if(projectile.armor_penetration >= mech_armor.armor_piercing_resistance && prob((100 - (15-mech_armor.ricochet_chance)) && (hatch_closed)))
+				if(projectile.armor_penetration >= mech_armor.armor_piercing_resistance && prob((75+mech_armor) && (hatch_closed)))
 					return PROJECTILE_FORCE_MISS
 				visible_message(SPAN_WARNING("[projectile] penetrates through the cabin compartment of the [src]!"))
 				var/mob/living/pilot = pick(pilots)
 				return pilot.bullet_act(projectile, def_zone, used_weapon)
-		if(projectile.armor_penetration >= mech_armor.armor_piercing_resistance && prob(35-mech_armor.ricochet_chance))
-			var/obj/item/mech_component/target = zoneToComponent(def_zone)
-			target.take_component_damage(projectile.damage)
-			visible_message(SPAN_WARNING("[projectile] penetrates straight through the compartment of the [src]!"))
-			return PROJECTILE_FORCE_MISS //it hit straight through armor, bypassing it.
+
+	if(projectile.armor_penetration >= mech_armor.armor_piercing_resistance && prob(35-mech_armor.ricochet_chance))
+		var/obj/item/mech_component/target = zoneToComponent(def_zone)
+		target.take_component_damage(projectile.damage)
+		visible_message(SPAN_WARNING("[projectile] penetrates straight through the compartment of the [src]!"))
+		return PROJECTILE_FORCE_MISS //it hit straight through armor, bypassing it.
 	..()
 
 /mob/living/exosuit/get_armors_by_zone(def_zone, damage_type, damage_flags)
