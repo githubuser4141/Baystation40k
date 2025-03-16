@@ -66,14 +66,37 @@
 		return pilot.hitby(AM, TT)
 	. = ..()
 
-/mob/living/exosuit/bullet_act(obj/item/projectile/P, def_zone, used_weapon)
+/mob/living/exosuit/bullet_act(obj/item/projectile/projectile, def_zone, used_weapon)
 	if (status_flags & GODMODE)
 		return PROJECTILE_FORCE_MISS
+
+	var/obj/item/robot_parts/robot_component/armour/exosuit/mech_armor = body?.m_armour
+	if(prob(mech_armor.ricochet_chance))
+		playsound(src, pick(projectile.ricochet_sounds), 100, 1)
+		visible_message(SPAN_WARNING("[projectile] ricochets harmlessly off the [src]!"))
+		if(projectile.starting)
+			var/turf/sourceloc = get_turf_away_from_target_simple(src, projectile.starting, 6)
+			var/new_x = sourceloc.x + ( rand(2, 5) * (prob(50) ? -1 : 1 ))
+			var/new_y = sourceloc.y + ( rand(2, 5) * (prob(50) ? -1 : 1 ))
+			sourceloc = locate(new_x , new_y, sourceloc.z)
+			sourceloc.color = "#a92312"
+			projectile.redirect(new_x, new_y, get_turf(src), src)
+		return PROJECTILE_CONTINUE
+
 	switch(def_zone)
 		if(BP_HEAD , BP_CHEST, BP_MOUTH, BP_EYES)
-			if(LAZYLEN(pilots) && (!hatch_closed || !prob(body.pilot_coverage)))
+			if(LAZYLEN(pilots))
+				if(projectile.armor_penetration >= 30 && prob(5+mech_armor.ricochet_chance) && (hatch_closed))
+					return PROJECTILE_FORCE_MISS
+				visible_message(SPAN_WARNING("[projectile] penetrates through the cabin compartment of the [src]!"))
 				var/mob/living/pilot = pick(pilots)
-				return pilot.bullet_act(P, def_zone, used_weapon)
+				return pilot.bullet_act(projectile, def_zone, used_weapon)
+		else
+			if(projectile.armor_penetration >= 30 && prob(35-mech_armor.ricochet_chance))
+				var/obj/item/mech_component/target = zoneToComponent(def_zone)
+				target.take_component_damage(projectile.damage)
+				visible_message(SPAN_WARNING("[projectile] penetrates straight through the compartment of the [src]!"))
+				return PROJECTILE_FORCE_MISS //it hit straight through armor, bypassing it.
 	..()
 
 /mob/living/exosuit/get_armors_by_zone(def_zone, damage_type, damage_flags)
