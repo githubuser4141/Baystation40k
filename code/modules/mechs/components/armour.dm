@@ -15,6 +15,7 @@
 		)
 	origin_tech = list(TECH_MATERIAL = 1)
 	var/ricochet_chance = 5
+	var/armor_piercing_resistance = 30
 
 /obj/item/robot_parts/robot_component/armour/exosuit/radproof
 	name = "radiation-proof armour plating"
