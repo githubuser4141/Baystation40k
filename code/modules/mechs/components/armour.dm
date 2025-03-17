@@ -14,6 +14,8 @@
 		rad = ARMOR_RAD_THIRTY
 		)
 	origin_tech = list(TECH_MATERIAL = 1)
+	var/ricochet_chance = 5
+	var/armor_piercing_resistance = 30
 
 /obj/item/robot_parts/robot_component/armour/exosuit/radproof
 	name = "radiation-proof armour plating"
@@ -61,6 +63,7 @@
 		bio = ARMOR_BIO_SHIELDED
 		)
 	origin_tech = list(TECH_MATERIAL = 3)
+	ricochet_chance = 10
 
 /obj/item/robot_parts/robot_component/armour/exosuit/Initialize()
 	. = ..()
