@@ -58,3 +58,9 @@
 
 /mob/living/carbon/human/adherent/Initialize(mapload)
 	. = ..(mapload, SPECIES_ADHERENT)
+
+/mob/living/carbon/human/ork/Initialize(mapload)
+	. = ..(mapload, SPECIES_ORK)
+
+/mob/living/carbon/human/astartes/Initialize(mapload)
+	. = ..(mapload, SPECIES_ASTARTES)
