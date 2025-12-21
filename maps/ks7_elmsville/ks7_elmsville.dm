@@ -1,5 +1,5 @@
 //THIS IS ONLY FOR THE PVP GAMEMODE. PVE/RP FOCUS IS OBTAINABLE THROUGH FIRST CONTACT INCLUDES.//
-#if !defined(using_map_DATUM)
+#if (defined(IN_MAP_EDITOR)||!defined(using_map_DATUM))
 
 	#define using_map_DATUM /datum/map/ks7_elmsville
 
@@ -38,4 +38,3 @@
 
 	#warn A map has already been included, ignoring KS7 Elmsville
 #endif
-

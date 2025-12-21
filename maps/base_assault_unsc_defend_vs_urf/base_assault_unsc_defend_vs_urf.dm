@@ -27,7 +27,7 @@
 	allowed_gamemodes = list("base_assault_unsc_urf")
 	map_admin_faxes = list("URF Command", "HIGHCOM")
 
-#if !defined(using_map_DATUM)
+#if (defined(IN_MAP_EDITOR)||!defined(using_map_DATUM))
 
 	#define using_map_DATUM /datum/map/base_assault_unsc_vs_urf
 

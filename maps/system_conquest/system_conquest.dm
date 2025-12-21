@@ -1,5 +1,5 @@
 
-#if !defined(using_map_DATUM)
+#if (defined(IN_MAP_EDITOR)||!defined(using_map_DATUM))
 	#define using_map_DATUM /datum/map/system_conquest
 
 #include "mapfile.dm"
