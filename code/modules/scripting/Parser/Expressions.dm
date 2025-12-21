@@ -180,9 +180,8 @@
 	- <ParseParamExpression()>
 */
 		ParseExpression(list/end=list(/token/end), list/ErrChars=list("{", "}"))
-			var/stack
-			var/opr=new
-			var/val=new
+			var/stack/opr=new
+			var/stack/val=new
 			src.expecting=VALUE
 			for()
 				if(EndOfExpression(end))
