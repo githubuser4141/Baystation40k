@@ -266,14 +266,16 @@
 /obj/item/projectile/mac_round/check_penetrate(var/atom/impacted)
 	. = ..()
 	if(istype(impacted,/obj/effect/shield)) //Intentionally not exploding against shields.
-		return 0
-	if(. == 0)
-		var/increase_from_damage = round(damage/250)
-		explosion(get_turf(impacted),2 + increase_from_damage,4 + increase_from_damage,5 + increase_from_damage,8 + increase_from_damage, adminlog = 0)
-		if(!warned)
-			warned = 1
-			var/obj/effect/overmap/sector/S = map_sectors["[src.z]"]
-			S.adminwarn_attack()
+		. = 0
+
+/obj/item/projectile/mac_round/on_impact(var/atom/impacted)
+	. = ..()
+	var/increase_from_damage = round(damage/250)
+	explosion(get_turf(impacted),2 + increase_from_damage,4 + increase_from_damage,5 + increase_from_damage,8 + increase_from_damage, adminlog = 0)
+	if(!warned)
+		warned = 1
+		var/obj/effect/overmap/sector/S = map_sectors["[src.z]"]
+		S.adminwarn_attack()
 
 //BROKEN COMPONENTS//
 /obj/structure/repair_component/mac_console
