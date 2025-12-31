@@ -280,6 +280,7 @@
 /obj/vehicles/proc/on_death()
 	movement_destroyed = 1
 	guns_disabled = 1
+	armor_intact = 0
 	icon_state = "[initial(icon_state)]_destroyed"
 	if(spawn_datum)
 		spawn_datum.is_spawn_active = 0
@@ -587,11 +588,11 @@
 	var/pos_to_dam = should_damage_occ()
 	var/mob/mob_to_dam
 
-	if(P.armor_penetration > armor_protection)
+	if(!armor_intact || P.armor_penetration > armor_protection)
+		if(armor_intact && P.armor_penetration > armor_protection)
+			P.damage -= armor_protection
+			P.armor_penetration -= armor_protection
 		if(prob(80))
-			if(armor_intact)
-				P.damage -= armor_protection
-				P.armor_penetration -= armor_protection
 			var/list/mobs = list()
 			for(var/mob/m in occupants)
 				mobs += m
@@ -601,6 +602,7 @@
 			if(!isnull(mob_to_dam))
 				mob_to_dam.bullet_act(P)
 				return
+
 	if(!isnull(pos_to_dam))
 		var/should_continue = damage_occupant(pos_to_dam,P)
 		if(!should_continue)

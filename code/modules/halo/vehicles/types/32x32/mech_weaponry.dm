@@ -18,7 +18,6 @@
 /obj/item/ammo_casing/frangible_slug
 	name = "12 gauge frangible slug"
 	desc = "A .50 diameter powdered metal slug that breaks apart when hitting solid targets"
-	caliber = "needleheavy"
 	projectile_type = /obj/item/projectile/bullet/shotgun/frangible
 
 /obj/item/projectile/bullet/shotgun/frangible
@@ -63,9 +62,9 @@
 	name = "Internal energy-laser magazine"
 	caliber = "energy"
 	max_ammo = 100
-	ammo_type = /obj/item/ammo_casing/energy_taser
+	ammo_type = /obj/item/ammo_casing/energy_laser
 
-/obj/item/ammo_casing/energy_taser
+/obj/item/ammo_casing/energy_laser
 	name = "energy-based laser slug"
 	desc = "A solidified laser casing, it feels hot to the touch"
 	caliber = "mech_laser"
