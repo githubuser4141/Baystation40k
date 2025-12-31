@@ -19,12 +19,12 @@
 	cost = 2500
 	contains = list(/obj/vehicles/hrunting = 1)
 
-/decl/hierarchy/supply_pack/oni_vehicles/hrunting
+/decl/hierarchy/supply_pack/oni_vehicles/gygax
 	name = "Civilian-grade exosuit, Gygax"
 	cost = 400
 	contains = list(/obj/vehicles/mech/gygax = 1)
 
-/decl/hierarchy/supply_pack/oni_vehicles/hrunting
+/decl/hierarchy/supply_pack/oni_vehicles/durand
 	name = "Civilian-grade exosuit, Durand"
 	cost = 500
 	contains = list(/obj/vehicles/mech/durand = 1)
