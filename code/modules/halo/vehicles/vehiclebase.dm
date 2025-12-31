@@ -74,6 +74,13 @@
 	var/datum/gas_mixture/internal_air = null//If this is new()'d, the vehicle provides air to the occupants.
 	//I would make it require refilling, but that's likely to just be boring tedium for players.
 
+	var/can_fire_omnidirectionally = TRUE // Can it shoot a target without facing it?
+
+	var/armor_protection = 70 // Used to check if a projectile can penetrate and hit the occupant. Compared to the projectile's AP, then compared and reduces the projectile's damage.
+	var/armor_intact = TRUE
+
+	var/violent_destruction = TRUE
+
 	light_power = 4
 	light_range = 6
 
@@ -267,7 +274,6 @@
 	if(melee_weapon)
 		qdel(melee_weapon)
 	STOP_PROCESSING(SSobj, src)
-	kick_occupants()
 	GLOB.emp_candidates -= src
 	. = ..()
 
@@ -316,7 +322,8 @@
 			var/dam_deal = rand(dam_max/3,dam_max)
 			dam_max -= dam_deal
 			l.adjustBruteLoss(dam_deal)
-	kick_occupants()
+	if(violent_destruction)
+		kick_occupants()
 	explosion(get_turf(src),1,2,3,5)
 
 /obj/vehicles/proc/inactive_pilot_effects() //Overriden on a vehicle-by-vehicle basis.
@@ -579,16 +586,21 @@
 
 	var/pos_to_dam = should_damage_occ()
 	var/mob/mob_to_dam
-	if(movement_destroyed)
-		var/list/mobs = list()
-		for(var/mob/m in occupants)
-			mobs += m
-		if(mobs.len == 0)
-			return
-		mob_to_dam = pick(mobs)
-		if(!isnull(mob_to_dam))
-			mob_to_dam.bullet_act(P)
-			return
+
+	if(P.armor_penetration > armor_protection)
+		if(prob(80))
+			if(armor_intact)
+				P.damage -= armor_protection
+				P.armor_penetration -= armor_protection
+			var/list/mobs = list()
+			for(var/mob/m in occupants)
+				mobs += m
+			if(mobs.len == 0)
+				return
+			mob_to_dam = pick(mobs)
+			if(!isnull(mob_to_dam))
+				mob_to_dam.bullet_act(P)
+				return
 	if(!isnull(pos_to_dam))
 		var/should_continue = damage_occupant(pos_to_dam,P)
 		if(!should_continue)

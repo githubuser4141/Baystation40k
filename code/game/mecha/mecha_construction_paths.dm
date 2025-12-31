@@ -307,7 +307,7 @@
 
 
 /datum/construction/reversible/mecha/gygax
-	result = /obj/mecha/combat/gygax
+	result = /obj/vehicles/mech/gygax
 	steps = list(
 					//1
 					list("key"=/obj/item/weapon/weldingtool,
@@ -810,7 +810,7 @@
 		return
 
 /datum/construction/reversible/mecha/durand
-	result = /obj/mecha/combat/durand
+	result = /obj/vehicles/mech/durand
 	steps = list(
 					//1
 					list("key"=/obj/item/weapon/weldingtool,

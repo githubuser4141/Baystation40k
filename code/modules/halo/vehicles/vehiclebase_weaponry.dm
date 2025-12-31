@@ -51,6 +51,12 @@
 	if(!linked_vehicle.comp_prof.gunner_fire_check(user,linked_vehicle,src))
 		user.drop_from_inventory(src)
 		return
+
+	if(!linked_vehicle.can_fire_omnidirectionally)
+		var/target_dir = get_dir(linked_vehicle, attacked)
+		if(!(linked_vehicle.dir & target_dir) && linked_vehicle.dir != target_dir)
+			return
+
 	. = ..()
 
 /obj/item/weapon/gun/vehicle_turret/proc/reconsider_magazine()

@@ -18,3 +18,13 @@
 	name = "HRUNTING MK I"
 	cost = 2500
 	contains = list(/obj/vehicles/hrunting = 1)
+
+/decl/hierarchy/supply_pack/oni_vehicles/hrunting
+	name = "Civilian-grade exosuit, Gygax"
+	cost = 400
+	contains = list(/obj/vehicles/mech/gygax = 1)
+
+/decl/hierarchy/supply_pack/oni_vehicles/hrunting
+	name = "Civilian-grade exosuit, Durand"
+	cost = 500
+	contains = list(/obj/vehicles/mech/durand = 1)
