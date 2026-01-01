@@ -3,7 +3,7 @@
 
 /obj/vehicles/mech/durand
 	name = "Durand"
-	desc = "A Durand, a sometimes seen in the public, law enforcement and government sectors of Geminus. Equipped with a shotgun, laser rifle, stun rifle and tear gas grenades. The steel-plated exterior makes it somewhat bulky."
+	desc = "A Durand, a sometimes seen in the public, law enforcement and government sectors of Geminus. Equipped with a shotgun, laser rifle and a stun rifle. The steel-plated exterior makes it somewhat bulky."
 	icon = 'code/modules/halo/vehicles/types/32x32/durand.dmi' // nope, needs to be a special vehicle sprite
 	icon_state = "durand"
 
@@ -15,7 +15,7 @@
 
 	exposed_positions = list("driver" = 0)
 
-	ammo_containers = newlist(/obj/item/ammo_magazine/mech_shotgun, /obj/item/ammo_magazine/energy/taser)
+	ammo_containers = newlist(/obj/item/ammo_magazine/mech_shotgun, /obj/item/ammo_magazine/taser, /obj/item/ammo_magazine/laser)
 
 	sprite_offsets = list("1" = list(1,6),"2" = list(1,6),"4" = list(7,6),"8" = list(1,6))
 
@@ -43,7 +43,7 @@
 /obj/item/weapon/gun/vehicle_turret/switchable/mech_guns/taser_shotgun
 	name = "Mech Turret"
 	desc = "A mech-mounted combination of a shotgun and a taser rifle."
-	guns_switchto = newlist(/datum/vehicle_gun/mech_shotgun,/datum/vehicle_gun/mech_taser)
+	guns_switchto = newlist(/datum/vehicle_gun/mech_shotgun,/datum/vehicle_gun/mech_taser, /datum/vehicle_gun/mech_laser)
 	magazine_type = /obj/item/ammo_magazine/mech_shotgun
 
 /obj/item/weapon/hrunting_melee/gygax

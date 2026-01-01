@@ -13,9 +13,9 @@
 	name = "Internal shotgun magazine"
 	caliber = "shotgun"
 	max_ammo = 150
-	ammo_type = /obj/item/ammo_casing/frangible_slug
+	ammo_type = /obj/item/ammo_casing/shotgun/frangible
 
-/obj/item/ammo_casing/frangible_slug
+/obj/item/ammo_casing/shotgun/frangible
 	name = "12 gauge frangible slug"
 	desc = "A .50 diameter powdered metal slug that breaks apart when hitting solid targets"
 	projectile_type = /obj/item/projectile/bullet/shotgun/frangible
@@ -32,16 +32,16 @@
 	burst_size = 1
 	dispersion = list(0)
 	fire_delay = 6
-	mag_used = /obj/item/ammo_magazine/energy/taser
+	mag_used = /obj/item/ammo_magazine/taser
 	fire_sound = 'sound/weapons/taser.ogg'
 
-/obj/item/ammo_magazine/energy/taser
+/obj/item/ammo_magazine/taser
 	name = "Internal energy-taser magazine"
 	caliber = "energy"
 	max_ammo = 100
-	ammo_type = /obj/item/ammo_casing/energy_taser
+	ammo_type = /obj/item/ammo_casing/taser
 
-/obj/item/ammo_casing/energy_taser
+/obj/item/ammo_casing/taser
 	name = "energy-based taser slug"
 	desc = "Surprisingly this isn't an actual physical taser slug, being made of mysterious energy. It feels stunning to the touch"
 	caliber = "mech_taser"
@@ -55,16 +55,16 @@
 	burst_size = 1
 	dispersion = list(0)
 	fire_delay = 6
-	mag_used = /obj/item/ammo_magazine/energy/laser
+	mag_used = /obj/item/ammo_magazine/laser
 	fire_sound = 'sound/weapons/Laser.ogg'
 
-/obj/item/ammo_magazine/energy/laser
+/obj/item/ammo_magazine/laser
 	name = "Internal energy-laser magazine"
 	caliber = "energy"
 	max_ammo = 100
-	ammo_type = /obj/item/ammo_casing/energy_laser
+	ammo_type = /obj/item/ammo_casing/laser
 
-/obj/item/ammo_casing/energy_laser
+/obj/item/ammo_casing/laser
 	name = "energy-based laser slug"
 	desc = "A solidified laser casing, it feels hot to the touch"
 	caliber = "mech_laser"

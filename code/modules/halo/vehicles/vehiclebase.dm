@@ -76,7 +76,7 @@
 
 	var/can_fire_omnidirectionally = TRUE // Can it shoot a target without facing it?
 
-	var/armor_protection = 70 // Used to check if a projectile can penetrate and hit the occupant. Compared to the projectile's AP, then compared and reduces the projectile's damage.
+	var/armor_protection = 115 // Used to check if a projectile can penetrate and hit the occupant. Compared to the projectile's AP, then compared and reduces the projectile's damage.
 	var/armor_intact = TRUE
 
 	var/violent_destruction = TRUE
@@ -601,7 +601,6 @@
 			mob_to_dam = pick(mobs)
 			if(!isnull(mob_to_dam))
 				mob_to_dam.bullet_act(P)
-				return
 
 	if(!isnull(pos_to_dam))
 		var/should_continue = damage_occupant(pos_to_dam,P)

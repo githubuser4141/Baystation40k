@@ -15,7 +15,7 @@
 
 	exposed_positions = list("driver" = 0)
 
-	ammo_containers = newlist(/obj/item/ammo_magazine/energy/laser, /obj/item/ammo_magazine/energy/taser)
+	ammo_containers = newlist(/obj/item/ammo_magazine/laser, /obj/item/ammo_magazine/taser)
 
 	sprite_offsets = list("1" = list(1,6),"2" = list(1,6),"4" = list(7,6),"8" = list(1,6))
 
@@ -47,7 +47,3 @@
 	desc = "A mech-mounted combination of a laser and a taser rifle."
 	guns_switchto = newlist(/datum/vehicle_gun/mech_laser,/datum/vehicle_gun/mech_taser)
 	magazine_type = /obj/item/ammo_magazine/mech_shotgun
-
-/obj/item/weapon/hrunting_melee/gygax
-	name = "\the Gygax fist"
-	desc = "punch"
